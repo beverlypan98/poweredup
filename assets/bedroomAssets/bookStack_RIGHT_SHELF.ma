@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: bookStack_RIGHT_SHELF.ma
-//Last modified: Fri, Oct 11, 2019 03:25:30 AM
+//Last modified: Fri, Oct 11, 2019 03:27:43 AM
 //Codeset: UTF-8
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -4348,8 +4348,8 @@ createNode mesh -n "pagesShape" -p "|bookstack_RIGHT_SHELF|book20|pages";
 createNode transform -s -n "persp";
 	rename -uid "1510CA6E-1442-8264-B519-65B35A6B5C3B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.0018804657826798632 2.4153287728513 5.8429770153395673 ;
-	setAttr ".r" -type "double3" -27.938352729602379 44.999999999999972 -5.172681101354183e-14 ;
+	setAttr ".t" -type "double3" -1.266234792544273 1.6315769424562399 2.5792064600924611 ;
+	setAttr ".r" -type "double3" -4.5383527295968733 -179.79999999999703 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "27CED4AF-3348-D7F5-A220-FD830DD57920";
 	setAttr -k off ".v" no;
