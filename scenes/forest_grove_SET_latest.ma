@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: forest_grove_SET_latest.ma
-//Last modified: Sat, Oct 19, 2019 03:18:14 PM
+//Last modified: Sat, Oct 19, 2019 05:00:45 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "mushroom_latest" -rfn "mushroom_latestRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/jakeh/OneDrive/Desktop/poweredup//assets/shrooms/mushroom_latest.ma";
@@ -16,8 +16,8 @@ file -rdi 1 -ns "thicktree1" -rfn "thicktreeRN1" -op "v=0;" -typ "mayaAscii"
 file -rdi 1 -ns "thicktree2" -rfn "thicktreeRN2" -op "v=0;" -typ "mayaAscii"
 		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/thicktree.ma";
 file -rdi 1 -ns "roots" -rfn "rootsRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/roots.ma";
-file -rdi 1 -ns "lavenderField_latest" -dr 1 -rfn "lavenderField_latestRN" 
-		-op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/lavenderField_latest.ma";
+file -rdi 1 -ns "lavenderField_latest" -rfn "lavenderField_latestRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/lavenderField_latest.ma";
 file -rdi 1 -ns "callaLilyBush_latest" -rfn "callaLilyBush_latestRN" -op "v=0;"
 		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/callaLilyBush_latest.ma";
 file -rdi 1 -ns "callaLilyBush_latest1" -rfn "callaLilyBush_latestRN1" -op "v=0;"
@@ -46,8 +46,24 @@ file -rdi 1 -ns "lilyBush_latest3" -rfn "lilyBush_latestRN3" -op "v=0;" -typ
 		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/lilyBush_latest.ma";
 file -rdi 1 -ns "lilyBush_latest4" -rfn "lilyBush_latestRN4" -op "v=0;" -typ
 		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/lilyBush_latest.ma";
-file -rdi 1 -ns "danglingFlower_latest" -rfn "danglingFlower_latestRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/danglingFlower_latest.ma";
+file -rdi 1 -ns "crystals_version1_latest" -rfn "crystals_version1_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version1_latest.ma";
+file -rdi 1 -ns "crystals_version1_latest1" -rfn "crystals_version1_latestRN1"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version1_latest.ma";
+file -rdi 1 -ns "crystals_version1_latest2" -rfn "crystals_version1_latestRN2"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version1_latest.ma";
+file -rdi 1 -ns "crystals_version2_latest" -rfn "crystals_version2_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version2_latest.ma";
+file -rdi 1 -ns "crystals_version2_latest1" -rfn "crystals_version2_latestRN1"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version2_latest.ma";
+file -rdi 1 -ns "crystals_version2_latest2" -rfn "crystals_version2_latestRN2"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version2_latest.ma";
+file -rdi 1 -ns "crystals_version1_latest3" -rfn "crystals_version1_latestRN3"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version1_latest.ma";
+file -rdi 1 -ns "crystals_version1_latest4" -rfn "crystals_version1_latestRN4"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version1_latest.ma";
+file -rdi 1 -ns "crystals_version2_latest3" -rfn "crystals_version2_latestRN3"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version2_latest.ma";
 file -r -ns "mushroom_latest" -dr 1 -rfn "mushroom_latestRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/jakeh/OneDrive/Desktop/poweredup//assets/shrooms/mushroom_latest.ma";
 file -r -ns "fireboi_latest" -dr 1 -rfn "fireboi_latestRN" -op "v=0;" -typ "mayaAscii"
@@ -87,14 +103,28 @@ file -r -ns "lilyBush_latest3" -dr 1 -rfn "lilyBush_latestRN3" -op "v=0;" -typ "
 		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/lilyBush_latest.ma";
 file -r -ns "lilyBush_latest4" -dr 1 -rfn "lilyBush_latestRN4" -op "v=0;" -typ "mayaAscii"
 		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/lilyBush_latest.ma";
-file -r -ns "danglingFlower_latest" -dr 1 -rfn "danglingFlower_latestRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/danglingFlower_latest.ma";
+file -r -ns "crystals_version1_latest" -dr 1 -rfn "crystals_version1_latestRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version1_latest.ma";
+file -r -ns "crystals_version1_latest1" -dr 1 -rfn "crystals_version1_latestRN1"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version1_latest.ma";
+file -r -ns "crystals_version1_latest2" -dr 1 -rfn "crystals_version1_latestRN2"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version1_latest.ma";
+file -r -ns "crystals_version2_latest" -dr 1 -rfn "crystals_version2_latestRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version2_latest.ma";
+file -r -ns "crystals_version2_latest1" -dr 1 -rfn "crystals_version2_latestRN1"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version2_latest.ma";
+file -r -ns "crystals_version2_latest2" -dr 1 -rfn "crystals_version2_latestRN2"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version2_latest.ma";
+file -r -ns "crystals_version1_latest3" -dr 1 -rfn "crystals_version1_latestRN3"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version1_latest.ma";
+file -r -ns "crystals_version1_latest4" -dr 1 -rfn "crystals_version1_latestRN4"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version1_latest.ma";
+file -r -ns "crystals_version2_latest3" -dr 1 -rfn "crystals_version2_latestRN3"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/crystals/crystals_version2_latest.ma";
 requires maya "2018";
 requires "stereoCamera" "10.0";
 requires -nodeType "rmanGlobals" -nodeType "PxrPathTracer" -nodeType "rmanDisplay"
 		 "RenderMan_for_Maya.py" "22.4 @ 1946009";
-requires "mtoa" "3.3.0.1";
-requires "stereoCamera" "10.0";
 requires "mtoa" "3.3.0.1";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -106,17 +136,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "9670D191-4423-9407-2A8F-10A65AA9DCF0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -477.21818186409314 466.20983018645416 1006.8576879847913 ;
-	setAttr ".r" -type "double3" -12.938352729892301 -377.79999999938411 0 ;
+	setAttr ".t" -type "double3" -442.38469040871831 196.8883449625317 43.884554758054378 ;
+	setAttr ".r" -type "double3" -12.338352729395073 -747.79999999869426 4.4944368725711603e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F01540EA-4FCC-8C52-C464-A49D62EC1A8D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1605.7550179207246;
+	setAttr ".coi" 474.88776392607133;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 1.1911079287528992 106.67718222567066 -483.21278151247225 ;
+	setAttr ".tp" -type "double3" 16.293897045903975 -45.199828021251896 163.00696678665048 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dgm" no;
 	setAttr ".ai_translator" -type "string" "perspective";
@@ -172,11 +202,11 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "behind_fireboi";
 	rename -uid "82C45D01-4092-C93C-E446-B5A8FB52EB43";
-	setAttr ".t" -type "double3" 22.880396570363402 -0.058271162679025046 48.712035874675514 ;
+	setAttr ".t" -type "double3" 18.952128024509864 -44.797060237714192 198.52202485503125 ;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 18.86164727039764 8.2000000000005802 0 ;
+	setAttr ".r" -type "double3" 18.261647270397887 17.800000000000676 0 ;
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
 	setAttr -l on ".rz";
@@ -185,7 +215,7 @@ createNode camera -n "behind_fireboiShape" -p "behind_fireboi";
 	setAttr -k off ".v";
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999993;
-	setAttr -l on ".coi" 2.6989049119944766;
+	setAttr -l on ".coi" 124.36019593243742;
 	setAttr -l on ".ow";
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -194,22 +224,22 @@ createNode camera -n "behind_fireboiShape" -p "behind_fireboi";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dfg" yes;
 	setAttr ".ai_translator" -type "string" "perspective";
-createNode transform -n "Rolling_TEMPCAM";
+createNode transform -n "Rolling_FRONT_TEMPCAM";
 	rename -uid "DEAA9005-134B-1019-158F-F88BB5DA3E2D";
-	setAttr ".t" -type "double3" -35.608014740244236 23.305227524591658 133.6385333538903 ;
+	setAttr ".t" -type "double3" -50.216739994173082 50.570236650240638 373.46544830028012 ;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 12.861647270396769 4.6000000000000938 9.9713523173432366e-17 ;
+	setAttr ".r" -type "double3" 8.0616472703970015 1.8000000000001162 -4.9720701062415237e-17 ;
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
 	setAttr -l on ".rz";
-createNode camera -n "Rolling_TEMPCAMShape" -p "Rolling_TEMPCAM";
+createNode camera -n "Rolling_FRONT_TEMPCAMShape" -p "Rolling_FRONT_TEMPCAM";
 	rename -uid "7844438E-C045-6A45-888C-41B4442BE01D";
 	setAttr -k off ".v";
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999993;
-	setAttr -l on ".coi" 343.92047986277743;
+	setAttr -l on ".coi" 575.48616645751804;
 	setAttr -l on ".ow";
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -220,11 +250,11 @@ createNode camera -n "Rolling_TEMPCAMShape" -p "Rolling_TEMPCAM";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -n "Running_TEMPCAM";
 	rename -uid "D64770A6-A341-815A-CF02-7084420EB8C4";
-	setAttr ".t" -type "double3" -611.83471500073483 88.285108538796976 -453.99288075861313 ;
+	setAttr ".t" -type "double3" -652.27006604902101 83.782848020620833 -449.36609965704258 ;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 2.6616472701104494 -450.19999999942269 -5.0888874903416268e-14 ;
+	setAttr ".r" -type "double3" 6.2616472701108359 -451.39999999941654 -2.5444437451708134e-14 ;
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
 	setAttr -l on ".rz";
@@ -233,7 +263,7 @@ createNode camera -n "Running_TEMPCAMShape" -p "Running_TEMPCAM";
 	setAttr -k off ".v";
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999993;
-	setAttr -l on ".coi" 452.84264322360656;
+	setAttr -l on ".coi" 493.02423111156583;
 	setAttr -l on ".ow";
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
@@ -242,23 +272,9 @@ createNode camera -n "Running_TEMPCAMShape" -p "Running_TEMPCAM";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dr" yes;
 	setAttr ".ai_translator" -type "string" "perspective";
-createNode transform -n "TEMP_Character";
-	rename -uid "616285DC-4488-EE6C-58C2-A2A4F8821598";
-	setAttr ".t" -type "double3" -72.008518268865075 45.311902706068025 -78.936402228184079 ;
-	setAttr ".s" -type "double3" 1.3487817077459661 2.69425968375094 1.3487817077459661 ;
-createNode mesh -n "TEMP_CharacterShape" -p "TEMP_Character";
-	rename -uid "1C67B511-4CA4-C1B3-7EE5-D683B4535B95";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".bw" 5;
-	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Cliff";
+createNode transform -n "Forest_Grove_SET";
+	rename -uid "9B1B871C-1447-D967-E965-FE8D1589B359";
+createNode transform -n "Cliff" -p "Forest_Grove_SET";
 	rename -uid "BA274BFC-4325-2E94-5923-BBAB8FAF9E93";
 	setAttr ".t" -type "double3" -137.90195638155092 25.453855909098095 -211.08689710347255 ;
 	setAttr ".r" -type "double3" 17.462028756960141 25.809717807695609 -8.8324703103955483e-16 ;
@@ -268,22 +284,36 @@ createNode mesh -n "CliffShape" -p "Cliff";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 1 ;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 5 ".pt";
-	setAttr ".pt[20]" -type "float3" -0.3893013 -0.056496996 -0.17960051 ;
-	setAttr ".pt[21]" -type "float3" -0.3893013 -0.056496996 -0.17960051 ;
-	setAttr ".pt[22]" -type "float3" -0.3893013 -0.056496996 -0.17960051 ;
-	setAttr ".pt[23]" -type "float3" -0.3893013 -0.056496996 -0.17960051 ;
+	setAttr -s 18 ".pt";
+	setAttr ".pt[0]" -type "float3" 0.035072021 -0.021760918 -0.069176637 ;
+	setAttr ".pt[1]" -type "float3" 0.035072021 -0.021760918 -0.069176637 ;
+	setAttr ".pt[2]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
+	setAttr ".pt[3]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
+	setAttr ".pt[4]" -type "float3" 0.035072021 -0.021760918 -0.069176637 ;
+	setAttr ".pt[5]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
+	setAttr ".pt[6]" -type "float3" 0.13991871 -0.0065451395 -0.020806603 ;
+	setAttr ".pt[7]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
+	setAttr ".pt[12]" -type "float3" 0.035072021 -0.021760918 -0.069176637 ;
+	setAttr ".pt[13]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
+	setAttr ".pt[20]" -type "float3" -0.10399383 -0.041942723 -0.13333336 ;
+	setAttr ".pt[21]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
+	setAttr ".pt[24]" -type "float3" -0.043710485 -0.13578627 0.13746096 ;
+	setAttr ".pt[25]" -type "float3" -0.043710485 -0.13578627 0.13746096 ;
+	setAttr ".pt[26]" -type "float3" -0.043710485 -0.13578627 0.13746096 ;
+	setAttr ".pt[27]" -type "float3" 0.061136205 -0.1205705 0.18583101 ;
+	setAttr ".pt[28]" -type "float3" -0.043710485 -0.13578627 0.13746096 ;
+	setAttr ".pt[29]" -type "float3" -0.15515542 -0.15195961 0.086046875 ;
 	setAttr ".bw" 5;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Ground";
+createNode transform -n "Ground" -p "Forest_Grove_SET";
 	rename -uid "D3D4AFE6-0745-3910-A469-478E93B2724C";
-	setAttr ".t" -type "double3" -25.687512566658825 0 -191.42201634430731 ;
+	setAttr ".t" -type "double3" -25.687512566658825 -45.393496999234102 -107.74567531534566 ;
 	setAttr ".s" -type "double3" 1226.6796421146987 1062.4158617352957 1062.4158617352957 ;
 createNode mesh -n "GroundShape" -p "Ground";
 	rename -uid "EBDA1B99-F942-C0F2-AEED-D79BC6D39532";
@@ -296,23 +326,40 @@ createNode mesh -n "GroundShape" -p "Ground";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "TEMP_Character" -p "Forest_Grove_SET";
+	rename -uid "616285DC-4488-EE6C-58C2-A2A4F8821598";
+	setAttr ".t" -type "double3" -72.247544429798211 102.8570187807681 -42.438465859650627 ;
+	setAttr ".s" -type "double3" 5.2176491042764459 19.310692077446262 5.2176491042764459 ;
+createNode mesh -n "TEMP_CharacterShape" -p "TEMP_Character";
+	rename -uid "1C67B511-4CA4-C1B3-7EE5-D683B4535B95";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".bw" 5;
+	setAttr ".dr" 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "5D3D3505-9041-5554-7575-8282D89BF88D";
-	setAttr -s 117 ".lnk";
-	setAttr -s 117 ".slnk";
+	rename -uid "8FE0168F-C24D-A76F-AD61-64BE9670C6D1";
+	setAttr -s 145 ".lnk";
+	setAttr -s 145 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "BBD9B476-B843-5AB5-7BF9-DAB10543B57A";
+	rename -uid "D8D57447-2548-26EF-AD16-FD85D2CBFC90";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 5 0 1 2 3 4 ;
 	setAttr -s 5 ".bspr";
 	setAttr -s 5 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "146FADD6-534D-46B0-C41D-6CAFBC86C922";
+	rename -uid "F7169404-234B-987D-74E8-66863D82C08B";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "81CF197E-5B4A-663D-890C-82B1ADF5288F";
+	rename -uid "3959AC7F-6046-98E9-FDEC-10865E3FE9CA";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B214D39C-4536-8864-1713-978CCE2ECB71";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F73A985A-CE43-4E94-6AEF-149267F8EB77";
+	rename -uid "317BECB8-CC44-2021-7878-C4A4376E1A74";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8D136FD4-4017-AB0F-9FF4-0192BF9B34FA";
 	setAttr ".g" yes;
@@ -321,10 +368,13 @@ createNode reference -n "mushroom_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"mushroom_latestRN"
 		"mushroom_latestRN" 0
-		"mushroom_latestRN" 2
-		2 "|mushroom_latest:mushroom_version1_MASTER" "translate" " -type \"double3\" -69.8500593502571121 0 26.64661592699432191"
+		"mushroom_latestRN" 3
+		0 "|mushroom_latest:mushroom_version1_MASTER" "|Forest_Grove_SET" "-s -r "
 		
-		2 "|mushroom_latest:mushroom_version1_MASTER" "scale" " -type \"double3\" 3.33938078252173121 3.33938078252173121 3.33938078252173121";
+		2 "|Forest_Grove_SET|mushroom_latest:mushroom_version1_MASTER" "translate" 
+		" -type \"double3\" -135.26497414771711192 -44.34092487745601829 93.31589207312651979"
+		
+		2 "|Forest_Grove_SET|mushroom_latest:mushroom_version1_MASTER" "scale" " -type \"double3\" 10.01956204040167009 10.01956204040167009 10.01956204040167009";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode rmanGlobals -s -n "rmanGlobals";
@@ -478,11 +528,13 @@ createNode reference -n "fireboi_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"fireboi_latestRN"
 		"fireboi_latestRN" 0
-		"fireboi_latestRN" 3
-		2 "|fireboi_latest:fireboi_MASTER" "translate" " -type \"double3\" 28.17578139372803747 3.82155191563376651 45.93437940034401379"
+		"fireboi_latestRN" 4
+		0 "|fireboi_latest:fireboi_MASTER" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|fireboi_latest:fireboi_MASTER" "translate" " -type \"double3\" 6.02214746188042049 -41.28459600591794043 169.66123875228740303"
 		
-		2 "|fireboi_latest:fireboi_MASTER" "rotate" " -type \"double3\" 0 180 0"
-		2 "|fireboi_latest:fireboi_MASTER" "scale" " -type \"double3\" 0.24224786560057535 0.24224786560057535 0.24224786560057535";
+		2 "|Forest_Grove_SET|fireboi_latest:fireboi_MASTER" "rotate" " -type \"double3\" 0 176.68653848783139892 0"
+		
+		2 "|Forest_Grove_SET|fireboi_latest:fireboi_MASTER" "scale" " -type \"double3\" 1.58007847967286019 1.58007847967286019 1.58007847967286019";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "mushroom_latestRN1";
@@ -490,10 +542,16 @@ createNode reference -n "mushroom_latestRN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"mushroom_latestRN1"
 		"mushroom_latestRN1" 0
-		"mushroom_latestRN1" 2
-		2 "|mushroom_latest1:mushroom_version1_MASTER" "translate" " -type \"double3\" -7.17428287033929735 0 -26.94596581159563442"
+		"mushroom_latestRN1" 4
+		0 "|mushroom_latest1:mushroom_version1_MASTER" "|Forest_Grove_SET" "-s -r "
 		
-		2 "|mushroom_latest1:mushroom_version1_MASTER" "scale" " -type \"double3\" 4.3858547871209268 4.3858547871209268 4.3858547871209268";
+		2 "|Forest_Grove_SET|mushroom_latest1:mushroom_version1_MASTER" "translate" 
+		" -type \"double3\" 69.35577064052678509 -45.26887259040343992 -1.11489438223451032"
+		
+		2 "|Forest_Grove_SET|mushroom_latest1:mushroom_version1_MASTER" "scale" " -type \"double3\" 9.45391502190100752 9.45391502190100752 9.45391502190100752"
+		
+		2 "|Forest_Grove_SET|mushroom_latest1:mushroom_version1_MASTER|mushroom_latest1:mushroom_version1|mushroom_latest1:stem" 
+		"translate" " -type \"double3\" 0 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "mushroom_latestRN2";
@@ -501,10 +559,15 @@ createNode reference -n "mushroom_latestRN2";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"mushroom_latestRN2"
 		"mushroom_latestRN2" 0
-		"mushroom_latestRN2" 2
-		2 "|mushroom_latest2:mushroom_version1_MASTER" "translate" " -type \"double3\" -71.06054454427409439 0 -80.43905317107325459"
+		"mushroom_latestRN2" 4
+		0 "|mushroom_latest2:mushroom_version1_MASTER" "|Forest_Grove_SET" "-s -r "
 		
-		2 "|mushroom_latest2:mushroom_version1_MASTER" "scale" " -type \"double3\" 3.93845439623599747 3.93845439623599747 3.93845439623599747";
+		2 "|Forest_Grove_SET|mushroom_latest2:mushroom_version1_MASTER" "visibility" 
+		" 1"
+		2 "|Forest_Grove_SET|mushroom_latest2:mushroom_version1_MASTER" "translate" 
+		" -type \"double3\" -71.06054454427409439 -43.9222177842805408 -62.95762190873914932"
+		
+		2 "|Forest_Grove_SET|mushroom_latest2:mushroom_version1_MASTER" "scale" " -type \"double3\" 11.79116879093403014 11.79116879093403014 11.79116879093403014";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyCylinder -n "polyCylinder1";
@@ -571,20 +634,21 @@ createNode reference -n "thicktreeRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN"
 		"thicktreeRN" 0
-		"thicktreeRN" 3
-		2 "|thicktree:ThickTree" "translate" " -type \"double3\" -207.49843893369964576 33.70638211395213091 -298.40597994209593935"
+		"thicktreeRN" 4
+		0 "|thicktree:ThickTree" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|thicktree:ThickTree" "translate" " -type \"double3\" -207.49843893369964576 33.70638211395213091 -258.28374485008305328"
 		
-		2 "|thicktree:ThickTree" "rotate" " -type \"double3\" -2.73437790181352014 98.58353718203117921 0"
+		2 "|Forest_Grove_SET|thicktree:ThickTree" "rotate" " -type \"double3\" -2.73437790181352014 98.58353718203117921 0"
 		
-		2 "|thicktree:ThickTree" "scale" " -type \"double3\" 0.53092532759234434 0.53092532759234434 0.53092532759234434";
+		2 "|Forest_Grove_SET|thicktree:ThickTree" "scale" " -type \"double3\" 0.53092532759234434 0.53092532759234434 0.53092532759234434";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "50F5CE27-4A11-4C9B-A404-B79840767295";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Rolling_TEMPCAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Running_TEMPCAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
 		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
-		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
+		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
 		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 547\n            -height 512\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
@@ -618,11 +682,11 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"behind_fireboi\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
 		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
 		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
-		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
-		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
-		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n"
-		+ "            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
+		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
+		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
+		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1101\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1101\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
@@ -648,12 +712,13 @@ createNode reference -n "thicktreeRN1";
 		
 		2 "|thicktree1:left" "translate" " -type \"double3\" -1000.10000000000002274 52.56491643989128448 2.58515982491268659"
 		
-		"thicktreeRN1" 3
-		2 "|thicktree1:ThickTree" "translate" " -type \"double3\" 102.253136834818946 41.10144724733061139 -260.92054611178434698"
+		"thicktreeRN1" 4
+		0 "|thicktree1:ThickTree" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|thicktree1:ThickTree" "translate" " -type \"double3\" 102.253136834818946 41.10144724733061139 -260.92054611178434698"
 		
-		2 "|thicktree1:ThickTree" "rotate" " -type \"double3\" 0.47570831792109253 -149.67129975584973067 -4.42833761129222214"
+		2 "|Forest_Grove_SET|thicktree1:ThickTree" "rotate" " -type \"double3\" 0.47570831792109253 -149.67129975584973067 -4.42833761129222214"
 		
-		2 "|thicktree1:ThickTree" "scale" " -type \"double3\" 0.37736496270348979 0.37736496270348979 0.37736496270348979";
+		2 "|Forest_Grove_SET|thicktree1:ThickTree" "scale" " -type \"double3\" 0.37736496270348979 0.37736496270348979 0.37736496270348979";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN2";
@@ -661,12 +726,13 @@ createNode reference -n "thicktreeRN2";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN2"
 		"thicktreeRN2" 0
-		"thicktreeRN2" 3
-		2 "|thicktree2:ThickTree" "translate" " -type \"double3\" 22.08893186354444538 49.11643347177601981 -387.48358200842682209"
+		"thicktreeRN2" 4
+		0 "|thicktree2:ThickTree" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|thicktree2:ThickTree" "translate" " -type \"double3\" 22.08893186354444538 49.11643347177601981 -387.48358200842682209"
 		
-		2 "|thicktree2:ThickTree" "rotate" " -type \"double3\" 0 -329.99999999999977263 0"
+		2 "|Forest_Grove_SET|thicktree2:ThickTree" "rotate" " -type \"double3\" 0 -329.99999999999977263 0"
 		
-		2 "|thicktree2:ThickTree" "scale" " -type \"double3\" 0.4143670105830255 0.4143670105830255 0.4143670105830255";
+		2 "|Forest_Grove_SET|thicktree2:ThickTree" "scale" " -type \"double3\" 0.4143670105830255 0.4143670105830255 0.4143670105830255";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyExtrudeEdge -n "polyExtrudeEdge4";
@@ -698,21 +764,27 @@ createNode reference -n "rootsRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"rootsRN"
 		"rootsRN" 0
-		"rootsRN" 4
-		2 "|roots:roots_retopo1" "visibility" " 0"
-		2 "|roots:roots_retopo1" "translate" " -type \"double3\" -84.87314126145795967 49.8913912656493963 -118.27985819501397202"
+		"rootsRN" 5
+		0 "|roots:roots_retopo1" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|roots:roots_retopo1" "visibility" " 0"
+		2 "|Forest_Grove_SET|roots:roots_retopo1" "translate" " -type \"double3\" -84.87314126145795967 49.8913912656493963 -118.27985819501397202"
 		
-		2 "|roots:roots_retopo1" "rotate" " -type \"double3\" 0 20.1210867217850442 0"
+		2 "|Forest_Grove_SET|roots:roots_retopo1" "rotate" " -type \"double3\" 0 20.1210867217850442 0"
 		
-		2 "|roots:roots_retopo1" "scale" " -type \"double3\" 8.20501317188892898 8.20501317188892898 8.20501317188892898";
+		2 "|Forest_Grove_SET|roots:roots_retopo1" "scale" " -type \"double3\" 8.20501317188892898 8.20501317188892898 8.20501317188892898";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lavenderField_latestRN";
 	rename -uid "027205F9-954F-9EDF-25E2-1B877DD9E6A5";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lavenderField_latestRN"
-		"lavenderField_latestRN" 1
-		2 "|lavenderField_latest:lavenderField" "translate" " -type \"double3\" 0 54.29339149550921206 0";
+		"lavenderField_latestRN" 0
+		"lavenderField_latestRN" 3
+		2 "|lavenderField_latest:lavenderField" "translate" " -type \"double3\" 0 54.29339149550921206 0"
+		
+		2 "lavenderField_latest:MASH1_Transform" "scaleAmount" " -type \"float3\" 5 5 7"
+		
+		2 "lavenderField_latest:MASH1_Transform" "positionAmount" " -type \"float3\" -300 35 -390";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "sharedReferenceNode";
@@ -724,12 +796,13 @@ createNode reference -n "callaLilyBush_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN"
 		"callaLilyBush_latestRN" 0
-		"callaLilyBush_latestRN" 3
-		2 "|callaLilyBush_latest:CallaLillyBush" "translate" " -type \"double3\" -265.88731652638199421 35.28209304661574208 -292.08133589726111268"
+		"callaLilyBush_latestRN" 4
+		0 "|callaLilyBush_latest:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|callaLilyBush_latest:CallaLillyBush" "translate" " -type \"double3\" -265.88731652638199421 35.28209304661574208 -294.25163301514908198"
 		
-		2 "|callaLilyBush_latest:CallaLillyBush" "rotate" " -type \"double3\" -3.15026081005795522 19.61161302954328534 1.13736682737839212"
+		2 "|Forest_Grove_SET|callaLilyBush_latest:CallaLillyBush" "rotate" " -type \"double3\" -3.15026081005795522 19.61161302954328534 1.13736682737839212"
 		
-		2 "|callaLilyBush_latest:CallaLillyBush" "scale" " -type \"double3\" 7.22618833529107896 7.22618833529107896 7.22618833529107896";
+		2 "|Forest_Grove_SET|callaLilyBush_latest:CallaLillyBush" "scale" " -type \"double3\" 7.22618833529107896 7.22618833529107896 7.22618833529107896";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "callaLilyBush_latestRN1";
@@ -737,12 +810,13 @@ createNode reference -n "callaLilyBush_latestRN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN1"
 		"callaLilyBush_latestRN1" 0
-		"callaLilyBush_latestRN1" 3
-		2 "|callaLilyBush_latest1:CallaLillyBush" "translate" " -type \"double3\" -14.40545566852562409 50.97593752195776062 -370.32588395860256014"
+		"callaLilyBush_latestRN1" 4
+		0 "|callaLilyBush_latest1:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|callaLilyBush_latest1:CallaLillyBush" "translate" " -type \"double3\" 94.17143574911506221 43.3409003579072305 -342.6678486620357944"
 		
-		2 "|callaLilyBush_latest1:CallaLillyBush" "rotate" " -type \"double3\" 4.40336481738070873 -19.81343830101327796 -2.57118391017535508"
+		2 "|Forest_Grove_SET|callaLilyBush_latest1:CallaLillyBush" "rotate" " -type \"double3\" 4.40336481738070873 -19.81343830101327796 -2.57118391017535508"
 		
-		2 "|callaLilyBush_latest1:CallaLillyBush" "scale" " -type \"double3\" 8.24875252726627117 8.24875252726627117 8.24875252726627117";
+		2 "|Forest_Grove_SET|callaLilyBush_latest1:CallaLillyBush" "scale" " -type \"double3\" 8.24875252726627117 8.24875252726627117 8.24875252726627117";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyExtrudeEdge -n "polyExtrudeEdge5";
@@ -771,12 +845,13 @@ createNode reference -n "callaLilyBush_latestRN2";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN2"
 		"callaLilyBush_latestRN2" 0
-		"callaLilyBush_latestRN2" 3
-		2 "|callaLilyBush_latest2:CallaLillyBush" "translate" " -type \"double3\" 51.20555036906453239 44.96815652030266364 -287.25359897841281054"
+		"callaLilyBush_latestRN2" 4
+		0 "|callaLilyBush_latest2:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|callaLilyBush_latest2:CallaLillyBush" "translate" " -type \"double3\" 59.996324013448735 44.96815652030266364 -311.44713912290558255"
 		
-		2 "|callaLilyBush_latest2:CallaLillyBush" "rotate" " -type \"double3\" -0.77849106235397603 -22.33779529524813157 -1.99516920611174897"
+		2 "|Forest_Grove_SET|callaLilyBush_latest2:CallaLillyBush" "rotate" " -type \"double3\" -0.77849106235397603 -22.33779529524813157 -1.99516920611174897"
 		
-		2 "|callaLilyBush_latest2:CallaLillyBush" "scale" " -type \"double3\" 6.84670444213704865 6.84670444213704865 6.84670444213704865";
+		2 "|Forest_Grove_SET|callaLilyBush_latest2:CallaLillyBush" "scale" " -type \"double3\" 6.84670444213704865 6.84670444213704865 6.84670444213704865";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "callaLilyBush_latestRN3";
@@ -784,12 +859,15 @@ createNode reference -n "callaLilyBush_latestRN3";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN3"
 		"callaLilyBush_latestRN3" 0
-		"callaLilyBush_latestRN3" 3
-		2 "|callaLilyBush_latest3:CallaLillyBush" "translate" " -type \"double3\" -156.43458182249287347 46.19921021481283674 -511.96501130822275627"
+		"callaLilyBush_latestRN3" 5
+		0 "|callaLilyBush_latest3:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|callaLilyBush_latest3:CallaLillyBush" "visibility" " 1"
 		
-		2 "|callaLilyBush_latest3:CallaLillyBush" "rotate" " -type \"double3\" -2.34551784158218579 -0.40640534100752745 8.79867319408646509"
+		2 "|Forest_Grove_SET|callaLilyBush_latest3:CallaLillyBush" "translate" " -type \"double3\" -156.43458182249287347 46.19921021481283674 -511.96501130822275627"
 		
-		2 "|callaLilyBush_latest3:CallaLillyBush" "scale" " -type \"double3\" 8.25799417520783763 8.25799417520783763 8.25799417520783763";
+		2 "|Forest_Grove_SET|callaLilyBush_latest3:CallaLillyBush" "rotate" " -type \"double3\" -2.34551784158218579 -0.40640534100752745 8.79867319408646509"
+		
+		2 "|Forest_Grove_SET|callaLilyBush_latest3:CallaLillyBush" "scale" " -type \"double3\" 8.25799417520783763 8.25799417520783763 8.25799417520783763";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN3";
@@ -797,12 +875,13 @@ createNode reference -n "thicktreeRN3";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN3"
 		"thicktreeRN3" 0
-		"thicktreeRN3" 3
-		2 "|thicktree3:ThickTree" "translate" " -type \"double3\" -185.74212805080202315 43.18279203406981992 -485.74573063243127535"
+		"thicktreeRN3" 4
+		0 "|thicktree3:ThickTree" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|thicktree3:ThickTree" "translate" " -type \"double3\" -185.74212805080202315 43.18279203406981992 -485.74573063243127535"
 		
-		2 "|thicktree3:ThickTree" "rotate" " -type \"double3\" 4.90774865753253309 -147.43780914605491716 0.062104348410524521"
+		2 "|Forest_Grove_SET|thicktree3:ThickTree" "rotate" " -type \"double3\" 4.90774865753253309 -147.43780914605491716 0.062104348410524521"
 		
-		2 "|thicktree3:ThickTree" "scale" " -type \"double3\" 0.4158470922256724 0.4158470922256724 0.4158470922256724";
+		2 "|Forest_Grove_SET|thicktree3:ThickTree" "scale" " -type \"double3\" 0.4158470922256724 0.4158470922256724 0.4158470922256724";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN4";
@@ -810,12 +889,13 @@ createNode reference -n "thicktreeRN4";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN4"
 		"thicktreeRN4" 0
-		"thicktreeRN4" 3
-		2 "|thicktree4:ThickTree" "translate" " -type \"double3\" 150.10813028674058955 42.04340954962157184 -596.84543647676332512"
+		"thicktreeRN4" 4
+		0 "|thicktree4:ThickTree" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|thicktree4:ThickTree" "translate" " -type \"double3\" 150.10813028674058955 42.04340954962157184 -633.05873393865078924"
 		
-		2 "|thicktree4:ThickTree" "rotate" " -type \"double3\" 0 95.97738488143488667 0"
+		2 "|Forest_Grove_SET|thicktree4:ThickTree" "rotate" " -type \"double3\" 0 95.97738488143488667 0"
 		
-		2 "|thicktree4:ThickTree" "scale" " -type \"double3\" 0.4082032135456844 0.4082032135456844 0.4082032135456844";
+		2 "|Forest_Grove_SET|thicktree4:ThickTree" "scale" " -type \"double3\" 0.4082032135456844 0.4082032135456844 0.4082032135456844";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN5";
@@ -823,16 +903,17 @@ createNode reference -n "thicktreeRN5";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN5"
 		"thicktreeRN5" 0
-		"thicktreeRN5" 7
-		2 "|thicktree5:ThickTree" "visibility" " 1"
-		2 "|thicktree5:ThickTree" "translate" " -type \"double3\" -372.21018136996741532 34.46687819189290281 -567.48180057057538761"
+		"thicktreeRN5" 8
+		0 "|thicktree5:ThickTree" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|thicktree5:ThickTree" "visibility" " 1"
+		2 "|Forest_Grove_SET|thicktree5:ThickTree" "translate" " -type \"double3\" -372.21018136996741532 34.46687819189290281 -572.25894252742659774"
 		
-		2 "|thicktree5:ThickTree" "rotate" " -type \"double3\" 0 -238.08909964105808399 0.84699241124102542"
+		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotate" " -type \"double3\" 0 -238.08909964105808399 0.84699241124102542"
 		
-		2 "|thicktree5:ThickTree" "rotateZ" " -av"
-		2 "|thicktree5:ThickTree" "rotateY" " -av"
-		2 "|thicktree5:ThickTree" "rotateX" " -av"
-		2 "|thicktree5:ThickTree" "scale" " -type \"double3\" 0.42880976099544005 0.42880976099544005 0.42880976099544005";
+		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateX" " -av"
+		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateY" " -av"
+		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateZ" " -av"
+		2 "|Forest_Grove_SET|thicktree5:ThickTree" "scale" " -type \"double3\" 0.42880976099544005 0.42880976099544005 0.42880976099544005";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyExtrudeEdge -n "polyExtrudeEdge6";
@@ -850,7 +931,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge6";
 createNode polyTweak -n "polyTweak5";
 	rename -uid "98B501BB-044A-E33F-FF47-6EBF08AE6297";
 	setAttr ".uopa" yes;
-	setAttr -s 14 ".tk";
+	setAttr -s 11 ".tk";
 	setAttr ".tk[4]" -type "float3" -0.19853406 -0.028812075 -0.091591835 ;
 	setAttr ".tk[5]" -type "float3" -0.19853406 -0.028812075 -0.091591835 ;
 	setAttr ".tk[6]" -type "float3" -0.057211876 -0.0083028199 -0.026394159 ;
@@ -867,12 +948,13 @@ createNode reference -n "callaLilyBush_latestRN4";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN4"
 		"callaLilyBush_latestRN4" 0
-		"callaLilyBush_latestRN4" 3
-		2 "|callaLilyBush_latest4:CallaLillyBush" "translate" " -type \"double3\" 108.35739788797670258 45.63037158733877163 -532.41923775198142721"
+		"callaLilyBush_latestRN4" 4
+		0 "|callaLilyBush_latest4:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|callaLilyBush_latest4:CallaLillyBush" "translate" " -type \"double3\" 128.77705903347219873 45.63037158733877163 -571.50186200132657177"
 		
-		2 "|callaLilyBush_latest4:CallaLillyBush" "rotate" " -type \"double3\" -9.15541265342130117 -68.2359002757274169 3.73879214686845884"
+		2 "|Forest_Grove_SET|callaLilyBush_latest4:CallaLillyBush" "rotate" " -type \"double3\" -9.15541265342130117 -68.2359002757274169 3.73879214686845884"
 		
-		2 "|callaLilyBush_latest4:CallaLillyBush" "scale" " -type \"double3\" 10.47257033863833087 10.47257033863833087 10.47257033863833087";
+		2 "|Forest_Grove_SET|callaLilyBush_latest4:CallaLillyBush" "scale" " -type \"double3\" 10.47257033863833087 10.47257033863833087 10.47257033863833087";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "callaLilyBush_latestRN5";
@@ -880,12 +962,13 @@ createNode reference -n "callaLilyBush_latestRN5";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN5"
 		"callaLilyBush_latestRN5" 0
-		"callaLilyBush_latestRN5" 3
-		2 "|callaLilyBush_latest5:CallaLillyBush" "translate" " -type \"double3\" -245.62404895960094109 36.46287934074620551 -332.23326212513615019"
+		"callaLilyBush_latestRN5" 4
+		0 "|callaLilyBush_latest5:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|callaLilyBush_latest5:CallaLillyBush" "translate" " -type \"double3\" -258.95572485367961235 32.8548604566834257 -254.99717283736214313"
 		
-		2 "|callaLilyBush_latest5:CallaLillyBush" "rotate" " -type \"double3\" -5.37614844608231657 -137.38018149602035578 0.21881999293683008"
+		2 "|Forest_Grove_SET|callaLilyBush_latest5:CallaLillyBush" "rotate" " -type \"double3\" -5.8265369427734397 -137.5519929025919339 -2.42184062138313649"
 		
-		2 "|callaLilyBush_latest5:CallaLillyBush" "scale" " -type \"double3\" 6.08355663813324732 6.08355663813324732 6.08355663813324732";
+		2 "|Forest_Grove_SET|callaLilyBush_latest5:CallaLillyBush" "scale" " -type \"double3\" 6.08355663813324732 6.08355663813324732 6.08355663813324732";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN";
@@ -893,12 +976,14 @@ createNode reference -n "lilyBush_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lilyBush_latestRN"
 		"lilyBush_latestRN" 0
-		"lilyBush_latestRN" 3
-		2 "|lilyBush_latest:LilyBush" "translate" " -type \"double3\" -213.97773312781492905 37.66020780251018607 -450.74434192535670718"
+		"lilyBush_latestRN" 5
+		0 "|lilyBush_latest:LilyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|lilyBush_latest:LilyBush" "visibility" " 1"
+		2 "|Forest_Grove_SET|lilyBush_latest:LilyBush" "translate" " -type \"double3\" -213.97773312781492905 37.66020780251018607 -423.47984107806536258"
 		
-		2 "|lilyBush_latest:LilyBush" "rotate" " -type \"double3\" 3.11224191461060595 -0.076428818835140716 7.05683754467718138"
+		2 "|Forest_Grove_SET|lilyBush_latest:LilyBush" "rotate" " -type \"double3\" 3.11224191461060595 -0.076428818835140716 7.05683754467718138"
 		
-		2 "|lilyBush_latest:LilyBush" "scale" " -type \"double3\" 4.7598238723935431 4.7598238723935431 4.7598238723935431";
+		2 "|Forest_Grove_SET|lilyBush_latest:LilyBush" "scale" " -type \"double3\" 4.7598238723935431 4.7598238723935431 4.7598238723935431";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN1";
@@ -906,12 +991,14 @@ createNode reference -n "lilyBush_latestRN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lilyBush_latestRN1"
 		"lilyBush_latestRN1" 0
-		"lilyBush_latestRN1" 3
-		2 "|lilyBush_latest1:LilyBush" "translate" " -type \"double3\" 4.49733188167264863 48.79705343615872692 -429.03585696005546879"
+		"lilyBush_latestRN1" 5
+		0 "|lilyBush_latest1:LilyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|lilyBush_latest1:LilyBush" "visibility" " 1"
+		2 "|Forest_Grove_SET|lilyBush_latest1:LilyBush" "translate" " -type \"double3\" 45.85442708055536087 48.79705343615872692 -438.30171856642095918"
 		
-		2 "|lilyBush_latest1:LilyBush" "rotate" " -type \"double3\" -2.9146736591370348 0 0"
+		2 "|Forest_Grove_SET|lilyBush_latest1:LilyBush" "rotate" " -type \"double3\" -2.9146736591370348 0 0"
 		
-		2 "|lilyBush_latest1:LilyBush" "scale" " -type \"double3\" 5.52282872782536138 5.52282872782536138 5.52282872782536138";
+		2 "|Forest_Grove_SET|lilyBush_latest1:LilyBush" "scale" " -type \"double3\" 5.52282872782536138 5.52282872782536138 5.52282872782536138";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN2";
@@ -919,12 +1006,13 @@ createNode reference -n "lilyBush_latestRN2";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lilyBush_latestRN2"
 		"lilyBush_latestRN2" 0
-		"lilyBush_latestRN2" 3
-		2 "|lilyBush_latest2:LilyBush" "translate" " -type \"double3\" 54.66785511988287283 44.19088732567814048 -382.1996699056708735"
+		"lilyBush_latestRN2" 4
+		0 "|lilyBush_latest2:LilyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|lilyBush_latest2:LilyBush" "translate" " -type \"double3\" -0.13372606138635135 47.63422031652906696 -369.5982514299067816"
 		
-		2 "|lilyBush_latest2:LilyBush" "rotate" " -type \"double3\" 7.28614953054641479 0 0"
+		2 "|Forest_Grove_SET|lilyBush_latest2:LilyBush" "rotate" " -type \"double3\" 2.64703870789185602 0.14756450504432803 -3.18849676046470742"
 		
-		2 "|lilyBush_latest2:LilyBush" "scale" " -type \"double3\" 4.69859603216042565 4.69859603216042565 4.69859603216042565";
+		2 "|Forest_Grove_SET|lilyBush_latest2:LilyBush" "scale" " -type \"double3\" 4.69859603216042565 4.69859603216042565 4.69859603216042565";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN3";
@@ -932,12 +1020,13 @@ createNode reference -n "lilyBush_latestRN3";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lilyBush_latestRN3"
 		"lilyBush_latestRN3" 0
-		"lilyBush_latestRN3" 3
-		2 "|lilyBush_latest3:LilyBush" "translate" " -type \"double3\" 114.16602162049954927 44.89622651574773471 -633.52114304258338962"
+		"lilyBush_latestRN3" 4
+		0 "|lilyBush_latest3:LilyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|lilyBush_latest3:LilyBush" "translate" " -type \"double3\" 163.94071307500277612 41.12334100437669093 -654.13209701818482245"
 		
-		2 "|lilyBush_latest3:LilyBush" "rotate" " -type \"double3\" 0 -179.99999999999994316 0"
+		2 "|Forest_Grove_SET|lilyBush_latest3:LilyBush" "rotate" " -type \"double3\" 0 -179.99999999999994316 0"
 		
-		2 "|lilyBush_latest3:LilyBush" "scale" " -type \"double3\" 5.21000360978843169 5.21000360978843169 5.21000360978843169";
+		2 "|Forest_Grove_SET|lilyBush_latest3:LilyBush" "scale" " -type \"double3\" 5.21000360978843169 5.21000360978843169 5.21000360978843169";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN4";
@@ -945,25 +1034,180 @@ createNode reference -n "lilyBush_latestRN4";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lilyBush_latestRN4"
 		"lilyBush_latestRN4" 0
-		"lilyBush_latestRN4" 2
-		2 "|lilyBush_latest4:LilyBush" "translate" " -type \"double3\" -354.09485135089119012 34.9332208556735111 -533.66426729832051024"
+		"lilyBush_latestRN4" 3
+		0 "|lilyBush_latest4:LilyBush" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|lilyBush_latest4:LilyBush" "translate" " -type \"double3\" -350.36999025485607717 34.9332208556735111 -543.35654368397024427"
 		
-		2 "|lilyBush_latest4:LilyBush" "scale" " -type \"double3\" 5.82954025856664426 5.82954025856664426 5.82954025856664426";
+		2 "|Forest_Grove_SET|lilyBush_latest4:LilyBush" "scale" " -type \"double3\" 5.82954025856664426 5.82954025856664426 5.82954025856664426";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "danglingFlower_latestRN";
-	rename -uid "78935202-8448-BF93-8922-7E8520A7332A";
+createNode polyExtrudeEdge -n "polyExtrudeEdge7";
+	rename -uid "794FADBE-534D-9514-D862-C5B425658170";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 5 "e[0]" "e[4]" "e[7]" "e[17]" "e[31]";
+	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
+		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -137.90195638155092 25.453855909098095 -211.08689710347255 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -62.818512 -8.5590286 -109.1117 ;
+	setAttr ".rs" 874868142;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -414.5240518382044 -8.5590474543255226 -153.82553628726234 ;
+	setAttr ".cbx" -type "double3" 288.88702942109819 -8.5590098719519077 -64.397865843960517 ;
+createNode polyTweak -n "polyTweak6";
+	rename -uid "694E30D9-0344-442C-2741-4D99703F515B";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk[20:23]" -type "float3"  -0.3893013 -0.056496996 -0.17960051
+		 -0.3893013 -0.056496996 -0.17960051 -0.3893013 -0.056496996 -0.17960051 -0.3893013
+		 -0.056496996 -0.17960051;
+createNode reference -n "crystals_version1_latestRN";
+	rename -uid "03D00746-874D-3248-1F17-02A91F6A081B";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"danglingFlower_latestRN"
-		"danglingFlower_latestRN" 0
-		"danglingFlower_latestRN" 3
-		2 "|danglingFlower_latest:danglingFlower" "translate" " -type \"double3\" 0 0 0"
+		"crystals_version1_latestRN"
+		"crystals_version1_latestRN" 0
+		"crystals_version1_latestRN" 4
+		0 "|crystals_version1_latest:crystals_version1" "|Forest_Grove_SET" "-s -r "
 		
-		2 "|danglingFlower_latest:danglingFlower|danglingFlower_latest:ikHandle1" 
-		"translate" " -type \"double3\" -0.078038765070046368 -3.02649757281258713 0.54512780311241771"
+		2 "|Forest_Grove_SET|crystals_version1_latest:crystals_version1" "translate" 
+		" -type \"double3\" -218.69140263903290133 37.9138424652186572 -492.34662079463703321"
 		
-		2 "|danglingFlower_latest:danglingFlower|danglingFlower_latest:ikHandle1" 
-		"rotate" " -type \"double3\" 0 0 -78.62283690000595016";
+		2 "|Forest_Grove_SET|crystals_version1_latest:crystals_version1" "rotate" 
+		" -type \"double3\" 0 75 -1.93065860890145813"
+		2 "|Forest_Grove_SET|crystals_version1_latest:crystals_version1" "scale" 
+		" -type \"double3\" 3.9915358901618796 3.9915358901618796 3.9915358901618796";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "crystals_version1_latestRN1";
+	rename -uid "69C4413F-F141-28A2-0B8F-D5BBE915E81D";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"crystals_version1_latestRN1"
+		"crystals_version1_latestRN1" 0
+		"crystals_version1_latestRN1" 4
+		0 "|crystals_version1_latest1:crystals_version1" "|Forest_Grove_SET" "-s -r "
+		
+		2 "|Forest_Grove_SET|crystals_version1_latest1:crystals_version1" "translate" 
+		" -type \"double3\" -184.22221173069192446 39.90179496306731721 -289.61771259531911937"
+		
+		2 "|Forest_Grove_SET|crystals_version1_latest1:crystals_version1" "rotate" 
+		" -type \"double3\" 0 0 3.42364519744442752"
+		2 "|Forest_Grove_SET|crystals_version1_latest1:crystals_version1" "scale" 
+		" -type \"double3\" 4.88042487350763299 4.88042487350763299 4.88042487350763299";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "crystals_version1_latestRN2";
+	rename -uid "B1E0E122-964A-1538-00A2-62B8AC9F27E9";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"crystals_version1_latestRN2"
+		"crystals_version1_latestRN2" 0
+		"crystals_version1_latestRN2" 4
+		0 "|crystals_version1_latest2:crystals_version1" "|Forest_Grove_SET" "-s -r "
+		
+		2 "|Forest_Grove_SET|crystals_version1_latest2:crystals_version1" "translate" 
+		" -type \"double3\" 82.83771945138734338 45.41360144752533756 -612.76907905400730669"
+		
+		2 "|Forest_Grove_SET|crystals_version1_latest2:crystals_version1" "rotate" 
+		" -type \"double3\" 0 -104.99999999999998579 0"
+		2 "|Forest_Grove_SET|crystals_version1_latest2:crystals_version1" "scale" 
+		" -type \"double3\" 5.80662441947869379 5.80662441947869379 5.80662441947869379";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "crystals_version2_latestRN";
+	rename -uid "DA9DDC18-CA49-5BD7-1DA2-B19BF69C54DA";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"crystals_version2_latestRN"
+		"crystals_version2_latestRN" 0
+		"crystals_version2_latestRN" 4
+		0 "|crystals_version2_latest:crystal_version2" "|Forest_Grove_SET" "-s -r "
+		
+		2 "|Forest_Grove_SET|crystals_version2_latest:crystal_version2" "translate" 
+		" -type \"double3\" -202.38442776511655552 46.0984364788619061 -271.29079604866103637"
+		
+		2 "|Forest_Grove_SET|crystals_version2_latest:crystal_version2" "rotate" 
+		" -type \"double3\" 0 0 3.98070391198985085"
+		2 "|Forest_Grove_SET|crystals_version2_latest:crystal_version2" "scale" " -type \"double3\" 6.05399487865338948 6.05399487865338948 6.05399487865338948";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "crystals_version2_latestRN1";
+	rename -uid "9ADF28D0-4A4C-2995-A04B-BC9E1EE39F03";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"crystals_version2_latestRN1"
+		"crystals_version2_latestRN1" 0
+		"crystals_version2_latestRN1" 4
+		0 "|crystals_version2_latest1:crystal_version2" "|Forest_Grove_SET" "-s -r "
+		
+		2 "|Forest_Grove_SET|crystals_version2_latest1:crystal_version2" "translate" 
+		" -type \"double3\" -397.01608493904433317 44.23190005738351971 -548.53092358865978895"
+		
+		2 "|Forest_Grove_SET|crystals_version2_latest1:crystal_version2" "rotate" 
+		" -type \"double3\" 0 -82.00165598846042769 0"
+		2 "|Forest_Grove_SET|crystals_version2_latest1:crystal_version2" "scale" 
+		" -type \"double3\" 5.0387817737689593 5.0387817737689593 5.0387817737689593";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "crystals_version2_latestRN2";
+	rename -uid "4A422969-F144-7F80-6A44-4F8576AF8014";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"crystals_version2_latestRN2"
+		"crystals_version2_latestRN2" 0
+		"crystals_version2_latestRN2" 3
+		0 "|crystals_version2_latest2:crystal_version2" "|Forest_Grove_SET" "-s -r "
+		
+		2 "|Forest_Grove_SET|crystals_version2_latest2:crystal_version2" "translate" 
+		" -type \"double3\" -373.01140050414358029 42.42422824722813601 -308.79704047708963799"
+		
+		2 "|Forest_Grove_SET|crystals_version2_latest2:crystal_version2" "scale" 
+		" -type \"double3\" 4.33110435917799474 4.33110435917799474 4.33110435917799474";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "crystals_version1_latestRN3";
+	rename -uid "68010730-2747-C011-A10F-13ADD6964E4A";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"crystals_version1_latestRN3"
+		"crystals_version1_latestRN3" 0
+		"crystals_version1_latestRN3" 4
+		0 "|crystals_version1_latest3:crystals_version1" "|Forest_Grove_SET" "-s -r "
+		
+		2 "|Forest_Grove_SET|crystals_version1_latest3:crystals_version1" "translate" 
+		" -type \"double3\" -161.10495215648529665 42.75002424853401806 -448.67157955602044694"
+		
+		2 "|Forest_Grove_SET|crystals_version1_latest3:crystals_version1" "rotate" 
+		" -type \"double3\" 0 13.62795808440947454 0"
+		2 "|Forest_Grove_SET|crystals_version1_latest3:crystals_version1" "scale" 
+		" -type \"double3\" 4.63077624251910702 4.63077624251910702 4.63077624251910702";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "crystals_version1_latestRN4";
+	rename -uid "9557E0EE-CB42-6FE8-93A5-F2859F400A09";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"crystals_version1_latestRN4"
+		"crystals_version1_latestRN4" 0
+		"crystals_version1_latestRN4" 4
+		0 "|crystals_version1_latest4:crystals_version1" "|Forest_Grove_SET" "-s -r "
+		
+		2 "|Forest_Grove_SET|crystals_version1_latest4:crystals_version1" "translate" 
+		" -type \"double3\" 3.63999254255468685 51.54870763643688747 -431.92288700932243728"
+		
+		2 "|Forest_Grove_SET|crystals_version1_latest4:crystals_version1" "rotate" 
+		" -type \"double3\" 0 41.51425618797885875 0"
+		2 "|Forest_Grove_SET|crystals_version1_latest4:crystals_version1" "scale" 
+		" -type \"double3\" 4.289533391154011 4.289533391154011 4.289533391154011";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "crystals_version2_latestRN3";
+	rename -uid "59500DE8-3C47-6E73-B006-7484D1003D45";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"crystals_version2_latestRN3"
+		"crystals_version2_latestRN3" 0
+		"crystals_version2_latestRN3" 4
+		0 "|crystals_version2_latest3:crystal_version2" "|Forest_Grove_SET" "-s -r "
+		
+		2 "|Forest_Grove_SET|crystals_version2_latest3:crystal_version2" "translate" 
+		" -type \"double3\" 77.17362487534126103 46.29647190902073106 -265.87005526476878003"
+		
+		2 "|Forest_Grove_SET|crystals_version2_latest3:crystal_version2" "rotate" 
+		" -type \"double3\" -2.25646213461701972 -119.23811709008610649 0"
+		2 "|Forest_Grove_SET|crystals_version2_latest3:crystal_version2" "scale" 
+		" -type \"double3\" 4.62982109269297482 4.62982109269297482 4.62982109269297482";
+	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
 	setAttr -av -k on ".cch";
@@ -984,7 +1228,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 117 ".st";
+	setAttr -s 145 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -997,7 +1241,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 101 ".s";
+	setAttr -s 129 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -1009,15 +1253,15 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 163 ".u";
+	setAttr -s 274 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 116 ".r";
+	setAttr -s 131 ".r";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 242 ".tx";
+	setAttr -s 378 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -1194,11 +1438,9 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".hwel";
 select -ne :defaultHideFaceDataSet;
 	setAttr -s 6 ".dnsm";
-select -ne :ikSystem;
-	setAttr -s 5 ".sol";
-connectAttr "polyCylinder1.out" "TEMP_CharacterShape.i";
-connectAttr "polyExtrudeEdge6.out" "CliffShape.i";
+connectAttr "polyExtrudeEdge7.out" "CliffShape.i";
 connectAttr "polyPlane2.out" "GroundShape.i";
+connectAttr "polyCylinder1.out" "TEMP_CharacterShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -1223,6 +1465,9 @@ connectAttr "polyExtrudeEdge4.out" "polyTweak4.ip";
 connectAttr "polyTweak5.out" "polyExtrudeEdge6.ip";
 connectAttr "CliffShape.wm" "polyExtrudeEdge6.mp";
 connectAttr "polyExtrudeEdge5.out" "polyTweak5.ip";
+connectAttr "polyTweak6.out" "polyExtrudeEdge7.ip";
+connectAttr "CliffShape.wm" "polyExtrudeEdge7.mp";
+connectAttr "polyExtrudeEdge6.out" "polyTweak6.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "TEMP_CharacterShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "CliffShape.iog" ":initialShadingGroup.dsm" -na;
