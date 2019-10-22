@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: forest_grove_SET_latest.ma
-//Last modified: Tue, Oct 22, 2019 12:30:09 PM
+//Last modified: Tue, Oct 22, 2019 12:47:42 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "mushroom_latest" -rfn "mushroom_latestRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/jakeh/OneDrive/Desktop/poweredup//assets/shrooms/mushroom_latest.ma";
@@ -168,13 +168,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "9670D191-4423-9407-2A8F-10A65AA9DCF0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1254.4996241217909 697.91410366592527 1314.1715616270658 ;
+	setAttr ".t" -type "double3" -1001.1915844136295 582.4641426297519 978.02043925486305 ;
 	setAttr ".r" -type "double3" -15.33835272851578 -756.99999999978127 9.9562148234118211e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F01540EA-4FCC-8C52-C464-A49D62EC1A8D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 2193.9630945396716;
+	setAttr ".coi" 1757.5100803948153;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
