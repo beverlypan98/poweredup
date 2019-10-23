@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: bookStack_LEFT_SHELF.ma
-//Last modified: Tue, Oct 22, 2019 07:17:39 PM
+//Last modified: Wed, Oct 23, 2019 01:28:41 AM
 //Codeset: UTF-8
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -17,13 +17,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "D10EA300-9F4E-07CE-9539-4896F5B15A51";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.1279374621828469 1.1636695503780614 -6.5159556109262926 ;
-	setAttr ".r" -type "double3" -20.138352729605046 -4.5999999999980226 0 ;
+	setAttr ".t" -type "double3" -0.9333695234914281 2.5866069732979335 -4.6636692362462098 ;
+	setAttr ".r" -type "double3" -27.338352729605486 -3.3999999999981037 -9.9567589887152029e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7865FF5A-5C4B-8543-721A-72B9A55E43B8";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 0.80594062810074374;
+	setAttr ".coi" 3.0756505496160558;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -39648,7 +39648,6 @@ createNode PxrSurface -n "DarkGreenBook";
 createNode shadingEngine -n "PxrSurface2SG";
 	rename -uid "72844F2A-5747-0B35-B11E-5589E7F7E67B";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "35054967-084F-A413-EB31-EAB1505AF4C3";
@@ -41069,7 +41068,7 @@ createNode PxrSurface -n "LightBlueBook";
 createNode shadingEngine -n "PxrSurface11SG";
 	rename -uid "219F9541-FA42-22A4-8F51-BB8D395A3D5A";
 	setAttr ".ihi" 0;
-	setAttr -s 2 ".dsm";
+	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo11";
 	rename -uid "CB92EFAD-0A45-CE6E-EEAB-1D846C3FE7AA";
@@ -41410,7 +41409,7 @@ createNode PxrSurface -n "UCBUGG_SHADER";
 	setAttr ".nds" 0;
 	setAttr ".inputMaterial" 0;
 	setAttr ".diffuseGain" 1;
-	setAttr ".diffuseColor" -type "float3" 1 0.3136 0.3258 ;
+	setAttr ".diffuseColor" -type "float3" 0 0 0 ;
 	setAttr ".diffuseRoughness" 0;
 	setAttr ".diffuseExponent" 1;
 	setAttr ".diffuseBumpNormal" -type "float3" 0 0 0 ;
@@ -41892,6 +41891,12 @@ createNode polyTweakUV -n "polyTweakUV2";
 		 -0.13588689 -0.0037834086 0.14566037 -0.0037249806 0.15136424 -0.020609766 -0.18324879
 		 0.22605932 -0.18358421 0.23800051 -0.18347292 0.21226549 -0.13812907 0.028102342
 		 -0.13831593 0.023963118 0.09030059 0.035495512 0.0012423769 -0.016749531;
+createNode file -n "file4";
+	rename -uid "8CE3C0E3-954A-F2A2-121C-B88A3F535D20";
+	setAttr ".ftn" -type "string" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//sourceimages/books/UCBUGG_book/bookCover_1001_BaseColor.png";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture4";
+	rename -uid "FAF4F6D7-C449-41DD-CF51-7893DDD1232A";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -41939,7 +41944,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 3 ".u";
+	setAttr -s 4 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 5 ".r";
 select -ne :defaultTextureList1;
@@ -41947,7 +41952,7 @@ select -ne :defaultTextureList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 3 ".tx";
+	setAttr -s 4 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -42253,15 +42258,13 @@ connectAttr "DarkGreenBook.oc" "PxrSurface2SG.rman__surface";
 connectAttr "lambert3.oc" "PxrSurface2SG.ss";
 connectAttr "|bookStack_LEFT_SHELF|Top_Stack|book_stack:book|book_stack:cover|book_stack:coverShape.iog" "PxrSurface2SG.dsm"
 		 -na;
-connectAttr "|bookStack_LEFT_SHELF|Bottom_Stack|book11|cover|coverShape.iog" "PxrSurface2SG.dsm"
-		 -na;
 connectAttr "PxrSurface2SG.msg" "materialInfo2.sg";
 connectAttr "lambert3.msg" "materialInfo2.m";
 connectAttr "DarkBlueBook.oc" "PxrSurface3SG.rman__surface";
 connectAttr "lambert4.oc" "PxrSurface3SG.ss";
 connectAttr "|bookStack_LEFT_SHELF|Bottom_Stack|book1|cover|coverShape.iog" "PxrSurface3SG.dsm"
 		 -na;
-connectAttr "|bookStack_LEFT_SHELF|Top_Stack|book20|cover|coverShape.iog" "PxrSurface3SG.dsm"
+connectAttr "|bookStack_LEFT_SHELF|Bottom_Stack|book11|cover|coverShape.iog" "PxrSurface3SG.dsm"
 		 -na;
 connectAttr "PxrSurface3SG.msg" "materialInfo3.sg";
 connectAttr "lambert4.msg" "materialInfo3.m";
@@ -42341,6 +42344,8 @@ connectAttr "|bookStack_LEFT_SHELF|Top_Stack|book8|cover|coverShape.iog" "PxrSur
 		 -na;
 connectAttr "|bookStack_LEFT_SHELF|Bottom_Stack|book9|cover|coverShape.iog" "PxrSurface11SG.dsm"
 		 -na;
+connectAttr "|bookStack_LEFT_SHELF|Top_Stack|book20|cover|coverShape.iog" "PxrSurface11SG.dsm"
+		 -na;
 connectAttr "PxrSurface11SG.msg" "materialInfo11.sg";
 connectAttr "lambert12.msg" "materialInfo11.m";
 connectAttr "LightGreenBook.oc" "PxrSurface12SG.rman__surface";
@@ -42406,6 +42411,7 @@ connectAttr "place2dTexture2.vt3" "file2.vt3";
 connectAttr "place2dTexture2.vc1" "file2.vc1";
 connectAttr "place2dTexture2.o" "file2.uv";
 connectAttr "place2dTexture2.ofs" "file2.fs";
+connectAttr "file4.oc" "UCBUGG_SHADER.diffuseColor";
 connectAttr "UCBUGG_SHADER.oc" "PxrSurface14SG.rman__surface";
 connectAttr "lambert15.oc" "PxrSurface14SG.ss";
 connectAttr "|bookStack_LEFT_SHELF|Bottom_Stack|book10|cover|coverShape.iog" "PxrSurface14SG.dsm"
@@ -42453,6 +42459,28 @@ connectAttr "|bookStack_LEFT_SHELF|Bottom_Stack|book10|cover|coverShape.wm" "pol
 		;
 connectAttr "polyPlanarProj2.out" "polyMapCut2.ip";
 connectAttr "polyMapCut2.out" "polyTweakUV2.ip";
+connectAttr ":defaultColorMgtGlobals.cme" "file4.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file4.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file4.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file4.ws";
+connectAttr "place2dTexture4.c" "file4.c";
+connectAttr "place2dTexture4.tf" "file4.tf";
+connectAttr "place2dTexture4.rf" "file4.rf";
+connectAttr "place2dTexture4.mu" "file4.mu";
+connectAttr "place2dTexture4.mv" "file4.mv";
+connectAttr "place2dTexture4.s" "file4.s";
+connectAttr "place2dTexture4.wu" "file4.wu";
+connectAttr "place2dTexture4.wv" "file4.wv";
+connectAttr "place2dTexture4.re" "file4.re";
+connectAttr "place2dTexture4.of" "file4.of";
+connectAttr "place2dTexture4.r" "file4.ro";
+connectAttr "place2dTexture4.n" "file4.n";
+connectAttr "place2dTexture4.vt1" "file4.vt1";
+connectAttr "place2dTexture4.vt2" "file4.vt2";
+connectAttr "place2dTexture4.vt3" "file4.vt3";
+connectAttr "place2dTexture4.vc1" "file4.vc1";
+connectAttr "place2dTexture4.o" "file4.uv";
+connectAttr "place2dTexture4.ofs" "file4.fs";
 connectAttr "book_stack:PxrSurface1SG.pa" ":renderPartition.st" -na;
 connectAttr "book_stack:PxrSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "PxrSurface1SG.pa" ":renderPartition.st" -na;
@@ -42488,6 +42516,7 @@ connectAttr "CNM190_woooo.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr ":rmanGlobals.msg" ":defaultRenderingList1.r" -na;
 connectAttr ":rmanDefaultDisplay.msg" ":defaultRenderingList1.r" -na;
@@ -42496,6 +42525,7 @@ connectAttr ":PxrPathTracer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
 connectAttr "|bookStack_LEFT_SHELF|Top_Stack|book_stack:book3|book_stack:cover|book_stack:coverShape.iog" ":initialShadingGroup.dsm"
 		 -na;
 // End of bookStack_LEFT_SHELF.ma
