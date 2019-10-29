@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: roots_latest.ma
-//Last modified: Tue, Oct 29, 2019 09:36:42 AM
+//Last modified: Tue, Oct 29, 2019 12:32:38 PM
 //Codeset: 1252
 requires maya "2018ff09";
 requires -nodeType "PxrNormalMap" -nodeType "PxrSurface" -nodeType "rmanDisplayChannel"
@@ -16,13 +16,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "199088A5-B74B-6408-D3C2-B2A6A351ACF5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 13.895705972606741 8.4112596680680944 15.589503465473889 ;
+	setAttr ".t" -type "double3" 4.8010223078648604 3.9669164039285807 6.3669392086443413 ;
 	setAttr ".r" -type "double3" -18.938352728675341 -1035.4000000001411 -2.2334538879326442e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "10BCE5F4-524E-19A4-943E-A6AE60131333";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 20.973210076253558;
+	setAttr ".coi" 7.2793738904882739;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -48869,22 +48869,22 @@ createNode mesh -n "RtsShape" -p "Rts";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".bw" 5;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "CD0DE1F5-490A-842F-A048-DFB80B3C68ED";
+	rename -uid "9710E460-4DEE-FD56-9C50-07B5779B52E0";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "C216D4F1-48E5-28DE-92D5-49B22EE3582E";
+	rename -uid "95F3391F-4B24-0F11-E324-6996D091F5BB";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "FCDE4AC3-864A-A47F-8520-7481A21555F9";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "13229B8F-4D23-59D0-BF38-A38B546B2BF6";
+	rename -uid "00545B96-496E-A170-1E90-46AEFDDB7C22";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "FF36CF5E-F64A-578E-A417-21A2D50D0A20";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "16F0BB24-42C7-B02C-5BEE-3A8F7F6A39B1";
+	rename -uid "D384FFC0-4D43-F089-E4B2-20A11F0E1C0A";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4AC52628-4096-13C6-4BE1-2FA60C843AD5";
+	rename -uid "0DC66933-420C-F511-29E1-B38378C634B7";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "0433C289-ED46-0DB3-1AD1-10B9A383DD6B";
 	setAttr ".b" -type "string" (
@@ -49287,7 +49287,7 @@ createNode PxrTexture -n "rootsColor";
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
 	setAttr ".nds" 0;
-	setAttr ".filename" -type "string" "C:/Users/jakeh/OneDrive/Desktop/poweredup//sourceimages/plants/roots/newdiffuse.png";
+	setAttr ".filename" -type "string" "C:/Users/jakeh/OneDrive/Desktop/poweredup//sourceimages/plants/roots/roots_lambert1_BaseColor.png.tex";
 	setAttr ".firstChannel" 0;
 	setAttr ".atlasStyle" 0;
 	setAttr ".invertT" yes;
@@ -49307,9 +49307,9 @@ createNode PxrNormalMap -n "rootsNorm";
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
 	setAttr ".nds" 0;
-	setAttr ".bumpScale" 1.9473683834075928;
+	setAttr ".bumpScale" 0.98684209585189819;
 	setAttr ".inputRGB" -type "float3" 0 0 0 ;
-	setAttr ".filename" -type "string" "C:/Users/jakeh/OneDrive/Desktop/poweredup//sourceimages/plants/roots/newNorm.png";
+	setAttr ".filename" -type "string" "C:/Users/jakeh/OneDrive/Desktop/poweredup//sourceimages/plants/roots/roots_lambert1_Normal.png.tex";
 	setAttr ".bumpOverlay" -type "float3" 0 0 0 ;
 	setAttr ".invertBump" no;
 	setAttr ".orientation" 2;
@@ -49335,7 +49335,7 @@ createNode PxrTexture -n "rootsEmiss";
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
 	setAttr ".nds" 0;
-	setAttr ".filename" -type "string" "C:/Users/jakeh/OneDrive/Desktop/poweredup//sourceimages/plants/roots/new_emiss3.png.tex";
+	setAttr ".filename" -type "string" "C:/Users/jakeh/OneDrive/Desktop/poweredup//sourceimages/plants/roots/roots_lambert1_Emissive.png.tex";
 	setAttr ".firstChannel" 0;
 	setAttr ".atlasStyle" 0;
 	setAttr ".invertT" yes;
