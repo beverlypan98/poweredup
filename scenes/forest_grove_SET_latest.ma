@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: forest_grove_SET_latest.ma
-//Last modified: Mon, Oct 28, 2019 11:11:01 PM
+//Last modified: Mon, Oct 28, 2019 11:48:57 PM
 //Codeset: 1252
 file -rdi 1 -ns "mushroom_latest" -rfn "mushroom_latestRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/jakeh/OneDrive/Desktop/poweredup//assets/shrooms/mushroom_latest.ma";
@@ -152,12 +152,12 @@ file -r -ns "tall_tree_base_latest5" -dr 1 -rfn "tall_tree_base_latestRN5" -op "
 file -r -ns "thicktree6" -dr 1 -rfn "thicktreeRN6" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/thicktree.ma";
 file -r -ns "thicktree7" -dr 1 -rfn "thicktreeRN7" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/thicktree.ma";
 requires maya "2018ff09";
+requires "stereoCamera" "10.0";
 requires -nodeType "PxrDomeLight" -nodeType "rmanGlobals" -nodeType "PxrPathTracer"
 		 -nodeType "rmanDisplay" "RenderMan_for_Maya.py" "22.4 @ 1946009";
 requires "mtoa" "3.1.2.1";
 requires "stereoCamera" "10.0";
 requires "mtoa" "3.1.2.1";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
@@ -495,22 +495,22 @@ createNode PxrDomeLight -n "PxrDomeLightShape" -p "PxrDomeLight";
 	setAttr ".rman_textureResolution" 1024;
 	setAttr ".rman__portals[0]" -type "string" "";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9CDE1B44-4EBE-38CF-27E6-69A979819906";
-	setAttr -s 170 ".lnk";
-	setAttr -s 170 ".slnk";
+	rename -uid "A77F74D9-4E61-F078-D31B-DCADCB1C683A";
+	setAttr -s 1354 ".lnk";
+	setAttr -s 1354 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "456E5D8A-4007-B16F-FDA7-ACA6200D465E";
+	rename -uid "51940753-44E0-AE82-5281-21BFB6F94B12";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 5 0 1 2 3 4 ;
 	setAttr -s 5 ".bspr";
 	setAttr -s 5 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "CE1D696C-4D56-25C3-9F72-CA87C8108DCF";
+	rename -uid "7354C6C5-45BC-DB61-A9DC-FB8B461B7A2A";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "2389E365-4586-A1B8-7F8E-BE9EDD08F698";
+	rename -uid "7FE9BCDE-4BD2-ECDC-9B2B-EDB194977C7C";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B214D39C-4536-8864-1713-978CCE2ECB71";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2375C1F0-4BF7-EADD-BF4E-1784B4E7CC1D";
+	rename -uid "B473DEE3-4430-CE63-96AD-CE99AD5A69B2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8D136FD4-4017-AB0F-9FF4-0192BF9B34FA";
 	setAttr ".g" yes;
@@ -790,14 +790,237 @@ createNode reference -n "thicktreeRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN"
 		"thicktreeRN" 0
-		"thicktreeRN" 5
+		"thicktreeRN" 153
 		0 "|thicktree:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree:ThickTree" "translate" " -type \"double3\" -207.49843893369964576 33.70638211395213091 -277.86941987984062052"
 		
 		2 "|Forest_Grove_SET|thicktree:ThickTree" "rotate" " -type \"double3\" -2.73437790181352014 98.58353718203117921 0"
 		
-		2 "|Forest_Grove_SET|thicktree:ThickTree" "scale" " -type \"double3\" 0.53092532759234434 0.53092532759234434 0.53092532759234434";
+		2 "|Forest_Grove_SET|thicktree:ThickTree" "scale" " -type \"double3\" 0.53092532759234434 0.53092532759234434 0.53092532759234434"
+		
+		2 "thicktree:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
@@ -870,14 +1093,237 @@ createNode reference -n "thicktreeRN1";
 		
 		2 "|thicktree1:left" "translate" " -type \"double3\" -1000.10000000000002274 52.56491643989128448 2.58515982491268659"
 		
-		"thicktreeRN1" 5
+		"thicktreeRN1" 153
 		0 "|thicktree1:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree1:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree1:ThickTree" "translate" " -type \"double3\" 126.78896308134616788 36.35830229143615355 -260.92054611178434698"
 		
 		2 "|Forest_Grove_SET|thicktree1:ThickTree" "rotate" " -type \"double3\" -1.30683100775351413 -147.02058781871559745 -7.04172599981936997"
 		
-		2 "|Forest_Grove_SET|thicktree1:ThickTree" "scale" " -type \"double3\" 0.37736496270348979 0.37736496270348979 0.37736496270348979";
+		2 "|Forest_Grove_SET|thicktree1:ThickTree" "scale" " -type \"double3\" 0.37736496270348979 0.37736496270348979 0.37736496270348979"
+		
+		2 "thicktree1:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN2";
@@ -885,14 +1331,237 @@ createNode reference -n "thicktreeRN2";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN2"
 		"thicktreeRN2" 0
-		"thicktreeRN2" 5
+		"thicktreeRN2" 153
 		0 "|thicktree2:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree2:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree2:ThickTree" "translate" " -type \"double3\" 14.76003787349466734 49.11643347177601981 -387.48358200842682209"
 		
 		2 "|Forest_Grove_SET|thicktree2:ThickTree" "rotate" " -type \"double3\" 0 -329.99999999999977263 0"
 		
-		2 "|Forest_Grove_SET|thicktree2:ThickTree" "scale" " -type \"double3\" 0.4143670105830255 0.4143670105830255 0.4143670105830255";
+		2 "|Forest_Grove_SET|thicktree2:ThickTree" "scale" " -type \"double3\" 0.4143670105830255 0.4143670105830255 0.4143670105830255"
+		
+		2 "thicktree2:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyExtrudeEdge -n "polyExtrudeEdge4";
@@ -1042,14 +1711,237 @@ createNode reference -n "thicktreeRN3";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN3"
 		"thicktreeRN3" 0
-		"thicktreeRN3" 5
+		"thicktreeRN3" 153
 		0 "|thicktree3:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree3:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree3:ThickTree" "translate" " -type \"double3\" -185.74212805080202315 43.18279203406981992 -485.74573063243127535"
 		
 		2 "|Forest_Grove_SET|thicktree3:ThickTree" "rotate" " -type \"double3\" 4.90774865753253309 -147.43780914605491716 0.062104348410524521"
 		
-		2 "|Forest_Grove_SET|thicktree3:ThickTree" "scale" " -type \"double3\" 0.4158470922256724 0.4158470922256724 0.4158470922256724";
+		2 "|Forest_Grove_SET|thicktree3:ThickTree" "scale" " -type \"double3\" 0.4158470922256724 0.4158470922256724 0.4158470922256724"
+		
+		2 "thicktree3:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN4";
@@ -1057,14 +1949,237 @@ createNode reference -n "thicktreeRN4";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN4"
 		"thicktreeRN4" 0
-		"thicktreeRN4" 5
+		"thicktreeRN4" 153
 		0 "|thicktree4:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree4:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree4:ThickTree" "translate" " -type \"double3\" 150.10813028674058955 42.04340954962157184 -698.44634872975905182"
 		
 		2 "|Forest_Grove_SET|thicktree4:ThickTree" "rotate" " -type \"double3\" 0 95.97738488143488667 0"
 		
-		2 "|Forest_Grove_SET|thicktree4:ThickTree" "scale" " -type \"double3\" 0.4082032135456844 0.4082032135456844 0.4082032135456844";
+		2 "|Forest_Grove_SET|thicktree4:ThickTree" "scale" " -type \"double3\" 0.4082032135456844 0.4082032135456844 0.4082032135456844"
+		
+		2 "thicktree4:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN5";
@@ -1072,7 +2187,7 @@ createNode reference -n "thicktreeRN5";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN5"
 		"thicktreeRN5" 0
-		"thicktreeRN5" 8
+		"thicktreeRN5" 156
 		0 "|thicktree5:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree5:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree5:ThickTree" "translate" " -type \"double3\" -372.21018136996741532 34.46687819189290281 -572.25894252742659774"
@@ -1082,7 +2197,230 @@ createNode reference -n "thicktreeRN5";
 		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateX" " -av"
 		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateY" " -av"
 		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateZ" " -av"
-		2 "|Forest_Grove_SET|thicktree5:ThickTree" "scale" " -type \"double3\" 0.42880976099544005 0.42880976099544005 0.42880976099544005";
+		2 "|Forest_Grove_SET|thicktree5:ThickTree" "scale" " -type \"double3\" 0.42880976099544005 0.42880976099544005 0.42880976099544005"
+		
+		2 "thicktree5:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyExtrudeEdge -n "polyExtrudeEdge6";
@@ -1589,13 +2927,236 @@ createNode reference -n "thicktreeRN6";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN6"
 		"thicktreeRN6" 0
-		"thicktreeRN6" 4
+		"thicktreeRN6" 152
 		0 "|thicktree6:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree6:ThickTree" "translate" " -type \"double3\" -422.83597689239331885 16.78890020775492786 -280.10680944198787756"
 		
 		2 "|Forest_Grove_SET|thicktree6:ThickTree" "rotate" " -type \"double3\" 0 92.3632998721594447 0"
 		
-		2 "|Forest_Grove_SET|thicktree6:ThickTree" "scale" " -type \"double3\" 0.67135961572513803 0.67135961572513803 0.67135961572513803";
+		2 "|Forest_Grove_SET|thicktree6:ThickTree" "scale" " -type \"double3\" 0.67135961572513803 0.67135961572513803 0.67135961572513803"
+		
+		2 "thicktree6:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN7";
@@ -1603,13 +3164,236 @@ createNode reference -n "thicktreeRN7";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN7"
 		"thicktreeRN7" 0
-		"thicktreeRN7" 4
+		"thicktreeRN7" 152
 		0 "|thicktree7:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree7:ThickTree" "translate" " -type \"double3\" 385.43264702958549606 30.453500934776919 -613.60606406595536555"
 		
 		2 "|Forest_Grove_SET|thicktree7:ThickTree" "rotate" " -type \"double3\" 0 0 3.1965751078178517"
 		
-		2 "|Forest_Grove_SET|thicktree7:ThickTree" "scale" " -type \"double3\" 0.52901565229334657 0.52901565229334657 0.52901565229334657";
+		2 "|Forest_Grove_SET|thicktree7:ThickTree" "scale" " -type \"double3\" 0.52901565229334657 0.52901565229334657 0.52901565229334657"
+		
+		2 "thicktree7:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
@@ -1631,7 +3415,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 170 ".st";
+	setAttr -s 1354 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -1644,7 +3428,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 172 ".s";
+	setAttr -s 1356 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -1656,7 +3440,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 358 ".u";
+	setAttr -s 5710 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 153 ".r";
 select -ne :lightList1;
@@ -1665,7 +3449,7 @@ select -ne :defaultTextureList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 554 ".tx";
+	setAttr -s 2946 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
