@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: tall_tree_base_latest.ma
-//Last modified: Mon, Oct 28, 2019 10:56:57 PM
+//Last modified: Mon, Oct 28, 2019 11:13:19 PM
 //Codeset: 1252
 requires maya "2018ff09";
 requires -nodeType "PxrSurface" -nodeType "rmanDisplayChannel" -nodeType "PxrTexture"
@@ -18,13 +18,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "DB5B08F8-4FCE-B423-9E93-C78F4299A134";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -173.26284010377182 74.620566827423033 199.64616847485254 ;
-	setAttr ".r" -type "double3" 1068.8616474726143 -11560.999999999705 1.0535690697441644e-15 ;
+	setAttr ".t" -type "double3" 202.36249830587644 37.575802887050507 -22.424001528909429 ;
+	setAttr ".r" -type "double3" 1074.2616474726096 -11427.799999999637 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "FBB5DC85-491E-495A-253F-2689F1A9B633";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 290.09533532039939;
+	setAttr ".coi" 189.98197289498478;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -2576,19 +2576,19 @@ createNode mesh -n "trunkShape" -p "trunk";
 	setAttr ".bw" 5;
 	setAttr ".dr" 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "5112BF50-400C-0A91-45D9-D08D9B15A368";
+	rename -uid "1C8CBEDD-4D94-7FD8-BCBA-5190AA97CA79";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "AB70F363-4819-01FB-A071-2090BF93CCE7";
+	rename -uid "B2FAC6E6-4D06-AED2-B961-E687F888EFF7";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "304720C9-4D85-CAF1-727A-80B2F2B65F75";
+	rename -uid "2674DDB7-4997-5B5F-0245-D5ADE8C45E3D";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "A3C5BF36-4485-3ABA-0173-C1876243E02D";
+	rename -uid "2E7CEBAB-4F55-C42E-703C-FBAAE5C867C2";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8C6D55DD-48E0-1850-3020-CDAB33D523E9";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "BBEA71AB-4F13-FAA5-B9B4-80BEC5867A1A";
+	rename -uid "D9DAF13C-4DE7-8226-1E26-B39984542EA9";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "73137A0B-42FE-FA34-A046-DBB1355BDB4D";
 	setAttr ".g" yes;
@@ -3016,8 +3016,8 @@ createNode PxrPathTracer -s -n "PxrPathTracer";
 	setAttr ".clampLuminance" 10;
 createNode file -n "trunkNorml";
 	rename -uid "F8D0004D-46C4-7073-64D6-298EC2C8D385";
-	setAttr ".ftn" -type "string" "C:/Users/jakeh/OneDrive/Desktop/poweredup//sourceimages/plants/large_trunk/trunkfbx_lambert1_Normal.png";
-	setAttr ".cs" -type "string" "sRGB";
+	setAttr ".ftn" -type "string" "C:/Users/jakeh/OneDrive/Desktop/poweredup//sourceimages/plants/large_trunk/trunkfbx_lambert1_Normal.png.tex";
+	setAttr ".cs" -type "string" "Raw";
 createNode place2dTexture -n "place2dTexture3";
 	rename -uid "21113D98-4D87-52FB-EAFC-C4B0C169EF74";
 createNode file -n "viewportTex_trunk_shader";

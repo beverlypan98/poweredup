@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: forest_grove_SET_latest.ma
-//Last modified: Mon, Oct 28, 2019 10:51:43 PM
+//Last modified: Mon, Oct 28, 2019 11:11:01 PM
 //Codeset: 1252
 file -rdi 1 -ns "mushroom_latest" -rfn "mushroom_latestRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/jakeh/OneDrive/Desktop/poweredup//assets/shrooms/mushroom_latest.ma";
@@ -152,10 +152,12 @@ file -r -ns "tall_tree_base_latest5" -dr 1 -rfn "tall_tree_base_latestRN5" -op "
 file -r -ns "thicktree6" -dr 1 -rfn "thicktreeRN6" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/thicktree.ma";
 file -r -ns "thicktree7" -dr 1 -rfn "thicktreeRN7" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/thicktree.ma";
 requires maya "2018ff09";
-requires "stereoCamera" "10.0";
 requires -nodeType "PxrDomeLight" -nodeType "rmanGlobals" -nodeType "PxrPathTracer"
 		 -nodeType "rmanDisplay" "RenderMan_for_Maya.py" "22.4 @ 1946009";
 requires "mtoa" "3.1.2.1";
+requires "stereoCamera" "10.0";
+requires "mtoa" "3.1.2.1";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
@@ -453,7 +455,7 @@ createNode PxrDomeLight -n "PxrDomeLightShape" -p "PxrDomeLight";
 	setAttr ".dhe" no;
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".intensity" 1.2999999523162842;
+	setAttr ".intensity" 0.62790697813034058;
 	setAttr ".exposure" 0;
 	setAttr ".lightColor" -type "float3" 0.2446 0.2041 0.5783 ;
 	setAttr ".lightColorMap" -type "string" "";
@@ -493,22 +495,22 @@ createNode PxrDomeLight -n "PxrDomeLightShape" -p "PxrDomeLight";
 	setAttr ".rman_textureResolution" 1024;
 	setAttr ".rman__portals[0]" -type "string" "";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1C787B57-42CE-A79E-D6E4-6EB2B1DF2C30";
+	rename -uid "9CDE1B44-4EBE-38CF-27E6-69A979819906";
 	setAttr -s 170 ".lnk";
 	setAttr -s 170 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "ADCF8649-46A1-932E-5454-0C8B83AB764D";
+	rename -uid "456E5D8A-4007-B16F-FDA7-ACA6200D465E";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 5 0 1 2 3 4 ;
 	setAttr -s 5 ".bspr";
 	setAttr -s 5 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "BDA512EE-4782-DAB0-4902-7F87EA3C3766";
+	rename -uid "CE1D696C-4D56-25C3-9F72-CA87C8108DCF";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "DAB06D55-432B-3852-32E2-B386411B7FE3";
+	rename -uid "2389E365-4586-A1B8-7F8E-BE9EDD08F698";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B214D39C-4536-8864-1713-978CCE2ECB71";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "57A38566-4397-763F-800D-9CBAFCC0B1CB";
+	rename -uid "2375C1F0-4BF7-EADD-BF4E-1784B4E7CC1D";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8D136FD4-4017-AB0F-9FF4-0192BF9B34FA";
 	setAttr ".g" yes;
@@ -1838,6 +1840,8 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".bswa";
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "polyExtrudeEdge10.out" "CliffShape.i";
 connectAttr "polyPlane2.out" "GroundShape.i";
 connectAttr "polyCylinder1.out" "TEMP_CharacterShape.i";
