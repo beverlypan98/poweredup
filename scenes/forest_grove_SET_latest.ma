@@ -1,7 +1,7 @@
-//Maya ASCII 2018 scene
+//Maya ASCII 2018ff09 scene
 //Name: forest_grove_SET_latest.ma
-//Last modified: Tue, Oct 22, 2019 12:47:42 PM
-//Codeset: UTF-8
+//Last modified: Mon, Oct 28, 2019 11:48:57 PM
+//Codeset: 1252
 file -rdi 1 -ns "mushroom_latest" -rfn "mushroom_latestRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/jakeh/OneDrive/Desktop/poweredup//assets/shrooms/mushroom_latest.ma";
 file -rdi 1 -ns "fireboi_latest" -rfn "fireboi_latestRN" -op "v=0;" -typ "mayaAscii"
@@ -151,30 +151,30 @@ file -r -ns "tall_tree_base_latest5" -dr 1 -rfn "tall_tree_base_latestRN5" -op "
 		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/tall_tree_base_latest.ma";
 file -r -ns "thicktree6" -dr 1 -rfn "thicktreeRN6" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/thicktree.ma";
 file -r -ns "thicktree7" -dr 1 -rfn "thicktreeRN7" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/thicktree.ma";
-requires maya "2018";
+requires maya "2018ff09";
 requires "stereoCamera" "10.0";
-requires -nodeType "rmanGlobals" -nodeType "PxrPathTracer" -nodeType "rmanDisplay"
-		 "RenderMan_for_Maya.py" "22.4 @ 1946009";
-requires "mtoa" "3.3.0.1";
+requires -nodeType "PxrDomeLight" -nodeType "rmanGlobals" -nodeType "PxrPathTracer"
+		 -nodeType "rmanDisplay" "RenderMan_for_Maya.py" "22.4 @ 1946009";
+requires "mtoa" "3.1.2.1";
 requires "stereoCamera" "10.0";
-requires "mtoa" "3.3.0.1";
+requires "mtoa" "3.1.2.1";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
 fileInfo "version" "2018";
-fileInfo "cutIdentifier" "201706261615-f9658c4cfc";
-fileInfo "osv" "Mac OS X 10.13.6";
+fileInfo "cutIdentifier" "201903222215-65bada0e52";
+fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "9670D191-4423-9407-2A8F-10A65AA9DCF0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1001.1915844136295 582.4641426297519 978.02043925486305 ;
-	setAttr ".r" -type "double3" -15.33835272851578 -756.99999999978127 9.9562148234118211e-16 ;
+	setAttr ".t" -type "double3" 55.285400910234301 204.23180541259845 362.43570762132202 ;
+	setAttr ".r" -type "double3" -11.138352728516802 -714.19999999974311 9.9903770284970756e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F01540EA-4FCC-8C52-C464-A49D62EC1A8D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1757.5100803948153;
+	setAttr ".coi" 2023.829593127374;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -322,13 +322,10 @@ createNode mesh -n "CliffShape" -p "Cliff";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 7 ".pt";
-	setAttr ".pt[42]" -type "float3" -2.0807946 -0.30197349 -0.95995581 ;
-	setAttr ".pt[43]" -type "float3" -2.0807946 -0.30197349 -0.95995581 ;
-	setAttr ".pt[44]" -type "float3" -2.0807946 -0.30197349 -0.95995581 ;
-	setAttr ".pt[45]" -type "float3" -2.0807946 -0.30197349 -0.95995581 ;
-	setAttr ".pt[46]" -type "float3" -2.0807946 -0.30197349 -0.95995581 ;
-	setAttr ".pt[47]" -type "float3" -2.0807946 -0.30197349 -0.95995581 ;
+	setAttr -s 6 ".pt[42:47]" -type "float3"  -2.0807946 -0.30197349 -0.95995581 
+		-2.0807946 -0.30197349 -0.95995581 -2.0807946 -0.30197349 -0.95995581 -2.0807946 
+		-0.30197349 -0.95995581 -2.0807946 -0.30197349 -0.95995581 -2.0807946 -0.30197349 
+		-0.95995581;
 	setAttr ".bw" 5;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "Ground" -p "Forest_Grove_SET";
@@ -345,6 +342,7 @@ createNode mesh -n "GroundShape" -p "Ground";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".bw" 5;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "TEMP_Character" -p "Forest_Grove_SET";
 	rename -uid "616285DC-4488-EE6C-58C2-A2A4F8821598";
@@ -366,23 +364,153 @@ createNode mesh -n "TEMP_CharacterShape" -p "TEMP_Character";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "TALL_TREE_BASES" -p "Forest_Grove_SET";
 	rename -uid "936F74C5-A046-2E24-ED44-388C382F0B76";
+createNode transform -n "PxrDomeLight";
+	rename -uid "768CE4C6-4A39-862E-07C9-1D8A6A6A597A";
+	setAttr ".s" -type "double3" 1.2628570723297188 1.2628570723297188 1.2628570723297188 ;
+createNode PxrDomeLight -n "PxrDomeLightShape" -p "PxrDomeLight";
+	rename -uid "D86B5A1F-414B-9F96-315E-8B8BFE34DCDB";
+	setAttr ".cch" no;
+	setAttr ".fzn" no;
+	setAttr ".ihi" 2;
+	setAttr ".nds" 0;
+	setAttr ".isc" no;
+	setAttr ".bbx" no;
+	setAttr ".icn" -type "string" "";
+	setAttr ".vwm" 2;
+	setAttr ".tpv" 0;
+	setAttr ".uit" 0;
+	setAttr -k off ".v" yes;
+	setAttr ".io" no;
+	setAttr ".tmp" no;
+	setAttr ".gh" no;
+	setAttr ".obcc" -type "float3" 0 0 0 ;
+	setAttr ".wfcc" -type "float3" 0 0 0 ;
+	setAttr ".uoc" 0;
+	setAttr ".oc" 0;
+	setAttr ".ovdt" 0;
+	setAttr ".ovlod" 0;
+	setAttr ".ovs" yes;
+	setAttr ".ovt" yes;
+	setAttr ".ovp" yes;
+	setAttr ".ove" no;
+	setAttr ".ovv" yes;
+	setAttr ".hpb" no;
+	setAttr ".ovrgbf" no;
+	setAttr ".ovc" 0;
+	setAttr ".ovrgb" -type "float3" 0 0 0 ;
+	setAttr ".lodv" yes;
+	setAttr ".sech" yes;
+	setAttr ".rlid" 0;
+	setAttr ".rndr" yes;
+	setAttr ".lovc" 0;
+	setAttr ".gc" 0;
+	setAttr ".gpr" 3;
+	setAttr ".gps" 3;
+	setAttr ".gss" 1;
+	setAttr ".gap" 1;
+	setAttr ".gcp" -type "float3" 0.447 1 1 ;
+	setAttr ".gla" 1;
+	setAttr ".gac" -type "float3" 0.87800002 0.67799997 0.66299999 ;
+	setAttr ".grs" 0;
+	setAttr ".gre" 100;
+	setAttr ".rt" 0;
+	setAttr ".rv" no;
+	setAttr ".vf" 1;
+	setAttr ".hfm" 1;
+	setAttr ".mb" yes;
+	setAttr ".vir" no;
+	setAttr ".vif" no;
+	setAttr ".csh" yes;
+	setAttr ".rcsh" yes;
+	setAttr ".asbg" no;
+	setAttr ".vbo" no;
+	setAttr ".mvs" 1;
+	setAttr ".gao" no;
+	setAttr ".gal" 1;
+	setAttr ".sso" no;
+	setAttr ".ssa" 1;
+	setAttr ".msa" 1;
+	setAttr ".vso" no;
+	setAttr ".vss" 1;
+	setAttr ".dej" no;
+	setAttr ".iss" no;
+	setAttr ".vis" yes;
+	setAttr ".tw" no;
+	setAttr ".rtw" yes;
+	setAttr ".pv" -type "double2" 0 0 ;
+	setAttr ".di" no;
+	setAttr ".dcol" no;
+	setAttr ".dcc" -type "string" "color";
+	setAttr ".ih" no;
+	setAttr ".ds" yes;
+	setAttr ".op" no;
+	setAttr ".hot" no;
+	setAttr ".smo" yes;
+	setAttr ".bbs" -type "float3" 1.5 1.5 1.5 ;
+	setAttr ".fbda" yes;
+	setAttr ".dsr" 6;
+	setAttr ".xsr" 5;
+	setAttr ".fth" 0;
+	setAttr ".nat" 30;
+	setAttr ".dhe" no;
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".intensity" 0.62790697813034058;
+	setAttr ".exposure" 0;
+	setAttr ".lightColor" -type "float3" 0.2446 0.2041 0.5783 ;
+	setAttr ".lightColorMap" -type "string" "";
+	setAttr ".colorMapGamma" -type "float3" 1 1 1 ;
+	setAttr ".colorMapSaturation" 1;
+	setAttr ".enableTemperature" no;
+	setAttr ".temperature" 6500;
+	setAttr ".specular" 1;
+	setAttr ".diffuse" 1;
+	setAttr ".enableShadows" yes;
+	setAttr ".shadowColor" -type "float3" 0 0 0 ;
+	setAttr ".shadowDistance" -1;
+	setAttr ".shadowFalloff" -1;
+	setAttr ".shadowFalloffGamma" 1;
+	setAttr ".shadowSubset" -type "string" "";
+	setAttr ".shadowExcludeSubset" -type "string" "";
+	setAttr ".traceLightPaths" no;
+	setAttr ".thinShadow" yes;
+	setAttr ".visibleInRefractionPath" yes;
+	setAttr ".cheapCaustics" no;
+	setAttr ".cheapCausticsExcludeGroup" -type "string" "";
+	setAttr ".fixedSampleCount" 0;
+	setAttr ".lightGroup" -type "string" "";
+	setAttr ".importanceMultiplier" 1;
+	setAttr ".rman__lightfilters[0]" -type "float3"  0 0 0;
+	setAttr ".cl" -type "float3" 0.2446 0.2041 0.5783 ;
+	setAttr ".ed" yes;
+	setAttr ".sn" yes;
+	setAttr ".lls" 1;
+	setAttr ".de" 2;
+	setAttr ".urs" yes;
+	setAttr ".col" 5;
+	setAttr ".hio" no;
+	setAttr ".uocol" no;
+	setAttr ".oclr" -type "float3" 0 0 0 ;
+	setAttr ".locatorScale" 2500;
+	setAttr ".rman_textureResolution" 1024;
+	setAttr ".rman__portals[0]" -type "string" "";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "59891A0D-AD4F-C41A-035A-488EA970D63B";
-	setAttr -s 171 ".lnk";
-	setAttr -s 171 ".slnk";
+	rename -uid "A77F74D9-4E61-F078-D31B-DCADCB1C683A";
+	setAttr -s 1354 ".lnk";
+	setAttr -s 1354 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "0BD39B73-074E-0B12-47A4-3E8ECF32F68C";
+	rename -uid "51940753-44E0-AE82-5281-21BFB6F94B12";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 5 0 1 2 3 4 ;
 	setAttr -s 5 ".bspr";
 	setAttr -s 5 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "DF322DEA-344A-183C-A013-4EBF908CEED9";
+	rename -uid "7354C6C5-45BC-DB61-A9DC-FB8B461B7A2A";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0FBD42BF-B048-D250-50CC-64946B821E0F";
+	rename -uid "7FE9BCDE-4BD2-ECDC-9B2B-EDB194977C7C";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B214D39C-4536-8864-1713-978CCE2ECB71";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "17890A4E-3D48-88DF-F484-C6825C86C986";
+	rename -uid "B473DEE3-4430-CE63-96AD-CE99AD5A69B2";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "8D136FD4-4017-AB0F-9FF4-0192BF9B34FA";
 	setAttr ".g" yes;
@@ -662,63 +790,287 @@ createNode reference -n "thicktreeRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN"
 		"thicktreeRN" 0
-		"thicktreeRN" 5
+		"thicktreeRN" 153
 		0 "|thicktree:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree:ThickTree" "translate" " -type \"double3\" -207.49843893369964576 33.70638211395213091 -277.86941987984062052"
 		
 		2 "|Forest_Grove_SET|thicktree:ThickTree" "rotate" " -type \"double3\" -2.73437790181352014 98.58353718203117921 0"
 		
-		2 "|Forest_Grove_SET|thicktree:ThickTree" "scale" " -type \"double3\" 0.53092532759234434 0.53092532759234434 0.53092532759234434";
+		2 "|Forest_Grove_SET|thicktree:ThickTree" "scale" " -type \"double3\" 0.53092532759234434 0.53092532759234434 0.53092532759234434"
+		
+		2 "thicktree:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "50F5CE27-4A11-4C9B-A404-B79840767295";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Running_TEMPCAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
-		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
-		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Running_TEMPCAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 537\n            -height 512\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
-		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
-		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
-		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
-		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1082\n            -height 512\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
-		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
-		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n"
-		+ "            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n"
-		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
-		+ "                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
-		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n"
-		+ "                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n"
-		+ "                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n"
-		+ "                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n"
-		+ "                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n"
-		+ "            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
-		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"behind_fireboi\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
-		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
-		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
-		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
-		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
-		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n"
-		+ "            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
-		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1082\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1082\\n    -height 512\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Running_TEMPCAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
+		+ "            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Running_TEMPCAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
+		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
+		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
+		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
+		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Rolling_FRONT_TEMPCAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
+		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
+		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1134\n            -height 733\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
+		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
+		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
+		+ "            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
+		+ "            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n"
+		+ "                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
+		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -autoFitTime 0\n"
+		+ "                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -stackedCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 1\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
+		+ "                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n"
+		+ "                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
+		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n"
+		+ "\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n"
+		+ "                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n"
+		+ "                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -editorMode \"default\" \n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"behind_fireboi\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
+		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
+		+ "                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n"
+		+ "            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n"
+		+ "            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n"
+		+ "        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Rolling_FRONT_TEMPCAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1134\\n    -height 733\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"Rolling_FRONT_TEMPCAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1134\\n    -height 733\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -741,14 +1093,237 @@ createNode reference -n "thicktreeRN1";
 		
 		2 "|thicktree1:left" "translate" " -type \"double3\" -1000.10000000000002274 52.56491643989128448 2.58515982491268659"
 		
-		"thicktreeRN1" 5
+		"thicktreeRN1" 153
 		0 "|thicktree1:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree1:ThickTree" "visibility" " 1"
-		2 "|Forest_Grove_SET|thicktree1:ThickTree" "translate" " -type \"double3\" 126.78896308134616788 41.10144724733061139 -260.92054611178434698"
+		2 "|Forest_Grove_SET|thicktree1:ThickTree" "translate" " -type \"double3\" 126.78896308134616788 36.35830229143615355 -260.92054611178434698"
 		
-		2 "|Forest_Grove_SET|thicktree1:ThickTree" "rotate" " -type \"double3\" 0.47570831792109253 -149.67129975584973067 -4.42833761129222214"
+		2 "|Forest_Grove_SET|thicktree1:ThickTree" "rotate" " -type \"double3\" -1.30683100775351413 -147.02058781871559745 -7.04172599981936997"
 		
-		2 "|Forest_Grove_SET|thicktree1:ThickTree" "scale" " -type \"double3\" 0.37736496270348979 0.37736496270348979 0.37736496270348979";
+		2 "|Forest_Grove_SET|thicktree1:ThickTree" "scale" " -type \"double3\" 0.37736496270348979 0.37736496270348979 0.37736496270348979"
+		
+		2 "thicktree1:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree1:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree1:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN2";
@@ -756,14 +1331,237 @@ createNode reference -n "thicktreeRN2";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN2"
 		"thicktreeRN2" 0
-		"thicktreeRN2" 5
+		"thicktreeRN2" 153
 		0 "|thicktree2:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree2:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree2:ThickTree" "translate" " -type \"double3\" 14.76003787349466734 49.11643347177601981 -387.48358200842682209"
 		
 		2 "|Forest_Grove_SET|thicktree2:ThickTree" "rotate" " -type \"double3\" 0 -329.99999999999977263 0"
 		
-		2 "|Forest_Grove_SET|thicktree2:ThickTree" "scale" " -type \"double3\" 0.4143670105830255 0.4143670105830255 0.4143670105830255";
+		2 "|Forest_Grove_SET|thicktree2:ThickTree" "scale" " -type \"double3\" 0.4143670105830255 0.4143670105830255 0.4143670105830255"
+		
+		2 "thicktree2:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree2:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree2:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyExtrudeEdge -n "polyExtrudeEdge4";
@@ -913,14 +1711,237 @@ createNode reference -n "thicktreeRN3";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN3"
 		"thicktreeRN3" 0
-		"thicktreeRN3" 5
+		"thicktreeRN3" 153
 		0 "|thicktree3:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree3:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree3:ThickTree" "translate" " -type \"double3\" -185.74212805080202315 43.18279203406981992 -485.74573063243127535"
 		
 		2 "|Forest_Grove_SET|thicktree3:ThickTree" "rotate" " -type \"double3\" 4.90774865753253309 -147.43780914605491716 0.062104348410524521"
 		
-		2 "|Forest_Grove_SET|thicktree3:ThickTree" "scale" " -type \"double3\" 0.4158470922256724 0.4158470922256724 0.4158470922256724";
+		2 "|Forest_Grove_SET|thicktree3:ThickTree" "scale" " -type \"double3\" 0.4158470922256724 0.4158470922256724 0.4158470922256724"
+		
+		2 "thicktree3:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree3:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree3:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN4";
@@ -928,14 +1949,237 @@ createNode reference -n "thicktreeRN4";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN4"
 		"thicktreeRN4" 0
-		"thicktreeRN4" 5
+		"thicktreeRN4" 153
 		0 "|thicktree4:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree4:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree4:ThickTree" "translate" " -type \"double3\" 150.10813028674058955 42.04340954962157184 -698.44634872975905182"
 		
 		2 "|Forest_Grove_SET|thicktree4:ThickTree" "rotate" " -type \"double3\" 0 95.97738488143488667 0"
 		
-		2 "|Forest_Grove_SET|thicktree4:ThickTree" "scale" " -type \"double3\" 0.4082032135456844 0.4082032135456844 0.4082032135456844";
+		2 "|Forest_Grove_SET|thicktree4:ThickTree" "scale" " -type \"double3\" 0.4082032135456844 0.4082032135456844 0.4082032135456844"
+		
+		2 "thicktree4:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree4:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree4:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN5";
@@ -943,7 +2187,7 @@ createNode reference -n "thicktreeRN5";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN5"
 		"thicktreeRN5" 0
-		"thicktreeRN5" 8
+		"thicktreeRN5" 156
 		0 "|thicktree5:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree5:ThickTree" "visibility" " 1"
 		2 "|Forest_Grove_SET|thicktree5:ThickTree" "translate" " -type \"double3\" -372.21018136996741532 34.46687819189290281 -572.25894252742659774"
@@ -953,7 +2197,230 @@ createNode reference -n "thicktreeRN5";
 		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateX" " -av"
 		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateY" " -av"
 		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateZ" " -av"
-		2 "|Forest_Grove_SET|thicktree5:ThickTree" "scale" " -type \"double3\" 0.42880976099544005 0.42880976099544005 0.42880976099544005";
+		2 "|Forest_Grove_SET|thicktree5:ThickTree" "scale" " -type \"double3\" 0.42880976099544005 0.42880976099544005 0.42880976099544005"
+		
+		2 "thicktree5:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree5:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree5:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode polyExtrudeEdge -n "polyExtrudeEdge6";
@@ -1306,7 +2773,7 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge8";
 createNode polyTweak -n "polyTweak7";
 	rename -uid "4F0F7EC2-E349-03BF-003F-00B5C4A55DC2";
 	setAttr ".uopa" yes;
-	setAttr -s 20 ".tk";
+	setAttr -s 18 ".tk";
 	setAttr ".tk[0]" -type "float3" 0.035072021 -0.021760918 -0.069176637 ;
 	setAttr ".tk[1]" -type "float3" 0.035072021 -0.021760918 -0.069176637 ;
 	setAttr ".tk[2]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
@@ -1357,13 +2824,10 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge9";
 createNode polyTweak -n "polyTweak8";
 	rename -uid "2A5FCB55-5D43-E325-234B-16A1D1EEAAC7";
 	setAttr ".uopa" yes;
-	setAttr -s 11 ".tk";
-	setAttr ".tk[30]" -type "float3" 1.841782 -1.0960959 -3.6474392 ;
-	setAttr ".tk[31]" -type "float3" 1.841782 -1.0960959 -3.6474392 ;
-	setAttr ".tk[32]" -type "float3" 1.841782 -1.0960959 -3.6474392 ;
-	setAttr ".tk[33]" -type "float3" 1.841782 -1.0960959 -3.6474392 ;
-	setAttr ".tk[34]" -type "float3" 1.841782 -1.0960959 -3.6474392 ;
-	setAttr ".tk[35]" -type "float3" 1.841782 -1.0960959 -3.6474392 ;
+	setAttr -s 6 ".tk[30:35]" -type "float3"  1.84178197 -1.09609592 -3.64743924
+		 1.84178197 -1.09609592 -3.64743924 1.84178197 -1.09609592 -3.64743924 1.84178197
+		 -1.09609592 -3.64743924 1.84178197 -1.09609592 -3.64743924 1.84178197 -1.09609592
+		 -3.64743924;
 createNode polyExtrudeEdge -n "polyExtrudeEdge10";
 	rename -uid "7727802B-6948-CB28-98F4-9ABB2B92F3AF";
 	setAttr ".uopa" yes;
@@ -1379,13 +2843,10 @@ createNode polyExtrudeEdge -n "polyExtrudeEdge10";
 createNode polyTweak -n "polyTweak9";
 	rename -uid "66E44751-AE44-AB41-5387-BA8C010DBFE6";
 	setAttr ".uopa" yes;
-	setAttr -s 7 ".tk";
-	setAttr ".tk[36]" -type "float3" -0.81803417 -0.11871645 -0.37739247 ;
-	setAttr ".tk[37]" -type "float3" -0.67780238 -0.2313004 -0.27088049 ;
-	setAttr ".tk[38]" -type "float3" -0.67780238 -0.2313004 -0.27088049 ;
-	setAttr ".tk[39]" -type "float3" -0.67780238 -0.2313004 -0.27088049 ;
-	setAttr ".tk[40]" -type "float3" -0.81803417 -0.11871645 -0.37739247 ;
-	setAttr ".tk[41]" -type "float3" -0.67780238 -0.2313004 -0.27088049 ;
+	setAttr -s 6 ".tk[36:41]" -type "float3"  -0.81803417 -0.11871645 -0.37739247
+		 -0.67780238 -0.2313004 -0.27088049 -0.67780238 -0.2313004 -0.27088049 -0.67780238
+		 -0.2313004 -0.27088049 -0.81803417 -0.11871645 -0.37739247 -0.67780238 -0.2313004
+		 -0.27088049;
 createNode reference -n "tall_tree_base_latestRN2";
 	rename -uid "EAAA77C6-9B40-4214-26BA-99AF4668A0DB";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -1398,7 +2859,7 @@ createNode reference -n "tall_tree_base_latestRN2";
 		"translate" " -type \"double3\" 727.02139063998447455 146.71472353804094269 -1111.36314156373873629"
 		
 		2 "|Forest_Grove_SET|TALL_TREE_BASES|tall_tree_base_latest2:trunk_cntrl" 
-		"rotate" " -type \"double3\" -175.50293401609889088 -24.86194232356966083 175.92488192217797405"
+		"rotate" " -type \"double3\" -175.50293401609889088 -24.86194232356966438 175.92488192217797405"
 		
 		2 "|Forest_Grove_SET|TALL_TREE_BASES|tall_tree_base_latest2:trunk_cntrl" 
 		"scale" " -type \"double3\" 9.73457067316866009 9.73457067316866009 9.73457067316866009";
@@ -1433,7 +2894,7 @@ createNode reference -n "tall_tree_base_latestRN4";
 		"translate" " -type \"double3\" 1042.18750117368631436 68.82078649592892816 193.77631000686028528"
 		
 		2 "|Forest_Grove_SET|TALL_TREE_BASES|tall_tree_base_latest4:trunk_cntrl" 
-		"rotate" " -type \"double3\" -7.00975274131784154 108.54961166738054601 -7.38973805145550244"
+		"rotate" " -type \"double3\" -7.00975274131784243 108.54961166738054601 -7.38973805145550244"
 		
 		2 "|Forest_Grove_SET|TALL_TREE_BASES|tall_tree_base_latest4:trunk_cntrl" 
 		"scale" " -type \"double3\" 10.74640478258042364 10.74640478258042364 10.74640478258042364";
@@ -1444,17 +2905,21 @@ createNode reference -n "tall_tree_base_latestRN5";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"tall_tree_base_latestRN5"
 		"tall_tree_base_latestRN5" 0
-		"tall_tree_base_latestRN5" 4
+		"tall_tree_base_latestRN5" 6
 		0 "|tall_tree_base_latest5:trunk_cntrl" "|Forest_Grove_SET|TALL_TREE_BASES" 
 		"-s -r "
 		2 "|Forest_Grove_SET|TALL_TREE_BASES|tall_tree_base_latest5:trunk_cntrl" 
-		"translate" " -type \"double3\" -477.40198436977311758 258.77063716061036303 -1736.57267600960994969"
+		"translate" " -type \"double3\" -477.40198436977311758 246.99284040733800794 -1937.81154025740443103"
 		
 		2 "|Forest_Grove_SET|TALL_TREE_BASES|tall_tree_base_latest5:trunk_cntrl" 
-		"scale" " -type \"double3\" 9.36136562284746354 11.250685532775206 9.36136562284746354"
+		"scale" " -type \"double3\" 9.00531003426641874 10.82277045919494007 9.00531003426641874"
 		
 		2 "|Forest_Grove_SET|TALL_TREE_BASES|tall_tree_base_latest5:trunk_cntrl|tall_tree_base_latest5:trunk" 
-		"translate" " -type \"double3\" 0 -6.01613453595083492 0";
+		"translate" " -type \"double3\" 0 -6.01613453595083492 0"
+		2 "|Forest_Grove_SET|TALL_TREE_BASES|tall_tree_base_latest5:trunk_cntrl|tall_tree_base_latest5:trunk|tall_tree_base_latest5:trunkShape" 
+		"uvPivot" " -type \"double2\" 0.37785342335700989 0.37702822685241699"
+		2 "|Forest_Grove_SET|TALL_TREE_BASES|tall_tree_base_latest5:trunk_cntrl|tall_tree_base_latest5:trunk|tall_tree_base_latest5:trunkShape" 
+		"pt[418:452]" " -s 35 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0 0 18.026327 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN6";
@@ -1462,13 +2927,236 @@ createNode reference -n "thicktreeRN6";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN6"
 		"thicktreeRN6" 0
-		"thicktreeRN6" 4
+		"thicktreeRN6" 152
 		0 "|thicktree6:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree6:ThickTree" "translate" " -type \"double3\" -422.83597689239331885 16.78890020775492786 -280.10680944198787756"
 		
 		2 "|Forest_Grove_SET|thicktree6:ThickTree" "rotate" " -type \"double3\" 0 92.3632998721594447 0"
 		
-		2 "|Forest_Grove_SET|thicktree6:ThickTree" "scale" " -type \"double3\" 0.67135961572513803 0.67135961572513803 0.67135961572513803";
+		2 "|Forest_Grove_SET|thicktree6:ThickTree" "scale" " -type \"double3\" 0.67135961572513803 0.67135961572513803 0.67135961572513803"
+		
+		2 "thicktree6:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree6:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree6:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN7";
@@ -1476,13 +3164,236 @@ createNode reference -n "thicktreeRN7";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN7"
 		"thicktreeRN7" 0
-		"thicktreeRN7" 4
+		"thicktreeRN7" 152
 		0 "|thicktree7:ThickTree" "|Forest_Grove_SET" "-s -r "
 		2 "|Forest_Grove_SET|thicktree7:ThickTree" "translate" " -type \"double3\" 385.43264702958549606 30.453500934776919 -613.60606406595536555"
 		
 		2 "|Forest_Grove_SET|thicktree7:ThickTree" "rotate" " -type \"double3\" 0 0 3.1965751078178517"
 		
-		2 "|Forest_Grove_SET|thicktree7:ThickTree" "scale" " -type \"double3\" 0.52901565229334657 0.52901565229334657 0.52901565229334657";
+		2 "|Forest_Grove_SET|thicktree7:ThickTree" "scale" " -type \"double3\" 0.52901565229334657 0.52901565229334657 0.52901565229334657"
+		
+		2 "thicktree7:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file10" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file12" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file12" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file14" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file14" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file16" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file16" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file18" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file18" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file20" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file20" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file22" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file22" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file24" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file24" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file26" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file26" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file28" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file28" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file30" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file30" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file32" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file32" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file34" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file34" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file36" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file36" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file38" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file38" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file40" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file40" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file42" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file42" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file44" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file44" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file46" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file46" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file48" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file48" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file50" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file50" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file52" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file52" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file54" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file54" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file56" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file56" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file58" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file58" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file60" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file60" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file62" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file62" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file64" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file64" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file66" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file66" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file68" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file68" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file70" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file70" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file72" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file72" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file74" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file74" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file76" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file76" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file78" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file78" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file80" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file80" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file82" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file82" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file84" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file84" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file86" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file86" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file88" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file88" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file90" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file90" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file92" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file92" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file94" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file94" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file96" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file96" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file98" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file98" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file100" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file100" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file102" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file102" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file104" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file104" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file106" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file106" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file108" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file108" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file110" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file110" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file112" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file112" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file114" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file114" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file116" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file116" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file118" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file118" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file120" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file120" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file122" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file122" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file124" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file124" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file126" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file126" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file128" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file128" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file130" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file130" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file132" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file132" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file134" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file134" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file136" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file136" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file138" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file138" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file140" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file140" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file142" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file142" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file144" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file144" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file146" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file146" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file148" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file148" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file150" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file150" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file152" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file152" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file154" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file154" "colorSpace" " -type \"string\" \"sRGB\""
+		2 "thicktree7:file156" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
+		
+		2 "thicktree7:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
@@ -1504,7 +3415,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 171 ".st";
+	setAttr -s 1354 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -1517,7 +3428,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 149 ".s";
+	setAttr -s 1356 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -1529,21 +3440,22 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 302 ".u";
+	setAttr -s 5710 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 145 ".r";
+	setAttr -s 153 ".r";
+select -ne :lightList1;
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 404 ".tx";
+	setAttr -s 2946 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 20 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -1552,7 +3464,6 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr -k on ".ro" yes;
-	setAttr -s 17 ".gn";
 select -ne :initialParticleSE;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -1674,6 +3585,7 @@ select -ne :defaultResolution;
 	setAttr -av -k on ".zsl";
 	setAttr -k on ".isu";
 	setAttr -k on ".pdu";
+select -ne :defaultLightSet;
 select -ne :hardwareRenderGlobals;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -1712,8 +3624,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".bswa";
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
-select -ne :defaultHideFaceDataSet;
-	setAttr -s 8 ".dnsm";
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
 connectAttr "polyExtrudeEdge10.out" "CliffShape.i";
@@ -1746,17 +3656,25 @@ connectAttr "polyExtrudeEdge5.out" "polyTweak5.ip";
 connectAttr "polyTweak6.out" "polyExtrudeEdge7.ip";
 connectAttr "CliffShape.wm" "polyExtrudeEdge7.mp";
 connectAttr "polyExtrudeEdge6.out" "polyTweak6.ip";
+connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN.sr";
 connectAttr "polyTweak7.out" "polyExtrudeEdge8.ip";
 connectAttr "CliffShape.wm" "polyExtrudeEdge8.mp";
 connectAttr "polyExtrudeEdge7.out" "polyTweak7.ip";
+connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN1.sr";
 connectAttr "polyTweak8.out" "polyExtrudeEdge9.ip";
 connectAttr "CliffShape.wm" "polyExtrudeEdge9.mp";
 connectAttr "polyExtrudeEdge8.out" "polyTweak8.ip";
 connectAttr "polyTweak9.out" "polyExtrudeEdge10.ip";
 connectAttr "CliffShape.wm" "polyExtrudeEdge10.mp";
 connectAttr "polyExtrudeEdge9.out" "polyTweak9.ip";
+connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN2.sr";
+connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN3.sr";
+connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN4.sr";
+connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN5.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "PxrDomeLightShape.msg" ":lightList1.l" -na;
 connectAttr "TEMP_CharacterShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "CliffShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "GroundShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "PxrDomeLight.iog" ":defaultLightSet.dsm" -na;
 // End of forest_grove_SET_latest.ma
