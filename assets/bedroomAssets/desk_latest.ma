@@ -19,7 +19,6 @@ fileInfo "product" "Maya 2018";
 fileInfo "version" "2018";
 fileInfo "cutIdentifier" "201706261615-f9658c4cfc";
 fileInfo "osv" "Mac OS X 10.13.6";
-fileInfo "license" "student";
 createNode transform -n "Desk";
 	rename -uid "08848F7F-434D-6FDE-6238-96ABA9643E70";
 	setAttr ".t" -type "double3" 0 0.0083477337349942005 0 ;

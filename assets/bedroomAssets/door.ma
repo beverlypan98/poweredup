@@ -16,7 +16,6 @@ fileInfo "product" "Maya 2019";
 fileInfo "version" "2019";
 fileInfo "cutIdentifier" "201812112215-434d8d9c04";
 fileInfo "osv" "Mac OS X 10.14.6";
-fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "D7557C5B-104A-E820-6967-869C5C5AB944";
 	setAttr ".v" no;
