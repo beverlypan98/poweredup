@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: fireboi_latest.ma
-//Last modified: Thu, Oct 31, 2019 09:25:44 PM
+//Name: fireboi_rig.ma
+//Last modified: Thu, Oct 31, 2019 09:23:58 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires "stereoCamera" "10.0";
@@ -7413,4 +7413,4 @@ connectAttr "eyes_shader.msg" ":defaultShaderList1.s" -na;
 connectAttr "main_fire:PxrSurface1SG1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
-// End of fireboi_latest.ma
+// End of fireboi_rig.ma
