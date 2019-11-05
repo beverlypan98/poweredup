@@ -164,3 +164,6145 @@
 	<version>2</version>
 	<rmanHtmlDir>C:/Program Files/Pixar/RenderManProServer-22.4/etc/statsview/</rmanHtmlDir>
     </statsview>
+    <stats name="frame1" description="Rendering statistics" kind="frame">
+	<stats name="time" description="Timing summary" kind="section">
+	    <string name="timersNote" description="Note:">Sum of component times may exceed total in multi-threaded renders.</string>
+	    <stats name="timers" kind="timers">
+		<timer name="totaltime" description="Total time">
+		    <elapsed>24.572712</elapsed>
+		    <user>94.437500</user>
+		    <system>7.234375</system>
+		</timer>
+		<timer name="allProceduralTimers" description="All procedurals">
+		    <elapsed>0.000000</elapsed>
+		    <user>0.000000</user>
+		    <system>0.000000</system>
+		</timer>
+		<timer name="temporalVolumeBufferTimer" description="Time to create motion data for temporal volume">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="implicitPluginTimers" description="All Implicit and Volume plugins">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="rayTraceTime" description="Tracing rays">
+		    <elapsed>1.618712</elapsed>
+		</timer>
+		<timer name="lightdbtime" description="Light Database Build Time">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="texture3DBrickmapTime" description="Total brickmap texture3d()">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="texture3DPointcloudTime" description="Total pointcloud texture3d()">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="textureTime" description="Texture">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="displayTime" description="Display driver time">
+		    <elapsed>0</elapsed>
+		</timer>
+		<timer name="ribInitTimer" description="Initial rib parsing and setup">
+		    <elapsed>15.409197</elapsed>
+		    <user>27.875000</user>
+		    <system>5.609375</system>
+		</timer>
+	    </stats>
+	</stats>
+	<stats name="memory" description="Memory usage summary" kind="section">
+	    <stats name="systemMem" description="System memory">
+		<memory name="heapMemory" description="Total heap memory">
+		    <peak>1618062828</peak>
+		    <current>1618062828</current>
+		</memory>
+		<memory name="peakResidentSize" description="Peak process size">
+		    <peak>1338245120</peak>
+		    <current>1338245120</current>
+		</memory>
+		<int name="pageFaults">1047441</int>
+		<int name="peakPageUsage">1789743104</int>
+		<int name="peakPagePoolUsage">474704</int>
+	    </stats>
+	    <stats name="subsystems" kind="memstats">
+		<memory name="geometryMem" description="Geometry Memory">
+		    <peak>740346997</peak>
+		    <current>631474313</current>
+		</memory>
+		<memory name="implicitPluginMemory" description="Implicit and Volume plugin Memory">
+		    <peak>0</peak>
+		    <current>0</current>
+		</memory>
+		<memory name="gridMemByType" description="Grid memory">
+		    <peak>7659296</peak>
+		    <current>272400</current>
+		</memory>
+		<memory name="rayAccelMem" description="Ray Accelerator Subsystem">
+		    <peak>22101764</peak>
+		    <current>9317360</current>
+		</memory>
+		<memory name="gutCacheMem" description="Tessellation (GUT) cache">
+		    <peak>53772296</peak>
+		    <current>53772296</current>
+		</memory>
+		<memory name="radioCacheMem" description="Opacity cache">
+		    <peak>209395720</peak>
+		    <current>209395720</current>
+		</memory>
+		<memory name="vaMem" description="Volume aggregate memory">
+		    <peak>0</peak>
+		    <current>0</current>
+		</memory>
+		<memory name="pooledmemory" description="Pooled Memory">
+		    <peak>37748952</peak>
+		    <current>37748952</current>
+		</memory>
+		<memory name="lightdbmemory" description="Light Database Memory">
+		    <peak>0</peak>
+		    <current>0</current>
+		</memory>
+		<memory name="lighthierarchymem" description="Light Hierarchy Memory">
+		    <peak>0</peak>
+		    <current>0</current>
+		</memory>
+		<int name="lightdbsize" description="Light Database Patch Count">0</int>
+		<memory name="textureMemory" description="Texture cache">
+		    <peak>123117047</peak>
+		    <current>123117047</current>
+		</memory>
+		<memory name="ptexMemory" description="PTexture cache">
+		    <peak>1376</peak>
+		    <current>1376</current>
+		</memory>
+		<memory name="brickMemSum" description="Brickmap memory">
+		    <peak>12891240</peak>
+		    <current>524288</current>
+		</memory>
+		<memory name="pointMemSum" description="Pointcloud memory">
+		    <peak>3880176</peak>
+		    <current>3880176</current>
+		</memory>
+		<memory name="SymbolMem" description="Ri Symbol Table memory">
+		    <peak>45904</peak>
+		    <current>45904</current>
+		</memory>
+		<memory name="displayMem" description="Display driver memory">
+		    <peak>15360</peak>
+		    <current>15360</current>
+		</memory>
+		<memory name="pluginMemory" description="Plugin storage">
+		    <peak>10626728</peak>
+		    <current>0</current>
+		</memory>
+		<stats name="plugins" description="Plugin statistics" kind="memstats">
+		    <memory name="pathtracerBufferMemory" description="Pathtracer Buffers">
+			<peak>10626728</peak>
+			<current>0</current>
+		    </memory>
+		    <memory name="pathtracerAOVMemory" description="Pathtracer AOVs">
+			<peak>0</peak>
+			<current>0</current>
+		    </memory>
+		</stats>
+		<memory name="InlineArchiveMem" description="Inline archive memory">
+		    <peak>0</peak>
+		    <current>0</current>
+		</memory>
+		<memory name="usrAttrMem" description="User attribute memory">
+		    <peak>624</peak>
+		    <current>592</current>
+		</memory>
+		<memory name="coordSysMem" description="Named coordinate system memory">
+		    <peak>312</peak>
+		    <current>312</current>
+		</memory>
+		<memory name="dataBufferMemory" description="Primvar Buffer Memory">
+		    <peak>188008944</peak>
+		    <current>0</current>
+		</memory>
+	    </stats>
+	    <memory name="subsystemMem" description="Subsystem memory total">
+		<peak>1371647879</peak>
+		<current>1229435614</current>
+	    </memory>
+	</stats>
+	<stats name="geometry" description="Geometry stats" kind="section">
+	    <int name="proceduralsMade" description="Procedurals created">0</int>
+	    <int name="proceduralsExpanded" description="Procedurals expanded">0</int>
+	    <int name="polyRibVertexCount" description="poly rib vertex count">9311141</int>
+	    <int name="polyRibPolyCount" description="poly rib polygon count">6246605</int>
+	    <int name="subdRibVertexCount" description="subd cage vertex count">3823076</int>
+	    <int name="subdRibPolyCount" description="subd cage polygon count">964068</int>
+	    <int name="curveRibVertexCount" description="curve rib vertex count">0</int>
+	    <int name="curveRibStrandCount" description="curve rib strand count">0</int>
+	    <int name="polyTriCountFine" description="raytraced poly triangle count (fine)">0</int>
+	    <int name="polyTriCountMedium" description="raytraced poly triangle count (medium)">0</int>
+	    <int name="polyTriCountCoarse" description="raytraced poly triangle count (coarse)">0</int>
+	    <int name="polyTriCountOverall" description="raytraced poly triangle count (overall)">0</int>
+	    <int name="subdTriCountFine" description="raytraced subd triangle count (fine)">546944</int>
+	    <int name="subdTriCountMedium" description="raytraced subd triangle count (medium)">8274</int>
+	    <int name="subdTriCountCoarse" description="raytraced subd triangle count (coarse)">0</int>
+	    <int name="subdTriCountOverall" description="raytraced subd triangle count (overall)">548874</int>
+	    <memory name="gsmMem" description="GSM memory">
+		<peak>11232</peak>
+		<current>9504</current>
+	    </memory>
+	    <memory name="matrixMem" description="Matrix memory">
+		<peak>640096</peak>
+		<current>639520</current>
+	    </memory>
+	    <range name="gprimCount" description="GPrim count">
+		<current>155303</current>
+		<total>2164064</total>
+		<min>0</min>
+		<max>156016</max>
+		<average>1</average>
+		<count>2164064</count>
+	    </range>
+	    <memory name="gprimMem" description="GPrim memory">
+		<peak>113519157</peak>
+		<current>104626545</current>
+	    </memory>
+	    <memory name="instanceMem" description="Instance memory">
+		<peak>424896</peak>
+		<current>424896</current>
+	    </memory>
+	    <memory name="gopStaticMem" description="Static GOP memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <memory name="gopDynamicMem" description="Dynamic GOP memory">
+		<peak>7489344</peak>
+		<current>7460304</current>
+	    </memory>
+	    <memory name="stitchMem" description="Crack reduction memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <range name="vvCount" description="Vertex vector count">
+		<current>123280</current>
+		<total>401208</total>
+		<min>0</min>
+		<max>123292</max>
+		<average>1</average>
+		<count>401208</count>
+	    </range>
+	    <memory name="vvMem" description="Vertex vector memory">
+		<peak>578721652</peak>
+		<current>487941156</current>
+	    </memory>
+	    <memory name="vvBVHMem" description="Vertex vector BVH memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <memory name="vvOverheadMem" description="Vertex vector overhead memory">
+		<peak>24271780</peak>
+		<current>24269860</current>
+	    </memory>
+	    <stats name="implicitSurfacePlugins" description="Stats for each Implicit and Volume plugin" kind="implicitplugins">
+	    </stats>
+	    <memory name="catmarkMem" description="Catmull-Clark subdivision memory">
+		<peak>15268840</peak>
+		<current>6102528</current>
+	    </memory>
+	    <memory name="loopMem" description="Loop subdivision memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <memory name="trimCurveMem" description="Trim curve memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <memory name="trimDataMem" description="Trim data memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <memory name="temporalVolumeBufferMem" description="temporal volume buffer memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <stats name="procedurals" description="Per-procedural statistics" kind="geometryprocedurals">
+	    </stats>
+	</stats>
+	<stats name="grids" description="Grid stats" kind="section">
+	    <stats name="gridsCount" description="Grid count">
+		<range name="rectangular" description="">
+		    <current>120</current>
+		    <total>1842442</total>
+		    <min>0</min>
+		    <max>6128</max>
+		    <average>1</average>
+		    <count>1842442</count>
+		</range>
+		<range name="triangular" description="">
+		    <current>0</current>
+		    <total>20904</total>
+		    <min>0</min>
+		    <max>8</max>
+		    <average>1</average>
+		    <count>20904</count>
+		</range>
+	    </stats>
+	    <stats name="gridSizeByType" description="Grid size">
+		<range name="rectangular" description="">
+		    <current>347</current>
+		    <total>8538944</total>
+		    <min>0</min>
+		    <max>1481</max>
+		    <average>4.63458</average>
+		    <count>1842442</count>
+		</range>
+		<range name="triangular" description="">
+		    <current>50</current>
+		    <total>109221</total>
+		    <min>0</min>
+		    <max>128</max>
+		    <average>5.22489</average>
+		    <count>20904</count>
+		</range>
+	    </stats>
+	    <stats name="gridMemByType" description="Grid memory">
+		<memory name="rectangular" description="">
+		    <peak>7651584</peak>
+		    <current>272400</current>
+		</memory>
+		<memory name="triangular" description="">
+		    <peak>7712</peak>
+		    <current>0</current>
+		</memory>
+	    </stats>
+	    <stats name="subdivAPIHugeGridMem" description="Subdivision Surface API">
+	    </stats>
+	</stats>
+	<stats name="rayAccel" description="Ray accelerator stats" kind="section">
+	    <int name="initialRTPrims" description="Initial gprims">2211</int>
+	    <int name="finalRTPrims" description="All gprims after splits">155286</int>
+	    <int name="raysShot" description="Total rays">68189</int>
+	    <int name="bboxTests" description="BBox tests">0</int>
+	    <int name="gprimBBoxTests" description="Gprim BBox tests">351028</int>
+	    <stats name="primTestsByType" description="Primitive tests by type">
+		<int name="catmarkface" description="">6097</int>
+		<int name="bsplinepatch" description="">31157</int>
+		<int name="hedronsplit" description="">255149</int>
+	    </stats>
+	    <stats name="primHitsByType" description="Primitive hits by type">
+		<int name="catmarkface" description="">1892</int>
+		<int name="bsplinepatch" description="">13977</int>
+		<int name="hedronsplit" description="">33307</int>
+	    </stats>
+	    <int name="transmissionRayContinuations" description="Transmission ray continuations">0</int>
+	    <stats name="raysByType" description="Rays by type">
+		<int name="camera" description="">24576</int>
+		<int name="transmission" description="">20801</int>
+		<int name="directlight" description="">13903</int>
+		<int name="indirect" description="">8909</int>
+	    </stats>
+	    <int name="transmissionBeforeCull" description="Transmission Rays before Culling">20801</int>
+	    <timer name="cameraTime" description="Time tracing camera rays">
+		<elapsed>0.566321</elapsed>
+	    </timer>
+	    <timer name="photonTime" description="Time tracing photon rays">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="transmissionTime" description="Time tracing transmission rays">
+		<elapsed>0.859430</elapsed>
+	    </timer>
+	    <timer name="indirectTime" description="Time tracing indirect rays">
+		<elapsed>0.185450</elapsed>
+	    </timer>
+	    <timer name="directlightTime" description="Time tracing direct lighting rays">
+		<elapsed>0.007512</elapsed>
+	    </timer>
+	    <timer name="splitTime" description="Time splitting prims">
+		<elapsed>49.258893</elapsed>
+	    </timer>
+	    <timer name="buildTime" description="Time building hierarchy">
+		<elapsed>0.010732</elapsed>
+	    </timer>
+	    <timer name="subAccelBuildTime" description="Time building sub-acceleration data structures">
+		<elapsed>2.000350</elapsed>
+	    </timer>
+	    <timer name="subAccelDispTime" description="Time displacing sub-acceleration data structures">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <histogram name="rayDepthHistogram" description="Ray depth histogram">
+		<bin label="0">33485</bin>
+		<bin label="1">34704</bin>
+		<bin label="2">0</bin>
+		<bin label="3">0</bin>
+		<bin label="4">0</bin>
+		<bin label="5">0</bin>
+		<bin label="6">0</bin>
+		<bin label="7">0</bin>
+		<bin label="8">0</bin>
+		<bin label="9">0</bin>
+		<bin label="more">0</bin>
+	    </histogram>
+	    <memory name="acceleratorMem" description="Ray accelerator memory">
+		<peak>22101764</peak>
+		<current>9317360</current>
+	    </memory>
+	    <int name="primTests" description="Primitive tests">292403</int>
+	    <int name="primHits" description="Primitive hits">49176</int>
+	</stats>
+	<stats name="rayGprim" description="Ray gprim stats" kind="section">
+	    <int name="triTests" description="Triangle hit tests">47638</int>
+	    <int name="triHits" description="Triangle hits">19353</int>
+	    <int name="flatQuadTests" description="Flat BLP hit tests">0</int>
+	    <int name="flatQuadHits" description="Flat BLP hits">0</int>
+	    <int name="curvedQuadTests" description="Curved BLP hit tests">0</int>
+	    <int name="curvedQuadHits" description="Curved BLP hits">0</int>
+	    <int name="oneSidedRejects" description="Rejected hits due to Sides 1">0</int>
+	    <int name="nurbsHitTotal" description="NURB hits">0</int>
+	    <int name="nurbsHitTrimmed" description="NURB hits that were trimmed">0</int>
+	    <int name="catmarkGridCacheHits" description="Catmark grid cache hits">6057</int>
+	    <int name="catmarkGridCacheMisses" description="Catmark grid cache misses">0</int>
+	    <int name="gutDisplacementShaded" description="Displacement shaded points during tessellation">0</int>
+	    <int name="gutRadiosityShaded" description="Surface shaded points during opacity caching">0</int>
+	    <timer name="gutFirstTimeToFill" description="Tessellation (GUT) cache creating entries (compulsory misses)">
+		<elapsed>0.028285</elapsed>
+	    </timer>
+	    <timer name="gutOtherTimeToFill" description="Tessellation (GUT) cache creating entries (capacity misses)">
+		<elapsed>0.013329</elapsed>
+	    </timer>
+	    <stats name="gutCacheLookups" description="Tessellation (GUT) cache lookups">
+		<int name="coarse" description="">5083</int>
+		<int name="medium" description="">6674</int>
+		<int name="fine" description="">25765</int>
+	    </stats>
+	    <stats name="gutCacheHits" description="Tessellation (GUT) cache hits">
+		<int name="coarse" description="">5083</int>
+		<int name="medium" description="">6338</int>
+		<int name="fine" description="">24023</int>
+	    </stats>
+	    <stats name="gutCacheMisses" description="Tessellation (GUT) cache misses">
+		<int name="coarse" description="">0</int>
+		<int name="medium" description="">336</int>
+		<int name="fine" description="">1742</int>
+	    </stats>
+	    <stats name="gutCacheL1Misses" description="Tessellation (GUT) cache L1 misses">
+		<int name="coarse" description="">0</int>
+		<int name="medium" description="">864</int>
+		<int name="fine" description="">3651</int>
+	    </stats>
+	    <memory name="gutCacheMem" description="Tessellation (GUT) cache">
+		<peak>53772296</peak>
+		<current>53772296</current>
+	    </memory>
+	    <timer name="radioTimeToFill" description="Opacity cache creating entries">
+		<elapsed>0.506928</elapsed>
+	    </timer>
+	    <stats name="radioCacheLookups" description="Opacity cache lookups">
+		<int name="coarse" description="">3230</int>
+		<int name="medium" description="">20474</int>
+		<int name="fine" description="">0</int>
+		<int name="constant" description="">0</int>
+	    </stats>
+	    <stats name="radioCacheHits" description="Opacity cache hits">
+		<int name="coarse" description="">275</int>
+		<int name="medium" description="">2524</int>
+		<int name="fine" description="">0</int>
+		<int name="constant" description="">0</int>
+	    </stats>
+	    <stats name="radioCacheMisses" description="Opacity cache misses">
+		<int name="coarse" description="">2955</int>
+		<int name="medium" description="">17950</int>
+		<int name="fine" description="">0</int>
+		<int name="constant" description="">0</int>
+	    </stats>
+	    <memory name="radioCacheMem" description="Opacity cache">
+		<peak>209395720</peak>
+		<current>209395720</current>
+	    </memory>
+	    <stats name="radioCacheEvictions" description="Opacity cache evictions">
+		<int name="coarse" description="">0</int>
+		<int name="medium" description="">0</int>
+		<int name="fine" description="">0</int>
+		<int name="constant" description="">0</int>
+	    </stats>
+	    <stats name="radioReuseRates" description="Opacity reuse rates">
+		<float name="coarse" description="">0</float>
+		<float name="medium" description="">0.0289855</float>
+		<float name="fine" description="">0</float>
+		<float name="constant" description="">0</float>
+	    </stats>
+	    <memory name="vaMem" description="Volume aggregate memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <int name="vaNumVolumes" description="Volumes in aggregate">0</int>
+	    <int name="vaNumRays" description="Volume aggregate rays">0</int>
+	    <int name="vaNumSegments" description="Volume aggregate segments">0</int>
+	    <int name="vaNumSteps" description="Volume aggregate steps">0</int>
+	    <int name="vaNumRegions" description="Volume aggregate regions">0</int>
+	    <int name="vaNumEntries" description="Volume aggregate entries">0</int>
+	    <int name="vaNumComputes" description="Volume aggregate computations">0</int>
+	</stats>
+	<stats name="bounds" description="Unusual displacements" kind="section">
+	    <stats name="dispbounds" description="Displacement bounds">
+	    </stats>
+	</stats>
+	<stats name="texture" description="texture" kind="section">
+	    <stats name="textureTileCache" description="Texture cache" kind="section">
+		<memory name="size" description="Cache size">
+		    <peak>123117047</peak>
+		    <current>123117047</current>
+		</memory>
+		<int name="maxTiles" description="Max tiles">813440</int>
+		<int name="tilesUsed" description="Num tiles used">3082</int>
+		<int name="tilesRead" description="Num tiles read">3082</int>
+		<int name="lookups" description="Lookups">2543312</int>
+		<int name="hits" description="Hits">2540158</int>
+		<int name="misses" description="Misses">3154</int>
+		<int name="bytesRead" description="Bytes read">5023988</int>
+		<timer name="readTime" description="Read">
+		    <elapsed>0.444595</elapsed>
+		</timer>
+		<timer name="decompressTime" description="Decompress">
+		    <elapsed>0.090473</elapsed>
+		</timer>
+	    </stats>
+	    <stats name="textureFiltering" description="Texture filtering" kind="section">
+		<timer name="filterTime" description="Filtering time">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<int name="requests" description="Requests">318432</int>
+		<int name="samples" description="Samples">2068703</int>
+		<histogram name="samplesHist" description="# samples per request">
+		    <bin label="2">0</bin>
+		    <bin label="4">312569</bin>
+		    <bin label="8">52559</bin>
+		    <bin label="16">50995</bin>
+		    <bin label="32">0</bin>
+		    <bin label="64">0</bin>
+		    <bin label="128">0</bin>
+		    <bin label="256">0</bin>
+		    <bin label="512">0</bin>
+		    <bin label="1024">0</bin>
+		    <bin label="2048">0</bin>
+		    <bin label="4096">0</bin>
+		    <bin label="more">0</bin>
+		</histogram>
+		<histogram name="filterWidthHist" description="Max filter width">
+		    <bin label="1">0</bin>
+		    <bin label="2">312569</bin>
+		    <bin label="3">88848</bin>
+		    <bin label="4">14706</bin>
+		    <bin label="5">0</bin>
+		    <bin label="6">0</bin>
+		    <bin label="7">0</bin>
+		    <bin label="8">0</bin>
+		    <bin label="9">0</bin>
+		    <bin label="10">0</bin>
+		    <bin label="11">0</bin>
+		    <bin label="12">0</bin>
+		    <bin label="more">0</bin>
+		</histogram>
+	    </stats>
+	    <stats name="environmentFiltering" description="Environment filtering" kind="section">
+		<timer name="filterTime" description="Filtering time">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<int name="requests" description="Requests">0</int>
+		<int name="samples" description="Samples">0</int>
+		<histogram name="samplesHist" description="# samples per request">
+		    <bin label="2">0</bin>
+		    <bin label="4">0</bin>
+		    <bin label="8">0</bin>
+		    <bin label="16">0</bin>
+		    <bin label="32">0</bin>
+		    <bin label="64">0</bin>
+		    <bin label="128">0</bin>
+		    <bin label="256">0</bin>
+		    <bin label="512">0</bin>
+		    <bin label="1024">0</bin>
+		    <bin label="2048">0</bin>
+		    <bin label="4096">0</bin>
+		    <bin label="more">0</bin>
+		</histogram>
+		<histogram name="filterWidthHist" description="Max filter width">
+		    <bin label="1">0</bin>
+		    <bin label="2">0</bin>
+		    <bin label="3">0</bin>
+		    <bin label="4">0</bin>
+		    <bin label="5">0</bin>
+		    <bin label="6">0</bin>
+		    <bin label="7">0</bin>
+		    <bin label="8">0</bin>
+		    <bin label="9">0</bin>
+		    <bin label="10">0</bin>
+		    <bin label="11">0</bin>
+		    <bin label="12">0</bin>
+		    <bin label="more">0</bin>
+		</histogram>
+	    </stats>
+	    <stats name="ptextureCache" description="PTex cache" kind="section">
+		<memory name="ptxMem" description="Total Memory">
+		    <peak>1376</peak>
+		    <current>1376</current>
+		</memory>
+		<memory name="ptxFileMem" description="File Memory">
+		    <peak>0</peak>
+		    <current>0</current>
+		</memory>
+		<memory name="ptxDataMem" description="Data Memory">
+		    <peak>0</peak>
+		    <current>0</current>
+		</memory>
+		<memory name="ptxOverheadMem" description="Overhead Memory">
+		    <peak>1376</peak>
+		    <current>1376</current>
+		</memory>
+		<int name="ptxFAccessed" description="File Accessed">0</int>
+		<int name="ptxFMisses" description="File Misses">0</int>
+		<int name="ptxFilesOpen" description="Current Files Open">0</int>
+		<int name="ptxPeakFiles" description="Peak Files Open">0</int>
+		<int name="ptxBlockReads" description="Blocks Read">0</int>
+	    </stats>
+	    <stats name="PTex Filtering" description="PTex Filtering" kind="section">
+		<timer name="ptexFilter" description="Ptex Filtering Time">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<int name="ptexRequests" description="Ptex Requests">0</int>
+		<timer name="ptexEnvFilter" description="Ptex Env Filtering Time">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<int name="ptexEnvRequests" description="Ptex Env Requests">0</int>
+	    </stats>
+	    <stats name="textureFiles" description="Texture files" kind="section">
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/leaf.png.tex</string>
+		    <int name="lookups" description="Lookups">2180228</int>
+		    <int name="reads" description="Reads">20</int>
+		    <int name="bytesRead" description="Bytes read">4618</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000264</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000019</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_stem_Emissive.png.tex</string>
+		    <int name="lookups" description="Lookups">48306</int>
+		    <int name="reads" description="Reads">225</int>
+		    <int name="bytesRead" description="Bytes read">162297</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.022407</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.004736</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_stem_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">47640</int>
+		    <int name="reads" description="Reads">225</int>
+		    <int name="bytesRead" description="Bytes read">126163</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.020771</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.003928</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/large_trunk/trunkfbx_lambert1_Normal.png.tex</string>
+		    <int name="lookups" description="Lookups">27606</int>
+		    <int name="reads" description="Reads">75</int>
+		    <int name="bytesRead" description="Bytes read">155743</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.015835</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.004184</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/large_trunk/trunkfbx_lambert1_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">27588</int>
+		    <int name="reads" description="Reads">75</int>
+		    <int name="bytesRead" description="Bytes read">130518</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.009994</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.003041</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks2_blue_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">27156</int>
+		    <int name="reads" description="Reads">393</int>
+		    <int name="bytesRead" description="Bytes read">920085</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.070633</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.015043</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks2_Normal.png.tex</string>
+		    <int name="lookups" description="Lookups">27156</int>
+		    <int name="reads" description="Reads">393</int>
+		    <int name="bytesRead" description="Bytes read">863269</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.076349</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.013677</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_cap_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">25074</int>
+		    <int name="reads" description="Reads">108</int>
+		    <int name="bytesRead" description="Bytes read">142019</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.017345</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.003116</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_cap_Emissive.png.tex</string>
+		    <int name="lookups" description="Lookups">24930</int>
+		    <int name="reads" description="Reads">108</int>
+		    <int name="bytesRead" description="Bytes read">127697</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.015873</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.002846</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks2_Roughness.png.tex</string>
+		    <int name="lookups" description="Lookups">18104</int>
+		    <int name="reads" description="Reads">131</int>
+		    <int name="bytesRead" description="Bytes read">184518</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.011969</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.003627</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_stem_Height.png.tex</string>
+		    <int name="lookups" description="Lookups">17815</int>
+		    <int name="reads" description="Reads">77</int>
+		    <int name="bytesRead" description="Bytes read">35720</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.007590</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.001161</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks1_Normal.png.tex</string>
+		    <int name="lookups" description="Lookups">14826</int>
+		    <int name="reads" description="Reads">222</int>
+		    <int name="bytesRead" description="Bytes read">519763</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.042464</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.008061</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks1_blue_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">14826</int>
+		    <int name="reads" description="Reads">222</int>
+		    <int name="bytesRead" description="Bytes read">542990</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.044680</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.008640</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks1_Roughness.png.tex</string>
+		    <int name="lookups" description="Lookups">9884</int>
+		    <int name="reads" description="Reads">74</int>
+		    <int name="bytesRead" description="Bytes read">115756</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.010564</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.002237</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_cap_Height.png.tex</string>
+		    <int name="lookups" description="Lookups">9149</int>
+		    <int name="reads" description="Reads">37</int>
+		    <int name="bytesRead" description="Bytes read">34740</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.004214</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000893</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_big_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">2730</int>
+		    <int name="reads" description="Reads">75</int>
+		    <int name="bytesRead" description="Bytes read">129343</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.013574</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.002409</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_big_Emissive.png.tex</string>
+		    <int name="lookups" description="Lookups">2730</int>
+		    <int name="reads" description="Reads">75</int>
+		    <int name="bytesRead" description="Bytes read">153720</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.013240</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.002781</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks2_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">2040</int>
+		    <int name="reads" description="Reads">66</int>
+		    <int name="bytesRead" description="Bytes read">69854</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.005010</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.001577</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks2_Emissive.png.tex</string>
+		    <int name="lookups" description="Lookups">2040</int>
+		    <int name="reads" description="Reads">66</int>
+		    <int name="bytesRead" description="Bytes read">112377</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.008485</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.002099</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks2_Normal.png.tex</string>
+		    <int name="lookups" description="Lookups">2040</int>
+		    <int name="reads" description="Reads">66</int>
+		    <int name="bytesRead" description="Bytes read">132062</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.009341</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.002174</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/cliff/ground_cliffShader_viewport_lambert_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">1725</int>
+		    <int name="reads" description="Reads">21</int>
+		    <int name="bytesRead" description="Bytes read">14391</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000806</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000205</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_flowers_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">1242</int>
+		    <int name="reads" description="Reads">42</int>
+		    <int name="bytesRead" description="Bytes read">79232</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.005773</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.001069</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_flowers_Emissive.png.tex</string>
+		    <int name="lookups" description="Lookups">1242</int>
+		    <int name="reads" description="Reads">42</int>
+		    <int name="bytesRead" description="Bytes read">89664</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.005231</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.001056</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_big_Metallic.png.tex</string>
+		    <int name="lookups" description="Lookups">910</int>
+		    <int name="reads" description="Reads">25</int>
+		    <int name="bytesRead" description="Bytes read">50630</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.004420</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000822</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_flowers_Height.png.tex</string>
+		    <int name="lookups" description="Lookups">440</int>
+		    <int name="reads" description="Reads">14</int>
+		    <int name="bytesRead" description="Bytes read">7397</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000231</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000219</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/forestGround/color.png.tex</string>
+		    <int name="lookups" description="Lookups">411</int>
+		    <int name="reads" description="Reads">12</int>
+		    <int name="bytesRead" description="Bytes read">3996</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000660</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/forestGround/normal.png.tex</string>
+		    <int name="lookups" description="Lookups">384</int>
+		    <int name="reads" description="Reads">12</int>
+		    <int name="bytesRead" description="Bytes read">3961</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000356</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000013</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_smol_Emissive.png.tex</string>
+		    <int name="lookups" description="Lookups">168</int>
+		    <int name="reads" description="Reads">9</int>
+		    <int name="bytesRead" description="Bytes read">2886</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000403</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_petals_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">159</int>
+		    <int name="reads" description="Reads">9</int>
+		    <int name="bytesRead" description="Bytes read">2886</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000291</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lilly_petals_glow.png.tex</string>
+		    <int name="lookups" description="Lookups">159</int>
+		    <int name="reads" description="Reads">9</int>
+		    <int name="bytesRead" description="Bytes read">3786</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000356</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks1_Emissive.png.tex</string>
+		    <int name="lookups" description="Lookups">138</int>
+		    <int name="reads" description="Reads">6</int>
+		    <int name="bytesRead" description="Bytes read">2820</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000314</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks1_Normal.png.tex</string>
+		    <int name="lookups" description="Lookups">138</int>
+		    <int name="reads" description="Reads">6</int>
+		    <int name="bytesRead" description="Bytes read">2820</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000350</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_smol_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">126</int>
+		    <int name="reads" description="Reads">9</int>
+		    <int name="bytesRead" description="Bytes read">2886</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000402</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_branch_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">120</int>
+		    <int name="reads" description="Reads">24</int>
+		    <int name="bytesRead" description="Bytes read">18056</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000558</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000447</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks1_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">114</int>
+		    <int name="reads" description="Reads">6</int>
+		    <int name="bytesRead" description="Bytes read">2820</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000325</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_petals_Roughness.png.tex</string>
+		    <int name="lookups" description="Lookups">106</int>
+		    <int name="reads" description="Reads">3</int>
+		    <int name="bytesRead" description="Bytes read">1010</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000050</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_stem_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">84</int>
+		    <int name="reads" description="Reads">18</int>
+		    <int name="bytesRead" description="Bytes read">12634</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000227</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000159</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_branch_Roughness.png.tex</string>
+		    <int name="lookups" description="Lookups">80</int>
+		    <int name="reads" description="Reads">8</int>
+		    <int name="bytesRead" description="Bytes read">8551</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000121</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000155</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/callalilly/callalily_obj_leaves_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">78</int>
+		    <int name="reads" description="Reads">6</int>
+		    <int name="bytesRead" description="Bytes read">2820</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000431</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_stem_Roughness.png.tex</string>
+		    <int name="lookups" description="Lookups">56</int>
+		    <int name="reads" description="Reads">6</int>
+		    <int name="bytesRead" description="Bytes read">5522</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000100</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000079</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lavender/blue/lavender_flowers_Emissive.png.tex</string>
+		    <int name="lookups" description="Lookups">54</int>
+		    <int name="reads" description="Reads">3</int>
+		    <int name="bytesRead" description="Bytes read">2790</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000051</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/callalilly/callalily_obj_flowers_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">54</int>
+		    <int name="reads" description="Reads">12</int>
+		    <int name="bytesRead" description="Bytes read">3096</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000376</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lavender/blue/lavender_flowers_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">54</int>
+		    <int name="reads" description="Reads">3</int>
+		    <int name="bytesRead" description="Bytes read">2790</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000051</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_smol_Metallic.png.tex</string>
+		    <int name="lookups" description="Lookups">42</int>
+		    <int name="reads" description="Reads">3</int>
+		    <int name="bytesRead" description="Bytes read">1010</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000307</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version2/crystal_version2_big_Emissive.png.tex</string>
+		    <int name="lookups" description="Lookups">36</int>
+		    <int name="reads" description="Reads">3</int>
+		    <int name="bytesRead" description="Bytes read">2790</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000042</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lavender/blue/lavender_flowers_Roughness.png.tex</string>
+		    <int name="lookups" description="Lookups">36</int>
+		    <int name="reads" description="Reads">1</int>
+		    <int name="bytesRead" description="Bytes read">978</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000022</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_leaf_top_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">27</int>
+		    <int name="reads" description="Reads">3</int>
+		    <int name="bytesRead" description="Bytes read">2790</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000058</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/callalilly/callalily_obj_stems_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">27</int>
+		    <int name="reads" description="Reads">3</int>
+		    <int name="bytesRead" description="Bytes read">2790</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000057</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_leaf_bottom_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">27</int>
+		    <int name="reads" description="Reads">3</int>
+		    <int name="bytesRead" description="Bytes read">2790</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000032</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version2/crystal_version2_big_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">27</int>
+		    <int name="reads" description="Reads">3</int>
+		    <int name="bytesRead" description="Bytes read">2790</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000050</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_stem_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">27</int>
+		    <int name="reads" description="Reads">3</int>
+		    <int name="bytesRead" description="Bytes read">2790</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000052</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_leaf_top_Roughness.png.tex</string>
+		    <int name="lookups" description="Lookups">18</int>
+		    <int name="reads" description="Reads">1</int>
+		    <int name="bytesRead" description="Bytes read">978</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000013</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_stem_Roughness.png.tex</string>
+		    <int name="lookups" description="Lookups">18</int>
+		    <int name="reads" description="Reads">1</int>
+		    <int name="bytesRead" description="Bytes read">978</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000021</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version2/crystal_version2_big_Roughness.png.tex</string>
+		    <int name="lookups" description="Lookups">18</int>
+		    <int name="reads" description="Reads">1</int>
+		    <int name="bytesRead" description="Bytes read">978</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000023</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_base_BaseColor.png.tex</string>
+		    <int name="lookups" description="Lookups">18</int>
+		    <int name="reads" description="Reads">6</int>
+		    <int name="bytesRead" description="Bytes read">2868</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000367</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_leaf_bottom_Roughness.png.tex</string>
+		    <int name="lookups" description="Lookups">18</int>
+		    <int name="reads" description="Reads">1</int>
+		    <int name="bytesRead" description="Bytes read">978</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000013</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_base_Emissive.png.tex</string>
+		    <int name="lookups" description="Lookups">18</int>
+		    <int name="reads" description="Reads">6</int>
+		    <int name="bytesRead" description="Bytes read">2868</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000740</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version2/crystal_version2_big_Metallic.png.tex</string>
+		    <int name="lookups" description="Lookups">9</int>
+		    <int name="reads" description="Reads">1</int>
+		    <int name="bytesRead" description="Bytes read">978</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000019</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_leaf_top_Height.png.tex</string>
+		    <int name="lookups" description="Lookups">8</int>
+		    <int name="reads" description="Reads">1</int>
+		    <int name="bytesRead" description="Bytes read">978</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000018</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_base_Metallic.png.tex</string>
+		    <int name="lookups" description="Lookups">6</int>
+		    <int name="reads" description="Reads">2</int>
+		    <int name="bytesRead" description="Bytes read">1004</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000236</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lavender/blue/lavender_flowers_Height.png.tex</string>
+		    <int name="lookups" description="Lookups">4</int>
+		    <int name="reads" description="Reads">1</int>
+		    <int name="bytesRead" description="Bytes read">978</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000019</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+		<stats name="textureFile" description="texture file" kind="textureFile">
+		    <string name="fileName" description="Filename">C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version2/crystal_version2_big_Height.png.tex</string>
+		    <int name="lookups" description="Lookups">4</int>
+		    <int name="reads" description="Reads">1</int>
+		    <int name="bytesRead" description="Bytes read">978</int>
+		    <timer name="readTime" description="Read">
+			<elapsed>0.000021</elapsed>
+		    </timer>
+		    <timer name="decompressTime" description="Decompress">
+			<elapsed>0.000000</elapsed>
+		    </timer>
+		</stats>
+	    </stats>
+	</stats>
+	<stats name="brickmaps" description="Brick map and brick cache stats" kind="section">
+	    <int name="nBrickMapLookups" description="Brick map lookups (texture3d() calls)">0</int>
+	    <int name="nBrickMapsAccessed" description="Brick maps accessed">0</int>
+	    <int name="nReadHeaderBytes" description="Brick map header bytes read">0</int>
+	    <int name="nReadBrickBytes" description="Brick bytes read">0</int>
+	    <memory name="brickLocationTableMem" description="Brick location table memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <memory name="brickmapOctreeMem" description="Brick map octree memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <memory name="brickmapGprimMem" description="Brick map gprim memory (RT only)">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <int name="nBrickCacheLookups" description="Brick cache lookups">0</int>
+	    <int name="nBrickCacheHits" description="Brick cache hits">0</int>
+	    <int name="nBrickCacheCompMisses" description="Compulsory cache misses">0</int>
+	    <int name="nBrickCacheCapaMisses" description="Capacity cache misses">0</int>
+	    <histogram name="brickMapLevelHistogram" description="Cache lookup levels">
+		<bin label="0">0</bin>
+		<bin label="1">0</bin>
+		<bin label="2">0</bin>
+		<bin label="3">0</bin>
+		<bin label="4">0</bin>
+		<bin label="5">0</bin>
+		<bin label="6">0</bin>
+		<bin label="7">0</bin>
+		<bin label="8">0</bin>
+		<bin label="9">0</bin>
+		<bin label="more">0</bin>
+	    </histogram>
+	    <int name="nBrickCacheElems" description="Brick slots in brick caches">155254</int>
+	    <memory name="brickCacheActualMem" description="Actual memory used by brick caches">
+		<peak>12891240</peak>
+		<current>524288</current>
+	    </memory>
+	    <timer name="texture3DBrickmapTime" description="Total brickmap texture3d()">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="brickCompReadTime" description="Brick compulsory read">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="brickCapaReadTime" description="Brick capacity read">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	</stats>
+	<stats name="pointclouds" description="Point-based calc. and cache stats" kind="section">
+	    <memory name="pointCloudMem" description="Point cloud memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <memory name="pointOctreeMem" description="Point octree memory">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	    <int name="nReadPoints" description="Points read">0</int>
+	    <int name="nPointCacheLookups" description="Point cache lookups">0</int>
+	    <int name="nPointCacheHits" description="Point cache hits">0</int>
+	    <int name="nPointCacheMisses" description="Point cache misses">0</int>
+	    <int name="nPointCacheElems" description="Point cache num slots">3150</int>
+	    <memory name="pointCacheActualMem" description="Point cache memory">
+		<peak>329200</peak>
+		<current>329200</current>
+	    </memory>
+	    <int name="nReadNodes" description="Octree nodes read">0</int>
+	    <int name="nNodeCacheLookups" description="Octree node cache lookups">0</int>
+	    <int name="nNodeCacheHits" description="Octree node cache hits">0</int>
+	    <int name="nNodeCacheMisses" description="Octree node cache misses">0</int>
+	    <int name="nNodeCacheElems" description="Octree node cache num slots">34492</int>
+	    <memory name="nodeCacheActualMem" description="Octree node cache memory">
+		<peak>3550976</peak>
+		<current>3550976</current>
+	    </memory>
+	    <timer name="texture3DPointcloudTime" description="Total pointcloud texture3d()">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="getpointsTime" description="Total getpoints()">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="subsurfaceTime" description="Total subsurface()">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="occlusionTime" description="Total point-based occlusion()">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="indirectdiffuseTime" description="Total point-based indirectdiffuse()">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="cacheReadTime" description="Point/node cache read time">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="fileReadTime" description="Pointcloud file read time">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="buildOctreesTime" description="Octrees building time">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="traverseOctreesTime" description="Octrees traversal time">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	    <timer name="rasterizeTime" description="Point-based rasterization time">
+		<elapsed>0.000000</elapsed>
+	    </timer>
+	</stats>
+	<stats name="system" description="System stats" kind="section">
+	    <timer name="totaltime" description="Total time">
+		<elapsed>24.572712</elapsed>
+		<user>94.437500</user>
+		<system>7.234375</system>
+	    </timer>
+	    <set name="fileLog" description="Files accessed">
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins///d_openexr.dll</member>
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins//PxrBump</member>
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins//PxrDiffuse</member>
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins//PxrDomeLight</member>
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins//PxrLightBxdf</member>
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins//PxrNormalMap</member>
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins//PxrPathTracer</member>
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins//PxrPerspective</member>
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins//PxrSurface</member>
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins//PxrTexture</member>
+		<member>//C|//Program Files/Pixar/RenderManProServer-22.4/lib/plugins//abind</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/renderman/rib/forest_grove_SET_latest/v001_t01/Running_TEMPCAMShape.0001.rib</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/cliff/ground_cliffShader_viewport_lambert_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_base_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_base_Emissive.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_base_Metallic.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_big_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_big_Emissive.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_big_Metallic.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_smol_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_smol_Emissive.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version1/crystal_smol_Metallic.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version2/crystal_version2_big_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version2/crystal_version2_big_Emissive.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version2/crystal_version2_big_Height.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version2/crystal_version2_big_Metallic.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/crystals/crystal_version2/crystal_version2_big_Roughness.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/forestGround/color.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/forestGround/normal.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/callalilly/callalily_obj_flowers_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/callalilly/callalily_obj_leaves_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/callalilly/callalily_obj_stems_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_branch_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_branch_Roughness.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_flowers_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_flowers_Emissive.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_flowers_Height.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_stem_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/danglingFlower/danglingFlower_stem_Roughness.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/large_trunk/trunkfbx_lambert1_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/large_trunk/trunkfbx_lambert1_Normal.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lavender/blue/lavender_flowers_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lavender/blue/lavender_flowers_Emissive.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lavender/blue/lavender_flowers_Height.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lavender/blue/lavender_flowers_Roughness.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lilly_petals_glow.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_leaf_bottom_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_leaf_bottom_Roughness.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_leaf_top_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_leaf_top_Height.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_leaf_top_Roughness.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_petals_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_petals_Roughness.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_stem_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/lily/lily_stem_Roughness.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/leaf.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks1_Normal.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks1_Roughness.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks1_blue_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks2_Normal.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks2_Roughness.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_largeTrunks2_blue_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks1_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks1_Emissive.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks1_Normal.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks2_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks2_Emissive.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/plants/tree/thicktree_smalltrunks2_Normal.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_cap_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_cap_Emissive.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_cap_Height.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_stem_BaseColor.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_stem_Emissive.png.tex</member>
+		<member>C:/Users/jakeh/OneDrive/Desktop/poweredup/sourceimages/shrooms/mushroom/mushroom_stem_Height.png.tex</member>
+		<member>\Program Files\Pixar\RenderManForMaya-22.4/lib/plugins//PxrMayaFile</member>
+		<member>\Program Files\Pixar\RenderManForMaya-22.4/lib/plugins//PxrMayaPlacement2d</member>
+	    </set>
+	    <int name="filesOpened" description="Files opened">62</int>
+	    <int name="filesReopened" description="Files reopened">0</int>
+	    <int name="filesReclaimed" description="Files reclaimed">0</int>
+	    <int name="filesOpenError" description="Files not successfully opened">10</int>
+	    <string name="osName" description="OS name">Windows</string>
+	    <string name="osRelease" description="OS release"/>
+	    <string name="osVersion" description="OS version">9200</string>
+	    <string name="arch" description="System architecture">Intel64</string>
+	    <string name="hostname" description="Host name">LAPTOP-IBDTOIPE</string>
+	</stats>
+	<stats name="plugins" description="Plugin statistics" kind="section">
+	    <memory name="pathtracerBufferMemory" description="Pathtracer Buffers">
+		<peak>10626728</peak>
+		<current>0</current>
+	    </memory>
+	    <memory name="pathtracerAOVMemory" description="Pathtracer AOVs">
+		<peak>0</peak>
+		<current>0</current>
+	    </memory>
+	</stats>
+	<stats name="options" description="General Information" kind="section">
+	    <string name="copyright">copyright (c) 1988-2019 Pixar.</string>
+	    <string name="version">Pixar PhotoRealistic RenderMan 22.4</string>
+	    <string name="linkTime">linked Tue Mar 05 11:58:46 2019 Pacific Standard Time @1946009</string>
+	    <string name="build">build windows10_x86-64_vc14icc170_external_release</string>
+	    <string name="licenseDigest">  @  @|80i=+20;&lt;T39|5A79aAE:AbE9J8aE4L?d4B&gt;AbAA?KQ46|BDI?c9E9JT7BHAfED&gt;Ke5E7@b8AJ9Y3F|C8G@e01G9cB9LLd5978c3D&gt;AU12;JPBB</string>
+	    <string name="timestamp">Tue Nov 05 11:55:37 Pacific Standard Time 2019</string>
+	    <int name="threads">8</int>
+	    <int name="xRes">960</int>
+	    <int name="yRes">540</int>
+	    <int name="xSamples">8</int>
+	    <int name="ySamples">8</int>
+	    <float name="cropLeft">0</float>
+	    <float name="cropRight">1</float>
+	    <float name="cropTop">0</float>
+	    <float name="cropBottom">1</float>
+	    <int name="subPixel">0</int>
+	    <stats name="displaylist" description="Display list">
+		<stats name="display_0" description="Display settings">
+		    <string name="name">C:/Users/jakeh/OneDrive/Desktop/poweredup/images/forest_grove_SET_latest_v001_t01/forest_grove_SET_latest__Running_TEMPCAMShape_beauty.0001.exr</string>
+		    <string name="type">openexr</string>
+		    <string name="mode">rgba</string>
+		    <float name="relativePixelVariance">0</float>
+		    <int name="frame">1</int>
+		</stats>
+	    </stats>
+	    <int name="bucketXRes">16</int>
+	    <int name="bucketYRes">16</int>
+	    <string name="bucketOrder">circle</string>
+	    <int name="gridSize">289</int>
+	    <int name="textureMemory">4194304</int>
+	    <int name="ptextureMemory">1048576</int>
+	    <int name="ptextureMaxFiles">128</int>
+	    <int name="brickMemory">2097152</int>
+	    <int name="octreeMemory">20480</int>
+	    <int name="pointMemory">20480</int>
+	    <int name="geoCacheMemory">4194304</int>
+	    <int name="opacityCacheMemory">2097152</int>
+	    <int name="matrixCacheMemory">102400</int>
+	    <float name="memoryLimit">0</float>
+	    <float name="oThreshR">0.996</float>
+	    <float name="oThreshG">0.996</float>
+	    <float name="oThreshB">0.996</float>
+	    <string name="pixelFilterMode">weighted</string>
+	    <int name="minSamples">12</int>
+	    <int name="minExtraSamples">12</int>
+	    <int name="maxSamples">128</int>
+	    <float name="pixelVariance">0.01</float>
+	    <float name="darkFalloff">0.025</float>
+	    <int name="adaptAll">0</int>
+	    <int name="incremental">1</int>
+	    <int name="checkpointInterval">0</int>
+	    <int name="checkpointExitAt">0</int>
+	    <int name="checkpointKeepFiles">0</int>
+	    <int name="checkpointAsFinal">0</int>
+	</stats>
+	<stats name="RIS" description="RIS mode rendering" kind="section">
+	    <stats name="ictx" description="RixIntegratorContext" kind="section">
+		<int name="sctxCount" description="Number of ShadingCtxs">322</int>
+		<int name="msctxCount" description="Number of Mutable ShadingCtxs">0</int>
+		<memory name="integratorMem" description="Integrator memory">
+		    <peak>1656192</peak>
+		    <current>1656192</current>
+		</memory>
+		<memory name="patternMem" description="Pattern memory">
+		    <peak>302680</peak>
+		    <current>279712</current>
+		</memory>
+		<memory name="ictxWaste" description="Waste in memory pools">
+		    <peak>3368352</peak>
+		    <current>3368352</current>
+		</memory>
+	    </stats>
+	    <stats name="sctx" description="RixShadingContext" kind="section">
+		<range name="numPts" description="Shading Points (total)">
+		    <current>1405</current>
+		    <total>139065</total>
+		    <min>0</min>
+		    <max>6496</max>
+		    <average>6.23974</average>
+		    <count>22287</count>
+		</range>
+		<int name="stcxExecCount" description="Invocations">22287</int>
+		<timer name="sctxExecTime" description="Shading Time (total)">
+		    <elapsed>2.285332</elapsed>
+		</timer>
+		<memory name="shadingMem" description="Bxdf memory">
+		    <peak>5819596</peak>
+		    <current>5090332</current>
+		</memory>
+	    </stats>
+	    <stats name="osctx" description="Overlay RixShadingContext" kind="section">
+		<range name="numPts" description="Shading Points (total)">
+		    <current>0</current>
+		    <total>0</total>
+		    <min>0</min>
+		    <max>0</max>
+		    <average>0</average>
+		    <count>0</count>
+		</range>
+		<int name="stcxExecCount" description="Invocations">0</int>
+		<timer name="sctxExecTime" description="Shading Time (total)">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<memory name="shadingMem" description="Bxdf memory">
+		    <peak>0</peak>
+		    <current>0</current>
+		</memory>
+	    </stats>
+	    <stats name="Lighting" description="RixLightingServices" kind="section">
+		<int name="nPoints" description="Num points">29513</int>
+		<int name="nInvocations" description="Num invocations (Begin/End or BeginEmission/End)">1338</int>
+		<int name="nLightSamples" description="Num light samples">29513</int>
+		<int name="nLightRejectedSamples" description="Num light samples rejection-culled">0</int>
+		<int name="nMaterialSamples" description="Num material samples">29488</int>
+		<int name="nMaterialRays" description="Num material sample rays">0</int>
+		<int name="nMaterialAreaHits" description="Num material sample hits on area lights">0</int>
+		<int name="nMaterialEnvHits" description="Num material sample hits on env lights">13903</int>
+		<int name="nMaterialRejectedSamples" description="Num material samples rejection-culled">0</int>
+		<int name="mPhotonSamples" description="Num photon samples">0</int>
+		<int name="mPhotonHits" description="Num photon sample hits">0</int>
+		<timer name="lightingTotalTime" description="Total time in lighting services">
+		    <elapsed>1.029642</elapsed>
+		</timer>
+		<timer name="lightingShadowTime" description="Total time in shadowing">
+		    <elapsed>0.876768</elapsed>
+		</timer>
+		<timer name="lightingInternalTime" description="Total time in lighting services excluding subordinate systems">
+		    <elapsed>0.058755</elapsed>
+		</timer>
+		<timer name="lightingBuildTime" description="Total time building lighting configurations">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="lightingLookupTime" description="Total time looking up lighting configurations">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="lightingMaterialTime" description="Time in material sample evaluation (EvaluateSamples)">
+		    <elapsed>0.581170</elapsed>
+		</timer>
+		<timer name="lightingMaterialShadowTime" description="Time in material sample evaluation - shadowing">
+		    <elapsed>0.552943</elapsed>
+		</timer>
+		<timer name="lightingMaterialTraceTime" description="Time in material sample evaluation - trace">
+		    <elapsed>0.010522</elapsed>
+		</timer>
+		<timer name="lightingMaterialTimeExcluding" description="Time in material sample evaluation excluding subordinate systems">
+		    <elapsed>0.005027</elapsed>
+		</timer>
+		<timer name="lightingLightSampleTime" description="Time in light sample generation (GenerateSamples)">
+		    <elapsed>0.389717</elapsed>
+		</timer>
+		<timer name="lightingLightSamplepickTime" description="Time in light sample generation - pick and sort">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="lightingLightShadowTime" description="Time in light sample generation - shadowing">
+		    <elapsed>0.323825</elapsed>
+		</timer>
+		<timer name="lightingLightEvalTime" description="Time in light sample generation - Bxdf evaluation">
+		    <elapsed>0.020547</elapsed>
+		</timer>
+		<timer name="lightingLightSampleTimeExcluding" description="Time in light sample generation  exlcuding subordinate systems">
+		    <elapsed>0.009028</elapsed>
+		</timer>
+		<timer name="lightingPhotonSampleTime" description="Time in photon generation (GenerateEmission)">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="lightingPhotonSamplepickTime" description="Time in photon generation - pick and sort">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="lightingPhotonTraceBxdfTime" description="Time in photon generation - trace and Bxdf evaluation at hits">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="lightingPhotonSampleTimeExcluding" description="Time in photon generation excluding subordinate systems">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<memory name="lightingMem" description="Memory consumed by lighting services">
+		    <peak>1302537</peak>
+		    <current>1253472</current>
+		</memory>
+		<memory name="selectionCdfMem" description="Memory consumed by light selection for cdf tables">
+		    <peak>134217920</peak>
+		    <current>134217920</current>
+		</memory>
+		<memory name="selectionHierarchyMem" description="Memory consumed by light selection hiearchy scheme">
+		    <peak>0</peak>
+		    <current>0</current>
+		</memory>
+		<memory name="selectionLearningMem" description="Memory consumed by selection learning scheme">
+		    <peak>335056</peak>
+		    <current>335056</current>
+		</memory>
+		<timer name="lightingLightSampleTraceLightTime" description="Time to trace light samples against lighting db">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="lightingLightSampleSelectEvalTime" description="Time to compute a selected light&apos;s probability of being chosen">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+		<timer name="lightingMaterialSelectEvalTime" description="Time to compute an intersected light&apos;s probability of being chosen">
+		    <elapsed>0.012678</elapsed>
+		</timer>
+		<timer name="lightingLightSampleSelectTime" description="Time to select a light">
+		    <elapsed>0.036317</elapsed>
+		</timer>
+		<timer name="lightingLightSelectBeginTime" description="Time to prepare for light selection">
+		    <elapsed>0.055929</elapsed>
+		</timer>
+	    </stats>
+	    <stats name="plugins" description="Plugins" kind="section">
+		<stats name="integrator" description="Integrator" kind="section">
+		    <stats name="PxrPathTracer" description="PxrPathTracer" kind="section">
+<stats name="parameters" description="parameters" >
+<int name="numLightSamples"> 1 </int>
+<int name="numBxdfSamples"> 1 </int>
+<int name="numIndirectSamples"> 1 </int>
+<int name="numDiffuseSamples"> 1 </int>
+<int name="numSpecularSamples"> 1 </int>
+<int name="numSubsurfaceSamples"> 1 </int>
+<int name="numRefractionSamples"> 1 </int>
+<string name="sampleMode"> Bxdf </string>
+<int name="rouletteDepth"> 4 </int>
+<float name="rouletteThreshold"> 0.200000 </float>
+<int name="clampDepth"> 2 </int>
+<float name="clampLuminance"> 10.000000 </float>
+<int name="allowCaustics"> 0 </int>
+<int name="maxPathLength"> 5 </int>
+<int name="accumOpacity"> 0 </int>
+<int name="maxContinuationLength"> 256 </int>
+</stats>
+<histogram name="pathDepthTimer" description="Ray Depth Timer (sec)">
+<bin label="1">0.000000</bin>
+<bin label="2">0.000000</bin>
+<bin label="3">0.000000</bin>
+<bin label="4">0.000000</bin>
+<bin label="5">0.000000</bin>
+<bin label="6">0.000000</bin>
+</histogram>
+<histogram name="pathRayCounts" description="Ray Count at Depth">
+<bin label="1">0</bin>
+<bin label="2">0</bin>
+<bin label="3">0</bin>
+<bin label="4">0</bin>
+<bin label="5">0</bin>
+<bin label="6">0</bin>
+</histogram>
+
+		    </stats>
+		</stats>
+		<stats name="bxdfs" description="Bxdfs" kind="section">
+		    <stats name="PxrDiffuse" description="PxrDiffuse" kind="bxdf">
+			<int name="NumBeginBxdf" description="">0</int>
+			<timer name="BeginBxdfTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+			<int name="NumBeginOpacity" description="">0</int>
+			<int name="NumInteriorVolume" description="">0</int>
+			<int name="NumExteriorVolume" description="">0</int>
+			<int name="NumTransmissionVolume" description="">0</int>
+			<int name="NumVolumeSampling" description="">0</int>
+			<timer name="BeginOpacityTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+			<int name="NumBeginVolume" description="">0</int>
+			<timer name="BeginVolumeTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+			<int name="NumBeginSubsurface" description="">0</int>
+			<timer name="BeginSubsurfaceTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+			<timer name="VolumeSamplingTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+		    </stats>
+		    <stats name="PxrLightBxdf" description="PxrLightBxdf" kind="bxdf">
+			<int name="NumBeginBxdf" description="">2</int>
+			<timer name="BeginBxdfTime" description="">
+			    <elapsed>0.000002</elapsed>
+			</timer>
+			<int name="NumBeginOpacity" description="">0</int>
+			<int name="NumInteriorVolume" description="">0</int>
+			<int name="NumExteriorVolume" description="">0</int>
+			<int name="NumTransmissionVolume" description="">0</int>
+			<int name="NumVolumeSampling" description="">0</int>
+			<timer name="BeginOpacityTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+			<int name="NumBeginVolume" description="">0</int>
+			<timer name="BeginVolumeTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+			<int name="NumBeginSubsurface" description="">0</int>
+			<timer name="BeginSubsurfaceTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+			<timer name="VolumeSamplingTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+		    </stats>
+		    <stats name="PxrSurface" description="PxrSurface" kind="bxdf">
+			<int name="NumBeginBxdf" description="">1381</int>
+			<timer name="BeginBxdfTime" description="">
+			    <elapsed>1.904913</elapsed>
+			</timer>
+			<int name="NumBeginOpacity" description="">21283</int>
+			<int name="NumInteriorVolume" description="">0</int>
+			<int name="NumExteriorVolume" description="">0</int>
+			<int name="NumTransmissionVolume" description="">0</int>
+			<int name="NumVolumeSampling" description="">0</int>
+			<timer name="BeginOpacityTime" description="">
+			    <elapsed>0.369097</elapsed>
+			</timer>
+			<int name="NumBeginVolume" description="">0</int>
+			<timer name="BeginVolumeTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+			<int name="NumBeginSubsurface" description="">0</int>
+			<timer name="BeginSubsurfaceTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+			<timer name="VolumeSamplingTime" description="">
+			    <elapsed>0.000000</elapsed>
+			</timer>
+		    </stats>
+		</stats>
+		<stats name="patterns" description="Patterns" kind="section">
+		    <stats name="PxrBump" description="PxrBump" kind="pattern">
+			<int name="NumComputes" description="Number of real evaluations">364</int>
+			<int name="CachedComputes" description="Number of evaluations avoided due to caching">0</int>
+			<timer name="ComputeTime" description="">
+			    <elapsed>0.241010</elapsed>
+			</timer>
+		    </stats>
+		    <stats name="PxrMayaPlacement2d" description="PxrMayaPlacement2d" kind="pattern">
+			<int name="NumComputes" description="Number of real evaluations">22750</int>
+			<int name="CachedComputes" description="Number of evaluations avoided due to caching">22750</int>
+			<timer name="ComputeTime" description="">
+			    <elapsed>0.126781</elapsed>
+			</timer>
+		    </stats>
+		    <stats name="PxrMayaFile" description="PxrMayaFile" kind="pattern">
+			<int name="NumComputes" description="Number of real evaluations">22750</int>
+			<int name="CachedComputes" description="Number of evaluations avoided due to caching">0</int>
+			<timer name="ComputeTime" description="">
+			    <elapsed>1.432935</elapsed>
+			</timer>
+		    </stats>
+		    <stats name="PxrTexture" description="PxrTexture" kind="pattern">
+			<int name="NumComputes" description="Number of real evaluations">426</int>
+			<int name="CachedComputes" description="Number of evaluations avoided due to caching">0</int>
+			<timer name="ComputeTime" description="">
+			    <elapsed>0.387636</elapsed>
+			</timer>
+		    </stats>
+		    <stats name="PxrNormalMap" description="PxrNormalMap" kind="pattern">
+			<int name="NumComputes" description="Number of real evaluations">58</int>
+			<int name="CachedComputes" description="Number of evaluations avoided due to caching">0</int>
+			<timer name="ComputeTime" description="">
+			    <elapsed>0.017616</elapsed>
+			</timer>
+		    </stats>
+		</stats>
+	    </stats>
+	    <stats name="RISNodes" description="characteristics of your scene&apos;s use of RIS nodes">
+		<stats name="Bxdf" description="Time and memory associated with Bxdf">
+		    <memory name="memory" description="memory">
+			<peak>1895112</peak>
+			<current>1895112</current>
+			<total>1895112</total>
+			<count>329</count>
+		    </memory>
+		    <timer name="creationTime" description="creationTime">
+			<elapsed>0.268166</elapsed>
+		    </timer>
+		</stats>
+		<stats name="Pattern" description="Time and memory used by Pattern">
+		    <memory name="memory" description="memory">
+			<peak>1217248</peak>
+			<current>1217248</current>
+			<total>1217248</total>
+			<count>1759</count>
+		    </memory>
+		    <timer name="creationTime" description="creationTime">
+			<elapsed>0.036042</elapsed>
+		    </timer>
+		</stats>
+		<stats name="Other" description="Time and memory used by other RixShadingPlugin">
+		    <memory name="memory" description="memory">
+			<peak>1048</peak>
+			<current>1048</current>
+			<total>1048</total>
+			<count>1</count>
+		    </memory>
+		    <timer name="creationTime" description="creationTime">
+			<elapsed>0.011118</elapsed>
+		    </timer>
+		</stats>
+	    </stats>
+	    <stats name="rayHider" description="Raytrace Hider" kind="section">
+		<memory name="framebufferMem" description="Framebuffer and display memory">
+		    <peak>3087658</peak>
+		    <current>3087658</current>
+		</memory>
+		<float name="adaptSkipped" description="Adaptive sampling fraction skipped">0</float>
+		<histogram name="adaptActive" description="Average active pixels by increment">
+		    <bin label="1">23296</bin>
+		</histogram>
+		<FloatMap2D name="adaptMap" description="adaptMap">
+		    <int name="width" description="width">61</int>
+		    <int name="height" description="height">34</int>
+		    <float name="min" description="min">0.000000</float>
+		    <float name="max" description="max">1.000000</float>
+		    <float name="avg" description="avg">0.043877</float>
+		    <FloatArray name="values" description="values">
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>1.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+		    </FloatArray>
+		</FloatMap2D>
+		<FloatMap2D name="cpuTimeMap" description="cpuTimeMap">
+		    <int name="width" description="width">61</int>
+		    <int name="height" description="height">34</int>
+		    <float name="min" description="min">0.000000</float>
+		    <float name="max" description="max">0.000000</float>
+		    <float name="avg" description="avg">0.000000</float>
+		    <FloatArray name="values" description="values">
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.416667</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.500000</el>
+			<el>0.250000</el>
+			<el>0.416667</el>
+			<el>0.250000</el>
+			<el>0.416667</el>
+			<el>0.333333</el>
+			<el>0.333333</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.333333</el>
+			<el>0.416667</el>
+			<el>0.500000</el>
+			<el>0.500000</el>
+			<el>0.333333</el>
+			<el>0.500000</el>
+			<el>0.333333</el>
+			<el>0.500000</el>
+			<el>0.583333</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.583333</el>
+			<el>0.666667</el>
+			<el>0.583333</el>
+			<el>0.250000</el>
+			<el>0.416667</el>
+			<el>0.416667</el>
+			<el>0.416667</el>
+			<el>0.583333</el>
+			<el>0.250000</el>
+			<el>0.416667</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.416667</el>
+			<el>0.333333</el>
+			<el>0.416667</el>
+			<el>0.500000</el>
+			<el>0.666667</el>
+			<el>0.583333</el>
+			<el>0.333333</el>
+			<el>0.333333</el>
+			<el>0.416667</el>
+			<el>0.333333</el>
+			<el>0.333333</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.416667</el>
+			<el>0.500000</el>
+			<el>0.333333</el>
+			<el>0.416667</el>
+			<el>0.333333</el>
+			<el>0.666667</el>
+			<el>0.916667</el>
+			<el>0.500000</el>
+			<el>0.250000</el>
+			<el>0.500000</el>
+			<el>0.583333</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.916667</el>
+			<el>0.666667</el>
+			<el>0.416667</el>
+			<el>0.583333</el>
+			<el>0.333333</el>
+			<el>0.166667</el>
+			<el>0.250000</el>
+			<el>0.250000</el>
+			<el>0.416667</el>
+			<el>0.416667</el>
+			<el>0.416667</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.500000</el>
+			<el>0.333333</el>
+			<el>0.333333</el>
+			<el>0.583333</el>
+			<el>0.333333</el>
+			<el>0.333333</el>
+			<el>0.666667</el>
+			<el>0.416667</el>
+			<el>0.333333</el>
+			<el>0.416667</el>
+			<el>0.333333</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.250000</el>
+			<el>0.333333</el>
+			<el>0.333333</el>
+			<el>0.333333</el>
+			<el>0.416667</el>
+			<el>0.416667</el>
+			<el>0.333333</el>
+			<el>0.250000</el>
+			<el>0.500000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.250000</el>
+			<el>0.250000</el>
+			<el>0.333333</el>
+			<el>0.250000</el>
+			<el>0.416667</el>
+			<el>1.000000</el>
+			<el>0.583333</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.416667</el>
+			<el>0.000000</el>
+			<el>0.416667</el>
+			<el>0.416667</el>
+			<el>0.583333</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+			<el>0.000000</el>
+		    </FloatArray>
+		</FloatMap2D>
+		<timer name="checkpointTimer" description="Time writing checkpoints">
+		    <elapsed>0.000000</elapsed>
+		</timer>
+	    </stats>
+	</stats>
+    </stats>
+</rm:statsDoc>
+</doc>
