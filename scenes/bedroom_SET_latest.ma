@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: bedroom_SET_latest.ma
-//Last modified: Tue, Nov 05, 2019 11:11:53 AM
+//Last modified: Tue, Nov 05, 2019 11:13:40 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "bed_NEW" -rfn "bed_NEWRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
 file -rdi 1 -ns "window" -rfn "windowRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/window.ma";
@@ -158,14 +158,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C758C018-ED44-A183-828A-47A742AD3A6E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -15.327970545674093 4.9643070098023383 3.3493855277853792 ;
+	setAttr ".t" -type "double3" -9.7486161229601258 3.6908226315566788 1.6861077353076355 ;
 	setAttr ".r" -type "double3" -12.338352724326715 2806.5999999994006 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1B620404-1B40-2D8C-0ABD-78BC6EE5B967";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 19.033492756058425;
+	setAttr ".coi" 13.073840815647536;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -27109,8 +27109,8 @@ createNode RenderMan -s -n "rmanBakeGlobals";
 	setAttr ".nt" -type "string" "pass:render";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "2E841FCC-B640-3C18-2282-A49A53C190A4";
-	setAttr -s 166 ".lnk";
-	setAttr -s 166 ".slnk";
+	setAttr -s 171 ".lnk";
+	setAttr -s 171 ".slnk";
 createNode displayLayerManager -n "layerManager";
 	rename -uid "F867B110-A442-5501-1D13-EFAF0E6A059B";
 	setAttr -s 4 ".dli[1:3]"  1 2 3;
@@ -30308,6 +30308,7 @@ createNode materialInfo -n "materialInfo17";
 	rename -uid "01CD7536-C041-6792-7A30-4FB4186FAF29";
 createNode reference -n "bed_NEWRN";
 	rename -uid "4A19A66F-3A48-F42A-EB01-4E9B2C04FDC6";
+	setAttr ".fn[0]" -type "string" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bed_NEWRN"
 		"bed_NEWRN" 2
@@ -35378,6 +35379,7 @@ createNode reference -n "bookStack_RIGHT_SHELFRN";
 lockNode -l 1 ;
 createNode reference -n "teacupRN";
 	rename -uid "27039617-0148-6E77-0703-69B268C9578B";
+	setAttr ".fn[0]" -type "string" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/teacup.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"teacupRN"
 		"teacupRN" 0
@@ -36202,6 +36204,7 @@ connectAttr "bookRedShader.oc" "PxrSurface17SG.ss";
 connectAttr "PxrSurface17SG.msg" "materialInfo17.sg";
 connectAttr "bookRedShader.msg" "materialInfo17.m";
 connectAttr "bookRedShader.msg" "materialInfo17.t" -na;
+connectAttr "sharedReferenceNode.sr" "bed_NEWRN.sr";
 connectAttr "sharedReferenceNode.sr" "doorRN.sr";
 connectAttr "sharedReferenceNode.sr" "book_stackRN.sr";
 connectAttr "vase:renderLayerManager.rlmi[0]" "vase:defaultRenderLayer.rlid";
@@ -36623,6 +36626,7 @@ connectAttr ":defaultRenderGlobals.msg" "lights:mtorPartition.rgcnx";
 connectAttr "layerManager.dli[3]" "lights:layer3.id";
 connectAttr "sharedReferenceNode.sr" "floor_walls_latestRN.sr";
 connectAttr "sharedReferenceNode.sr" "desk_latestRN.sr";
+connectAttr "sharedReferenceNode.sr" "teacupRN.sr";
 connectAttr "sharedReferenceNode.sr" "toyPlaneRN1.sr";
 connectAttr "PxrSurface1SG.pa" ":renderPartition.st" -na;
 connectAttr "PxrSurface2SG.pa" ":renderPartition.st" -na;
