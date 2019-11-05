@@ -1,0 +1,10 @@
+global proc randomTY() {
+    string $sel_list[] = `ls -tr -sl`;
+
+    for ($curr_sel in $sel_list) {
+        setAttr ($curr_sel + ".ty") (rand(-9, 9)/30);
+        setAttr ($curr_sel + ".tx") (rand(-9, 9)/30);
+    }
+}
+
+randomTXY()
