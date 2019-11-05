@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: forest_grove_SET_latest.ma
-//Last modified: Mon, Nov 04, 2019 12:30:21 PM
+//Last modified: Mon, Nov 04, 2019 06:22:07 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "mushroom_latest" -rfn "mushroom_latestRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/jakeh/OneDrive/Desktop/poweredup//assets/shrooms/mushroom_latest.ma";
@@ -170,6 +170,10 @@ file -rdi 1 -ns "danglingFlowerSmaller_latest14" -rfn "danglingFlowerSmaller_lat
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/danglingFlowerSmaller_latest.ma";
 file -rdi 1 -ns "danglingFlowerSmaller_latest15" -rfn "danglingFlowerSmaller_latestRN15"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/danglingFlowerSmaller_latest.ma";
+file -rdi 1 -ns "forest_cliff_latest" -rfn "forest_cliff_latestRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/forest_cliff_latest.ma";
+file -rdi 1 -ns "forest_ground_latest" -rfn "forest_ground_latestRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/forest_ground_latest.ma";
 file -r -ns "mushroom_latest" -dr 1 -rfn "mushroom_latestRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/jakeh/OneDrive/Desktop/poweredup//assets/shrooms/mushroom_latest.ma";
 file -r -ns "mushroom_latest1" -dr 1 -rfn "mushroom_latestRN1" -op "v=0;" -typ "mayaAscii"
@@ -331,6 +335,10 @@ file -r -ns "danglingFlowerSmaller_latest14" -dr 1 -rfn "danglingFlowerSmaller_l
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/danglingFlowerSmaller_latest.ma";
 file -r -ns "danglingFlowerSmaller_latest15" -dr 1 -rfn "danglingFlowerSmaller_latestRN15"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/plants/danglingFlowerSmaller_latest.ma";
+file -r -ns "forest_cliff_latest" -dr 1 -rfn "forest_cliff_latestRN" -op "v=0;" 
+		-typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/forest_cliff_latest.ma";
+file -r -ns "forest_ground_latest" -dr 1 -rfn "forest_ground_latestRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/forest_ground_latest.ma";
 requires maya "2018";
 requires "stereoCamera" "10.0";
 requires -nodeType "PxrDomeLight" -nodeType "rmanGlobals" -nodeType "PxrPathTracer"
@@ -346,17 +354,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "9670D191-4423-9407-2A8F-10A65AA9DCF0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1399.0369900703924 724.24517052087879 1433.0969509292236 ;
-	setAttr ".r" -type "double3" -18.338352728325326 -1122.9999999980553 1.0872149393382783e-15 ;
+	setAttr ".t" -type "double3" 253.0178120445149 248.28289641968905 263.2204883939105 ;
+	setAttr ".r" -type "double3" -22.538352728312169 -1042.9999999980303 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "F01540EA-4FCC-8C52-C464-A49D62EC1A8D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1981.9296636615459;
+	setAttr ".coi" 553.54911017294535;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 42.382010803895113 -23.679838773210854 296.54513660773478 ;
+	setAttr ".tp" -type "double3" -54.672624740866723 36.106540302595725 -145.09851237504654 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dgm" no;
 	setAttr ".ai_translator" -type "string" "perspective";
@@ -412,31 +420,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "Forest_Grove_SET";
 	rename -uid "9B1B871C-1447-D967-E965-FE8D1589B359";
-	setAttr ".s" -type "double3" 0.82798899447441665 0.82798899447441665 0.82798899447441665 ;
-createNode transform -n "behind_fireboi" -p "Forest_Grove_SET";
-	rename -uid "82C45D01-4092-C93C-E446-B5A8FB52EB43";
-	setAttr ".t" -type "double3" 18.952128024509864 -44.797060237714192 198.52202485503125 ;
-	setAttr -l on ".tx";
-	setAttr -l on ".ty";
-	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 18.261647270397887 17.800000000000676 0 ;
-	setAttr -l on ".rx";
-	setAttr -l on ".ry";
-	setAttr -l on ".rz";
-createNode camera -n "behind_fireboiShape" -p "behind_fireboi";
-	rename -uid "34B3B66B-48EE-9285-0531-3C881A89179C";
-	setAttr -k off ".v";
-	setAttr ".ovr" 1.3;
-	setAttr ".fl" 34.999999999999993;
-	setAttr -l on ".coi" 124.36019593243742;
-	setAttr -l on ".ow";
-	setAttr ".imn" -type "string" "persp";
-	setAttr ".den" -type "string" "persp_depth";
-	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 22.670761693080273 -0.093680099700193198 46.217490750101049 ;
-	setAttr ".hc" -type "string" "viewSet -p %camera";
-	setAttr ".dfg" yes;
-	setAttr ".ai_translator" -type "string" "perspective";
+	setAttr ".s" -type "double3" 0.62756780563866177 0.62756780563866177 0.62756780563866177 ;
 createNode transform -n "Rolling_FRONT_TEMPCAM" -p "Forest_Grove_SET";
 	rename -uid "DEAA9005-134B-1019-158F-F88BB5DA3E2D";
 	setAttr ".t" -type "double3" -50.216739994173082 50.570236650240638 373.46544830028012 ;
@@ -485,78 +469,58 @@ createNode camera -n "Running_TEMPCAMShape" -p "Running_TEMPCAM";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dfg" yes;
 	setAttr ".ai_translator" -type "string" "perspective";
-createNode transform -n "Cliff" -p "Forest_Grove_SET";
-	rename -uid "BA274BFC-4325-2E94-5923-BBAB8FAF9E93";
-	setAttr ".t" -type "double3" -137.90195638155092 25.453855909098095 -211.08689710347255 ;
-	setAttr ".r" -type "double3" 17.462028756960141 25.809717807695609 -8.8324703103955483e-16 ;
-	setAttr ".s" -type "double3" 226.69692303174219 226.69692303174219 226.69692303174219 ;
-createNode mesh -n "CliffShape" -p "Cliff";
-	rename -uid "0E052F7E-46E3-E963-C97F-ED87F0A83659";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 27 ".pt";
-	setAttr ".pt[2]" -type "float3" 0 -0.037707523 0.011861671 ;
-	setAttr ".pt[3]" -type "float3" -2.7755576e-17 -0.037707523 0.011861671 ;
-	setAttr ".pt[5]" -type "float3" 0 -0.037707523 0.011861671 ;
-	setAttr ".pt[6]" -type "float3" 0.47256806 -0.040675364 0.25238362 ;
-	setAttr ".pt[7]" -type "float3" 0.47256806 -0.040675364 0.25238362 ;
-	setAttr ".pt[11]" -type "float3" 0.47256806 -0.040675364 0.25238362 ;
-	setAttr ".pt[18]" -type "float3" 0.47256806 -0.040675364 0.25238362 ;
-	setAttr ".pt[24]" -type "float3" 2.220446e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[25]" -type "float3" 2.7755576e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[26]" -type "float3" 2.220446e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[27]" -type "float3" 0.47256806 -0.040675364 0.25238362 ;
-	setAttr ".pt[28]" -type "float3" 2.220446e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[29]" -type "float3" 2.220446e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[30]" -type "float3" 4.4408921e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[31]" -type "float3" 4.4408921e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[32]" -type "float3" 0 -0.10925638 0.03436882 ;
-	setAttr ".pt[33]" -type "float3" 0.47256806 -0.040675364 0.25238362 ;
-	setAttr ".pt[34]" -type "float3" 2.220446e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[35]" -type "float3" 2.220446e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[40]" -type "float3" 4.4408921e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[41]" -type "float3" 2.220446e-16 -0.10925638 0.03436882 ;
-	setAttr ".pt[42]" -type "float3" -2.0807946 -0.41122985 -0.92558706 ;
-	setAttr ".pt[43]" -type "float3" -2.0807946 -0.41122985 -0.92558706 ;
-	setAttr ".pt[44]" -type "float3" -2.0807946 -0.41122985 -0.92558706 ;
-	setAttr ".pt[45]" -type "float3" -2.0807946 -0.41122985 -0.92558706 ;
-	setAttr ".pt[46]" -type "float3" -2.0807946 -0.41122985 -0.92558706 ;
-	setAttr ".pt[47]" -type "float3" -2.0807946 -0.41122985 -0.92558706 ;
-	setAttr ".bw" 5;
-	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Ground" -p "Forest_Grove_SET";
-	rename -uid "D3D4AFE6-0745-3910-A469-478E93B2724C";
-	setAttr ".t" -type "double3" -25.687512566658825 -69.42453426789092 23.517440673315036 ;
-	setAttr ".s" -type "double3" 1226.6796421146987 1062.4158617352957 1062.4158617352957 ;
-createNode mesh -n "GroundShape" -p "Ground";
-	rename -uid "EBDA1B99-F942-C0F2-AEED-D79BC6D39532";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".bw" 5;
-	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "GIANT_SHROOMS" -p "Forest_Grove_SET";
+	rename -uid "CAC33ECB-554D-35A2-A4B9-839CBD90CB04";
+	setAttr ".s" -type "double3" 1.2077455215872415 1.2077455215872415 1.2077455215872415 ;
+	setAttr ".rp" -type "double3" 1734.4976158531031 533.67686353051658 -1860.1895046367886 ;
+	setAttr ".sp" -type "double3" 1436.1449368684841 441.87856960889303 -1540.2164374760778 ;
+	setAttr ".spt" -type "double3" 298.35267898461882 91.798293921623582 -319.9730671607108 ;
 createNode transform -n "TALL_TREE_BASES" -p "Forest_Grove_SET";
 	rename -uid "936F74C5-A046-2E24-ED44-388C382F0B76";
-createNode transform -n "MEDIUM_MUSHROOMS" -p "Forest_Grove_SET";
+	setAttr ".rp" -type "double3" 155.6452058748248 520.53354179738653 -769.46470558259523 ;
+	setAttr ".sp" -type "double3" 155.6452058748248 520.53354179738653 -769.46470558259523 ;
+createNode transform -n "twistyTrees" -p "Forest_Grove_SET";
+	rename -uid "914FA919-4347-CA6E-BC99-EEB59A60ED04";
+	setAttr ".rp" -type "double3" 13.413485307022995 191.02102467929222 -460.96531533382569 ;
+	setAttr ".sp" -type "double3" 13.413485307022995 191.02102467929222 -460.96531533382569 ;
+createNode transform -n "MEDIUM_shrooms" -p "Forest_Grove_SET";
 	rename -uid "EEDF8528-FE43-DECF-410B-BA8CD9276620";
-	setAttr ".rp" -type "double3" -34.80792624961785 -18.089269653482177 10.003424747257228 ;
-	setAttr ".sp" -type "double3" -34.80792624961785 -18.089269653482177 10.003424747257228 ;
-createNode transform -n "PxrDomeLight";
+	setAttr ".rp" -type "double3" -34.80792624961785 -27.680494993411358 10.003424747257228 ;
+	setAttr ".sp" -type "double3" -34.80792624961785 -27.680494993411358 10.003424747257228 ;
+createNode transform -n "crystals" -p "Forest_Grove_SET";
+	rename -uid "A7A4B656-454E-655F-3CC1-2AA23D4FA528";
+	setAttr ".s" -type "double3" 1.2077455215872415 1.2077455215872415 1.2077455215872415 ;
+	setAttr ".rp" -type "double3" -85.130613849614292 50.674681181211035 -425.71651397393617 ;
+	setAttr ".sp" -type "double3" -70.487211360331997 41.958078316542576 -352.48858833643339 ;
+	setAttr ".spt" -type "double3" -14.643402489282291 8.7166028646684612 -73.227925637502764 ;
+createNode transform -n "callaLilies" -p "Forest_Grove_SET";
+	rename -uid "4B616DD3-BB4B-623F-496D-5C9476B8E1E4";
+	setAttr ".s" -type "double3" 1.2077455215872415 1.2077455215872415 1.2077455215872415 ;
+	setAttr ".rp" -type "double3" -79.720340902851561 52.798851852490451 -414.89890380470092 ;
+	setAttr ".sp" -type "double3" -66.007564903309785 43.716868254747268 -343.53172616979208 ;
+	setAttr ".spt" -type "double3" -13.712775999541776 9.081983597743184 -71.367177634908813 ;
+createNode transform -n "LilyBushes" -p "Forest_Grove_SET";
+	rename -uid "9165D2E9-AA49-41F5-5D34-3EA21B776425";
+	setAttr ".s" -type "double3" 1.2077455215872415 1.2077455215872415 1.2077455215872415 ;
+	setAttr ".rp" -type "double3" -119.85195209280664 47.133669521194363 -227.07543783602839 ;
+	setAttr ".sp" -type "double3" -99.236097299118939 39.026159632743187 -188.01596344369108 ;
+	setAttr ".spt" -type "double3" -20.615854793687699 8.107509888451176 -39.059474392337307 ;
+createNode transform -n "glowyRoots" -p "Forest_Grove_SET";
+	rename -uid "BA5E36ED-2946-8BA3-7D89-CD9A612F92C9";
+	setAttr ".s" -type "double3" 1.2077455215872415 1.2077455215872415 1.2077455215872415 ;
+	setAttr ".rp" -type "double3" -45.378147199032298 10.847192540521819 -125.99077409957539 ;
+	setAttr ".sp" -type "double3" -37.572606470438828 8.9813560444970548 -104.31897435976082 ;
+	setAttr ".spt" -type "double3" -7.8055407285934724 1.8658364960247642 -21.671799739814574 ;
+createNode transform -n "danglingFlowers" -p "Forest_Grove_SET";
+	rename -uid "49F800D5-CC4C-6D18-B34A-CBB1DDBEA1AD";
+	setAttr ".s" -type "double3" 1.2077455215872415 1.2077455215872415 1.2077455215872415 ;
+	setAttr ".rp" -type "double3" -110.34572152546585 151.75949488316618 -471.31995741176945 ;
+	setAttr ".sp" -type "double3" -91.365043010424458 125.65519157025818 -390.24773761309586 ;
+	setAttr ".spt" -type "double3" -18.980678515041383 26.104303312908009 -81.072219798673586 ;
+createNode transform -n "TEMP_Lighting";
 	rename -uid "768CE4C6-4A39-862E-07C9-1D8A6A6A597A";
-	setAttr ".s" -type "double3" 1.5353297044755678 1.5353297044755678 1.5353297044755678 ;
-createNode PxrDomeLight -n "PxrDomeLightShape" -p "PxrDomeLight";
+	setAttr ".s" -type "double3" 2.1240436504664388 2.1240436504664388 2.1240436504664388 ;
+createNode PxrDomeLight -n "TEMP_LightingShape" -p "TEMP_Lighting";
 	rename -uid "D86B5A1F-414B-9F96-315E-8B8BFE34DCDB";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
@@ -683,30 +647,6 @@ createNode PxrDomeLight -n "PxrDomeLightShape" -p "PxrDomeLight";
 	setAttr ".locatorScale" 2500;
 	setAttr ".rman_textureResolution" 1024;
 	setAttr ".rman__portals[0]" -type "string" "";
-createNode transform -n "GIANT_SHROOMS";
-	rename -uid "CAC33ECB-554D-35A2-A4B9-839CBD90CB04";
-	setAttr ".rp" -type "double3" 1436.1449368684841 441.87856960889303 -1540.2164374760778 ;
-	setAttr ".sp" -type "double3" 1436.1449368684841 441.87856960889303 -1540.2164374760778 ;
-createNode transform -n "crystals";
-	rename -uid "A7A4B656-454E-655F-3CC1-2AA23D4FA528";
-	setAttr ".rp" -type "double3" -47.33627992555833 41.056305101305284 -272.63226097790505 ;
-	setAttr ".sp" -type "double3" -47.33627992555833 41.056305101305284 -272.63226097790505 ;
-createNode transform -n "danglingFlowers";
-	rename -uid "49F800D5-CC4C-6D18-B34A-CBB1DDBEA1AD";
-	setAttr ".rp" -type "double3" -91.365043010424458 125.65519157025818 -390.24773761309586 ;
-	setAttr ".sp" -type "double3" -91.365043010424458 125.65519157025818 -390.24773761309586 ;
-createNode transform -n "glowyRoots";
-	rename -uid "BA5E36ED-2946-8BA3-7D89-CD9A612F92C9";
-	setAttr ".rp" -type "double3" -37.572606470438828 8.9813560444970548 -104.31897435976082 ;
-	setAttr ".sp" -type "double3" -37.572606470438828 8.9813560444970548 -104.31897435976082 ;
-createNode transform -n "LilyBushes";
-	rename -uid "9165D2E9-AA49-41F5-5D34-3EA21B776425";
-	setAttr ".rp" -type "double3" -99.236097299118939 39.026159632743187 -188.01596344369108 ;
-	setAttr ".sp" -type "double3" -99.236097299118939 39.026159632743187 -188.01596344369108 ;
-createNode transform -n "callaLilies";
-	rename -uid "4B616DD3-BB4B-623F-496D-5C9476B8E1E4";
-	setAttr ".rp" -type "double3" -104.47897250332565 42.939507164458533 -235.35739933830178 ;
-	setAttr ".sp" -type "double3" -104.47897250332565 42.939507164458533 -235.35739933830178 ;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "3CA21BD6-6346-CF3C-16B3-98817EA998AC";
 	setAttr -s 1525 ".lnk";
@@ -734,14 +674,14 @@ createNode reference -n "mushroom_latestRN";
 		"mushroom_latestRN"
 		"mushroom_latestRN" 0
 		"mushroom_latestRN" 4
-		0 "|mushroom_latest:mushroom_version1_MASTER" "|Forest_Grove_SET|MEDIUM_MUSHROOMS" 
+		0 "|mushroom_latest:mushroom_version1_MASTER" "|Forest_Grove_SET|MEDIUM_shrooms" 
 		"-s -r "
-		2 "|Forest_Grove_SET|MEDIUM_MUSHROOMS|mushroom_latest:mushroom_version1_MASTER" 
+		2 "|Forest_Grove_SET|MEDIUM_shrooms|mushroom_latest:mushroom_version1_MASTER" 
 		"visibility" " 1"
-		2 "|Forest_Grove_SET|MEDIUM_MUSHROOMS|mushroom_latest:mushroom_version1_MASTER" 
+		2 "|Forest_Grove_SET|MEDIUM_shrooms|mushroom_latest:mushroom_version1_MASTER" 
 		"translate" " -type \"double3\" -135.26497414771711192 -77.74319797929609877 93.31589207312650558"
 		
-		2 "|Forest_Grove_SET|MEDIUM_MUSHROOMS|mushroom_latest:mushroom_version1_MASTER" 
+		2 "|Forest_Grove_SET|MEDIUM_shrooms|mushroom_latest:mushroom_version1_MASTER" 
 		"scale" " -type \"double3\" 10.01956204040166831 10.01956204040166831 10.01956204040166831";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -897,17 +837,17 @@ createNode reference -n "mushroom_latestRN1";
 		"mushroom_latestRN1"
 		"mushroom_latestRN1" 0
 		"mushroom_latestRN1" 5
-		0 "|mushroom_latest1:mushroom_version1_MASTER" "|Forest_Grove_SET|MEDIUM_MUSHROOMS" 
+		0 "|mushroom_latest1:mushroom_version1_MASTER" "|Forest_Grove_SET|MEDIUM_shrooms" 
 		"-s -r "
-		2 "|Forest_Grove_SET|MEDIUM_MUSHROOMS|mushroom_latest1:mushroom_version1_MASTER" 
+		2 "|Forest_Grove_SET|MEDIUM_shrooms|mushroom_latest1:mushroom_version1_MASTER" 
 		"visibility" " 1"
-		2 "|Forest_Grove_SET|MEDIUM_MUSHROOMS|mushroom_latest1:mushroom_version1_MASTER" 
+		2 "|Forest_Grove_SET|MEDIUM_shrooms|mushroom_latest1:mushroom_version1_MASTER" 
 		"translate" " -type \"double3\" 69.35577064052678509 -75.31584173261020965 -1.11489438223451032"
 		
-		2 "|Forest_Grove_SET|MEDIUM_MUSHROOMS|mushroom_latest1:mushroom_version1_MASTER" 
+		2 "|Forest_Grove_SET|MEDIUM_shrooms|mushroom_latest1:mushroom_version1_MASTER" 
 		"scale" " -type \"double3\" 9.45391502190100752 9.45391502190100752 9.45391502190100752"
 		
-		2 "|Forest_Grove_SET|MEDIUM_MUSHROOMS|mushroom_latest1:mushroom_version1_MASTER|mushroom_latest1:mushroom_version1|mushroom_latest1:stem" 
+		2 "|Forest_Grove_SET|MEDIUM_shrooms|mushroom_latest1:mushroom_version1_MASTER|mushroom_latest1:mushroom_version1|mushroom_latest1:stem" 
 		"translate" " -type \"double3\" 0 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -917,85 +857,30 @@ createNode reference -n "mushroom_latestRN2";
 		"mushroom_latestRN2"
 		"mushroom_latestRN2" 0
 		"mushroom_latestRN2" 4
-		0 "|mushroom_latest2:mushroom_version1_MASTER" "|Forest_Grove_SET|MEDIUM_MUSHROOMS" 
+		0 "|mushroom_latest2:mushroom_version1_MASTER" "|Forest_Grove_SET|MEDIUM_shrooms" 
 		"-s -r "
-		2 "|Forest_Grove_SET|MEDIUM_MUSHROOMS|mushroom_latest2:mushroom_version1_MASTER" 
+		2 "|Forest_Grove_SET|MEDIUM_shrooms|mushroom_latest2:mushroom_version1_MASTER" 
 		"visibility" " 1"
-		2 "|Forest_Grove_SET|MEDIUM_MUSHROOMS|mushroom_latest2:mushroom_version1_MASTER" 
+		2 "|Forest_Grove_SET|MEDIUM_shrooms|mushroom_latest2:mushroom_version1_MASTER" 
 		"translate" " -type \"double3\" -55.14257372311035965 -93.00924833748082676 -62.95762190873914221"
 		
-		2 "|Forest_Grove_SET|MEDIUM_MUSHROOMS|mushroom_latest2:mushroom_version1_MASTER" 
+		2 "|Forest_Grove_SET|MEDIUM_shrooms|mushroom_latest2:mushroom_version1_MASTER" 
 		"scale" " -type \"double3\" 11.79116879093402837 11.79116879093402837 11.79116879093402837";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode polyPlane -n "polyPlane1";
-	rename -uid "3E721087-419B-4B4C-B5F9-10B93967178A";
-	setAttr ".sw" 1;
-	setAttr ".sh" 1;
-	setAttr ".cuv" 2;
-createNode polyExtrudeEdge -n "polyExtrudeEdge1";
-	rename -uid "C36F2C1F-45BB-991A-19D4-80B2BB3E3807";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "e[2]";
-	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
-		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -114.95201207581616 25.453855909098095 -287.64876488259449 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -12.910633 25.453856 -336.99884 ;
-	setAttr ".rs" 59810;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -59.986468434812913 -8.5590344178298139 -434.33775478942823 ;
-	setAttr ".cbx" -type "double3" 34.165202131050506 59.466746236026005 -239.65994144607296 ;
-createNode polyExtrudeEdge -n "polyExtrudeEdge2";
-	rename -uid "86C858C3-4053-3930-4FBD-20BD6C142190";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "e[6]";
-	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
-		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -114.95201207581616 25.453855909098095 -287.64876488259449 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" 237.87657 25.453865 -336.99887 ;
-	setAttr ".rs" 59200;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" 219.84934622173759 -8.5590198058512286 -443.61038429337145 ;
-	setAttr ".cbx" -type "double3" 255.90379920583163 59.466750783850671 -230.38734040778792 ;
-createNode polyTweak -n "polyTweak1";
-	rename -uid "DF15DD2E-42F2-9FF5-4DF7-2C8A519B469E";
-	setAttr ".uopa" yes;
-	setAttr -s 2 ".tk[4:5]" -type "float3"  0.71956885 0.11806081 0.37530804
-		 1.27225268 0.17100048 0.5436002;
-createNode polyExtrudeEdge -n "polyExtrudeEdge3";
-	rename -uid "B8058FAC-4767-3B54-30FB-F2BE9E4F2DDB";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 3 "e[3]" "e[5]" "e[8]";
-	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
-		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -114.95201207581616 25.453855909098095 -211.08689710347255 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" 49.11454 70.652962 -98.906906 ;
-	setAttr ".rs" 51191;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -264.0692531188505 70.652960982227214 -152.89329183171719 ;
-	setAttr ".cbx" -type "double3" 362.29833326748599 70.652977388072742 -44.920517264594764 ;
-createNode polyTweak -n "polyTweak2";
-	rename -uid "950BD8D1-4169-966C-3C37-4A95FD1EEA45";
-	setAttr ".uopa" yes;
-	setAttr -s 5 ".tk";
-	setAttr ".tk[2]" -type "float3" -0.41129696 0.30226508 0.7964415 ;
-	setAttr ".tk[3]" -type "float3" -0.41129696 0.30226508 0.7964415 ;
-	setAttr ".tk[5]" -type "float3" -0.41129696 0.30226508 0.7964415 ;
-	setAttr ".tk[6]" -type "float3" 0.42250767 0.06131601 0.19491984 ;
-	setAttr ".tk[7]" -type "float3" 0.011210652 0.36358106 0.99136144 ;
 createNode reference -n "thicktreeRN";
 	rename -uid "3E3F6420-493B-077C-3EC8-CEAE4C3AC2DE";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"thicktreeRN"
 		"thicktreeRN" 0
 		"thicktreeRN" 153
-		0 "|thicktree:ThickTree" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|thicktree:ThickTree" "visibility" " 1"
-		2 "|Forest_Grove_SET|thicktree:ThickTree" "translate" " -type \"double3\" -207.49843893369964576 33.70638211395213091 -277.86941987984062052"
+		0 "|thicktree:ThickTree" "|Forest_Grove_SET|twistyTrees" "-s -r "
+		2 "|Forest_Grove_SET|twistyTrees|thicktree:ThickTree" "visibility" " 1"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree:ThickTree" "translate" " -type \"double3\" -207.49843893369961734 33.7063821139521238 -277.86941987984062052"
 		
-		2 "|Forest_Grove_SET|thicktree:ThickTree" "rotate" " -type \"double3\" -2.73437790181352014 98.58353718203117921 0"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree:ThickTree" "rotate" " -type \"double3\" 177.2656220981864692 81.416462817968835 -180"
 		
-		2 "|Forest_Grove_SET|thicktree:ThickTree" "scale" " -type \"double3\" 0.53092532759234434 0.53092532759234434 0.53092532759234434"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree:ThickTree" "scale" " -type \"double3\" 0.53092532759234434 0.53092532759234423 0.53092532759234434"
 		
 		2 "thicktree:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
 		
@@ -1224,16 +1109,16 @@ lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "50F5CE27-4A11-4C9B-A404-B79840767295";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Running_TEMPCAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Rolling_FRONT_TEMPCAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
 		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
 		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"Running_TEMPCAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 547\n            -height 518\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 547\n            -height 518\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
+		+ "            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 547\n            -height 236\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 547\n            -height 236\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
@@ -1274,9 +1159,6 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "761E191F-44E9-1245-9A48-7AB9CE6851E4";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
-createNode polyPlane -n "polyPlane2";
-	rename -uid "B3A2DBBC-0244-5062-F326-E796F452356C";
-	setAttr ".cuv" 2;
 createNode reference -n "thicktreeRN1";
 	rename -uid "9D1D9F12-3A49-EBFC-81B8-D4ACE1C9CDED";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -1291,13 +1173,13 @@ createNode reference -n "thicktreeRN1";
 		2 "|thicktree1:left" "translate" " -type \"double3\" -1000.10000000000002274 52.56491643989128448 2.58515982491268659"
 		
 		"thicktreeRN1" 153
-		0 "|thicktree1:ThickTree" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|thicktree1:ThickTree" "visibility" " 1"
-		2 "|Forest_Grove_SET|thicktree1:ThickTree" "translate" " -type \"double3\" 126.78896308134616788 28.45335590812686277 -260.92054611178434698"
+		0 "|thicktree1:ThickTree" "|Forest_Grove_SET|twistyTrees" "-s -r "
+		2 "|Forest_Grove_SET|twistyTrees|thicktree1:ThickTree" "visibility" " 1"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree1:ThickTree" "translate" " -type \"double3\" 126.78896308134616788 28.45335590812685922 -260.92054611178434698"
 		
-		2 "|Forest_Grove_SET|thicktree1:ThickTree" "rotate" " -type \"double3\" -1.30683100775351413 -147.02058781871559745 -7.04172599981936997"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree1:ThickTree" "rotate" " -type \"double3\" 178.69316899224648409 -32.97941218128439544 172.95827400018063713"
 		
-		2 "|Forest_Grove_SET|thicktree1:ThickTree" "scale" " -type \"double3\" 0.37736496270348979 0.37736496270348979 0.37736496270348979"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree1:ThickTree" "scale" " -type \"double3\" 0.37736496270348974 0.37736496270348974 0.37736496270348974"
 		
 		2 "thicktree1:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
 		
@@ -1529,13 +1411,13 @@ createNode reference -n "thicktreeRN2";
 		"thicktreeRN2"
 		"thicktreeRN2" 0
 		"thicktreeRN2" 153
-		0 "|thicktree2:ThickTree" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|thicktree2:ThickTree" "visibility" " 1"
-		2 "|Forest_Grove_SET|thicktree2:ThickTree" "translate" " -type \"double3\" 14.76003787349466734 49.11643347177601981 -387.48358200842682209"
+		0 "|thicktree2:ThickTree" "|Forest_Grove_SET|twistyTrees" "-s -r "
+		2 "|Forest_Grove_SET|twistyTrees|thicktree2:ThickTree" "visibility" " 1"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree2:ThickTree" "translate" " -type \"double3\" 14.76003787349466734 49.11643347177601981 -387.48358200842676524"
 		
-		2 "|Forest_Grove_SET|thicktree2:ThickTree" "rotate" " -type \"double3\" 0 -329.99999999999977263 0"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree2:ThickTree" "rotate" " -type \"double3\" 0 30.00000000000023448 0"
 		
-		2 "|Forest_Grove_SET|thicktree2:ThickTree" "scale" " -type \"double3\" 0.48810534528915756 0.48810534528915756 0.48810534528915756"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree2:ThickTree" "scale" " -type \"double3\" 0.48810534528915756 0.48810534528915756 0.48810534528915756"
 		
 		2 "thicktree2:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
 		
@@ -1761,30 +1643,6 @@ createNode reference -n "thicktreeRN2";
 		2 "thicktree2:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode polyExtrudeEdge -n "polyExtrudeEdge4";
-	rename -uid "4A63AE05-0D4B-A8CB-17C5-248C8B4B8BB8";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 2 "e[1]" "e[10]";
-	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
-		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -137.90195638155092 25.453855909098095 -211.08689710347255 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -228.73073 14.453393 -181.88373 ;
-	setAttr ".rs" 274242306;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -264.59394364160943 -8.5590360823876921 -323.44559980899714 ;
-	setAttr ".cbx" -type "double3" -192.86752440897627 37.465821706107114 -40.321864668672902 ;
-createNode polyTweak -n "polyTweak3";
-	rename -uid "EEA0BC38-684F-5B30-BF5F-B1B0E11D7FE1";
-	setAttr ".uopa" yes;
-	setAttr -s 8 ".tk";
-	setAttr ".tk[2]" -type "float3" 0.080221951 -0.16710682 0.11686055 ;
-	setAttr ".tk[3]" -type "float3" 0.040532812 -0.080025166 0.069345094 ;
-	setAttr ".tk[5]" -type "float3" 0.080221951 -0.16710682 0.11686055 ;
-	setAttr ".tk[7]" -type "float3" 0.080221951 -0.16710682 0.11686055 ;
-	setAttr ".tk[8]" -type "float3" 0.78122514 -0.4358035 -0.89753163 ;
-	setAttr ".tk[9]" -type "float3" 0.57689339 -0.39197183 -1.0149145 ;
-	setAttr ".tk[10]" -type "float3" 0.78122514 -0.4358035 -0.89753163 ;
-	setAttr ".tk[11]" -type "float3" 0.78122514 -0.4358035 -0.89753163 ;
 createNode reference -n "rootsRN";
 	rename -uid "6280BC60-D34A-30E9-9C0C-A28B741B73F9";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -1799,24 +1657,24 @@ createNode reference -n "rootsRN";
 		2 "|Forest_Grove_SET|roots:roots_retopo1" "scale" " -type \"double3\" 8.20501317188892898 8.20501317188892898 8.20501317188892898"
 		
 		"rootsRN" 10
-		0 "|roots:RootsCntrl" "|glowyRoots" "-s -r "
-		2 "|glowyRoots|roots:RootsCntrl" "translate" " -type \"double3\" -219.41441699655612751 -27.71457944268670914 -78.99248739809780773"
+		0 "|roots:RootsCntrl" "|Forest_Grove_SET|glowyRoots" "-s -r "
+		2 "|Forest_Grove_SET|glowyRoots|roots:RootsCntrl" "translate" " -type \"double3\" -219.41441699655612751 -27.71457944268670914 -78.99248739809780773"
 		
-		2 "|glowyRoots|roots:RootsCntrl" "rotate" " -type \"double3\" -19.15897300619696253 0 0"
+		2 "|Forest_Grove_SET|glowyRoots|roots:RootsCntrl" "rotate" " -type \"double3\" -19.15897300619696253 0 0"
 		
-		2 "|glowyRoots|roots:RootsCntrl" "scale" " -type \"double3\" 10.75372114189429773 14.05282282484823142 9.68122425201775094"
+		2 "|Forest_Grove_SET|glowyRoots|roots:RootsCntrl" "scale" " -type \"double3\" 10.75372114189429773 14.05282282484823142 9.68122425201775094"
 		
-		2 "|glowyRoots|roots:RootsCntrl" "rotatePivot" " -type \"double3\" 0.1436299403445066 28.9253811394508169 9.87292656142850689"
+		2 "|Forest_Grove_SET|glowyRoots|roots:RootsCntrl" "rotatePivot" " -type \"double3\" 0.1436299403445066 28.9253811394508169 9.87292656142850689"
 		
-		2 "|glowyRoots|roots:RootsCntrl" "rotatePivotTranslate" " -type \"double3\" 0 1.63806894117475599 -10.03987601176025102"
+		2 "|Forest_Grove_SET|glowyRoots|roots:RootsCntrl" "rotatePivotTranslate" 
+		" -type \"double3\" 0 1.63806894117475599 -10.03987601176025102"
+		2 "|Forest_Grove_SET|glowyRoots|roots:RootsCntrl" "scalePivot" " -type \"double3\" 0.013356301362972278 2.05833244323730424 1.01980145324810567"
 		
-		2 "|glowyRoots|roots:RootsCntrl" "scalePivot" " -type \"double3\" 0.013356301362972278 2.05833244323730424 1.01980145324810567"
+		2 "|Forest_Grove_SET|glowyRoots|roots:RootsCntrl" "scalePivotTranslate" " -type \"double3\" 0.13027363898153432 26.86704869621351222 8.85312510818040188"
 		
-		2 "|glowyRoots|roots:RootsCntrl" "scalePivotTranslate" " -type \"double3\" 0.13027363898153432 26.86704869621351222 8.85312510818040188"
+		2 "|Forest_Grove_SET|glowyRoots|roots:RootsCntrl|roots:Rts" "translate" " -type \"double3\" -0.078429454982844288 -0.15291654233045832 0.39107547387257358"
 		
-		2 "|glowyRoots|roots:RootsCntrl|roots:Rts" "translate" " -type \"double3\" -0.078429454982844288 -0.15291654233045832 0.39107547387257358"
-		
-		2 "|glowyRoots|roots:RootsCntrl|roots:Rts" "scale" " -type \"double3\" 1.60609752796937788 1.60609752796937788 1.60609752796937788";
+		2 "|Forest_Grove_SET|glowyRoots|roots:RootsCntrl|roots:Rts" "scale" " -type \"double3\" 1.60609752796937788 1.60609752796937788 1.60609752796937788";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "sharedReferenceNode";
@@ -1828,15 +1686,28 @@ createNode reference -n "callaLilyBush_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN"
 		"callaLilyBush_latestRN" 0
-		"callaLilyBush_latestRN" 5
-		0 "|callaLilyBush_latest:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|callaLilyBush_latest:CallaLillyBush" "visibility" " 1"
+		"callaLilyBush_latestRN" 9
+		0 "|callaLilyBush_latest:CallaLillyBush" "|Forest_Grove_SET|callaLilies" 
+		"-s -r "
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest:CallaLillyBush" "visibility" 
+		" 1"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest:CallaLillyBush" "translate" 
+		" -type \"double3\" -220.11647714489959071 28.4202826459200466 -243.58936034026868356"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest:CallaLillyBush" "translate" " -type \"double3\" -265.88731652638199421 35.28209304661574208 -294.25163301514908198"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest:CallaLillyBush" "rotate" 
+		" -type \"double3\" -3.15026081005795522 19.61161302954328534 1.13736682737839234"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest:CallaLillyBush" "rotate" " -type \"double3\" -3.15026081005795522 19.61161302954328534 1.13736682737839212"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest:CallaLillyBush" "scale" 
+		" -type \"double3\" 5.98320441362041855 5.98320441362041944 5.98320441362041855"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest:CallaLillyBush" "rotatePivot" 
+		" -type \"double3\" 0 0.92247211255939843 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest:CallaLillyBush" "rotatePivotTranslate" 
+		" -type \"double3\" -0.03529470928036068 -0.0019132092262834847 -0.047753402399691426"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest:CallaLillyBush" "scale" " -type \"double3\" 7.22618833529107896 7.22618833529107896 7.22618833529107896";
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest:CallaLillyBush" "scalePivot" 
+		" -type \"double3\" 0 0.15417693409562339 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest:CallaLillyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 0.76829517846377504 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "callaLilyBush_latestRN1";
@@ -1844,52 +1715,57 @@ createNode reference -n "callaLilyBush_latestRN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN1"
 		"callaLilyBush_latestRN1" 0
-		"callaLilyBush_latestRN1" 5
-		0 "|callaLilyBush_latest1:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|callaLilyBush_latest1:CallaLillyBush" "visibility" " 1"
+		"callaLilyBush_latestRN1" 9
+		0 "|callaLilyBush_latest1:CallaLillyBush" "|Forest_Grove_SET|callaLilies" 
+		"-s -r "
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest1:CallaLillyBush" "visibility" 
+		" 1"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest1:CallaLillyBush" "translate" 
+		" -type \"double3\" 54.86632053745578474 29.7242166002094379 -239.07141126815594134"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest1:CallaLillyBush" "translate" " -type \"double3\" 66.32437684423148028 37.015195722162197 -288.71092946007121327"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest1:CallaLillyBush" "rotate" 
+		" -type \"double3\" 1.26887063280850265 -19.8027206385842014 -3.12670737740486882"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest1:CallaLillyBush" "rotate" " -type \"double3\" 1.26887063280850287 -19.8027206385842014 -3.12670737740486926"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest1:CallaLillyBush" "scale" 
+		" -type \"double3\" 6.82987631071950219 6.82987631071950219 6.82987631071950396"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest1:CallaLillyBush" "rotatePivot" 
+		" -type \"double3\" 0 1.05300938983906001 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest1:CallaLillyBush" "rotatePivotTranslate" 
+		" -type \"double3\" 0.049533554941718301 -0.0013944991487063439 0.021939090737332117"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest1:CallaLillyBush" "scale" " -type \"double3\" 8.24875252726627117 8.24875252726627117 8.24875252726627117";
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest1:CallaLillyBush" "scalePivot" 
+		" -type \"double3\" 0 0.15417693409562339 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest1:CallaLillyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 0.89883245574343662 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode polyExtrudeEdge -n "polyExtrudeEdge5";
-	rename -uid "ED335070-1549-BA74-9CE2-62883B2274F3";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 4 "e[12]" "e[14]" "e[16]" "e[20]";
-	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
-		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -137.90195638155092 25.453855909098095 -211.08689710347255 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" 26.375834 46.197659 -408.10495 ;
-	setAttr ".rs" 874734617;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -348.61991274629554 37.465824155777192 -431.41838853717911 ;
-	setAttr ".cbx" -type "double3" 401.37157979577853 54.929491752616286 -384.79149498998322 ;
-createNode polyTweak -n "polyTweak4";
-	rename -uid "4FB9B5EF-EA4D-C97D-1151-5DA2E9D60799";
-	setAttr ".uopa" yes;
-	setAttr -s 5 ".tk";
-	setAttr ".tk[1]" -type "float3" -0.23521863 -0.0059013152 -0.018759938 ;
-	setAttr ".tk[8]" -type "float3" 0.13587819 -0.084307492 -0.26800835 ;
-	setAttr ".tk[12]" -type "float3" -0.49092731 -0.071245365 -0.2264847 ;
-	setAttr ".tk[13]" -type "float3" -0.49092731 -0.071245365 -0.2264847 ;
-	setAttr ".tk[14]" -type "float3" -0.37310922 -0.14434721 -0.45887098 ;
 createNode reference -n "callaLilyBush_latestRN2";
 	rename -uid "486B83B5-C942-F3CB-B505-85A2C186D929";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN2"
 		"callaLilyBush_latestRN2" 0
-		"callaLilyBush_latestRN2" 5
-		0 "|callaLilyBush_latest2:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|callaLilyBush_latest2:CallaLillyBush" "visibility" " 1"
+		"callaLilyBush_latestRN2" 9
+		0 "|callaLilyBush_latest2:CallaLillyBush" "|Forest_Grove_SET|callaLilies" 
+		"-s -r "
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest2:CallaLillyBush" "visibility" 
+		" 1"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest2:CallaLillyBush" "translate" 
+		" -type \"double3\" 82.46657556056636906 24.64239714797898273 -184.45686445508300721"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest2:CallaLillyBush" "translate" " -type \"double3\" 99.64083273846379996 30.66224466193052223 -222.79021800857481139"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest2:CallaLillyBush" "rotate" 
+		" -type \"double3\" -0.72927376785132136 -9.11252143581833884 -2.17555909739087516"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest2:CallaLillyBush" "rotate" " -type \"double3\" -0.72927376785132092 -9.11252143581833884 -2.17555909739087561"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest2:CallaLillyBush" "scale" 
+		" -type \"double3\" 5.6689959265085772 5.66899592650857542 5.6689959265085772"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest2:CallaLillyBush" "rotatePivot" 
+		" -type \"double3\" 0 0.87402841134967013 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest2:CallaLillyBush" "rotatePivotTranslate" 
+		" -type \"double3\" 0.034937347147815073 -0.00076762873526590764 -0.010984132572915369"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest2:CallaLillyBush" "scale" " -type \"double3\" 6.84670444213704865 6.84670444213704865 6.84670444213704865";
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest2:CallaLillyBush" "scalePivot" 
+		" -type \"double3\" 0 0.15417693409562339 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest2:CallaLillyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 0.71985147725404675 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "callaLilyBush_latestRN3";
@@ -1897,15 +1773,28 @@ createNode reference -n "callaLilyBush_latestRN3";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN3"
 		"callaLilyBush_latestRN3" 0
-		"callaLilyBush_latestRN3" 5
-		0 "|callaLilyBush_latest3:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|callaLilyBush_latest3:CallaLillyBush" "visibility" " 1"
+		"callaLilyBush_latestRN3" 9
+		0 "|callaLilyBush_latest3:CallaLillyBush" "|Forest_Grove_SET|callaLilies" 
+		"-s -r "
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest3:CallaLillyBush" "visibility" 
+		" 1"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest3:CallaLillyBush" "translate" 
+		" -type \"double3\" -129.36529773394511267 37.3391370441434276 -423.85825270636610185"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest3:CallaLillyBush" "translate" " -type \"double3\" -156.43458182249287347 46.19921021481283674 -511.96501130822275627"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest3:CallaLillyBush" "rotate" 
+		" -type \"double3\" -2.34551784158218579 -0.40640534100752757 8.79867319408646686"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest3:CallaLillyBush" "rotate" " -type \"double3\" -2.34551784158218579 -0.40640534100752745 8.79867319408646509"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest3:CallaLillyBush" "scale" 
+		" -type \"double3\" 6.83752829350592695 6.83752829350592695 6.83752829350592872"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest3:CallaLillyBush" "rotatePivot" 
+		" -type \"double3\" 0 1.05418914908482364 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest3:CallaLillyBush" "rotatePivotTranslate" 
+		" -type \"double3\" -0.16081437028660292 -0.013231777320186829 -0.043142212812599341"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest3:CallaLillyBush" "scale" " -type \"double3\" 8.25799417520783763 8.25799417520783763 8.25799417520783763";
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest3:CallaLillyBush" "scalePivot" 
+		" -type \"double3\" 0 0.15417693409562339 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest3:CallaLillyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 0.90001221498920014 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "thicktreeRN3";
@@ -1914,13 +1803,13 @@ createNode reference -n "thicktreeRN3";
 		"thicktreeRN3"
 		"thicktreeRN3" 0
 		"thicktreeRN3" 153
-		0 "|thicktree3:ThickTree" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|thicktree3:ThickTree" "visibility" " 1"
-		2 "|Forest_Grove_SET|thicktree3:ThickTree" "translate" " -type \"double3\" -185.74212805080202315 43.18279203406981992 -504.74490664222008718"
+		0 "|thicktree3:ThickTree" "|Forest_Grove_SET|twistyTrees" "-s -r "
+		2 "|Forest_Grove_SET|twistyTrees|thicktree3:ThickTree" "visibility" " 1"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree3:ThickTree" "translate" " -type \"double3\" -185.74212805080202315 43.18279203406981281 -504.74490664222003034"
 		
-		2 "|Forest_Grove_SET|thicktree3:ThickTree" "rotate" " -type \"double3\" 4.90774865753253309 -147.43780914605491716 0.062104348410524521"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree3:ThickTree" "rotate" " -type \"double3\" 4.90774865753253309 212.56219085394511126 0.062104348410524521"
 		
-		2 "|Forest_Grove_SET|thicktree3:ThickTree" "scale" " -type \"double3\" 0.4158470922256724 0.4158470922256724 0.4158470922256724"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree3:ThickTree" "scale" " -type \"double3\" 0.41584709222567229 0.41584709222567234 0.41584709222567234"
 		
 		2 "thicktree3:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
 		
@@ -2152,13 +2041,13 @@ createNode reference -n "thicktreeRN4";
 		"thicktreeRN4"
 		"thicktreeRN4" 0
 		"thicktreeRN4" 153
-		0 "|thicktree4:ThickTree" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|thicktree4:ThickTree" "visibility" " 1"
-		2 "|Forest_Grove_SET|thicktree4:ThickTree" "translate" " -type \"double3\" 150.10813028674058955 42.04340954962157184 -698.44634872975905182"
+		0 "|thicktree4:ThickTree" "|Forest_Grove_SET|twistyTrees" "-s -r "
+		2 "|Forest_Grove_SET|twistyTrees|thicktree4:ThickTree" "visibility" " 1"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree4:ThickTree" "translate" " -type \"double3\" 150.10813028674058955 42.04340954962157184 -698.44634872975893813"
 		
-		2 "|Forest_Grove_SET|thicktree4:ThickTree" "rotate" " -type \"double3\" 0 95.97738488143488667 0"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree4:ThickTree" "rotate" " -type \"double3\" 0 95.97738488143485824 0"
 		
-		2 "|Forest_Grove_SET|thicktree4:ThickTree" "scale" " -type \"double3\" 0.4082032135456844 0.4082032135456844 0.4082032135456844"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree4:ThickTree" "scale" " -type \"double3\" 0.40820321354568434 0.40820321354568434 0.40820321354568434"
 		
 		2 "thicktree4:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
 		
@@ -2390,16 +2279,16 @@ createNode reference -n "thicktreeRN5";
 		"thicktreeRN5"
 		"thicktreeRN5" 0
 		"thicktreeRN5" 156
-		0 "|thicktree5:ThickTree" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|thicktree5:ThickTree" "visibility" " 1"
-		2 "|Forest_Grove_SET|thicktree5:ThickTree" "translate" " -type \"double3\" -372.21018136996741532 34.46687819189290281 -572.25894252742659774"
+		0 "|thicktree5:ThickTree" "|Forest_Grove_SET|twistyTrees" "-s -r "
+		2 "|Forest_Grove_SET|twistyTrees|thicktree5:ThickTree" "visibility" " 1"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree5:ThickTree" "translate" " -type \"double3\" -372.21018136996735848 34.46687819189290281 -572.25894252742659774"
 		
-		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotate" " -type \"double3\" 0 -238.08909964105808399 0.84699241124102542"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree5:ThickTree" "rotate" " -type \"double3\" 0 121.91090035894193022 0.84699241124102542"
 		
-		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateX" " -av"
-		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateY" " -av"
-		2 "|Forest_Grove_SET|thicktree5:ThickTree" "rotateZ" " -av"
-		2 "|Forest_Grove_SET|thicktree5:ThickTree" "scale" " -type \"double3\" 0.42880976099544005 0.42880976099544005 0.42880976099544005"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree5:ThickTree" "rotateX" " -av"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree5:ThickTree" "rotateY" " -av"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree5:ThickTree" "rotateZ" " -av"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree5:ThickTree" "scale" " -type \"double3\" 0.42880976099543999 0.42880976099544005 0.42880976099543994"
 		
 		2 "thicktree5:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
 		
@@ -2625,47 +2514,33 @@ createNode reference -n "thicktreeRN5";
 		2 "thicktree5:file156" "colorSpace" " -type \"string\" \"sRGB\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode polyExtrudeEdge -n "polyExtrudeEdge6";
-	rename -uid "446921F4-DD40-06C4-0031-2D841955AA7A";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 3 "e[19]" "e[21]" "e[29]";
-	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
-		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -137.90195638155092 25.453855909098095 -211.08689710347255 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -352.35458 14.453394 -347.35483 ;
-	setAttr ".rs" 1601815188;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -388.21778504785584 -8.5590448088183422 -654.3877619841802 ;
-	setAttr ".cbx" -type "double3" -316.49137280895854 37.46583237356402 -40.321880908783498 ;
-createNode polyTweak -n "polyTweak5";
-	rename -uid "98B501BB-044A-E33F-FF47-6EBF08AE6297";
-	setAttr ".uopa" yes;
-	setAttr -s 11 ".tk";
-	setAttr ".tk[4]" -type "float3" -0.19853406 -0.028812075 -0.091591835 ;
-	setAttr ".tk[5]" -type "float3" -0.19853406 -0.028812075 -0.091591835 ;
-	setAttr ".tk[6]" -type "float3" -0.057211876 -0.0083028199 -0.026394159 ;
-	setAttr ".tk[7]" -type "float3" -0.16396755 -0.023795636 -0.075644895 ;
-	setAttr ".tk[10]" -type "float3" -0.19853406 -0.028812075 -0.091591835 ;
-	setAttr ".tk[11]" -type "float3" -0.16396755 -0.023795636 -0.075644895 ;
-	setAttr ".tk[15]" -type "float3" 0.51777434 -0.32126021 -1.0212665 ;
-	setAttr ".tk[16]" -type "float3" 0.51777434 -0.32126021 -1.0212665 ;
-	setAttr ".tk[17]" -type "float3" 0.31924018 -0.35007232 -1.1128585 ;
-	setAttr ".tk[18]" -type "float3" 0.35380685 -0.34505582 -1.0969115 ;
-	setAttr ".tk[19]" -type "float3" 0.51777434 -0.32126021 -1.0212665 ;
 createNode reference -n "callaLilyBush_latestRN4";
 	rename -uid "AB83C02A-6B4D-37DE-8C88-8EA9455D272E";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN4"
 		"callaLilyBush_latestRN4" 0
-		"callaLilyBush_latestRN4" 5
-		0 "|callaLilyBush_latest4:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|callaLilyBush_latest4:CallaLillyBush" "visibility" " 1"
+		"callaLilyBush_latestRN4" 9
+		0 "|callaLilyBush_latest4:CallaLillyBush" "|Forest_Grove_SET|callaLilies" 
+		"-s -r "
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest4:CallaLillyBush" "visibility" 
+		" 1"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest4:CallaLillyBush" "translate" 
+		" -type \"double3\" 71.17679957641543353 37.48857744644818268 -545.9034553388638642"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest4:CallaLillyBush" "translate" " -type \"double3\" 86.03959125946344955 46.73088737499414691 -659.43191371437296766"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest4:CallaLillyBush" "rotate" 
+		" -type \"double3\" -4.59483115374624784 -22.54635836061963872 -0.94492351641271388"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest4:CallaLillyBush" "rotate" " -type \"double3\" -4.59483115374624873 -22.54635836061963516 -0.94492351641271466"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest4:CallaLillyBush" "scale" 
+		" -type \"double3\" 8.67117298425175242 8.67117298425175242 8.67117298425175242"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest4:CallaLillyBush" "rotatePivot" 
+		" -type \"double3\" 0 1.3368948657247326 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest4:CallaLillyBush" "rotatePivotTranslate" 
+		" -type \"double3\" 0.063035075497522436 -0.0051550590213148848 -0.098911821840043573"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest4:CallaLillyBush" "scale" " -type \"double3\" 10.47257033863833087 10.47257033863833087 10.47257033863833087";
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest4:CallaLillyBush" "scalePivot" 
+		" -type \"double3\" 0 0.15417693409562339 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest4:CallaLillyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 1.18271793162910921 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "callaLilyBush_latestRN5";
@@ -2673,15 +2548,28 @@ createNode reference -n "callaLilyBush_latestRN5";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"callaLilyBush_latestRN5"
 		"callaLilyBush_latestRN5" 0
-		"callaLilyBush_latestRN5" 5
-		0 "|callaLilyBush_latest5:CallaLillyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|callaLilyBush_latest5:CallaLillyBush" "visibility" " 1"
+		"callaLilyBush_latestRN5" 9
+		0 "|callaLilyBush_latest5:CallaLillyBush" "|Forest_Grove_SET|callaLilies" 
+		"-s -r "
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest5:CallaLillyBush" "visibility" 
+		" 1"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest5:CallaLillyBush" "translate" 
+		" -type \"double3\" -214.4982999128933443 26.56146294380997119 -211.19302718205898373"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest5:CallaLillyBush" "translate" " -type \"double3\" -258.95572485367961235 32.8548604566834257 -254.99717283736214313"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest5:CallaLillyBush" "rotate" 
+		" -type \"double3\" 174.17346305722657007 -42.4480070974080661 177.57815937861687416"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest5:CallaLillyBush" "rotate" " -type \"double3\" -5.8265369427734397 -137.5519929025919339 -2.42184062138313649"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest5:CallaLillyBush" "scale" 
+		" -type \"double3\" 5.03711794363610998 5.03711794363610998 5.03711794363610998"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest5:CallaLillyBush" "rotatePivot" 
+		" -type \"double3\" 0 0.77660740122786653 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest5:CallaLillyBush" "rotatePivotTranslate" 
+		" -type \"double3\" 0.085809677901463946 -0.0069506672782712114 0.058174450632466637"
 		
-		2 "|Forest_Grove_SET|callaLilyBush_latest5:CallaLillyBush" "scale" " -type \"double3\" 6.08355663813324732 6.08355663813324732 6.08355663813324732";
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest5:CallaLillyBush" "scalePivot" 
+		" -type \"double3\" 0 0.15417693409562339 0"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest5:CallaLillyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 0.62243046713224315 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN";
@@ -2689,14 +2577,25 @@ createNode reference -n "lilyBush_latestRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lilyBush_latestRN"
 		"lilyBush_latestRN" 0
-		"lilyBush_latestRN" 5
-		0 "|lilyBush_latest:LilyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|lilyBush_latest:LilyBush" "visibility" " 1"
-		2 "|Forest_Grove_SET|lilyBush_latest:LilyBush" "translate" " -type \"double3\" -213.97773312781492905 37.66020780251017896 -431.82609594486541482"
+		"lilyBush_latestRN" 9
+		0 "|lilyBush_latest:LilyBush" "|Forest_Grove_SET|LilyBushes" "-s -r "
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest:LilyBush" "visibility" " 1"
 		
-		2 "|Forest_Grove_SET|lilyBush_latest:LilyBush" "rotate" " -type \"double3\" 3.11224191461060595 -0.076428818835140716 7.05683754467718138"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest:LilyBush" "translate" " -type \"double3\" -177.10409002588161798 30.722602319286203 -356.28725961546308554"
 		
-		2 "|Forest_Grove_SET|lilyBush_latest:LilyBush" "scale" " -type \"double3\" 4.7598238723935431 4.7598238723935431 4.7598238723935431";
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest:LilyBush" "rotate" " -type \"double3\" 3.1122419146106064 -0.076428818835140688 7.05683754467717783"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest:LilyBush" "scale" " -type \"double3\" 3.9410817819784536 3.9410817819784536 3.94108178197845405"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest:LilyBush" "rotatePivot" " -type \"double3\" 0 0.4757522742246949 -1.63086265130727659"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest:LilyBush" "rotatePivotTranslate" 
+		" -type \"double3\" -0.067118066532964982 0.083834651727938858 0.028236415622010333"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest:LilyBush" "scalePivot" " -type \"double3\" 0 0.12071616387160167 -0.41381091322813673"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest:LilyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 0.35503611035309324 -1.21705173807913991";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN1";
@@ -2704,14 +2603,24 @@ createNode reference -n "lilyBush_latestRN1";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lilyBush_latestRN1"
 		"lilyBush_latestRN1" 0
-		"lilyBush_latestRN1" 5
-		0 "|lilyBush_latest1:LilyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|lilyBush_latest1:LilyBush" "visibility" " 1"
-		2 "|Forest_Grove_SET|lilyBush_latest1:LilyBush" "translate" " -type \"double3\" 45.85442708055536087 48.79705343615872692 -438.30171856642095918"
+		"lilyBush_latestRN1" 9
+		0 "|lilyBush_latest1:LilyBush" "|Forest_Grove_SET|LilyBushes" "-s -r "
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest1:LilyBush" "visibility" " 1"
 		
-		2 "|Forest_Grove_SET|lilyBush_latest1:LilyBush" "rotate" " -type \"double3\" -2.9146736591370348 0 0"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest1:LilyBush" "translate" " -type \"double3\" 37.96696097062949349 40.04829369491208269 -361.33371706925038325"
 		
-		2 "|Forest_Grove_SET|lilyBush_latest1:LilyBush" "scale" " -type \"double3\" 5.52282872782536138 5.52282872782536138 5.52282872782536138";
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest1:LilyBush" "rotate" " -type \"double3\" -2.91467365913703658 0 0"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest1:LilyBush" "scale" " -type \"double3\" 4.57284140500654246 4.57284140500654246 4.57284140500654246"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest1:LilyBush" "rotatePivot" 
+		" -type \"double3\" 0 0.552015872405615 -1.8922916778531933"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest1:LilyBush" "rotatePivotTranslate" 
+		" -type \"double3\" 0 -0.096934704257399196 -0.025621367062305899"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest1:LilyBush" "scalePivot" " -type \"double3\" 0 0.12071616387160167 -0.41381091322813673"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest1:LilyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 0.43129970853401328 -1.4784807646250564";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN2";
@@ -2719,14 +2628,25 @@ createNode reference -n "lilyBush_latestRN2";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lilyBush_latestRN2"
 		"lilyBush_latestRN2" 0
-		"lilyBush_latestRN2" 5
-		0 "|lilyBush_latest2:LilyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|lilyBush_latest2:LilyBush" "visibility" " 1"
-		2 "|Forest_Grove_SET|lilyBush_latest2:LilyBush" "translate" " -type \"double3\" -15.41007029174622467 47.63422031652906696 -369.5982514299067816"
+		"lilyBush_latestRN2" 9
+		0 "|lilyBush_latest2:LilyBush" "|Forest_Grove_SET|LilyBushes" "-s -r "
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest2:LilyBush" "visibility" " 1"
 		
-		2 "|Forest_Grove_SET|lilyBush_latest2:LilyBush" "rotate" " -type \"double3\" 2.64703870789185602 0.14756450504432803 -3.18849676046470742"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest2:LilyBush" "translate" " -type \"double3\" -12.78551795606342623 38.99769510825348107 -304.7794434490812705"
 		
-		2 "|Forest_Grove_SET|lilyBush_latest2:LilyBush" "scale" " -type \"double3\" 4.69859603216042565 4.69859603216042565 4.69859603216042565";
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest2:LilyBush" "rotate" " -type \"double3\" 2.64703870789185602 0.14756450504432805 -3.18849676046470831"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest2:LilyBush" "scale" " -type \"double3\" 3.89038580410999524 3.89038580410999391 3.89038580410999479"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest2:LilyBush" "rotatePivot" 
+		" -type \"double3\" 0 0.46963245025269484 -1.60988410240853619"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest2:LilyBush" "rotatePivotTranslate" 
+		" -type \"double3\" 0.026149350420389739 0.073234279090414994 0.023412108592384656"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest2:LilyBush" "scalePivot" " -type \"double3\" 0 0.12071616387160167 -0.41381091322813673"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest2:LilyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 0.34891628638109318 -1.19607318918039951";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN3";
@@ -2734,14 +2654,24 @@ createNode reference -n "lilyBush_latestRN3";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lilyBush_latestRN3"
 		"lilyBush_latestRN3" 0
-		"lilyBush_latestRN3" 5
-		0 "|lilyBush_latest3:LilyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|lilyBush_latest3:LilyBush" "visibility" " 1"
-		2 "|Forest_Grove_SET|lilyBush_latest3:LilyBush" "translate" " -type \"double3\" 163.94071307500277612 41.12334100437669093 -654.13209701818482245"
+		"lilyBush_latestRN3" 9
+		0 "|lilyBush_latest3:LilyBush" "|Forest_Grove_SET|LilyBushes" "-s -r "
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest3:LilyBush" "visibility" " 1"
 		
-		2 "|Forest_Grove_SET|lilyBush_latest3:LilyBush" "rotate" " -type \"double3\" 0 -179.99999999999994316 0"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest3:LilyBush" "translate" " -type \"double3\" 135.74110617239040266 33.62887693869507189 -543.74191627724007958"
 		
-		2 "|Forest_Grove_SET|lilyBush_latest3:LilyBush" "scale" " -type \"double3\" 5.21000360978843169 5.21000360978843169 5.21000360978843169";
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest3:LilyBush" "rotate" " -type \"double3\" 0 180.00000000000005684 0"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest3:LilyBush" "scale" " -type \"double3\" 4.31382565007680441 4.31382565007680441 4.31382565007680441"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest3:LilyBush" "rotatePivot" 
+		" -type \"double3\" 0 0.52074848408819019 -1.78510813176524286"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest3:LilyBush" "rotatePivotTranslate" 
+		" -type \"double3\" 0 0 3.57021626353048571"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest3:LilyBush" "scalePivot" " -type \"double3\" 0 0.12071616387160167 -0.41381091322813673"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest3:LilyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 0.40003232021658847 -1.37129721853710618";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN4";
@@ -2749,49 +2679,39 @@ createNode reference -n "lilyBush_latestRN4";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"lilyBush_latestRN4"
 		"lilyBush_latestRN4" 0
-		"lilyBush_latestRN4" 4
-		0 "|lilyBush_latest4:LilyBush" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|lilyBush_latest4:LilyBush" "visibility" " 1"
-		2 "|Forest_Grove_SET|lilyBush_latest4:LilyBush" "translate" " -type \"double3\" -350.36999025485607717 34.9332208556735111 -543.35654368397024427"
+		"lilyBush_latestRN4" 7
+		0 "|lilyBush_latest4:LilyBush" "|Forest_Grove_SET|LilyBushes" "-s -r "
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest4:LilyBush" "visibility" " 1"
 		
-		2 "|Forest_Grove_SET|lilyBush_latest4:LilyBush" "scale" " -type \"double3\" 5.82954025856664426 5.82954025856664426 5.82954025856664426";
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest4:LilyBush" "translate" " -type \"double3\" -290.10249592512946037 28.44160186762869458 -448.23848860779713732"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest4:LilyBush" "scale" " -type \"double3\" 4.82679517693872651 4.82679517693872651 4.82679517693872651"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest4:LilyBush" "rotatePivot" 
+		" -type \"double3\" 0 0.58267219755399191 -1.99738052013418033"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest4:LilyBush" "scalePivot" " -type \"double3\" 0 0.12071616387160167 -0.41381091322813673"
+		
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest4:LilyBush" "scalePivotTranslate" 
+		" -type \"double3\" 0 0.46195603368239024 -1.58356960690604365";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode polyExtrudeEdge -n "polyExtrudeEdge7";
-	rename -uid "794FADBE-534D-9514-D862-C5B425658170";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 5 "e[0]" "e[4]" "e[7]" "e[17]" "e[31]";
-	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
-		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -137.90195638155092 25.453855909098095 -211.08689710347255 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -62.818512 -8.5590286 -109.1117 ;
-	setAttr ".rs" 874868142;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -414.5240518382044 -8.5590474543255226 -153.82553628726234 ;
-	setAttr ".cbx" -type "double3" 288.88702942109819 -8.5590098719519077 -64.397865843960517 ;
-createNode polyTweak -n "polyTweak6";
-	rename -uid "694E30D9-0344-442C-2741-4D99703F515B";
-	setAttr ".uopa" yes;
-	setAttr -s 4 ".tk[20:23]" -type "float3"  -0.3893013 -0.056496996 -0.17960051
-		 -0.3893013 -0.056496996 -0.17960051 -0.3893013 -0.056496996 -0.17960051 -0.3893013
-		 -0.056496996 -0.17960051;
 createNode reference -n "crystals_version1_latestRN";
 	rename -uid "03D00746-874D-3248-1F17-02A91F6A081B";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"crystals_version1_latestRN"
 		"crystals_version1_latestRN" 0
 		"crystals_version1_latestRN" 5
-		0 "|crystals_version1_latest:crystals_version1" "|Forest_Grove_SET" "-s -r "
+		0 "|crystals_version1_latest:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest:crystals_version1" 
+		"visibility" " 1"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest:crystals_version1" 
+		"translate" " -type \"double3\" -181.07407457129264117 31.39224429943783434 -407.65758348462844651"
 		
-		2 "|Forest_Grove_SET|crystals_version1_latest:crystals_version1" "visibility" 
-		" 1"
-		2 "|Forest_Grove_SET|crystals_version1_latest:crystals_version1" "translate" 
-		" -type \"double3\" -218.69140263903290133 37.9138424652186572 -492.34662079463703321"
-		
-		2 "|Forest_Grove_SET|crystals_version1_latest:crystals_version1" "rotate" 
-		" -type \"double3\" 0 75 -1.93065860890145813"
-		2 "|Forest_Grove_SET|crystals_version1_latest:crystals_version1" "scale" 
-		" -type \"double3\" 3.9915358901618796 3.9915358901618796 3.9915358901618796";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest:crystals_version1" 
+		"rotate" " -type \"double3\" 0 75 -1.93065860890145813"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest:crystals_version1" 
+		"scale" " -type \"double3\" 3.3049477881036804 3.3049477881036804 3.3049477881036804";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN1";
@@ -2800,17 +2720,17 @@ createNode reference -n "crystals_version1_latestRN1";
 		"crystals_version1_latestRN1"
 		"crystals_version1_latestRN1" 0
 		"crystals_version1_latestRN1" 5
-		0 "|crystals_version1_latest1:crystals_version1" "|Forest_Grove_SET" "-s -r "
+		0 "|crystals_version1_latest1:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest1:crystals_version1" 
+		"visibility" " 1"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest1:crystals_version1" 
+		"translate" " -type \"double3\" -136.11570945582818126 27.94970847462322538 -248.89363958169028024"
 		
-		2 "|Forest_Grove_SET|crystals_version1_latest1:crystals_version1" "visibility" 
-		" 1"
-		2 "|Forest_Grove_SET|crystals_version1_latest1:crystals_version1" "translate" 
-		" -type \"double3\" -164.39313851294664914 33.75613523989517262 -300.60017855633543604"
-		
-		2 "|Forest_Grove_SET|crystals_version1_latest1:crystals_version1" "rotate" 
-		" -type \"double3\" 0 0 -4.78592927955920455"
-		2 "|Forest_Grove_SET|crystals_version1_latest1:crystals_version1" "scale" 
-		" -type \"double3\" 3.90708985066436298 3.90708985066436298 3.90708985066436298";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest1:crystals_version1" 
+		"rotate" " -type \"double3\" 0 0 -4.78592927955920455"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest1:crystals_version1" 
+		"scale" " -type \"double3\" 3.2350273967727845 3.2350273967727845 3.2350273967727845";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN2";
@@ -2819,17 +2739,17 @@ createNode reference -n "crystals_version1_latestRN2";
 		"crystals_version1_latestRN2"
 		"crystals_version1_latestRN2" 0
 		"crystals_version1_latestRN2" 5
-		0 "|crystals_version1_latest2:crystals_version1" "|Forest_Grove_SET" "-s -r "
+		0 "|crystals_version1_latest2:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest2:crystals_version1" 
+		"visibility" " 1"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest2:crystals_version1" 
+		"translate" " -type \"double3\" 68.58872003310803223 37.60196219799841799 -586.71630572764627232"
 		
-		2 "|Forest_Grove_SET|crystals_version1_latest2:crystals_version1" "visibility" 
-		" 1"
-		2 "|Forest_Grove_SET|crystals_version1_latest2:crystals_version1" "translate" 
-		" -type \"double3\" 82.83771945138734338 45.41360144752533756 -708.60399068477568107"
-		
-		2 "|Forest_Grove_SET|crystals_version1_latest2:crystals_version1" "rotate" 
-		" -type \"double3\" 0 -104.99999999999998579 0"
-		2 "|Forest_Grove_SET|crystals_version1_latest2:crystals_version1" "scale" 
-		" -type \"double3\" 4.9052057464251213 4.9052057464251213 4.9052057464251213";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest2:crystals_version1" 
+		"rotate" " -type \"double3\" 0 255.00000000000002842 0"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest2:crystals_version1" 
+		"scale" " -type \"double3\" 4.06145637367266676 4.06145637367266676 4.06145637367266676";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version2_latestRN";
@@ -2838,16 +2758,17 @@ createNode reference -n "crystals_version2_latestRN";
 		"crystals_version2_latestRN"
 		"crystals_version2_latestRN" 0
 		"crystals_version2_latestRN" 5
-		0 "|crystals_version2_latest:crystal_version2" "|Forest_Grove_SET" "-s -r "
+		0 "|crystals_version2_latest:crystal_version2" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest:crystal_version2" 
+		"visibility" " 1"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest:crystal_version2" 
+		"translate" " -type \"double3\" -166.3277662405251931 32.6404150891332705 -210.22302757050658784"
 		
-		2 "|Forest_Grove_SET|crystals_version2_latest:crystal_version2" "visibility" 
-		" 1"
-		2 "|Forest_Grove_SET|crystals_version2_latest:crystal_version2" "translate" 
-		" -type \"double3\" -200.88161479260389797 39.42131514664932723 -253.89592008279055335"
-		
-		2 "|Forest_Grove_SET|crystals_version2_latest:crystal_version2" "rotate" 
-		" -type \"double3\" 0 0 3.98070391198985085"
-		2 "|Forest_Grove_SET|crystals_version2_latest:crystal_version2" "scale" " -type \"double3\" 5.34963362286822264 5.34963362286822264 5.34963362286822264";
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest:crystal_version2" 
+		"rotate" " -type \"double3\" 0 0 3.98070391198985218"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest:crystal_version2" 
+		"scale" " -type \"double3\" 4.42943776420519075 4.42943776420519075 4.42943776420519075";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version2_latestRN1";
@@ -2856,17 +2777,17 @@ createNode reference -n "crystals_version2_latestRN1";
 		"crystals_version2_latestRN1"
 		"crystals_version2_latestRN1" 0
 		"crystals_version2_latestRN1" 5
-		0 "|crystals_version2_latest1:crystal_version2" "|Forest_Grove_SET" "-s -r "
+		0 "|crystals_version2_latest1:crystal_version2" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest1:crystal_version2" 
+		"visibility" " 1"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest1:crystal_version2" 
+		"translate" " -type \"double3\" -328.72494895884892685 36.62352645220587277 -454.17756786029747218"
 		
-		2 "|Forest_Grove_SET|crystals_version2_latest1:crystal_version2" "visibility" 
-		" 1"
-		2 "|Forest_Grove_SET|crystals_version2_latest1:crystal_version2" "translate" 
-		" -type \"double3\" -397.01608493904433317 44.23190005738351971 -548.53092358865978895"
-		
-		2 "|Forest_Grove_SET|crystals_version2_latest1:crystal_version2" "rotate" 
-		" -type \"double3\" 0 -82.00165598846042769 0"
-		2 "|Forest_Grove_SET|crystals_version2_latest1:crystal_version2" "scale" 
-		" -type \"double3\" 5.0387817737689593 5.0387817737689593 5.0387817737689593";
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest1:crystal_version2" 
+		"rotate" " -type \"double3\" 0 -82.00165598846042769 0"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest1:crystal_version2" 
+		"scale" " -type \"double3\" 4.17205585423897762 4.17205585423897851 4.17205585423897762";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version2_latestRN2";
@@ -2875,17 +2796,17 @@ createNode reference -n "crystals_version2_latestRN2";
 		"crystals_version2_latestRN2"
 		"crystals_version2_latestRN2" 0
 		"crystals_version2_latestRN2" 5
-		0 "|crystals_version2_latest2:crystal_version2" "|Forest_Grove_SET" "-s -r "
+		0 "|crystals_version2_latest2:crystal_version2" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest2:crystal_version2" 
+		"visibility" " 1"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest2:crystal_version2" 
+		"translate" " -type \"double3\" -311.82029929586451544 35.30434954315565932 -257.46980568340461559"
 		
-		2 "|Forest_Grove_SET|crystals_version2_latest2:crystal_version2" "visibility" 
-		" 1"
-		2 "|Forest_Grove_SET|crystals_version2_latest2:crystal_version2" "translate" 
-		" -type \"double3\" -376.59957001457365777 42.63867005329682769 -310.95800475806925078"
-		
-		2 "|Forest_Grove_SET|crystals_version2_latest2:crystal_version2" "rotate" 
-		" -type \"double3\" -11.3221895903866443 0 0"
-		2 "|Forest_Grove_SET|crystals_version2_latest2:crystal_version2" "scale" 
-		" -type \"double3\" 6.33526606371276024 6.33526606371276024 6.33526606371276024";
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest2:crystal_version2" 
+		"rotate" " -type \"double3\" -11.32218959038664963 0 0"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest2:crystal_version2" 
+		"scale" " -type \"double3\" 5.24553057782142407 5.24553057782142318 5.24553057782142318";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN3";
@@ -2894,17 +2815,17 @@ createNode reference -n "crystals_version1_latestRN3";
 		"crystals_version1_latestRN3"
 		"crystals_version1_latestRN3" 0
 		"crystals_version1_latestRN3" 5
-		0 "|crystals_version1_latest3:crystals_version1" "|Forest_Grove_SET" "-s -r "
+		0 "|crystals_version1_latest3:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest3:crystals_version1" 
+		"visibility" " 1"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest3:crystals_version1" 
+		"translate" " -type \"double3\" -133.39312734089725154 34.90731715173443916 -378.83067249870435944"
 		
-		2 "|Forest_Grove_SET|crystals_version1_latest3:crystals_version1" "visibility" 
-		" 1"
-		2 "|Forest_Grove_SET|crystals_version1_latest3:crystals_version1" "translate" 
-		" -type \"double3\" -161.10495215648529665 42.15915596063277349 -457.53104815019315765"
-		
-		2 "|Forest_Grove_SET|crystals_version1_latest3:crystals_version1" "rotate" 
-		" -type \"double3\" 7.29362075577699809 13.62795808440947098 0"
-		2 "|Forest_Grove_SET|crystals_version1_latest3:crystals_version1" "scale" 
-		" -type \"double3\" 4.63077624251910702 4.63077624251910702 4.63077624251910702";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest3:crystals_version1" 
+		"rotate" " -type \"double3\" 7.29362075577699631 13.62795808440946743 0"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest3:crystals_version1" 
+		"scale" " -type \"double3\" 3.83423176467941351 3.83423176467941307 3.83423176467941307";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN4";
@@ -2913,17 +2834,17 @@ createNode reference -n "crystals_version1_latestRN4";
 		"crystals_version1_latestRN4"
 		"crystals_version1_latestRN4" 0
 		"crystals_version1_latestRN4" 5
-		0 "|crystals_version1_latest4:crystals_version1" "|Forest_Grove_SET" "-s -r "
+		0 "|crystals_version1_latest4:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest4:crystals_version1" 
+		"visibility" " 1"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest4:crystals_version1" 
+		"translate" " -type \"double3\" 3.01387376520423045 42.68176260234906039 -357.62739690533595649"
 		
-		2 "|Forest_Grove_SET|crystals_version1_latest4:crystals_version1" "visibility" 
-		" 1"
-		2 "|Forest_Grove_SET|crystals_version1_latest4:crystals_version1" "translate" 
-		" -type \"double3\" 3.63999254255468685 51.54870763643688747 -431.92288700932243728"
-		
-		2 "|Forest_Grove_SET|crystals_version1_latest4:crystals_version1" "rotate" 
-		" -type \"double3\" 0 41.51425618797885875 0"
-		2 "|Forest_Grove_SET|crystals_version1_latest4:crystals_version1" "scale" 
-		" -type \"double3\" 4.289533391154011 4.289533391154011 4.289533391154011";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest4:crystals_version1" 
+		"rotate" " -type \"double3\" 0 41.51425618797886585 0"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest4:crystals_version1" 
+		"scale" " -type \"double3\" 3.55168643930604411 3.55168643930604411 3.55168643930604411";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version2_latestRN3";
@@ -2932,17 +2853,17 @@ createNode reference -n "crystals_version2_latestRN3";
 		"crystals_version2_latestRN3"
 		"crystals_version2_latestRN3" 0
 		"crystals_version2_latestRN3" 5
-		0 "|crystals_version2_latest3:crystal_version2" "|Forest_Grove_SET" "-s -r "
+		0 "|crystals_version2_latest3:crystal_version2" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest3:crystal_version2" 
+		"visibility" " 1"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest3:crystal_version2" 
+		"translate" " -type \"double3\" 79.25085507601305324 38.33296922366314874 -220.1374797195334736"
 		
-		2 "|Forest_Grove_SET|crystals_version2_latest3:crystal_version2" "visibility" 
-		" 1"
-		2 "|Forest_Grove_SET|crystals_version2_latest3:crystal_version2" "translate" 
-		" -type \"double3\" 95.7148653000142815 46.29647190902073106 -265.87005526476878003"
-		
-		2 "|Forest_Grove_SET|crystals_version2_latest3:crystal_version2" "rotate" 
-		" -type \"double3\" -2.25646213461701972 -119.23811709008610649 0"
-		2 "|Forest_Grove_SET|crystals_version2_latest3:crystal_version2" "scale" 
-		" -type \"double3\" 4.62982109269297482 4.62982109269297482 4.62982109269297482";
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest3:crystal_version2" 
+		"rotate" " -type \"double3\" 177.74353786538299005 -60.76188290991390772 180"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest3:crystal_version2" 
+		"scale" " -type \"double3\" 3.83344091113530094 3.83344091113530183 3.83344091113530094";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "tall_tree_base_latestRN";
@@ -2964,40 +2885,6 @@ createNode reference -n "tall_tree_base_latestRN";
 		" -type \"double3\" 9.18476646767520499 9.18476646767520499 9.18476646767520499";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode polyExtrudeEdge -n "polyExtrudeEdge8";
-	rename -uid "CBE82B8B-8149-4B94-8032-8181BC552542";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 5 "e[24]" "e[26]" "e[28]" "e[30]" "e[36]";
-	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
-		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -137.90195638155092 25.453855909098095 -211.08689710347255 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -43.285458 46.197655 -677.70123 ;
-	setAttr ".rs" 1407102970;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -446.65275640909238 37.465801635872666 -701.01473886537417 ;
-	setAttr ".cbx" -type "double3" 360.08184387647827 54.929511230310084 -654.38774779384903 ;
-createNode polyTweak -n "polyTweak7";
-	rename -uid "4F0F7EC2-E349-03BF-003F-00B5C4A55DC2";
-	setAttr ".uopa" yes;
-	setAttr -s 18 ".tk";
-	setAttr ".tk[0]" -type "float3" 0.035072021 -0.021760918 -0.069176637 ;
-	setAttr ".tk[1]" -type "float3" 0.035072021 -0.021760918 -0.069176637 ;
-	setAttr ".tk[2]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
-	setAttr ".tk[3]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
-	setAttr ".tk[4]" -type "float3" 0.035072021 -0.021760918 -0.069176637 ;
-	setAttr ".tk[5]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
-	setAttr ".tk[6]" -type "float3" 0.13991871 -0.0065451395 -0.020806603 ;
-	setAttr ".tk[7]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
-	setAttr ".tk[12]" -type "float3" 0.035072021 -0.021760918 -0.069176637 ;
-	setAttr ".tk[13]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
-	setAttr ".tk[20]" -type "float3" -0.10399383 -0.041942723 -0.13333336 ;
-	setAttr ".tk[21]" -type "float3" 0.11071764 -0.06869626 -0.21838126 ;
-	setAttr ".tk[24]" -type "float3" -0.043710485 -0.13578627 0.13746096 ;
-	setAttr ".tk[25]" -type "float3" -0.043710485 -0.13578627 0.13746096 ;
-	setAttr ".tk[26]" -type "float3" -0.043710485 -0.13578627 0.13746096 ;
-	setAttr ".tk[27]" -type "float3" 0.061136205 -0.1205705 0.18583101 ;
-	setAttr ".tk[28]" -type "float3" -0.043710485 -0.13578627 0.13746096 ;
-	setAttr ".tk[29]" -type "float3" -0.15515542 -0.15195961 0.086046875 ;
 createNode reference -n "tall_tree_base_latestRN1";
 	rename -uid "B78ABC9C-274F-1979-FCB9-47ADD173E064";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -3020,44 +2907,6 @@ createNode reference -n "tall_tree_base_latestRN1";
 		"translate" " -type \"double3\" 0 -2.51773275631486371 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode polyExtrudeEdge -n "polyExtrudeEdge9";
-	rename -uid "0B1D3ED3-A14F-4B74-F5FE-22B62BF5E7B4";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 5 "e[33]" "e[35]" "e[37]" "e[47]" "e[58]";
-	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
-		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -137.90195638155092 25.453855909098095 -211.08689710347255 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -464.41919 0.64075375 -827.50537 ;
-	setAttr ".rs" 1336838116;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -486.25061768001649 -47.273678505441296 -1613.3721793269751 ;
-	setAttr ".cbx" -type "double3" -442.5877788272785 48.555186014176243 -41.638575900315686 ;
-createNode polyTweak -n "polyTweak8";
-	rename -uid "2A5FCB55-5D43-E325-234B-16A1D1EEAAC7";
-	setAttr ".uopa" yes;
-	setAttr -s 6 ".tk[30:35]" -type "float3"  1.84178197 -1.09609592 -3.64743924
-		 1.84178197 -1.09609592 -3.64743924 1.84178197 -1.09609592 -3.64743924 1.84178197
-		 -1.09609592 -3.64743924 1.84178197 -1.09609592 -3.64743924 1.84178197 -1.09609592
-		 -3.64743924;
-createNode polyExtrudeEdge -n "polyExtrudeEdge10";
-	rename -uid "7727802B-6948-CB28-98F4-9ABB2B92F3AF";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 5 "e[62]" "e[64]" "e[66]" "e[68]" "e[70]";
-	setAttr ".ix" -type "matrix" 204.08275784786991 0 -98.700166470312183 0 29.617322480677824 216.24982792708332 61.239864815674075 0
-		 94.151670565863427 -68.025780653855776 194.67781334335524 0 -137.90195638155092 25.453855909098095 -211.08689710347255 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -637.13385 -15.15514 -827.50537 ;
-	setAttr ".rs" 173744124;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -656.9327575090133 -47.273668579308193 -1613.3721003741548 ;
-	setAttr ".cbx" -type "double3" -617.33494437969694 16.963388627392263 -41.638598798522167 ;
-createNode polyTweak -n "polyTweak9";
-	rename -uid "66E44751-AE44-AB41-5387-BA8C010DBFE6";
-	setAttr ".uopa" yes;
-	setAttr -s 6 ".tk[36:41]" -type "float3"  -0.81803417 -0.11871645 -0.37739247
-		 -0.67780238 -0.2313004 -0.27088049 -0.67780238 -0.2313004 -0.27088049 -0.67780238
-		 -0.2313004 -0.27088049 -0.81803417 -0.11871645 -0.37739247 -0.67780238 -0.2313004
-		 -0.27088049;
 createNode reference -n "tall_tree_base_latestRN2";
 	rename -uid "EAAA77C6-9B40-4214-26BA-99AF4668A0DB";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -3152,12 +3001,12 @@ createNode reference -n "thicktreeRN6";
 		"thicktreeRN6"
 		"thicktreeRN6" 0
 		"thicktreeRN6" 152
-		0 "|thicktree6:ThickTree" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|thicktree6:ThickTree" "translate" " -type \"double3\" -422.83597689239331885 16.78890020775492786 -280.10680944198787756"
+		0 "|thicktree6:ThickTree" "|Forest_Grove_SET|twistyTrees" "-s -r "
+		2 "|Forest_Grove_SET|twistyTrees|thicktree6:ThickTree" "translate" " -type \"double3\" -422.83597689239326201 16.78890020775492786 -280.10680944198782072"
 		
-		2 "|Forest_Grove_SET|thicktree6:ThickTree" "rotate" " -type \"double3\" 0 92.3632998721594447 0"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree6:ThickTree" "rotate" " -type \"double3\" 0 92.36329987215943049 0"
 		
-		2 "|Forest_Grove_SET|thicktree6:ThickTree" "scale" " -type \"double3\" 0.67135961572513803 0.67135961572513803 0.67135961572513803"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree6:ThickTree" "scale" " -type \"double3\" 0.67135961572513791 0.67135961572513791 0.67135961572513791"
 		
 		2 "thicktree6:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
 		
@@ -3389,12 +3238,12 @@ createNode reference -n "thicktreeRN7";
 		"thicktreeRN7"
 		"thicktreeRN7" 0
 		"thicktreeRN7" 152
-		0 "|thicktree7:ThickTree" "|Forest_Grove_SET" "-s -r "
-		2 "|Forest_Grove_SET|thicktree7:ThickTree" "translate" " -type \"double3\" 395.07177485847341813 13.6633748169376279 -613.60606406595536555"
+		0 "|thicktree7:ThickTree" "|Forest_Grove_SET|twistyTrees" "-s -r "
+		2 "|Forest_Grove_SET|twistyTrees|thicktree7:ThickTree" "translate" " -type \"double3\" 395.07177485847341813 13.66337481693762612 -613.60606406595525186"
 		
-		2 "|Forest_Grove_SET|thicktree7:ThickTree" "rotate" " -type \"double3\" 0 0 -3.57296681329565402"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree7:ThickTree" "rotate" " -type \"double3\" 0 0 -3.57296681329565313"
 		
-		2 "|Forest_Grove_SET|thicktree7:ThickTree" "scale" " -type \"double3\" 0.76309137095545787 0.76309137095545787 0.76309137095545787"
+		2 "|Forest_Grove_SET|twistyTrees|thicktree7:ThickTree" "scale" " -type \"double3\" 0.76309137095545787 0.76309137095545787 0.76309137095545776"
 		
 		2 "thicktree7:file10" "fileTextureName" " -type \"string\" \"C:/Program Files/Autodesk/Maya2018/brushImages/oakLeafSM.gif\""
 		
@@ -3626,13 +3475,15 @@ createNode reference -n "mushroom_latestRN3";
 		"mushroom_latestRN3"
 		"mushroom_latestRN3" 0
 		"mushroom_latestRN3" 4
-		0 "|mushroom_latest3:mushroom_version1_MASTER" "|GIANT_SHROOMS" "-s -r "
-		2 "|GIANT_SHROOMS|mushroom_latest3:mushroom_version1_MASTER" "translate" 
-		" -type \"double3\" 859.94442589361199225 -31.29638536448601371 -2806.15683101317245018"
+		0 "|mushroom_latest3:mushroom_version1_MASTER" "|Forest_Grove_SET|GIANT_SHROOMS" 
+		"-s -r "
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest3:mushroom_version1_MASTER" 
+		"translate" " -type \"double3\" 859.94442589361199225 -31.29638536448601371 -2806.15683101317245018"
 		
-		2 "|GIANT_SHROOMS|mushroom_latest3:mushroom_version1_MASTER" "rotate" " -type \"double3\" 0 19.07690818888132611 0"
-		
-		2 "|GIANT_SHROOMS|mushroom_latest3:mushroom_version1_MASTER" "scale" " -type \"double3\" 121.15335778073711026 121.15335778073711026 121.15335778073711026";
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest3:mushroom_version1_MASTER" 
+		"rotate" " -type \"double3\" 0 19.07690818888132611 0"
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest3:mushroom_version1_MASTER" 
+		"scale" " -type \"double3\" 121.15335778073711026 121.15335778073711026 121.15335778073711026";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "mushroom_latestRN4";
@@ -3641,11 +3492,13 @@ createNode reference -n "mushroom_latestRN4";
 		"mushroom_latestRN4"
 		"mushroom_latestRN4" 0
 		"mushroom_latestRN4" 3
-		0 "|mushroom_latest4:mushroom_version1_MASTER" "|GIANT_SHROOMS" "-s -r "
-		2 "|GIANT_SHROOMS|mushroom_latest4:mushroom_version1_MASTER" "translate" 
-		" -type \"double3\" -354.84109406941939824 -37.22619339130761773 -2882.89738479733568965"
+		0 "|mushroom_latest4:mushroom_version1_MASTER" "|Forest_Grove_SET|GIANT_SHROOMS" 
+		"-s -r "
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest4:mushroom_version1_MASTER" 
+		"translate" " -type \"double3\" -354.84109406941939824 -37.22619339130761773 -2882.89738479733568965"
 		
-		2 "|GIANT_SHROOMS|mushroom_latest4:mushroom_version1_MASTER" "scale" " -type \"double3\" 111.59104620922425966 111.59104620922425966 111.59104620922425966";
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest4:mushroom_version1_MASTER" 
+		"scale" " -type \"double3\" 111.59104620922425966 111.59104620922425966 111.59104620922425966";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "mushroom_latestRN5";
@@ -3654,11 +3507,13 @@ createNode reference -n "mushroom_latestRN5";
 		"mushroom_latestRN5"
 		"mushroom_latestRN5" 0
 		"mushroom_latestRN5" 3
-		0 "|mushroom_latest5:mushroom_version1_MASTER" "|GIANT_SHROOMS" "-s -r "
-		2 "|GIANT_SHROOMS|mushroom_latest5:mushroom_version1_MASTER" "translate" 
-		" -type \"double3\" 1882.04886466939706224 -19.04421150668358109 -1022.55769599322036356"
+		0 "|mushroom_latest5:mushroom_version1_MASTER" "|Forest_Grove_SET|GIANT_SHROOMS" 
+		"-s -r "
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest5:mushroom_version1_MASTER" 
+		"translate" " -type \"double3\" 1882.04886466939706224 -19.04421150668358109 -1022.55769599322036356"
 		
-		2 "|GIANT_SHROOMS|mushroom_latest5:mushroom_version1_MASTER" "scale" " -type \"double3\" 107.84089125220702954 107.84089125220702954 107.84089125220702954";
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest5:mushroom_version1_MASTER" 
+		"scale" " -type \"double3\" 107.84089125220702954 107.84089125220702954 107.84089125220702954";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "mushroom_latestRN6";
@@ -3667,13 +3522,16 @@ createNode reference -n "mushroom_latestRN6";
 		"mushroom_latestRN6"
 		"mushroom_latestRN6" 0
 		"mushroom_latestRN6" 4
-		0 "|mushroom_latest6:mushroom_version1_MASTER" "|GIANT_SHROOMS" "-s -r "
-		2 "|GIANT_SHROOMS|mushroom_latest6:mushroom_version1_MASTER" "translate" 
-		" -type \"double3\" 2997.09619303111048794 -311.04620899087808539 -466.5024629850047404"
+		0 "|mushroom_latest6:mushroom_version1_MASTER" "|Forest_Grove_SET|GIANT_SHROOMS" 
+		"-s -r "
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest6:mushroom_version1_MASTER" 
+		"translate" " -type \"double3\" 2997.09619303111048794 -311.04620899087808539 -466.5024629850047404"
 		
-		2 "|GIANT_SHROOMS|mushroom_latest6:mushroom_version1_MASTER" "rotate" " -type \"double3\" 0.52331883877620167 0.12747410222679204 -7.41952438683904258"
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest6:mushroom_version1_MASTER" 
+		"rotate" " -type \"double3\" 0.52331883877620167 0.12747410222679204 -7.41952438683904258"
 		
-		2 "|GIANT_SHROOMS|mushroom_latest6:mushroom_version1_MASTER" "scale" " -type \"double3\" 120.33127066779923098 120.33127066779923098 120.33127066779923098";
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest6:mushroom_version1_MASTER" 
+		"scale" " -type \"double3\" 120.33127066779923098 120.33127066779923098 120.33127066779923098";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "mushroom_latestRN7";
@@ -3682,13 +3540,15 @@ createNode reference -n "mushroom_latestRN7";
 		"mushroom_latestRN7"
 		"mushroom_latestRN7" 0
 		"mushroom_latestRN7" 4
-		0 "|mushroom_latest7:mushroom_version1_MASTER" "|GIANT_SHROOMS" "-s -r "
-		2 "|GIANT_SHROOMS|mushroom_latest7:mushroom_version1_MASTER" "translate" 
-		" -type \"double3\" 1608.69542609597465344 -85.53551288644399619 223.61675527650885442"
+		0 "|mushroom_latest7:mushroom_version1_MASTER" "|Forest_Grove_SET|GIANT_SHROOMS" 
+		"-s -r "
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest7:mushroom_version1_MASTER" 
+		"translate" " -type \"double3\" 1608.69542609597465344 -85.53551288644399619 223.61675527650885442"
 		
-		2 "|GIANT_SHROOMS|mushroom_latest7:mushroom_version1_MASTER" "rotate" " -type \"double3\" 0 0 0"
-		
-		2 "|GIANT_SHROOMS|mushroom_latest7:mushroom_version1_MASTER" "scale" " -type \"double3\" 79.4501947180558119 79.4501947180558119 79.4501947180558119";
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest7:mushroom_version1_MASTER" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Forest_Grove_SET|GIANT_SHROOMS|mushroom_latest7:mushroom_version1_MASTER" 
+		"scale" " -type \"double3\" 79.4501947180558119 79.4501947180558119 79.4501947180558119";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN5";
@@ -3697,12 +3557,15 @@ createNode reference -n "crystals_version1_latestRN5";
 		"crystals_version1_latestRN5"
 		"crystals_version1_latestRN5" 0
 		"crystals_version1_latestRN5" 4
-		0 "|crystals_version1_latest5:crystals_version1" "|crystals" "-s -r "
-		2 "|crystals|crystals_version1_latest5:crystals_version1" "translate" " -type \"double3\" 20.7219146006953352 26.3109715406828073 -189.74353254123710144"
+		0 "|crystals_version1_latest5:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest5:crystals_version1" 
+		"translate" " -type \"double3\" 20.7219146006953352 26.3109715406828073 -189.74353254123710144"
 		
-		2 "|crystals|crystals_version1_latest5:crystals_version1" "rotate" " -type \"double3\" 0 0 -7.94178193781160324"
-		
-		2 "|crystals|crystals_version1_latest5:crystals_version1" "scale" " -type \"double3\" 3.48511616109026257 3.48511616109026257 3.48511616109026257";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest5:crystals_version1" 
+		"rotate" " -type \"double3\" 0 0 -7.94178193781160324"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest5:crystals_version1" 
+		"scale" " -type \"double3\" 3.48511616109026257 3.48511616109026257 3.48511616109026257";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version2_latestRN4";
@@ -3711,12 +3574,15 @@ createNode reference -n "crystals_version2_latestRN4";
 		"crystals_version2_latestRN4"
 		"crystals_version2_latestRN4" 0
 		"crystals_version2_latestRN4" 4
-		0 "|crystals_version2_latest4:crystal_version2" "|crystals" "-s -r "
-		2 "|crystals|crystals_version2_latest4:crystal_version2" "translate" " -type \"double3\" -232.04253462465931079 24.9145601816332487 -117.2130254872027848"
+		0 "|crystals_version2_latest4:crystal_version2" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest4:crystal_version2" 
+		"translate" " -type \"double3\" -232.04253462465931079 24.9145601816332487 -117.2130254872027848"
 		
-		2 "|crystals|crystals_version2_latest4:crystal_version2" "rotate" " -type \"double3\" -2.62127760211087146 -64.95378265896064818 0"
-		
-		2 "|crystals|crystals_version2_latest4:crystal_version2" "scale" " -type \"double3\" 5.02082978095226107 5.02082978095226107 5.02082978095226107";
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest4:crystal_version2" 
+		"rotate" " -type \"double3\" -2.62127760211087146 -64.95378265896064818 0"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest4:crystal_version2" 
+		"scale" " -type \"double3\" 5.02082978095226107 5.02082978095226107 5.02082978095226107";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN6";
@@ -3725,12 +3591,15 @@ createNode reference -n "crystals_version1_latestRN6";
 		"crystals_version1_latestRN6"
 		"crystals_version1_latestRN6" 0
 		"crystals_version1_latestRN6" 4
-		0 "|crystals_version1_latest6:crystals_version1" "|crystals" "-s -r "
-		2 "|crystals|crystals_version1_latest6:crystals_version1" "translate" " -type \"double3\" -222.5969426112317251 18.24065393804482227 -121.86873376665064939"
+		0 "|crystals_version1_latest6:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest6:crystals_version1" 
+		"translate" " -type \"double3\" -222.5969426112317251 18.24065393804482227 -121.86873376665064939"
 		
-		2 "|crystals|crystals_version1_latest6:crystals_version1" "rotate" " -type \"double3\" 0 -80.172657086536816 -5.11089013670992376"
-		
-		2 "|crystals|crystals_version1_latest6:crystals_version1" "scale" " -type \"double3\" 4.05451867328931392 4.05451867328931392 4.05451867328931392";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest6:crystals_version1" 
+		"rotate" " -type \"double3\" 0 -80.172657086536816 -5.11089013670992376"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest6:crystals_version1" 
+		"scale" " -type \"double3\" 4.05451867328931392 4.05451867328931392 4.05451867328931392";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version2_latestRN5";
@@ -3739,12 +3608,16 @@ createNode reference -n "crystals_version2_latestRN5";
 		"crystals_version2_latestRN5"
 		"crystals_version2_latestRN5" 0
 		"crystals_version2_latestRN5" 4
-		0 "|crystals_version2_latest5:crystal_version2" "|crystals" "-s -r "
-		2 "|crystals|crystals_version2_latest5:crystal_version2" "translate" " -type \"double3\" -91.35378392946327608 35.56139418508494288 -160.47962651889645258"
+		0 "|crystals_version2_latest5:crystal_version2" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest5:crystal_version2" 
+		"translate" " -type \"double3\" -91.35378392946327608 35.56139418508494288 -160.47962651889645258"
 		
-		2 "|crystals|crystals_version2_latest5:crystal_version2" "rotate" " -type \"double3\" -3.44169384914626164 -119.62199390959426637 0.16372233357403052"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest5:crystal_version2" 
+		"rotate" " -type \"double3\" -3.44169384914626164 -119.62199390959426637 0.16372233357403052"
 		
-		2 "|crystals|crystals_version2_latest5:crystal_version2" "scale" " -type \"double3\" 3.44386414790752404 3.44386414790752404 3.44386414790752404";
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest5:crystal_version2" 
+		"scale" " -type \"double3\" 3.44386414790752404 3.44386414790752404 3.44386414790752404";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN7";
@@ -3753,12 +3626,15 @@ createNode reference -n "crystals_version1_latestRN7";
 		"crystals_version1_latestRN7"
 		"crystals_version1_latestRN7" 0
 		"crystals_version1_latestRN7" 4
-		0 "|crystals_version1_latest7:crystals_version1" "|crystals" "-s -r "
-		2 "|crystals|crystals_version1_latest7:crystals_version1" "translate" " -type \"double3\" -49.14539251924491481 35.1301574257299265 -277.07331718702590706"
+		0 "|crystals_version1_latest7:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest7:crystals_version1" 
+		"translate" " -type \"double3\" -49.14539251924491481 35.1301574257299265 -277.07331718702590706"
 		
-		2 "|crystals|crystals_version1_latest7:crystals_version1" "rotate" " -type \"double3\" 0 -197.81579082555663263 0"
-		
-		2 "|crystals|crystals_version1_latest7:crystals_version1" "scale" " -type \"double3\" 2.71258242397022897 2.71258242397022897 2.71258242397022897";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest7:crystals_version1" 
+		"rotate" " -type \"double3\" 0 -197.81579082555663263 0"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest7:crystals_version1" 
+		"scale" " -type \"double3\" 2.71258242397022897 2.71258242397022897 2.71258242397022897";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version2_latestRN6";
@@ -3767,12 +3643,16 @@ createNode reference -n "crystals_version2_latestRN6";
 		"crystals_version2_latestRN6"
 		"crystals_version2_latestRN6" 0
 		"crystals_version2_latestRN6" 4
-		0 "|crystals_version2_latest6:crystal_version2" "|crystals" "-s -r "
-		2 "|crystals|crystals_version2_latest6:crystal_version2" "translate" " -type \"double3\" -281.43982312283787905 37.26051497805723756 -316.33329125917242663"
+		0 "|crystals_version2_latest6:crystal_version2" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest6:crystal_version2" 
+		"translate" " -type \"double3\" -281.43982312283787905 37.26051497805723756 -316.33329125917242663"
 		
-		2 "|crystals|crystals_version2_latest6:crystal_version2" "rotate" " -type \"double3\" 53.18400227773106081 -81.08687260237662997 -52.84949702069558697"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest6:crystal_version2" 
+		"rotate" " -type \"double3\" 53.18400227773106081 -81.08687260237662997 -52.84949702069558697"
 		
-		2 "|crystals|crystals_version2_latest6:crystal_version2" "scale" " -type \"double3\" 4.67747763326181065 4.67747763326181065 4.67747763326181065";
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest6:crystal_version2" 
+		"scale" " -type \"double3\" 4.67747763326181065 4.67747763326181065 4.67747763326181065";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version2_latestRN7";
@@ -3781,12 +3661,16 @@ createNode reference -n "crystals_version2_latestRN7";
 		"crystals_version2_latestRN7"
 		"crystals_version2_latestRN7" 0
 		"crystals_version2_latestRN7" 4
-		0 "|crystals_version2_latest7:crystal_version2" "|crystals" "-s -r "
-		2 "|crystals|crystals_version2_latest7:crystal_version2" "translate" " -type \"double3\" -283.33480732697825033 33.46092180710586206 -304.41316994611014479"
+		0 "|crystals_version2_latest7:crystal_version2" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest7:crystal_version2" 
+		"translate" " -type \"double3\" -283.33480732697825033 33.46092180710586206 -304.41316994611014479"
 		
-		2 "|crystals|crystals_version2_latest7:crystal_version2" "rotate" " -type \"double3\" -11.51567180793045786 -190.25248991224034967 -2.39347982211307642"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest7:crystal_version2" 
+		"rotate" " -type \"double3\" -11.51567180793045786 -190.25248991224034967 -2.39347982211307642"
 		
-		2 "|crystals|crystals_version2_latest7:crystal_version2" "scale" " -type \"double3\" 2.69674252369169487 2.69674252369169487 2.69674252369169487";
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest7:crystal_version2" 
+		"scale" " -type \"double3\" 2.69674252369169487 2.69674252369169487 2.69674252369169487";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN8";
@@ -3795,12 +3679,16 @@ createNode reference -n "crystals_version1_latestRN8";
 		"crystals_version1_latestRN8"
 		"crystals_version1_latestRN8" 0
 		"crystals_version1_latestRN8" 4
-		0 "|crystals_version1_latest8:crystals_version1" "|crystals" "-s -r "
-		2 "|crystals|crystals_version1_latest8:crystals_version1" "translate" " -type \"double3\" -258.24489971004936706 28.51862543565476926 -434.22684091692281072"
+		0 "|crystals_version1_latest8:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest8:crystals_version1" 
+		"translate" " -type \"double3\" -258.24489971004936706 28.51862543565476926 -434.22684091692281072"
 		
-		2 "|crystals|crystals_version1_latest8:crystals_version1" "rotate" " -type \"double3\" 2.67867549873706912 -173.36896043202284545 -6.28970628582639701"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest8:crystals_version1" 
+		"rotate" " -type \"double3\" 2.67867549873706912 -173.36896043202284545 -6.28970628582639701"
 		
-		2 "|crystals|crystals_version1_latest8:crystals_version1" "scale" " -type \"double3\" 3.28935175875112495 3.28935175875112495 3.28935175875112495";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest8:crystals_version1" 
+		"scale" " -type \"double3\" 3.28935175875112495 3.28935175875112495 3.28935175875112495";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN9";
@@ -3809,12 +3697,15 @@ createNode reference -n "crystals_version1_latestRN9";
 		"crystals_version1_latestRN9"
 		"crystals_version1_latestRN9" 0
 		"crystals_version1_latestRN9" 4
-		0 "|crystals_version1_latest9:crystals_version1" "|crystals" "-s -r "
-		2 "|crystals|crystals_version1_latest9:crystals_version1" "translate" " -type \"double3\" -246.9091194581352795 28.69977043101451386 -340.34387539103823883"
+		0 "|crystals_version1_latest9:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest9:crystals_version1" 
+		"translate" " -type \"double3\" -246.9091194581352795 28.69977043101451386 -340.34387539103823883"
 		
-		2 "|crystals|crystals_version1_latest9:crystals_version1" "rotate" " -type \"double3\" 0 -80.20141941516020267 0"
-		
-		2 "|crystals|crystals_version1_latest9:crystals_version1" "scale" " -type \"double3\" 3.19940223298712345 3.19940223298712345 3.19940223298712345";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest9:crystals_version1" 
+		"rotate" " -type \"double3\" 0 -80.20141941516020267 0"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest9:crystals_version1" 
+		"scale" " -type \"double3\" 3.19940223298712345 3.19940223298712345 3.19940223298712345";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN10";
@@ -3823,12 +3714,15 @@ createNode reference -n "crystals_version1_latestRN10";
 		"crystals_version1_latestRN10"
 		"crystals_version1_latestRN10" 0
 		"crystals_version1_latestRN10" 4
-		0 "|crystals_version1_latest10:crystals_version1" "|crystals" "-s -r "
-		2 "|crystals|crystals_version1_latest10:crystals_version1" "translate" " -type \"double3\" 158.94432913023487686 18.94063150955412311 -190.05623691773391215"
+		0 "|crystals_version1_latest10:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest10:crystals_version1" 
+		"translate" " -type \"double3\" 158.94432913023487686 18.94063150955412311 -190.05623691773391215"
 		
-		2 "|crystals|crystals_version1_latest10:crystals_version1" "rotate" " -type \"double3\" 0 -221.28347472889421965 -2.87153824254879408"
-		
-		2 "|crystals|crystals_version1_latest10:crystals_version1" "scale" " -type \"double3\" 3.31955785114418456 3.31955785114418456 3.31955785114418456";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest10:crystals_version1" 
+		"rotate" " -type \"double3\" 0 -221.28347472889421965 -2.87153824254879408"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest10:crystals_version1" 
+		"scale" " -type \"double3\" 3.31955785114418456 3.31955785114418456 3.31955785114418456";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version2_latestRN8";
@@ -3837,12 +3731,15 @@ createNode reference -n "crystals_version2_latestRN8";
 		"crystals_version2_latestRN8"
 		"crystals_version2_latestRN8" 0
 		"crystals_version2_latestRN8" 4
-		0 "|crystals_version2_latest8:crystal_version2" "|crystals" "-s -r "
-		2 "|crystals|crystals_version2_latest8:crystal_version2" "translate" " -type \"double3\" 181.18928264445662535 25.17719433520410632 -188.11973832612275714"
+		0 "|crystals_version2_latest8:crystal_version2" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest8:crystal_version2" 
+		"translate" " -type \"double3\" 181.18928264445662535 25.17719433520410632 -188.11973832612275714"
 		
-		2 "|crystals|crystals_version2_latest8:crystal_version2" "rotate" " -type \"double3\" 0 -59.70032159734692101 -5.48846920331936072"
-		
-		2 "|crystals|crystals_version2_latest8:crystal_version2" "scale" " -type \"double3\" 4.39429518969065569 4.39429518969065569 4.39429518969065569";
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest8:crystal_version2" 
+		"rotate" " -type \"double3\" 0 -59.70032159734692101 -5.48846920331936072"
+		2 "|Forest_Grove_SET|crystals|crystals_version2_latest8:crystal_version2" 
+		"scale" " -type \"double3\" 4.39429518969065569 4.39429518969065569 4.39429518969065569";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "crystals_version1_latestRN11";
@@ -3851,12 +3748,16 @@ createNode reference -n "crystals_version1_latestRN11";
 		"crystals_version1_latestRN11"
 		"crystals_version1_latestRN11" 0
 		"crystals_version1_latestRN11" 4
-		0 "|crystals_version1_latest11:crystals_version1" "|crystals" "-s -r "
-		2 "|crystals|crystals_version1_latest11:crystals_version1" "translate" " -type \"double3\" -102.15771490300120661 28.06058356787752928 -169.503175931365206"
+		0 "|crystals_version1_latest11:crystals_version1" "|Forest_Grove_SET|crystals" 
+		"-s -r "
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest11:crystals_version1" 
+		"translate" " -type \"double3\" -102.15771490300120661 28.06058356787752928 -169.503175931365206"
 		
-		2 "|crystals|crystals_version1_latest11:crystals_version1" "rotate" " -type \"double3\" 11.69371186317111899 -109.43853245655138551 3.12515296131425524"
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest11:crystals_version1" 
+		"rotate" " -type \"double3\" 11.69371186317111899 -109.43853245655138551 3.12515296131425524"
 		
-		2 "|crystals|crystals_version1_latest11:crystals_version1" "scale" " -type \"double3\" 2.18643822876963201 2.18643822876963201 2.18643822876963201";
+		2 "|Forest_Grove_SET|crystals|crystals_version1_latest11:crystals_version1" 
+		"scale" " -type \"double3\" 2.18643822876963201 2.18643822876963201 2.18643822876963201";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN5";
@@ -3865,12 +3766,12 @@ createNode reference -n "lilyBush_latestRN5";
 		"lilyBush_latestRN5"
 		"lilyBush_latestRN5" 0
 		"lilyBush_latestRN5" 4
-		0 "|lilyBush_latest5:LilyBush" "|LilyBushes" "-s -r "
-		2 "|LilyBushes|lilyBush_latest5:LilyBush" "translate" " -type \"double3\" -136.87514228570836394 29.01007487491760628 -199.20475639692389791"
+		0 "|lilyBush_latest5:LilyBush" "|Forest_Grove_SET|LilyBushes" "-s -r "
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest5:LilyBush" "translate" " -type \"double3\" -136.87514228570836394 29.01007487491760628 -199.20475639692389791"
 		
-		2 "|LilyBushes|lilyBush_latest5:LilyBush" "rotate" " -type \"double3\" 0 0 1.05778392463523652"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest5:LilyBush" "rotate" " -type \"double3\" 0 0 1.05778392463523652"
 		
-		2 "|LilyBushes|lilyBush_latest5:LilyBush" "scale" " -type \"double3\" 3.79618961651045561 3.79618961651045561 3.79618961651045561";
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest5:LilyBush" "scale" " -type \"double3\" 3.79618961651045561 3.79618961651045561 3.79618961651045561";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "callaLilyBush_latestRN6";
@@ -3879,12 +3780,16 @@ createNode reference -n "callaLilyBush_latestRN6";
 		"callaLilyBush_latestRN6"
 		"callaLilyBush_latestRN6" 0
 		"callaLilyBush_latestRN6" 4
-		0 "|callaLilyBush_latest6:CallaLillyBush" "|callaLilies" "-s -r "
-		2 "|callaLilies|callaLilyBush_latest6:CallaLillyBush" "translate" " -type \"double3\" -42.70947662949650692 44.05873359542594869 -344.48265486716627493"
+		0 "|callaLilyBush_latest6:CallaLillyBush" "|Forest_Grove_SET|callaLilies" 
+		"-s -r "
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest6:CallaLillyBush" "translate" 
+		" -type \"double3\" -42.70947662949650692 44.05873359542594869 -344.48265486716627493"
 		
-		2 "|callaLilies|callaLilyBush_latest6:CallaLillyBush" "rotate" " -type \"double3\" -1.89156690238440706 0.020052480172278717 -0.78223337867782849"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest6:CallaLillyBush" "rotate" 
+		" -type \"double3\" -1.89156690238440706 0.020052480172278717 -0.78223337867782849"
 		
-		2 "|callaLilies|callaLilyBush_latest6:CallaLillyBush" "scale" " -type \"double3\" 6.99910459885503666 6.99910459885503666 6.99910459885503666";
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest6:CallaLillyBush" "scale" 
+		" -type \"double3\" 6.99910459885503666 6.99910459885503666 6.99910459885503666";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN6";
@@ -3893,12 +3798,12 @@ createNode reference -n "lilyBush_latestRN6";
 		"lilyBush_latestRN6"
 		"lilyBush_latestRN6" 0
 		"lilyBush_latestRN6" 4
-		0 "|lilyBush_latest6:LilyBush" "|LilyBushes" "-s -r "
-		2 "|LilyBushes|lilyBush_latest6:LilyBush" "translate" " -type \"double3\" 121.77528931346287777 20.71684077301298998 -181.23922105505482705"
+		0 "|lilyBush_latest6:LilyBush" "|Forest_Grove_SET|LilyBushes" "-s -r "
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest6:LilyBush" "translate" " -type \"double3\" 121.77528931346287777 20.71684077301298998 -181.23922105505482705"
 		
-		2 "|LilyBushes|lilyBush_latest6:LilyBush" "rotate" " -type \"double3\" 6.16322921003062696 -19.9527269311922808 -5.35330302656543111"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest6:LilyBush" "rotate" " -type \"double3\" 6.16322921003062696 -19.9527269311922808 -5.35330302656543111"
 		
-		2 "|LilyBushes|lilyBush_latest6:LilyBush" "scale" " -type \"double3\" 3.56911617742104825 3.56911617742104825 3.56911617742104825";
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest6:LilyBush" "scale" " -type \"double3\" 3.56911617742104825 3.56911617742104825 3.56911617742104825";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "callaLilyBush_latestRN7";
@@ -3907,12 +3812,15 @@ createNode reference -n "callaLilyBush_latestRN7";
 		"callaLilyBush_latestRN7"
 		"callaLilyBush_latestRN7" 0
 		"callaLilyBush_latestRN7" 4
-		0 "|callaLilyBush_latest7:CallaLillyBush" "|callaLilies" "-s -r "
-		2 "|callaLilies|callaLilyBush_latest7:CallaLillyBush" "translate" " -type \"double3\" -169.53617378692197804 23.5184143358934179 -124.18062119947563815"
+		0 "|callaLilyBush_latest7:CallaLillyBush" "|Forest_Grove_SET|callaLilies" 
+		"-s -r "
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest7:CallaLillyBush" "translate" 
+		" -type \"double3\" -169.53617378692197804 23.5184143358934179 -124.18062119947563815"
 		
-		2 "|callaLilies|callaLilyBush_latest7:CallaLillyBush" "rotate" " -type \"double3\" -2.19654216113928369 3.237985266648717 8.35732563423656849"
-		
-		2 "|callaLilies|callaLilyBush_latest7:CallaLillyBush" "scale" " -type \"double3\" 6.22291860379997352 6.22291860379997352 6.22291860379997352";
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest7:CallaLillyBush" "rotate" 
+		" -type \"double3\" -2.19654216113928369 3.237985266648717 8.35732563423656849"
+		2 "|Forest_Grove_SET|callaLilies|callaLilyBush_latest7:CallaLillyBush" "scale" 
+		" -type \"double3\" 6.22291860379997352 6.22291860379997352 6.22291860379997352";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN7";
@@ -3921,12 +3829,12 @@ createNode reference -n "lilyBush_latestRN7";
 		"lilyBush_latestRN7"
 		"lilyBush_latestRN7" 0
 		"lilyBush_latestRN7" 4
-		0 "|lilyBush_latest7:LilyBush" "|LilyBushes" "-s -r "
-		2 "|LilyBushes|lilyBush_latest7:LilyBush" "translate" " -type \"double3\" -318.48532904089944395 25.30685351778856429 -196.19369143127980237"
+		0 "|lilyBush_latest7:LilyBush" "|Forest_Grove_SET|LilyBushes" "-s -r "
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest7:LilyBush" "translate" " -type \"double3\" -318.48532904089944395 25.30685351778856429 -196.19369143127980237"
 		
-		2 "|LilyBushes|lilyBush_latest7:LilyBush" "rotate" " -type \"double3\" 4.79064512412871313 0 0"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest7:LilyBush" "rotate" " -type \"double3\" 4.79064512412871313 0 0"
 		
-		2 "|LilyBushes|lilyBush_latest7:LilyBush" "scale" " -type \"double3\" 4.9693817713163666 4.9693817713163666 4.9693817713163666";
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest7:LilyBush" "scale" " -type \"double3\" 4.9693817713163666 4.9693817713163666 4.9693817713163666";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "roots_latestRN";
@@ -3935,12 +3843,12 @@ createNode reference -n "roots_latestRN";
 		"roots_latestRN"
 		"roots_latestRN" 0
 		"roots_latestRN" 4
-		0 "|roots_latest:RootsCntrl" "|glowyRoots" "-s -r "
-		2 "|glowyRoots|roots_latest:RootsCntrl" "translate" " -type \"double3\" -242.96312446338131963 9.92420304485913718 -81.34368347835528823"
+		0 "|roots_latest:RootsCntrl" "|Forest_Grove_SET|glowyRoots" "-s -r "
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest:RootsCntrl" "translate" " -type \"double3\" -242.96312446338131963 9.92420304485913718 -81.34368347835528823"
 		
-		2 "|glowyRoots|roots_latest:RootsCntrl" "rotate" " -type \"double3\" -13.14617589138473086 0 0"
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest:RootsCntrl" "rotate" " -type \"double3\" -13.14617589138473086 0 0"
 		
-		2 "|glowyRoots|roots_latest:RootsCntrl" "scale" " -type \"double3\" 14.32338700888731076 14.32338700888731076 14.32338700888731076";
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest:RootsCntrl" "scale" " -type \"double3\" 14.32338700888731076 14.32338700888731076 14.32338700888731076";
 lockNode -l 1 ;
 createNode reference -n "roots_latestRN1";
 	rename -uid "497521A1-C246-CC9C-ACD4-87A1122DC49E";
@@ -3948,12 +3856,12 @@ createNode reference -n "roots_latestRN1";
 		"roots_latestRN1"
 		"roots_latestRN1" 0
 		"roots_latestRN1" 4
-		0 "|roots_latest1:RootsCntrl" "|glowyRoots" "-s -r "
-		2 "|glowyRoots|roots_latest1:RootsCntrl" "translate" " -type \"double3\" -125.75407757870809178 13.68448859737179646 -116.33434225306855581"
+		0 "|roots_latest1:RootsCntrl" "|Forest_Grove_SET|glowyRoots" "-s -r "
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest1:RootsCntrl" "translate" " -type \"double3\" -125.75407757870809178 13.68448859737179646 -116.33434225306855581"
 		
-		2 "|glowyRoots|roots_latest1:RootsCntrl" "rotate" " -type \"double3\" -48.05145540373229807 10.40030080449129812 -5.37593134962576968"
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest1:RootsCntrl" "rotate" " -type \"double3\" -48.05145540373229807 10.40030080449129812 -5.37593134962576968"
 		
-		2 "|glowyRoots|roots_latest1:RootsCntrl" "scale" " -type \"double3\" 18.31779791296316873 24.91192788606509012 18.31779791296316873";
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest1:RootsCntrl" "scale" " -type \"double3\" 18.31779791296316873 24.91192788606509012 18.31779791296316873";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "roots_latestRN2";
@@ -3962,12 +3870,12 @@ createNode reference -n "roots_latestRN2";
 		"roots_latestRN2"
 		"roots_latestRN2" 0
 		"roots_latestRN2" 4
-		0 "|roots_latest2:RootsCntrl" "|glowyRoots" "-s -r "
-		2 "|glowyRoots|roots_latest2:RootsCntrl" "translate" " -type \"double3\" 4.98451749681058942 21.96865504965000326 -158.84357705988426801"
+		0 "|roots_latest2:RootsCntrl" "|Forest_Grove_SET|glowyRoots" "-s -r "
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest2:RootsCntrl" "translate" " -type \"double3\" 4.98451749681058942 21.96865504965000326 -158.84357705988426801"
 		
-		2 "|glowyRoots|roots_latest2:RootsCntrl" "rotate" " -type \"double3\" -22.07310852522075706 0 0"
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest2:RootsCntrl" "rotate" " -type \"double3\" -22.07310852522075706 0 0"
 		
-		2 "|glowyRoots|roots_latest2:RootsCntrl" "scale" " -type \"double3\" 19.32405295147552948 19.32405295147552948 19.32405295147552948";
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest2:RootsCntrl" "scale" " -type \"double3\" 19.32405295147552948 19.32405295147552948 19.32405295147552948";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "roots_latestRN3";
@@ -3976,12 +3884,12 @@ createNode reference -n "roots_latestRN3";
 		"roots_latestRN3"
 		"roots_latestRN3" 0
 		"roots_latestRN3" 4
-		0 "|roots_latest3:RootsCntrl" "|glowyRoots" "-s -r "
-		2 "|glowyRoots|roots_latest3:RootsCntrl" "translate" " -type \"double3\" 34.57468313520779901 8.77621144856374968 -158.56608344445362491"
+		0 "|roots_latest3:RootsCntrl" "|Forest_Grove_SET|glowyRoots" "-s -r "
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest3:RootsCntrl" "translate" " -type \"double3\" 34.57468313520779901 8.77621144856374968 -158.56608344445362491"
 		
-		2 "|glowyRoots|roots_latest3:RootsCntrl" "rotate" " -type \"double3\" -23.46799691044151004 0 0"
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest3:RootsCntrl" "rotate" " -type \"double3\" -23.46799691044151004 0 0"
 		
-		2 "|glowyRoots|roots_latest3:RootsCntrl" "scale" " -type \"double3\" 18.59786724754466292 18.59786724754466292 18.59786724754466292";
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest3:RootsCntrl" "scale" " -type \"double3\" 18.59786724754466292 18.59786724754466292 18.59786724754466292";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "roots_latestRN4";
@@ -3990,12 +3898,12 @@ createNode reference -n "roots_latestRN4";
 		"roots_latestRN4"
 		"roots_latestRN4" 0
 		"roots_latestRN4" 4
-		0 "|roots_latest4:RootsCntrl" "|glowyRoots" "-s -r "
-		2 "|glowyRoots|roots_latest4:RootsCntrl" "translate" " -type \"double3\" 68.05509139731736923 12.84894316981087314 -160.26515988535911106"
+		0 "|roots_latest4:RootsCntrl" "|Forest_Grove_SET|glowyRoots" "-s -r "
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest4:RootsCntrl" "translate" " -type \"double3\" 68.05509139731736923 12.84894316981087314 -160.26515988535911106"
 		
-		2 "|glowyRoots|roots_latest4:RootsCntrl" "rotate" " -type \"double3\" -21.0626229561369307 0 0"
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest4:RootsCntrl" "rotate" " -type \"double3\" -21.0626229561369307 0 0"
 		
-		2 "|glowyRoots|roots_latest4:RootsCntrl" "scale" " -type \"double3\" 21.22217916891979428 23.87044468642770312 23.87044468642770312";
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest4:RootsCntrl" "scale" " -type \"double3\" 21.22217916891979428 23.87044468642770312 23.87044468642770312";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "roots_latestRN5";
@@ -4004,12 +3912,12 @@ createNode reference -n "roots_latestRN5";
 		"roots_latestRN5"
 		"roots_latestRN5" 0
 		"roots_latestRN5" 4
-		0 "|roots_latest5:RootsCntrl" "|glowyRoots" "-s -r "
-		2 "|glowyRoots|roots_latest5:RootsCntrl" "translate" " -type \"double3\" 157.5810930483001755 3.49138898449196944 -163.74245583858058239"
+		0 "|roots_latest5:RootsCntrl" "|Forest_Grove_SET|glowyRoots" "-s -r "
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest5:RootsCntrl" "translate" " -type \"double3\" 157.5810930483001755 3.49138898449196944 -163.74245583858058239"
 		
-		2 "|glowyRoots|roots_latest5:RootsCntrl" "rotate" " -type \"double3\" -25.84034659142882262 0 0"
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest5:RootsCntrl" "rotate" " -type \"double3\" -25.84034659142882262 0 0"
 		
-		2 "|glowyRoots|roots_latest5:RootsCntrl" "scale" " -type \"double3\" 23.26710805194355203 23.26710805194355203 23.26710805194355203";
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest5:RootsCntrl" "scale" " -type \"double3\" 23.26710805194355203 23.26710805194355203 23.26710805194355203";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "roots_latestRN6";
@@ -4018,12 +3926,12 @@ createNode reference -n "roots_latestRN6";
 		"roots_latestRN6"
 		"roots_latestRN6" 0
 		"roots_latestRN6" 4
-		0 "|roots_latest6:RootsCntrl" "|glowyRoots" "-s -r "
-		2 "|glowyRoots|roots_latest6:RootsCntrl" "translate" " -type \"double3\" -195.70039965981976593 7.11143158780414453 -85.80128818029422177"
+		0 "|roots_latest6:RootsCntrl" "|Forest_Grove_SET|glowyRoots" "-s -r "
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest6:RootsCntrl" "translate" " -type \"double3\" -195.70039965981976593 7.11143158780414453 -85.80128818029422177"
 		
-		2 "|glowyRoots|roots_latest6:RootsCntrl" "rotate" " -type \"double3\" -27.75729919572012605 18.3134284027548766 0.98384109839973699"
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest6:RootsCntrl" "rotate" " -type \"double3\" -27.75729919572012605 18.3134284027548766 0.98384109839973699"
 		
-		2 "|glowyRoots|roots_latest6:RootsCntrl" "scale" " -type \"double3\" 19.46092123693867393 23.63163448193365213 23.63163448193365213";
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest6:RootsCntrl" "scale" " -type \"double3\" 19.46092123693867393 23.63163448193365213 23.63163448193365213";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "roots_latestRN7";
@@ -4032,12 +3940,12 @@ createNode reference -n "roots_latestRN7";
 		"roots_latestRN7"
 		"roots_latestRN7" 0
 		"roots_latestRN7" 4
-		0 "|roots_latest7:RootsCntrl" "|glowyRoots" "-s -r "
-		2 "|glowyRoots|roots_latest7:RootsCntrl" "translate" " -type \"double3\" -113.08614662448998445 18.14775425131776032 -129.4670779879488407"
+		0 "|roots_latest7:RootsCntrl" "|Forest_Grove_SET|glowyRoots" "-s -r "
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest7:RootsCntrl" "translate" " -type \"double3\" -113.08614662448998445 18.14775425131776032 -129.4670779879488407"
 		
-		2 "|glowyRoots|roots_latest7:RootsCntrl" "rotate" " -type \"double3\" -30.45732624822722912 30.58192307730212889 5.60364353962001349"
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest7:RootsCntrl" "rotate" " -type \"double3\" -30.45732624822722912 30.58192307730212889 5.60364353962001349"
 		
-		2 "|glowyRoots|roots_latest7:RootsCntrl" "scale" " -type \"double3\" 18.54405449869429745 22.74291389077615122 18.54405449869429745";
+		2 "|Forest_Grove_SET|glowyRoots|roots_latest7:RootsCntrl" "scale" " -type \"double3\" 18.54405449869429745 22.74291389077615122 18.54405449869429745";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN";
@@ -4046,15 +3954,15 @@ createNode reference -n "danglingFlowerSmaller_latestRN";
 		"danglingFlowerSmaller_latestRN"
 		"danglingFlowerSmaller_latestRN" 0
 		"danglingFlowerSmaller_latestRN" 4
-		0 "|danglingFlowerSmaller_latest:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" -317.76678810138218978 161.86411268906388727 -273.9134650160240767"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" -317.76678810138218978 161.86411268906388727 -273.9134650160240767"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 128.925917294151958 0"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 6.82081403369802608 6.82081403369802608 6.82081403369802608";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 128.925917294151958 0"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 6.82081403369802608 6.82081403369802608 6.82081403369802608";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "lilyBush_latestRN8";
@@ -4063,12 +3971,12 @@ createNode reference -n "lilyBush_latestRN8";
 		"lilyBush_latestRN8"
 		"lilyBush_latestRN8" 0
 		"lilyBush_latestRN8" 4
-		0 "|lilyBush_latest8:LilyBush" "|LilyBushes" "-s -r "
-		2 "|LilyBushes|lilyBush_latest8:LilyBush" "translate" " -type \"double3\" -69.63726447228178529 33.0972555993490829 -192.68327406096713617"
+		0 "|lilyBush_latest8:LilyBush" "|Forest_Grove_SET|LilyBushes" "-s -r "
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest8:LilyBush" "translate" " -type \"double3\" -69.63726447228178529 33.0972555993490829 -192.68327406096713617"
 		
-		2 "|LilyBushes|lilyBush_latest8:LilyBush" "rotate" " -type \"double3\" 4.57566233941327738 -0.55447263590535056 7.87670548982870322"
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest8:LilyBush" "rotate" " -type \"double3\" 4.57566233941327738 -0.55447263590535056 7.87670548982870322"
 		
-		2 "|LilyBushes|lilyBush_latest8:LilyBush" "scale" " -type \"double3\" 3.29873427385752693 3.29873427385752693 3.29873427385752693";
+		2 "|Forest_Grove_SET|LilyBushes|lilyBush_latest8:LilyBush" "scale" " -type \"double3\" 3.29873427385752693 3.29873427385752693 3.29873427385752693";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN1";
@@ -4077,15 +3985,15 @@ createNode reference -n "danglingFlowerSmaller_latestRN1";
 		"danglingFlowerSmaller_latestRN1"
 		"danglingFlowerSmaller_latestRN1" 0
 		"danglingFlowerSmaller_latestRN1" 4
-		0 "|danglingFlowerSmaller_latest1:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest1:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest1:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" -321.72653542396096782 159.46239052046004758 -267.7241613864273404"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest1:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" -321.72653542396096782 159.46239052046004758 -267.7241613864273404"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest1:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 134.99999999999991473 0"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest1:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 4.07287306633372648 4.07287306633372648 4.07287306633372648";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest1:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 134.99999999999991473 0"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest1:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 4.07287306633372648 4.07287306633372648 4.07287306633372648";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN2";
@@ -4094,17 +4002,17 @@ createNode reference -n "danglingFlowerSmaller_latestRN2";
 		"danglingFlowerSmaller_latestRN2"
 		"danglingFlowerSmaller_latestRN2" 0
 		"danglingFlowerSmaller_latestRN2" 5
-		0 "|danglingFlowerSmaller_latest2:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest2:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest2:danglingFlowerCntrl" "visibility" 
-		" 1"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest2:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" -152.06458959916389517 139.84811591703333988 -217.39598776875533304"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest2:danglingFlowerCntrl" 
+		"visibility" " 1"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest2:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" -152.06458959916389517 139.84811591703333988 -217.39598776875533304"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest2:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 89.99999999999997158 0"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest2:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 6.2244652810909562 6.2244652810909562 6.2244652810909562";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest2:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 89.99999999999997158 0"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest2:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 6.2244652810909562 6.2244652810909562 6.2244652810909562";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN3";
@@ -4113,16 +4021,16 @@ createNode reference -n "danglingFlowerSmaller_latestRN3";
 		"danglingFlowerSmaller_latestRN3"
 		"danglingFlowerSmaller_latestRN3" 0
 		"danglingFlowerSmaller_latestRN3" 4
-		0 "|danglingFlowerSmaller_latest3:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest3:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest3:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" -149.43400450817713931 148.53271641772855105 -270.94685861674668104"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest3:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" -149.43400450817713931 148.53271641772855105 -270.94685861674668104"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest3:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 2.83030600322418247 140.99697135776617074 -4.06314234395190876"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest3:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 2.83030600322418247 140.99697135776617074 -4.06314234395190876"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest3:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 3.59050746099437346 3.93916458161328187 3.59050746099437346";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest3:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 3.59050746099437346 3.93916458161328187 3.59050746099437346";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN4";
@@ -4131,16 +4039,16 @@ createNode reference -n "danglingFlowerSmaller_latestRN4";
 		"danglingFlowerSmaller_latestRN4"
 		"danglingFlowerSmaller_latestRN4" 0
 		"danglingFlowerSmaller_latestRN4" 4
-		0 "|danglingFlowerSmaller_latest4:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest4:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest4:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" 95.58580924166254533 105.07720182784868257 -216.26608239984176407"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest4:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" 95.58580924166254533 105.07720182784868257 -216.26608239984176407"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest4:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 4.3184048528974186 -285.04371395362335306 4.47104633259163986"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest4:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 4.3184048528974186 -285.04371395362335306 4.47104633259163986"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest4:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 3.90030885432625452 3.90030885432625452 3.90030885432625452";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest4:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 3.90030885432625452 3.90030885432625452 3.90030885432625452";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN5";
@@ -4149,15 +4057,15 @@ createNode reference -n "danglingFlowerSmaller_latestRN5";
 		"danglingFlowerSmaller_latestRN5"
 		"danglingFlowerSmaller_latestRN5" 0
 		"danglingFlowerSmaller_latestRN5" 4
-		0 "|danglingFlowerSmaller_latest5:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest5:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest5:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" 92.49337362575528232 104.38285006827796053 -219.42018185002308428"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest5:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" 92.49337362575528232 104.38285006827796053 -219.42018185002308428"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest5:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 77.46516420371727918 0"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest5:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 4.17385157733309153 4.63697430976559755 4.17385157733309153";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest5:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 77.46516420371727918 0"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest5:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 4.17385157733309153 4.63697430976559755 4.17385157733309153";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN6";
@@ -4166,16 +4074,16 @@ createNode reference -n "danglingFlowerSmaller_latestRN6";
 		"danglingFlowerSmaller_latestRN6"
 		"danglingFlowerSmaller_latestRN6" 0
 		"danglingFlowerSmaller_latestRN6" 4
-		0 "|danglingFlowerSmaller_latest6:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest6:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest6:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" 126.12010192150763999 86.38571131566683903 -212.92129664820063795"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest6:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" 126.12010192150763999 86.38571131566683903 -212.92129664820063795"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest6:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" -89.99999999999968736 83.95080968614811923 -89.99999999999968736"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest6:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" -89.99999999999968736 83.95080968614811923 -89.99999999999968736"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest6:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 3.04991276451349158 3.04991276451349158 3.04991276451349158";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest6:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 3.04991276451349158 3.04991276451349158 3.04991276451349158";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN7";
@@ -4184,16 +4092,16 @@ createNode reference -n "danglingFlowerSmaller_latestRN7";
 		"danglingFlowerSmaller_latestRN7"
 		"danglingFlowerSmaller_latestRN7" 0
 		"danglingFlowerSmaller_latestRN7" 4
-		0 "|danglingFlowerSmaller_latest7:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest7:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest7:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" -6.76089388466105845 125.07732351778594193 -325.05336365655949749"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest7:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" -6.76089388466105845 125.07732351778594193 -325.05336365655949749"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest7:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 9.85686736756679949 74.76985589636122143 10.20824080423680869"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest7:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 9.85686736756679949 74.76985589636122143 10.20824080423680869"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest7:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 3.48410145410026972 3.48410145410026972 3.48410145410026972";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest7:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 3.48410145410026972 3.48410145410026972 3.48410145410026972";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN8";
@@ -4202,15 +4110,15 @@ createNode reference -n "danglingFlowerSmaller_latestRN8";
 		"danglingFlowerSmaller_latestRN8"
 		"danglingFlowerSmaller_latestRN8" 0
 		"danglingFlowerSmaller_latestRN8" 4
-		0 "|danglingFlowerSmaller_latest8:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest8:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest8:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" 0.54032560921405048 117.3570956212099361 -325.5080581512105482"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest8:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" 0.54032560921405048 117.3570956212099361 -325.5080581512105482"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest8:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 89.99999999999997158 0"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest8:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 3.80493587801029198 3.80493587801029198 3.80493587801029198";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest8:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 89.99999999999997158 0"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest8:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 3.80493587801029198 3.80493587801029198 3.80493587801029198";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN9";
@@ -4219,15 +4127,15 @@ createNode reference -n "danglingFlowerSmaller_latestRN9";
 		"danglingFlowerSmaller_latestRN9"
 		"danglingFlowerSmaller_latestRN9" 0
 		"danglingFlowerSmaller_latestRN9" 4
-		0 "|danglingFlowerSmaller_latest9:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest9:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest9:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" 33.03129267954494708 141.27311036192455163 -320.51757025168382143"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest9:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" 33.03129267954494708 141.27311036192455163 -320.51757025168382143"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest9:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 89.99999999999997158 0"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest9:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 3.78182515711442901 3.78182515711442901 3.78182515711442901";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest9:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 89.99999999999997158 0"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest9:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 3.78182515711442901 3.78182515711442901 3.78182515711442901";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN10";
@@ -4236,16 +4144,16 @@ createNode reference -n "danglingFlowerSmaller_latestRN10";
 		"danglingFlowerSmaller_latestRN10"
 		"danglingFlowerSmaller_latestRN10" 0
 		"danglingFlowerSmaller_latestRN10" 4
-		0 "|danglingFlowerSmaller_latest10:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest10:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest10:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" -174.5675525315893708 118.86598433196959945 -422.87274712103351249"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest10:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" -174.5675525315893708 118.86598433196959945 -422.87274712103351249"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest10:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" -44.74944400385830079 102.15489267036168997 -45.39896560542197079"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest10:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" -44.74944400385830079 102.15489267036168997 -45.39896560542197079"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest10:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 4.82838128397292365 4.82838128397292365 4.82838128397292365";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest10:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 4.82838128397292365 4.82838128397292365 4.82838128397292365";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN11";
@@ -4254,15 +4162,15 @@ createNode reference -n "danglingFlowerSmaller_latestRN11";
 		"danglingFlowerSmaller_latestRN11"
 		"danglingFlowerSmaller_latestRN11" 0
 		"danglingFlowerSmaller_latestRN11" 4
-		0 "|danglingFlowerSmaller_latest11:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest11:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest11:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" -180.60996257176253721 120.61442363290085211 -425.10549271170890506"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest11:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" -180.60996257176253721 120.61442363290085211 -425.10549271170890506"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest11:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 89.99999999999994316 0"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest11:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 2.8996501353793418 2.8996501353793418 2.8996501353793418";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest11:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 89.99999999999994316 0"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest11:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 2.8996501353793418 2.8996501353793418 2.8996501353793418";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN12";
@@ -4271,15 +4179,15 @@ createNode reference -n "danglingFlowerSmaller_latestRN12";
 		"danglingFlowerSmaller_latestRN12"
 		"danglingFlowerSmaller_latestRN12" 0
 		"danglingFlowerSmaller_latestRN12" 4
-		0 "|danglingFlowerSmaller_latest12:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest12:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest12:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" -142.14105530836985736 107.9710563505026073 -420.11924973892473645"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest12:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" -142.14105530836985736 107.9710563505026073 -420.11924973892473645"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest12:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 89.99999999999992895 0"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest12:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 3.94414847531524781 3.94414847531524781 3.94414847531524781";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest12:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 89.99999999999992895 0"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest12:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 3.94414847531524781 3.94414847531524781 3.94414847531524781";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN13";
@@ -4288,15 +4196,15 @@ createNode reference -n "danglingFlowerSmaller_latestRN13";
 		"danglingFlowerSmaller_latestRN13"
 		"danglingFlowerSmaller_latestRN13" 0
 		"danglingFlowerSmaller_latestRN13" 4
-		0 "|danglingFlowerSmaller_latest13:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest13:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest13:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" 139.06518709287718139 111.89367585051040521 -575.23997664711328071"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest13:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" 139.06518709287718139 111.89367585051040521 -575.23997664711328071"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest13:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 82.55084780371851139 0"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest13:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 4.01526107527968978 4.01526107527968978 4.01526107527968978";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest13:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 82.55084780371851139 0"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest13:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 4.01526107527968978 4.01526107527968978 4.01526107527968978";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN14";
@@ -4305,15 +4213,15 @@ createNode reference -n "danglingFlowerSmaller_latestRN14";
 		"danglingFlowerSmaller_latestRN14"
 		"danglingFlowerSmaller_latestRN14" 0
 		"danglingFlowerSmaller_latestRN14" 4
-		0 "|danglingFlowerSmaller_latest14:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest14:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest14:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" -310.56274220035459166 101.95560551995136223 -460.36365334574651342"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest14:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" -310.56274220035459166 101.95560551995136223 -460.36365334574651342"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest14:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 0 -2.29839851547380425"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest14:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 4.62313181305017018 4.62313181305017018 4.62313181305017018";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest14:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 0 -2.29839851547380425"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest14:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 4.62313181305017018 4.62313181305017018 4.62313181305017018";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "danglingFlowerSmaller_latestRN15";
@@ -4322,15 +4230,35 @@ createNode reference -n "danglingFlowerSmaller_latestRN15";
 		"danglingFlowerSmaller_latestRN15"
 		"danglingFlowerSmaller_latestRN15" 0
 		"danglingFlowerSmaller_latestRN15" 4
-		0 "|danglingFlowerSmaller_latest15:danglingFlowerCntrl" "|danglingFlowers" 
+		0 "|danglingFlowerSmaller_latest15:danglingFlowerCntrl" "|Forest_Grove_SET|danglingFlowers" 
 		"-s -r "
-		2 "|danglingFlowers|danglingFlowerSmaller_latest15:danglingFlowerCntrl" "translate" 
-		" -type \"double3\" -314.40122187832525924 135.78094769561207045 -452.9760162170273361"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest15:danglingFlowerCntrl" 
+		"translate" " -type \"double3\" -314.40122187832525924 135.78094769561207045 -452.9760162170273361"
 		
-		2 "|danglingFlowers|danglingFlowerSmaller_latest15:danglingFlowerCntrl" "rotate" 
-		" -type \"double3\" 0 16.72987491669480065 0"
-		2 "|danglingFlowers|danglingFlowerSmaller_latest15:danglingFlowerCntrl" "scale" 
-		" -type \"double3\" 5.32252527873545933 5.32252527873545933 5.32252527873545933";
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest15:danglingFlowerCntrl" 
+		"rotate" " -type \"double3\" 0 16.72987491669480065 0"
+		2 "|Forest_Grove_SET|danglingFlowers|danglingFlowerSmaller_latest15:danglingFlowerCntrl" 
+		"scale" " -type \"double3\" 5.32252527873545933 5.32252527873545933 5.32252527873545933";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "forest_cliff_latestRN";
+	rename -uid "78448B62-AC45-02F2-0F61-788425AEAF4E";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"forest_cliff_latestRN"
+		"forest_cliff_latestRN" 0
+		"forest_cliff_latestRN" 2
+		0 "|forest_cliff_latest:Forest_Grove_SET" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|forest_cliff_latest:Forest_Grove_SET" "scale" " -type \"double3\" 0.99999999999999989 0.99999999999999989 0.99999999999999989";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "forest_ground_latestRN";
+	rename -uid "FE6B8136-0A42-3736-7503-C693F977AB9C";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"forest_ground_latestRN"
+		"forest_ground_latestRN" 0
+		"forest_ground_latestRN" 2
+		0 "|forest_ground_latest:Forest_Grove_SET" "|Forest_Grove_SET" "-s -r "
+		2 "|Forest_Grove_SET|forest_ground_latest:Forest_Grove_SET" "scale" " -type \"double3\" 0.99999999999999989 0.99999999999999989 0.99999999999999989";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
@@ -4561,53 +4489,20 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".bswa";
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
-connectAttr "polyExtrudeEdge10.out" "CliffShape.i";
-connectAttr "polyPlane2.out" "GroundShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "polyPlane1.out" "polyExtrudeEdge1.ip";
-connectAttr "CliffShape.wm" "polyExtrudeEdge1.mp";
-connectAttr "polyTweak1.out" "polyExtrudeEdge2.ip";
-connectAttr "CliffShape.wm" "polyExtrudeEdge2.mp";
-connectAttr "polyExtrudeEdge1.out" "polyTweak1.ip";
-connectAttr "polyTweak2.out" "polyExtrudeEdge3.ip";
-connectAttr "CliffShape.wm" "polyExtrudeEdge3.mp";
-connectAttr "polyExtrudeEdge2.out" "polyTweak2.ip";
-connectAttr "polyTweak3.out" "polyExtrudeEdge4.ip";
-connectAttr "CliffShape.wm" "polyExtrudeEdge4.mp";
-connectAttr "polyExtrudeEdge3.out" "polyTweak3.ip";
-connectAttr "polyTweak4.out" "polyExtrudeEdge5.ip";
-connectAttr "CliffShape.wm" "polyExtrudeEdge5.mp";
-connectAttr "polyExtrudeEdge4.out" "polyTweak4.ip";
-connectAttr "polyTweak5.out" "polyExtrudeEdge6.ip";
-connectAttr "CliffShape.wm" "polyExtrudeEdge6.mp";
-connectAttr "polyExtrudeEdge5.out" "polyTweak5.ip";
-connectAttr "polyTweak6.out" "polyExtrudeEdge7.ip";
-connectAttr "CliffShape.wm" "polyExtrudeEdge7.mp";
-connectAttr "polyExtrudeEdge6.out" "polyTweak6.ip";
 connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN.sr";
-connectAttr "polyTweak7.out" "polyExtrudeEdge8.ip";
-connectAttr "CliffShape.wm" "polyExtrudeEdge8.mp";
-connectAttr "polyExtrudeEdge7.out" "polyTweak7.ip";
 connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN1.sr";
-connectAttr "polyTweak8.out" "polyExtrudeEdge9.ip";
-connectAttr "CliffShape.wm" "polyExtrudeEdge9.mp";
-connectAttr "polyExtrudeEdge8.out" "polyTweak8.ip";
-connectAttr "polyTweak9.out" "polyExtrudeEdge10.ip";
-connectAttr "CliffShape.wm" "polyExtrudeEdge10.mp";
-connectAttr "polyExtrudeEdge9.out" "polyTweak9.ip";
 connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN2.sr";
 connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN3.sr";
 connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN4.sr";
 connectAttr "sharedReferenceNode.sr" "tall_tree_base_latestRN5.sr";
 connectAttr "sharedReferenceNode.sr" "mushroom_latestRN7.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "PxrDomeLightShape.msg" ":lightList1.l" -na;
-connectAttr "CliffShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "GroundShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "PxrDomeLight.iog" ":defaultLightSet.dsm" -na;
+connectAttr "TEMP_LightingShape.msg" ":lightList1.l" -na;
+connectAttr "TEMP_Lighting.iog" ":defaultLightSet.dsm" -na;
 // End of forest_grove_SET_latest.ma
