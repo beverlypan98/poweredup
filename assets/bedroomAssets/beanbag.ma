@@ -12,7 +12,6 @@ fileInfo "product" "Maya 2018";
 fileInfo "version" "2018";
 fileInfo "cutIdentifier" "201706261615-f9658c4cfc";
 fileInfo "osv" "Mac OS X 10.13.6";
-fileInfo "license" "student";
 createNode transform -n "beanbag";
 	rename -uid "9DD62D90-AB4B-FB64-0CAC-A0914AEDF7ED";
 	addAttr -is true -ci true -k true -sn "currentUVSet" -ln "currentUVSet" -dt "string";
