@@ -2,13 +2,13 @@
 import os
 maya_files = []
 
-directory = "..\\assets"
+directory = "..\\assets\\plants"
 
 for root, dirs, files in os.walk(directory, topdown=False):
 	for name in files:
 		if ( name[-3:] == ".ma" ):
-			if (root.count('\\')<2):
-				maya_files.append(os.path.join(root, name))
+			maya_files.append(os.path.join(root, name))
+				
 
 file_count = 0
 total_count = 0
