@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: callaLilyBush_latest.ma
-//Last modified: Tue, Nov 05, 2019 12:34:41 PM
+//Last modified: Tue, Nov 05, 2019 11:47:37 PM
 //Codeset: 1252
 requires maya "2018ff09";
 requires -nodeType "PxrNormalMap" -nodeType "PxrSurface" -nodeType "rmanDisplayChannel"
@@ -14,6 +14,7 @@ fileInfo "product" "Maya 2018";
 fileInfo "version" "2018";
 fileInfo "cutIdentifier" "201903222215-65bada0e52";
 fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
+fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "29D15C5E-C445-6E26-B20F-3B81C29E4168";
 	setAttr ".v" no;
@@ -45195,22 +45196,22 @@ createNode mesh -n "flowerShape" -p "flowers";
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "8CECEAFB-4FAA-E32B-3093-C582C7A28CA7";
+	rename -uid "3731F0B3-4DC2-3690-828A-E98558791EE5";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "32ABD266-46C7-4F6A-782E-5C8F2DD7AA8E";
+	rename -uid "EA3F4566-407F-118E-5418-15833FDC4AA1";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A6729348-9241-1EC7-0BA4-DE9A41FF784A";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "C34535B6-4636-FA1C-8F54-18B4B36EEF47";
+	rename -uid "DD38DA17-4567-127A-26FD-AA82D91A7F3E";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "202360E0-FA4B-0F2D-8DE7-B9A6C4B94E9A";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8595960F-47FE-8167-8482-33A1C935ECFC";
+	rename -uid "168F695D-4451-5969-7C72-769D6013811F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "EE24F58A-41EF-2FED-349D-12B5950C28E5";
+	rename -uid "F311EC94-4AB9-83C7-DCAF-2A94C59B7C5D";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "09C2507F-BF4D-2AD5-D120-0B89EA33DA73";
 	setAttr ".b" -type "string" (
@@ -45228,7 +45229,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
 		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 983\n            -height 733\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
+		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 0\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
 		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
 		+ "            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
@@ -45584,8 +45585,8 @@ createNode PxrSurface -n "flower_shader";
 	setAttr ".g" 0;
 	setAttr ".multiScatter" no;
 	setAttr ".enableOverlappingVolumes" no;
-	setAttr ".glowGain" 0.2986111044883728;
-	setAttr ".glowColor" -type "float3" 1 1 1 ;
+	setAttr ".glowGain" 0.2222222238779068;
+	setAttr ".glowColor" -type "float3" 0 0 0 ;
 	setAttr ".bumpNormal" -type "float3" 0 0 0 ;
 	setAttr ".shadowColor" -type "float3" 0 0 0 ;
 	setAttr ".shadowMode" 0;
@@ -45741,8 +45742,8 @@ createNode PxrSurface -n "stamen_shader";
 	setAttr ".g" 0;
 	setAttr ".multiScatter" no;
 	setAttr ".enableOverlappingVolumes" no;
-	setAttr ".glowGain" 0;
-	setAttr ".glowColor" -type "float3" 1 1 1 ;
+	setAttr ".glowGain" 0.52083331346511841;
+	setAttr ".glowColor" -type "float3" 0.61930001 0.57429999 0.097099997 ;
 	setAttr ".bumpNormal" -type "float3" 0 0 0 ;
 	setAttr ".shadowColor" -type "float3" 0 0 0 ;
 	setAttr ".shadowMode" 0;
@@ -46283,6 +46284,12 @@ createNode file -n "viewportTex_leaves_shader";
 	rename -uid "8AE968DF-4983-BC14-4AFE-65906BFDACD7";
 	setAttr ".ftn" -type "string" "C:/Users/jakeh/OneDrive/Desktop/poweredup//sourceimages/plants/callalilly/callalily_obj_leaves_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
+createNode file -n "file1";
+	rename -uid "270C41AE-4D77-FB16-2755-618F8C42328B";
+	setAttr ".ftn" -type "string" "C:/Users/jakeh/OneDrive/Desktop/poweredup//sourceimages/plants/callalilly/yellow_glow.png.tex";
+	setAttr ".cs" -type "string" "sRGB";
+createNode place2dTexture -n "place2dTexture9";
+	rename -uid "8E5D073C-4B7F-62F1-6FCF-91ACB84FB9E2";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -46323,11 +46330,11 @@ select -ne :postProcessList1;
 	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 8 ".u";
+	setAttr -s 9 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 10 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 16 ".tx";
+	setAttr -s 17 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -46538,6 +46545,7 @@ connectAttr "viewportTex_leaves_shader.msg" "materialInfo1.t" -na;
 connectAttr "viewportTex_leaves_shader.oc" "leaves_shader_viewport_lambert.c";
 connectAttr "renderTex_flowers_basecolor.oc" "flower_shader.diffuseColor";
 connectAttr "flowers_rough.oa" "flower_shader.specularRoughness";
+connectAttr "file1.oc" "flower_shader.glowColor";
 connectAttr "flower_shader.oc" "PxrSurface2SG.rman__surface";
 connectAttr "flower_shader_viewport_lambert.oc" "PxrSurface2SG.ss";
 connectAttr "flowerShape.iog" "PxrSurface2SG.dsm" -na;
@@ -46762,6 +46770,28 @@ connectAttr ":defaultColorMgtGlobals.cme" "viewportTex_leaves_shader.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "viewportTex_leaves_shader.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "viewportTex_leaves_shader.cmcp";
 connectAttr ":defaultColorMgtGlobals.wsn" "viewportTex_leaves_shader.ws";
+connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file1.ws";
+connectAttr "place2dTexture9.c" "file1.c";
+connectAttr "place2dTexture9.tf" "file1.tf";
+connectAttr "place2dTexture9.rf" "file1.rf";
+connectAttr "place2dTexture9.mu" "file1.mu";
+connectAttr "place2dTexture9.mv" "file1.mv";
+connectAttr "place2dTexture9.s" "file1.s";
+connectAttr "place2dTexture9.wu" "file1.wu";
+connectAttr "place2dTexture9.wv" "file1.wv";
+connectAttr "place2dTexture9.re" "file1.re";
+connectAttr "place2dTexture9.of" "file1.of";
+connectAttr "place2dTexture9.r" "file1.ro";
+connectAttr "place2dTexture9.n" "file1.n";
+connectAttr "place2dTexture9.vt1" "file1.vt1";
+connectAttr "place2dTexture9.vt2" "file1.vt2";
+connectAttr "place2dTexture9.vt3" "file1.vt3";
+connectAttr "place2dTexture9.vc1" "file1.vc1";
+connectAttr "place2dTexture9.o" "file1.uv";
+connectAttr "place2dTexture9.ofs" "file1.fs";
 connectAttr "PxrSurface1SG.pa" ":renderPartition.st" -na;
 connectAttr "PxrSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "PxrSurface3SG.pa" ":renderPartition.st" -na;
@@ -46778,6 +46808,7 @@ connectAttr "place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture6.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture8.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "place2dTexture9.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "callaLillyBush_latest:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
@@ -46809,4 +46840,5 @@ connectAttr "viewportTex_flower_shader.msg" ":defaultTextureList1.tx" -na;
 connectAttr "viewportTex_stamen_shader.msg" ":defaultTextureList1.tx" -na;
 connectAttr "viewportTex_stem_shader.msg" ":defaultTextureList1.tx" -na;
 connectAttr "viewportTex_leaves_shader.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 // End of callaLilyBush_latest.ma
