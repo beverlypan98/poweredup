@@ -1,0 +1,66 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 1,
+                    "horizonFade": 1.2999999523162842,
+                    "nbSamples": 16
+                },
+                "Parallax Occlusion Mapping": {
+                    "maxPOMSamples": 16,
+                    "minPOMSamples": 4,
+                    "pomStrength": 1,
+                    "usePOM": false
+                }
+            },
+            "shader": "pbr-metal-rough-with-alpha-blending",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "PxrSurface13SG": {
+            "shader": "Main shader"
+        },
+        "belt": {
+            "shader": "Main shader"
+        },
+        "body": {
+            "shader": "Main shader"
+        },
+        "bootl": {
+            "shader": "Main shader"
+        },
+        "bootr": {
+            "shader": "Main shader"
+        },
+        "bottom buckle": {
+            "shader": "Main shader"
+        },
+        "buckles": {
+            "shader": "Main shader"
+        },
+        "chestplate": {
+            "shader": "Main shader"
+        },
+        "hair": {
+            "shader": "Main shader"
+        },
+        "pants": {
+            "shader": "Main shader"
+        },
+        "satchel": {
+            "shader": "Main shader"
+        },
+        "shirt": {
+            "shader": "Main shader"
+        },
+        "top buckle": {
+            "shader": "Main shader"
+        }
+    }
+}
