@@ -14,7 +14,6 @@ fileInfo "product" "Maya 2018";
 fileInfo "version" "2018";
 fileInfo "cutIdentifier" "201903222215-65bada0e52";
 fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
-fileInfo "license" "student";
 createNode transform -n "Forest_Grove_SET";
 	rename -uid "9B1B871C-1447-D967-E965-FE8D1589B359";
 	setAttr ".s" -type "double3" 0.82798899447441665 0.82798899447441665 0.82798899447441665 ;
