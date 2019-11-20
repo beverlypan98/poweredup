@@ -15,7 +15,6 @@ fileInfo "product" "Maya 2018";
 fileInfo "version" "2018";
 fileInfo "cutIdentifier" "201807191615-2c29512b8a";
 fileInfo "osv" "Microsoft Windows 8 Home Premium Edition, 64-bit  (Build 9200)\n";
-fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "74A4F714-E44B-B6BD-6EDE-448E4EBA99C8";
 	setAttr ".v" no;

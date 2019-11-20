@@ -6,7 +6,7 @@ directory = "..\\assets"
 
 for root, dirs, files in os.walk(directory, topdown=False):
 	for name in files:
-		if ( name[-3:] == ".ma" and root.count('\\') < 2):
+		if ( name[-3:] == ".ma"):
 			maya_files.append(os.path.join(root, name))
 				
 
