@@ -1,147 +1,197 @@
 //Maya ASCII 2018 scene
-//Name: bedroom_SET_latest.ma
-//Last modified: Tue, Nov 19, 2019 07:02:18 PM
+//Name: scene9.ma
+//Last modified: Tue, Nov 19, 2019 07:07:01 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "bed_NEW" -rfn "bed_NEWRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
-file -rdi 1 -ns "window" -rfn "windowRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/window.ma";
-file -rdi 1 -ns "door" -dr 1 -rfn "doorRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
-file -rdi 1 -ns "door1" -rfn "doorRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
-file -rdi 1 -ns "rug" -rfn "rugRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/rug.ma";
-file -rdi 1 -ns "treeShelf" -rfn "treeShelfRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/treeShelf.ma";
-file -rdi 1 -ns "officeChair" -rfn "officeChairRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/officeChair.ma";
-file -rdi 1 -ns "nightstand" -rfn "nightstandRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/nightstand.ma";
-file -rdi 1 -ns "bookshelf" -rfn "bookshelfRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
-file -rdi 1 -ns "clock" -rfn "clockRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/clock.ma";
-file -rdi 1 -ns "scarf" -rfn "scarfRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
-file -rdi 1 -ns "curtains1" -rfn "curtainsRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/curtains.ma";
-file -rdi 1 -ns "book_stack" -dr 1 -rfn "book_stackRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book_stack.ma";
-file -rdi 1 -ns "moonDecoration" -rfn "moonDecorationRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/moonDecoration.ma";
-file -rdi 1 -ns "smallTrashCan" -rfn "smallTrashCanRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/smallTrashCan.ma";
-file -rdi 1 -ns "phone" -rfn "phoneRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
-file -rdi 1 -ns "book27" -rfn "bookRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book.ma";
-file -rdi 1 -ns "Jacies_shoe_latest" -dr 1 -rfn "Jacies_shoe_latestRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/Jacies_shoe_latest.ma";
-file -rdi 1 -ns "floor_walls_latest" -rfn "floor_walls_latestRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/floor_walls_latest.ma";
-file -rdi 1 -ns "deskLamp_latest" -rfn "deskLamp_latestRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/deskLamp_latest.ma";
-file -rdi 1 -ns "desk_latest" -rfn "desk_latestRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/desk_latest.ma";
-file -rdi 2 -ns "book_stack" -rfn "desk_latest:book_stackRN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book_stack.ma";
-file -rdi 1 -ns "bookshelf2" -rfn "bookshelfRN1" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
-file -rdi 1 -ns "boardGames_latest" -rfn "boardGames_latestRN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/boardGames_latest.ma";
-file -rdi 1 -ns "houseSlippers_latest" -rfn "houseSlippers_latestRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/houseSlippers_latest.ma";
-file -rdi 1 -ns "bookStack_TREESHELF" -rfn "bookStack_TREESHELFRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_TREESHELF.ma";
-file -rdi 1 -ns "bookStack_LEFT_SHELF" -rfn "bookStack_LEFT_SHELFRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_LEFT_SHELF.ma";
-file -rdi 1 -ns "bookStack_RIGHT_SHELF" -rfn "bookStack_RIGHT_SHELFRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_RIGHT_SHELF.ma";
-file -rdi 1 -ns "teacup" -rfn "teacupRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/teacup.ma";
-file -rdi 1 -ns "backpack" -rfn "backpackRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/backpack.ma";
-file -rdi 1 -ns "CoffeeCupLatest" -rfn "CoffeeCupLatestRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/CoffeeCupLatest.ma";
-file -rdi 1 -ns "gameboy" -rfn "gameboyRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/gameboy.ma";
-file -rdi 1 -ns "golem_plushie" -rfn "golem_plushieRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/golem_plushie.ma";
-file -rdi 1 -ns "mac" -rfn "macRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
-file -rdi 1 -ns "musicbox" -rfn "musicboxRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/musicbox.ma";
-file -rdi 1 -ns "phone1" -rfn "phoneRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
-file -rdi 1 -ns "scarf1" -rfn "scarfRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
-file -rdi 1 -ns "strewn_pants" -rfn "strewn_pantsRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/strewn_pants.ma";
-file -rdi 1 -ns "toyPlane" -dr 1 -rfn "toyPlaneRN1" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyPlane.ma";
-file -rdi 1 -ns "toyTrain" -rfn "toyTrainRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyTrain.ma";
-file -rdi 1 -ns "bedsideTable1" -rfn "bedsideTableRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideTable.ma";
-file -rdi 1 -ns "bedsideLamp1" -rfn "bedsideLampRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideLamp.ma";
-file -rdi 1 -ns "beanbag1" -rfn "beanbagRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/beanbag.ma";
-file -rdi 1 -ns "hangingStars" -rfn "hangingStarsRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/hangingStars.ma";
-file -rdi 1 -ns "alarmclock" -rfn "alarmclockRN" -op "VERS|2018ff09|UVER|undef|MADE|undef|CHNG|undef|ICON|undef|INFO|undef|OBJN|undef|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
-		 -typ "mayaBinary" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/alarmclock.mb";
-file -rdi 1 -ns "poster1" -rfn "poster1RN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster1.ma";
-file -rdi 1 -ns "poster2" -rfn "poster2RN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster2.ma";
-file -rdi 1 -ns "mac" -rfn "bedroom_light_rig:macRN" -op "v=0;" -typ "mayaAscii"
+file -rdi 1 -ns "bed_NEW" -rfn "bedroom_SET_latest1:bed_NEWRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
+file -rdi 1 -ns "window" -rfn "bedroom_SET_latest1:windowRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/window.ma";
+file -rdi 1 -ns "door" -dr 1 -rfn "bedroom_SET_latest1:doorRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
+file -rdi 1 -ns "door1" -rfn "bedroom_SET_latest1:doorRN1" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
+file -rdi 1 -ns "rug" -rfn "bedroom_SET_latest1:rugRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/rug.ma";
+file -rdi 1 -ns "treeShelf" -rfn "bedroom_SET_latest1:treeShelfRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/treeShelf.ma";
+file -rdi 1 -ns "officeChair" -rfn "bedroom_SET_latest1:officeChairRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/officeChair.ma";
+file -rdi 1 -ns "nightstand" -rfn "bedroom_SET_latest1:nightstandRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/nightstand.ma";
+file -rdi 1 -ns "bookshelf" -rfn "bedroom_SET_latest1:bookshelfRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
+file -rdi 1 -ns "clock" -rfn "bedroom_SET_latest1:clockRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/clock.ma";
+file -rdi 1 -ns "scarf" -rfn "bedroom_SET_latest1:scarfRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
+file -rdi 1 -ns "curtains1" -rfn "bedroom_SET_latest1:curtainsRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/curtains.ma";
+file -rdi 1 -ns "book_stack" -dr 1 -rfn "bedroom_SET_latest1:book_stackRN" 
+		-op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book_stack.ma";
+file -rdi 1 -ns "moonDecoration" -rfn "bedroom_SET_latest1:moonDecorationRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/moonDecoration.ma";
+file -rdi 1 -ns "smallTrashCan" -rfn "bedroom_SET_latest1:smallTrashCanRN" 
+		-op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/smallTrashCan.ma";
+file -rdi 1 -ns "phone" -rfn "bedroom_SET_latest1:phoneRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
+file -rdi 1 -ns "book27" -rfn "bedroom_SET_latest1:bookRN1" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book.ma";
+file -rdi 1 -ns "Jacies_shoe_latest" -dr 1 -rfn "bedroom_SET_latest1:Jacies_shoe_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/Jacies_shoe_latest.ma";
+file -rdi 1 -ns "floor_walls_latest" -rfn "bedroom_SET_latest1:floor_walls_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/floor_walls_latest.ma";
+file -rdi 1 -ns "deskLamp_latest" -rfn "bedroom_SET_latest1:deskLamp_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/deskLamp_latest.ma";
+file -rdi 1 -ns "desk_latest" -rfn "bedroom_SET_latest1:desk_latestRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/desk_latest.ma";
+file -rdi 2 -ns "book_stack" -rfn "bedroom_SET_latest1:desk_latest:book_stackRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book_stack.ma";
+file -rdi 1 -ns "bookshelf2" -rfn "bedroom_SET_latest1:bookshelfRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
+file -rdi 1 -ns "boardGames_latest" -rfn "bedroom_SET_latest1:boardGames_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/boardGames_latest.ma";
+file -rdi 1 -ns "houseSlippers_latest" -rfn "bedroom_SET_latest1:houseSlippers_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/houseSlippers_latest.ma";
+file -rdi 1 -ns "bookStack_TREESHELF" -rfn "bedroom_SET_latest1:bookStack_TREESHELFRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_TREESHELF.ma";
+file -rdi 1 -ns "bookStack_LEFT_SHELF" -rfn "bedroom_SET_latest1:bookStack_LEFT_SHELFRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_LEFT_SHELF.ma";
+file -rdi 1 -ns "bookStack_RIGHT_SHELF" -rfn "bedroom_SET_latest1:bookStack_RIGHT_SHELFRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_RIGHT_SHELF.ma";
+file -rdi 1 -ns "teacup" -rfn "bedroom_SET_latest1:teacupRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/teacup.ma";
+file -rdi 1 -ns "backpack" -rfn "bedroom_SET_latest1:backpackRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/backpack.ma";
+file -rdi 1 -ns "CoffeeCupLatest" -rfn "bedroom_SET_latest1:CoffeeCupLatestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/CoffeeCupLatest.ma";
+file -rdi 1 -ns "gameboy" -rfn "bedroom_SET_latest1:gameboyRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/gameboy.ma";
+file -rdi 1 -ns "golem_plushie" -rfn "bedroom_SET_latest1:golem_plushieRN" 
+		-op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/golem_plushie.ma";
+file -rdi 1 -ns "mac" -rfn "bedroom_SET_latest1:macRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
-file -r -ns "bed_NEW" -dr 1 -rfn "bed_NEWRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
-file -r -ns "window" -dr 1 -rfn "windowRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/window.ma";
-file -r -ns "door" -dr 1 -rfn "doorRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
-file -r -ns "door1" -dr 1 -rfn "doorRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
-file -r -ns "rug" -dr 1 -rfn "rugRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/rug.ma";
-file -r -ns "treeShelf" -dr 1 -rfn "treeShelfRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/treeShelf.ma";
-file -r -ns "officeChair" -dr 1 -rfn "officeChairRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/officeChair.ma";
-file -r -ns "nightstand" -dr 1 -rfn "nightstandRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/nightstand.ma";
-file -r -ns "bookshelf" -dr 1 -rfn "bookshelfRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
-file -r -ns "clock" -dr 1 -rfn "clockRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/clock.ma";
-file -r -ns "scarf" -dr 1 -rfn "scarfRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
-file -r -ns "curtains1" -dr 1 -rfn "curtainsRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/curtains.ma";
-file -r -ns "book_stack" -dr 1 -rfn "book_stackRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book_stack.ma";
-file -r -ns "moonDecoration" -dr 1 -rfn "moonDecorationRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/moonDecoration.ma";
-file -r -ns "smallTrashCan" -dr 1 -rfn "smallTrashCanRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/smallTrashCan.ma";
-file -r -ns "phone" -dr 1 -rfn "phoneRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
-file -r -ns "book27" -dr 1 -rfn "bookRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book.ma";
-file -r -ns "Jacies_shoe_latest" -dr 1 -rfn "Jacies_shoe_latestRN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/Jacies_shoe_latest.ma";
-file -r -ns "floor_walls_latest" -dr 1 -rfn "floor_walls_latestRN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/floor_walls_latest.ma";
-file -r -ns "deskLamp_latest" -dr 1 -rfn "deskLamp_latestRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/deskLamp_latest.ma";
-file -r -ns "desk_latest" -dr 1 -rfn "desk_latestRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/desk_latest.ma";
-file -r -ns "bookshelf2" -dr 1 -rfn "bookshelfRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
-file -r -ns "boardGames_latest" -dr 1 -rfn "boardGames_latestRN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/boardGames_latest.ma";
-file -r -ns "houseSlippers_latest" -dr 1 -rfn "houseSlippers_latestRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/houseSlippers_latest.ma";
-file -r -ns "bookStack_TREESHELF" -dr 1 -rfn "bookStack_TREESHELFRN" -op "v=0;" 
-		-typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_TREESHELF.ma";
-file -r -ns "bookStack_LEFT_SHELF" -dr 1 -rfn "bookStack_LEFT_SHELFRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_LEFT_SHELF.ma";
-file -r -ns "bookStack_RIGHT_SHELF" -dr 1 -rfn "bookStack_RIGHT_SHELFRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_RIGHT_SHELF.ma";
-file -r -ns "teacup" -dr 1 -rfn "teacupRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/teacup.ma";
-file -r -ns "backpack" -dr 1 -rfn "backpackRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/backpack.ma";
-file -r -ns "CoffeeCupLatest" -dr 1 -rfn "CoffeeCupLatestRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/CoffeeCupLatest.ma";
-file -r -ns "gameboy" -dr 1 -rfn "gameboyRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/gameboy.ma";
-file -r -ns "golem_plushie" -dr 1 -rfn "golem_plushieRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/golem_plushie.ma";
-file -r -ns "mac" -dr 1 -rfn "macRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
-file -r -ns "musicbox" -dr 1 -rfn "musicboxRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/musicbox.ma";
-file -r -ns "phone1" -dr 1 -rfn "phoneRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
-file -r -ns "scarf1" -dr 1 -rfn "scarfRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
-file -r -ns "strewn_pants" -dr 1 -rfn "strewn_pantsRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/strewn_pants.ma";
-file -r -ns "toyPlane" -dr 1 -rfn "toyPlaneRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyPlane.ma";
-file -r -ns "toyTrain" -dr 1 -rfn "toyTrainRN1" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyTrain.ma";
-file -r -ns "bedsideTable1" -dr 1 -rfn "bedsideTableRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideTable.ma";
-file -r -ns "bedsideLamp1" -dr 1 -rfn "bedsideLampRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideLamp.ma";
-file -r -ns "beanbag1" -dr 1 -rfn "beanbagRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/beanbag.ma";
-file -r -ns "hangingStars" -dr 1 -rfn "hangingStarsRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/hangingStars.ma";
-file -r -ns "alarmclock" -dr 1 -rfn "alarmclockRN" -op "VERS|2018ff09|UVER|undef|MADE|undef|CHNG|undef|ICON|undef|INFO|undef|OBJN|undef|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
+file -rdi 1 -ns "musicbox" -rfn "bedroom_SET_latest1:musicboxRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/musicbox.ma";
+file -rdi 1 -ns "phone1" -rfn "bedroom_SET_latest1:phoneRN1" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
+file -rdi 1 -ns "scarf1" -rfn "bedroom_SET_latest1:scarfRN1" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
+file -rdi 1 -ns "strewn_pants" -rfn "bedroom_SET_latest1:strewn_pantsRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/strewn_pants.ma";
+file -rdi 1 -ns "toyPlane" -dr 1 -rfn "bedroom_SET_latest1:toyPlaneRN1" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyPlane.ma";
+file -rdi 1 -ns "toyTrain" -rfn "bedroom_SET_latest1:toyTrainRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyTrain.ma";
+file -rdi 1 -ns "bedsideTable1" -rfn "bedroom_SET_latest1:bedsideTableRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideTable.ma";
+file -rdi 1 -ns "bedsideLamp1" -rfn "bedroom_SET_latest1:bedsideLampRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideLamp.ma";
+file -rdi 1 -ns "beanbag1" -rfn "bedroom_SET_latest1:beanbagRN" -op "v=0;" 
+		-typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/beanbag.ma";
+file -rdi 1 -ns "hangingStars" -rfn "bedroom_SET_latest1:hangingStarsRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/hangingStars.ma";
+file -rdi 1 -ns "alarmclock" -rfn "bedroom_SET_latest1:alarmclockRN" -op "VERS|2018ff09|UVER|undef|MADE|undef|CHNG|undef|ICON|undef|INFO|undef|OBJN|undef|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
 		 -typ "mayaBinary" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/alarmclock.mb";
-file -r -ns "poster1" -dr 1 -rfn "poster1RN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster1.ma";
-file -r -ns "poster2" -dr 1 -rfn "poster2RN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster2.ma";
-file -r -ns "mac" -dr 1 -rfn "bedroom_light_rig:macRN" -op "v=0;" -typ "mayaAscii"
+file -rdi 1 -ns "poster1" -rfn "bedroom_SET_latest1:poster1RN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster1.ma";
+file -rdi 1 -ns "poster2" -rfn "bedroom_SET_latest1:poster2RN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster2.ma";
+file -rdi 1 -ns "mac" -rfn "bedroom_SET_latest1:bedroom_light_rig:macRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
+file -r -ns "bed_NEW" -dr 1 -rfn "bedroom_SET_latest1:bed_NEWRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
+file -r -ns "window" -dr 1 -rfn "bedroom_SET_latest1:windowRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/window.ma";
+file -r -ns "door" -dr 1 -rfn "bedroom_SET_latest1:doorRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
+file -r -ns "door1" -dr 1 -rfn "bedroom_SET_latest1:doorRN1" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
+file -r -ns "rug" -dr 1 -rfn "bedroom_SET_latest1:rugRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/rug.ma";
+file -r -ns "treeShelf" -dr 1 -rfn "bedroom_SET_latest1:treeShelfRN" -op "v=0;" 
+		-typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/treeShelf.ma";
+file -r -ns "officeChair" -dr 1 -rfn "bedroom_SET_latest1:officeChairRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/officeChair.ma";
+file -r -ns "nightstand" -dr 1 -rfn "bedroom_SET_latest1:nightstandRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/nightstand.ma";
+file -r -ns "bookshelf" -dr 1 -rfn "bedroom_SET_latest1:bookshelfRN" -op "v=0;" 
+		-typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
+file -r -ns "clock" -dr 1 -rfn "bedroom_SET_latest1:clockRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/clock.ma";
+file -r -ns "scarf" -dr 1 -rfn "bedroom_SET_latest1:scarfRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
+file -r -ns "curtains1" -dr 1 -rfn "bedroom_SET_latest1:curtainsRN1" -op "v=0;" 
+		-typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/curtains.ma";
+file -r -ns "book_stack" -dr 1 -rfn "bedroom_SET_latest1:book_stackRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book_stack.ma";
+file -r -ns "moonDecoration" -dr 1 -rfn "bedroom_SET_latest1:moonDecorationRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/moonDecoration.ma";
+file -r -ns "smallTrashCan" -dr 1 -rfn "bedroom_SET_latest1:smallTrashCanRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/smallTrashCan.ma";
+file -r -ns "phone" -dr 1 -rfn "bedroom_SET_latest1:phoneRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
+file -r -ns "book27" -dr 1 -rfn "bedroom_SET_latest1:bookRN1" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book.ma";
+file -r -ns "Jacies_shoe_latest" -dr 1 -rfn "bedroom_SET_latest1:Jacies_shoe_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/Jacies_shoe_latest.ma";
+file -r -ns "floor_walls_latest" -dr 1 -rfn "bedroom_SET_latest1:floor_walls_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/floor_walls_latest.ma";
+file -r -ns "deskLamp_latest" -dr 1 -rfn "bedroom_SET_latest1:deskLamp_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/deskLamp_latest.ma";
+file -r -ns "desk_latest" -dr 1 -rfn "bedroom_SET_latest1:desk_latestRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/desk_latest.ma";
+file -r -ns "bookshelf2" -dr 1 -rfn "bedroom_SET_latest1:bookshelfRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
+file -r -ns "boardGames_latest" -dr 1 -rfn "bedroom_SET_latest1:boardGames_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/boardGames_latest.ma";
+file -r -ns "houseSlippers_latest" -dr 1 -rfn "bedroom_SET_latest1:houseSlippers_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/houseSlippers_latest.ma";
+file -r -ns "bookStack_TREESHELF" -dr 1 -rfn "bedroom_SET_latest1:bookStack_TREESHELFRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_TREESHELF.ma";
+file -r -ns "bookStack_LEFT_SHELF" -dr 1 -rfn "bedroom_SET_latest1:bookStack_LEFT_SHELFRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_LEFT_SHELF.ma";
+file -r -ns "bookStack_RIGHT_SHELF" -dr 1 -rfn "bedroom_SET_latest1:bookStack_RIGHT_SHELFRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_RIGHT_SHELF.ma";
+file -r -ns "teacup" -dr 1 -rfn "bedroom_SET_latest1:teacupRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/teacup.ma";
+file -r -ns "backpack" -dr 1 -rfn "bedroom_SET_latest1:backpackRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/backpack.ma";
+file -r -ns "CoffeeCupLatest" -dr 1 -rfn "bedroom_SET_latest1:CoffeeCupLatestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/CoffeeCupLatest.ma";
+file -r -ns "gameboy" -dr 1 -rfn "bedroom_SET_latest1:gameboyRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/gameboy.ma";
+file -r -ns "golem_plushie" -dr 1 -rfn "bedroom_SET_latest1:golem_plushieRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/golem_plushie.ma";
+file -r -ns "mac" -dr 1 -rfn "bedroom_SET_latest1:macRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
+file -r -ns "musicbox" -dr 1 -rfn "bedroom_SET_latest1:musicboxRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/musicbox.ma";
+file -r -ns "phone1" -dr 1 -rfn "bedroom_SET_latest1:phoneRN1" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
+file -r -ns "scarf1" -dr 1 -rfn "bedroom_SET_latest1:scarfRN1" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
+file -r -ns "strewn_pants" -dr 1 -rfn "bedroom_SET_latest1:strewn_pantsRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/strewn_pants.ma";
+file -r -ns "toyPlane" -dr 1 -rfn "bedroom_SET_latest1:toyPlaneRN1" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyPlane.ma";
+file -r -ns "toyTrain" -dr 1 -rfn "bedroom_SET_latest1:toyTrainRN1" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyTrain.ma";
+file -r -ns "bedsideTable1" -dr 1 -rfn "bedroom_SET_latest1:bedsideTableRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideTable.ma";
+file -r -ns "bedsideLamp1" -dr 1 -rfn "bedroom_SET_latest1:bedsideLampRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideLamp.ma";
+file -r -ns "beanbag1" -dr 1 -rfn "bedroom_SET_latest1:beanbagRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/beanbag.ma";
+file -r -ns "hangingStars" -dr 1 -rfn "bedroom_SET_latest1:hangingStarsRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/hangingStars.ma";
+file -r -ns "alarmclock" -dr 1 -rfn "bedroom_SET_latest1:alarmclockRN" -op "VERS|2018ff09|UVER|undef|MADE|undef|CHNG|undef|ICON|undef|INFO|undef|OBJN|undef|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
+		 -typ "mayaBinary" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/alarmclock.mb";
+file -r -ns "poster1" -dr 1 -rfn "bedroom_SET_latest1:poster1RN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster1.ma";
+file -r -ns "poster2" -dr 1 -rfn "bedroom_SET_latest1:poster2RN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster2.ma";
+file -r -ns "mac" -dr 1 -rfn "bedroom_SET_latest1:bedroom_light_rig:macRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
 requires maya "2018";
 requires -nodeType "HIKSolverNode" -nodeType "HIKCharacterNode" -nodeType "HIKControlSetNode"
 		 -nodeType "HIKFK2State" -nodeType "HIKState2SK" -nodeType "HIKProperty2State" -dataType "HIKCharacter"
@@ -164,28 +214,26 @@ fileInfo "cutIdentifier" "201706261615-f9658c4cfc";
 fileInfo "osv" "Mac OS X 10.13.6";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
-	rename -uid "C758C018-ED44-A183-828A-47A742AD3A6E";
+	rename -uid "7DB98075-7D4F-75A2-489F-1FBC5A37AFE9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -29.054081291237313 3.2959782975192211 1.9744177928373314 ;
-	setAttr ".r" -type "double3" -3.9383527251643633 2792.9999999984943 -7.5964855507134479e-15 ;
+	setAttr ".t" -type "double3" -23.922596018659437 5.0276077241143575 0.048543421419935798 ;
+	setAttr ".r" -type "double3" -7.5383527296101089 -89.399999999999878 0 ;
 createNode camera -s -n "perspShape" -p "persp";
-	rename -uid "1B620404-1B40-2D8C-0ABD-78BC6EE5B967";
+	rename -uid "7217D48E-764E-EAA3-257E-61A96A331299";
 	setAttr -k off ".v" no;
-	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 25.834798699047127;
+	setAttr ".coi" 32.842880087273791;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -5.3565811733606887 2.4584545494605115 -0.73772042154695483 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
-	rename -uid "8B8068C7-0942-513D-B71E-AC8D1EB36DC8";
+	rename -uid "F6C9188B-5246-B56C-C070-8090E363C011";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 1000.1 0 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
-	rename -uid "6162A49E-4444-C2C9-740E-E0963BD3EB5F";
+	rename -uid "BC7F4346-D741-AF00-3772-EE80E3A2A2ED";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -196,27 +244,27 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".hc" -type "string" "viewSet -t %camera";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
-	rename -uid "1B2E3B7A-CA47-512F-9970-84BED8DE6E75";
+	rename -uid "A2EF4912-6F4D-84D8-BD0D-36A916382000";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
-	rename -uid "7277B28A-4F43-B772-02BE-DF9D59F89317";
+	rename -uid "1A964F67-6C4C-5A76-C578-489FB9B6FA0D";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 286.60528892452248;
+	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
 	setAttr ".hc" -type "string" "viewSet -f %camera";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
-	rename -uid "3376E504-A84E-C72C-E4BF-82AA7B952329";
+	rename -uid "2705AD3A-494C-6532-17D1-138555D8D62A";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 1000.1 0 0 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
-	rename -uid "9A5B28F4-B040-3E0B-7E43-07BFBEF49397";
+	rename -uid "CFF0C750-1040-9085-954A-618978BC011D";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
@@ -226,12 +274,12 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "Roof";
-	rename -uid "0772FB14-2F40-1EE6-D21F-1E881F6A4D46";
+createNode transform -n "bedroom_SET_latest1:Roof";
+	rename -uid "8816C076-5D41-3E71-9924-0DA6371B0E60";
 	setAttr ".t" -type "double3" -1.3039637097550716 6.2486854519007906 -1.2138229827034146 ;
 	setAttr ".s" -type "double3" 10.119423089677296 0.41359481102789053 13.519483501423322 ;
-createNode mesh -n "RoofShape" -p "Roof";
-	rename -uid "9CB65E0F-124F-C104-254E-B196B7F2412D";
+createNode mesh -n "bedroom_SET_latest1:RoofShape" -p "bedroom_SET_latest1:Roof";
+	rename -uid "A5FD52AC-B542-5F72-BB84-76A1F8F83CE0";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -240,31 +288,31 @@ createNode mesh -n "RoofShape" -p "Roof";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "TREE_SHELF";
-	rename -uid "7940C2B6-354C-8194-B4CE-E4BCB55A30F8";
+createNode transform -n "bedroom_SET_latest1:TREE_SHELF";
+	rename -uid "B50C6761-1F4F-91AA-E1CE-3292D46C34BD";
 	setAttr ".t" -type "double3" 1.8062524179984871 0 3.2309311374941165 ;
 	setAttr ".r" -type "double3" 0 -89.999999999999972 0 ;
 	setAttr ".rp" -type "double3" 1.5481762334682192 2.553747666053372 -7.5989231035064435 ;
 	setAttr ".sp" -type "double3" 1.5481762334682192 2.553747666053372 -7.5989231035064435 ;
-createNode transform -n "FLOOR_STUFF";
-	rename -uid "868A301D-7249-3CD7-147D-029B3893C383";
+createNode transform -n "bedroom_SET_latest1:FLOOR_STUFF";
+	rename -uid "472D8F3A-4D4C-1900-04DB-9AA7164282B9";
 	setAttr ".t" -type "double3" -0.29326850940313642 0 1.6582380132942438 ;
 	setAttr ".r" -type "double3" 0 8.6599130460486133 0 ;
 	setAttr ".rp" -type "double3" 2.3594574925428771 0.29627788566396734 -6.5625326342631656 ;
 	setAttr ".sp" -type "double3" 2.3594574925428771 0.29627788566396734 -6.5625326342631656 ;
-createNode transform -n "BOOK_CABINET";
-	rename -uid "FAB56C71-794D-9186-D575-1DA017967993";
+createNode transform -n "bedroom_SET_latest1:BOOK_CABINET";
+	rename -uid "85FBCC35-724F-29AB-96FA-B0BBCD75889B";
 	setAttr ".t" -type "double3" 3.929762997164004 0 5.4150390607512788 ;
 	setAttr ".r" -type "double3" 0 -89.999999999999972 0 ;
 	setAttr ".rp" -type "double3" -0.86090864101727149 1.3075353066381421 -7.3021343367576881 ;
 	setAttr ".sp" -type "double3" -0.86090864101727149 1.3075353066381421 -7.3021343367576881 ;
-createNode transform -n "fox:fox_mesh" -p "BOOK_CABINET";
-	rename -uid "D3F52919-D641-070A-42C3-AAB0CB5789A2";
+createNode transform -n "bedroom_SET_latest1:fox:fox_mesh" -p "bedroom_SET_latest1:BOOK_CABINET";
+	rename -uid "088796C6-E044-E50A-1466-FB9D51CFBC8B";
 	setAttr ".t" -type "double3" -1.2768488046335564 2.0420868583902183 -7.3338206523548237 ;
 	setAttr ".r" -type "double3" 0.30975019093309819 -50.595516377765854 0.7243201765008852 ;
 	setAttr ".s" -type "double3" 0.044747954510419526 0.044747954510419526 0.044747954510419526 ;
-createNode mesh -n "fox:fox_meshShape" -p "fox:fox_mesh";
-	rename -uid "20B74760-724A-95C6-EFBF-6599D060BA79";
+createNode mesh -n "bedroom_SET_latest1:fox:fox_meshShape" -p "bedroom_SET_latest1:fox:fox_mesh";
+	rename -uid "1FB3BC9C-FD40-7CCF-4FF1-B0BDB89A9EDA";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:1051]";
 	setAttr ".vir" yes;
@@ -4778,26 +4826,26 @@ createNode mesh -n "fox:fox_meshShape" -p "fox:fox_mesh";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode transform -n "SMALL_CABINET";
-	rename -uid "F56B0D2A-2F48-4F20-B4F1-9F963CB73A69";
+createNode transform -n "bedroom_SET_latest1:SMALL_CABINET";
+	rename -uid "80E26A89-044C-EAC5-CA5A-71BBB34F556B";
 	setAttr ".t" -type "double3" 4.1907034516597097 -0.012819635634732318 -4.9407199489681188 ;
 	setAttr ".r" -type "double3" 0 89.999999999999972 0 ;
 	setAttr ".rp" -type "double3" -1.1602981945656883 0.87180203953855762 4.7082443494520412 ;
 	setAttr ".sp" -type "double3" -1.1602981945656883 0.87180203953855762 4.7082443494520412 ;
-createNode transform -n "MAY_REMOVE";
-	rename -uid "B40EC545-7247-2F7C-C42D-A58EDF900780";
+createNode transform -n "bedroom_SET_latest1:MAY_REMOVE";
+	rename -uid "2A7F3C3C-DB46-4C96-C98F-398A45E9C091";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0 0 -0.95947257241653539 ;
 	setAttr ".rp" -type "double3" -5.4874507661518876 1.2377353441566044 -3.6248718866663809 ;
 	setAttr ".sp" -type "double3" -5.4874507661518876 1.2377353441566044 -3.6248718866663809 ;
-createNode transform -n "tvstand:tvCabinet" -p "MAY_REMOVE";
-	rename -uid "2F6ED921-E843-43DF-B1BE-1597932BAF40";
+createNode transform -n "bedroom_SET_latest1:tvstand:tvCabinet" -p "bedroom_SET_latest1:MAY_REMOVE";
+	rename -uid "C3822AF5-AC4B-548D-07B5-E19A621F1C67";
 	setAttr ".t" -type "double3" -4.6601448098903795 -1.507624940101981 -3.555498789720581 ;
 	setAttr ".s" -type "double3" 0.46293865445682342 0.32766465022034152 0.32766465022034152 ;
 	setAttr ".rp" -type "double3" -0.8256499171257019 2.2302990096740896 -0.13135445117950439 ;
 	setAttr ".sp" -type "double3" -0.8256499171257019 2.2302990096740896 -0.13135445117950439 ;
-createNode mesh -n "tvstand:tvCabinetShape" -p "tvstand:tvCabinet";
-	rename -uid "84ACFBA7-ED48-0C91-A88A-A0823C1B0B28";
+createNode mesh -n "bedroom_SET_latest1:tvstand:tvCabinetShape" -p "bedroom_SET_latest1:tvstand:tvCabinet";
+	rename -uid "6B66E39E-CB42-DA04-5295-E5B65B1AA422";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:3937]";
 	setAttr ".vir" yes;
@@ -16618,18 +16666,18 @@ createNode mesh -n "tvstand:tvCabinetShape" -p "tvstand:tvCabinet";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode transform -n "tv" -p "MAY_REMOVE";
-	rename -uid "689DEFD4-1C4B-8C10-1C3A-DF9F7BF8D450";
+createNode transform -n "bedroom_SET_latest1:tv" -p "bedroom_SET_latest1:MAY_REMOVE";
+	rename -uid "C91E3364-5A42-2385-FFF7-B88DF9B0C586";
 	setAttr ".t" -type "double3" -5.4756775604447476 1.4992469624751403 -3.5367806150707093 ;
 	setAttr ".s" -type "double3" 0.082481292696314407 0.086102728635207917 0.10331836366936675 ;
-createNode transform -n "television:pCube1" -p "tv";
-	rename -uid "60998F08-2946-1D17-63AF-70A6BF4ACB77";
+createNode transform -n "bedroom_SET_latest1:television:pCube1" -p "bedroom_SET_latest1:tv";
+	rename -uid "846C015E-6A40-5F89-5407-5D96C7B6003A";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 4.097862083877196 2.6813791962482925 0.76450013440915532 ;
 	setAttr ".r" -type "double3" -53.532351734115792 -0.66615607198353455 -1.9758669133903757 ;
 	setAttr ".s" -type "double3" 0.070596210402287071 0.11779707346498809 0.093070809781232292 ;
-createNode mesh -n "television:pCubeShape1" -p "television:pCube1";
-	rename -uid "0636E5A9-A84C-C600-9EE4-228B2406A8E5";
+createNode mesh -n "bedroom_SET_latest1:television:pCubeShape1" -p "bedroom_SET_latest1:television:pCube1";
+	rename -uid "8D378FEE-4B42-AA38-3C07-8095BB009E96";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -16714,12 +16762,12 @@ createNode mesh -n "television:pCubeShape1" -p "television:pCube1";
 	setAttr ".pt[319]" -type "float3" -0.32785615 -0.2256943 0.33366248 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode transform -n "television:TV" -p "tv";
-	rename -uid "3C65A283-EC48-BA4E-1893-36A32FB873E2";
+createNode transform -n "bedroom_SET_latest1:television:TV" -p "bedroom_SET_latest1:tv";
+	rename -uid "27B32F5F-4841-1738-A98D-5A851B218446";
 	setAttr ".t" -type "double3" 0 6.8689816148014682 0 ;
 	setAttr ".s" -type "double3" 7.7657757206108009 8.0188824784093953 9.3189308027418249 ;
-createNode mesh -n "television:TVShape" -p "television:TV";
-	rename -uid "75A81A48-A849-445B-7C76-289BA304B77C";
+createNode mesh -n "bedroom_SET_latest1:television:TVShape" -p "bedroom_SET_latest1:television:TV";
+	rename -uid "E56F4958-F14C-20FC-7441-4D9F96AA6479";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -16774,16 +16822,16 @@ createNode mesh -n "television:TVShape" -p "television:TV";
 	setAttr ".pt[675]" -type "float3" 0 0 -2.7939677e-09 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode transform -n "console:PS2" -p "MAY_REMOVE";
-	rename -uid "A35895F2-E14E-12E0-A028-E498C0B63798";
+createNode transform -n "bedroom_SET_latest1:console:PS2" -p "bedroom_SET_latest1:MAY_REMOVE";
+	rename -uid "7463FE90-6549-69C4-8DE1-0984DCF0BBF7";
 	setAttr ".t" -type "double3" -5.3029507259490387 0.93430247775833786 -3.7462683199751887 ;
 	setAttr ".r" -type "double3" 0 89.999999999999972 0 ;
 	setAttr ".s" -type "double3" 0.68299815645537343 0.68299815645537343 0.68299815645537343 ;
-createNode transform -n "console:Console" -p "console:PS2";
-	rename -uid "D493B4BE-1C45-F657-A200-209DEC618DD3";
+createNode transform -n "bedroom_SET_latest1:console:Console" -p "bedroom_SET_latest1:console:PS2";
+	rename -uid "C4410578-4C47-F4CF-28E4-48826C1EA243";
 	setAttr ".t" -type "double3" 0 0.42951748236477216 0 ;
-createNode mesh -n "console:ConsoleShape" -p "console:Console";
-	rename -uid "C4938B98-AA45-5D15-1324-20A314E0A1EE";
+createNode mesh -n "bedroom_SET_latest1:console:ConsoleShape" -p "bedroom_SET_latest1:console:Console";
+	rename -uid "81B689C5-0546-733D-A87A-2D86E7AA266B";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -17687,21 +17735,21 @@ createNode mesh -n "console:ConsoleShape" -p "console:Console";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "console:Controller" -p "console:PS2";
-	rename -uid "107118E7-A047-3852-32DF-ECBDF8ACAFF9";
+createNode transform -n "bedroom_SET_latest1:console:Controller" -p "bedroom_SET_latest1:console:PS2";
+	rename -uid "8BACD6A2-F743-D5A3-C7A7-CFACCE176A51";
 	setAttr ".t" -type "double3" -0.21808132535778549 0.073853798035420942 -0.43260945187554684 ;
 	setAttr ".r" -type "double3" -24.851787873615823 -64.693888182064626 0 ;
 	setAttr ".s" -type "double3" 1.5241119664116973 1.5241119664116973 1.5241119664116973 ;
 	setAttr ".rp" -type "double3" -0.6289099673328945 0.26739085997968881 0.57866600280611369 ;
 	setAttr ".sp" -type "double3" -0.6289099673328945 0.26739085997968881 0.57866600280611369 ;
-createNode transform -n "console:Remote" -p "console:Controller";
-	rename -uid "F6D86EF2-944B-6AED-F12C-108739A16AC2";
+createNode transform -n "bedroom_SET_latest1:console:Remote" -p "bedroom_SET_latest1:console:Controller";
+	rename -uid "FC569662-BB4A-E81F-AB0A-B885F56FBD3D";
 	setAttr ".t" -type "double3" -0.28782953271251405 -0.24237426786041988 -0.54482576923928738 ;
 	setAttr ".r" -type "double3" -10.326191453832582 0 0 ;
 	setAttr ".rp" -type "double3" -0.34108044868963361 0.51005613031241348 1.1250889478560009 ;
 	setAttr ".sp" -type "double3" -0.34108044868963361 0.51005613031241348 1.1250889478560009 ;
-createNode mesh -n "console:RemoteShape" -p "|MAY_REMOVE|console:PS2|console:Controller|console:Remote";
-	rename -uid "C49B427A-7D49-5BF2-D8BF-A2936F424272";
+createNode mesh -n "bedroom_SET_latest1:console:RemoteShape" -p "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller|bedroom_SET_latest1:console:Remote";
+	rename -uid "CFD95BB1-EC4A-33DA-768D-C5A4ED671C04";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:1199]";
 	setAttr ".vir" yes;
@@ -21082,14 +21130,14 @@ createNode mesh -n "console:RemoteShape" -p "|MAY_REMOVE|console:PS2|console:Con
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "console:Buttons" -p "console:Controller";
-	rename -uid "319AADBF-7D47-31EF-D11C-0AB472E1B3C5";
+createNode transform -n "bedroom_SET_latest1:console:Buttons" -p "bedroom_SET_latest1:console:Controller";
+	rename -uid "673BE0D1-3543-03AE-255D-4FA52CF279CF";
 	setAttr ".t" -type "double3" -0.27802897661268039 -0.2326986682303922 -0.55523684132979967 ;
 	setAttr ".r" -type "double3" -1.6259796698479332 4.5343294297136785 -3.1990991163365492 ;
 	setAttr ".rp" -type "double3" -0.26648336877178486 0.54857724791536389 1.1641547869435658 ;
 	setAttr ".sp" -type "double3" -0.26648336877178486 0.54857724791536389 1.1641547869435658 ;
-createNode mesh -n "console:ButtonsShape" -p "|MAY_REMOVE|console:PS2|console:Controller|console:Buttons";
-	rename -uid "BE798204-014C-2D14-FC75-22968C3AA6C6";
+createNode mesh -n "bedroom_SET_latest1:console:ButtonsShape" -p "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller|bedroom_SET_latest1:console:Buttons";
+	rename -uid "DE53053C-3B4B-8093-3AA8-D58AE64B9400";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:239]";
 	setAttr ".vir" yes;
@@ -21765,21 +21813,21 @@ createNode mesh -n "console:ButtonsShape" -p "|MAY_REMOVE|console:PS2|console:Co
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "console:Controller1" -p "console:PS2";
-	rename -uid "D400A9B8-724E-6437-C0E6-0AAE78BD1D17";
+createNode transform -n "bedroom_SET_latest1:console:Controller1" -p "bedroom_SET_latest1:console:PS2";
+	rename -uid "AACA8B89-5A44-21A0-D5AA-E4BA9EE946E5";
 	setAttr ".t" -type "double3" -0.68823578931158536 0.85170648799245852 -0.61306151624665084 ;
 	setAttr ".r" -type "double3" -79.831082861387742 62.049726134489966 9.1076323644293637 ;
 	setAttr ".s" -type "double3" 1.6948828387536641 1.6948828387536641 1.6948828387536641 ;
 	setAttr ".rp" -type "double3" -0.6289099673328945 0.26739085997968881 0.57866600280611369 ;
 	setAttr ".sp" -type "double3" -0.6289099673328945 0.26739085997968881 0.57866600280611369 ;
-createNode transform -n "console:Remote" -p "console:Controller1";
-	rename -uid "70031E36-A547-D77E-D593-B597C5FAB022";
+createNode transform -n "bedroom_SET_latest1:console:Remote" -p "bedroom_SET_latest1:console:Controller1";
+	rename -uid "DECE9D1A-8D46-877C-49B0-46AA23F900DA";
 	setAttr ".t" -type "double3" -0.28782953271251405 -0.24237426786041988 -0.54482576923928738 ;
 	setAttr ".r" -type "double3" -10.326191453832582 0 0 ;
 	setAttr ".rp" -type "double3" -0.34108044868963361 0.51005613031241348 1.1250889478560009 ;
 	setAttr ".sp" -type "double3" -0.34108044868963361 0.51005613031241348 1.1250889478560009 ;
-createNode mesh -n "console:RemoteShape" -p "|MAY_REMOVE|console:PS2|console:Controller1|console:Remote";
-	rename -uid "8B1422E9-074E-0160-41C0-BCA7C5057A75";
+createNode mesh -n "bedroom_SET_latest1:console:RemoteShape" -p "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller1|bedroom_SET_latest1:console:Remote";
+	rename -uid "FEC8D886-BD46-58C3-3ADC-C3934C622D24";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:1199]";
 	setAttr ".vir" yes;
@@ -25160,14 +25208,14 @@ createNode mesh -n "console:RemoteShape" -p "|MAY_REMOVE|console:PS2|console:Con
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "console:Buttons" -p "console:Controller1";
-	rename -uid "F14A7AA7-464D-EFCC-A09A-208916FE5174";
+createNode transform -n "bedroom_SET_latest1:console:Buttons" -p "bedroom_SET_latest1:console:Controller1";
+	rename -uid "3DCA0D6E-B140-66DF-1DCB-CEA0A29AE8C2";
 	setAttr ".t" -type "double3" -0.27802897661268039 -0.2326986682303922 -0.55523684132979967 ;
 	setAttr ".r" -type "double3" -1.6259796698479332 4.5343294297136785 -3.1990991163365492 ;
 	setAttr ".rp" -type "double3" -0.26648336877178486 0.54857724791536389 1.1641547869435658 ;
 	setAttr ".sp" -type "double3" -0.26648336877178486 0.54857724791536389 1.1641547869435658 ;
-createNode mesh -n "console:ButtonsShape" -p "|MAY_REMOVE|console:PS2|console:Controller1|console:Buttons";
-	rename -uid "9886E4E3-1F43-085A-077F-96BDF2DF8022";
+createNode mesh -n "bedroom_SET_latest1:console:ButtonsShape" -p "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller1|bedroom_SET_latest1:console:Buttons";
+	rename -uid "15C58455-494E-992D-B168-23B6C7D96ECB";
 	setAttr -k off ".v";
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:239]";
 	setAttr ".vir" yes;
@@ -25843,13 +25891,13 @@ createNode mesh -n "console:ButtonsShape" -p "|MAY_REMOVE|console:PS2|console:Co
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "desklamp";
-	rename -uid "9B8DAEE4-F94F-E7EB-90F8-3285196E546A";
+createNode transform -n "bedroom_SET_latest1:desklamp";
+	rename -uid "1741B8A2-BB46-DFFA-2560-2CA412CD6C3F";
 	setAttr ".t" -type "double3" -5.6018856762436053 2.4612423312342901 -1.6494542678075064 ;
 	setAttr ".r" -type "double3" 0 -149.70478524854173 0 ;
 	setAttr ".s" -type "double3" 0.42386005097123697 0.42386005097123697 0.42386005097123697 ;
-createNode PxrSphereLight -n "desklampShape" -p "desklamp";
-	rename -uid "9BEAC1BE-4B42-01BC-274A-C6BF1781A541";
+createNode PxrSphereLight -n "bedroom_SET_latest1:desklampShape" -p "bedroom_SET_latest1:desklamp";
+	rename -uid "2FD7B929-C848-75A8-A750-17BE58A12D1E";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -25981,12 +26029,12 @@ createNode PxrSphereLight -n "desklampShape" -p "desklamp";
 	setAttr ".oclr" -type "float3" 0 0 0 ;
 	setAttr ".rman_coneAngleDepth" 10;
 	setAttr ".rman_coneAngleOpacity" 0.5;
-createNode transform -n "overhead_2";
-	rename -uid "B3751081-CF43-C1B8-0A7B-C3900AD938E0";
+createNode transform -n "bedroom_SET_latest1:overhead_2";
+	rename -uid "A19335E9-7F4D-9246-02CD-099FBB146DF7";
 	setAttr ".t" -type "double3" -5.6018856762436053 4.2661966315052871 -2.6936695530378341 ;
 	setAttr ".s" -type "double3" 3.0305384622595275 3.0305384622595275 3.0305384622595275 ;
-createNode PxrSphereLight -n "overhead_2Shape" -p "overhead_2";
-	rename -uid "6925DAED-534C-8CAD-44A6-599CC395C967";
+createNode PxrSphereLight -n "bedroom_SET_latest1:overhead_2Shape" -p "bedroom_SET_latest1:overhead_2";
+	rename -uid "949B4220-E843-2DA9-154F-FFA482C38850";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -26118,12 +26166,12 @@ createNode PxrSphereLight -n "overhead_2Shape" -p "overhead_2";
 	setAttr ".oclr" -type "float3" 0 0 0 ;
 	setAttr ".rman_coneAngleDepth" 10;
 	setAttr ".rman_coneAngleOpacity" 0.5;
-createNode transform -n "window1";
-	rename -uid "10CB66A8-6243-7104-DA8E-8DA1DB5D1588";
+createNode transform -n "bedroom_SET_latest1:window1";
+	rename -uid "F5E95C30-4242-19C4-8145-04B13CE59F7B";
 	setAttr ".t" -type "double3" 1.5067858575703901 2.29635482846935 10.191432806536906 ;
 	setAttr ".s" -type "double3" 7.390653608401057 7.390653608401057 7.390653608401057 ;
-createNode PxrRectLight -n "window1Shape" -p "window1";
-	rename -uid "7B10B3AA-044C-913B-B41F-1E81F096973F";
+createNode PxrRectLight -n "bedroom_SET_latest1:window1Shape" -p "bedroom_SET_latest1:window1";
+	rename -uid "A6EB264E-0144-2C59-0D88-36BF4D72AB6C";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -26258,13 +26306,13 @@ createNode PxrRectLight -n "window1Shape" -p "window1";
 	setAttr ".oclr" -type "float3" 0 0 0 ;
 	setAttr ".rman_coneAngleDepth" 10;
 	setAttr ".rman_coneAngleOpacity" 0.5;
-createNode transform -n "overhead_1";
-	rename -uid "F46BEC2F-5F4E-EC66-92AF-18905F04B635";
+createNode transform -n "bedroom_SET_latest1:overhead_1";
+	rename -uid "88A3228E-D847-4D53-750F-2BBBF391E630";
 	setAttr ".t" -type "double3" -2.7028885029271499 4.8509773871110076 -0.77835687694811972 ;
 	setAttr ".r" -type "double3" -87.808530963641999 0 0 ;
 	setAttr ".s" -type "double3" 1.8812813145224641 1.8812813145224641 1.8812813145224641 ;
-createNode PxrSphereLight -n "overhead_1Shape" -p "overhead_1";
-	rename -uid "84CCE2A3-5346-4F22-EBFA-4498E629329D";
+createNode PxrSphereLight -n "bedroom_SET_latest1:overhead_1Shape" -p "bedroom_SET_latest1:overhead_1";
+	rename -uid "76FCEE2E-064A-AC39-F933-03B4820EDE43";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -26396,8 +26444,8 @@ createNode PxrSphereLight -n "overhead_1Shape" -p "overhead_1";
 	setAttr ".oclr" -type "float3" 0 0 0 ;
 	setAttr ".rman_coneAngleDepth" 10;
 	setAttr ".rman_coneAngleOpacity" 0.5;
-createNode transform -n "render";
-	rename -uid "7B6F269B-E24C-36F6-D9B8-32970A1771D4";
+createNode transform -n "bedroom_SET_latest1:render";
+	rename -uid "657624B8-664D-F5BE-3EAA-7399048D32F2";
 	setAttr ".t" -type "double3" -12.16124019840777 2.368712556043977 -0.54476401364638205 ;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
@@ -26406,8 +26454,8 @@ createNode transform -n "render";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
 	setAttr -l on ".rz";
-createNode camera -n "renderShape" -p "render";
-	rename -uid "CE846DD0-A342-7E9C-7D83-158056BA1146";
+createNode camera -n "bedroom_SET_latest1:renderShape" -p "bedroom_SET_latest1:render";
+	rename -uid "667F1359-3A45-F848-940D-DEB8C355572B";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
@@ -26417,13 +26465,13 @@ createNode camera -n "renderShape" -p "render";
 	setAttr ".den" -type "string" "persp1_depth";
 	setAttr ".man" -type "string" "persp1_mask";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
-createNode transform -n "PxrSphereLight";
-	rename -uid "1362E023-D94E-DE7F-DACD-9093F807EB56";
+createNode transform -n "bedroom_SET_latest1:PxrSphereLight";
+	rename -uid "D63A99CB-684A-75E9-DB57-9EBD99C54F27";
 	setAttr ".t" -type "double3" -5.3565811733606887 1.978824350046112 -0.39134874799117325 ;
 	setAttr ".r" -type "double3" 4.5434474275283037e-15 -69.511732556954826 22.071154832057523 ;
 	setAttr ".s" -type "double3" 0.34289188502466234 0.34289188502466234 0.34289188502466234 ;
-createNode PxrSphereLight -n "PxrSphereLightShape" -p "PxrSphereLight";
-	rename -uid "2A6033FB-3248-5A01-53C4-9C8D8DBF62A6";
+createNode PxrSphereLight -n "bedroom_SET_latest1:PxrSphereLightShape" -p "bedroom_SET_latest1:PxrSphereLight";
+	rename -uid "F9B23995-904E-AF71-0825-DD805BD246C4";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -26555,13 +26603,13 @@ createNode PxrSphereLight -n "PxrSphereLightShape" -p "PxrSphereLight";
 	setAttr ".oclr" -type "float3" 0 0 0 ;
 	setAttr ".rman_coneAngleDepth" 10;
 	setAttr ".rman_coneAngleOpacity" 0.5;
-createNode transform -n "rim_light";
-	rename -uid "E80EA862-BB4C-D84F-F92D-E2A9BABCA51E";
+createNode transform -n "bedroom_SET_latest1:rim_light";
+	rename -uid "88B7999B-0848-4929-66B2-399A2E50FA6F";
 	setAttr ".t" -type "double3" -0.99202476456732303 2.0776361598215756 -3.528347770331385 ;
 	setAttr ".r" -type "double3" 0 -222.37259221363146 0 ;
 	setAttr ".s" -type "double3" 3.4382565894829673 3.4382565894829673 3.4382565894829673 ;
-createNode PxrRectLight -n "rim_lightShape" -p "rim_light";
-	rename -uid "C87B9498-2743-917E-0AAE-0594C6C630E2";
+createNode PxrRectLight -n "bedroom_SET_latest1:rim_lightShape" -p "bedroom_SET_latest1:rim_light";
+	rename -uid "18BE2959-A84A-2889-1C38-D0980AAC7595";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -26696,12 +26744,12 @@ createNode PxrRectLight -n "rim_lightShape" -p "rim_light";
 	setAttr ".oclr" -type "float3" 0 0 0 ;
 	setAttr ".rman_coneAngleDepth" 10;
 	setAttr ".rman_coneAngleOpacity" 0.5;
-createNode transform -n "moon_decor_light";
-	rename -uid "3EF1B02B-AB44-7112-350A-5F986F29D8E0";
+createNode transform -n "bedroom_SET_latest1:moon_decor_light";
+	rename -uid "7C3AB637-1643-3166-BAD3-5EB8B65C093A";
 	setAttr ".t" -type "double3" 2.5230754251288623 3.5083298467314483 2.3317565942328002 ;
 	setAttr ".s" -type "double3" 0.5312078832242727 0.53120788322427248 0.53120788322427182 ;
-createNode PxrSphereLight -n "moon_decor_lightShape" -p "moon_decor_light";
-	rename -uid "1F6F57AC-C642-3267-BEFD-539B57693533";
+createNode PxrSphereLight -n "bedroom_SET_latest1:moon_decor_lightShape" -p "bedroom_SET_latest1:moon_decor_light";
+	rename -uid "98CF6E58-EC40-4AF7-7230-4793C7ED2B1A";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -26833,12 +26881,12 @@ createNode PxrSphereLight -n "moon_decor_lightShape" -p "moon_decor_light";
 	setAttr ".oclr" -type "float3" 0 0 0 ;
 	setAttr ".rman_coneAngleDepth" 10;
 	setAttr ".rman_coneAngleOpacity" 0.5;
-createNode transform -n "mac_light";
-	rename -uid "F61E3F44-B546-94C5-7535-8C9C20171C6C";
+createNode transform -n "bedroom_SET_latest1:mac_light";
+	rename -uid "C31EBB58-414C-F3DD-B5FF-CD861066BA4D";
 	setAttr ".t" -type "double3" -5.716548057063509 1.86806256273222 -0.3406566321221759 ;
 	setAttr ".s" -type "double3" 0.15283948494265454 0.15283948494265448 0.15283948494265454 ;
-createNode PxrSphereLight -n "mac_lightShape" -p "mac_light";
-	rename -uid "46B17745-2E4B-C904-0349-B5A7079599D1";
+createNode PxrSphereLight -n "bedroom_SET_latest1:mac_lightShape" -p "bedroom_SET_latest1:mac_light";
+	rename -uid "CABD9D10-B34B-A13C-7113-7FBF5DFEA6CE";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -26970,13 +27018,13 @@ createNode PxrSphereLight -n "mac_lightShape" -p "mac_light";
 	setAttr ".oclr" -type "float3" 0 0 0 ;
 	setAttr ".rman_coneAngleDepth" 10;
 	setAttr ".rman_coneAngleOpacity" 0.5;
-createNode transform -n "face_light";
-	rename -uid "463FC34E-034D-2103-D3C6-4B95DBE9CF0A";
+createNode transform -n "bedroom_SET_latest1:face_light";
+	rename -uid "C79C17B4-1344-28F8-E097-A29247B3A66E";
 	setAttr ".t" -type "double3" -5.3565811733606887 2.4584545494605115 -0.85881588759332916 ;
 	setAttr ".r" -type "double3" -111.14012655405276 -79.887270748999583 131.49244392800117 ;
 	setAttr ".s" -type "double3" 0.34289188502466234 0.34289188502466234 0.34289188502466234 ;
-createNode PxrSphereLight -n "face_lightShape" -p "face_light";
-	rename -uid "FA1F7564-344B-CD5A-28B3-3E9D4FC7BCA4";
+createNode PxrSphereLight -n "bedroom_SET_latest1:face_lightShape" -p "bedroom_SET_latest1:face_light";
+	rename -uid "0090077E-804E-2979-5E61-C68A2E3D6E31";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27108,8 +27156,35 @@ createNode PxrSphereLight -n "face_lightShape" -p "face_light";
 	setAttr ".oclr" -type "float3" 0 0 0 ;
 	setAttr ".rman_coneAngleDepth" 10;
 	setAttr ".rman_coneAngleOpacity" 0.5;
+createNode lightLinker -s -n "lightLinker1";
+	rename -uid "8D8DB305-5B4D-37BE-FE88-41AA9DA3AD34";
+	setAttr -s 178 ".lnk";
+	setAttr -s 100 ".ign";
+	setAttr -s 178 ".slnk";
+createNode displayLayerManager -n "layerManager";
+	rename -uid "5EE43E42-4140-0BB3-56F0-F381749F46F7";
+	setAttr -s 4 ".dli[1:3]"  1 2 3;
+	setAttr -s 4 ".dli";
+createNode displayLayer -n "defaultLayer";
+	rename -uid "5B357CEE-6847-BF47-8C71-B6AC63E6A039";
+createNode renderLayerManager -n "renderLayerManager";
+	rename -uid "C43DAF19-FF44-B646-92C6-6A9E3FD395F0";
+createNode renderLayer -n "defaultRenderLayer";
+	rename -uid "397B167C-7542-5658-7059-7FB1637BA251";
+	setAttr ".g" yes;
+createNode shapeEditorManager -n "shapeEditorManager";
+	rename -uid "B76CEA85-8A4B-511F-3C5E-19BDC9F82326";
+	setAttr -s 3 ".bsdt";
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 -1 ;
+	setAttr ".bsdt[1].bscd" -type "Int32Array" 3 2 1 -2 ;
+	setAttr ".bsdt[1].bsdn" -type "string" "bedroom_SET_latest1";
+	setAttr ".bsdt[2].bscd" -type "Int32Array" 0 ;
+	setAttr ".bsdt[2].bspi" 1;
+	setAttr ".bsdt[2].bsdn" -type "string" "karen_latest";
+createNode poseInterpolatorManager -n "poseInterpolatorManager";
+	rename -uid "929D8554-A844-9DBC-D8E9-C284FB18EA77";
 createNode rmanGlobals -s -n "rmanGlobals";
-	rename -uid "5CD7E2FE-5347-3744-FD73-40AD1CC2A5B1";
+	rename -uid "DA69D32F-8644-71F5-C8DB-85A21A29F371";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27218,7 +27293,7 @@ createNode rmanGlobals -s -n "rmanGlobals";
 	setAttr ".rlfData" -type "string" "init";
 	setAttr ".jobid" -type "string" "";
 createNode rmanDisplay -s -n "rmanDefaultDisplay";
-	rename -uid "4C4C55D3-634B-9BFF-5091-6FB6286C7D76";
+	rename -uid "C49CBCDB-A649-8BB9-895D-A182D761C2BF";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27231,8 +27306,8 @@ createNode rmanDisplay -s -n "rmanDefaultDisplay";
 	setAttr ".remapSmoothness" 0;
 	setAttr -s 2 ".displayChannels";
 	setAttr -l on ".name" -type "string" "beauty";
-createNode d_openexr -n "d_openexr";
-	rename -uid "106DC6FD-1F4B-A53F-71CE-9BA80B44D450";
+createNode d_openexr -n "bedroom_SET_latest1:d_openexr";
+	rename -uid "B75C899D-9140-4707-C7F5-F482CE4528FC";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27242,8 +27317,8 @@ createNode d_openexr -n "d_openexr";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "Ci";
-	rename -uid "5C604A4A-434C-C3DC-D719-3582F961C8AB";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:Ci";
+	rename -uid "F838F1D2-6345-5077-620B-D9B676237C40";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27259,8 +27334,8 @@ createNode rmanDisplayChannel -n "Ci";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "a";
-	rename -uid "6A0C5D1B-2043-3E65-3F85-B5A21B244F95";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:a";
+	rename -uid "CA14B2AC-AF44-47BF-E4BC-3BABEF6E4A5A";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27276,8 +27351,8 @@ createNode rmanDisplayChannel -n "a";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "d_openexr1";
-	rename -uid "8FCA5ADA-B344-8054-5CA5-DEB4B3755AEC";
+createNode d_openexr -n "bedroom_SET_latest1:d_openexr1";
+	rename -uid "9FB2C686-7948-3767-B34C-2E82B04A6E0B";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27287,8 +27362,8 @@ createNode d_openexr -n "d_openexr1";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "Ci1";
-	rename -uid "01D22E47-E14E-67C8-5B1D-F89F09A072A5";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:Ci1";
+	rename -uid "0BAC69E6-5D46-98D5-F4BA-7E9D6D87DDAB";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27304,8 +27379,8 @@ createNode rmanDisplayChannel -n "Ci1";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "a1";
-	rename -uid "8D476CF2-F344-8403-8029-EC9D04E54857";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:a1";
+	rename -uid "70105076-994D-A791-2BB9-31A4F156DE8F";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27321,8 +27396,8 @@ createNode rmanDisplayChannel -n "a1";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "d_openexr2";
-	rename -uid "756FA43A-7940-0C68-6312-B3BBC90BAC56";
+createNode d_openexr -n "bedroom_SET_latest1:d_openexr2";
+	rename -uid "37CCBCC8-6E4B-68DD-00C1-4D89CCA0A79C";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27332,8 +27407,8 @@ createNode d_openexr -n "d_openexr2";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "Ci2";
-	rename -uid "97DB72DB-7242-7238-1D24-A6AE263FDFBE";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:Ci2";
+	rename -uid "AFE1EC26-2E48-1B9E-19F6-DF8FD93B2191";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27349,8 +27424,8 @@ createNode rmanDisplayChannel -n "Ci2";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "a2";
-	rename -uid "48A0CEFC-A046-F261-4959-37B3D969C751";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:a2";
+	rename -uid "9EE52A55-5F46-6865-CD61-308ED4176434";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27366,19 +27441,8 @@ createNode rmanDisplayChannel -n "a2";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode RenderMan -s -n "renderManGlobals";
-	rename -uid "4AA9C47E-3249-33ED-3A25-6E97969A1EEB";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr -s 2 ".p";
-	setAttr ".nt" -type "string" "settings:job";
 createNode OmnidirectionalStereo -s -n "OmnidirectionalStereo";
-	rename -uid "A6688434-0E47-3CFC-3714-E597288E0DF0";
+	rename -uid "CC145430-5C44-63F3-91E4-5ABE4213D188";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27386,7 +27450,7 @@ createNode OmnidirectionalStereo -s -n "OmnidirectionalStereo";
 	setAttr ".interpupilaryDistance" 0.063500002026557922;
 lockNode -l 1 ;
 createNode PxrCamera -s -n "PxrCamera";
-	rename -uid "8DB8A692-8043-49C0-6FFE-E9827D2D895A";
+	rename -uid "E8A481F9-C444-DE5D-8EE3-6488E8A20945";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27417,18 +27481,15 @@ createNode PxrCamera -s -n "PxrCamera";
 	setAttr ".detail" 0;
 	setAttr ".matte" -type "string" "";
 lockNode -l 1 ;
-createNode PxrDebugShadingContext -s -n "PxrDebugShadingContext";
-	rename -uid "C69C4B37-F54C-9BB7-866B-A5BA151A8430";
-lockNode -l 1 ;
 createNode PxrDefault -s -n "PxrDefault";
-	rename -uid "87FB86EE-EA4F-95B1-9CEA-1197E20AC0E8";
+	rename -uid "3240B27E-6143-B93F-016E-2BA3CEFFF789";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
 	setAttr ".nds" 0;
 lockNode -l 1 ;
 createNode PxrDirectLighting -s -n "PxrDirectLighting";
-	rename -uid "5DF00AE3-9446-286F-DF45-6CBF339B7520";
+	rename -uid "FC7AAAC2-FA47-640C-46A7-288E10570B55";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27437,7 +27498,7 @@ createNode PxrDirectLighting -s -n "PxrDirectLighting";
 	setAttr ".numBxdfSamples" 4;
 lockNode -l 1 ;
 createNode PxrOcclusion -s -n "PxrOcclusion";
-	rename -uid "394B976B-F845-2B46-BA47-B68CA8E88213";
+	rename -uid "91222FFA-7043-2A18-09E1-CCAA123FBA9D";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27450,7 +27511,7 @@ createNode PxrOcclusion -s -n "PxrOcclusion";
 	setAttr ".useAlbedo" no;
 lockNode -l 1 ;
 createNode PxrPathTracer -s -n "PxrPathTracer";
-	rename -uid "3DB2CBF2-894C-27AA-76BE-E0939DDF0140";
+	rename -uid "E5E45091-834E-856A-9862-068A422EA814";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27474,7 +27535,7 @@ createNode PxrPathTracer -s -n "PxrPathTracer";
 	setAttr ".clampLuminance" 10;
 lockNode -l 1 ;
 createNode PxrVCM -s -n "PxrVCM";
-	rename -uid "30613578-B441-A098-2626-E484B6B7DCC5";
+	rename -uid "24362B82-2440-CE28-EE43-518829F42ACA";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27495,11 +27556,8 @@ createNode PxrVCM -s -n "PxrVCM";
 	setAttr ".photonGuidingBBoxMin" -type "float3" 1e+30 1e+30 1e+30 ;
 	setAttr ".photonGuidingBBoxMax" -type "float3" -1e+30 -1e+30 -1e+30 ;
 lockNode -l 1 ;
-createNode PxrValidateBxdf -s -n "PxrValidateBxdf";
-	rename -uid "EFA396E1-2E4F-9CBB-127E-8C81DD8D6D98";
-lockNode -l 1 ;
 createNode PxrVisualizer -s -n "PxrVisualizer";
-	rename -uid "BB2E0F9D-3E4C-E3EA-2680-25B27345B109";
+	rename -uid "1B791EA0-A14F-2C07-8C00-2B8D34EAF7A6";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -27513,896 +27571,13 @@ createNode PxrVisualizer -s -n "PxrVisualizer";
 	setAttr ".wireframeOpacity" 0.5;
 	setAttr ".wireframeWidth" 1;
 lockNode -l 1 ;
-createNode RenderMan -s -n "renderManRISGlobals";
-	rename -uid "25A33288-864B-D2C2-C8D8-18B6ED848F77";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -k true -sn "rman__toropt___renderDataCleanupJob" -ln "rman__toropt___renderDataCleanupJob" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___shaderCleanupJob" -ln "rman__toropt___shaderCleanupJob" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___textureCleanupJob" -ln "rman__toropt___textureCleanupJob" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___ribCleanupJob" -ln "rman__toropt___ribCleanupJob" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___ribFlatten" -ln "rman__toropt___ribFlatten" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___renderDataCleanupFrame" -ln "rman__toropt___renderDataCleanupFrame" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___textureCleanupFrame" -ln "rman__toropt___textureCleanupFrame" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___ribCleanupFrame" -ln "rman__toropt___ribCleanupFrame" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__toropt___primaryCamera" -ln "rman__toropt___primaryCamera" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__toropt___enableRenderLayers" -ln "rman__toropt___enableRenderLayers" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__toropt___renderLayer" -ln "rman__toropt___renderLayer" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__toropt___motionBlurType" -ln "rman__toropt___motionBlurType" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__toropt___shutterAngle" -ln "rman__toropt___shutterAngle" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__toropt___shutterTiming" -ln "rman__toropt___shutterTiming" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__toropt___cacheCrew" -ln "rman__toropt___cacheCrew" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__toropt___renumber" -ln "rman__toropt___renumber" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___renumberStart" -ln "rman__toropt___renumberStart" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___renumberBy" -ln "rman__toropt___renumberBy" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___lazyRibGen" -ln "rman__toropt___lazyRibGen" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___lazyRender" -ln "rman__toropt___lazyRender" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___bakeMode" -ln "rman__toropt___bakeMode" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___furChunkSize" -ln "rman__toropt___furChunkSize" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___enableRifs" -ln "rman__torattr___enableRifs" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__toropt___nativeShadingSupport" -ln "rman__toropt___nativeShadingSupport" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___motionSamples" -ln "rman__torattr___motionSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___referenceFrame" -ln "rman__torattr___referenceFrame" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___mapResolution" -ln "rman__torattr___mapResolution" 
-		-at "long2" -nc 2;
-	addAttr -ci true -k true -sn "rman__torattr___mapResolution0" -ln "rman__torattr___mapResolution0" 
-		-dv -1 -at "long" -p "rman__torattr___mapResolution";
-	addAttr -ci true -k true -sn "rman__torattr___mapResolution1" -ln "rman__torattr___mapResolution1" 
-		-dv -1 -at "long" -p "rman__torattr___mapResolution";
-	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___cameraBlur" -ln "rman__torattr___cameraBlur" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___frontPlane" -ln "rman__torattr___frontPlane" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___backPlane" -ln "rman__torattr___backPlane" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___crop" -ln "rman__torattr___crop" -dv 
-		-1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passExtFormat" -ln "rman__torattr___passExtFormat" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___defaultDisplacementShader" -ln "rman__torattr___defaultDisplacementShader" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___defaultAtmosphereShader" -ln "rman__torattr___defaultAtmosphereShader" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___defaultInteriorShader" -ln "rman__torattr___defaultInteriorShader" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__toropt___preFrameScript" -ln "rman__toropt___preFrameScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__toropt___postFrameScript" -ln "rman__toropt___postFrameScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___preRenderScript" -ln "rman__torattr___preRenderScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___postRenderScript" -ln "rman__torattr___postRenderScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___defaultRiOptionsScript" -ln "rman__torattr___defaultRiOptionsScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___defaultRiAttributesScript" -ln "rman__torattr___defaultRiAttributesScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___renderBeginScript" -ln "rman__torattr___renderBeginScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___transformBeginScript" -ln "rman__torattr___transformBeginScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___transformEndScript" -ln "rman__torattr___transformEndScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___postTransformScript" -ln "rman__torattr___postTransformScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___preShapeScript" -ln "rman__torattr___preShapeScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___postShapeScript" -ln "rman__torattr___postShapeScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___cacheShapeScript" -ln "rman__torattr___cacheShapeScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___bakeChannels" -ln "rman__torattr___bakeChannels" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___bakeCrew" -ln "rman__torattr___bakeCrew" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___bakeOutputFile" -ln "rman__torattr___bakeOutputFile" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___customShadingGroup" -ln "rman__torattr___customShadingGroup" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___shaderBindingStrength" -ln "rman__torattr___shaderBindingStrength" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___enableObjectInstancing" -ln "rman__torattr___enableObjectInstancing" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___impliedSSBakeMode" -ln "rman__torattr___impliedSSBakeMode" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__toropt___JOBSTYLE" -ln "rman__toropt___JOBSTYLE" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___deformationBlurStyle" -ln "rman__torattr___deformationBlurStyle" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___deformationBlurScale" -ln "rman__torattr___deformationBlurScale" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__torattr___enableMfcProcPrim" -ln "rman__torattr___enableMfcProcPrim" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___linearizeColors" -ln "rman__torattr___linearizeColors" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___referenceCamera" -ln "rman__torattr___referenceCamera" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__toropt___enableRIS" -ln "rman__toropt___enableRIS" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___denoise" -ln "rman__torattr___denoise" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___denoiseFilter" -ln "rman__torattr___denoiseFilter" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___outputShadowAOV" -ln "rman__torattr___outputShadowAOV" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___enableImagePlaneFilter" -ln "rman__torattr___enableImagePlaneFilter" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__trace_maxdepth" -ln "rman__riopt__trace_maxdepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
-		-at "long2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
-		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
-	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
-		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
-	addAttr -ci true -k true -sn "rman__riopt__trace_decimationrate" -ln "rman__riopt__trace_decimationrate" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__limits_threads" -ln "rman__riopt__limits_threads" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening" -ln "rman__riopt__Camera_shutteropening" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening0" -ln "rman__riopt__Camera_shutteropening0" 
-		-dv -1 -at "float" -p "rman__riopt__Camera_shutteropening";
-	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening1" -ln "rman__riopt__Camera_shutteropening1" 
-		-dv -1 -at "float" -p "rman__riopt__Camera_shutteropening";
-	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
-		-at "long2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
-		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
-	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
-		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
-	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__hair_minwidth" -ln "rman__riopt__hair_minwidth" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__riopt__rib_compression" -ln "rman__riopt__rib_compression" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__rib_format" -ln "rman__riopt__rib_format" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__rib_precision" -ln "rman__riopt__rib_precision" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__user_iesIgnoreWatts" -ln "rman__riopt__user_iesIgnoreWatts" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__statistics_level" -ln "rman__riopt__statistics_level" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__statistics_filename" -ln "rman__riopt__statistics_filename" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__statistics_xmlfilename" -ln "rman__riopt__statistics_xmlfilename" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Projection_name" -ln "rman__riopt__Projection_name" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Projection2_name" -ln "rman__riopt__Projection2_name" 
-		-dt "string";
-	addAttr -ci true -uac -k true -sn "rman__riopt__limits_zthreshold" -ln "rman__riopt__limits_zthreshold" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdr" -ln "rman__riopt__limits_zthresholdR" 
-		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
-	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdg" -ln "rman__riopt__limits_zthresholdG" 
-		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
-	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdb" -ln "rman__riopt__limits_zthresholdB" 
-		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
-	addAttr -ci true -uac -k true -sn "rman__riopt__limits_othreshold" -ln "rman__riopt__limits_othreshold" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdr" -ln "rman__riopt__limits_othresholdR" 
-		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
-	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdg" -ln "rman__riopt__limits_othresholdG" 
-		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
-	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdb" -ln "rman__riopt__limits_othresholdB" 
-		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
-	addAttr -ci true -k true -sn "rman__riopt__limits_texturememory" -ln "rman__riopt__limits_texturememory" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__limits_geocachememory" -ln "rman__riopt__limits_geocachememory" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__limits_proceduralmemory" -ln "rman__riopt__limits_proceduralmemory" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowtiles" -ln "rman__riopt__limits_deepshadowtiles" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowmemory" -ln "rman__riopt__limits_deepshadowmemory" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__limits_brickmemory" -ln "rman__riopt__limits_brickmemory" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__user_sceneUnits" -ln "rman__riopt__user_sceneUnits" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__riopt__lpe_diffuse2" -ln "rman__riopt__lpe_diffuse2" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__lpe_diffuse3" -ln "rman__riopt__lpe_diffuse3" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__lpe_specular2" -ln "rman__riopt__lpe_specular2" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__lpe_specular3" -ln "rman__riopt__lpe_specular3" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__lpe_specular4" -ln "rman__riopt__lpe_specular4" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__lpe_specular5" -ln "rman__riopt__lpe_specular5" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__lpe_specular6" -ln "rman__riopt__lpe_specular6" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__lpe_specular7" -ln "rman__riopt__lpe_specular7" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__lpe_specular8" -ln "rman__riopt__lpe_specular8" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_minextrasamples" -ln "rman__riopt__Hider_minextrasamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_darkfalloff" -ln "rman__riopt__Hider_darkfalloff" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__limits_opacitycachememory" -ln "rman__riopt__limits_opacitycachememory" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_samplemotion" -ln "rman__riattr__trace_samplemotion" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riattr__dice_referencecamera" -ln "rman__riattr__dice_referencecamera" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riattr__dice_minlength" -ln "rman__riattr__dice_minlength" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riattr__procedural_reentrant" -ln "rman__riattr__procedural_reentrant" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__dice_micropolygonlength" -ln "rman__riattr__dice_micropolygonlength" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riattr__dice_watertight" -ln "rman__riattr__dice_watertight" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riattr__trace_autobias" -ln "rman__riattr__trace_autobias" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riattr__trace_bias" -ln "rman__riattr__trace_bias" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__riattr__displacementbound_coordinatesystem" 
-		-ln "rman__riattr__displacementbound_coordinatesystem" -dt "string";
-	addAttr -ci true -k true -sn "rman__riattr__displacementbound_sphere" -ln "rman__riattr__displacementbound_sphere" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Projection_fov" -ln "rman__riopt__Projection_fov" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Projection_hsweep" -ln "rman__riopt__Projection_hsweep" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Projection_vsweep" -ln "rman__riopt__Projection_vsweep" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Projection_minor" -ln "rman__riopt__Projection_minor" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_adaptall" -ln "rman__riopt__Hider_adaptall" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_incremental" -ln "rman__riopt__Hider_incremental" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_pixelfiltermode" -ln "rman__riopt__Hider_pixelfiltermode" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_imagePlaneSubset" -ln "rman__riopt__Integrator_imagePlaneSubset" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_distribution" -ln "rman__riopt__Integrator_distribution" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_distance" -ln "rman__riopt__Integrator_distance" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_gamma" -ln "rman__riopt__Integrator_gamma" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_useAlbedo" -ln "rman__riopt__Integrator_useAlbedo" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframe" -ln "rman__riopt__Integrator_wireframe" 
-		-dv -1 -at "long";
-	addAttr -ci true -uac -k true -sn "rman__riopt__Integrator_wireframeColor" -ln "rman__riopt__Integrator_wireframeColor" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeColorr" -ln "rman__riopt__Integrator_wireframeColorR" 
-		-dv -1 -at "float" -p "rman__riopt__Integrator_wireframeColor";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeColorg" -ln "rman__riopt__Integrator_wireframeColorG" 
-		-dv -1 -at "float" -p "rman__riopt__Integrator_wireframeColor";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeColorb" -ln "rman__riopt__Integrator_wireframeColorB" 
-		-dv -1 -at "float" -p "rman__riopt__Integrator_wireframeColor";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeOpacity" -ln "rman__riopt__Integrator_wireframeOpacity" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeWidth" -ln "rman__riopt__Integrator_wireframeWidth" 
-		-dv -1 -at "float";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_style" -ln "rman__riopt__Integrator_style" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Integrator_normalCheck" -ln "rman__riopt__Integrator_normalCheck" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Integrator_matCap" -ln "rman__riopt__Integrator_matCap" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__EnvLight" -ln "rman__EnvLight" -dt "string";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___preWorldBeginScript" -ln "rman__torattr___preWorldBeginScript" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___postWorldBeginScript" -ln "rman__torattr___postWorldBeginScript" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__param__limits_threads" -ln "rman__param__limits_threads" 
-		-dv -1 -at "long";
-	setAttr ".rman__torattr___class" -type "string" "RISJob";
-	setAttr ".rman__torattr___task" -type "string" "job";
-	setAttr -k on ".rman__toropt___renderDataCleanupJob" 0;
-	setAttr -k on ".rman__toropt___shaderCleanupJob" 0;
-	setAttr -k on ".rman__toropt___textureCleanupJob" 0;
-	setAttr -k on ".rman__toropt___ribCleanupJob" 0;
-	setAttr -k on ".rman__toropt___ribFlatten" 0;
-	setAttr -k on ".rman__toropt___renderDataCleanupFrame" 0;
-	setAttr -k on ".rman__toropt___textureCleanupFrame" 0;
-	setAttr -k on ".rman__toropt___ribCleanupFrame" 0;
-	setAttr ".rman__toropt___primaryCamera" -type "string" "";
-	setAttr -k on ".rman__toropt___enableRenderLayers" 0;
-	setAttr ".rman__toropt___renderLayer" -type "string" "";
-	setAttr ".rman__toropt___motionBlurType" -type "string" "frame";
-	setAttr -k on ".rman__toropt___shutterAngle" 180;
-	setAttr ".rman__toropt___shutterTiming" -type "string" "frameOpen";
-	setAttr ".rman__toropt___cacheCrew" -type "string" "";
-	setAttr -k on ".rman__toropt___renumber" 0;
-	setAttr -k on ".rman__toropt___renumberStart" 1;
-	setAttr -k on ".rman__toropt___renumberBy" 1;
-	setAttr -k on ".rman__toropt___lazyRibGen" 0;
-	setAttr -k on ".rman__toropt___lazyRender" 0;
-	setAttr -k on ".rman__toropt___bakeMode" 0;
-	setAttr -k on ".rman__toropt___furChunkSize" 10000;
-	setAttr -k on ".rman__torattr___enableRifs" 1;
-	setAttr -k on ".rman__toropt___nativeShadingSupport" 0;
-	setAttr -k on ".rman__torattr___motionSamples" 2;
-	setAttr -k on ".rman__torattr___referenceFrame" 0;
-	setAttr -k on ".rman__torattr___motionBlur" 0;
-	setAttr -k on ".rman__torattr___mapResolution" -type "long2" 0 0 ;
-	setAttr -k on ".rman__torattr___depthOfField" 0;
-	setAttr -k on ".rman__torattr___cameraBlur" 0;
-	setAttr -k on ".rman__torattr___frontPlane" 0;
-	setAttr -k on ".rman__torattr___backPlane" 0;
-	setAttr ".rman__torattr___passCommand" -type "string" "";
-	setAttr -k on ".rman__torattr___crop" 0;
-	setAttr ".rman__torattr___passExtFormat" -type "string" "";
-	setAttr ".rman__torattr___passNameFormat" -type "string" "";
-	setAttr -k on ".rman__torattr___previewPass" 0;
-	setAttr ".rman__torattr___defaultDisplacementShader" -type "string" "";
-	setAttr ".rman__torattr___defaultAtmosphereShader" -type "string" "";
-	setAttr ".rman__torattr___defaultInteriorShader" -type "string" "";
-	setAttr -k on ".rman__torattr___outputSurfaceShaders" 1;
-	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
-	setAttr -k on ".rman__torattr___outputLightShaders" 1;
-	setAttr -k on ".rman__torattr___outputVolumeShaders" 1;
-	setAttr -k on ".rman__torattr___outputImagerShaders" 1;
-	setAttr ".rman__toropt___preFrameScript" -type "string" "";
-	setAttr ".rman__toropt___postFrameScript" -type "string" "";
-	setAttr ".rman__torattr___preRenderScript" -type "string" "";
-	setAttr ".rman__torattr___postRenderScript" -type "string" "";
-	setAttr ".rman__torattr___defaultRiOptionsScript" -type "string" "";
-	setAttr ".rman__torattr___defaultRiAttributesScript" -type "string" "";
-	setAttr ".rman__torattr___renderBeginScript" -type "string" "rmanTimeStampScript";
-	setAttr ".rman__torattr___transformBeginScript" -type "string" "";
-	setAttr ".rman__torattr___transformEndScript" -type "string" "";
-	setAttr ".rman__torattr___postTransformScript" -type "string" "";
-	setAttr ".rman__torattr___preShapeScript" -type "string" "";
-	setAttr ".rman__torattr___postShapeScript" -type "string" "";
-	setAttr ".rman__torattr___cacheShapeScript" -type "string" "";
-	setAttr ".rman__torattr___bakeChannels" -type "string" "";
-	setAttr ".rman__torattr___bakeCrew" -type "string" "";
-	setAttr ".rman__torattr___bakeOutputFile" -type "string" "";
-	setAttr ".rman__torattr___customShadingGroup" -type "string" "";
-	setAttr -k on ".rman__torattr___shaderBindingStrength" 1;
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr -k on ".rman__torattr___enableObjectInstancing" 1;
-	setAttr ".rman__torattr___impliedSSBakeMode" -type "string" "SSDiffuse";
-	setAttr ".rman__toropt___JOBSTYLE" -type "string" "";
-	setAttr ".rman__torattr___deformationBlurStyle" -type "string" "none";
-	setAttr -k on ".rman__torattr___deformationBlurScale" 1;
-	setAttr -k on ".rman__torattr___enableMfcProcPrim" 0;
-	setAttr -k on ".rman__torattr___linearizeColors" 0;
-	setAttr -k on ".rman__torattr___rayTracing" 1;
-	setAttr ".rman__torattr___referenceCamera" -type "string" "";
-	setAttr -k on ".rman__toropt___enableRIS" 1;
-	setAttr -k on ".rman__torattr___denoise" 1;
-	setAttr ".rman__torattr___denoiseFilter" -type "string" "default.filter.json";
-	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "PxrDiffuse";
-	setAttr -k on ".rman__torattr___outputShadowAOV" 0;
-	setAttr -k on ".rman__torattr___enableImagePlaneFilter" 1;
-	setAttr -k on ".rman__riopt__trace_maxdepth" 10;
-	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
-	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
-	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
-	setAttr -k on ".rman__riopt__trace_decimationrate" 1;
-	setAttr -k on ".rman__riopt__limits_threads" 0;
-	setAttr -k on ".rman__riopt__Camera_shutteropening" -type "float2" 0 1 ;
-	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 1920 1080 ;
-	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
-	setAttr -k on ".rman__riopt__hair_minwidth" 0.5;
-	setAttr ".rman__riopt__rib_compression" -type "string" "none";
-	setAttr ".rman__riopt__rib_format" -type "string" "binary";
-	setAttr -k on ".rman__riopt__rib_precision" 6;
-	setAttr -k on ".rman__riopt__user_iesIgnoreWatts" 1;
-	setAttr -k on ".rman__riopt__statistics_level" 1;
-	setAttr ".rman__riopt__statistics_filename" -type "string" "stdout";
-	setAttr ".rman__riopt__statistics_xmlfilename" -type "string" "[AssetRef -cls rmanstat]";
-	setAttr ".rman__riopt__Projection_name" -type "string" "";
-	setAttr ".rman__riopt__Projection2_name" -type "string" "";
-	setAttr -k on ".rman__riopt__limits_zthreshold" -type "float3" 0.99599999 0.99599999 
-		0.99599999 ;
-	setAttr -k on ".rman__riopt__limits_othreshold" -type "float3" 0.99599999 0.99599999 
-		0.99599999 ;
-	setAttr -k on ".rman__riopt__limits_texturememory" 2097152;
-	setAttr -k on ".rman__riopt__limits_geocachememory" 2097152;
-	setAttr -k on ".rman__riopt__limits_proceduralmemory" 0;
-	setAttr -k on ".rman__riopt__limits_deepshadowtiles" 1000;
-	setAttr -k on ".rman__riopt__limits_deepshadowmemory" 102400;
-	setAttr -k on ".rman__riopt__limits_brickmemory" 10240;
-	setAttr -k on ".rman__riopt__user_sceneUnits" 1;
-	setAttr ".rman__riopt__lpe_diffuse2" -type "string" "Diffuse";
-	setAttr ".rman__riopt__lpe_diffuse3" -type "string" "Subsurface";
-	setAttr ".rman__riopt__lpe_specular2" -type "string" "Specular";
-	setAttr ".rman__riopt__lpe_specular3" -type "string" "RoughSpecular";
-	setAttr ".rman__riopt__lpe_specular4" -type "string" "Clearcoat";
-	setAttr ".rman__riopt__lpe_specular5" -type "string" "Iridescence";
-	setAttr ".rman__riopt__lpe_specular6" -type "string" "Fuzz";
-	setAttr ".rman__riopt__lpe_specular7" -type "string" "SingleScatter";
-	setAttr ".rman__riopt__lpe_specular8" -type "string" "Glass";
-	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
-	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
-	setAttr -k on ".rman__riopt__Hider_minextrasamples" 0;
-	setAttr -k on ".rman__riopt__Hider_maxsamples" 48;
-	setAttr -k on ".rman__riopt__Hider_darkfalloff" 0.02500000037252903;
-	setAttr -k on ".rman__riopt__limits_opacitycachememory" 1024000;
-	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
-	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
-	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 4;
-	setAttr -k on ".rman__riattr__trace_samplemotion" 1;
-	setAttr ".rman__riattr__dice_referencecamera" -type "string" "worldcamera";
-	setAttr -k on ".rman__riattr__procedural_reentrant" 1;
-	setAttr -k on ".rman__riattr__dice_micropolygonlength" 1;
-	setAttr -k on ".rman__riattr__dice_watertight" 0;
-	setAttr -k on ".rman__riattr__trace_autobias" 1;
-	setAttr -k on ".rman__riattr__trace_bias" 0.0010000000474974513;
-	setAttr ".rman__riattr__displacementbound_coordinatesystem" -type "string" "shader";
-	setAttr -k on ".rman__riattr__displacementbound_sphere" 0;
-	setAttr -k on ".rman__riattr__trace_displacements" 1;
-	setAttr -k on ".rman__riopt__Projection_fov" 0;
-	setAttr -k on ".rman__riopt__Projection_hsweep" 360;
-	setAttr -k on ".rman__riopt__Projection_vsweep" 180;
-	setAttr -k on ".rman__riopt__Projection_minor" 0.25;
-	setAttr -k on ".rman__riopt__Hider_adaptall" 0;
-	setAttr -k on ".rman__riopt__Hider_incremental" 1;
-	setAttr ".rman__riopt__Hider_pixelfiltermode" -type "string" "weighted";
-	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
-	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
-	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
-	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
-	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
-	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
-	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
-	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 2;
-	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 2;
-	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 2;
-	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
-	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
-	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
-	setAttr ".rman__riopt__Integrator_imagePlaneSubset" -type "string" "rman__imageplane";
-	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
-	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
-	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
-	setAttr ".rman__riopt__Integrator_distribution" -type "string" "cosine";
-	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
-	setAttr -k on ".rman__riopt__Integrator_distance" 10;
-	setAttr -k on ".rman__riopt__Integrator_gamma" 1;
-	setAttr -k on ".rman__riopt__Integrator_useAlbedo" 0;
-	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
-	setAttr -k on ".rman__riopt__Integrator_wireframe" 1;
-	setAttr -k on ".rman__riopt__Integrator_wireframeColor" -type "float3" 0 0 0 ;
-	setAttr -k on ".rman__riopt__Integrator_wireframeOpacity" 0.5;
-	setAttr -k on ".rman__riopt__Integrator_wireframeWidth" 1;
-	setAttr ".rman__riopt__Integrator_style" -type "string" "shaded";
-	setAttr -k on ".rman__riopt__Integrator_normalCheck" 0;
-	setAttr ".rman__riopt__Integrator_matCap" -type "string" "";
-	setAttr ".rman__EnvLight" -type "string" "";
-	setAttr -s 3 ".p";
-	setAttr ".rman__torattr___preWorldBeginScript" -type "string" "";
-	setAttr ".rman__torattr___postWorldBeginScript" -type "string" "";
-	setAttr -k on ".rman__param__limits_threads" 0;
-	setAttr ".nt" -type "string" "settings:job";
-createNode RenderMan -s -n "rmanFinalGlobals";
-	rename -uid "24407558-5346-2F0C-CCA6-D78AB78467B7";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
-		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
-		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "Final";
-	setAttr ".rman__torattr___task" -type "string" "render";
-	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr ".rman__torattr___passLayer" -type "string" "";
-	setAttr ".rman__torattr___camera" -type "string" "";
-	setAttr ".rman__torattr___crew" -type "string" "";
-	setAttr ".rman__torattr___flavor" -type "string" "";
-	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
-	setAttr ".rman__torattr___lightcrew" -type "string" "";
-	setAttr -k on ".rman__torattr___depthOfField" 1;
-	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
-	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
-	setAttr ".nt" -type "string" "pass:render";
-createNode RenderMan -s -n "rmanFinalOutputGlobals0";
-	rename -uid "D6C8F2E2-6B47-3BC8-7EB0-649845B8F7BA";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "Primary";
-	setAttr ".rman__torattr___task" -type "string" "display";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr -k on ".rman__torattr___primaryDisplay" 1;
-	setAttr ".rman__torattr___dspyID" -type "string" "";
-	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
-	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
-	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
-	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
-	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
-	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
-	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_dither" 0;
-	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
-createNode RenderMan -s -n "rmanRerenderRISGlobals";
-	rename -uid "B56754DF-864E-E947-6989-DCAB427435DB";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__riopt__Hider_darkfalloff" -ln "rman__riopt__Hider_darkfalloff" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
-		-dv -1 -at "float";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
-	setAttr ".rman__torattr___task" -type "string" "render";
-	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
-	setAttr -k on ".rman__riopt__Hider_maxsamples" 64;
-	setAttr -k on ".rman__riopt__Hider_darkfalloff" 0.02500000037252903;
-	setAttr -k on ".rman__riopt___PixelVariance" 0.05000000074505806;
-	setAttr ".nt" -type "string" "pass:render";
-createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
-	rename -uid "E07A5825-C14F-A757-0F2D-E192E2F0F320";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
-		-dv -1 -at "long";
-	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
-		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
-		-dt "string";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
-		-at "compound" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
-		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
-		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
-	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
-		-dv -1 -at "float";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
-		-at "float2" -nc 2;
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
-		-at "float3" -nc 3;
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
-		-dv -1 -at "float" -p "rman__riopt__Display_remap";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
-	setAttr ".rman__torattr___task" -type "string" "display";
-	setAttr -k on ".rman__torattr___computeBehavior" 1;
-	setAttr -k on ".rman__torattr___primaryDisplay" 1;
-	setAttr ".rman__torattr___dspyID" -type "string" "";
-	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
-	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
-	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
-	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
-	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
-	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
-	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
-	setAttr -k on ".rman__riopt__Display_dither" 0;
-	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
-	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
-	setAttr ".nt" -type "string" "settings:display";
-createNode RenderMan -s -n "rmanBakeGlobals";
-	rename -uid "AD8CCD3C-924D-9DE8-F4CD-20A17F7D2B6F";
-	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
-		-dt "string";
-	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
-	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
-		-dt "string";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
-	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
-	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
-	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
-	setAttr ".t" 1;
-	setAttr ".rman__torattr___class" -type "string" "Bake";
-	setAttr ".rman__torattr___task" -type "string" "render";
-	setAttr ".rman__riopt__Hider_name" -type "string" "bake";
-	setAttr ".nt" -type "string" "pass:render";
-createNode lightLinker -s -n "lightLinker1";
-	rename -uid "EE745BBD-CC4A-A55C-D3D0-4EB5B41A563B";
-	setAttr -s 178 ".lnk";
-	setAttr -s 184 ".ign";
-	setAttr -s 178 ".slnk";
-createNode displayLayerManager -n "layerManager";
-	rename -uid "CF0BACB8-F547-7369-27A2-BE8BA837F1F4";
-	setAttr -s 4 ".dli[1:3]"  1 2 3;
-	setAttr -s 4 ".dli";
-createNode displayLayer -n "defaultLayer";
-	rename -uid "8A7F0DD2-9D4D-AF04-764F-F3BB9F08D5A5";
-createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "54602B08-3E4E-CF51-C818-3DA71F62029B";
-createNode renderLayer -n "defaultRenderLayer";
-	rename -uid "022D8653-2746-FB22-3444-F2B0A98C47E0";
+createNode renderLayerManager -n "bedroom_SET_latest1:renderLayerManager";
+	rename -uid "B7F03C2B-F24C-9E3E-EC05-158EFEBFBE66";
+createNode renderLayer -n "bedroom_SET_latest1:defaultRenderLayer";
+	rename -uid "BC3F01A6-9442-D70E-0393-CDB666A67771";
 	setAttr ".g" yes;
-createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "35816F89-7C4C-66BC-666C-F898274ECB3B";
-	setAttr -s 2 ".bsdt";
-	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 1 0 -1 ;
-	setAttr ".bsdt[1].bscd" -type "Int32Array" 0 ;
-	setAttr ".bsdt[1].bsdn" -type "string" "karen_latest";
-createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "587C165E-A442-5956-69DE-5BA944322731";
-createNode script -n "uiConfigurationScriptNode";
-	rename -uid "759C0F75-F047-76D1-C3B4-469CE667BB5D";
+createNode script -n "bedroom_SET_latest1:uiConfigurationScriptNode";
+	rename -uid "04AEE26A-1D44-3670-7D54-8B9A606AC91F";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
 		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
@@ -28416,7 +27591,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
-		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 0\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
+		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 726\n            -height 409\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
@@ -28437,7 +27612,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n"
 		+ "                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererOverrideName \"stereoOverrideVP2\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n"
 		+ "                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
 		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
@@ -28446,22 +27621,20 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n"
 		+ "            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n"
 		+ "\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 726\\n    -height 409\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 726\\n    -height 409\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 726\\n    -height 409\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 726\\n    -height 409\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
-createNode script -n "sceneConfigurationScriptNode";
-	rename -uid "BA8F8E86-AC46-067B-ADC5-19A3A21843B1";
+createNode script -n "bedroom_SET_latest1:sceneConfigurationScriptNode";
+	rename -uid "A3ADC4B5-184F-90E9-4B18-F1BA3C806A21";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 350 -ast 1 -aet 350 ";
 	setAttr ".st" 6;
-createNode RenderMan -s -n "renderManRISGlobals1";
-	rename -uid "115AB603-8B48-9398-5C23-78888369931F";
-createNode reference -n "sharedReferenceNode";
-	rename -uid "8E0E1D54-904F-5B93-0BD0-2C9D2A09292E";
+createNode reference -n "bedroom_SET_latest1:sharedReferenceNode";
+	rename -uid "6FBAEAF8-944D-57C0-090F-29BF8F3B3E1E";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"sharedReferenceNode";
-createNode PxrSurface -n "deskShader";
-	rename -uid "CFCAC27E-1B48-1DFB-F825-CFB3B57C0062";
+		"bedroom_SET_latest1:sharedReferenceNode";
+createNode PxrSurface -n "bedroom_SET_latest1:deskShader";
+	rename -uid "C4C6C732-2E46-6464-E414-C3BB34B39F0A";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -28609,14 +27782,14 @@ createNode PxrSurface -n "deskShader";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface1SG";
-	rename -uid "5EFB8A1A-6947-E1CC-620B-2C93F8E96BAD";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface1SG";
+	rename -uid "0E35D0E8-2C4F-E513-BD5E-A4A978D0FC2B";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo1";
-	rename -uid "EEC5F9D8-A740-1C09-BC4F-6BA06FF8918D";
-createNode PxrLayerMixer -n "PxrLayerMixer1";
-	rename -uid "93E32B34-B34D-37BE-49EF-8896F0B2967D";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo1";
+	rename -uid "3C14B733-FC46-EAF2-C2D7-269AABD3224F";
+createNode PxrLayerMixer -n "bedroom_SET_latest1:PxrLayerMixer1";
+	rename -uid "C531CAF5-2A4A-5197-4A6A-FD8B6B3DCF74";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -29030,20 +28203,21 @@ createNode PxrLayerMixer -n "PxrLayerMixer1";
 	setAttr ".layer4_glowGain" 0;
 	setAttr ".layer4_glowColor" -type "float3" 0 0 0 ;
 	setAttr ".layer4Mask" 1;
-createNode partition -n "mtorPartition";
-	rename -uid "3A4CAFF7-D04C-7AB3-78C8-ADBAEE400EC5";
+createNode partition -n "bedroom_SET_latest1:mtorPartition";
+	rename -uid "BA3B393B-984B-E885-4F73-B7BCC1B88A54";
 	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
 	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
 	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
 	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
 	setAttr ".sr" -type "string" "";
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "0E645765-6240-FF61-1BBA-0A9516F7EF8B";
+createNode nodeGraphEditorInfo -n "bedroom_SET_latest1:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "0371D3DC-8E44-CAB7-FCDD-DCA5D8E505B1";
+	setAttr ".def" no;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -1924.7875942149892 -830.69999324532773 ;
 	setAttr ".tgi[0].vh" -type "double2" 1415.450020375202 657.5913632555438 ;
-createNode wood -n "wood1";
-	rename -uid "782115FA-9A4B-7E06-4583-26861BA01DD6";
+createNode wood -n "bedroom_SET_latest1:wood1";
+	rename -uid "35B6E732-D543-8601-0B3D-449AF881ED13";
 	setAttr ".fc" -type "float3" 0.2375 0.14129999 0.065200001 ;
 	setAttr ".vc" -type "float3" 0.071428575 0.03548681 0.017743405 ;
 	setAttr ".v" 0.44117647409439087;
@@ -29052,8 +28226,8 @@ createNode wood -n "wood1";
 	setAttr ".a" 25.735294342041016;
 	setAttr ".gx" 0.58823531866073608;
 	setAttr ".gs" 0.0066176471300423145;
-createNode PxrSurface -n "knobShader";
-	rename -uid "08E329A6-3542-FBF9-117A-90B1EAF590A8";
+createNode PxrSurface -n "bedroom_SET_latest1:knobShader";
+	rename -uid "EEA2486C-DD4B-2336-AE96-768D5DAFBC2D";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -29201,14 +28375,14 @@ createNode PxrSurface -n "knobShader";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface2SG";
-	rename -uid "D8FBC59C-3D4C-345C-6EF6-908F734F8EF6";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface2SG";
+	rename -uid "265F17E6-3744-29C7-93B6-1C89A351C83E";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo2";
-	rename -uid "6FF7EC2E-6F4F-EB0F-B07C-2F9303DAB9DF";
-createNode PxrSurface -n "lampshader";
-	rename -uid "BC910971-124E-431D-D500-42BE2D81E768";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo2";
+	rename -uid "9AA7D253-AE49-53B9-8EF7-2282DF4A52B0";
+createNode PxrSurface -n "bedroom_SET_latest1:lampshader";
+	rename -uid "C8B8EE3F-7645-F86E-35A5-A0A73E1BF694";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -29356,14 +28530,14 @@ createNode PxrSurface -n "lampshader";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface3SG";
-	rename -uid "8CDFA15F-1C4D-4311-6DCD-6D9A942B998B";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface3SG";
+	rename -uid "77E6FCCF-9648-5BBA-8402-EBADEDC3B756";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo3";
-	rename -uid "A872B117-6444-0E99-DC8E-0CA719A4257E";
-createNode PxrSurface -n "PxrSurface4";
-	rename -uid "3EA6074F-B440-0424-AA47-6BA471D542D6";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo3";
+	rename -uid "9E51E435-A84F-4E9F-2366-74A2111E3570";
+createNode PxrSurface -n "bedroom_SET_latest1:PxrSurface4";
+	rename -uid "69F46AAC-504C-B158-25BB-4EAE7F50D2A0";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -29511,14 +28685,14 @@ createNode PxrSurface -n "PxrSurface4";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface4SG";
-	rename -uid "1F894DD6-AF42-1751-803A-25BED3BF1542";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface4SG";
+	rename -uid "4E0A9D3C-944D-E66C-752C-BB9815CAA47E";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo4";
-	rename -uid "BA587720-9F4C-84D2-46EB-2BBCBA99E0FC";
-createNode PxrSurface -n "Book1Shader";
-	rename -uid "F7FC1084-244D-7224-FC41-1697B881FAE9";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo4";
+	rename -uid "159756B5-824F-AAE2-FFCB-36B82353A708";
+createNode PxrSurface -n "bedroom_SET_latest1:Book1Shader";
+	rename -uid "484DCC7F-534C-B95A-4ABA-5984A3FA4E32";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -29666,14 +28840,14 @@ createNode PxrSurface -n "Book1Shader";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface5SG";
-	rename -uid "DD57AAFB-6848-6CA3-0D60-B19F0B2EE047";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface5SG";
+	rename -uid "56455E69-1C49-DEC8-97AC-3B8C8568A0E6";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo5";
-	rename -uid "9B7358D1-3F4F-7606-5358-48BB804DACB4";
-createNode PxrSurface -n "book2Shader";
-	rename -uid "69630194-AA4B-1B98-1D84-C9BF401CE8AF";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo5";
+	rename -uid "6A325A84-9E4D-6691-E273-E6BFEF65BDEA";
+createNode PxrSurface -n "bedroom_SET_latest1:book2Shader";
+	rename -uid "F3EBBF8E-E542-34C5-726C-57AE6A695501";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -29821,14 +28995,14 @@ createNode PxrSurface -n "book2Shader";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface6SG";
-	rename -uid "1D8A8DF8-034B-DDD6-81E1-49AF8A88B8EC";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface6SG";
+	rename -uid "FE58B89A-5E4F-7B34-0130-70BDA20CF147";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo6";
-	rename -uid "8B03FF44-4F41-82CF-2314-B18BAC0426F2";
-createNode PxrSurface -n "book3Shader";
-	rename -uid "FA6F912F-C748-A859-D3D8-A4B96875078D";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo6";
+	rename -uid "261704A6-1C44-81EC-85A5-638006318110";
+createNode PxrSurface -n "bedroom_SET_latest1:book3Shader";
+	rename -uid "B07BED4C-1240-70D4-D5B5-4696BA19BFDB";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -29976,14 +29150,14 @@ createNode PxrSurface -n "book3Shader";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface7SG";
-	rename -uid "11A5F3EE-AC4A-48E8-075A-458C8CE8046E";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface7SG";
+	rename -uid "6F4519D4-6A42-31E5-0CFF-7DAE8C60EB37";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo7";
-	rename -uid "4EF5C628-C24C-98A7-4102-7D93FEC656F8";
-createNode PxrSurface -n "PxrSurface8";
-	rename -uid "9DD5DE9D-124D-8331-24C4-FBBB3F38F143";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo7";
+	rename -uid "1BA89983-F24E-B5FC-EE3F-37A12117CC7D";
+createNode PxrSurface -n "bedroom_SET_latest1:PxrSurface8";
+	rename -uid "6F06C90E-504D-3E41-BF57-5595A69D11D3";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -30131,26 +29305,26 @@ createNode PxrSurface -n "PxrSurface8";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface8SG";
-	rename -uid "16AABDC2-A84B-B8D3-E44B-19B4249AFC25";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface8SG";
+	rename -uid "1A9F261A-1D4A-C525-3CDC-398E00A30F3B";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo8";
-	rename -uid "EA13C7B9-FB45-876C-4A1B-2D8A174E9A88";
-createNode file -n "file1";
-	rename -uid "0672015B-414C-9B40-DF3B-A1BFBA1D7A12";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo8";
+	rename -uid "498B0A1B-584C-4313-6852-FCAD744E78D4";
+createNode file -n "bedroom_SET_latest1:file1";
+	rename -uid "296FAF9A-324A-770A-296A-118AFC1B3E13";
 	setAttr ".ftn" -type "string" "/Users/ashnachoudhury/Desktop/doodle.jpg";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture1";
-	rename -uid "F91CEBE3-8749-45CB-7325-FB92333A7FC8";
-createNode file -n "file2";
-	rename -uid "1F0BC512-EA41-B8BC-F30F-DFAA81AD0098";
+createNode place2dTexture -n "bedroom_SET_latest1:place2dTexture1";
+	rename -uid "208B4561-1F49-2E41-3931-6B9E6A216E68";
+createNode file -n "bedroom_SET_latest1:file2";
+	rename -uid "0E163537-F34F-1594-4212-2DB4A86E5B80";
 	setAttr ".ftn" -type "string" "/Users/ashnachoudhury/Desktop/doodle.jpg";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture2";
-	rename -uid "E095199D-0D48-7BF2-B7C2-56BAD4C5DD8E";
-createNode PxrSurface -n "PxrSurface9";
-	rename -uid "BA658F8C-4941-7210-DBC3-3C9D7B289B1C";
+createNode place2dTexture -n "bedroom_SET_latest1:place2dTexture2";
+	rename -uid "E525C8B1-7946-FE02-0695-F7A3DE487512";
+createNode PxrSurface -n "bedroom_SET_latest1:PxrSurface9";
+	rename -uid "1ABD6640-F343-D983-9163-8EBC15FADBCA";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -30298,20 +29472,20 @@ createNode PxrSurface -n "PxrSurface9";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface9SG";
-	rename -uid "3EC49D16-034C-A681-E62B-A3A6DC81546F";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface9SG";
+	rename -uid "E74399FC-BA4E-C375-F377-F48DCDD94C6F";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo9";
-	rename -uid "BAD70637-DE4C-C345-6323-B1A395EA9879";
-createNode file -n "file3";
-	rename -uid "AF12E9BB-4A4A-4A52-6CE8-8D808544D581";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo9";
+	rename -uid "49A8AFAF-C740-0676-649F-B7805FE8FD35";
+createNode file -n "bedroom_SET_latest1:file3";
+	rename -uid "B5EF9C38-914C-E707-DCB8-659212E51FDC";
 	setAttr ".ftn" -type "string" "/Users/ashnachoudhury/Desktop/valentineposter.jpg";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture3";
-	rename -uid "92F714B1-4549-14FF-9025-8AA2D5D8303C";
-createNode PxrSurface -n "PxrSurface10";
-	rename -uid "73222E50-074E-6000-E124-7782307987A6";
+createNode place2dTexture -n "bedroom_SET_latest1:place2dTexture3";
+	rename -uid "64A7A77E-B247-D20E-5704-F481826CC61A";
+createNode PxrSurface -n "bedroom_SET_latest1:PxrSurface10";
+	rename -uid "92FFC580-D34E-012C-77C7-89AF160131B2";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -30459,20 +29633,20 @@ createNode PxrSurface -n "PxrSurface10";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface10SG";
-	rename -uid "13ADD491-914D-EE81-E27F-B49118C624F2";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface10SG";
+	rename -uid "FCA97EEF-BC43-34C6-7C23-768A0AFC3F50";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo10";
-	rename -uid "79B89E82-9248-93F1-DF85-B18703B4A5BF";
-createNode file -n "file4";
-	rename -uid "83CBDD2A-EC49-7AEA-9147-5EA2406A7B32";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo10";
+	rename -uid "F58E277B-1B42-A235-32E9-D692AAFB0CEB";
+createNode file -n "bedroom_SET_latest1:file4";
+	rename -uid "D3346500-EA4C-0561-A2EF-7696F8D8DDBC";
 	setAttr ".ftn" -type "string" "/Users/ashnachoudhury/Desktop/mathhw.jpg";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture4";
-	rename -uid "A7488B63-AD4F-E68D-3CCE-A688B2B62EE2";
-createNode PxrSurface -n "PxrSurface11";
-	rename -uid "BEEB6080-F840-82AB-BCE6-C5A4C9ABAB2E";
+createNode place2dTexture -n "bedroom_SET_latest1:place2dTexture4";
+	rename -uid "AFD1A6B2-FE43-B32C-257C-488D50AF3411";
+createNode PxrSurface -n "bedroom_SET_latest1:PxrSurface11";
+	rename -uid "4F7427AD-2F47-FFEB-B694-09A1482DAD01";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -30620,20 +29794,20 @@ createNode PxrSurface -n "PxrSurface11";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface11SG";
-	rename -uid "09CB0474-9F40-8857-E287-A480CA30B313";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface11SG";
+	rename -uid "80FDBA7B-C247-647C-CE54-5E8EADE845A6";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo11";
-	rename -uid "4308BC1B-0945-DFC1-DD93-B79D66997496";
-createNode file -n "file5";
-	rename -uid "CA42A495-A24A-D86D-093C-7CBAEEC9B433";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo11";
+	rename -uid "668ECB33-5144-96C4-FFDD-D1ACFB6CB81F";
+createNode file -n "bedroom_SET_latest1:file5";
+	rename -uid "D32BF9B4-A04E-3E4B-8968-4AB2FDB101E9";
 	setAttr ".ftn" -type "string" "/Users/ashnachoudhury/Desktop/picture.jpg";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture5";
-	rename -uid "417F4664-3144-3D4A-24A5-2081D850B996";
-createNode PxrSurface -n "PxrSurface12";
-	rename -uid "0A06A91D-5F40-CFF4-F4E9-548B899E23E3";
+createNode place2dTexture -n "bedroom_SET_latest1:place2dTexture5";
+	rename -uid "A9FDD15B-0046-9330-ADD1-83945E3C3FEC";
+createNode PxrSurface -n "bedroom_SET_latest1:PxrSurface12";
+	rename -uid "B16C7D0E-9044-9BFA-01E7-BABF6F2538BB";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -30781,20 +29955,20 @@ createNode PxrSurface -n "PxrSurface12";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface12SG";
-	rename -uid "AC81D187-824D-448C-DEB2-379ECF22FBB2";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface12SG";
+	rename -uid "B11D2F92-BB4E-F9DE-464A-5FAFE35882F0";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo12";
-	rename -uid "A73F63D5-334A-8143-23DF-DCA06A1BD400";
-createNode file -n "file6";
-	rename -uid "3C8B69F1-674A-8BFE-099A-E49F7FA1093F";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo12";
+	rename -uid "8DE0B00D-AD4D-0183-12BC-E6B451748C99";
+createNode file -n "bedroom_SET_latest1:file6";
+	rename -uid "602E239D-1F4A-EBFF-ACE8-0DA8A4D8A359";
 	setAttr ".ftn" -type "string" "/Users/ashnachoudhury/Desktop/note.jpg";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture6";
-	rename -uid "D11911A7-8242-E601-20B3-49911120A3D3";
-createNode PxrSurface -n "PxrSurface13";
-	rename -uid "0DA9A675-7B40-8437-00D4-38BC74B561C7";
+createNode place2dTexture -n "bedroom_SET_latest1:place2dTexture6";
+	rename -uid "EF1DFE73-914F-617F-1FEB-42BF3E3FD08F";
+createNode PxrSurface -n "bedroom_SET_latest1:PxrSurface13";
+	rename -uid "29C927AD-664C-C307-98C6-6C80FCCED532";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -30942,14 +30116,14 @@ createNode PxrSurface -n "PxrSurface13";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface13SG";
-	rename -uid "675198B5-9548-C5B8-F6A7-6E9FA508D301";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface13SG";
+	rename -uid "B67599E7-F64D-2346-519C-AB8C0220B9A7";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo13";
-	rename -uid "8A8F3E56-4144-570F-2E5F-82A93FCF15C6";
-createNode PxrSurface -n "PxrSurface14";
-	rename -uid "A5B1C7EB-EF46-544F-64CF-B0BEA4CEA1BB";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo13";
+	rename -uid "DA7330C4-334D-3612-0489-F8BE84085E07";
+createNode PxrSurface -n "bedroom_SET_latest1:PxrSurface14";
+	rename -uid "767E4CFF-8D4B-7C4C-DCD5-73B002E3B3AB";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -31097,14 +30271,14 @@ createNode PxrSurface -n "PxrSurface14";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface14SG";
-	rename -uid "1E5D1019-0142-146D-2B96-808254761C90";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface14SG";
+	rename -uid "D3E6269B-824F-51E5-9508-68937C43ECA9";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo14";
-	rename -uid "998C5582-104A-6AC8-5DE7-F28E076C6180";
-createNode PxrSurface -n "PageShader";
-	rename -uid "8A2899CE-494A-973E-CA7D-CFA2343D42BF";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo14";
+	rename -uid "75D8A134-C840-77F6-B3D0-2C826B8DAED3";
+createNode PxrSurface -n "bedroom_SET_latest1:PageShader";
+	rename -uid "79258EB7-7A46-B5EE-503A-53A3FA2A3239";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -31252,14 +30426,14 @@ createNode PxrSurface -n "PageShader";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface15SG";
-	rename -uid "B7CDF919-E54E-28C5-EEA0-C196DA722339";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface15SG";
+	rename -uid "2FD9EA8B-E848-3A49-2F36-539C44EB76C1";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo15";
-	rename -uid "47DEE4DC-CB49-6AA8-4732-AEAFFACC4303";
-createNode PxrSurface -n "scribblesShader";
-	rename -uid "8E115A47-E448-461E-3586-79A369E3DB66";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo15";
+	rename -uid "44AAFF62-2B4B-FD31-3B0A-1BA9E4F9F9EB";
+createNode PxrSurface -n "bedroom_SET_latest1:scribblesShader";
+	rename -uid "9064884E-A849-609A-0A0E-689E2881AC3A";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -31407,26 +30581,26 @@ createNode PxrSurface -n "scribblesShader";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface16SG";
-	rename -uid "DB114337-504F-2C14-3090-DC91CB990A10";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface16SG";
+	rename -uid "6E234A6B-9542-BD3F-465B-FB8DC5F545C8";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo16";
-	rename -uid "C98BF870-3B4B-23CD-E791-F8A4C31C7C2B";
-createNode file -n "file7";
-	rename -uid "CD82FEBC-FA44-F70F-273A-A2BE7E6C559B";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo16";
+	rename -uid "415A17DF-C14A-625D-9902-CE8537900E6B";
+createNode file -n "bedroom_SET_latest1:file7";
+	rename -uid "1AE62B5C-2443-B468-1FF8-0D992A24BAF3";
 	setAttr ".ftn" -type "string" "/Users/ashnachoudhury/Documents/UC Berkeley/Junior year/Art 178/Stages of Grief/scribbles.jpg";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture7";
-	rename -uid "CB09B54A-2A43-7D8A-3473-D483C1632700";
-createNode file -n "file8";
-	rename -uid "58B0B38F-ED4C-31EE-3336-CFBF24556F91";
+createNode place2dTexture -n "bedroom_SET_latest1:place2dTexture7";
+	rename -uid "A1E8647F-254E-83F9-0C80-A9A847F017B2";
+createNode file -n "bedroom_SET_latest1:file8";
+	rename -uid "957AD9BF-6242-49E0-4335-3D95DD4BE5AC";
 	setAttr ".ftn" -type "string" "/Users/ashnachoudhury/Documents/UC Berkeley/Junior year/Art 178/Stages of Grief/book cover CROPPED.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "place2dTexture8";
-	rename -uid "2E38C712-A74B-82C5-CD90-499BE4F10D12";
-createNode PxrSurface -n "bookRedShader";
-	rename -uid "F56D0EC2-B54D-8043-7521-D8B2064DA90D";
+createNode place2dTexture -n "bedroom_SET_latest1:place2dTexture8";
+	rename -uid "4926C9F0-3D4F-529B-88B1-319379ECA17D";
+createNode PxrSurface -n "bedroom_SET_latest1:bookRedShader";
+	rename -uid "7799F864-5749-3AC6-FBFD-D599E843B23D";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -31574,17 +30748,17 @@ createNode PxrSurface -n "bookRedShader";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "PxrSurface17SG";
-	rename -uid "CD529639-0C47-CFD2-E10F-C7A9F62B577B";
+createNode shadingEngine -n "bedroom_SET_latest1:PxrSurface17SG";
+	rename -uid "5EB36A1C-094A-7A1F-7820-8D839C66C5D5";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo17";
-	rename -uid "01CD7536-C041-6792-7A30-4FB4186FAF29";
-createNode reference -n "bed_NEWRN";
-	rename -uid "4A19A66F-3A48-F42A-EB01-4E9B2C04FDC6";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo17";
+	rename -uid "13F3B82A-5E49-EFF4-74D5-A68EF73DBCED";
+createNode reference -n "bedroom_SET_latest1:bed_NEWRN";
+	rename -uid "1244CFF6-E74A-C6D7-A0B3-22BFC84DF59E";
 	setAttr ".fn[0]" -type "string" "/Users/abbyrcohn/Desktop/poweredup//assets/bedroomAssets/bed_NEW.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"bed_NEWRN"
+		"bedroom_SET_latest1:bed_NEWRN"
 		"bed_NEWRN" 5
 		2 "|bed_NEW:defaultLight" "visibility" " 0"
 		2 "|bed_NEW:bed|bed_NEW:bed_frame|bed_NEW:bed_frameShape" "aiTranslator" 
@@ -31629,10 +30803,10 @@ createNode reference -n "bed_NEWRN";
 		);
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "windowRN";
-	rename -uid "0FBA8DCF-5447-6AA9-31CE-3B8FCEDD3A5A";
+createNode reference -n "bedroom_SET_latest1:windowRN";
+	rename -uid "EA42B2DC-9342-0E50-BB24-FF8CBAC86EAE";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"windowRN"
+		"bedroom_SET_latest1:windowRN"
 		"windowRN" 25
 		2 "|window:window|window:BACK_topLeft" "visibility" " 0"
 		2 "|window:window|window:BACK_topLeft|window:BACK_topLeftShape" "pt[0:11]" 
@@ -31723,10 +30897,10 @@ createNode reference -n "windowRN";
 		+ "9941999999999 0 -0.83668977 0.28459941999999999 0");
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "doorRN";
-	rename -uid "BCE59C69-F240-0741-09CE-508BDA56791B";
+createNode reference -n "bedroom_SET_latest1:doorRN";
+	rename -uid "DABE490A-AC47-FFEB-C07C-EB8298D89AE7";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"doorRN"
+		"bedroom_SET_latest1:doorRN"
 		"doorRN" 65
 		2 "|door:Door" "visibility" " 1"
 		2 "|door:Door" "translate" " -type \"double3\" -3.40401972608484726 0.57199437072030634 -7.89577765668568077"
@@ -32014,10 +31188,10 @@ createNode reference -n "doorRN";
 		);
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "doorRN1";
-	rename -uid "E63CB5ED-2647-549C-7B6C-85A912AB2050";
+createNode reference -n "bedroom_SET_latest1:doorRN1";
+	rename -uid "42E1A01D-0F4F-D3C0-ED22-558A15E9E2FD";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"doorRN1"
+		"bedroom_SET_latest1:doorRN1"
 		"doorRN1" 12
 		2 "|door1:Door|door1:DoorFrame|door1:DoorFrameShape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -32402,10 +31576,10 @@ createNode reference -n "doorRN1";
 		);
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "plushieRN";
-	rename -uid "A5D077F2-B540-EC0B-1D23-C2853F44BFE7";
+createNode reference -n "bedroom_SET_latest1:plushieRN";
+	rename -uid "D62BE16A-D843-43D1-4FF0-E482D13B1F49";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"plushieRN"
+		"bedroom_SET_latest1:plushieRN"
 		"plushieRN" 18
 		2 "|plushie:plushie" "translate" " -type \"double3\" 0.9147830228699807 0.75782705133509265 4.70898338827233864"
 		
@@ -32445,10 +31619,10 @@ createNode reference -n "plushieRN";
 		" -type \"string\" \"polymesh\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "rugRN";
-	rename -uid "3458B084-5D49-2D9E-58C0-25BE708CFE8D";
+createNode reference -n "bedroom_SET_latest1:rugRN";
+	rename -uid "4844E3B0-F04C-C1C6-AC01-FDBFD23D9F8F";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"rugRN"
+		"bedroom_SET_latest1:rugRN"
 		"rugRN" 2
 		2 "|rug:Rug|rug:RugShape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
@@ -32467,12 +31641,12 @@ createNode reference -n "rugRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode timeEditor -s -n "timeEditor";
-	rename -uid "702FB83E-7746-C827-394B-50B124EFFFDD";
+	rename -uid "38C51950-D147-5E03-58E9-779DCA734250";
 	setAttr ".ac" 0;
-createNode reference -n "treeShelfRN";
-	rename -uid "42962119-B14B-3836-00B6-65B9FDDCDBE2";
+createNode reference -n "bedroom_SET_latest1:treeShelfRN";
+	rename -uid "3F295696-3E41-64B7-0DD5-D7A7709FF064";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"treeShelfRN"
+		"bedroom_SET_latest1:treeShelfRN"
 		"treeShelfRN" 0
 		"treeShelfRN" 4
 		0 "|treeShelf:treeShelf" "|TREE_SHELF" "-s -r "
@@ -32482,10 +31656,10 @@ createNode reference -n "treeShelfRN";
 		2 "|TREE_SHELF|treeShelf:treeShelf" "scale" " -type \"double3\" 0.50056977246613166 0.50056977246613166 0.50056977246613166";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "officeChairRN";
-	rename -uid "A8FAA6DD-4145-69F7-D66D-29A214778E00";
+createNode reference -n "bedroom_SET_latest1:officeChairRN";
+	rename -uid "F0846EF2-FB4E-2258-EDCD-1EA3C995AD31";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"officeChairRN"
+		"bedroom_SET_latest1:officeChairRN"
 		"officeChairRN" 0
 		"officeChairRN" 4
 		2 "|officeChair:officeChair" "translate" " -type \"double3\" -4.1840778314702094 -0.6220756114530448 -2.20366645002252248"
@@ -32497,15 +31671,15 @@ createNode reference -n "officeChairRN";
 		2 "|officeChair:officeChair|officeChair:Seat" "translate" " -type \"double3\" 0 -0.33004923069647274 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "nightstandRN";
-	rename -uid "EC71A4EF-824D-B634-CE77-D89E844FC617";
+createNode reference -n "bedroom_SET_latest1:nightstandRN";
+	rename -uid "239BB0F3-374E-311B-F43A-5E8C9F25D69A";
 	setAttr -s 4 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
 	setAttr ".phl[4]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"nightstandRN"
+		"bedroom_SET_latest1:nightstandRN"
 		"nightstandRN" 31
 		2 "nightstand:groupParts1" "inputComponents" " -type \"componentList\" 1 \"f[100:299]\""
 		
@@ -32557,12 +31731,12 @@ createNode reference -n "nightstandRN";
 		""
 		3 "nightstand:PxrSurface1SG.memberWireframeColor" "|nightstand:nightstand|nightstand:nightstand|nightstand:nightstandShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		5 3 "nightstandRN" "|nightstand:nightstand|nightstand:handles|nightstand:polySurface1|nightstand:polySurfaceShape1.instObjGroups" 
-		"nightstandRN.placeHolderList[1]" ""
-		5 3 "nightstandRN" "|nightstand:nightstand|nightstand:handles|nightstand:polySurface2|nightstand:polySurfaceShape2.instObjGroups" 
-		"nightstandRN.placeHolderList[2]" ""
-		5 3 "nightstandRN" "|nightstand:nightstand|nightstand:handles|nightstand:polySurface3|nightstand:polySurfaceShape3.instObjGroups" 
-		"nightstandRN.placeHolderList[3]" ""
+		5 3 "bedroom_SET_latest1:nightstandRN" "|nightstand:nightstand|nightstand:handles|nightstand:polySurface1|nightstand:polySurfaceShape1.instObjGroups" 
+		"bedroom_SET_latest1:nightstandRN.placeHolderList[1]" ""
+		5 3 "bedroom_SET_latest1:nightstandRN" "|nightstand:nightstand|nightstand:handles|nightstand:polySurface2|nightstand:polySurfaceShape2.instObjGroups" 
+		"bedroom_SET_latest1:nightstandRN.placeHolderList[2]" ""
+		5 3 "bedroom_SET_latest1:nightstandRN" "|nightstand:nightstand|nightstand:handles|nightstand:polySurface3|nightstand:polySurfaceShape3.instObjGroups" 
+		"bedroom_SET_latest1:nightstandRN.placeHolderList[3]" ""
 		"nightstandRN" 5
 		2 "|nightstand:nightstand" "translate" " -type \"double3\" 2.97238178116652074 0.64952075884846949 -6.90892680511718638"
 		
@@ -32572,14 +31746,14 @@ createNode reference -n "nightstandRN";
 		
 		2 "|nightstand:nightstand|nightstand:nightstand" "translate" " -type \"double3\" 0 0 0"
 		
-		5 3 "nightstandRN" "|nightstand:nightstand|nightstand:nightstand|nightstand:nightstandShape.instObjGroups" 
-		"nightstandRN.placeHolderList[4]" "";
+		5 3 "bedroom_SET_latest1:nightstandRN" "|nightstand:nightstand|nightstand:nightstand|nightstand:nightstandShape.instObjGroups" 
+		"bedroom_SET_latest1:nightstandRN.placeHolderList[4]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "bookshelfRN";
-	rename -uid "BFAEBB01-2A4C-30D2-4C00-06A020312EFB";
+createNode reference -n "bedroom_SET_latest1:bookshelfRN";
+	rename -uid "40A3A086-D148-4078-2CD3-04891DF92C09";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"bookshelfRN"
+		"bedroom_SET_latest1:bookshelfRN"
 		"bookshelfRN" 0
 		"bookshelfRN" 3
 		0 "|bookshelf:bookshelf" "|BOOK_CABINET" "-s -r "
@@ -32588,10 +31762,10 @@ createNode reference -n "bookshelfRN";
 		2 "|BOOK_CABINET|bookshelf:bookshelf" "scale" " -type \"double3\" 0.42788913316196414 0.47169880036604717 0.42482930195383733";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "music_standRN";
-	rename -uid "09040A9A-9044-1F80-1D36-FE9F307867D1";
+createNode reference -n "bedroom_SET_latest1:music_standRN";
+	rename -uid "6288225B-754F-5CD2-6B52-499D26BBAAEA";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"music_standRN"
+		"bedroom_SET_latest1:music_standRN"
 		"music_standRN" 3
 		2 "|music_stand:Music_Stand" "translate" " -type \"double3\" -3.84835913795599316 -0.14141503158767144 4.75862843375371458"
 		
@@ -32600,20 +31774,20 @@ createNode reference -n "music_standRN";
 		2 "|music_stand:Music_Stand" "scale" " -type \"double3\" 0.92116526018244282 0.92116526018244282 0.92116526018244282";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "sideTableRN";
-	rename -uid "BE1ECFDF-0E4D-55AB-3C51-6188A7E6160E";
+createNode reference -n "bedroom_SET_latest1:sideTableRN";
+	rename -uid "6DC3F6FE-FA4C-D3DC-86A1-6BBADDC3107D";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"sideTableRN"
+		"bedroom_SET_latest1:sideTableRN"
 		"sideTableRN" 2
 		2 "|sideTable:mini_table_desk_thing" "translate" " -type \"double3\" 2.98454028028141716 1.44005726161920933 1.71216491274288396"
 		
 		2 "|sideTable:mini_table_desk_thing" "scale" " -type \"double3\" 0.16749160547857148 0.16749160547857148 0.12388823613889165";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "tableLampRN";
-	rename -uid "CD12D32B-A240-D184-EB42-05A6D36B32E8";
+createNode reference -n "bedroom_SET_latest1:tableLampRN";
+	rename -uid "C95EA9AC-B348-9656-04E7-5ABD5A1DEB8C";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"tableLampRN"
+		"bedroom_SET_latest1:tableLampRN"
 		"tableLampRN" 3
 		2 "|tableLamp:lamp" "translate" " -type \"double3\" 3.1253767440234359 -2.4163884718126587 1.90514026468524111"
 		
@@ -32622,8 +31796,8 @@ createNode reference -n "tableLampRN";
 		2 "|tableLamp:lamp|tableLamp:lamp_shade" "rotate" " -type \"double3\" 0 0 4.29092080045033963";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "celloRN";
-	rename -uid "E1751FAC-3942-EB55-408E-A3A54C345DA7";
+createNode reference -n "bedroom_SET_latest1:celloRN";
+	rename -uid "0CC95ACD-9B47-BF65-763D-6E96DDD4CA41";
 	setAttr -s 20 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
@@ -32646,7 +31820,7 @@ createNode reference -n "celloRN";
 	setAttr ".phl[19]" 0;
 	setAttr ".phl[20]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"celloRN"
+		"bedroom_SET_latest1:celloRN"
 		"celloRN" 100
 		2 "|cello:Cello" "translate" " -type \"double3\" -4.99713545758342903 -0.18258338833012777 4.65884555258246369"
 		
@@ -32791,52 +31965,52 @@ createNode reference -n "celloRN";
 		3 "|cello:Cello|cello:Tuner_BOTTOMRIGHT|cello:Tuner_BOTTOMRIGHTShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "cello:groupId92.message" ":initialShadingGroup.groupNodes" "-na"
-		5 3 "celloRN" "|cello:Cello|cello:Body|cello:BodyShape.instObjGroups" 
-		"celloRN.placeHolderList[1]" "cello:PxrSurface2SG.dsm"
-		5 3 "celloRN" "|cello:Cello|cello:Fingerboard|cello:FingerboardShape.instObjGroups" 
-		"celloRN.placeHolderList[2]" "cello:PxrSurface4SG.dsm"
-		5 3 "celloRN" "|cello:Cello|cello:BottomBoard|cello:BottomBoardShape.instObjGroups" 
-		"celloRN.placeHolderList[3]" "cello:PxrSurface5SG.dsm"
-		5 3 "celloRN" "|cello:Cello|cello:Design_Right|cello:Design_RightShape.instObjGroups" 
-		"celloRN.placeHolderList[4]" "cello:PxrSurface3SG.dsm"
-		5 3 "celloRN" "|cello:Cello|cello:Bridge|cello:BridgeShape.instObjGroups" 
-		"celloRN.placeHolderList[5]" "cello:PxrLMMetal1SG.dsm"
-		5 3 "celloRN" "|cello:Cello|cello:Stand|cello:StandShape.instObjGroups" 
-		"celloRN.placeHolderList[6]" "cello:PxrSurface6SG.dsm"
-		5 3 "celloRN" "|cello:Cello|cello:Scroll|cello:ScrollShape.instObjGroups" 
-		"celloRN.placeHolderList[7]" "cello:PxrSurface7SG.dsm"
-		5 3 "celloRN" "|cello:Cello|cello:String1|cello:StringShape1.instObjGroups" 
-		"celloRN.placeHolderList[8]" ""
-		5 3 "celloRN" "|cello:Cello|cello:String2|cello:StringShape2.instObjGroups" 
-		"celloRN.placeHolderList[9]" ""
-		5 3 "celloRN" "|cello:Cello|cello:String3|cello:StringShape3.instObjGroups" 
-		"celloRN.placeHolderList[10]" ""
-		5 3 "celloRN" "|cello:Cello|cello:String4|cello:StringShape4.instObjGroups" 
-		"celloRN.placeHolderList[11]" ""
-		5 3 "celloRN" "|cello:Cello|cello:Dot4|cello:DotShape4.instObjGroups" 
-		"celloRN.placeHolderList[12]" ""
-		5 3 "celloRN" "|cello:Cello|cello:Design_LEFT|cello:Design_LEFTShape.instObjGroups" 
-		"celloRN.placeHolderList[13]" "cello:PxrSurface3SG.dsm"
-		5 3 "celloRN" "|cello:Cello|cello:Dot3|cello:DotShape3.instObjGroups" 
-		"celloRN.placeHolderList[14]" ""
-		5 3 "celloRN" "|cello:Cello|cello:Dot2|cello:DotShape2.instObjGroups" 
-		"celloRN.placeHolderList[15]" ""
-		5 3 "celloRN" "|cello:Cello|cello:Dot1|cello:DotShape1.instObjGroups" 
-		"celloRN.placeHolderList[16]" ""
-		5 3 "celloRN" "|cello:Cello|cello:Tuner_BOTTOMRIGHT|cello:Tuner_BOTTOMRIGHTShape.instObjGroups" 
-		"celloRN.placeHolderList[17]" ""
-		5 3 "celloRN" "|cello:Cello|cello:Tuner_BOTTOMLEFT|cello:Tuner_BOTTOMLEFTShape.instObjGroups" 
-		"celloRN.placeHolderList[18]" ""
-		5 3 "celloRN" "|cello:Cello|cello:Tuner_TOPRIGHT|cello:Tuner_TOPRIGHTShape.instObjGroups" 
-		"celloRN.placeHolderList[19]" ""
-		5 3 "celloRN" "|cello:Cello|cello:Tuner_TOPLEFT|cello:Tuner_TOPLEFTShape.instObjGroups" 
-		"celloRN.placeHolderList[20]" "";
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Body|cello:BodyShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[1]" "cello:PxrSurface2SG.dsm"
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Fingerboard|cello:FingerboardShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[2]" "cello:PxrSurface4SG.dsm"
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:BottomBoard|cello:BottomBoardShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[3]" "cello:PxrSurface5SG.dsm"
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Design_Right|cello:Design_RightShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[4]" "cello:PxrSurface3SG.dsm"
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Bridge|cello:BridgeShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[5]" "cello:PxrLMMetal1SG.dsm"
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Stand|cello:StandShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[6]" "cello:PxrSurface6SG.dsm"
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Scroll|cello:ScrollShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[7]" "cello:PxrSurface7SG.dsm"
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:String1|cello:StringShape1.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[8]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:String2|cello:StringShape2.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[9]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:String3|cello:StringShape3.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[10]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:String4|cello:StringShape4.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[11]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Dot4|cello:DotShape4.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[12]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Design_LEFT|cello:Design_LEFTShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[13]" "cello:PxrSurface3SG.dsm"
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Dot3|cello:DotShape3.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[14]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Dot2|cello:DotShape2.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[15]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Dot1|cello:DotShape1.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[16]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Tuner_BOTTOMRIGHT|cello:Tuner_BOTTOMRIGHTShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[17]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Tuner_BOTTOMLEFT|cello:Tuner_BOTTOMLEFTShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[18]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Tuner_TOPRIGHT|cello:Tuner_TOPRIGHTShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[19]" ""
+		5 3 "bedroom_SET_latest1:celloRN" "|cello:Cello|cello:Tuner_TOPLEFT|cello:Tuner_TOPLEFTShape.instObjGroups" 
+		"bedroom_SET_latest1:celloRN.placeHolderList[20]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "beanBagRN";
-	rename -uid "B8990FC7-BE49-03A1-6B2F-DD800365EB63";
+createNode reference -n "bedroom_SET_latest1:beanBagRN";
+	rename -uid "3C0C1E81-F744-4EBF-CF33-F78A7C719F64";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"beanBagRN"
+		"bedroom_SET_latest1:beanBagRN"
 		"beanBagRN" 5
 		2 "|beanBag:pSphere2" "translate" " -type \"double3\" 23.41876748978268097 -0.91309666946846035 -27.20093293160574532"
 		
@@ -32848,10 +32022,10 @@ createNode reference -n "beanBagRN";
 		2 "|beanBag:pSphere2|beanBag:pSphere2Shape" "displaySmoothMesh" " 2";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "clockRN";
-	rename -uid "CE0B767B-E04E-31B2-1BD2-28A8EA829690";
+createNode reference -n "bedroom_SET_latest1:clockRN";
+	rename -uid "495175E7-9748-6773-0520-BA8A4A4CA18C";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"clockRN"
+		"bedroom_SET_latest1:clockRN"
 		"clockRN" 23
 		0 "|clock:group18" "|clock1" "-s -r "
 		0 "|clock:group17" "|clock1" "-s -r "
@@ -32883,11 +32057,11 @@ createNode reference -n "clockRN";
 		2 "|clock:clock" "scale" " -type \"double3\" 0.385671820105918 0.385671820105918 0.385671820105918";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "scarfRN";
-	rename -uid "FEBF1470-684D-837C-40E1-B899838471A3";
+createNode reference -n "bedroom_SET_latest1:scarfRN";
+	rename -uid "826493A7-9749-D2ED-5AA5-2CBDEDB3C32C";
 	setAttr ".phl[1]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"scarfRN"
+		"bedroom_SET_latest1:scarfRN"
 		"scarfRN" 0
 		"scarfRN" 7
 		2 "|scarf:scarf" "translate" " -type \"double3\" 2.03601755343053137 1.09957817199609398 2.73824704305344424"
@@ -32900,14 +32074,14 @@ createNode reference -n "scarfRN";
 		2 "|scarf:scarf|scarf:scarf" "displaySmoothMesh" " 2"
 		3 "|scarf:scarf|scarf:scarf.instObjGroups" "scarf:PxrSurface2SG.dagSetMembers" 
 		"-na"
-		5 3 "scarfRN" "|scarf:scarf|scarf:scarf.instObjGroups" "scarfRN.placeHolderList[1]" 
-		"scarf:PxrSurface2SG.dsm";
+		5 3 "bedroom_SET_latest1:scarfRN" "|scarf:scarf|scarf:scarf.instObjGroups" 
+		"bedroom_SET_latest1:scarfRN.placeHolderList[1]" "bedroom_SET_latest1:scarf:PxrSurface2SG.dsm";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "musictrophy2RN";
-	rename -uid "1C147573-EF4A-D0C0-94B5-90807889A0CD";
+createNode reference -n "bedroom_SET_latest1:musictrophy2RN";
+	rename -uid "231D956B-7642-FEFE-4A70-63AEFD79A19D";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"musictrophy2RN"
+		"bedroom_SET_latest1:musictrophy2RN"
 		"musictrophy2RN" 5
 		0 "|musictrophy2:pCylinder3" "|musicTrophy" "-s -r "
 		0 "|musictrophy2:pSphere1" "|musicTrophy" "-s -r "
@@ -32916,10 +32090,10 @@ createNode reference -n "musictrophy2RN";
 		0 "|musictrophy2:pCube1" "|musicTrophy" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "musictrophyRN";
-	rename -uid "23569C13-3641-7D00-1EE9-D5B5369FCA93";
+createNode reference -n "bedroom_SET_latest1:musictrophyRN";
+	rename -uid "E26AB347-714E-B117-315C-76962EA2E6FC";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"musictrophyRN"
+		"bedroom_SET_latest1:musictrophyRN"
 		"musictrophyRN" 5
 		0 "|musictrophy:pCube1" "|musicTrophy2" "-s -r "
 		0 "|musictrophy:pCylinder1" "|musicTrophy2" "-s -r "
@@ -32928,10 +32102,10 @@ createNode reference -n "musictrophyRN";
 		0 "|musictrophy:pCylinder3" "|musicTrophy2" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "musicStaffRN";
-	rename -uid "937DC5C1-C94E-B186-67C7-8D81539A7726";
+createNode reference -n "bedroom_SET_latest1:musicStaffRN";
+	rename -uid "2503FA25-334F-BF49-D447-FEA1891DD1EA";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"musicStaffRN"
+		"bedroom_SET_latest1:musicStaffRN"
 		"musicStaffRN" 17
 		2 "|musicStaff:musicStaff" "translate" " -type \"double3\" 4.6023065582589906 3.34050011423932336 -2.69885042473512815"
 		
@@ -32968,10 +32142,10 @@ createNode reference -n "musicStaffRN";
 		" -type \"double3\" 0.91364734079121235 1 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "musicKeyRN";
-	rename -uid "39C546D6-9E4B-B684-E770-A9A2BE137458";
+createNode reference -n "bedroom_SET_latest1:musicKeyRN";
+	rename -uid "02E294F5-D540-6A4A-6776-C68B2754E6D4";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"musicKeyRN"
+		"bedroom_SET_latest1:musicKeyRN"
 		"musicKeyRN" 3
 		2 "|musicKey:depressionNote" "translate" " -type \"double3\" -3.7813584042646835 2.46055789777344547 4.75309563462861107"
 		
@@ -32980,10 +32154,10 @@ createNode reference -n "musicKeyRN";
 		2 "|musicKey:depressionNote" "scale" " -type \"double3\" 0.18266160009618254 0.22549799486555841 0.47833421871401161";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "musicbox__1_RN";
-	rename -uid "89F08DCF-9449-6B7D-B043-9DBE938AF154";
+createNode reference -n "bedroom_SET_latest1:musicbox__1_RN";
+	rename -uid "0BDC5C62-8B4F-8959-135E-4098C9D129CC";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"musicbox__1_RN"
+		"bedroom_SET_latest1:musicbox__1_RN"
 		"musicbox__1_RN" 5
 		0 "|musicbox__1_:pSphere1" "|musicbox" "-s -r "
 		0 "|musicbox__1_:pSphere2" "|musicbox" "-s -r "
@@ -32992,10 +32166,10 @@ createNode reference -n "musicbox__1_RN";
 		0 "|musicbox__1_:pCylinder1" "|musicbox" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "curtainsRN1";
-	rename -uid "6B88457C-AF4B-2010-8546-A6BEFD69E3FB";
+createNode reference -n "bedroom_SET_latest1:curtainsRN1";
+	rename -uid "B12C4A97-814E-D1FD-960E-0990440F4DC0";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"curtainsRN1"
+		"bedroom_SET_latest1:curtainsRN1"
 		"curtainsRN1" 0
 		"curtainsRN1" 9
 		2 "|curtains1:Curtains" "translate" " -type \"double3\" 0.94801846605734175 -1.20279806676425682 5.1298248479775399"
@@ -33016,10 +32190,10 @@ createNode reference -n "curtainsRN1";
 		2 "|curtains1:Curtains|curtains1:Right_Curtain" "scale" " -type \"double3\" 1 1 0.83137972524210746";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "musicNotesRN";
-	rename -uid "E8C0F5BF-B54F-FAC4-A5E3-4F97403D7101";
+createNode reference -n "bedroom_SET_latest1:musicNotesRN";
+	rename -uid "8539AE26-624C-FC3F-E7B5-10BFE1E06AEA";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"musicNotesRN"
+		"bedroom_SET_latest1:musicNotesRN"
 		"musicNotesRN" 3
 		2 "|musicNotes:musicNote" "translate" " -type \"double3\" 3.41530665131482225 4.83842394527910802 -0.71524280990372746"
 		
@@ -33027,10 +32201,10 @@ createNode reference -n "musicNotesRN";
 		2 "|musicNotes:musicNote" "scale" " -type \"double3\" 0.3066187948229494 0.3066187948229494 0.3066187948229494";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "musictrophy_LargeRN";
-	rename -uid "7612D3A7-A449-C3DA-D9F9-96998418DE76";
+createNode reference -n "bedroom_SET_latest1:musictrophy_LargeRN";
+	rename -uid "3B89D2A0-5A4A-B8A5-DB79-3FA6A3A4BCA8";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"musictrophy_LargeRN"
+		"bedroom_SET_latest1:musictrophy_LargeRN"
 		"musictrophy_LargeRN" 14
 		2 "|musictrophy_Large:trebletrophy" "translate" " -type \"double3\" -5.2921309840421884 3.49719621763894262 -5.88829672135449478"
 		
@@ -33063,10 +32237,10 @@ createNode reference -n "musictrophy_LargeRN";
 		" -type \"double3\" 1.36881709109061522 0.62396388313089823 0.060010355556108258";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "hollowStarRN";
-	rename -uid "19B67966-924F-20B8-6CC8-4AB8211A750D";
+createNode reference -n "bedroom_SET_latest1:hollowStarRN";
+	rename -uid "B4992A88-B64B-104C-C51C-62A0F68346A3";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"hollowStarRN"
+		"bedroom_SET_latest1:hollowStarRN"
 		"hollowStarRN" 51
 		0 "|hollowStarRNfosterParent1|hollow_star" "|hollowStar:hollowstar" "-s -r "
 		
@@ -33125,66 +32299,66 @@ createNode reference -n "hollowStarRN";
 		
 		2 "|hollowStar:hollowstar|hollowStar:hollow_star" "scale" " -type \"double3\" 1.06692041949836791 2.64338389025984899 1.06692041949836791"
 		
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[1]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[2]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[3]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[4]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[5]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[6]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[7]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[8]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[9]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[10]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[11]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[12]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[13]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[14]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[15]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[16]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[17]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[18]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[19]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[20]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[21]" 
-		""
-		5 4 "hollowStarRN" "hollowStar:string2SG.dagSetMembers" "hollowStarRN.placeHolderList[22]" 
-		"";
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[1]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[2]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[3]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[4]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[5]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[6]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[7]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[8]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[9]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[10]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[11]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[12]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[13]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[14]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[15]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[16]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[17]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[18]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[19]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[20]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[21]" ""
+		5 4 "bedroom_SET_latest1:hollowStarRN" "hollowStar:string2SG.dagSetMembers" 
+		"bedroom_SET_latest1:hollowStarRN.placeHolderList[22]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "snakeplantRN";
-	rename -uid "E24351F7-0B4B-6F4E-C07E-87808A483736";
+createNode reference -n "bedroom_SET_latest1:snakeplantRN";
+	rename -uid "DE322A96-BE43-B7D7-78A2-C3BB4391C889";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"snakeplantRN"
+		"bedroom_SET_latest1:snakeplantRN"
 		"snakeplantRN" 2
 		2 "|snakeplant:Snakeplant" "translate" " -type \"double3\" -0.31949636319067581 2.04334788684824797 -7.39957438427146208"
 		
 		2 "|snakeplant:Snakeplant" "scale" " -type \"double3\" 0.26146049978532404 0.26146049978532404 0.26146049978532404";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "foxRN";
-	rename -uid "6D7B5D79-ED42-6E36-7DA4-D082FFFF6FA5";
+createNode reference -n "bedroom_SET_latest1:foxRN";
+	rename -uid "7B1F1CE7-6C40-9CA4-8F05-BFA91C880427";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"foxRN"
+		"bedroom_SET_latest1:foxRN"
 		"foxRN" 5
 		2 "|BOOK_CABINET|fox:fox_mesh" "translate" " -type \"double3\" -1.09832014625789265 2.03286262269877316 -7.36964115931467223"
 		
@@ -33196,10 +32370,10 @@ createNode reference -n "foxRN";
 		2 "|BOOK_CABINET|fox:fox_mesh|fox:fox_meshShape" "displaySmoothMesh" " 2";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "book_stackRN";
-	rename -uid "D77B5454-6B47-48BA-58E9-8CB39EA6AFC8";
+createNode reference -n "bedroom_SET_latest1:book_stackRN";
+	rename -uid "C9EEABE7-8149-5B4A-DBD3-2CBF53E7CA91";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"book_stackRN"
+		"bedroom_SET_latest1:book_stackRN"
 		"book_stackRN" 41
 		0 "|book_stackRNfosterParent1|book13" "|book_stack:book_stack" "-s -r "
 		0 "|book_stackRNfosterParent1|book12" "|book_stack:book_stack" "-s -r "
@@ -33214,72 +32388,72 @@ createNode reference -n "book_stackRN";
 		
 		2 "|book_stack:book_stack" "scale" " -type \"double3\" 0.093502181009345833 0.093502181009345833 0.093502181009345833"
 		
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[1]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[2]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[3]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[4]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[5]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[6]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[7]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[8]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[9]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[10]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[11]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[12]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[13]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[14]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" "book_stackRN.placeHolderList[15]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[16]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[17]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[18]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[19]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[20]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[21]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[22]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[23]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[24]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[25]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[26]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[27]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[28]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[29]" 
-		""
-		5 4 "book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" "book_stackRN.placeHolderList[30]" 
-		"";
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[1]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[2]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[3]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[4]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[5]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[6]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[7]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[8]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[9]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[10]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[11]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[12]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[13]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[14]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[15]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[16]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[17]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[18]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[19]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[20]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[21]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[22]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[23]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[24]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[25]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[26]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[27]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[28]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[29]" ""
+		5 4 "bedroom_SET_latest1:book_stackRN" "book_stack:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:book_stackRN.placeHolderList[30]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "boardgameRN";
-	rename -uid "D2CF7007-CA4A-8395-2B23-2AA038E55E0D";
+createNode reference -n "bedroom_SET_latest1:boardgameRN";
+	rename -uid "379244DD-2641-88AD-3EC4-C0AEF6863E70";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"boardgameRN"
+		"bedroom_SET_latest1:boardgameRN"
 		"boardgameRN" 3
 		2 "|boardgame:Board_Game" "translate" " -type \"double3\" -1.27106452966750716 0.19502272336787529 -7.3969551749105511"
 		
@@ -33288,13 +32462,13 @@ createNode reference -n "boardgameRN";
 		2 "|boardgame:Board_Game" "scale" " -type \"double3\" 0.54053879767902036 0.52601307740809822 0.52601307740809822";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode polyCube -n "polyCube1";
-	rename -uid "6E173CF9-2041-8DEE-C4C7-FC92CE510EB3";
+createNode polyCube -n "bedroom_SET_latest1:polyCube1";
+	rename -uid "FBFD587D-D942-3E79-E05A-BAB43D03F7FD";
 	setAttr ".cuv" 4;
-createNode reference -n "toyTrainRN";
-	rename -uid "EE206B35-3E4D-ED2A-0767-36806ACF420A";
+createNode reference -n "bedroom_SET_latest1:toyTrainRN";
+	rename -uid "7DB94424-0E45-1C3E-B10A-978AAC9E40D9";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"toyTrainRN"
+		"bedroom_SET_latest1:toyTrainRN"
 		"toyTrainRN" 3
 		2 "|SMALL_CABINET|toyTrain:ToyTrain" "translate" " -type \"double3\" -1.17071191049940615 -0.0088561964744793276 2.8807257128111039"
 		
@@ -33303,10 +32477,10 @@ createNode reference -n "toyTrainRN";
 		2 "|SMALL_CABINET|toyTrain:ToyTrain" "scale" " -type \"double3\" 0.25871709804733789 0.25871709804733789 0.25871709804733789";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "toyPlaneRN";
-	rename -uid "6A1C12C0-ED46-0028-E861-BCB7C97CD786";
+createNode reference -n "bedroom_SET_latest1:toyPlaneRN";
+	rename -uid "74B6CCD2-2642-6D2D-8435-04B0230D9D56";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"toyPlaneRN"
+		"bedroom_SET_latest1:toyPlaneRN"
 		"toyPlaneRN" 3
 		2 "|toyPlane:toyPlane" "translate" " -type \"double3\" 2.39324159693283134 0.78414743488830463 -7.55400022750607913"
 		
@@ -33315,10 +32489,10 @@ createNode reference -n "toyPlaneRN";
 		2 "|toyPlane:toyPlane" "scale" " -type \"double3\" 0.1099163414159819 0.1099163414159819 0.1099163414159819";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "monsteradeliciousaRN";
-	rename -uid "42079320-EF41-E508-B468-BC9F338FE20C";
+createNode reference -n "bedroom_SET_latest1:monsteradeliciousaRN";
+	rename -uid "A3BEDBB6-5E47-FAC9-A33D-6CB8B3A652EC";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"monsteradeliciousaRN"
+		"bedroom_SET_latest1:monsteradeliciousaRN"
 		"monsteradeliciousaRN" 3
 		2 "|monsteradeliciousa:MonsteraDeliciousa" "translate" " -type \"double3\" 2.59825097921523529 1.53747077569045132 -7.57578138112496013"
 		
@@ -33327,10 +32501,10 @@ createNode reference -n "monsteradeliciousaRN";
 		2 "|monsteradeliciousa:MonsteraDeliciousa" "scale" " -type \"double3\" 0.14770872898504248 0.14770872898504248 0.14770872898504248";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "chinese_stoolRN";
-	rename -uid "94043440-484A-50E0-7EB1-08B07442B2D9";
+createNode reference -n "bedroom_SET_latest1:chinese_stoolRN";
+	rename -uid "4B594C3D-FF4B-7625-6AD7-43B328735901";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"chinese_stoolRN"
+		"bedroom_SET_latest1:chinese_stoolRN"
 		"chinese_stoolRN" 3
 		2 "|chinese_stool:pCylinder1" "translate" " -type \"double3\" 0 2.52615117416424884 0"
 		
@@ -33339,13 +32513,13 @@ createNode reference -n "chinese_stoolRN";
 		2 "|chinese_stool:pCylinder3" "scale" " -type \"double3\" 0.2890968759787429 0.2890968759787429 0.2890968759787429";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode renderLayerManager -n "vase:renderLayerManager";
-	rename -uid "93229A7B-3C4B-72DA-59AE-D89BDD6F4E7B";
-createNode renderLayer -n "vase:defaultRenderLayer";
-	rename -uid "763F20DD-7A43-1108-82A7-0DB1DEEE0761";
+createNode renderLayerManager -n "bedroom_SET_latest1:vase:renderLayerManager";
+	rename -uid "812AC9E8-2845-7BAA-8141-DE9C7F979E06";
+createNode renderLayer -n "bedroom_SET_latest1:vase:defaultRenderLayer";
+	rename -uid "1236946A-4C40-7A8A-F16D-BE89B3BEE630";
 	setAttr ".g" yes;
-createNode d_openexr -n "vase:d_openexr";
-	rename -uid "FE0709F6-5A49-772C-FEFA-B78067F57B75";
+createNode d_openexr -n "bedroom_SET_latest1:vase:d_openexr";
+	rename -uid "AB25B2B7-3743-D9F3-5969-569606AC2F51";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -33355,8 +32529,8 @@ createNode d_openexr -n "vase:d_openexr";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "vase:Ci";
-	rename -uid "25B9277C-5141-CBF6-2658-549E56C370A2";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:vase:Ci";
+	rename -uid "5D75931A-A340-D465-A89B-D791FFC04B6A";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -33372,8 +32546,8 @@ createNode rmanDisplayChannel -n "vase:Ci";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "vase:a";
-	rename -uid "875AEBE8-704C-B404-B63B-909344735710";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:vase:a";
+	rename -uid "1A47D30F-6843-A8F9-044F-91802C2C1F3E";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -33389,8 +32563,8 @@ createNode rmanDisplayChannel -n "vase:a";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode nodeGraphEditorInfo -n "vase:hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "8595C9C6-4246-DC11-63C4-3EB4ECE982F0";
+createNode nodeGraphEditorInfo -n "bedroom_SET_latest1:vase:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "C72B2A63-C241-FED8-B399-5D9F71B8BA65";
 	setAttr ".def" no;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -438.09522068689819 -291.66665507687509 ;
@@ -33408,69 +32582,69 @@ createNode nodeGraphEditorInfo -n "vase:hyperShadePrimaryNodeEditorSavedTabsInfo
 	setAttr ".tgi[0].ni[3].x" -490;
 	setAttr ".tgi[0].ni[3].y" 654.28570556640625;
 	setAttr ".tgi[0].ni[3].nvs" 2066;
-createNode shadingEngine -n "fox:initialShadingGroup";
-	rename -uid "D9AF2E5F-0148-25C1-674C-ED8D3C5BD1C9";
+createNode shadingEngine -n "bedroom_SET_latest1:fox:initialShadingGroup";
+	rename -uid "7B67357A-D94B-5197-081D-ACBF1C739479";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "fox:materialInfo1";
-	rename -uid "127EE53A-2D47-5399-3EF0-D6BDD429D823";
-createNode groupId -n "fox:groupId1";
-	rename -uid "9D25073B-4B44-48C8-09F9-13B30A80F788";
+createNode materialInfo -n "bedroom_SET_latest1:fox:materialInfo1";
+	rename -uid "B5735084-6949-7406-3464-B1A74A0A795A";
+createNode groupId -n "bedroom_SET_latest1:fox:groupId1";
+	rename -uid "C576D29D-F94B-361C-B37A-34AD377C7248";
 	setAttr ".ihi" 0;
-createNode lambert -n "fox:initialShadingGroup1";
-	rename -uid "DCE3666D-004A-F374-A444-4C8DBA860701";
-createNode shadingEngine -n "fatVase:initialShadingGroup";
-	rename -uid "20E2A3E4-D342-CDBA-D6B9-BD83FB09D2CA";
-	setAttr ".ihi" 0;
-	setAttr ".ro" yes;
-createNode materialInfo -n "fatVase:materialInfo1";
-	rename -uid "8851A3AE-DB4F-D1D5-616E-3BBE10987B5C";
-createNode lambert -n "fatVase:initialShadingGroup1";
-	rename -uid "683BBC58-2B4C-8779-0B57-788D4D56A3D3";
-createNode shadingEngine -n "fatVase:initialShadingGroup2";
-	rename -uid "7E2A602A-A64D-241C-A01A-69857AB93F5D";
+createNode lambert -n "bedroom_SET_latest1:fox:initialShadingGroup1";
+	rename -uid "E0C83875-404B-E67E-3ED8-9E81EB0FDC16";
+createNode shadingEngine -n "bedroom_SET_latest1:fatVase:initialShadingGroup";
+	rename -uid "CBBB210E-0749-E819-F770-A981D3903C27";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "fatVase:materialInfo2";
-	rename -uid "BE4F804C-E543-51B4-1DBC-BDA45845CC8B";
-createNode lambert -n "fatVase:initialShadingGroup3";
-	rename -uid "C894D534-4441-5700-B755-C0A847CAD40A";
-createNode lambert -n "lambert2";
-	rename -uid "7C636FCA-A544-E279-4319-BEBDAE9B1EEB";
-createNode shadingEngine -n "string2SG";
-	rename -uid "E3A38ED0-1A4C-D4C3-28E5-F99FAA6A97D5";
+createNode materialInfo -n "bedroom_SET_latest1:fatVase:materialInfo1";
+	rename -uid "C5AB0A5B-BD4E-087F-3837-4984E9D5300C";
+createNode lambert -n "bedroom_SET_latest1:fatVase:initialShadingGroup1";
+	rename -uid "7D2CBE30-1849-F4DB-03D6-C89E1449D863";
+createNode shadingEngine -n "bedroom_SET_latest1:fatVase:initialShadingGroup2";
+	rename -uid "02595A88-1546-A986-4037-43A0752F08E0";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo18";
-	rename -uid "6EBB0C2E-244E-8DFF-CCD2-BCAB995E4689";
-createNode lambert -n "lambert3";
-	rename -uid "E1016EE8-A64E-E560-A5A6-57BA2ACEB9FB";
-createNode shadingEngine -n "starSG";
-	rename -uid "6204BE15-5C42-36D0-3C3C-30B49D4A67F9";
+createNode materialInfo -n "bedroom_SET_latest1:fatVase:materialInfo2";
+	rename -uid "473A0215-D34E-8C1F-E085-C688CE7DA160";
+createNode lambert -n "bedroom_SET_latest1:fatVase:initialShadingGroup3";
+	rename -uid "04C86AAD-C44C-CF62-A135-DB833D12FA4E";
+createNode lambert -n "bedroom_SET_latest1:lambert2";
+	rename -uid "2E4C93A6-2E42-5A1D-30F6-97BEE0618016";
+createNode shadingEngine -n "bedroom_SET_latest1:string2SG";
+	rename -uid "978D9BAD-FB4C-E7B6-C53C-B1843DB0006B";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo19";
-	rename -uid "5012C981-FF47-F446-F40A-21AFF2927FE7";
-createNode lambert -n "lambert4";
-	rename -uid "95BABBFF-8546-F877-FC2F-B2AF66A726DD";
-createNode shadingEngine -n "pSphere2SG";
-	rename -uid "1E2B1B78-8744-CE39-A50E-819986AA4706";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo18";
+	rename -uid "3633D43B-374F-1389-ACE7-FEBA57BF2C52";
+createNode lambert -n "bedroom_SET_latest1:lambert3";
+	rename -uid "B5F45C20-E740-875A-A3C6-488B6A9346EE";
+createNode shadingEngine -n "bedroom_SET_latest1:starSG";
+	rename -uid "FD80AFE7-9447-D668-EF9E-4FBCDB81D058";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo20";
-	rename -uid "237678A4-8C4F-97D6-2442-B38D08BD39F8";
-createNode lambert -n "lambert5";
-	rename -uid "4DA6998A-4D43-488C-8AA0-23BC0583E52C";
-createNode shadingEngine -n "starSG1";
-	rename -uid "24604820-DF43-8BEC-BE20-EA944FE27E98";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo19";
+	rename -uid "610E86B0-9542-286D-A788-A0B1E43E9418";
+createNode lambert -n "bedroom_SET_latest1:lambert4";
+	rename -uid "3AA95BC0-5942-D3A4-C8CE-50A6132CC9DC";
+createNode shadingEngine -n "bedroom_SET_latest1:pSphere2SG";
+	rename -uid "97B6BF82-6C41-288F-5443-67AD09D4828E";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo21";
-	rename -uid "ADBBAEED-F54B-83FA-271B-D791C2E49C97";
-createNode reference -n "moonDecorationRN";
-	rename -uid "053AA2BD-EF4A-E706-56CD-F9991E3B9C6F";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo20";
+	rename -uid "1B627CEC-1E47-B57E-FED1-BA8EB64BFB13";
+createNode lambert -n "bedroom_SET_latest1:lambert5";
+	rename -uid "6A9B3ACF-4544-B622-C6AE-C3B477ACBAEB";
+createNode shadingEngine -n "bedroom_SET_latest1:starSG1";
+	rename -uid "CAB459FB-DC4D-D19F-1479-229142D023B2";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo21";
+	rename -uid "A56D9C64-BA4B-EB1B-044E-B897362BDA47";
+createNode reference -n "bedroom_SET_latest1:moonDecorationRN";
+	rename -uid "0A87024F-9449-06A1-69C2-29BB134C2D15";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"moonDecorationRN"
+		"bedroom_SET_latest1:moonDecorationRN"
 		"moonDecorationRN" 0
 		"moonDecorationRN" 3
 		2 "|moonDecoration:moon" "translate" " -type \"double3\" 3.54196143439377487 1.92538115288431921 1.4873438495878375"
@@ -33479,10 +32653,10 @@ createNode reference -n "moonDecorationRN";
 		2 "|moonDecoration:moon" "scale" " -type \"double3\" 0.40670076272608641 0.40670076272608641 1.35806609502335296";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "smallTrashCanRN";
-	rename -uid "6D220D81-194E-CECE-4747-6B85FB33E697";
+createNode reference -n "bedroom_SET_latest1:smallTrashCanRN";
+	rename -uid "37AAE4D5-FE4D-CFA8-7EDC-1F9567ACF8E3";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"smallTrashCanRN"
+		"bedroom_SET_latest1:smallTrashCanRN"
 		"smallTrashCanRN" 0
 		"smallTrashCanRN" 4
 		2 "|smallTrashCan:smallTrashCan" "translate" " -type \"double3\" -5.44486012921322438 -0.36841217567062956 1.97053706377940552"
@@ -33495,30 +32669,30 @@ createNode reference -n "smallTrashCanRN";
 		" 2";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode lambert -n "minidesk_wood_shader";
-	rename -uid "49D61A30-7744-514E-6CEE-B7B17331BA72";
+createNode lambert -n "bedroom_SET_latest1:minidesk_wood_shader";
+	rename -uid "4AF81E8B-3C4E-8A08-04AE-44948B6B6155";
 	setAttr ".dc" 1;
 	setAttr ".ambc" -type "float3" 0.5 0.5 0.5 ;
-createNode shadingEngine -n "wood_partSG";
-	rename -uid "B88A8591-3843-93C8-EEB4-AC94E368CBE8";
+createNode shadingEngine -n "bedroom_SET_latest1:wood_partSG";
+	rename -uid "5D92AE99-F44F-9B0E-0C6F-40B8263FAB7C";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo22";
-	rename -uid "F46989A4-664D-0FA5-8183-5C9CA535DF33";
-createNode lambert -n "minidesk_top_shader";
-	rename -uid "374463EE-6A4C-CD9C-B4F9-65ACFCA22525";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo22";
+	rename -uid "7DC5CC3E-A24C-4393-C13A-45B055C386A5";
+createNode lambert -n "bedroom_SET_latest1:minidesk_top_shader";
+	rename -uid "95024B40-A943-60CB-A80F-799A2F8FE6E6";
 	setAttr ".dc" 1;
 	setAttr ".ambc" -type "float3" 0.5 0.5 0.5 ;
-createNode shadingEngine -n "top_partSG";
-	rename -uid "91C1D1C2-8C40-31A8-BEA8-6BB384F3E244";
+createNode shadingEngine -n "bedroom_SET_latest1:top_partSG";
+	rename -uid "8F82FCD1-1E43-5B73-0105-3F8E196889EF";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "materialInfo23";
-	rename -uid "5C82610C-3B47-3BB2-AE88-A3BD8B52FF65";
-createNode reference -n "phoneRN";
-	rename -uid "E7A3B20A-CC4A-25BE-5139-3F98BC9A3127";
+createNode materialInfo -n "bedroom_SET_latest1:materialInfo23";
+	rename -uid "2C2FA829-BF45-0DB5-A16B-528103DD6F45";
+createNode reference -n "bedroom_SET_latest1:phoneRN";
+	rename -uid "91905CCB-ED45-8D0D-EC6E-B4B4923830E8";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"phoneRN"
+		"bedroom_SET_latest1:phoneRN"
 		"phoneRN" 8
 		2 "|phone:pCube2" "visibility" " 0"
 		2 "|phone:pCube3" "visibility" " 0"
@@ -33532,10 +32706,10 @@ createNode reference -n "phoneRN";
 		2 "|phone:pCube5" "scale" " -type \"double3\" 0.30575188257383701 0.35417176420746904 0.38384769008668129";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "bookRN1";
-	rename -uid "D85C57A0-4D47-0DAA-D3DD-1688A1846417";
+createNode reference -n "bedroom_SET_latest1:bookRN1";
+	rename -uid "9E759512-C249-E9D1-04D4-A6922D868DD0";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"bookRN1"
+		"bedroom_SET_latest1:bookRN1"
 		"bookRN1" 0
 		"bookRN1" 7
 		2 "|book27:book" "visibility" " 0"
@@ -33551,190 +32725,190 @@ createNode reference -n "bookRN1";
 		2 "|book27:book|book27:rightside" "rotate" " -type \"double3\" 0 0 -4.37293551966511984";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode renderLayerManager -n "glasses:renderLayerManager";
-	rename -uid "D875C462-A748-38D1-B659-489782977770";
-createNode renderLayer -n "glasses:defaultRenderLayer";
-	rename -uid "F5B58CD6-C64F-B9B2-3A41-FFB38C268273";
+createNode renderLayerManager -n "bedroom_SET_latest1:glasses:renderLayerManager";
+	rename -uid "19A62434-0E42-F261-862F-EFBA851339DC";
+createNode renderLayer -n "bedroom_SET_latest1:glasses:defaultRenderLayer";
+	rename -uid "6B8FFE39-6E4A-EB3C-9301-C1B83D7CD904";
 	setAttr ".g" yes;
-createNode reference -n "Jacies_shoe_latestRN";
-	rename -uid "7DC203C4-8B4C-3EF3-EBE3-4B8A76D3AAD9";
+createNode reference -n "bedroom_SET_latest1:Jacies_shoe_latestRN";
+	rename -uid "24E2738A-7244-367F-3F87-DFBC9E6E7900";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"Jacies_shoe_latestRN"
+		"bedroom_SET_latest1:Jacies_shoe_latestRN"
 		"Jacies_shoe_latestRN" 78
 		2 "|Jacies_shoe_latest:Jackie_Shoe" "visibility" " 1"
 		2 "|Jacies_shoe_latest:Jackie_Shoe" "translate" " -type \"double3\" 1.4164660084109213 0.096649612669295087 1.52873890285615754"
 		
 		2 "|Jacies_shoe_latest:Jackie_Shoe" "scale" " -type \"double3\" 0.19664493607294781 0.19664493607294781 0.19664493607294781"
 		
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[1]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[2]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[3]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[4]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[5]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[6]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[7]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[8]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[9]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[10]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[11]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[12]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[13]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[14]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[15]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[16]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[17]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[18]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[19]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[20]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[21]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[22]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[23]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[24]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[25]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[26]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[27]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[28]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[29]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[30]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[31]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[32]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[33]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[34]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[35]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[36]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[37]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[38]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[39]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[40]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[41]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[42]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[43]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[44]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[45]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[46]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[47]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[48]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[49]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[50]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[51]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[52]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[53]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[54]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[55]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[56]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[57]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[58]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[59]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[60]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[61]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[62]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[63]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[64]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[65]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[66]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[67]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[68]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[69]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[70]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[71]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[72]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[73]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[74]" ""
-		5 4 "Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
-		"Jacies_shoe_latestRN.placeHolderList[75]" "";
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[1]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[2]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[3]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[4]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[5]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[6]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[7]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[8]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[9]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[10]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[11]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[12]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[13]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[14]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[15]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[16]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[17]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[18]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[19]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[20]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[21]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[22]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[23]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[24]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[25]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[26]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[27]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[28]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[29]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[30]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[31]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[32]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[33]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[34]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[35]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[36]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[37]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[38]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[39]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[40]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[41]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[42]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[43]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[44]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface3SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[45]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[46]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[47]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[48]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[49]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[50]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[51]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[52]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[53]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[54]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[55]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[56]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[57]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[58]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[59]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[60]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[61]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[62]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[63]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[64]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[65]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[66]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[67]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[68]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[69]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[70]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[71]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[72]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[73]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[74]" ""
+		5 4 "bedroom_SET_latest1:Jacies_shoe_latestRN" "Jacies_shoe_latest:PxrSurface4SG.dagSetMembers" 
+		"bedroom_SET_latest1:Jacies_shoe_latestRN.placeHolderList[75]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode renderLayerManager -n "lamp_small:renderLayerManager";
-	rename -uid "1B52B062-D64F-DC79-3422-C5B60FD354B7";
-createNode renderLayer -n "lamp_small:defaultRenderLayer";
-	rename -uid "4C9D473E-B344-ED0A-A70E-0D9A8BD07BED";
+createNode renderLayerManager -n "bedroom_SET_latest1:lamp_small:renderLayerManager";
+	rename -uid "89A72676-8441-EF99-E4A8-CC81077CFB74";
+createNode renderLayer -n "bedroom_SET_latest1:lamp_small:defaultRenderLayer";
+	rename -uid "6B8490E0-F140-1E9F-B5A1-E5B783A2340F";
 	setAttr ".g" yes;
-createNode renderLayerManager -n "toyBox:renderLayerManager";
-	rename -uid "73AC7114-694C-E8E0-B9D1-1E949C25D516";
-createNode renderLayer -n "toyBox:defaultRenderLayer";
-	rename -uid "2EFC5FFB-7442-464F-880F-58A8B0C87A34";
+createNode renderLayerManager -n "bedroom_SET_latest1:toyBox:renderLayerManager";
+	rename -uid "76AADD3E-EE46-7236-300B-10A3A5941B53";
+createNode renderLayer -n "bedroom_SET_latest1:toyBox:defaultRenderLayer";
+	rename -uid "98FEA5B5-AF4E-A977-7F73-53A052BBFAE7";
 	setAttr ".g" yes;
-createNode renderLayerManager -n "tvstand:renderLayerManager";
-	rename -uid "68C5CD76-B146-528A-E4D0-1AAFF8090B98";
-createNode renderLayer -n "tvstand:defaultRenderLayer";
-	rename -uid "6036AC87-3E47-9E58-9FEE-01ADC0AD5129";
+createNode renderLayerManager -n "bedroom_SET_latest1:tvstand:renderLayerManager";
+	rename -uid "099D7764-5B49-7987-5332-2BA3899C2F78";
+createNode renderLayer -n "bedroom_SET_latest1:tvstand:defaultRenderLayer";
+	rename -uid "D1220935-0C41-63AF-FA45-8CA946D7DB45";
 	setAttr ".g" yes;
-createNode d_openexr -n "tvstand:d_openexr";
-	rename -uid "78649C94-E740-3176-D5D2-50A65206C362";
+createNode d_openexr -n "bedroom_SET_latest1:tvstand:d_openexr";
+	rename -uid "85C5FED1-7942-DA75-C031-47813AFD95FD";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -33744,8 +32918,8 @@ createNode d_openexr -n "tvstand:d_openexr";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "tvstand:Ci";
-	rename -uid "F84AE7B2-FC40-E666-0843-8293E8183F06";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:tvstand:Ci";
+	rename -uid "D0158F00-B74B-DD21-843E-F9A6056C7D63";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -33761,8 +32935,8 @@ createNode rmanDisplayChannel -n "tvstand:Ci";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "tvstand:a";
-	rename -uid "A978E52F-0F40-CB91-EFBA-7196A3D62217";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:tvstand:a";
+	rename -uid "3283E6B1-BA40-0762-C18A-90BFE4228F30";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -33778,22 +32952,22 @@ createNode rmanDisplayChannel -n "tvstand:a";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode groupId -n "tvstand:groupId1";
-	rename -uid "B152B36E-9E41-6B0C-AF0D-D886E293DB2C";
+createNode groupId -n "bedroom_SET_latest1:tvstand:groupId1";
+	rename -uid "DE3DD9DF-0B4D-1224-1E0F-C5B9CEDC9AC7";
 	setAttr ".ihi" 0;
-createNode renderLayerManager -n "television:renderLayerManager";
-	rename -uid "A072D8F9-3C42-CB15-E632-6B9508104E07";
-createNode renderLayer -n "television:defaultRenderLayer";
-	rename -uid "E6E57E30-4A48-2B22-AC56-C487D1640FBF";
+createNode renderLayerManager -n "bedroom_SET_latest1:television:renderLayerManager";
+	rename -uid "543821E6-3747-674B-0E27-15B16B9AB6E9";
+createNode renderLayer -n "bedroom_SET_latest1:television:defaultRenderLayer";
+	rename -uid "244CFB91-CC4E-E2F8-E253-918A8716AD38";
 	setAttr ".g" yes;
-createNode polyCube -n "television:polyCube1";
-	rename -uid "43207AC8-384D-9FF3-0E79-11BE22F34EAF";
+createNode polyCube -n "bedroom_SET_latest1:television:polyCube1";
+	rename -uid "20267916-DA47-EE3A-A851-3D9EC4414C62";
 	setAttr ".sw" 2;
 	setAttr ".sh" 2;
 	setAttr ".sd" 2;
 	setAttr ".cuv" 4;
-createNode polyExtrudeFace -n "television:polyExtrudeFace1";
-	rename -uid "8E401486-1546-76B7-3D53-B596687B226D";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace1";
+	rename -uid "DD618EFD-BB4A-F86F-7D35-CDA3A9B1B3D3";
 	setAttr ".ics" -type "componentList" 1 "f[16:19]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
 		 0 0.36809815950920366 0 1;
@@ -33804,8 +32978,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace1";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 3.8828878603054005 -3.6413430796954938 -4.6594654013709125 ;
 	setAttr ".cbx" -type "double3" 3.8828878603054005 4.3775393987139015 4.6594654013709125 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace2";
-	rename -uid "04CCC997-394B-A8B2-5CE7-009ED29955E4";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace2";
+	rename -uid "6AD6C3CB-284E-6E40-A23E-1A97210A49F7";
 	setAttr ".ics" -type "componentList" 1 "f[16:19]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
 		 0 0.36809815950920366 0 1;
@@ -33817,15 +32991,15 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace2";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 3.8828878603054005 -3.1372643203547952 -4.0736636902128129 ;
 	setAttr ".cbx" -type "double3" 3.8828878603054005 3.873461117335844 4.0736636902128129 ;
-createNode polyTweak -n "television:polyTweak1";
-	rename -uid "722ADE82-7D4B-425B-50CC-2C8B107CC5CA";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak1";
+	rename -uid "16D3FD14-314A-C082-D73B-EB82AB2DD2D5";
 	setAttr ".uopa" yes;
 	setAttr -s 9 ".tk[25:33]" -type "float3"  0 0.062861472 0.06286148 0
 		 0.062861472 0 0 3.2784828e-09 0.06286148 0 3.2784828e-09 0 0 0.062861472 -0.06286148
 		 0 3.2784828e-09 -0.06286148 0 -0.062861472 0.06286148 0 -0.062861472 0 0 -0.062861472
 		 -0.06286148;
-createNode polyExtrudeFace -n "television:polyExtrudeFace3";
-	rename -uid "4093ADA0-D146-3F2C-70D6-4DB9C8B09A11";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace3";
+	rename -uid "7EB9F1C0-4248-153D-9BCB-9C9883B06D27";
 	setAttr ".ics" -type "componentList" 1 "f[12:15]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
 		 0 0.36809815950920366 0 1;
@@ -33837,8 +33011,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace3";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" -3.8828878603054005 -4.1199093881330571 -4.6594654013709125 ;
 	setAttr ".cbx" -type "double3" 3.8828878603054005 -4.1199093881330571 4.6594654013709125 ;
-createNode polyTweak -n "television:polyTweak2";
-	rename -uid "DBB1097C-0A4E-799C-B714-67B141F38F11";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak2";
+	rename -uid "1B804AE4-954C-70DA-9B29-93805DF83B3C";
 	setAttr ".uopa" yes;
 	setAttr -s 21 ".tk";
 	setAttr ".tk[0]" -type "float3" 0 -0.059679907 0 ;
@@ -33862,8 +33036,8 @@ createNode polyTweak -n "television:polyTweak2";
 	setAttr ".tk[39]" -type "float3" -0.035895389 0 0 ;
 	setAttr ".tk[40]" -type "float3" -0.035895389 0 0 ;
 	setAttr ".tk[41]" -type "float3" -0.035895389 0 0 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace4";
-	rename -uid "91CA96E8-EF45-E2C7-F86E-F182FE651484";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace4";
+	rename -uid "F63C0C8C-7949-67DA-0EB7-D6B0C4B0EB3C";
 	setAttr ".ics" -type "componentList" 3 "f[20:23]" "f[41]" "f[45]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
 		 0 0.36809815950920366 0 1;
@@ -33875,15 +33049,15 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace4";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" -3.8828878603054005 -5.1471806328528871 -4.6594654013709125 ;
 	setAttr ".cbx" -type "double3" -3.8828878603054005 4.3775408326018264 4.6594654013709125 ;
-createNode polyTweak -n "television:polyTweak3";
-	rename -uid "B2B33EC9-2A43-0BA9-C4B7-7A85FE8A7B6B";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak3";
+	rename -uid "0A360A14-3F45-D451-9A87-37810BB5AE89";
 	setAttr ".uopa" yes;
 	setAttr -s 3 ".tk";
 	setAttr ".tk[4]" -type "float3" 0 0 0.084146872 ;
 	setAttr ".tk[16]" -type "float3" 0 0 -0.084146872 ;
 	setAttr ".tk[35]" -type "float3" 0.06067609 0 0 ;
-createNode polySplitRing -n "television:polySplitRing1";
-	rename -uid "816FE739-F04D-8AA2-00D2-44AFD7774874";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing1";
+	rename -uid "F3B59F5B-2747-26E2-B778-DA89D6D88E25";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 14 "e[20:22]" "e[33]" "e[40]" "e[48]" "e[58]" "e[60]" "e[68]" "e[82]" "e[85]" "e[87]" "e[96]" "e[99]" "e[107]" "e[114]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -33894,8 +33068,8 @@ createNode polySplitRing -n "television:polySplitRing1";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polyTweak -n "television:polyTweak4";
-	rename -uid "A79FDD3B-CD4F-96E4-8A73-0F9A92CA9AF6";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak4";
+	rename -uid "30681EA4-E448-796A-1C3C-378A7F1C4283";
 	setAttr ".uopa" yes;
 	setAttr -s 15 ".tk";
 	setAttr ".tk[6]" -type "float3" 0.20147671 -0.25181448 0 ;
@@ -33913,8 +33087,8 @@ createNode polyTweak -n "television:polyTweak4";
 	setAttr ".tk[57]" -type "float3" 0 0.14134997 0.15452488 ;
 	setAttr ".tk[58]" -type "float3" 0 0.14134996 0 ;
 	setAttr ".tk[59]" -type "float3" 0 0.14134997 -0.15452488 ;
-createNode polySplitRing -n "television:polySplitRing2";
-	rename -uid "5D1AFCA8-064F-BBE6-8A6F-A6A7F56B6D5A";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing2";
+	rename -uid "503C20D2-584F-516C-549D-919656D0FE3A";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 14 "e[23:25]" "e[32]" "e[36]" "e[46]" "e[52]" "e[55]" "e[65]" "e[73]" "e[75]" "e[79]" "e[90]" "e[93]" "e[103]" "e[111]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -33924,8 +33098,8 @@ createNode polySplitRing -n "television:polySplitRing2";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing3";
-	rename -uid "8BD720ED-AD44-2BC3-308C-C092AAA8CDDC";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing3";
+	rename -uid "DDC934F0-D34A-D578-CDD4-459F99BC147B";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 11 "e[34:35]" "e[37]" "e[39]" "e[41]" "e[43]" "e[45]" "e[47]" "e[138]" "e[147]" "e[170]" "e[179]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -33935,8 +33109,8 @@ createNode polySplitRing -n "television:polySplitRing3";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polyTweak -n "television:polyTweak5";
-	rename -uid "327B8567-FA41-2D53-8B6B-79AF5140FE08";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak5";
+	rename -uid "83942A47-4342-391B-2716-AF9AF947022C";
 	setAttr ".uopa" yes;
 	setAttr -s 6 ".tk";
 	setAttr ".tk[43]" -type "float3" 0 3.7252903e-09 0 ;
@@ -33945,8 +33119,8 @@ createNode polyTweak -n "television:polyTweak5";
 	setAttr ".tk[61]" -type "float3" -7.1019094e-05 3.7252903e-09 -0.19279709 ;
 	setAttr ".tk[76]" -type "float3" 0 0 0.18317586 ;
 	setAttr ".tk[77]" -type "float3" 0 3.7252903e-09 0.18317586 ;
-createNode polySplitRing -n "television:polySplitRing4";
-	rename -uid "BB68B6DA-A04D-5D66-421A-088A993717AD";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing4";
+	rename -uid "BCDF47D2-554E-457A-709C-F2BEDEFF2BD1";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 16 "e[14:16]" "e[29:31]" "e[38]" "e[42]" "e[54]" "e[56]" "e[61]" "e[91]" "e[94]" "e[98]" "e[128]" "e[144]" "e[160]" "e[176]" "e[192]" "e[202]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -33956,8 +33130,8 @@ createNode polySplitRing -n "television:polySplitRing4";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing5";
-	rename -uid "3906EC21-0649-F8A6-4340-B4902AEF3643";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing5";
+	rename -uid "9854CF00-0343-9982-EFAB-AB942861B71A";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 16 "e[17:19]" "e[26:28]" "e[44]" "e[49]" "e[63]" "e[66]" "e[69]" "e[101]" "e[104]" "e[106]" "e[130]" "e[142]" "e[162]" "e[174]" "e[190]" "e[203]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -33967,8 +33141,8 @@ createNode polySplitRing -n "television:polySplitRing5";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing6";
-	rename -uid "0F524F36-ED48-412A-5433-CF9030A5F2E8";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing6";
+	rename -uid "72FBA9A5-254D-2AE2-3D79-50B2B8D5921B";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 18 "e[89]" "e[92]" "e[95]" "e[97]" "e[100]" "e[102]" "e[105]" "e[108]" "e[110]" "e[113]" "e[124]" "e[132]" "e[156]" "e[164]" "e[216]" "e[226]" "e[262]" "e[272]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -33978,8 +33152,8 @@ createNode polySplitRing -n "television:polySplitRing6";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing7";
-	rename -uid "B8F6DF48-2048-2662-E78B-5281BE4ECBB1";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing7";
+	rename -uid "C3CE58D7-AA47-8B3B-B577-93B4C50FF69A";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 18 "e[0]" "e[2]" "e[4]" "e[6]" "e[8]" "e[10]" "e[12]" "e[72]" "e[74]" "e[84]" "e[122]" "e[134]" "e[154]" "e[166]" "e[214]" "e[228]" "e[260]" "e[274]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -33989,8 +33163,8 @@ createNode polySplitRing -n "television:polySplitRing7";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing8";
-	rename -uid "A0DDD909-9A4B-075A-6398-4B986F4B9E74";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing8";
+	rename -uid "CA322019-044A-4F5B-F853-788DAB56A0FF";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 18 "e[132]" "e[164]" "e[226]" "e[272]" "e[284]" "e[287]" "e[291]" "e[295]" "e[297]" "e[299]" "e[301]" "e[303]" "e[305]" "e[307]" "e[309]" "e[311]" "e[315]" "e[317]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34001,8 +33175,8 @@ createNode polySplitRing -n "television:polySplitRing8";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing9";
-	rename -uid "5B6383C3-9246-8D99-6845-53A661050E30";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing9";
+	rename -uid "34342E89-4C4E-9833-6203-2BB08A104EF8";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 18 "e[284]" "e[287]" "e[291]" "e[295]" "e[297]" "e[299]" "e[301]" "e[303]" "e[305]" "e[307]" "e[309]" "e[311]" "e[315]" "e[317]" "e[359]" "e[363]" "e[367]" "e[387]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34013,8 +33187,8 @@ createNode polySplitRing -n "television:polySplitRing9";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing10";
-	rename -uid "8B341BA0-B144-925F-0709-D1AE06AE2557";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing10";
+	rename -uid "4579F301-A34E-9321-68E0-D78524DD3DBD";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 18 "e[122]" "e[154]" "e[214]" "e[260]" "e[320]" "e[323]" "e[325]" "e[327]" "e[329]" "e[333]" "e[337]" "e[339]" "e[343]" "e[345]" "e[347]" "e[349]" "e[351]" "e[353]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34025,8 +33199,8 @@ createNode polySplitRing -n "television:polySplitRing10";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing11";
-	rename -uid "8EC3E93D-EF4C-1070-C210-C88ABA59BB0E";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing11";
+	rename -uid "60F8C43E-B940-11DE-76FA-EAA45A611CF3";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 18 "e[1]" "e[3]" "e[5]" "e[7]" "e[9]" "e[11]" "e[13]" "e[77]" "e[80]" "e[88]" "e[120]" "e[136]" "e[152]" "e[168]" "e[212]" "e[230]" "e[258]" "e[276]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34036,8 +33210,8 @@ createNode polySplitRing -n "television:polySplitRing11";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing12";
-	rename -uid "5E2452F2-D44D-68A1-2D69-83B6C6051E6C";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing12";
+	rename -uid "186568BF-214D-FA52-6957-47A750149C81";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 34 "e[33]" "e[40]" "e[58]" "e[60]" "e[82]" "e[85]" "e[87]" "e[96]" "e[99]" "e[114]" "e[129]" "e[131]" "e[133]" "e[135]" "e[137]" "e[139]" "e[184]" "e[198]" "e[220]" "e[242]" "e[246]" "e[268]" "e[290]" "e[306]" "e[336]" "e[352]" "e[364]" "e[380]" "e[400]" "e[416]" "e[444]" "e[460]" "e[480]" "e[496]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34048,8 +33222,8 @@ createNode polySplitRing -n "television:polySplitRing12";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing13";
-	rename -uid "0943F7A4-6D41-6C26-24A1-C3BEDA0DD1AC";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing13";
+	rename -uid "9FFAEF2B-124F-9666-76F8-4998E511F48A";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 31 "e[23:25]" "e[46]" "e[65]" "e[103]" "e[148:149]" "e[151]" "e[153]" "e[155]" "e[157]" "e[159]" "e[173]" "e[175]" "e[177]" "e[186]" "e[196]" "e[222]" "e[240]" "e[248]" "e[266]" "e[288]" "e[308]" "e[334]" "e[354]" "e[362]" "e[382]" "e[398]" "e[418]" "e[442]" "e[462]" "e[478]" "e[498]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34059,8 +33233,8 @@ createNode polySplitRing -n "television:polySplitRing13";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing14";
-	rename -uid "01687EE9-4645-48B8-3C92-2EA3E453BA06";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing14";
+	rename -uid "92C803AB-BA44-AA73-41E3-C19470DF4BC0";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 31 "e[23:25]" "e[46]" "e[65]" "e[103]" "e[186]" "e[222]" "e[248]" "e[308]" "e[354]" "e[382]" "e[418]" "e[462]" "e[498]" "e[568:569]" "e[571]" "e[573]" "e[575]" "e[577]" "e[579]" "e[587]" "e[589]" "e[593]" "e[595]" "e[599]" "e[601]" "e[603]" "e[625]" "e[627]" "e[629]" "e[631]" "e[633]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34071,8 +33245,8 @@ createNode polySplitRing -n "television:polySplitRing14";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing15";
-	rename -uid "49AAC229-3A44-D34D-523C-2F9BD2854D1C";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing15";
+	rename -uid "A8E8485D-9942-EFBD-411A-B4A2F6226E7A";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 34 "e[33]" "e[40]" "e[58]" "e[60]" "e[82]" "e[85]" "e[87]" "e[96]" "e[99]" "e[114]" "e[198]" "e[242]" "e[268]" "e[290]" "e[336]" "e[364]" "e[400]" "e[444]" "e[480]" "e[513]" "e[515]" "e[517]" "e[523]" "e[529]" "e[537]" "e[539]" "e[541]" "e[543]" "e[545]" "e[547]" "e[549]" "e[551]" "e[553]" "e[555]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34082,8 +33256,8 @@ createNode polySplitRing -n "television:polySplitRing15";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing16";
-	rename -uid "A13D4C3B-6B43-03F7-EC7D-8B9CF1DDF886";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing16";
+	rename -uid "155DA60F-6E47-5BF8-A49C-0A95606D3470";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 33 "e[70:71]" "e[76]" "e[78]" "e[81]" "e[83]" "e[86]" "e[109]" "e[112]" "e[115]" "e[118]" "e[126]" "e[150]" "e[158]" "e[302]" "e[312]" "e[330]" "e[340]" "e[376]" "e[386]" "e[412]" "e[422]" "e[438]" "e[448]" "e[474]" "e[484]" "e[502]" "e[522]" "e[570]" "e[590]" "e[638]" "e[658]" "e[706]" "e[726]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34094,23 +33268,23 @@ createNode polySplitRing -n "television:polySplitRing16";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polyCube -n "television:polyCube2";
-	rename -uid "4BE59A11-F94B-128C-7A87-4CBAFEAA1A28";
+createNode polyCube -n "bedroom_SET_latest1:television:polyCube2";
+	rename -uid "6AEAA201-9748-F368-D607-2DB3240E6D6D";
 	setAttr ".cuv" 4;
-createNode polyTweak -n "television:polyTweak6";
-	rename -uid "D1709B15-2242-452C-5F14-9DB54FAC989D";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak6";
+	rename -uid "DB8174CE-7F4A-EEB4-5A29-D1A2A2EBA975";
 	setAttr ".uopa" yes;
 	setAttr -s 2 ".tk";
 	setAttr ".tk[91]" -type "float3" 0 0 3.7041435e-05 ;
 	setAttr ".tk[318]" -type "float3" 0 0 3.7041435e-05 ;
-createNode polySplit -n "television:polySplit1";
-	rename -uid "309A65C5-4A49-9D86-74C3-FAB23147AA77";
+createNode polySplit -n "bedroom_SET_latest1:television:polySplit1";
+	rename -uid "3A4C6D6A-3C4D-68A2-C1B6-B1B6041FD118";
 	setAttr -s 2 ".e[0:1]"  0.5 0.5;
 	setAttr -s 2 ".d[0:1]"  -2147483530 -2147483146;
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
-createNode polyExtrudeFace -n "television:polyExtrudeFace5";
-	rename -uid "B9EB8D37-1E4F-AFC8-7A81-B1BC007AA30F";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace5";
+	rename -uid "AE2FF7C3-D543-B3E9-B64A-5E9B5AB8334B";
 	setAttr ".ics" -type "componentList" 1 "f[250]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
 		 0 0.36809815950920366 0 1;
@@ -34122,13 +33296,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace5";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 3.6241735653304956 -4.5633803336843011 2.1638745870887717 ;
 	setAttr ".cbx" -type "double3" 3.6669481959503494 -4.1199093881330571 2.5925079465834835 ;
-createNode polyTweak -n "television:polyTweak7";
-	rename -uid "C38E2B14-1849-10CB-80AA-5CBFCD43361C";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak7";
+	rename -uid "FC7D04CC-F04F-5E1E-F1B4-959FDE888B50";
 	setAttr ".uopa" yes;
 	setAttr -s 2 ".tk[422:423]" -type "float3"  0 -0.011957797 0 0 -0.011957797
 		 0;
-createNode polySplitRing -n "television:polySplitRing17";
-	rename -uid "2AA67679-0C4D-2E63-A702-9F95D20699B2";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing17";
+	rename -uid "9B287C3A-2E46-FC15-AEB0-1E872466B985";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[843:844]" "e[846]" "e[848]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34139,8 +33313,8 @@ createNode polySplitRing -n "television:polySplitRing17";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polyTweak -n "television:polyTweak8";
-	rename -uid "4B0B1452-DC42-6490-E250-B5AFEAF86AB1";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak8";
+	rename -uid "356A5B05-714B-67B0-2095-918A198E9E9E";
 	setAttr ".uopa" yes;
 	setAttr -s 8 ".tk";
 	setAttr ".tk[60]" -type "float3" 0.024583569 0.018683333 0.014372256 ;
@@ -34151,8 +33325,8 @@ createNode polyTweak -n "television:polyTweak8";
 	setAttr ".tk[425]" -type "float3" 0.038658783 0.018683333 0.015542774 ;
 	setAttr ".tk[426]" -type "float3" 0.038658787 -0.017285001 0.015542774 ;
 	setAttr ".tk[427]" -type "float3" 0.042241134 -0.017285001 -0.014372256 ;
-createNode polySplitRing -n "television:polySplitRing18";
-	rename -uid "786AB7EE-B84F-5CCF-8FD7-0E91D0047C51";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing18";
+	rename -uid "C9DC1D6D-F94A-AC7F-54E0-D587F01FD275";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[843:844]" "e[846]" "e[848]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34163,8 +33337,8 @@ createNode polySplitRing -n "television:polySplitRing18";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing19";
-	rename -uid "E344D78D-EB4E-8B02-4FAB-A2AE9F455AEC";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing19";
+	rename -uid "CED4E840-7645-8F98-C730-DC8933384639";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 31 "e[70:71]" "e[76]" "e[78]" "e[81]" "e[83]" "e[86]" "e[109]" "e[112]" "e[115]" "e[150]" "e[302]" "e[330]" "e[376]" "e[412]" "e[438]" "e[474]" "e[570]" "e[638]" "e[706]" "e[795]" "e[797]" "e[799]" "e[803]" "e[805]" "e[807]" "e[811]" "e[813]" "e[815]" "e[827]" "e[829]" "e[833]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34175,8 +33349,8 @@ createNode polySplitRing -n "television:polySplitRing19";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing20";
-	rename -uid "7A6112EF-1940-CB4A-3557-1A8275D4907F";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing20";
+	rename -uid "7E801DF3-AC4E-C8C4-77E6-19A013E75B5E";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 31 "e[70:71]" "e[76]" "e[78]" "e[81]" "e[83]" "e[86]" "e[109]" "e[112]" "e[115]" "e[150]" "e[302]" "e[330]" "e[376]" "e[412]" "e[438]" "e[474]" "e[570]" "e[638]" "e[706]" "e[888]" "e[890]" "e[892]" "e[896]" "e[898]" "e[900]" "e[904]" "e[906]" "e[908]" "e[920]" "e[922]" "e[926]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34187,14 +33361,14 @@ createNode polySplitRing -n "television:polySplitRing20";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplit -n "television:polySplit2";
-	rename -uid "D78D68FB-7445-4B6E-2031-98A67C5841D8";
+createNode polySplit -n "bedroom_SET_latest1:television:polySplit2";
+	rename -uid "6DCF174A-A249-D3CF-D78C-1AA28F0BFEB6";
 	setAttr -s 4 ".e[0:3]"  0.5 0.5 0.5 0.5;
 	setAttr -s 4 ".d[0:3]"  -2147483080 -2147482712 -2147482775 -2147482868;
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
-createNode polyExtrudeFace -n "television:polyExtrudeFace6";
-	rename -uid "73D27D31-CE45-76CC-BAA9-42ACA3F88BBD";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace6";
+	rename -uid "F29693F6-304C-E010-55CF-22A0211BADB3";
 	setAttr ".ics" -type "componentList" 1 "f[465]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
 		 0 0.36809815950920366 0 1;
@@ -34207,8 +33381,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace6";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 3.8563946722135931 -4.5569990544560168 -0.50868680885025919 ;
 	setAttr ".cbx" -type "double3" 3.8609410432639413 -4.3441842764236132 0.001143024927487831 ;
-createNode polyTweak -n "television:polyTweak9";
-	rename -uid "2B1B3684-714B-6BEB-F190-20AF1C71D104";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak9";
+	rename -uid "911B74EF-F342-6397-175E-11BA43F403AA";
 	setAttr ".uopa" yes;
 	setAttr -s 8 ".tk";
 	setAttr ".tk[424]" -type "float3" -0.0082299989 0 -6.4724554e-05 ;
@@ -34219,8 +33393,8 @@ createNode polyTweak -n "television:polyTweak9";
 	setAttr ".tk[438]" -type "float3" 0.0028260949 0 -0.00012265623 ;
 	setAttr ".tk[469]" -type "float3" -0.0028260949 0 0.00012265623 ;
 	setAttr ".tk[470]" -type "float3" 0.0028260949 0 -0.00012265623 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace7";
-	rename -uid "3B7ACF06-1C45-724F-09F4-BEBF7A7E86E2";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace7";
+	rename -uid "8C136EE6-5F4C-D5D7-AD76-128598F638C5";
 	setAttr ".ics" -type "componentList" 1 "f[466]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
 		 0 0.36809815950920366 0 1;
@@ -34232,8 +33406,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace7";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 3.6720578874617318 -4.5569990544560168 -2.2090122472239937 ;
 	setAttr ".cbx" -type "double3" 3.7532528713169326 -4.3441842764236132 -1.3582780551710036 ;
-createNode polySplitRing -n "television:polySplitRing21";
-	rename -uid "0CDA3347-2943-E869-1753-84A8523E0274";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing21";
+	rename -uid "5CCAD05E-9644-011A-C7B6-5D9EDF707CB5";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[1000:1001]" "e[1003]" "e[1005]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34244,8 +33418,8 @@ createNode polySplitRing -n "television:polySplitRing21";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polyTweak -n "television:polyTweak10";
-	rename -uid "57DAE5F5-5045-623E-F812-FD90EE69E044";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak10";
+	rename -uid "9EC00685-CF47-A58E-E234-42ABAD84E907";
 	setAttr ".uopa" yes;
 	setAttr -s 10 ".tk";
 	setAttr ".tk[471]" -type "float3" 9.3132257e-10 0 0 ;
@@ -34258,8 +33432,8 @@ createNode polyTweak -n "television:polyTweak10";
 	setAttr ".tk[509]" -type "float3" 0.033687674 0 -0.00019134706 ;
 	setAttr ".tk[510]" -type "float3" 0.026145674 0 0.00019134706 ;
 	setAttr ".tk[511]" -type "float3" 0.03368767 0 -0.00019134706 ;
-createNode polySplitRing -n "television:polySplitRing22";
-	rename -uid "58D173CD-AE4A-1B01-C487-999BA177128C";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing22";
+	rename -uid "8E5EE857-BF45-9051-CC56-96ACAA7C2EEA";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[1000:1001]" "e[1003]" "e[1005]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34269,8 +33443,8 @@ createNode polySplitRing -n "television:polySplitRing22";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing23";
-	rename -uid "C8BC6D87-3346-13C3-9B5F-4FBABFA12FC1";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing23";
+	rename -uid "78A1C9A1-2A42-37AD-C411-80A5FAA6B15F";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[1024:1025]" "e[1027]" "e[1029]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34281,8 +33455,8 @@ createNode polySplitRing -n "television:polySplitRing23";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing24";
-	rename -uid "C75F524D-6B42-985D-64A4-F38B454A3F7F";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing24";
+	rename -uid "58AF3505-DD43-5B1E-BA40-9692CA163FF7";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[1008:1009]" "e[1011]" "e[1013]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34293,8 +33467,8 @@ createNode polySplitRing -n "television:polySplitRing24";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing25";
-	rename -uid "A672B31D-1D48-DDD4-DE23-F29BD7297CCC";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing25";
+	rename -uid "5F5C23A8-B54C-03C1-996D-94A2AAE643F9";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[1008:1009]" "e[1011]" "e[1013]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34305,8 +33479,8 @@ createNode polySplitRing -n "television:polySplitRing25";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing26";
-	rename -uid "6A2AE5C1-9E4F-F1E6-E22D-F58F859A8B25";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing26";
+	rename -uid "3B613079-9348-BF87-EBAA-2F90C2009809";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[1008:1009]" "e[1011]" "e[1013]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34316,8 +33490,8 @@ createNode polySplitRing -n "television:polySplitRing26";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing27";
-	rename -uid "8D010A46-5349-2210-4CC9-4086E03D3709";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing27";
+	rename -uid "458667FA-854F-EAEC-1F82-2A94D72F45DB";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 10 "e[568]" "e[994:996]" "e[1010]" "e[1014]" "e[1042]" "e[1046]" "e[1050]" "e[1054]" "e[1058]" "e[1062]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34327,8 +33501,8 @@ createNode polySplitRing -n "television:polySplitRing27";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing28";
-	rename -uid "FAD1DC0B-4C4A-9006-8BFC-A1BE5DEC3214";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing28";
+	rename -uid "878DDCB1-B045-FFC7-6949-9FAC7D8BFA50";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 11 "e[568]" "e[1046]" "e[1054]" "e[1062]" "e[1064:1065]" "e[1073]" "e[1075]" "e[1077]" "e[1079]" "e[1081]" "e[1083]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34339,8 +33513,8 @@ createNode polySplitRing -n "television:polySplitRing28";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing29";
-	rename -uid "6A361D79-BE4B-17D0-6BD2-92AF9B45B1C0";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing29";
+	rename -uid "C6B9804C-A943-AEB3-802B-0BB16B0CA629";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 45 "e[23:25]" "e[46]" "e[65]" "e[103]" "e[186]" "e[222]" "e[248]" "e[308]" "e[354]" "e[382]" "e[418]" "e[462]" "e[498]" "e[636:637]" "e[639]" "e[641]" "e[643]" "e[645]" "e[647]" "e[655]" "e[657]" "e[661]" "e[663]" "e[667]" "e[669]" "e[671]" "e[693]" "e[695]" "e[697]" "e[699]" "e[701]" "e[778]" "e[810]" "e[871]" "e[903]" "e[934]" "e[966]" "e[1002]" "e[1006]" "e[1018]" "e[1022]" "e[1026]" "e[1030]" "e[1034]" "e[1038]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34350,8 +33524,8 @@ createNode polySplitRing -n "television:polySplitRing29";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing30";
-	rename -uid "AC5ABEF5-6849-9005-ED5B-FDA8DA0B305C";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing30";
+	rename -uid "C1603D0F-1148-6CAC-A802-2283D2EB0722";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 46 "e[636:637]" "e[639]" "e[641]" "e[643]" "e[645]" "e[647]" "e[655]" "e[657]" "e[661]" "e[663]" "e[667]" "e[669]" "e[671]" "e[693]" "e[695]" "e[697]" "e[699]" "e[701]" "e[810]" "e[903]" "e[966]" "e[1022]" "e[1030]" "e[1038]" "e[1110:1111]" "e[1113]" "e[1115]" "e[1117]" "e[1131]" "e[1133]" "e[1135]" "e[1137]" "e[1139]" "e[1141]" "e[1143]" "e[1145]" "e[1147]" "e[1149]" "e[1157]" "e[1163]" "e[1175]" "e[1177]" "e[1179]" "e[1193]" "e[1195]" "e[1203]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34362,8 +33536,8 @@ createNode polySplitRing -n "television:polySplitRing30";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polyTweak -n "television:polyTweak11";
-	rename -uid "05899360-2A41-3FF1-EB7E-1CA4B763682C";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak11";
+	rename -uid "8576269F-A749-AAC6-902A-BCB477B54327";
 	setAttr ".uopa" yes;
 	setAttr -s 66 ".tk";
 	setAttr ".tk[424]" -type "float3" 0.0097474083 0 0 ;
@@ -34432,31 +33606,31 @@ createNode polyTweak -n "television:polyTweak11";
 	setAttr ".tk[653]" -type "float3" -0.026624283 0 0 ;
 	setAttr ".tk[654]" -type "float3" -0.026624283 0 0 ;
 	setAttr ".tk[655]" -type "float3" -0.026624283 0 0 ;
-createNode polySplit -n "television:polySplit3";
-	rename -uid "3998046D-A744-0F64-28DC-44ACA745049B";
+createNode polySplit -n "bedroom_SET_latest1:television:polySplit3";
+	rename -uid "0110C8DA-C041-D1D2-2179-D48BD83B8B1F";
 	setAttr -s 10 ".e[0:9]"  1 0.51543999 0.482086 0.47288701 0.53000802
 		 0.52916002 0.52848297 0.51928401 0.51681 0;
 	setAttr -s 10 ".d[0:9]"  -2147483562 -2147483530 -2147482782 -2147482790 -2147482801 -2147482798 
 		-2147482793 -2147482785 -2147483146 -2147482718;
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
-createNode polySplit -n "television:polySplit4";
-	rename -uid "09CEB07F-AE48-C769-DCAD-8A80DE2A5CC5";
+createNode polySplit -n "bedroom_SET_latest1:television:polySplit4";
+	rename -uid "E9EDB994-4F4E-1AD4-78E8-15B02758C310";
 	setAttr -s 10 ".e[0:9]"  0 0.49887401 0.456395 0.29451999 0.28235701
 		 0.267068 0.680978 0.52003002 0.52220798 0;
 	setAttr -s 10 ".d[0:9]"  -2147482781 -2147482339 -2147482340 -2147482341 -2147482342 -2147482343 
 		-2147482790 -2147482782 -2147482346 -2147482720;
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
-createNode polySplit -n "television:polySplit5";
-	rename -uid "90054423-CF49-09CA-A563-D19CA428BFBB";
+createNode polySplit -n "bedroom_SET_latest1:television:polySplit5";
+	rename -uid "824C23EE-9E43-C7A8-C33F-E8ADC84A0347";
 	setAttr -s 5 ".e[0:4]"  0.37122199 0.37421101 0.70798099 0.70345497
 		 0.37122199;
 	setAttr -s 5 ".d[0:4]"  -2147482712 -2147482775 -2147482775 -2147482712 -2147482712;
 	setAttr ".sma" 180;
 	setAttr ".m2015" yes;
-createNode polyExtrudeFace -n "television:polyExtrudeFace8";
-	rename -uid "2E2B3065-F641-C744-96FC-45A70A993F87";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace8";
+	rename -uid "E3D88E09-8943-D272-FDC4-C5B31B425912";
 	setAttr ".ics" -type "componentList" 1 "f[496]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
 		 0 0.36809815950920366 0 1;
@@ -34468,8 +33642,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace8";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 3.7833722323682624 -4.5569990544560168 -1.1101812416338406 ;
 	setAttr ".cbx" -type "double3" 3.8181060072865156 -4.3441842764236132 -0.82407369749872983 ;
-createNode polySplitRing -n "television:polySplitRing31";
-	rename -uid "163E113A-C347-42F5-6D3C-16B5D4AC3355";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing31";
+	rename -uid "6399CDC1-1B40-27AF-6DE9-AFA22A912626";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[1342:1343]" "e[1345]" "e[1347]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34480,8 +33654,8 @@ createNode polySplitRing -n "television:polySplitRing31";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing32";
-	rename -uid "19D76D71-2D42-FBEE-2A61-34ACF5AAD88F";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing32";
+	rename -uid "99138DB9-5548-AA3B-4110-16BC6D7ACE61";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 3 "e[1342:1343]" "e[1345]" "e[1347]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34491,8 +33665,8 @@ createNode polySplitRing -n "television:polySplitRing32";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing33";
-	rename -uid "596622A5-F84F-DA65-0B2C-919D37F050C4";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing33";
+	rename -uid "210F81F6-524A-82C2-9882-B5BFB10D068E";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 8 "e[1336]" "e[1338]" "e[1346]" "e[1349]" "e[1354]" "e[1357]" "e[1362]" "e[1365]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34503,8 +33677,8 @@ createNode polySplitRing -n "television:polySplitRing33";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing34";
-	rename -uid "BE62D51C-894E-C813-A986-7C8771236422";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing34";
+	rename -uid "871B1EFE-8345-6B0E-8483-4E894B4687BD";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 8 "e[1336]" "e[1338]" "e[1346]" "e[1349]" "e[1357]" "e[1365]" "e[1367]" "e[1369]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34514,8 +33688,8 @@ createNode polySplitRing -n "television:polySplitRing34";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing35";
-	rename -uid "E7423D94-F949-0B12-5CB3-AFA41F797913";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing35";
+	rename -uid "69F80187-4940-6114-5857-DDB356400FA3";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 42 "e[14:16]" "e[42]" "e[56]" "e[61]" "e[91]" "e[98]" "e[128]" "e[160]" "e[202]" "e[223]" "e[225]" "e[227]" "e[229]" "e[231]" "e[233]" "e[235]" "e[237]" "e[241]" "e[300]" "e[314]" "e[328]" "e[342]" "e[374]" "e[388]" "e[410]" "e[424]" "e[436]" "e[450]" "e[472]" "e[486]" "e[524]" "e[562]" "e[592]" "e[630]" "e[660]" "e[698]" "e[728]" "e[766]" "e[1128]" "e[1166]" "e[1224]" "e[1262]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34526,8 +33700,8 @@ createNode polySplitRing -n "television:polySplitRing35";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing36";
-	rename -uid "87347FAA-CA44-F765-2047-F8BA9147463C";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing36";
+	rename -uid "A613EE03-6A49-B940-2F74-75A7A16B0711";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 39 "e[20:22]" "e[48]" "e[68]" "e[107]" "e[116:117]" "e[119]" "e[121]" "e[123]" "e[125]" "e[127]" "e[141]" "e[143]" "e[145]" "e[182]" "e[200]" "e[218]" "e[243]" "e[270]" "e[283]" "e[292]" "e[304]" "e[338]" "e[350]" "e[366]" "e[378]" "e[402]" "e[414]" "e[446]" "e[458]" "e[482]" "e[494]" "e[818]" "e[838]" "e[911]" "e[974]" "e[1310]" "e[1335]" "e[1456]" "e[1482]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34538,8 +33712,8 @@ createNode polySplitRing -n "television:polySplitRing36";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polySplitRing -n "television:polySplitRing37";
-	rename -uid "5EE73ED7-B748-EB29-267F-E281B0CFE513";
+createNode polySplitRing -n "bedroom_SET_latest1:television:polySplitRing37";
+	rename -uid "CE7B568A-0B4C-3D1C-995D-37B507020168";
 	setAttr ".uopa" yes;
 	setAttr ".ics" -type "componentList" 42 "e[32]" "e[36]" "e[52]" "e[55]" "e[73]" "e[75]" "e[79]" "e[90]" "e[93]" "e[111]" "e[161]" "e[163]" "e[165]" "e[167]" "e[169]" "e[171]" "e[188]" "e[194]" "e[224]" "e[238]" "e[250]" "e[264]" "e[286]" "e[310]" "e[332]" "e[355]" "e[360]" "e[384]" "e[396]" "e[420]" "e[440]" "e[463]" "e[476]" "e[499]" "e[784]" "e[804]" "e[877]" "e[897]" "e[940]" "e[960]" "e[1412]" "e[1438]";
 	setAttr ".ix" -type "matrix" 7.7657757206108009 0 0 0 0 8.0188824784093953 0 0 0 0 9.3189308027418249 0
@@ -34549,12 +33723,12 @@ createNode polySplitRing -n "television:polySplitRing37";
 	setAttr ".sma" 29.999999999999996;
 	setAttr ".p[0]"  0 0 1;
 	setAttr ".fq" yes;
-createNode polyDelEdge -n "television:polyDelEdge1";
-	rename -uid "A9BD7CB6-9946-8177-4B3B-7CBEC12944CE";
+createNode polyDelEdge -n "bedroom_SET_latest1:television:polyDelEdge1";
+	rename -uid "51B82792-BD4D-E2CE-F5FF-DAB255D98D9B";
 	setAttr ".ics" -type "componentList" 8 "e[66]" "e[239]" "e[245]" "e[1226]" "e[1228]" "e[1230]" "e[1399]" "e[1403]";
 	setAttr ".cv" yes;
-createNode polyExtrudeFace -n "television:polyExtrudeFace9";
-	rename -uid "4BF9BA35-A745-BAA0-1EC1-C393655538E5";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace9";
+	rename -uid "25A05881-5140-B0A9-13B8-8D9E187D343D";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34565,8 +33739,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace9";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 -0.18352146731080218 -12.724257750276664 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 0.12748286282398957 -12.42934288194064 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace10";
-	rename -uid "3541E200-D444-615B-A0EE-57AA66BEB5E4";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace10";
+	rename -uid "40EC2896-0444-C56F-E035-8D8FCD86CD73";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34578,13 +33752,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace10";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 0.18055867161619499 -12.224330340620257 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 0.49156240855730282 -11.929416034789707 ;
-createNode polyTweak -n "television:polyTweak12";
-	rename -uid "2C43B237-E74A-C6AA-C080-E386909D7E54";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak12";
+	rename -uid "A2CBB803-AA4F-AAB4-D14B-B9B618F0F306";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[8:11]" -type "float3"  0 -0.18620384 1.43088865 0
 		 -0.18620384 1.43088865 0 -0.18620384 1.43088865 0 -0.18620384 1.43088865;
-createNode polyExtrudeFace -n "television:polyExtrudeFace11";
-	rename -uid "DB932837-4646-A3FC-C6C8-F79F2FA607CE";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace11";
+	rename -uid "72242A5F-424C-8818-BDF7-D192521DBB01";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34596,8 +33770,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace11";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 0.46209868501336315 -11.927431067698521 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 0.77310242195447099 -11.632516761867969 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace12";
-	rename -uid "6F22DD94-EB4F-688C-DB81-918E98993E35";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace12";
+	rename -uid "0CAF56A0-9940-52E1-A8C7-A8A91560D52A";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34609,13 +33783,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace12";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 0.87562289898855028 -11.708582788864648 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 0.9007039663231452 -11.280717457962867 ;
-createNode polyTweak -n "television:polyTweak13";
-	rename -uid "EA6F343C-0F44-7D46-4459-1F8386EEF2BD";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak13";
+	rename -uid "B1FD2C93-C84A-FFD2-A930-5A96C8D37692";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[16:19]" -type "float3"  0 0.17777662 0.38232422 0
 		 0.17777662 0.38232422 0 -0.17777665 -0.38232419 0 -0.17777665 -0.38232419;
-createNode polyExtrudeFace -n "television:polyExtrudeFace13";
-	rename -uid "A8A78BCA-2648-4E1D-CCED-5EB69FABC595";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace13";
+	rename -uid "6F7A926E-F041-308F-3A87-40974C61FE08";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34626,13 +33800,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace13";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 1.0432344781389586 -11.683084198848002 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 1.2993292414845472 -11.339408750704553 ;
-createNode polyTweak -n "television:polyTweak14";
-	rename -uid "9909B135-EC4A-7661-C95A-91879E7E58B8";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak14";
+	rename -uid "87775076-A047-B7BA-07AE-6FAC8214346D";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[20:23]" -type "float3"  0 0.26313561 0.11417169 0
 		 0.26313561 0.11417169 0 -0.26313561 -0.11417169 0 -0.26313561 -0.11417169;
-createNode polyExtrudeFace -n "television:polyExtrudeFace14";
-	rename -uid "CE473BB1-7049-DF75-D107-D6ABC0E580CE";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace14";
+	rename -uid "F6A65E60-DD4C-DBA8-A96A-E191615DB686";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34644,8 +33818,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace14";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 1.0432337526337907 -11.683084778299415 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 1.2993289122919571 -11.339409283491296 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace15";
-	rename -uid "DE3F5621-FB4B-6A00-5FD5-D4859DC9A163";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace15";
+	rename -uid "1A6F5747-B842-CB34-BA09-AD815631F9B0";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34657,13 +33831,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace15";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 1.2148466349372566 -11.762845193973313 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 1.6215640869758605 -11.627647176934294 ;
-createNode polyTweak -n "television:polyTweak15";
-	rename -uid "9C9778C2-FB4F-8DD1-99EF-B5903B60E86C";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak15";
+	rename -uid "114347F0-8D48-8959-38FA-E9821D148175";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[28:31]" -type "float3"  0 0.29485086 -0.055571098
 		 0 0.29485086 -0.055571098 0 -0.29485086 0.055571098 0 -0.29485086 0.055571098;
-createNode polyExtrudeFace -n "television:polyExtrudeFace16";
-	rename -uid "60C39BF1-7240-F464-D20B-169C1A6167D7";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace16";
+	rename -uid "42C22F0D-434F-59AF-CE6F-1D830F194640";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34675,13 +33849,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace16";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 1.3476074506968083 -12.151889089338523 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 1.724627362683461 -11.94804248876749 ;
-createNode polyTweak -n "television:polyTweak16";
-	rename -uid "1B5FDFE5-294E-A5F6-2624-2EA8AFD877EF";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak16";
+	rename -uid "B18ECC78-0B4B-5B51-F303-2A83F39B7A3A";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[32:35]" -type "float3"  0 0.24701636 -0.31084192 0
 		 0.24701636 -0.31084192 0 -0.24701636 0.31084192 0 -0.24701636 0.31084192;
-createNode polyExtrudeFace -n "television:polyExtrudeFace17";
-	rename -uid "2832AFE8-8042-52A2-CC1E-A8931AEC8942";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace17";
+	rename -uid "B7479C74-BE4A-4B61-0F16-0F91CB1F55EF";
 	setAttr ".ics" -type "componentList" 1 "f[0]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34693,13 +33867,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace17";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 1.3107016365119368 -12.525147658487791 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 1.4640806892881475 -12.124932529347831 ;
-createNode polyTweak -n "television:polyTweak17";
-	rename -uid "E3F40F8E-FF49-FD09-C576-C8A6285C3B90";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak17";
+	rename -uid "CAC28BAE-0045-FA59-4110-0ABF7E4808C9";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[36:39]" -type "float3"  0 -0.031685445 -0.34574771
 		 0 -0.031685445 -0.34574771 0 0.031685449 0.34574768 0 0.031685449 0.34574768;
-createNode polyExtrudeFace -n "television:polyExtrudeFace18";
-	rename -uid "ACC7E53F-2049-E229-A3FD-8A935B042EDC";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace18";
+	rename -uid "DF0781E7-584C-BC4F-DF7D-59A86D1FDA2F";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34711,13 +33885,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace18";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 -0.47844614374553468 -13.035263952057145 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 -0.16743716012591078 -12.74034805077482 ;
-createNode polyTweak -n "television:polyTweak18";
-	rename -uid "E22A66C7-7142-E85C-CFB9-CA86BF5DF64C";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak18";
+	rename -uid "70B6BB51-BC47-C7FB-8B70-49A2C5C4C079";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[40:43]" -type "float3"  0 -0.21758309 -0.22645463
 		 0 -0.21758309 -0.22645463 0 0.21758309 0.22645462 0 0.21758309 0.22645462;
-createNode polyExtrudeFace -n "television:polyExtrudeFace19";
-	rename -uid "676F4192-114D-7A5D-D9C1-CA8EC00464F0";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace19";
+	rename -uid "98548F75-C54A-E1D0-6DC1-A690AF47A81E";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34729,13 +33903,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace19";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 -0.65046246416007936 -13.445448944232401 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 -0.64658942521215312 -13.016861740118292 ;
-createNode polyTweak -n "television:polyTweak19";
-	rename -uid "BEB28389-9E4D-E8C8-D630-68BB2810E716";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak19";
+	rename -uid "9EDA52A8-B84F-27FB-E0A2-888DA1F52886";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[44:47]" -type "float3"  0 -0.15269303 -0.35969624
 		 0 -0.15269303 -0.35969624 0 0.15269303 0.35969624 0 0.15269303 0.35969624;
-createNode polyExtrudeFace -n "television:polyExtrudeFace20";
-	rename -uid "9E5D104D-3B40-8B3E-2906-429FC1D49499";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace20";
+	rename -uid "85EA45BA-4642-2707-D9EA-5BBAFC8D6DBD";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34747,13 +33921,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace20";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 -1.6235946214285701 -13.420335382155514 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 -1.3953878294994464 -13.057535493943757 ;
-createNode polyTweak -n "television:polyTweak20";
-	rename -uid "99007C52-C14B-3613-2226-5584A1621E7C";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak20";
+	rename -uid "9F0BAF18-1C43-4A5F-200E-F286E0FF4F39";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[48:51]" -type "float3"  0 -0.24926607 -0.13060437
 		 0 -0.24926607 -0.13060437 0 0.24926607 0.13060437 0 0.24926607 0.13060437;
-createNode polyExtrudeFace -n "television:polyExtrudeFace21";
-	rename -uid "CC1FE336-9942-7F17-2CEA-398EE4224FEA";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace21";
+	rename -uid "328ED140-B044-B2D0-5B4E-C19CA7005E5A";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34765,13 +33939,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace21";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 -2.0947939119751235 -13.057628570939348 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 -1.6815709186612366 -12.943837347114822 ;
-createNode polyTweak -n "television:polyTweak21";
-	rename -uid "C49D8D36-DC49-B839-EE1F-8CB2164EBF5A";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak21";
+	rename -uid "99F72964-4242-39E0-7819-80AAB343948C";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[52:55]" -type "float3"  0 -0.35649985 0.062272049
 		 0 -0.35649985 0.062272049 0 0.35649985 -0.062272049 0 0.35649985 -0.062272049;
-createNode polyExtrudeFace -n "television:polyExtrudeFace22";
-	rename -uid "E3815B12-D145-A600-F8D0-FE976C853581";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace22";
+	rename -uid "3E552445-0B42-A6A5-6FF0-EA97DE77FEC1";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34783,13 +33957,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace22";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 -2.1596464566300089 -12.743167954150499 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 -1.8359288667280218 -12.462261390085722 ;
-createNode polyTweak -n "television:polyTweak22";
-	rename -uid "9B90A76B-1441-5B08-1CED-73AC80D15CD8";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak22";
+	rename -uid "BD0B9A06-A446-BCD1-AACD-CE89038AB096";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[56:59]" -type "float3"  0 -0.24106294 0.40596202 0
 		 -0.24106294 0.40596202 0 0.24106294 -0.40596202 0 0.24106294 -0.40596202;
-createNode polyExtrudeFace -n "television:polyExtrudeFace23";
-	rename -uid "404D517C-1C4A-1685-D20B-0F8DB6C9CF89";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace23";
+	rename -uid "AB1D4B57-E244-6E59-0D4C-138E41A5007E";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34801,13 +33975,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace23";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 -1.7501984668938007 -12.493802054599152 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 -1.6883309956006274 -12.069686369736029 ;
-createNode polyTweak -n "television:polyTweak23";
-	rename -uid "D329E5D7-FE40-B299-C88A-8A8D83B0E57E";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak23";
+	rename -uid "B366961E-8241-710A-1DC3-64999ABA1793";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[60:63]" -type "float3"  0 0.10670228 0.33141854 0
 		 0.10670228 0.33141854 0 -0.10670228 -0.33141854 0 -0.10670228 -0.33141854;
-createNode polyExtrudeFace -n "television:polyExtrudeFace24";
-	rename -uid "CAAE2EFD-7D44-F5DB-C408-ACB2B64B4B2C";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace24";
+	rename -uid "A713B524-CF40-E23E-42DB-42B067E7E2AB";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34819,13 +33993,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace24";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.63618120557156 -1.5933644619866101 -12.424788544356026 ;
 	setAttr ".cbx" -type "double3" 20.63618120557156 -1.3567066790455109 -12.067445769959098 ;
-createNode polyTweak -n "television:polyTweak24";
-	rename -uid "F34732D0-AC43-AD05-1F44-DE984C8A8F1A";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak24";
+	rename -uid "CEC7B747-CE4A-E42C-CB86-4189992C16EB";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[64:67]" -type "float3"  0 0.30630311 0.18310823 0
 		 0.30630311 0.18310823 0 -0.30630311 -0.18310823 0 -0.30630311 -0.18310823;
-createNode polyExtrudeFace -n "television:polyExtrudeFace25";
-	rename -uid "BD7FC69A-B742-4ABB-A266-338E05330198";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace25";
+	rename -uid "244F0C88-A34A-01A0-E2B1-0580CF9EF276";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34837,14 +34011,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace25";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431901782811551 0.5585288749208116 -13.394595248490797 ;
 	setAttr ".cbx" -type "double3" 17.431901782811551 0.56565856363765099 -13.294340086346242 ;
-createNode polyTweak -n "television:polyTweak25";
-	rename -uid "85C4D4BA-CD43-B8D1-3567-4EA86A69B9F6";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak25";
+	rename -uid "358A3529-9E49-656F-B327-37914D319FB9";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[68:71]" -type "float3"  -3.20427942 -0.40261316 0.01126042
 		 -3.20427942 -0.40261316 0.01126042 -3.20427942 -0.40261316 0.83789551 -3.20427942
 		 -0.40261316 0.83789551;
-createNode polyExtrudeFace -n "television:polyExtrudeFace26";
-	rename -uid "CAAE26D6-D84C-F976-7A46-2EBC9D16ACC7";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace26";
+	rename -uid "7498D4D0-574B-59CE-E93C-18A10A5C2F44";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34856,14 +34030,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace26";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 1.0985003494873231 -13.690101857354223 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 1.1981623037361775 -13.677086401070747 ;
-createNode polyTweak -n "television:polyTweak26";
-	rename -uid "A0EFB244-5E48-53BB-805F-D48DD976D327";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak26";
+	rename -uid "DDA702DF-934B-EF1D-54AB-7D8A51B9D5B3";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[72:75]" -type "float3"  7.1498363e-14 0.77180368 -0.6328553
 		 7.1498363e-14 0.77180368 -0.6328553 7.1498363e-14 0.45094651 -0.65660381 7.1498363e-14
 		 0.45094651 -0.65660381;
-createNode polyExtrudeFace -n "television:polyExtrudeFace27";
-	rename -uid "F67ED7B5-AD44-1A7C-3DE3-1D8FB963581B";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace27";
+	rename -uid "F2D1F5F8-D143-93BA-86A8-DEA01C7A371E";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34875,14 +34049,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace27";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 1.1479952415016608 -13.905820649458953 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 1.2192884064301945 -13.834974198300152 ;
-createNode polyTweak -n "television:polyTweak27";
-	rename -uid "BF1C4E9D-D141-972E-CE40-B39557ECB5F3";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak27";
+	rename -uid "806199A3-054C-9859-D0C7-A4A82642AD62";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[76:79]" -type "float3"  4.3964832e-14 -0.090902977
 		 0.04776518 4.3964832e-14 -0.090902977 0.04776518 4.3964832e-14 -0.17750558 0.23528674
 		 4.3964832e-14 -0.17750558 0.23528674;
-createNode polyExtrudeFace -n "television:polyExtrudeFace28";
-	rename -uid "4162AACC-0C47-D8FB-E140-71B6B822D5C0";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace28";
+	rename -uid "1061D7CF-A54E-C361-6384-3D92E73E2E0E";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34894,14 +34068,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace28";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 0.91707706472907213 -14.180860858243735 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 0.96961295926703073 -14.04355754232707 ;
-createNode polyTweak -n "television:polyTweak28";
-	rename -uid "304B8982-DF4B-BC4D-4437-FC8731B7FF17";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak28";
+	rename -uid "14238EC8-3446-7866-D4EA-E99436A87B5C";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[80:83]" -type "float3"  4.485301e-14 0.037468482 -0.071312323
 		 4.485301e-14 0.037468482 -0.071312323 4.485301e-14 -0.037468512 0.071312301 4.485301e-14
 		 -0.037468512 0.071312301;
-createNode polyExtrudeFace -n "television:polyExtrudeFace29";
-	rename -uid "76475861-354E-10B7-F9A0-1D987215BCDC";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace29";
+	rename -uid "BF63DF9A-FB42-798C-4015-CEB94E344860";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34913,14 +34087,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace29";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 0.51530874624829559 -14.358336483543184 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 0.55216058091793141 -14.179539991725377 ;
-createNode polyTweak -n "television:polyTweak29";
-	rename -uid "4BBBA965-0848-F1DA-0BC1-BD8AC991B3D1";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak29";
+	rename -uid "02BBC416-5F46-3067-5CF5-A086EC16FBAB";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[84:87]" -type "float3"  2.3980817e-14 0.020031907
 		 -0.047714431 2.3980817e-14 0.020031907 -0.047714431 2.3980817e-14 -0.020031907 0.047714431
 		 2.3980817e-14 -0.020031907 0.047714431;
-createNode polyExtrudeFace -n "television:polyExtrudeFace30";
-	rename -uid "CF65C403-BA42-4AC7-1102-55A5A763E171";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace30";
+	rename -uid "E2B20372-C947-F0A8-115D-8C9E38D36835";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34932,14 +34106,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace30";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 -0.05171798824539553 -14.477676436149832 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 -0.028059328277284301 -14.296662087193647 ;
-createNode polyTweak -n "television:polyTweak30";
-	rename -uid "8499C59A-0340-FFB0-E30B-CBB558E6BD1F";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak30";
+	rename -uid "5852E39A-7F44-DD03-6ADF-9EA5D668D262";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[88:91]" -type "float3"  1.687539e-14 -0.049441218
 		 -0.050450359 1.687539e-14 -0.049441218 -0.050450359 1.687539e-14 0.049441218 0.050450359
 		 1.687539e-14 0.049441218 0.050450359;
-createNode polyExtrudeFace -n "television:polyExtrudeFace31";
-	rename -uid "599BDAAE-174A-EA1E-C1E2-BCB34E3C83D6";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace31";
+	rename -uid "0319D599-3849-D7F9-770C-CFB076B27BCC";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34951,14 +34125,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace31";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 -0.62250997015435716 -14.47146032337923 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 -0.34995134389466021 -14.186205913226683 ;
-createNode polyTweak -n "television:polyTweak31";
-	rename -uid "070053A6-4B43-3823-DD9E-56A934D261C0";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak31";
+	rename -uid "D6674032-F04C-4011-EED3-D48ADA8052C5";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[92:95]" -type "float3"  3.7747583e-14 -0.1270207 -0.28803572
 		 3.7747583e-14 -0.1270207 -0.28803572 3.7747583e-14 0.12702072 0.28803572 3.7747583e-14
 		 0.12702072 0.28803572;
-createNode polyExtrudeFace -n "television:polyExtrudeFace32";
-	rename -uid "58FBFCEF-2F49-FA39-9B50-FFB0246105AF";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace32";
+	rename -uid "F8F0EA87-E84A-B719-C528-68A96A1CD4F7";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34970,14 +34144,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace32";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 -1.0112333698195213 -14.064425295788261 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 -0.56327143797158796 -14.01799257142542 ;
-createNode polyTweak -n "television:polyTweak32";
-	rename -uid "7FE39DA1-6449-E436-F39E-55980988F722";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak32";
+	rename -uid "F1ADAC73-9142-0AB2-01A4-F4A1CDD5478A";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[96:99]" -type "float3"  3.5527137e-14 -0.34018576
 		 0.061366383 3.5527137e-14 -0.34018576 0.061366383 3.5527137e-14 0.34018576 -0.061366372
 		 3.5527137e-14 0.34018576 -0.061366372;
-createNode polyExtrudeFace -n "television:polyExtrudeFace33";
-	rename -uid "F47EE93D-BC4E-64B9-5415-E68C0197C8F0";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace33";
+	rename -uid "5D87950C-194C-7F45-0377-B49B0D1AA5F7";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -34989,14 +34163,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace33";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 -0.99393822025791823 -13.892320308612369 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 -0.64034401952866393 -13.613399534136406 ;
-createNode polyTweak -n "television:polyTweak33";
-	rename -uid "3B3A4B04-6D44-B7C0-DE58-22B64764A6FE";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak33";
+	rename -uid "7F87FA1F-9B4E-07E5-882F-ABB2594D4791";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[100:103]" -type "float3"  4.0412118e-14 -0.18128259
 		 0.35116395 4.0412118e-14 -0.18128259 0.35116395 4.0412118e-14 0.18128259 -0.35116395
 		 4.0412118e-14 0.18128259 -0.35116395;
-createNode polyExtrudeFace -n "television:polyExtrudeFace34";
-	rename -uid "2A15DCAA-1548-A6AE-4CDE-2DAB99116306";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace34";
+	rename -uid "DC1F79B7-C249-2CA1-0473-7194786B7DCB";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35008,14 +34182,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace34";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 -0.7183471773252158 -13.712063332953214 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 -0.65218907712215701 -13.459298835711156 ;
-createNode polyTweak -n "television:polyTweak34";
-	rename -uid "2DFDAB94-6E47-4072-6701-2C8E3EE18D3B";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak34";
+	rename -uid "9F74B87C-A04C-849A-2884-759C59705E0B";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[104:107]" -type "float3"  3.2418512e-14 0.26431325 0.20858769
 		 3.2418512e-14 0.26431325 0.20858769 3.2418512e-14 -0.26431328 -0.20858769 3.2418512e-14
 		 -0.26431328 -0.20858769;
-createNode polyExtrudeFace -n "television:polyExtrudeFace35";
-	rename -uid "5068CFD6-BB4B-DE5E-A33E-EAAE40357490";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace35";
+	rename -uid "22D3CADB-7F4E-47C4-615C-B49361B6FDEC";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35027,13 +34201,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace35";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 -0.10277229809424149 -13.528737355991977 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 -0.10130891133827707 -13.337320663425233 ;
-createNode polyTweak -n "television:polyTweak35";
-	rename -uid "7E9F8A7E-7243-3EAD-F23B-42826BF4ABA8";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak35";
+	rename -uid "B9A392FE-D841-4B17-0872-D19C14EA784C";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[108:111]" -type "float3"  0 0.10400888 0 0 0.10400888
 		 0 0 -0.10400888 0 0 -0.10400888 0;
-createNode polyExtrudeFace -n "television:polyExtrudeFace36";
-	rename -uid "BC60930D-D549-3F38-6E0D-DD956DFE790E";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace36";
+	rename -uid "85296CC1-B545-BC48-D64D-BAB87C53BDAF";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35045,13 +34219,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace36";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 16.431902259648709 0.45624988597805027 -13.498736319830757 ;
 	setAttr ".cbx" -type "double3" 17.431902259648709 0.50863780823220361 -13.358384998924782 ;
-createNode polyTweak -n "television:polyTweak36";
-	rename -uid "E5620BA0-524A-5878-8C02-86BCCD7D8D95";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak36";
+	rename -uid "C3181944-8643-BB76-AB5A-25B75A1D28D5";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[112:115]" -type "float3"  0 0.0865767 0 0 0.0865767
 		 0 0 -0.0865767 0 0 -0.0865767 0;
-createNode polyExtrudeFace -n "television:polyExtrudeFace37";
-	rename -uid "3C0A2DDB-4842-7A47-278A-BA8149DAC8EF";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace37";
+	rename -uid "F1FCFC45-DC4F-595A-33CD-A08E248D26EB";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35063,14 +34237,14 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace37";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350585257860917 0.87654030130984861 -13.647023330768826 ;
 	setAttr ".cbx" -type "double3" 19.486507112924592 0.97248477638315578 -13.540115647807315 ;
-createNode polyTweak -n "television:polyTweak37";
-	rename -uid "B8B7E8AF-684B-25AF-CF8A-DA9E46E8DCC0";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak37";
+	rename -uid "7590A23C-E246-C230-5F00-27A3DE21DCA4";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[116:119]" -type "float3"  1.056520104 0.063715823 0.0066531803
 		 0.51462865 0.063715823 0.0066531803 0.51462865 -0.063715816 -0.0066531803 1.056520104
 		 -0.063715816 -0.0066531803;
-createNode polyExtrudeFace -n "television:polyExtrudeFace38";
-	rename -uid "DBA9BF8C-2940-11AB-D85D-D698A3CD87D4";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace38";
+	rename -uid "A87F6EF5-E54C-44D9-66E4-779391E299BF";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35082,13 +34256,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace38";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350583135681305 1.1013547266350323 -13.828313804129795 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.2427839793091935 -13.803164335019941 ;
-createNode polyTweak -n "television:polyTweak38";
-	rename -uid "5E200A5D-CB47-33E5-61A6-19A6B6193EC4";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak38";
+	rename -uid "CDF5CAE9-7D43-3BDD-7F6C-C8AD3CEAE5F4";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[120:123]" -type "float3"  0 0.1445065 -0.075276695 0
 		 0.1445065 -0.075276695 0 -0.1445065 0.075276695 0 -0.1445065 0.075276695;
-createNode polyExtrudeFace -n "television:polyExtrudeFace39";
-	rename -uid "9144E0B5-E841-0AA4-B30A-6D9F164E2E4E";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace39";
+	rename -uid "8A6BB709-4A44-FC3A-7DAB-41B21798EBB6";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35100,13 +34274,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace39";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350580872023048 1.1054835378112591 -14.105243947914904 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.1593707967070221 -13.972087570917331 ;
-createNode polyTweak -n "television:polyTweak39";
-	rename -uid "576C638B-A44E-D693-8FEC-ABBCDF42B380";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak39";
+	rename -uid "6700F0A8-4448-2DE4-0441-4487539DBD04";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[124:127]" -type "float3"  0 0.012594651 -0.16169928
 		 0 0.012594651 -0.16169928 0 -0.01259465 0.16169928 0 -0.01259465 0.16169928;
-createNode polyExtrudeFace -n "television:polyExtrudeFace40";
-	rename -uid "125FB1E0-554D-2F24-4114-CB9BCCD9DC4B";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace40";
+	rename -uid "A873C1E1-8E42-31F1-CE6C-0F84F11B79EB";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35118,13 +34292,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace40";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350578608364795 0.93129432330654793 -14.153837703507243 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.0276441456076282 -14.047296216094955 ;
-createNode polyTweak -n "television:polyTweak40";
-	rename -uid "E44BB2A3-C446-59F4-BB16-AC993848A10E";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak40";
+	rename -uid "ED76E638-9F47-BF80-85E9-FAB4E8215F35";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[128:131]" -type "float3"  0 0.0145811 0.056615036 0
 		 0.0145811 0.056615036 0 -0.014581097 -0.05661504 0 -0.014581097 -0.05661504;
-createNode polyExtrudeFace -n "television:polyExtrudeFace41";
-	rename -uid "5E879A85-A14D-1723-25B9-41AF6B281A74";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace41";
+	rename -uid "51A2EDFE-D34F-F7F5-DC10-E4968A1D8925";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35136,13 +34310,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace41";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350576344706539 0.70698022430610474 -14.296645806821562 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 0.84808195686298038 -14.269723938818364 ;
-createNode polyTweak -n "television:polyTweak41";
-	rename -uid "C0896570-C148-C278-67F4-D08D33A4B676";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak41";
+	rename -uid "74B1FA0E-A549-33F5-D88F-0CB6BA4F6129";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[132:135]" -type "float3"  0 -0.026029449 0.10332185
 		 0 -0.026029449 0.10332185 0 0.026029423 -0.10332181 0 0.026029423 -0.10332181;
-createNode polyExtrudeFace -n "television:polyExtrudeFace42";
-	rename -uid "EC0429D9-F743-16AF-4AD9-7782A447BC7F";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace42";
+	rename -uid "B53ED5FD-FD46-D7A9-B643-68BF81EFCE4A";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35155,13 +34329,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace42";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 0.84555005520114135 -14.742414107000643 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 0.97315980267554758 -14.676457160608283 ;
-createNode polyTweak -n "television:polyTweak42";
-	rename -uid "0BE9C92E-EE4F-13BF-5628-4E8041C993EC";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak42";
+	rename -uid "B0960E29-D543-DA3A-FAC0-17A8C5C20391";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[136:139]" -type "float3"  0 0.27489546 0.40999648 0
 		 0.27489546 0.40999648 0 0.44685003 0.27441028 0 0.44685003 0.27441028;
-createNode polyExtrudeFace -n "television:polyExtrudeFace43";
-	rename -uid "36AD14D1-C04B-B41A-2C1C-6B96BD00364B";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace43";
+	rename -uid "5A42B8B5-D440-343A-3AB2-E993BC90C577";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35174,13 +34348,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace43";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.3374063470267603 -15.536343722906919 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.3795658946247764 -15.399021350619874 ;
-createNode polyTweak -n "television:polyTweak43";
-	rename -uid "7944C3B3-B24A-CB7A-21C7-3598723D1368";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak43";
+	rename -uid "BBFB20E1-6042-DD09-D157-B79661E61DBE";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[140:143]" -type "float3"  0 -0.032742888 0.08368165
 		 0 -0.032742888 0.08368165 0 0.22649458 0.10004647 0 0.22649458 0.10004647;
-createNode polyExtrudeFace -n "television:polyExtrudeFace44";
-	rename -uid "9F68ED0D-D046-8274-68F7-B8A839DFC5F1";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace44";
+	rename -uid "0E585DB6-FA4C-8795-AE65-7B9804251648";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35192,13 +34366,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace44";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.5755830726295774 -15.587768090250979 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.5858711382306852 -15.484056286868231 ;
-createNode polyTweak -n "television:polyTweak44";
-	rename -uid "02783EF2-EF4B-99B8-3E44-9CAB0B19D927";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak44";
+	rename -uid "B7C29EAC-8A47-0781-E83A-2894A9DF04CB";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[144:147]" -type "float3"  0 0 -0.05403617 0 0 -0.05403617
 		 0 0 0.054036174 0 0 0.054036174;
-createNode polyExtrudeFace -n "television:polyExtrudeFace45";
-	rename -uid "34E76765-FF45-3720-0B30-599685CA81F2";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace45";
+	rename -uid "E078C9D6-3745-6C03-B1C5-58BC516A5245";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35210,13 +34384,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace45";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.6509699189193454 -15.588830913665651 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.7097422755016387 -15.502761751600318 ;
-createNode polyTweak -n "television:polyTweak45";
-	rename -uid "81181634-3C4B-A5CD-8F48-BF8DEA4D0B6F";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak45";
+	rename -uid "93C143EE-0448-8E99-794B-15800B48862E";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[148:151]" -type "float3"  0 -0.044298317 -0.070371345
 		 0 -0.044298317 -0.070371345 0 0.044298317 0.070371345 0 0.044298317 0.070371345;
-createNode polyExtrudeFace -n "television:polyExtrudeFace46";
-	rename -uid "02DFDFB2-AE4D-43AB-3E10-7C9988A60427";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace46";
+	rename -uid "76908A7D-E142-E693-66F1-FEB6047CA5C5";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35228,13 +34402,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace46";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.7170111606586889 -15.486417849269788 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.8212034202902818 -15.483966370416351 ;
-createNode polyTweak -n "television:polyTweak46";
-	rename -uid "5DD78C23-CC47-093C-F3AC-B1AB98075DBA";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak46";
+	rename -uid "2FC1390F-5E42-23C8-086F-B9B61B83BB38";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[152:155]" -type "float3"  0 0.032608453 -0.11139143
 		 0 0.032608453 -0.11139143 0 -0.032608453 0.11139143 0 -0.032608453 0.11139143;
-createNode polyExtrudeFace -n "television:polyExtrudeFace47";
-	rename -uid "1E2C4B86-AE47-ED91-2592-5CA711959236";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace47";
+	rename -uid "50951D25-FE46-145E-EE94-AB8749E81F59";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35246,13 +34420,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace47";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.7279351991110148 -15.391691644407809 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.8042090511696398 -15.320667209727983 ;
-createNode polyTweak -n "television:polyTweak47";
-	rename -uid "78B687CF-124B-052B-8A9E-2A8CA749C1E5";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak47";
+	rename -uid "E1D9229D-834F-3CF0-8590-70A13B4C8C5C";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[156:159]" -type "float3"  0 0.078678139 -0.035636459
 		 0 0.078678139 -0.035636459 0 -0.078678139 0.035636459 0 -0.078678139 0.035636459;
-createNode polyExtrudeFace -n "television:polyExtrudeFace48";
-	rename -uid "0B54C802-0F48-8FA2-7942-21BA967CB1E2";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace48";
+	rename -uid "BDE67AA3-2B45-6FDE-EBF4-CDBB3D377C98";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35264,13 +34438,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace48";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.6264742958455183 -15.330813288817604 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.6599585514455226 -15.232116496724865 ;
-createNode polyTweak -n "television:polyTweak48";
-	rename -uid "A61AC2F3-1C49-D226-EC7F-BEABC36C3B3D";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak48";
+	rename -uid "BF0BE2DE-C046-241B-3355-A48E63628C37";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[160:163]" -type "float3"  0 0.15029874 -0.085952416
 		 0 0.15029874 -0.085952416 0 0.033429369 -0.10779926 0 0.033429369 -0.10779926;
-createNode polyExtrudeFace -n "television:polyExtrudeFace49";
-	rename -uid "4B8879B4-9F41-3BE0-FC32-978862BB79DC";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace49";
+	rename -uid "F7D1C195-A54E-BE30-CA72-DEB63328645B";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35282,8 +34456,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace49";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 0.70327277270355759 -15.017606295899188 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 0.73675721175857434 -14.918909607358213 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace50";
-	rename -uid "45D04960-3243-4DC4-4C20-C194E692F645";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace50";
+	rename -uid "14AFD3BF-B94E-9B21-3B3F-D89E125F320B";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35295,13 +34469,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace50";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.3124234350388867 -15.04820157876795 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.20780032478035781 -14.944810502697242 ;
-createNode polyTweak -n "television:polyTweak49";
-	rename -uid "EDB266C1-604E-A300-670D-8D81D77E84F3";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak49";
+	rename -uid "C5389300-744B-8A15-FA51-B6B6D5E49770";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[168:171]" -type "float3"  0 -0.48452076 -1.049629331
 		 0 -0.48452076 -1.049629331 0 -0.72587544 -1.26340342 0 -0.72587544 -1.26340342;
-createNode polyExtrudeFace -n "television:polyExtrudeFace51";
-	rename -uid "396509F2-A74C-A561-9B4A-B9BF5905123F";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace51";
+	rename -uid "4D8DF56A-3F43-56FC-09A0-B7A69AEF3B4F";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35313,13 +34487,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace51";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.54422605474100993 -15.347020629075654 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.29478826657878321 -15.235269184372546 ;
-createNode polyTweak -n "television:polyTweak50";
-	rename -uid "79813D4F-CF43-C58C-C3BC-9892E9F25112";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak50";
+	rename -uid "E1D57F67-014E-0ADB-7468-8D87F3BBF0F1";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[172:175]" -type "float3"  0 0.16298659 0.025135448 0
 		 0.16298659 0.025135448 0 0.26320642 -0.57159251 0 0.26320642 -0.57159251;
-createNode polyExtrudeFace -n "television:polyExtrudeFace52";
-	rename -uid "8CDE37D8-8D44-1A5B-30E6-34AE9F3456C9";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace52";
+	rename -uid "B75D4A91-D749-0025-8367-F6BDBCEE9802";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35331,13 +34505,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace52";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.37818387009684062 -15.581361468652084 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.29005496529727093 -15.382112073078357 ;
-createNode polyTweak -n "television:polyTweak51";
-	rename -uid "85273E58-6C4F-6FAB-A6FD-4DBFF3358F8C";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak51";
+	rename -uid "C5675D19-6449-9F95-ABD9-019083B034B7";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[176:179]" -type "float3"  0 -0.20678517 -0.05541715
 		 0 -0.20678517 -0.05541715 0 0.20678517 0.05541715 0 0.20678517 0.05541715;
-createNode polyExtrudeFace -n "television:polyExtrudeFace53";
-	rename -uid "5915AC26-2D46-3A62-A061-4FBB5E719123";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace53";
+	rename -uid "D629AEC1-5F49-7AA3-9174-1F8203F0B0FD";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35349,13 +34523,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace53";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.16253090744880716 -15.662964904009524 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.10719686385976546 -15.476771325740017 ;
-createNode polyTweak -n "television:polyTweak52";
-	rename -uid "D44E8F0B-A243-4C21-505F-09AD3D095CE7";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak52";
+	rename -uid "EA1E3C53-9543-28B1-352B-368146E5A2BE";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[180:183]" -type "float3"  0 -0.11096129 -0.1262126 0
 		 -0.11096129 -0.1262126 0 0.11096129 0.1262126 0 0.11096129 0.1262126;
-createNode polyExtrudeFace -n "television:polyExtrudeFace54";
-	rename -uid "5196318D-AB4D-A4B3-7F47-C7ACA6520942";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace54";
+	rename -uid "912CE16C-6443-4563-5E7C-BEB958023319";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35367,13 +34541,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace54";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 0.2657098510385868 -15.659160796060242 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 0.28612651561815061 -15.503451238983093 ;
-createNode polyTweak -n "television:polyTweak53";
-	rename -uid "5923ACC4-4E45-F3FA-C15B-E6ADA5621E78";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak53";
+	rename -uid "B7362872-8942-D056-821F-8A95DE73ED1C";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[184:187]" -type "float3"  0 0.2683776 -0.22382033 0
 		 0.2683776 -0.22382033 0 0.16032138 -0.22826687 0 0.16032138 -0.22826687;
-createNode polyExtrudeFace -n "television:polyExtrudeFace55";
-	rename -uid "04163AEC-5748-EE05-7738-0E91380B83EE";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace55";
+	rename -uid "6E4CA499-304D-1180-B1ED-CBB1333F6C61";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35385,8 +34559,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace55";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.0674799446127659 -15.597573766154232 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.0878960083265921 -15.441865060507343 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace56";
-	rename -uid "2FCCF4BE-CE49-49D9-282E-8B9B3592D812";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace56";
+	rename -uid "C8C80B8C-7843-7F7B-1C5F-CBB178FE2023";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35398,13 +34572,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace56";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.2417080799350386 -15.527121899655393 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.3792190694320903 -15.451274202738121 ;
-createNode polyTweak -n "television:polyTweak54";
-	rename -uid "BF0E98BF-E240-693B-5E61-D28EBD955A1F";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak54";
+	rename -uid "C45DC958-914E-ABBD-6796-64B3414AD0B1";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[192:195]" -type "float3"  0 0.19779222 0.059166532 0
 		 0.19779222 0.059166532 0 -0.19779222 -0.059166532 0 -0.19779222 -0.059166532;
-createNode polyExtrudeFace -n "television:polyExtrudeFace57";
-	rename -uid "3DA53EE7-9B44-5348-69BC-3487FBFC88B9";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace57";
+	rename -uid "EAACD2A9-CC45-6B1F-1B3D-2985971FC522";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35416,8 +34590,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace57";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.2752935129995429 -15.588014383720989 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.4128042212438596 -15.512166983400558 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace58";
-	rename -uid "E5B0F783-1E43-3F52-1FC2-D48114BB8A25";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace58";
+	rename -uid "8A1FEA65-AF4C-13DE-ABF8-C980D248F9CD";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35428,13 +34602,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace58";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.3072906310324575 -15.641919546020901 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.4582687645981633 -15.5987036404306 ;
-createNode polyTweak -n "television:polyTweak55";
-	rename -uid "0663AE1E-E743-923F-5E53-4F9D338051B7";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak55";
+	rename -uid "A20A67DB-4643-AC61-B8B1-0D919AF0F519";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[200:203]" -type "float3"  0 0.10697412 -0.089977391
 		 0 0.10697412 -0.089977391 0 -0.10697412 0.089977391 0 -0.10697412 0.089977391;
-createNode polyExtrudeFace -n "television:polyExtrudeFace59";
-	rename -uid "D125FF30-5A4C-1CDB-BEAF-91883A42A29A";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace59";
+	rename -uid "710ED401-9C48-4235-2304-5AB6739E7016";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35446,8 +34620,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace59";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.3072901158240109 -15.641920486944478 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.4582687173011393 -15.598703292700707 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace60";
-	rename -uid "8223FD45-394D-536B-6E7E-9F9CB954D664";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace60";
+	rename -uid "8A76003F-C24D-C76D-B523-3693F78FE7B4";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35459,13 +34633,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace60";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.317028884727705 -15.749472568880471 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.4106714925857609 -15.623402914907469 ;
-createNode polyTweak -n "television:polyTweak56";
-	rename -uid "92DDAB40-8341-5C42-BF45-7681E7ED7875";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak56";
+	rename -uid "A6797DB8-8445-E61D-A7C2-6E9DD76954D0";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[208:211]" -type "float3"  0 0.017970571 -0.11615963
 		 0 0.017970571 -0.11615963 0 -0.017970571 0.11615963 0 -0.017970571 0.11615963;
-createNode polyExtrudeFace -n "television:polyExtrudeFace61";
-	rename -uid "0F09988F-4F40-F9DB-864C-D9B83D3F2A29";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace61";
+	rename -uid "5E4C3B46-3E42-251D-B758-CFA307203D2F";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35477,13 +34651,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace61";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.2065124455585376 -15.76639645760741 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.2211017704411731 -15.610032536282581 ;
-createNode polyTweak -n "television:polyTweak57";
-	rename -uid "D7FD60F7-C844-8141-8D53-13B5C277DE7D";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak57";
+	rename -uid "6AE36531-964F-38D6-8E03-588BF67F72D2";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[212:215]" -type "float3"  0 -0.2433746 0.073153757 0
 		 -0.2433746 0.073153757 0 -0.10877095 0.29820359 0 -0.10877095 0.29820359;
-createNode polyExtrudeFace -n "television:polyExtrudeFace62";
-	rename -uid "597D5CDC-E641-C653-E0DF-7195475B3663";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace62";
+	rename -uid "2C45B79E-4849-A1F2-258D-729B9B19475F";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35495,13 +34669,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace62";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 0.13705014837057872 -15.747597050865098 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 0.22468556805906104 -15.61727960602893 ;
-createNode polyTweak -n "television:polyTweak58";
-	rename -uid "0297AD0D-EB48-8B86-C9D5-C299D1E7CD05";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak58";
+	rename -uid "D93FE552-C342-B0D2-8B62-41AD6E59AFF3";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[216:219]" -type "float3"  0 0.21107732 -0.0492808 0
 		 0.21107732 -0.0492808 0 0.079825528 -0.25749269 0 0.079825528 -0.25749269;
-createNode polyExtrudeFace -n "television:polyExtrudeFace63";
-	rename -uid "F2EEA334-7F4E-8158-E2D2-C0B3C222DC1E";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace63";
+	rename -uid "E3AF58C6-3846-C45B-ED56-0C8C211EBDC6";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35513,13 +34687,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace63";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.36237343146736845 -15.925796309424584 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.31146871298324086 -15.830309343973951 ;
-createNode polyTweak -n "television:polyTweak59";
-	rename -uid "E7C9B101-D14D-0B4D-E404-60972979B7BC";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak59";
+	rename -uid "2A481075-0D47-7813-2318-B1B8B464E46E";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[220:223]" -type "float3"  0 -0.30402294 0.25833556 0
 		 -0.30402294 0.25833556 0 -0.18591863 0.25833556 0 -0.18591863 0.25833556;
-createNode polyExtrudeFace -n "television:polyExtrudeFace64";
-	rename -uid "5D5FC4CF-0C46-CD66-7701-CEA8FD0A4B8C";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace64";
+	rename -uid "9345FD8A-1644-6474-2ACE-7A8D102F7978";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35531,13 +34705,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace64";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.54607061852493566 -16.112111033790924 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.45189183796027799 -16.058825504773971 ;
-createNode polyTweak -n "television:polyTweak60";
-	rename -uid "4C511481-0248-8FDE-EF82-BFA33C8080FD";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak60";
+	rename -uid "90D21444-D84F-038C-8D33-D8A19A4DFBB9";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[224:227]" -type "float3"  0 0.19704527 -0.13442802 0
 		 0.19704527 -0.13442802 0 0.19153228 -0.27534911 0 0.19153228 -0.27534911;
-createNode polyExtrudeFace -n "television:polyExtrudeFace65";
-	rename -uid "0A6CEDD0-2E48-9494-1D94-468B66A48C09";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace65";
+	rename -uid "38F6DE89-5649-D3C6-EC8C-22B075F04C76";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35549,13 +34723,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace65";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.57593753687957128 -16.326001789839914 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.47646785601727648 -16.283403798251015 ;
-createNode polyTweak -n "television:polyTweak61";
-	rename -uid "DF8FBB53-6146-C3C5-A997-A7AFDD3E42A4";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak61";
+	rename -uid "E83AB937-144F-7527-9720-5280685AAD23";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[228:231]" -type "float3"  0 0.091423988 0.24084282 0
 		 0.091423988 0.24084282 0 0.23639779 0.070019551 0 0.23639779 0.070019551;
-createNode polyExtrudeFace -n "television:polyExtrudeFace66";
-	rename -uid "FC8619BB-5940-1FEA-EB11-07857AAA0CCD";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace66";
+	rename -uid "1DE404B7-1A4C-BE03-474E-C6A7E070B007";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35567,13 +34741,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace66";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.3929043448302697 -16.518583229426685 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.35561930623150417 -16.41700131293657 ;
-createNode polyTweak -n "television:polyTweak62";
-	rename -uid "BA65F959-954C-CDED-89C3-FEAED7EF3930";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak62";
+	rename -uid "08CBC56B-9646-B6CF-934B-6BBF9CDC5ABF";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[232:235]" -type "float3"  0 -0.14431944 0.21090555 0
 		 -0.14431944 0.21090555 0 0.055654634 0.21088085 0 0.055654634 0.21088085;
-createNode polyExtrudeFace -n "television:polyExtrudeFace67";
-	rename -uid "32A5F972-384B-18C6-CF3E-1EA1AFF1CBF6";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace67";
+	rename -uid "FEB6F816-694C-05C0-D700-1BB275B2965C";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35585,8 +34759,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace67";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.081996914062987813 -16.632700083637413 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.044711875464222284 -16.531118167147298 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace68";
-	rename -uid "E082456F-A74B-3815-71C2-99B2344A9E96";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace68";
+	rename -uid "BC5326BF-5B4A-E78B-A2FF-E2A4F4A7B3C0";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35598,8 +34772,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace68";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.5506167612428561 -16.633135431475534 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.61573649511109 -16.546715324793215 ;
-createNode polyTweak -n "television:polyTweak63";
-	rename -uid "EBE30D83-454D-B325-154B-CBB123DF7C0A";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak63";
+	rename -uid "BD3DA1DD-BE43-2814-DED6-9BA5A1AD24FD";
 	setAttr ".uopa" yes;
 	setAttr -s 40 ".tk[204:243]" -type "float3"  1.1920929e-07 0 0 1.1920929e-07
 		 0 0 1.1920929e-07 0 0 1.1920929e-07 0 0 1.1920929e-07 0 0 1.1920929e-07 0 0 1.1920929e-07
@@ -35610,8 +34784,8 @@ createNode polyTweak -n "television:polyTweak63";
 		 0 0 1.1920929e-07 0 0 1.1920929e-07 0 0 1.1920929e-07 0 0 1.1920929e-07 0 0 1.1920929e-07
 		 0 0 1.1920929e-07 0 0 1.1920929e-07 0 0 1.1920929e-07 0 0 1.1920929e-07 0 0 0 0.83247393
 		 1.71839166 0 0.83247393 1.71839166 0 0.98150581 1.90846455 0 0.98150581 1.90846455;
-createNode polyExtrudeFace -n "television:polyExtrudeFace69";
-	rename -uid "24CC5A14-B74C-95CD-EF25-78B8D1C7E641";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace69";
+	rename -uid "D827CEA0-A547-4A16-23E5-CDB888001F73";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35623,8 +34797,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace69";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.7188595859876896 -16.506357611034378 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.783979686765949 -16.419937297248538 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace70";
-	rename -uid "881CF276-F34F-C6E5-BBA5-E48404597C9F";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace70";
+	rename -uid "196DCC17-4048-ACB3-198E-0C92A9096191";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35636,13 +34810,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace70";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.7989156130193984 -16.402609489218172 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.9031512551534124 -16.373560866341787 ;
-createNode polyTweak -n "television:polyTweak64";
-	rename -uid "D169F56F-F24B-2E97-2F8D-7B9724281698";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak64";
+	rename -uid "F76E387E-3644-BC00-30E9-E6A9DF9AF723";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[248:251]" -type "float3"  0 0.059575815 -0.12914401
 		 0 0.059575815 -0.12914401 0 -0.059575815 0.12914401 0 -0.059575815 0.12914401;
-createNode polyExtrudeFace -n "television:polyExtrudeFace71";
-	rename -uid "00466849-FD49-BA86-DE5D-24AA44F611CD";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace71";
+	rename -uid "01AA75FC-514C-BA24-8501-C0838C1F6F70";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35654,13 +34828,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace71";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.7828959323315474 -16.306804808702346 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.8502686128426511 -16.222129457946444 ;
-createNode polyTweak -n "television:polyTweak65";
-	rename -uid "47A5A473-C84F-BF9B-DAB1-8C8323CFEDF9";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak65";
+	rename -uid "A51B96AE-5B4A-113D-AB8F-5CA6F5948B64";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[252:255]" -type "float3"  0 0.075856812 -0.017497409
 		 0 0.075856812 -0.017497409 0 -0.075856812 0.017497409 0 -0.075856812 0.017497409;
-createNode polyExtrudeFace -n "television:polyExtrudeFace72";
-	rename -uid "B5152052-C04C-B9DA-5D7C-2F8D4614712F";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace72";
+	rename -uid "771AF570-444C-2AA0-1FB0-C3B8FD54EE1E";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35672,8 +34846,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace72";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.7318594938829732 -16.26619728175271 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.7992320337677095 -16.181522079295227 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace73";
-	rename -uid "88C21FC6-664D-62BE-A1FF-118C829E1010";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace73";
+	rename -uid "E9967CF9-BA45-4372-F3B8-1284D54B573B";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35685,13 +34859,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace73";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.687540235173723 -16.22685207711406 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.7222756797306915 -16.124371237598734 ;
-createNode polyTweak -n "television:polyTweak66";
-	rename -uid "EB533C9F-B34F-B8AA-0E04-1B9FE388EDE5";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak66";
+	rename -uid "31149ECD-E34D-C677-6886-30890D5340E6";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[260:263]" -type "float3"  0 0.1007293 0.066891029 0
 		 0.1007293 0.066891029 0 -0.1007293 -0.066891029 0 -0.1007293 -0.066891029;
-createNode polyExtrudeFace -n "television:polyExtrudeFace74";
-	rename -uid "3FAB437F-5B4F-8FDA-CF54-09B2EB772C32";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace74";
+	rename -uid "EFABEBDA-0747-3AFD-7149-82AF1D876020";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35704,13 +34878,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace74";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.4865305048925284 -16.258711519120684 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.5821878559079492 -16.208127547107555 ;
-createNode polyTweak -n "television:polyTweak67";
-	rename -uid "EFF0C5F7-7C41-7B3A-63A9-2E96C377D76B";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak67";
+	rename -uid "18E4D7C5-B342-522A-29DC-43964759CB45";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[264:267]" -type "float3"  0 0.0099114766 0.092834182
 		 0 0.0099114766 0.092834182 0 -0.0099114766 -0.092834182 0 -0.0099114766 -0.092834182;
-createNode polyExtrudeFace -n "television:polyExtrudeFace75";
-	rename -uid "86146B50-C143-1B37-D276-9484D6C7E15C";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace75";
+	rename -uid "3FFA3EF2-5240-043D-8B8C-69A994100BD7";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35722,8 +34896,8 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace75";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.0840766631973668 -16.983930164533653 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.1922552499239147 -16.981338644071212 ;
-createNode polyExtrudeFace -n "television:polyExtrudeFace76";
-	rename -uid "C74D7AAA-9648-D119-3FD0-B884A047075B";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace76";
+	rename -uid "A7BF303A-CA42-0270-4FC6-E2B3EF40E9CC";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35735,13 +34909,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace76";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.1034650645282902 -17.32744370579929 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.1877639555123847 -17.259598231470271 ;
-createNode polyTweak -n "television:polyTweak68";
-	rename -uid "F3943B4D-7C4B-62FE-B686-25B85ECBD4E4";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak68";
+	rename -uid "7BB6A90E-CC47-C3C6-937B-5F901EFFFA31";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[272:275]" -type "float3"  0 -0.072594456 0.03606946
 		 0 -0.072594456 0.03606946 0 0.072594456 -0.03606946 0 0.072594456 -0.03606946;
-createNode polyExtrudeFace -n "television:polyExtrudeFace77";
-	rename -uid "301D78E3-B846-DD8D-2EF9-A59FC4735234";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace77";
+	rename -uid "A45505E1-E840-BB50-A99B-E199A2711ADA";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35753,13 +34927,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace77";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.257724284120699 -17.428348458143731 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.3420228631638449 -17.360502124712401 ;
-createNode polyTweak -n "television:polyTweak69";
-	rename -uid "C48D0626-D540-7444-599C-7F85CC47CDEB";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak69";
+	rename -uid "59CB8DD6-F64E-628E-F1B4-C087C7D82DB8";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[276:279]" -type "float3"  0 -0.14571673 0.15366647 0
 		 -0.14571673 0.15366647 0 -0.14571673 0.15366647 0 -0.14571673 0.15366647;
-createNode polyExtrudeFace -n "television:polyExtrudeFace78";
-	rename -uid "DDAF0E9E-3F45-BD6F-EF20-778EF2BF0367";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace78";
+	rename -uid "19EF8668-F44B-2399-7D83-68AFDBCBD0C5";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35771,13 +34945,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace78";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.427859914243153 -17.509359606165326 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.5275410727297096 -17.467252029131483 ;
-createNode polyTweak -n "television:polyTweak70";
-	rename -uid "07AACEA8-A94C-CC03-023C-4AA3415FDA0F";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak70";
+	rename -uid "39D3014D-E049-C96E-2D48-8B92EB5D1BF8";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[280:283]" -type "float3"  0 -0.10272057 0.13440397 0
 		 -0.10272057 0.13440397 0 -0.30528665 0.29586226 0 -0.30528665 0.29586226;
-createNode polyExtrudeFace -n "television:polyExtrudeFace79";
-	rename -uid "F7FE9195-A148-20F9-AF94-AB90A110B308";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace79";
+	rename -uid "8AC7099D-754F-4159-0AF1-B9909DBE3B89";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35789,13 +34963,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace79";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.4204372046586098 -17.65021570621855 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.4428922951233867 -17.544361506602883 ;
-createNode polyTweak -n "television:polyTweak71";
-	rename -uid "5939E415-5642-693F-1D72-E18B6F392D97";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak71";
+	rename -uid "3823A608-9149-7B09-DD12-21AA7D76CF76";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[284:287]" -type "float3"  0 -0.014201852 -0.11595319
 		 0 -0.014201852 -0.11595319 0 0.014201852 0.11595319 0 0.014201852 0.11595319;
-createNode polyExtrudeFace -n "television:polyExtrudeFace80";
-	rename -uid "3A949D92-244E-061B-72AE-72A8198DAD13";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace80";
+	rename -uid "0CAC41BF-3548-DB52-3F91-6A8249AD37B7";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35807,13 +34981,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace80";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 1.1311371394999163 -17.569188700996502 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 1.14718290730662 -17.42273436708831 ;
-createNode polyTweak -n "television:polyTweak72";
-	rename -uid "948F4246-264C-E3D4-7C31-E281CF6E73F8";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak72";
+	rename -uid "8874A127-FD43-949A-C0E0-FC9F48F7C830";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[288:291]" -type "float3"  0 -0.26229018 0.21132572 0
 		 -0.26229018 0.21132572 0 -0.26229018 0.34187371 0 -0.26229018 0.34187371;
-createNode polyExtrudeFace -n "television:polyExtrudeFace81";
-	rename -uid "94B3027E-3F41-DF79-8258-45859DC7141B";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace81";
+	rename -uid "12A31E90-DF4E-1383-AEA1-E5AD0E871A72";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35825,13 +34999,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace81";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.24360506424167083 -17.438711795503579 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.19295392917595333 -17.255765341862158 ;
-createNode polyTweak -n "television:polyTweak73";
-	rename -uid "ABFE5FB5-DF4C-5270-B545-ADAE35C74BDF";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak73";
+	rename -uid "77774D99-214D-0ED3-F48B-0EA4BE8BE6F4";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[292:295]" -type "float3"  0 0 -0.058669765 0 0 -0.058669765
 		 0 0 0.058669761 0 0 0.058669761;
-createNode polyExtrudeFace -n "television:polyExtrudeFace82";
-	rename -uid "A47B8DFC-B744-0229-723E-35BF2EF538CE";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace82";
+	rename -uid "DCF5A05F-4143-AA96-2656-BB806A5A97A5";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35843,13 +35017,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace82";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.63032421801525029 -17.408875509118566 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.54930936758528193 -17.237202411970543 ;
-createNode polyTweak -n "television:polyTweak74";
-	rename -uid "9AA67E12-2245-0F74-06BD-E5A7395D0F19";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak74";
+	rename -uid "3234F3FE-5D42-5CAE-80E8-17A245999390";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[296:299]" -type "float3"  0 0.22869478 -0.017943906
 		 0 0.22869478 -0.017943906 0 0.023880763 -0.24841157 0 0.023880763 -0.24841157;
-createNode polyExtrudeFace -n "television:polyExtrudeFace83";
-	rename -uid "8D331DB3-8D41-99C0-8EFD-F6AC74BCE16E";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace83";
+	rename -uid "FCABBA97-3741-23C2-00A7-339ED57EC944";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35861,13 +35035,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace83";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -1.3020058223557061 -17.628505624587945 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -1.0631385776387643 -17.577026515924427 ;
-createNode polyTweak -n "television:polyTweak75";
-	rename -uid "B920096A-9049-DADF-CEEF-5BA40283DF1E";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak75";
+	rename -uid "AC21CEA7-5143-9A76-8EF4-0CBC3E481B72";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[300:303]" -type "float3"  0 0.037142422 0.22845508 0
 		 0.037142422 0.22845508 0 -0.037142422 -0.22845508 0 -0.037142422 -0.22845508;
-createNode polyExtrudeFace -n "television:polyExtrudeFace84";
-	rename -uid "44D46885-2C45-FE0A-30A2-E19D69F300F2";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace84";
+	rename -uid "58BE0AC8-724C-866E-0043-82A4E34631E5";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35879,13 +35053,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace84";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -1.4091176894442596 -18.301915711092072 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -1.2232057877847948 -18.14334627102291 ;
-createNode polyTweak -n "television:polyTweak76";
-	rename -uid "7FBEAC93-074D-0EC0-5D61-29BC46D8353A";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak76";
+	rename -uid "9715BE96-1C4E-6D24-6C1A-ECA12127F88B";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[304:307]" -type "float3"  0 -0.2134355 0.1352997 0 -0.2134355
 		 0.1352997 0 0.2134355 -0.1352997 0 0.2134355 -0.1352997;
-createNode polyExtrudeFace -n "television:polyExtrudeFace85";
-	rename -uid "CE6910A0-4F4D-6441-8A31-E8AC5CF04CC3";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace85";
+	rename -uid "6812248B-CF4A-0FA2-4B63-E9A6911A1EF1";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35897,13 +35071,13 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace85";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 -0.58564293883322105 -19.419769190604661 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 -0.26288215959039374 -19.11688549959884 ;
-createNode polyTweak -n "television:polyTweak77";
-	rename -uid "16B96E78-9547-3004-62BE-7296D1351C40";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak77";
+	rename -uid "3FBBA30E-7549-6F27-C5B2-EF8A1F0ECB00";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[308:311]" -type "float3"  0 0 0.23201209 0 0 0.23201209
 		 0 0 -0.23201209 0 0 -0.23201209;
-createNode polyExtrudeFace -n "television:polyExtrudeFace86";
-	rename -uid "AEF6FB79-934A-21CB-FDEF-31B622B34770";
+createNode polyExtrudeFace -n "bedroom_SET_latest1:television:polyExtrudeFace86";
+	rename -uid "AEEA099E-ED42-0EA6-52F5-42B97F6295D6";
 	setAttr ".ics" -type "componentList" 1 "f[2]";
 	setAttr ".ix" -type "matrix" 0.29670221472722985 0 0 0 0 0.31100433013479173 -0.29491486833602321 0
 		 0 0.29491486833602321 0.31100433013479173 0 20.13618120557156 -0.17547673641141792 -12.732302481176047 1;
@@ -35915,42 +35089,42 @@ createNode polyExtrudeFace -n "television:polyExtrudeFace86";
 	setAttr ".m18" no;
 	setAttr ".cbn" -type "double3" 19.350574081048286 0.049608143400294735 -20.054428246440324 ;
 	setAttr ".cbx" -type "double3" 19.486506759227989 0.47989857107587042 -19.950688289742729 ;
-createNode polyTweak -n "television:polyTweak78";
-	rename -uid "2459B9C1-4949-5B94-EE54-3D9F262593E4";
+createNode polyTweak -n "bedroom_SET_latest1:television:polyTweak78";
+	rename -uid "754DB6F3-5944-A40D-ACBA-C683771D3840";
 	setAttr ".uopa" yes;
 	setAttr -s 4 ".tk[312:315]" -type "float3"  0 0.25088 -0.082259305 0 0.25088
 		 -0.082259305 0 -0.25088 0.082259305 0 -0.25088 0.082259305;
-createNode renderLayerManager -n "console:renderLayerManager";
-	rename -uid "CB6EECAA-7D44-CF45-8003-45A52A6EBA7B";
-createNode renderLayer -n "console:defaultRenderLayer";
-	rename -uid "83442D38-5543-1563-0938-D7B10D570495";
+createNode renderLayerManager -n "bedroom_SET_latest1:console:renderLayerManager";
+	rename -uid "70F59AAD-664A-FF28-517C-2D8DB84DCC73";
+createNode renderLayer -n "bedroom_SET_latest1:console:defaultRenderLayer";
+	rename -uid "9CD70C37-DC46-77FD-D756-62AC5CACB6C9";
 	setAttr ".g" yes;
-createNode groupId -n "console:groupId17";
-	rename -uid "2109DA85-174F-4181-4818-D28AAC6117F6";
+createNode groupId -n "bedroom_SET_latest1:console:groupId17";
+	rename -uid "CE41305D-6346-882E-E3C8-CE9596211E27";
 	setAttr ".ihi" 0;
-createNode groupId -n "console:groupId18";
-	rename -uid "0EBA23B0-E641-40F0-0577-E1829B3E8948";
+createNode groupId -n "bedroom_SET_latest1:console:groupId18";
+	rename -uid "20EF6C20-AD4C-5789-8BEF-22AC8072E6D3";
 	setAttr ".ihi" 0;
-createNode groupId -n "console:groupId19";
-	rename -uid "3C4714B5-A74D-A084-014A-2BBD754EC84F";
+createNode groupId -n "bedroom_SET_latest1:console:groupId19";
+	rename -uid "EC210EF4-1149-2875-3F8B-A895724D3EDB";
 	setAttr ".ihi" 0;
-createNode groupId -n "console:groupId20";
-	rename -uid "412E96D1-8741-FD78-0E71-A0A4A8D969EC";
+createNode groupId -n "bedroom_SET_latest1:console:groupId20";
+	rename -uid "8C362FE9-7244-C41A-A3A7-399F40C3CFB4";
 	setAttr ".ihi" 0;
-createNode partition -n "console:mtorPartition";
-	rename -uid "444A9B4A-8146-F6CC-9ECF-A98904277F1A";
+createNode partition -n "bedroom_SET_latest1:console:mtorPartition";
+	rename -uid "58261639-F548-5422-C5DD-969A6D0FB476";
 	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
 	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
 	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
 	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
 	setAttr ".sr" -type "string" "";
-createNode renderLayerManager -n "coathanger:renderLayerManager";
-	rename -uid "F57928B6-CE4E-0158-9EE2-3DA22DF12C19";
-createNode renderLayer -n "coathanger:defaultRenderLayer";
-	rename -uid "E5A11CF5-704B-4DBF-9BD6-D09722C636B1";
+createNode renderLayerManager -n "bedroom_SET_latest1:coathanger:renderLayerManager";
+	rename -uid "EA7EA719-8640-8FB0-D016-398E26EF909E";
+createNode renderLayer -n "bedroom_SET_latest1:coathanger:defaultRenderLayer";
+	rename -uid "8C9666D5-564E-7DBC-01C9-FC87F6797E71";
 	setAttr ".g" yes;
-createNode d_openexr -n "coathanger:d_openexr";
-	rename -uid "ADECF0FE-A549-1A9D-2A2F-99A4117F2B13";
+createNode d_openexr -n "bedroom_SET_latest1:coathanger:d_openexr";
+	rename -uid "871C0FFF-5040-0AE8-1281-C2AFD0F55FA4";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -35960,8 +35134,8 @@ createNode d_openexr -n "coathanger:d_openexr";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "coathanger:Ci";
-	rename -uid "86C69D99-1C40-092A-CB69-D9A6D7301B40";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:coathanger:Ci";
+	rename -uid "09231A5F-5B4A-1509-D883-31A3F1FFE613";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -35977,8 +35151,8 @@ createNode rmanDisplayChannel -n "coathanger:Ci";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "coathanger:a";
-	rename -uid "59015FA9-0D47-9131-B065-A88E6BA1A52F";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:coathanger:a";
+	rename -uid "2A0E3450-A341-5597-141C-B29F2B31963F";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -35994,13 +35168,13 @@ createNode rmanDisplayChannel -n "coathanger:a";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode renderLayerManager -n "mug:renderLayerManager";
-	rename -uid "3B6097C6-0241-4D05-6C51-14B78D2C2F6B";
-createNode renderLayer -n "mug:defaultRenderLayer";
-	rename -uid "43FE3515-934E-78E3-3269-AC8D88BADA8E";
+createNode renderLayerManager -n "bedroom_SET_latest1:mug:renderLayerManager";
+	rename -uid "6FCAB218-2141-FA75-07C4-3FBE4EFBEE08";
+createNode renderLayer -n "bedroom_SET_latest1:mug:defaultRenderLayer";
+	rename -uid "AC79BEFB-9140-18B3-27AE-D19699083CAE";
 	setAttr ".g" yes;
-createNode d_openexr -n "mug:d_openexr";
-	rename -uid "4CCE4972-C14D-171B-F8C9-C3A18018EF41";
+createNode d_openexr -n "bedroom_SET_latest1:mug:d_openexr";
+	rename -uid "6138CC98-4C49-3C19-9D19-208874805936";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36010,8 +35184,8 @@ createNode d_openexr -n "mug:d_openexr";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "mug:Ci";
-	rename -uid "A5C3C3E6-1E4E-BF69-1663-7DBA2318BC07";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:mug:Ci";
+	rename -uid "B9CCF308-204C-8D6D-74C7-2F857520CC39";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36027,8 +35201,8 @@ createNode rmanDisplayChannel -n "mug:Ci";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "mug:a";
-	rename -uid "53AA161F-3A4F-BA93-187C-8CA4ADDA267E";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:mug:a";
+	rename -uid "3B665767-114D-8B23-6C69-2AB489AFB6EB";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36044,13 +35218,13 @@ createNode rmanDisplayChannel -n "mug:a";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode renderLayerManager -n "pencil:renderLayerManager";
-	rename -uid "EC563696-1240-07F0-F079-4E8CF13D3969";
-createNode renderLayer -n "pencil:defaultRenderLayer";
-	rename -uid "19500B93-5C40-69A1-085D-77992A294B6C";
+createNode renderLayerManager -n "bedroom_SET_latest1:pencil:renderLayerManager";
+	rename -uid "2812C078-9942-5411-D3C5-1F8B90825B0C";
+createNode renderLayer -n "bedroom_SET_latest1:pencil:defaultRenderLayer";
+	rename -uid "4798E800-F648-1877-3970-98B823955872";
 	setAttr ".g" yes;
-createNode d_openexr -n "pencil:d_openexr";
-	rename -uid "CF66B02B-C847-E8F5-BAED-8F94B0323F70";
+createNode d_openexr -n "bedroom_SET_latest1:pencil:d_openexr";
+	rename -uid "B0BD5F56-7E48-5014-FDB4-269E5A2BB8C2";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36060,8 +35234,8 @@ createNode d_openexr -n "pencil:d_openexr";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "pencil:Ci";
-	rename -uid "9DA78BB7-B848-CE26-5E75-AF8B6E1B46A1";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:pencil:Ci";
+	rename -uid "906C81FD-C648-0982-C82E-38ABF57B5AD9";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36077,8 +35251,8 @@ createNode rmanDisplayChannel -n "pencil:Ci";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "pencil:a";
-	rename -uid "4A17E454-2045-2864-0034-84A33621B63E";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:pencil:a";
+	rename -uid "632F1D0C-374F-DBBA-355C-90AD41CA7C1C";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36094,13 +35268,13 @@ createNode rmanDisplayChannel -n "pencil:a";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode renderLayerManager -n "easel:renderLayerManager";
-	rename -uid "8841EA17-C94F-24CA-06C2-EABACF145566";
-createNode renderLayer -n "easel:defaultRenderLayer";
-	rename -uid "B0AD9F83-9D4B-CBF2-FABE-EF9A116D7E25";
+createNode renderLayerManager -n "bedroom_SET_latest1:easel:renderLayerManager";
+	rename -uid "B5E27A4A-3443-9A71-EB78-208A16A82F15";
+createNode renderLayer -n "bedroom_SET_latest1:easel:defaultRenderLayer";
+	rename -uid "C60DFCF5-B04D-D123-3EDA-1BB6DC9C2ECA";
 	setAttr ".g" yes;
-createNode d_openexr -n "easel:d_openexr";
-	rename -uid "DDE7F623-5446-F7D8-A96B-70A9279415BA";
+createNode d_openexr -n "bedroom_SET_latest1:easel:d_openexr";
+	rename -uid "52F3F4B6-3344-954C-DEE4-D8A6268A88B6";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36110,8 +35284,8 @@ createNode d_openexr -n "easel:d_openexr";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "easel:Ci";
-	rename -uid "9F79D9F8-734C-3D9D-D3D7-5FBF2AFD3B0E";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:easel:Ci";
+	rename -uid "69A68315-6D40-DD90-9FBA-00AFFA171121";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36127,8 +35301,8 @@ createNode rmanDisplayChannel -n "easel:Ci";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "easel:a";
-	rename -uid "683CEBAB-1345-851E-0509-71BDC65E8A6C";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:easel:a";
+	rename -uid "99BE1771-484D-07D5-0FF7-A698449CF30C";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36144,13 +35318,13 @@ createNode rmanDisplayChannel -n "easel:a";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode renderLayerManager -n "canvas:renderLayerManager";
-	rename -uid "8DC00AA3-6C45-CE14-C76A-02BB42A45BB8";
-createNode renderLayer -n "canvas:defaultRenderLayer";
-	rename -uid "CF27DBE3-6E45-B65E-1925-968B4C9B0BC1";
+createNode renderLayerManager -n "bedroom_SET_latest1:canvas:renderLayerManager";
+	rename -uid "9D883FFD-4B42-1983-887C-C5A96D3EF261";
+createNode renderLayer -n "bedroom_SET_latest1:canvas:defaultRenderLayer";
+	rename -uid "793BC2A7-3347-E000-3E87-71A2E5384D2A";
 	setAttr ".g" yes;
-createNode d_openexr -n "canvas:d_openexr";
-	rename -uid "B7F61FD9-FF4B-03F1-C432-8F9121871CDD";
+createNode d_openexr -n "bedroom_SET_latest1:canvas:d_openexr";
+	rename -uid "AB4E4D17-0048-06E1-14B0-71973E58D72E";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36160,8 +35334,8 @@ createNode d_openexr -n "canvas:d_openexr";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "canvas:Ci";
-	rename -uid "44A06235-1143-93B0-A210-42A3C9A2808F";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:canvas:Ci";
+	rename -uid "DB442344-6B42-A516-2E51-079F759EC3C2";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36177,8 +35351,8 @@ createNode rmanDisplayChannel -n "canvas:Ci";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "canvas:a";
-	rename -uid "45972084-EB4A-FDF0-525A-28932945D749";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:canvas:a";
+	rename -uid "17881A1D-B045-8B7A-51C0-56B31A5CC934";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36194,13 +35368,13 @@ createNode rmanDisplayChannel -n "canvas:a";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode renderLayerManager -n "lights:renderLayerManager";
-	rename -uid "7DD0C5DF-5D4C-8F6D-0FE1-E38F1D9D4598";
-createNode renderLayer -n "lights:defaultRenderLayer";
-	rename -uid "CDFBA95F-464D-44EA-B9FE-B5A8DAF3A22B";
+createNode renderLayerManager -n "bedroom_SET_latest1:lights:renderLayerManager";
+	rename -uid "4499D9A6-2144-60F9-4382-84AA7B969954";
+createNode renderLayer -n "bedroom_SET_latest1:lights:defaultRenderLayer";
+	rename -uid "7C50F8F2-5844-7EF1-DE87-9989C97F4D99";
 	setAttr ".g" yes;
-createNode PxrSurface -n "lights:PxrSurface1";
-	rename -uid "A7B10A71-8C42-AC41-BC4D-6FB555314293";
+createNode PxrSurface -n "bedroom_SET_latest1:lights:PxrSurface1";
+	rename -uid "05703CAC-E347-3912-0CFD-0EB41DA7EC05";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36348,14 +35522,14 @@ createNode PxrSurface -n "lights:PxrSurface1";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "lights:PxrSurface1SG";
-	rename -uid "09798F21-874A-4B4B-0202-D6A57E66F5B3";
+createNode shadingEngine -n "bedroom_SET_latest1:lights:PxrSurface1SG";
+	rename -uid "E7A91D6D-574E-3D34-B22D-F2A23B385305";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "lights:materialInfo1";
-	rename -uid "0D0B886C-944C-A9DF-BF5C-D2BD2D392E92";
-createNode PxrSurface -n "lights:PxrSurface2";
-	rename -uid "01C58F9C-824A-781A-9153-A29C8DBD2785";
+createNode materialInfo -n "bedroom_SET_latest1:lights:materialInfo1";
+	rename -uid "6627AFB2-784B-AC30-20AF-3082C296C40D";
+createNode PxrSurface -n "bedroom_SET_latest1:lights:PxrSurface2";
+	rename -uid "164454EF-F841-64F8-7B65-0884AF494D6B";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -36503,37 +35677,37 @@ createNode PxrSurface -n "lights:PxrSurface2";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "lights:PxrSurface2SG";
-	rename -uid "9C8F08EE-EC42-ACCB-B084-17B465B899F2";
+createNode shadingEngine -n "bedroom_SET_latest1:lights:PxrSurface2SG";
+	rename -uid "33E63CF0-3C4C-6E7B-2CB0-E3959E6BD8CF";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "lights:materialInfo2";
-	rename -uid "2514D49C-BC47-FFF6-D85C-AC8015529DA9";
-createNode mountain -n "lights:mountain1";
-	rename -uid "B26F4B45-DE43-D363-8348-DD87C26600DB";
-createNode place2dTexture -n "lights:place2dTexture1";
-	rename -uid "E8783020-1545-F45A-22DF-D6808B4E1C86";
-createNode displayLayer -n "lights:layer1";
-	rename -uid "C1B7CD76-EE48-F1BE-B5A2-53A7E1FA041D";
+createNode materialInfo -n "bedroom_SET_latest1:lights:materialInfo2";
+	rename -uid "7080A895-8B47-FC81-4402-1AA35E494E29";
+createNode mountain -n "bedroom_SET_latest1:lights:mountain1";
+	rename -uid "6435507B-8844-00C5-D243-5B929B645F60";
+createNode place2dTexture -n "bedroom_SET_latest1:lights:place2dTexture1";
+	rename -uid "827C6453-C547-D518-D191-9C8E15BD970B";
+createNode displayLayer -n "bedroom_SET_latest1:lights:layer1";
+	rename -uid "FF056862-3D4A-11D6-1C89-868119A8411B";
 	setAttr ".v" no;
 	setAttr ".do" 1;
-createNode displayLayer -n "lights:layer2";
-	rename -uid "814A7492-9F4A-9844-1605-97A08926C6BC";
+createNode displayLayer -n "bedroom_SET_latest1:lights:layer2";
+	rename -uid "E16A29CE-0249-2E27-1632-C4805D382B1A";
 	setAttr ".do" 2;
-createNode partition -n "lights:mtorPartition";
-	rename -uid "EA5800E5-7E44-2818-F0C0-338AECF16497";
+createNode partition -n "bedroom_SET_latest1:lights:mtorPartition";
+	rename -uid "20A5DCC9-4F4B-D78A-E795-8BA855A68AE0";
 	addAttr -s false -ci true -sn "rgcnx" -ln "rgcnx" -at "message";
 	addAttr -ci true -sn "sd" -ln "slimData" -dt "string";
 	addAttr -ci true -sn "sr" -ln "slimRIB" -dt "string";
 	addAttr -ci true -sn "rd" -ln "rlfData" -dt "string";
 	setAttr ".sr" -type "string" "";
-createNode reference -n "lights:stringlightbulb_i1RN";
-	rename -uid "E894DF89-AE4B-34C2-6F29-A5A17979A9AC";
+createNode reference -n "bedroom_SET_latest1:lights:stringlightbulb_i1RN";
+	rename -uid "1B14C7A9-6F49-E371-0CC3-D4AEC2EB3464";
 	setAttr -s 2 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"lights:stringlightbulb_i1RN"
+		"bedroom_SET_latest1:lights:stringlightbulb_i1RN"
 		"stringlightbulb_i1RN" 7
 		0 "|stringlightbulb_i1:pCylinder2Shape" "|stringlightbulb_i1RNfosterParent1|transform22" 
 		"-s -r "
@@ -36545,42 +35719,42 @@ createNode reference -n "lights:stringlightbulb_i1RN";
 		
 		2 "|stringlightbulb_i1RNfosterParent1|transform22|stringlightbulb_i1:pCylinder2Shape" 
 		"intermediateObject" " 1"
-		5 3 "lights:stringlightbulb_i1RN" "|stringlightbulb_i1RNfosterParent1|transform22|stringlightbulb_i1:pCylinder2Shape.outMesh" 
-		"lights:stringlightbulb_i1RN.placeHolderList[1]" ""
-		5 3 "lights:stringlightbulb_i1RN" "|stringlightbulb_i1RNfosterParent1|transform22|stringlightbulb_i1:pCylinder2Shape.worldMatrix" 
-		"lights:stringlightbulb_i1RN.placeHolderList[2]" "";
+		5 3 "bedroom_SET_latest1:lights:stringlightbulb_i1RN" "|stringlightbulb_i1RNfosterParent1|transform22|stringlightbulb_i1:pCylinder2Shape.outMesh" 
+		"bedroom_SET_latest1:lights:stringlightbulb_i1RN.placeHolderList[1]" ""
+		5 3 "bedroom_SET_latest1:lights:stringlightbulb_i1RN" "|stringlightbulb_i1RNfosterParent1|transform22|stringlightbulb_i1:pCylinder2Shape.worldMatrix" 
+		"bedroom_SET_latest1:lights:stringlightbulb_i1RN.placeHolderList[2]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode displayLayer -n "lights:layer3";
-	rename -uid "FA30ACE2-0A40-D914-D589-1780F6CC5CC4";
+createNode displayLayer -n "bedroom_SET_latest1:lights:layer3";
+	rename -uid "1B08B88B-F04C-3C7C-D962-689F14DEBB84";
 	setAttr ".v" no;
 	setAttr ".do" 3;
-createNode reference -n "floor_walls_latestRN";
-	rename -uid "E0C1659C-354B-AC39-B6A0-2FB647821019";
+createNode reference -n "bedroom_SET_latest1:floor_walls_latestRN";
+	rename -uid "B3540287-8F4D-CF09-B328-A8A5CF8F415D";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"floor_walls_latestRN"
+		"bedroom_SET_latest1:floor_walls_latestRN"
 		"floor_walls_latestRN" 0
 		"floor_walls_latestRN" 16
 		2 "|floor_walls_latest:Wall" "visibility" " -av 0"
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|rim_light|rim_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|rim_light|rim_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|rim_light|rim_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|moon_decor_light|moon_decor_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|rim_light|rim_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|moon_decor_light|moon_decor_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|rim_light|rim_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "floor_walls_latest:PxrSurface1SG.message" "|rim_light|rim_lightShape.message" 
 		0
@@ -36594,10 +35768,10 @@ createNode reference -n "floor_walls_latestRN";
 		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "deskLamp_latestRN";
-	rename -uid "39664658-8B4E-D66B-7F8C-10B9BDA02A45";
+createNode reference -n "bedroom_SET_latest1:deskLamp_latestRN";
+	rename -uid "FEA0A060-5040-4AC9-E267-B28C88548A7F";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"deskLamp_latestRN"
+		"bedroom_SET_latest1:deskLamp_latestRN"
 		"deskLamp_latestRN" 0
 		"deskLamp_latestRN" 2
 		2 "|deskLamp_latest:Lamp" "translate" " -type \"double3\" -5.69964556597268857 1.6348163549663064 -1.70530726242772479"
@@ -36605,11 +35779,11 @@ createNode reference -n "deskLamp_latestRN";
 		2 "|deskLamp_latest:Lamp" "rotate" " -type \"double3\" 0 -89.99999999999998579 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "desk_latestRN";
-	rename -uid "4D95CCEA-BE45-9DD9-C04E-FA8EC895A354";
+createNode reference -n "bedroom_SET_latest1:desk_latestRN";
+	rename -uid "CDA7A039-544E-075A-A7FA-8BBD90C242FF";
 	setAttr ".fn[0]" -type "string" "/Users/abbyrcohn/Desktop/poweredup//assets/bedroomAssets/desk_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"desk_latestRN"
+		"bedroom_SET_latest1:desk_latestRN"
 		"desk_latest:book_stackRN" 0
 		"desk_latestRN" 0
 		"desk_latest:book_stackRN" 1
@@ -36625,10 +35799,10 @@ createNode reference -n "desk_latestRN";
 		2 "|desk_latest:Desk|desk_latest:pencil2" "translate" " -type \"double3\" -5.56489960310755016 1.64421320221614753 -0.03836983668451717";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "bookshelfRN1";
-	rename -uid "F51D064A-1F46-3137-5745-AFA383CD8CFB";
+createNode reference -n "bedroom_SET_latest1:bookshelfRN1";
+	rename -uid "3E96E069-1449-23C9-92A8-42BE0F831737";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"bookshelfRN1"
+		"bedroom_SET_latest1:bookshelfRN1"
 		"bookshelfRN1" 0
 		"bookshelfRN1" 5
 		0 "|bookshelf2:bookshelf" "|SMALL_CABINET" "-s -r "
@@ -36641,28 +35815,28 @@ createNode reference -n "bookshelfRN1";
 		2 "|SMALL_CABINET|bookshelf2:bookshelf|bookshelf2:box" "scale" " -type \"double3\" 1 1 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "boardGames_latestRN";
-	rename -uid "EC2243B0-4E48-959A-411C-6D88AB59D5EB";
+createNode reference -n "bedroom_SET_latest1:boardGames_latestRN";
+	rename -uid "ABC4E772-BA4D-F4A8-91F3-04A03565E9A3";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"boardGames_latestRN"
+		"bedroom_SET_latest1:boardGames_latestRN"
 		"boardGames_latestRN" 0
 		"boardGames_latestRN" 1
 		0 "|boardGames_latest:BoardGames" "|BOOK_CABINET" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "houseSlippers_latestRN";
-	rename -uid "3B57C342-C74C-0A3D-6031-138F4841B588";
+createNode reference -n "bedroom_SET_latest1:houseSlippers_latestRN";
+	rename -uid "54003D24-1A4A-AC0B-F69C-F39C53FEC8B9";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"houseSlippers_latestRN"
+		"bedroom_SET_latest1:houseSlippers_latestRN"
 		"houseSlippers_latestRN" 0
 		"houseSlippers_latestRN" 1
 		0 "|houseSlippers_latest:slippers" "|SMALL_CABINET" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "bookStack_TREESHELFRN";
-	rename -uid "5B81CCD3-AB44-B45F-82DA-DA93652CB285";
+createNode reference -n "bedroom_SET_latest1:bookStack_TREESHELFRN";
+	rename -uid "64EE0FB7-3542-C1E2-CB78-AF936BAFD600";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"bookStack_TREESHELFRN"
+		"bedroom_SET_latest1:bookStack_TREESHELFRN"
 		"bookStack_TREESHELFRN" 0
 		"bookStack_TREESHELFRN" 5
 		0 "|bookStack_TREESHELF:bookStack_TREE_SHELF" "|TREE_SHELF" "-s -r "
@@ -36675,10 +35849,10 @@ createNode reference -n "bookStack_TREESHELFRN";
 		2 "|TREE_SHELF|bookStack_TREESHELF:bookStack_TREE_SHELF" "scalePivot" " -type \"double3\" 0 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "bookStack_LEFT_SHELFRN";
-	rename -uid "9B613D39-7A46-7AF2-4D61-6C973BA79611";
+createNode reference -n "bedroom_SET_latest1:bookStack_LEFT_SHELFRN";
+	rename -uid "AA98417F-7B43-A305-05FB-F4961B6EA412";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"bookStack_LEFT_SHELFRN"
+		"bedroom_SET_latest1:bookStack_LEFT_SHELFRN"
 		"bookStack_LEFT_SHELFRN" 2
 		2 "|bookStack_LEFT_SHELF:book_stack1" "visibility" " 1"
 		2 "|bookStack_LEFT_SHELF:book_stack:book_stack" "visibility" " 1"
@@ -36686,20 +35860,20 @@ createNode reference -n "bookStack_LEFT_SHELFRN";
 		0 "|bookStack_LEFT_SHELF:bookStack_LEFT_SHELF" "|BOOK_CABINET" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "bookStack_RIGHT_SHELFRN";
-	rename -uid "22319061-A348-C169-5325-78ABEE29E1CF";
+createNode reference -n "bedroom_SET_latest1:bookStack_RIGHT_SHELFRN";
+	rename -uid "CFC3A989-9C43-3979-27A4-2FB561F8710C";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"bookStack_RIGHT_SHELFRN"
+		"bedroom_SET_latest1:bookStack_RIGHT_SHELFRN"
 		"bookStack_RIGHT_SHELFRN" 0
 		"bookStack_RIGHT_SHELFRN" 1
 		0 "|bookStack_RIGHT_SHELF:bookstack_RIGHT_SHELF" "|SMALL_CABINET" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "teacupRN";
-	rename -uid "27039617-0148-6E77-0703-69B268C9578B";
+createNode reference -n "bedroom_SET_latest1:teacupRN";
+	rename -uid "41E48003-CB47-FBC1-1613-58AC1E214E09";
 	setAttr ".fn[0]" -type "string" "/Users/abbyrcohn/Desktop/poweredup//assets/teacup.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"teacupRN"
+		"bedroom_SET_latest1:teacupRN"
 		"teacupRN" 0
 		"teacupRN" 7
 		2 "|teacup:teacup" "translate" " -type \"double3\" -5.70403491735347057 1.7763628198643886 -0.99618252557130427"
@@ -36715,10 +35889,10 @@ createNode reference -n "teacupRN";
 		2 "|teacup:teacup|teacup:handle|teacup:handleShape" "displaySmoothMesh" " 2";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "backpackRN";
-	rename -uid "F6C31AC8-AA41-426B-B9FA-D1AFB2462BB5";
+createNode reference -n "bedroom_SET_latest1:backpackRN";
+	rename -uid "0ACE66E0-074E-0A9D-993D-2091AD7E3EF4";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"backpackRN"
+		"bedroom_SET_latest1:backpackRN"
 		"backpackRN" 0
 		"backpackRN" 3
 		2 "|backpack:backpack" "translate" " -type \"double3\" -0.015270399132350843 0 2.2321229159685001"
@@ -36728,10 +35902,10 @@ createNode reference -n "backpackRN";
 		2 "|backpack:backpack" "scale" " -type \"double3\" 0.10864371356478862 0.10864371356478862 0.10864371356478862";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "CoffeeCupLatestRN";
-	rename -uid "560D70EF-7E4B-AE96-CA96-48B15AD89810";
+createNode reference -n "bedroom_SET_latest1:CoffeeCupLatestRN";
+	rename -uid "6B3AE795-2648-7708-EA63-6581A29FF8A4";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"CoffeeCupLatestRN"
+		"bedroom_SET_latest1:CoffeeCupLatestRN"
 		"CoffeeCupLatestRN" 0
 		"CoffeeCupLatestRN" 3
 		2 "|CoffeeCupLatest:CoffeCup" "translate" " -type \"double3\" -5.50241939188428564 -3.92319012484954044 1.94559439555074443"
@@ -36741,10 +35915,10 @@ createNode reference -n "CoffeeCupLatestRN";
 		2 "|CoffeeCupLatest:CoffeCup" "scale" " -type \"double3\" 0.094620222977388993 0.094620222977388993 0.094620222977388993";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "gameboyRN";
-	rename -uid "F6EC3500-7D46-D8A6-11C7-5480226A4EFB";
+createNode reference -n "bedroom_SET_latest1:gameboyRN";
+	rename -uid "9DA19BFB-414D-03B1-2DE4-F1A66498D71F";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"gameboyRN"
+		"bedroom_SET_latest1:gameboyRN"
 		"gameboyRN" 0
 		"gameboyRN" 4
 		0 "|gameboy:body" "|FLOOR_STUFF" "-s -r "
@@ -36755,10 +35929,10 @@ createNode reference -n "gameboyRN";
 		2 "|FLOOR_STUFF|gameboy:body" "scale" " -type \"double3\" 0.20503966426633918 0.20503966426633918 0.20503966426633918";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "golem_plushieRN";
-	rename -uid "6CE3B293-474F-892E-F105-8988782BA9EF";
+createNode reference -n "bedroom_SET_latest1:golem_plushieRN";
+	rename -uid "5D39A04D-6B41-41C7-2E0F-24BC65E29AA8";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"golem_plushieRN"
+		"bedroom_SET_latest1:golem_plushieRN"
 		"golem_plushieRN" 0
 		"golem_plushieRN" 3
 		2 "|golem_plushie:plushie" "translate" " -type \"double3\" 1.72639321751956398 1.51630942597518592 5.02098302005963415"
@@ -36768,10 +35942,10 @@ createNode reference -n "golem_plushieRN";
 		2 "|golem_plushie:plushie" "scale" " -type \"double3\" 0.2933223774547617 0.2933223774547617 0.2933223774547617";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "macRN";
-	rename -uid "108F4B55-A743-B7D5-3F6F-1C8C0787C096";
+createNode reference -n "bedroom_SET_latest1:macRN";
+	rename -uid "11924155-1948-EDC9-6C0C-1B844B6F7D54";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"macRN"
+		"bedroom_SET_latest1:macRN"
 		"macRN" 1
 		2 "|mac:PxrDomeLight" "visibility" " 0"
 		"macRN" 87
@@ -36950,10 +36124,10 @@ createNode reference -n "macRN";
 		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "musicboxRN";
-	rename -uid "5136AEA8-984C-C299-A9BB-3689F2C9A2C7";
+createNode reference -n "bedroom_SET_latest1:musicboxRN";
+	rename -uid "63CCB2DA-4240-EC96-F613-D6803D49B5F2";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"musicboxRN"
+		"bedroom_SET_latest1:musicboxRN"
 		"musicboxRN" 0
 		"musicboxRN" 8
 		0 "|musicbox:musicBox" "|BOOK_CABINET" "-s -r "
@@ -36972,10 +36146,10 @@ createNode reference -n "musicboxRN";
 		2 "|BOOK_CABINET|musicbox:musicBox" "scalePivotTranslate" " -type \"double3\" 0 -0.92419301993922276 -0.029154553728394813";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "phoneRN1";
-	rename -uid "0EAFCB96-C94B-38F9-3DB3-25A92B1A12C8";
+createNode reference -n "bedroom_SET_latest1:phoneRN1";
+	rename -uid "96BFC9F7-964F-A7EB-71C6-B4B3E998F0EE";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"phoneRN1"
+		"bedroom_SET_latest1:phoneRN1"
 		"phoneRN1" 0
 		"phoneRN1" 4
 		2 "|phone1:phone" "visibility" " 0"
@@ -36986,10 +36160,10 @@ createNode reference -n "phoneRN1";
 		2 "|phone1:phone" "scale" " -type \"double3\" 0.22184171628526281 0.24757633796757658 0.24757633796757658";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "scarfRN1";
-	rename -uid "D12FAD8A-3D47-7B07-3584-34A4406C5CFD";
+createNode reference -n "bedroom_SET_latest1:scarfRN1";
+	rename -uid "67378354-E04B-9912-61C2-0ABCCD2F17F0";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"scarfRN1"
+		"bedroom_SET_latest1:scarfRN1"
 		"scarfRN1" 0
 		"scarfRN1" 4
 		0 "|scarf1:scarf" "|FLOOR_STUFF" "-s -r "
@@ -37000,10 +36174,10 @@ createNode reference -n "scarfRN1";
 		2 "|FLOOR_STUFF|scarf1:scarf" "scale" " -type \"double3\" 0.091028105972062692 0.091028105972062692 0.091028105972062692";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "strewn_pantsRN";
-	rename -uid "5726E5A4-D94D-9130-0FF0-F3BE1D1E371E";
+createNode reference -n "bedroom_SET_latest1:strewn_pantsRN";
+	rename -uid "F27D2620-7749-6181-FE7F-52AE10E50CB9";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"strewn_pantsRN"
+		"bedroom_SET_latest1:strewn_pantsRN"
 		"strewn_pantsRN" 0
 		"strewn_pantsRN" 4
 		0 "|strewn_pants:ZBrush_defualt_group" "|FLOOR_STUFF" "-s -r "
@@ -37014,10 +36188,10 @@ createNode reference -n "strewn_pantsRN";
 		2 "|FLOOR_STUFF|strewn_pants:ZBrush_defualt_group" "scale" " -type \"double3\" 0.19113395618911871 0.19113395618911871 0.19113395618911871";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "toyPlaneRN1";
-	rename -uid "E108B590-A04F-C499-B2CD-C3AE02BA0CEB";
+createNode reference -n "bedroom_SET_latest1:toyPlaneRN1";
+	rename -uid "6A65F39E-C840-F12B-80A1-28986F37BC2E";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"toyPlaneRN1"
+		"bedroom_SET_latest1:toyPlaneRN1"
 		"toyPlaneRN1" 3
 		2 "|toyPlane:toyPlane" "translate" " -type \"double3\" 2.63080716921021196 1.38181953537186941 -7.51098581547613176"
 		
@@ -37026,10 +36200,10 @@ createNode reference -n "toyPlaneRN1";
 		2 "|toyPlane:toyPlane" "scale" " -type \"double3\" 0.10441762238045878 0.10441762238045878 0.10441762238045878";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "toyTrainRN1";
-	rename -uid "3BE4706E-D440-025D-E5AE-A9AFB6C0C68D";
+createNode reference -n "bedroom_SET_latest1:toyTrainRN1";
+	rename -uid "BBF485EF-D74B-EF47-A65C-C283ED68FC3A";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"toyTrainRN1"
+		"bedroom_SET_latest1:toyTrainRN1"
 		"toyTrainRN1" 0
 		"toyTrainRN1" 4
 		0 "|toyTrain:ToyTrain" "|SMALL_CABINET" "-s -r "
@@ -37040,40 +36214,40 @@ createNode reference -n "toyTrainRN1";
 		2 "|SMALL_CABINET|toyTrain:ToyTrain" "scale" " -type \"double3\" 0.27534181014071213 0.27534181014071213 0.27534181014071213";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "bedsideTableRN";
-	rename -uid "5D1E28C3-9849-2AC1-EB3A-D18E098DCBAA";
+createNode reference -n "bedroom_SET_latest1:bedsideTableRN";
+	rename -uid "5F599FCB-ED4B-D830-5CA3-2DB9B20FE6A2";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"bedsideTableRN"
+		"bedroom_SET_latest1:bedsideTableRN"
 		"bedsideTableRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "bedsideLampRN";
-	rename -uid "900543B0-DA45-4A66-C7B5-02A341AD55E7";
+createNode reference -n "bedroom_SET_latest1:bedsideLampRN";
+	rename -uid "60B268F7-364C-A603-7473-64B04D22A503";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"bedsideLampRN"
+		"bedroom_SET_latest1:bedsideLampRN"
 		"bedsideLampRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "beanbagRN";
-	rename -uid "84AE8738-A241-6B6A-A49B-F68042820229";
+createNode reference -n "bedroom_SET_latest1:beanbagRN";
+	rename -uid "886D54F1-A94D-A23D-D8E1-F7BCD390718E";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"beanbagRN"
+		"bedroom_SET_latest1:beanbagRN"
 		"beanbagRN" 0
 		"beanbagRN" 1
 		0 "|beanbag1:beanbag" "|FLOOR_STUFF" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "hangingStarsRN";
-	rename -uid "772211C7-C742-5AF1-417B-C0862EDF9105";
+createNode reference -n "bedroom_SET_latest1:hangingStarsRN";
+	rename -uid "962F65FE-BD41-D315-6199-BD95EADEAB3C";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"hangingStarsRN"
+		"bedroom_SET_latest1:hangingStarsRN"
 		"hangingStarsRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "alarmclockRN";
-	rename -uid "A18EC789-B94E-565C-D680-22BB18BC4FF5";
+createNode reference -n "bedroom_SET_latest1:alarmclockRN";
+	rename -uid "FAD31751-B84D-9287-B75B-9C985B7FDA6A";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"alarmclockRN"
+		"bedroom_SET_latest1:alarmclockRN"
 		"alarmclockRN" 5
 		2 "|alarmclock:alarm_cntrl" "translate" " -type \"double3\" -5.79005740298730665 1.6754284680839 0.59381944396853104"
 		
@@ -37086,10 +36260,10 @@ createNode reference -n "alarmclockRN";
 		2 "|alarmclock:alarm_cntrl" "scalePivot" " -type \"double3\" 0 0 0.05381287585425365";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "poster1RN";
-	rename -uid "C7D365B9-424F-C951-05AD-C88A8D0844BD";
+createNode reference -n "bedroom_SET_latest1:poster1RN";
+	rename -uid "4B0E84A8-4246-2406-2D84-BEACB09425BE";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"poster1RN"
+		"bedroom_SET_latest1:poster1RN"
 		"poster1RN" 0
 		"poster1RN" 3
 		2 "|poster1:pPlane1" "translate" " -type \"double3\" 3.53752895248350674 3.28161135793211711 0.77867618299347185"
@@ -37099,10 +36273,10 @@ createNode reference -n "poster1RN";
 		2 "|poster1:pPlane1" "scale" " -type \"double3\" 0.93029183440115759 0.4023362004150135 1.34147528915610481";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "poster2RN";
-	rename -uid "5AA87BF6-814E-7690-3B37-0084C5E31CC9";
+createNode reference -n "bedroom_SET_latest1:poster2RN";
+	rename -uid "EA68EE6E-BC44-C2F3-A0D1-8D978D660BCE";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"poster2RN"
+		"bedroom_SET_latest1:poster2RN"
 		"poster2RN" 0
 		"poster2RN" 3
 		2 "|poster2:pPlane1" "translate" " -type \"double3\" 3.51615128267467858 3.30578451746943358 -0.34212544362855857"
@@ -37112,11 +36286,11 @@ createNode reference -n "poster2RN";
 		2 "|poster2:pPlane1" "scale" " -type \"double3\" 0.87399086801704795 0.37798694133626703 1.2602896306702287";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode reference -n "bedroom_light_rig:macRN";
-	rename -uid "4E8BD325-EE42-8213-9B65-AC8C30D9FB99";
+createNode reference -n "bedroom_SET_latest1:bedroom_light_rig:macRN";
+	rename -uid "7279E650-1E48-07BD-181D-BAAF53FDA548";
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"bedroom_light_rig:macRN"
-		"macRN" 7
+		"bedroom_SET_latest1:bedroom_light_rig:macRN"
+		"macRN" 91
 		2 "|mac:PxrDomeLight" "visibility" " 1"
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "intensity" " 0.15000000596046448"
 		
@@ -37127,12 +36301,6 @@ createNode reference -n "bedroom_light_rig:macRN";
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "enableTemperature" " 1"
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "temperature" " 4500"
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "color" " -type \"float3\" 0.53100002000000002 0.56334530999999999 1"
-		
-		"macRN" 87
-		2 "|mac:base" "translate" " -type \"double3\" -5.17430333614271376 1.69652125937362919 -0.33089714399545528"
-		
-		2 "|mac:base" "rotate" " -type \"double3\" 0 89.99999999999992895 0"
-		2 "|mac:base" "scale" " -type \"double3\" 0.829416218558509 0.14554945180466017 0.14554945180466017"
 		
 		7 "ignore" ":lightLinker1" 2 "|mac:base|mac:baseShape.message" "|:mac_light|:mac_lightShape.message" 
 		0
@@ -37301,11 +36469,16 @@ createNode reference -n "bedroom_light_rig:macRN";
 		7 "ignore" ":lightLinker1" 2 "|mac:base|mac:trackpad|mac:trackpadShape.message" "|:mac_light|:mac_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "mac:PxrSurface1SG.message" "|:mac_light|:mac_lightShape.message" 
-		0;
+		0
+		"macRN" 3
+		2 "|mac:base" "translate" " -type \"double3\" -5.17430333614271376 1.69652125937362919 -0.33089714399545528"
+		
+		2 "|mac:base" "rotate" " -type \"double3\" 0 89.99999999999992895 0"
+		2 "|mac:base" "scale" " -type \"double3\" 0.829416218558509 0.14554945180466017 0.14554945180466017";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode d_openexr -n "karen_latest:d_openexr";
-	rename -uid "4FBC8AC2-4D43-4A7C-40E5-118E5095494B";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr";
+	rename -uid "8DAEE320-F34C-4482-53E6-E3A017FFBE18";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37315,8 +36488,8 @@ createNode d_openexr -n "karen_latest:d_openexr";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci";
-	rename -uid "5529DC27-7846-1F29-DD58-FFB02BD6C39A";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci";
+	rename -uid "89CCBE3D-FB47-317E-0A01-2D86CEA6B3ED";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37332,8 +36505,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a";
-	rename -uid "485DA4DA-2945-BEB5-DD01-B38119021068";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a";
+	rename -uid "90182696-6843-2FA3-9A48-5196033110D1";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37349,8 +36522,8 @@ createNode rmanDisplayChannel -n "karen_latest:a";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "karen_latest:d_openexr1";
-	rename -uid "FBCEE814-124A-A8C1-BF60-458C3A0A930A";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr1";
+	rename -uid "78C48BA2-7D4A-9D68-34AE-4BA7D2FF9B6C";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37360,8 +36533,8 @@ createNode d_openexr -n "karen_latest:d_openexr1";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci1";
-	rename -uid "EA44570A-DC42-8878-A77A-86A7F8B16D65";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci1";
+	rename -uid "91E6D3C4-7342-64AE-3556-21A41C0F2447";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37377,8 +36550,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci1";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a1";
-	rename -uid "4B865CF9-304E-BC03-1EDD-B0843C61BC4B";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a1";
+	rename -uid "51E1CE66-4B43-DAAC-1E89-598DD77D65BA";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37394,8 +36567,8 @@ createNode rmanDisplayChannel -n "karen_latest:a1";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "karen_latest:d_openexr2";
-	rename -uid "0EF3495D-5040-0109-C042-6493E2C40813";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr2";
+	rename -uid "98F86EEC-1842-D4B7-149F-64B2494B4E8F";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37405,8 +36578,8 @@ createNode d_openexr -n "karen_latest:d_openexr2";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci2";
-	rename -uid "5EF5C7D6-3F4B-AD97-B53F-63A87FFEE9FF";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci2";
+	rename -uid "9F84FF89-0C48-E2AA-51E5-A5A7D0403C0E";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37422,8 +36595,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci2";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a2";
-	rename -uid "F1C1ADF0-5B4F-66EF-4AF9-838AC20EB1EC";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a2";
+	rename -uid "9056E5D6-D644-C58D-EC7C-C3B88E85830E";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37439,8 +36612,8 @@ createNode rmanDisplayChannel -n "karen_latest:a2";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "karen_latest:d_openexr3";
-	rename -uid "3088FAB7-3E4B-99CD-BA09-25B9260B33AC";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr3";
+	rename -uid "7D521591-F444-71C0-E6FD-51839F9BF774";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37450,8 +36623,8 @@ createNode d_openexr -n "karen_latest:d_openexr3";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci3";
-	rename -uid "A6353302-5348-69B5-119F-16A6E0700231";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci3";
+	rename -uid "9F98F3E3-DC40-882F-3ADC-F8B121AE6937";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37467,8 +36640,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci3";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a3";
-	rename -uid "FC0AD0EF-0F47-FDB8-206C-FF9880EDCB73";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a3";
+	rename -uid "24FDC570-BE4A-62C5-B199-A28A2DE6AA87";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37484,8 +36657,8 @@ createNode rmanDisplayChannel -n "karen_latest:a3";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "karen_latest:d_openexr4";
-	rename -uid "B2F91387-F544-FF0A-3FDB-EDB60BC01011";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr4";
+	rename -uid "B8A8780C-F14E-441F-B96D-DAA5B4A4D2D7";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37495,8 +36668,8 @@ createNode d_openexr -n "karen_latest:d_openexr4";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci4";
-	rename -uid "1DECCC23-AA4D-812E-5A4E-C1BE543457AA";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci4";
+	rename -uid "C06076AB-474A-6CB6-05A5-C5AC105DDA37";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37512,8 +36685,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci4";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a4";
-	rename -uid "258225B7-684B-7958-D2F9-E9A4E2CD815D";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a4";
+	rename -uid "1FE455FC-8843-D4EE-11E5-568D97322061";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37529,8 +36702,8 @@ createNode rmanDisplayChannel -n "karen_latest:a4";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "karen_latest:d_openexr5";
-	rename -uid "8259F4C8-C242-C2ED-2487-E3BB9A6A3EA1";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr5";
+	rename -uid "CD9B9E85-5F44-24F6-DE88-D8BA3B3C111A";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37540,8 +36713,8 @@ createNode d_openexr -n "karen_latest:d_openexr5";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci5";
-	rename -uid "3C1DEEDA-8147-D738-0293-BB9821590772";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci5";
+	rename -uid "2C824081-9D4D-3B0E-13D9-CF92805B67FA";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37557,8 +36730,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci5";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a5";
-	rename -uid "43F962C2-5544-4EB4-32FB-C68395EE6F8A";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a5";
+	rename -uid "D32FDE48-3C45-A988-CE16-0A986BE03603";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37574,8 +36747,8 @@ createNode rmanDisplayChannel -n "karen_latest:a5";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "karen_latest:d_openexr6";
-	rename -uid "4811DEA2-7545-9501-4158-1D831390A1CD";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr6";
+	rename -uid "ABF5E916-CD4E-A18B-864F-1B835959982F";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37585,8 +36758,8 @@ createNode d_openexr -n "karen_latest:d_openexr6";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci6";
-	rename -uid "E61BEBAD-4F4F-281C-5C34-E2900C0DEC35";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci6";
+	rename -uid "E419F976-1545-CAC4-F3F7-C7B2015996FF";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37602,8 +36775,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci6";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a6";
-	rename -uid "4050B5CD-6647-625F-DAA1-D0A236BEBFE1";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a6";
+	rename -uid "BE042935-FD49-D9B4-F491-3C96EB8F8C29";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37619,8 +36792,8 @@ createNode rmanDisplayChannel -n "karen_latest:a6";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "karen_latest:d_openexr7";
-	rename -uid "F2030E50-D047-33A4-F6E0-9B9836579EF5";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr7";
+	rename -uid "982F06E7-624F-54D5-3090-8BB85B7CE754";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37630,8 +36803,8 @@ createNode d_openexr -n "karen_latest:d_openexr7";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci7";
-	rename -uid "6DABC950-FC49-BB9C-8447-759B7186039D";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci7";
+	rename -uid "8D33A063-7E4C-DB42-B03B-56B9F65906B5";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37647,8 +36820,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci7";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a7";
-	rename -uid "0ADEAB37-6945-B739-4BD5-349EDC6A5F24";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a7";
+	rename -uid "29CDBC86-8A43-B678-9E0F-D195AC39CE57";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37664,8 +36837,8 @@ createNode rmanDisplayChannel -n "karen_latest:a7";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "karen_latest:d_openexr8";
-	rename -uid "1F1B35E3-7646-D211-A272-628049C1E3E0";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr8";
+	rename -uid "A8C7A163-6F4F-9632-EA15-6997EA433B97";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37675,8 +36848,8 @@ createNode d_openexr -n "karen_latest:d_openexr8";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci8";
-	rename -uid "3AF1E996-BC4C-E88E-F7A5-569066735F90";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci8";
+	rename -uid "564F1BD6-004B-EC5C-0EEF-40BCF1D038E7";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37692,8 +36865,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci8";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a8";
-	rename -uid "A2E1F261-C04B-CE4E-B6B9-AC9B5F120F73";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a8";
+	rename -uid "5551F977-E744-9A4F-AB88-FCA8782E0253";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37709,8 +36882,8 @@ createNode rmanDisplayChannel -n "karen_latest:a8";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode d_openexr -n "karen_latest:d_openexr9";
-	rename -uid "514C09AB-E04B-D85D-F71F-36862FC1C876";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr9";
+	rename -uid "C3B2AA03-0347-5EEA-AD4B-3FA8869CE877";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37720,8 +36893,8 @@ createNode d_openexr -n "karen_latest:d_openexr9";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci9";
-	rename -uid "3DF68E5D-1647-E708-D8DE-53836CAE28BC";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci9";
+	rename -uid "A53B5B1C-F447-A7F9-B3A9-B58B2D5ED90C";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37737,8 +36910,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci9";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a9";
-	rename -uid "ACDCCC5B-334E-7B15-4C2F-45AD16598AD5";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a9";
+	rename -uid "4E7C02B5-2C4A-2CA7-F781-1EB3A53E36E2";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37754,13 +36927,13 @@ createNode rmanDisplayChannel -n "karen_latest:a9";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode renderLayerManager -n "karen_latest:renderLayerManager";
-	rename -uid "72A01D68-2846-E7D6-96D8-0DAD0B611D26";
-createNode renderLayer -n "karen_latest:defaultRenderLayer";
-	rename -uid "BD950410-5A4D-C2C5-9AAC-DF8EEC439393";
+createNode renderLayerManager -n "bedroom_SET_latest1:karen_latest:renderLayerManager";
+	rename -uid "BE1EB504-9943-1C17-0E3B-63A5604B06B3";
+createNode renderLayer -n "bedroom_SET_latest1:karen_latest:defaultRenderLayer";
+	rename -uid "FE5EDBDD-EC4D-34FE-AA12-9A80BBAB5C59";
 	setAttr ".g" yes;
-createNode d_openexr -n "karen_latest:d_openexr10";
-	rename -uid "BC31752B-2C45-DC11-2B39-F38BA8377235";
+createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr10";
+	rename -uid "FA78C7F2-F144-D5A7-A9CC-848A58619F2D";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37770,8 +36943,8 @@ createNode d_openexr -n "karen_latest:d_openexr10";
 	setAttr ".exrpixeltype" -type "string" "half";
 	setAttr ".compression" -type "string" "zips";
 	setAttr ".compressionlevel" 45;
-createNode rmanDisplayChannel -n "karen_latest:Ci10";
-	rename -uid "40CD4A0C-8D42-BD14-1B1E-DDA231FBF5C0";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:Ci10";
+	rename -uid "8C75219E-D649-97AD-A2FE-ED90AC56E0C9";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37787,8 +36960,8 @@ createNode rmanDisplayChannel -n "karen_latest:Ci10";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "Ci";
-createNode rmanDisplayChannel -n "karen_latest:a10";
-	rename -uid "06B98F00-D943-8E06-56BB-62A754D3B45A";
+createNode rmanDisplayChannel -n "bedroom_SET_latest1:karen_latest:a10";
+	rename -uid "5C8C75F3-5040-AA4B-989E-A5ABC424F4AB";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37804,14 +36977,14 @@ createNode rmanDisplayChannel -n "karen_latest:a10";
 	setAttr ".remapMaxValue" 0;
 	setAttr ".remapSmoothness" 0;
 	setAttr -l on ".name" -type "string" "a";
-createNode shadingEngine -n "karen_latest:PxrSurface1SG";
-	rename -uid "16EC365B-F446-942C-1E6E-70AD00ED81AD";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrSurface1SG";
+	rename -uid "A8C25E25-D94F-2961-A243-4AA6FA43A7A2";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo1";
-	rename -uid "401F1D19-1A40-9F20-0257-62834E04C4C6";
-createNode PxrLayerSurface -n "karen_latest:PxrLayerSurface1";
-	rename -uid "C045332B-CB47-A1D1-8A07-0A9148F31B03";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo1";
+	rename -uid "72DBFCF6-1043-28F3-B93E-268A3DA4AF96";
+createNode PxrLayerSurface -n "bedroom_SET_latest1:karen_latest:PxrLayerSurface1";
+	rename -uid "319D9FFF-5E46-97A6-14A3-B3B0A0B04B7A";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -37952,14 +37125,14 @@ createNode PxrLayerSurface -n "karen_latest:PxrLayerSurface1";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "karen_latest:PxrLayerSurface1SG";
-	rename -uid "6D783072-2C4C-FADF-3878-7DBECB014AD5";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrLayerSurface1SG";
+	rename -uid "2DDD62F2-274E-6D14-7E1C-44AE162CB2CC";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo2";
-	rename -uid "B6541847-AA47-958D-0B4B-DBB7F61854AE";
-createNode PxrLayerMixer -n "karen_latest:PxrLayerMixer1";
-	rename -uid "6640A4BC-FB48-958D-730F-FAB3856A63E8";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo2";
+	rename -uid "31C923EB-0C4D-2D96-E53B-DF8F986787D4";
+createNode PxrLayerMixer -n "bedroom_SET_latest1:karen_latest:PxrLayerMixer1";
+	rename -uid "0D7DE78F-414C-502C-15B2-0081D58D5E4A";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -38373,8 +37546,8 @@ createNode PxrLayerMixer -n "karen_latest:PxrLayerMixer1";
 	setAttr ".layer4_glowGain" 0;
 	setAttr ".layer4_glowColor" -type "float3" 0 0 0 ;
 	setAttr ".layer4Mask" 1;
-createNode PxrLayer -n "karen_latest:PxrLayer1";
-	rename -uid "1FB7EF92-7145-CAC7-F5B8-078EC2D6CAEB";
+createNode PxrLayer -n "bedroom_SET_latest1:karen_latest:PxrLayer1";
+	rename -uid "CE2B9CAE-6B43-9ED9-B938-418C0F72E7F4";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -38462,8 +37635,8 @@ createNode PxrLayer -n "karen_latest:PxrLayer1";
 	setAttr ".glowGain" 0;
 	setAttr ".glowColor" -type "float3" 1 1 1 ;
 	setAttr ".bumpNormal" -type "float3" 0 0 0 ;
-createNode PxrLayer -n "karen_latest:PxrLayer2";
-	rename -uid "11243543-BE46-ADD8-D548-95B9FD251BF1";
+createNode PxrLayer -n "bedroom_SET_latest1:karen_latest:PxrLayer2";
+	rename -uid "F682F7F9-4845-E229-08B7-1090C61799D6";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -38551,14 +37724,14 @@ createNode PxrLayer -n "karen_latest:PxrLayer2";
 	setAttr ".glowGain" 0;
 	setAttr ".glowColor" -type "float3" 1 1 1 ;
 	setAttr ".bumpNormal" -type "float3" 0 0 0 ;
-createNode shadingEngine -n "karen_latest:PxrSurface2SG";
-	rename -uid "F5DC3923-A747-AD67-7531-22ADDF3D88F0";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrSurface2SG";
+	rename -uid "690EEED6-3740-BC91-291E-B2B6C1C5AA72";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo3";
-	rename -uid "1D4ED6F3-B746-F635-3FC7-A28483C7734D";
-createNode PxrSurface -n "karen_latest:apron_shader_Pxr";
-	rename -uid "7C90B6D2-0340-36E0-5647-62B3DD5403C1";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo3";
+	rename -uid "1F4922FD-D44F-171B-AEA5-848211160B9F";
+createNode PxrSurface -n "bedroom_SET_latest1:karen_latest:apron_shader_Pxr";
+	rename -uid "99B1719D-3543-357E-FC30-5ABED09871C2";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -38706,14 +37879,14 @@ createNode PxrSurface -n "karen_latest:apron_shader_Pxr";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "karen_latest:PxrSurface3SG";
-	rename -uid "12B4D31C-4141-60A0-C3BA-AAADFBAADDF2";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrSurface3SG";
+	rename -uid "1CC032E4-694A-D5E9-CFC2-11A0F50ABA31";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo4";
-	rename -uid "5D2BD12D-A84A-93E8-338D-4B878B993EEA";
-createNode reference -n "karen_latest:jackieShoeRN";
-	rename -uid "722E71FF-884F-5F51-F5CE-2C849A129B5B";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo4";
+	rename -uid "19946FA6-7446-F88C-31FA-658525BA7F4E";
+createNode reference -n "bedroom_SET_latest1:karen_latest:jackieShoeRN";
+	rename -uid "CF6ABB51-6640-E2AE-9796-D58D51ECE40C";
 	setAttr -s 86 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[24]" 0;
@@ -38802,7 +37975,7 @@ createNode reference -n "karen_latest:jackieShoeRN";
 	setAttr ".phl[255]" 0;
 	setAttr ".phl[256]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
-		"karen_latest:jackieShoeRN"
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN"
 		"jackieShoeRN" 268
 		0 "|jackieShoe:polySurfaceShape1" "|jackieShoeRNfosterParent1|transform4" 
 		"-s -r "
@@ -38827,548 +38000,548 @@ createNode reference -n "karen_latest:jackieShoeRN";
 		2 "|jackieShoe:polySurface1|transform15|jackieShoe:polySurfaceShape1" "intermediateObject" 
 		" 1"
 		2 "|Jackie_latest:Group9688|polySurface31" "visibility" " 0"
-		5 3 "karen_latest:jackieShoeRN" "|jackieShoeRNfosterParent1|transform4|jackieShoe:polySurfaceShape1.outMesh" 
-		"karen_latest:jackieShoeRN.placeHolderList[1]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[2]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[3]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[4]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[5]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[6]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[7]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[8]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[9]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[10]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[11]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[12]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[13]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[14]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[15]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[16]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[17]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[18]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[19]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[20]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[21]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[22]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[23]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[24]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[25]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[26]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[27]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[28]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[29]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[30]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[31]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[32]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[33]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[34]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Left_Side.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[35]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Left_Side.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[36]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Left_Side.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[37]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Left_Side.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[38]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Left_Side.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[39]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Left_Side.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[40]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[41]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[42]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[43]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[44]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[45]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[46]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[47]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[48]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[49]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[50]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[51]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[52]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[53]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[54]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[55]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[56]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[57]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[58]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[59]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[60]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[61]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[62]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[63]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[64]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[65]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[66]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[67]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[68]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[69]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[70]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[71]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[72]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[73]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[74]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[75]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[76]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[77]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[78]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[79]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[80]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[81]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[82]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[83]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[84]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[85]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Base.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[86]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Base.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[87]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Base.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[88]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Base.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[89]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Base.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[90]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Base.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[91]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Base.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[92]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Base.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[93]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Base.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[94]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Base.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[95]" 
-		""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Base.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[96]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Base.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[97]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Base.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[98]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Base.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[99]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Base.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[100]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[101]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[102]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[103]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[104]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[105]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[106]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[107]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[108]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[109]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[110]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[111]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[112]" 
-		""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[113]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[114]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[115]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[116]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[117]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[118]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[119]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[120]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[121]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[122]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[123]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[124]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[125]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[126]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[127]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[128]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[129]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[130]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[131]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[132]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[133]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[134]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[135]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[136]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[137]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[138]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[139]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[140]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[141]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[142]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[143]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[144]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[145]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[146]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[147]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[148]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[149]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[150]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[151]" 
-		""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[152]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[153]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[154]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[155]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[156]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[157]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[158]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[159]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[160]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[161]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[162]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[163]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[164]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[165]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[166]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[167]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[168]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" "karen_latest:jackieShoeRN.placeHolderList[169]" 
-		""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[170]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[171]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[172]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[173]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[174]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[175]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[176]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[177]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[178]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[179]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[180]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[181]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[182]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[183]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[184]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[185]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" "karen_latest:jackieShoeRN.placeHolderList[186]" 
-		""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[187]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[188]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[189]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[190]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[191]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[192]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[193]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[194]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[195]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[196]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[197]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[198]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[199]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[200]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[201]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[202]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[203]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[204]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[205]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[206]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[207]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[208]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[209]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[210]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[211]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[212]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[213]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[214]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[215]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[216]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[217]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[218]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[219]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[220]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[221]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[222]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[223]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[224]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[225]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[226]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[227]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[228]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[229]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[230]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[231]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[232]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[233]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[234]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[235]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[236]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[237]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[238]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[239]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[240]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[241]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
-		"karen_latest:jackieShoeRN.placeHolderList[242]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[243]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[244]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[245]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[246]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[247]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[248]" ""
-		5 4 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
-		"karen_latest:jackieShoeRN.placeHolderList[249]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[250]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[251]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[252]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[253]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[254]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[255]" ""
-		5 3 "karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
-		"karen_latest:jackieShoeRN.placeHolderList[256]" "";
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "|jackieShoeRNfosterParent1|transform4|jackieShoe:polySurfaceShape1.outMesh" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[1]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[2]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[3]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[4]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[5]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[6]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[7]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[8]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[9]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[10]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[11]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[12]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[13]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[14]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[15]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[16]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[17]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[18]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[19]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[20]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[21]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[22]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[23]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[24]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[25]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[26]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[27]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[28]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[29]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[30]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[31]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[32]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[33]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Jackie_Shoe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[34]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Left_Side.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[35]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Left_Side.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[36]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Left_Side.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[37]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Left_Side.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[38]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Left_Side.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[39]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Left_Side.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[40]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[41]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[42]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[43]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[44]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[45]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[46]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[47]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[48]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[49]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[50]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[51]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[52]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[53]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[54]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[55]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[56]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[57]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[58]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[59]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[60]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[61]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[62]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[63]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[64]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[65]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[66]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:ClothParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[67]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[68]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[69]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[70]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[71]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[72]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[73]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[74]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[75]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[76]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[77]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[78]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[79]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[80]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[81]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[82]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[83]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[84]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Right_Side.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[85]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[86]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[87]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[88]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[89]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[90]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[91]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[92]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[93]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[94]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[95]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[96]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[97]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[98]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[99]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Base.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[100]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[101]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[102]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[103]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[104]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[105]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[106]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[107]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[108]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[109]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[110]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[111]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[112]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[113]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[114]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[115]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[116]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[117]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Tongue.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[118]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[119]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[120]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[121]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[122]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[123]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[124]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[125]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[126]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[127]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[128]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[129]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[130]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[131]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[132]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[133]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[134]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[135]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[136]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[137]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[138]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:RubberParts.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[139]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[140]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[141]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[142]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[143]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[144]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[145]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[146]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[147]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[148]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[149]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[150]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[151]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[152]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[153]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[154]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[155]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[156]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Sole.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[157]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[158]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[159]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[160]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[161]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[162]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[163]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[164]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[165]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[166]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[167]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[168]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[169]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[170]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[171]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[172]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[173]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[174]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:Toe.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[175]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[176]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[177]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[178]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[179]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[180]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[181]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[182]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[183]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[184]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[185]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[186]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[187]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[188]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[189]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[190]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[191]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[192]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[193]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[194]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[195]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[196]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[197]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[198]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[199]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[200]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[201]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[202]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[203]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[204]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[205]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[206]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[207]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:default1.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[208]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[209]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[210]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[211]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[212]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[213]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[214]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[215]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[216]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[217]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[218]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[219]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[220]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[221]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[222]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[223]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[224]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[225]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[226]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[227]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[228]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[229]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[230]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[231]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[232]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[233]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[234]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface2SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[235]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[236]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[237]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[238]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[239]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[240]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[241]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.groupNodes" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[242]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[243]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[244]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[245]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[246]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[247]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[248]" ""
+		5 4 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.dagSetMembers" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[249]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[250]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[251]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[252]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[253]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[254]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[255]" ""
+		5 3 "bedroom_SET_latest1:karen_latest:jackieShoeRN" "jackieShoe:PxrSurface1SG.memberWireframeColor" 
+		"bedroom_SET_latest1:karen_latest:jackieShoeRN.placeHolderList[256]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode shadingEngine -n "karen_latest:jackieShoe1:PxrSurface3SG";
-	rename -uid "EB3B4387-0040-72F3-A6C2-54B25426BA8D";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface3SG";
+	rename -uid "2EB4DB51-1048-FCA3-4325-E3841D49D28E";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe1:materialInfo1";
-	rename -uid "43AAFC94-BD47-CB58-9B26-D9855C8CD6BA";
-createNode shadingEngine -n "karen_latest:jackieShoe1:PxrSurface2SG";
-	rename -uid "94855FE6-0846-E537-8D6C-B88D53FFCC7D";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe1:materialInfo1";
+	rename -uid "06CD6CBC-C548-8B78-C2D1-FF976D5C7763";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface2SG";
+	rename -uid "E287B911-8649-03F5-B529-C4886D71DDBB";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe1:materialInfo2";
-	rename -uid "F4324E46-264D-5BF3-7AC7-67A199BA6A2D";
-createNode shadingEngine -n "karen_latest:jackieShoe1:PxrSurface4SG";
-	rename -uid "B475B184-5E45-8ED8-16F7-0683767E2A6A";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe1:materialInfo2";
+	rename -uid "D9F43D44-0343-FDFD-EB2E-B7918AB24706";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface4SG";
+	rename -uid "74FBA838-5540-DEEF-0556-C5A95E8F7B48";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe1:materialInfo3";
-	rename -uid "CB8CBC40-5A4C-200D-BD49-B581C6419156";
-createNode shadingEngine -n "karen_latest:jackieShoe1:PxrSurface1SG";
-	rename -uid "8196CD40-DF49-D363-62C1-6F9C8EEF644B";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe1:materialInfo3";
+	rename -uid "A2CC0904-E146-6FEF-76B3-C3ADF12907A9";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface1SG";
+	rename -uid "C8ECA61B-864F-BB60-67A0-DCBE2E6C2F82";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe1:materialInfo4";
-	rename -uid "9ADA3FE3-0A46-05EF-E64F-4EB69CDC12AF";
-createNode polyUnite -n "karen_latest:polyUnite2";
-	rename -uid "C7A02482-6245-E6EA-F36C-0787DA7162D1";
-createNode PxrSurface -n "karen_latest:eye_shader_Pxr";
-	rename -uid "44AA3E2C-A14E-6589-CCBD-47AFBC869D40";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe1:materialInfo4";
+	rename -uid "6465F9D9-5C4F-52E3-42C8-3D996437E379";
+createNode polyUnite -n "bedroom_SET_latest1:karen_latest:polyUnite2";
+	rename -uid "ACB9388B-A24B-6753-CDF2-4CA00F5ED214";
+createNode PxrSurface -n "bedroom_SET_latest1:karen_latest:eye_shader_Pxr";
+	rename -uid "4923764F-DF49-D3D4-C307-7AAE426AA099";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -39516,20 +38689,20 @@ createNode PxrSurface -n "karen_latest:eye_shader_Pxr";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "karen_latest:PxrSurface4SG";
-	rename -uid "DE2253EE-FB46-A21E-5750-EF97D34A33EE";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrSurface4SG";
+	rename -uid "131A0469-A740-C57A-B424-D7B1130562C1";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo5";
-	rename -uid "9B05EE09-3E4B-B4BE-6119-C3BE0BDFB2C9";
-createNode file -n "karen_latest:eye_shader_render_tex";
-	rename -uid "33C6525D-ED42-B02D-D80B-D5AF7E3AF7EF";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo5";
+	rename -uid "CBE12D0E-1D49-E5A7-EDA1-C98791FAEFEB";
+createNode file -n "bedroom_SET_latest1:karen_latest:eye_shader_render_tex";
+	rename -uid "8262052E-5640-FE56-11B7-2C974F076B94";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_eye.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "karen_latest:place2dTexture1";
-	rename -uid "E3A1D903-964B-9D9B-D441-F4AF1D47912F";
-createNode PxrSurface -n "karen_latest:skin_shader_Pxr";
-	rename -uid "538F5948-D647-BCAF-432A-85B983940AF3";
+createNode place2dTexture -n "bedroom_SET_latest1:karen_latest:place2dTexture1";
+	rename -uid "225B10D8-2C46-E1FA-EF72-6CB053EE7767";
+createNode PxrSurface -n "bedroom_SET_latest1:karen_latest:skin_shader_Pxr";
+	rename -uid "0E055260-304D-5C05-0E10-4AAB2B345A64";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -39677,14 +38850,14 @@ createNode PxrSurface -n "karen_latest:skin_shader_Pxr";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "karen_latest:PxrSurface5SG";
-	rename -uid "2AA83AFD-654F-7E06-86FF-719CCF1C60A3";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrSurface5SG";
+	rename -uid "FF2A81F3-6347-B944-24EC-C9A8B8EC8CC6";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo6";
-	rename -uid "78B7E944-1942-DDE4-8F4D-E4BAA52D1858";
-createNode PxrSurface -n "karen_latest:hair_shader_Pxr";
-	rename -uid "DB8D24D8-804B-872E-C8C0-9D8C9545BCFB";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo6";
+	rename -uid "2F656EC4-3240-4E90-235B-958610045D6F";
+createNode PxrSurface -n "bedroom_SET_latest1:karen_latest:hair_shader_Pxr";
+	rename -uid "C6231B79-8745-7C4D-F3A6-CBBF11710BE1";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -39832,26 +39005,26 @@ createNode PxrSurface -n "karen_latest:hair_shader_Pxr";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "karen_latest:PxrSurface6SG";
-	rename -uid "2B13C776-EB46-5AA3-BABF-1291B615338D";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrSurface6SG";
+	rename -uid "9153FC7B-AA46-D293-5F33-7B96C096F462";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo7";
-	rename -uid "CE046762-264E-B7CC-3DA8-FE8FEC2771C9";
-createNode file -n "karen_latest:skin_shader_render_tex";
-	rename -uid "537FF44F-9144-29D0-43F5-BDA857068DBF";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo7";
+	rename -uid "EB0C8DE8-2D44-FDA0-753A-97A2F25ACE66";
+createNode file -n "bedroom_SET_latest1:karen_latest:skin_shader_render_tex";
+	rename -uid "CBB21BD2-594D-E4B0-D931-06AAC5F993B7";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/stallWorker_lambert7_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "karen_latest:place2dTexture2";
-	rename -uid "A08D6FD5-6E4E-24A8-5F1E-0BBE143D7B5F";
-createNode file -n "karen_latest:hair_shader_render_tex";
-	rename -uid "752D2969-7F4F-C7C2-3706-54A470CC89B6";
+createNode place2dTexture -n "bedroom_SET_latest1:karen_latest:place2dTexture2";
+	rename -uid "EB67B3FF-7E4A-CF1B-F95E-948739390D8D";
+createNode file -n "bedroom_SET_latest1:karen_latest:hair_shader_render_tex";
+	rename -uid "A6E01E76-E148-F954-FBA7-3490FE26A9BD";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_hair_lambert8_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "karen_latest:place2dTexture3";
-	rename -uid "CF3C1D2D-1249-E8C8-4BBE-B292F76CA6CC";
-createNode PxrNormalMap -n "karen_latest:hair_shader_render_norm";
-	rename -uid "06BD6A3A-7A4A-FA29-E8B9-31B0C47EEF2D";
+createNode place2dTexture -n "bedroom_SET_latest1:karen_latest:place2dTexture3";
+	rename -uid "0ACD8C75-984C-E43E-1370-79930FE40BAE";
+createNode PxrNormalMap -n "bedroom_SET_latest1:karen_latest:hair_shader_render_norm";
+	rename -uid "185E7041-904F-92D8-951C-39A1B4167D1C";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -39878,14 +39051,14 @@ createNode PxrNormalMap -n "karen_latest:hair_shader_render_norm";
 	setAttr ".adjustAmount" 0;
 	setAttr ".surfaceNormalMix" 0;
 	setAttr ".disable" no;
-createNode file -n "karen_latest:apron_shader_render_tex";
-	rename -uid "D44AB4CE-DD47-6916-2A94-55A7075555A6";
+createNode file -n "bedroom_SET_latest1:karen_latest:apron_shader_render_tex";
+	rename -uid "0096B4C0-8843-8CCA-3340-6ABEF41C2032";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_apron_lambert5_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "karen_latest:place2dTexture4";
-	rename -uid "83681895-0648-87AA-98B7-A4AC2E20E456";
-createNode PxrNormalMap -n "karen_latest:apron_shader_render_norm";
-	rename -uid "29CAF3F8-904F-A28B-113B-DCB3C79630FC";
+createNode place2dTexture -n "bedroom_SET_latest1:karen_latest:place2dTexture4";
+	rename -uid "1621C45C-9F48-97B1-A5E8-47B0FAA9CC23";
+createNode PxrNormalMap -n "bedroom_SET_latest1:karen_latest:apron_shader_render_norm";
+	rename -uid "236A62E8-8B4E-7A28-2421-F7BB3425CF3E";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -39912,14 +39085,14 @@ createNode PxrNormalMap -n "karen_latest:apron_shader_render_norm";
 	setAttr ".adjustAmount" 0;
 	setAttr ".surfaceNormalMix" 0;
 	setAttr ".disable" no;
-createNode shadingEngine -n "karen_latest:PxrSurface7SG";
-	rename -uid "4C2112F0-2345-6C18-1940-EFBE9179732F";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrSurface7SG";
+	rename -uid "C91A8FE8-C343-80D9-130D-56AB4FE3900D";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo8";
-	rename -uid "93CC1F1D-3043-182D-4D00-D5AE5F28BABF";
-createNode PxrSurface -n "karen_latest:shoes_shadder_Pxr";
-	rename -uid "3F04205D-F14D-F82E-4398-8F9684D7F953";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo8";
+	rename -uid "5D4A0559-6045-91E5-6398-56A7D67CEE37";
+createNode PxrSurface -n "bedroom_SET_latest1:karen_latest:shoes_shadder_Pxr";
+	rename -uid "591B348F-5A48-37FD-F2FD-CB952E333E85";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -40067,86 +39240,86 @@ createNode PxrSurface -n "karen_latest:shoes_shadder_Pxr";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "karen_latest:PxrSurface8SG";
-	rename -uid "B12ED82E-FF44-A350-0DE5-B88147B26E4A";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrSurface8SG";
+	rename -uid "3154FA04-9D4D-1AB8-CA27-638AFCB507B0";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo9";
-	rename -uid "76205405-C74B-7ECD-E9E9-0E9315EEE14F";
-createNode shadingEngine -n "karen_latest:jackieShoe:PxrSurface3SG";
-	rename -uid "AED3B2A1-D444-9F25-CCA8-7E9CABE87583";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo9";
+	rename -uid "118B434D-E049-3036-66CA-92890C06E784";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface3SG";
+	rename -uid "9BF706EB-BA43-43EA-D48A-21963BE1B214";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe:materialInfo1";
-	rename -uid "F5FEEC9D-A84A-BE6F-6F0B-43ADA2A61CA3";
-createNode shadingEngine -n "karen_latest:jackieShoe:PxrSurface2SG";
-	rename -uid "C4C54F32-1545-D3DC-88F2-E9964F38FFAC";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe:materialInfo1";
+	rename -uid "74B736C9-D144-99AA-9731-28A17012D2BB";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface2SG";
+	rename -uid "1ACFC79B-D84B-07CD-10B3-5BB6486442C3";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe:materialInfo2";
-	rename -uid "7BA1CCDA-2D41-74A2-EBAB-869384A7EEFF";
-createNode shadingEngine -n "karen_latest:jackieShoe:PxrSurface4SG";
-	rename -uid "30897F23-434A-CFB9-A092-E7AD323CE676";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe:materialInfo2";
+	rename -uid "559C5AE8-D749-3536-642A-3EB780EEB2AA";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface4SG";
+	rename -uid "4794A0AB-454E-E0C2-DF7E-C18DD8BE58FD";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe:materialInfo3";
-	rename -uid "66190144-E546-DE20-DA26-A591D1DC7AA3";
-createNode shadingEngine -n "karen_latest:jackieShoe:PxrSurface1SG";
-	rename -uid "6EBAF3C9-A249-4D88-A2CD-48884F093E61";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe:materialInfo3";
+	rename -uid "BC8E0DCA-5D40-0A14-5ADE-378CDF9AAAD1";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface1SG";
+	rename -uid "3062DDAF-734C-152A-7D55-9297D9A0FC66";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe:materialInfo4";
-	rename -uid "00F92930-8A49-A7D6-3200-AE83C45C0C10";
-createNode shadingEngine -n "karen_latest:jackieShoe2:PxrSurface3SG";
-	rename -uid "E14F059A-944C-4944-86D1-758C80B8112F";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe:materialInfo4";
+	rename -uid "9DE43D24-8D45-30E5-7261-8AA7423B6B5D";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface3SG";
+	rename -uid "88276ACD-7F49-44CA-16DB-69ADC10BCF86";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe2:materialInfo1";
-	rename -uid "D4757630-5B4C-48A3-9849-F48F6F6C85D7";
-createNode shadingEngine -n "karen_latest:jackieShoe2:PxrSurface2SG";
-	rename -uid "8F096257-3146-EDA6-799C-42ACFDE049A5";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe2:materialInfo1";
+	rename -uid "8BDD14E3-C94D-1AAF-E65E-FBAC078275A3";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface2SG";
+	rename -uid "13BD6950-1744-BCC8-54CC-498A3FAD02C8";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe2:materialInfo2";
-	rename -uid "8E6A5E8C-9449-00F8-6C68-FA889B946A7E";
-createNode shadingEngine -n "karen_latest:jackieShoe2:PxrSurface4SG";
-	rename -uid "16BACD49-C146-9D81-D3FB-1D9FF0D3D9A0";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe2:materialInfo2";
+	rename -uid "F7935914-B649-9BC0-1E29-C48ECA907D56";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface4SG";
+	rename -uid "0CDC9517-444F-A3D9-3FC6-E59D7CFC7A1C";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe2:materialInfo3";
-	rename -uid "DE7E25D7-6E42-6DB3-23A3-D081F283ADC9";
-createNode shadingEngine -n "karen_latest:jackieShoe2:PxrSurface1SG";
-	rename -uid "76EBE51C-574C-1A35-CB7B-36A63399C7A2";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe2:materialInfo3";
+	rename -uid "0FA39FC1-874D-2A74-74AA-E8AF0D3AE964";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface1SG";
+	rename -uid "B5854982-174F-0346-4D77-87A3B29355ED";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe2:materialInfo4";
-	rename -uid "7905BC16-7346-2C53-7F3D-C99780AB9F47";
-createNode shadingEngine -n "karen_latest:jackieShoe3:PxrSurface3SG";
-	rename -uid "34BECFAF-0C46-FEF8-6163-099C486F89EE";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe2:materialInfo4";
+	rename -uid "1E30ABE0-C744-4815-004E-E59E9753FE36";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface3SG";
+	rename -uid "F334E57B-C547-D556-2F23-9188ABFD2378";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe3:materialInfo1";
-	rename -uid "DB97EF47-3B4D-E515-730E-83A6B1094036";
-createNode shadingEngine -n "karen_latest:jackieShoe3:PxrSurface2SG";
-	rename -uid "37915776-5048-AF2A-16C3-64B411FC3493";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe3:materialInfo1";
+	rename -uid "EBD55E7D-B345-CA7F-3A52-18835D5EC6B2";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface2SG";
+	rename -uid "0B347A9A-D741-AEF6-9A2A-73AEF866161F";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe3:materialInfo2";
-	rename -uid "DC9595C1-224D-60CD-A3A0-88BD5EDA72A9";
-createNode shadingEngine -n "karen_latest:jackieShoe3:PxrSurface4SG";
-	rename -uid "7626D42A-A345-4BBA-8CBF-B9A7AE01014B";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe3:materialInfo2";
+	rename -uid "D6D1D81A-174E-A567-34EB-FCA47701EBC0";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface4SG";
+	rename -uid "F6A402BE-CC4B-9FFF-F301-84AE81E9CC0A";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe3:materialInfo3";
-	rename -uid "8243C323-E84C-AD1B-DACA-F1AAF455167D";
-createNode shadingEngine -n "karen_latest:jackieShoe3:PxrSurface1SG";
-	rename -uid "01A2C506-3C45-A4CF-9C77-63A033F90B94";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe3:materialInfo3";
+	rename -uid "97FB6F21-E84A-4D5E-6131-3488AEC755B8";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface1SG";
+	rename -uid "B4C35818-F14D-5577-5606-A8ACD56678FC";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:jackieShoe3:materialInfo4";
-	rename -uid "7A09D3A3-9749-7C65-EABF-B8B276B277E4";
-createNode PxrSurface -n "karen_latest:sole_shader_Pxr";
-	rename -uid "7E34402D-B94A-B1BC-6C94-7BA4844A6427";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:jackieShoe3:materialInfo4";
+	rename -uid "8174CA4E-3E48-C692-A869-8891DA9A1474";
+createNode PxrSurface -n "bedroom_SET_latest1:karen_latest:sole_shader_Pxr";
+	rename -uid "E27486B7-E84A-95A5-5460-8FA49A300E4C";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -40294,14 +39467,14 @@ createNode PxrSurface -n "karen_latest:sole_shader_Pxr";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "karen_latest:PxrSurface9SG";
-	rename -uid "E5272F2A-8C4C-4B32-E3B2-3F9E591233A7";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrSurface9SG";
+	rename -uid "F435B374-D044-7B0E-3A4B-B7853C1A4EAB";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo10";
-	rename -uid "9FD57459-9F40-5159-B94C-56975BF73EFA";
-createNode PxrSurface -n "karen_latest:dress_shader_Pxr";
-	rename -uid "0A627723-AC4A-E457-1341-C683DBAA666F";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo10";
+	rename -uid "5875D398-0346-BF51-B921-C1915CC36B19";
+createNode PxrSurface -n "bedroom_SET_latest1:karen_latest:dress_shader_Pxr";
+	rename -uid "F2057681-BA4C-73C3-DF9A-84A1F22319CF";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -40449,20 +39622,20 @@ createNode PxrSurface -n "karen_latest:dress_shader_Pxr";
 	setAttr ".mwStartable" no;
 	setAttr ".roughnessMollificationClamp" 32;
 	setAttr ".utilityPattern[0]"  0;
-createNode shadingEngine -n "karen_latest:PxrSurface10SG";
-	rename -uid "CE10F2BE-F44A-BD30-CFAE-B6946CA6035B";
+createNode shadingEngine -n "bedroom_SET_latest1:karen_latest:PxrSurface10SG";
+	rename -uid "39702CC2-1D4F-F2C4-53F3-D9B59E5D6252";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
-createNode materialInfo -n "karen_latest:materialInfo11";
-	rename -uid "F5D5D75E-7648-D3BE-8641-27B60B8C636B";
-createNode file -n "karen_latest:dress_shader_render_tex";
-	rename -uid "E8567E24-6744-A784-493D-54B78952CC8B";
+createNode materialInfo -n "bedroom_SET_latest1:karen_latest:materialInfo11";
+	rename -uid "F0533B09-494F-9493-CB0F-80A0B2AF936C";
+createNode file -n "bedroom_SET_latest1:karen_latest:dress_shader_render_tex";
+	rename -uid "7089FE65-ED4E-2048-B469-48AD16B597A4";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_dress_lambert1_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode place2dTexture -n "karen_latest:place2dTexture5";
-	rename -uid "2BEE78A0-8E4B-6195-93DF-C3912DC4DA65";
-createNode PxrNormalMap -n "karen_latest:dress_shader_render_norm";
-	rename -uid "EC08B438-C644-C969-4D60-8D9BFB6338BB";
+createNode place2dTexture -n "bedroom_SET_latest1:karen_latest:place2dTexture5";
+	rename -uid "57D0AAF6-8141-6A30-ED00-8B957D9D9712";
+createNode PxrNormalMap -n "bedroom_SET_latest1:karen_latest:dress_shader_render_norm";
+	rename -uid "77AB74D4-144F-E691-E27A-5BBDA2A0D51C";
 	setAttr ".cch" no;
 	setAttr ".fzn" no;
 	setAttr ".ihi" 2;
@@ -40489,8 +39662,8 @@ createNode PxrNormalMap -n "karen_latest:dress_shader_render_norm";
 	setAttr ".adjustAmount" 0;
 	setAttr ".surfaceNormalMix" 0;
 	setAttr ".disable" no;
-createNode nodeGraphEditorInfo -n "karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "9D0B92C6-D04C-9D0B-A494-F0BFC2FD236D";
+createNode nodeGraphEditorInfo -n "bedroom_SET_latest1:karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "77E10157-5741-CB97-65BD-85BD4BAA5900";
 	setAttr ".def" no;
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -5518.1287646062801 124.05446414612837 ;
@@ -40511,54 +39684,54 @@ createNode nodeGraphEditorInfo -n "karen_latest:hyperShadePrimaryNodeEditorSaved
 	setAttr ".tgi[0].ni[4].x" -4340;
 	setAttr ".tgi[0].ni[4].y" 671.4285888671875;
 	setAttr ".tgi[0].ni[4].nvs" 1923;
-createNode file -n "karen_latest:PxrSurface3_viewport_tex";
-	rename -uid "C9D55322-0E4E-1137-B1D4-A5BD3FAD638B";
+createNode file -n "bedroom_SET_latest1:karen_latest:PxrSurface3_viewport_tex";
+	rename -uid "BACC1E44-9C4A-358B-E29F-01855C024BB5";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_apron_lambert5_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "karen_latest:PxrSurface10_viewport_tex";
-	rename -uid "8A4BDBDB-544D-E037-9C7E-A0B4B39528A4";
+createNode file -n "bedroom_SET_latest1:karen_latest:PxrSurface10_viewport_tex";
+	rename -uid "855C2530-D546-EBC4-8436-A69BA1B3646F";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_dress_lambert1_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "karen_latest:PxrSurface5_viewport_tex";
-	rename -uid "41A3A8C1-144E-6A13-0503-4AA109D14C53";
+createNode file -n "bedroom_SET_latest1:karen_latest:PxrSurface5_viewport_tex";
+	rename -uid "33D7BA13-EA4F-75BC-E733-2F8E911377B6";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/stallWorker_lambert7_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "karen_latest:PxrSurface4_viewport_tex";
-	rename -uid "68D298A5-1B46-BD45-727C-8B9CDDF2F7E3";
+createNode file -n "bedroom_SET_latest1:karen_latest:PxrSurface4_viewport_tex";
+	rename -uid "DD8E7864-E541-3074-4325-E89F61CF912C";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_eye.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "karen_latest:PxrSurface6_viewport_tex";
-	rename -uid "E1B2CCBD-C244-ECD3-BF7A-96B47CC2BB23";
+createNode file -n "bedroom_SET_latest1:karen_latest:PxrSurface6_viewport_tex";
+	rename -uid "95540CDC-CB46-4AAF-7199-EC9F84A0DCE3";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_hair_lambert8_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_FullBodyKG";
-	rename -uid "C6958B57-A240-7092-1417-F5AD88D0A7E2";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG";
+	rename -uid "4868231C-FB4D-60CA-F2D0-7E92C6038D84";
 	setAttr ".ihi" 0;
 	setAttr -s 4 ".dnsm";
 	setAttr ".cat" -type "string" "FullBody";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_LeftHandBPKG";
-	rename -uid "7EBFA51E-744F-EF1A-F4E1-59ABAE6CD607";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftHandBPKG";
+	rename -uid "8944BA3F-9142-0F53-28F3-AFAD036B6A26";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_RightHandBPKG";
-	rename -uid "5B057270-0C48-2AAF-D57A-DB8E9B56F9C9";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightHandBPKG";
+	rename -uid "2A56BEB1-6C43-CFC6-2172-D28EAD88C243";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_LeftFootBPKG";
-	rename -uid "0B86F91F-AB44-E98D-1A2E-2AAD180D81BD";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftFootBPKG";
+	rename -uid "B20421F9-5943-3FDD-5AC0-DFBF722F0BCD";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_RightFootBPKG";
-	rename -uid "ADB7CDBF-534F-41A2-0A84-FB9CFEC43884";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightFootBPKG";
+	rename -uid "59860316-3442-EF83-8BCB-4A90688DA8E8";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode HIKCharacterNode -n "karen_latest:QuickRigCharacter";
-	rename -uid "93B374B0-704A-DADE-570A-29906931E586";
+createNode HIKCharacterNode -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter";
+	rename -uid "CBCD6153-EC41-A8B7-9F86-A38035FDF8F4";
 	addAttr -r false -ci true -sn "quickRigInfo" -ln "quickRigInfo" -at "compound" 
 		-nc 3;
 	addAttr -r false -s false -ci true -m -im false -sn "meshes" -ln "meshes" -at "message" 
@@ -41347,8 +40520,8 @@ createNode HIKCharacterNode -n "karen_latest:QuickRigCharacter";
 	setAttr ".LeftShoulderExtraTy" 146.58868419999999;
 	setAttr ".RightShoulderExtraTx" -12.353637216499999;
 	setAttr ".RightShoulderExtraTy" 146.58898;
-createNode HIKProperty2State -n "karen_latest:HIKproperties1";
-	rename -uid "21AC30B4-DD46-28A3-8471-2BAB75AA0D99";
+createNode HIKProperty2State -n "bedroom_SET_latest1:karen_latest:HIKproperties1";
+	rename -uid "FEE16308-9048-588B-B6AF-0CA33D30FD51";
 	setAttr ".lkr" 0.60000002384185791;
 	setAttr ".rkr" 0.60000002384185791;
 	setAttr ".FootBottomToAnkle" 0.29750179495510398;
@@ -41439,12 +40612,12 @@ createNode HIKProperty2State -n "karen_latest:HIKproperties1";
 	setAttr ".ParamLeafLeftForeArmRoll5" 0;
 	setAttr ".ParamLeafRightArmRoll5" 0;
 	setAttr ".ParamLeafRightForeArmRoll5" 0;
-createNode HIKSolverNode -n "karen_latest:HIKSolverNode1";
-	rename -uid "62AEC98F-ED44-4139-7458-16BADAA02449";
+createNode HIKSolverNode -n "bedroom_SET_latest1:karen_latest:HIKSolverNode1";
+	rename -uid "15EDC8E2-0C41-3274-84BA-6583A2A14A91";
 	setAttr ".ihi" 0;
 	setAttr ".InputStance" yes;
-createNode HIKState2SK -n "karen_latest:HIKState2SK1";
-	rename -uid "01511C87-C94B-B909-9971-D8A834DBEDD9";
+createNode HIKState2SK -n "bedroom_SET_latest1:karen_latest:HIKState2SK1";
+	rename -uid "93E64C78-064E-1C12-FD86-B0A68317E0DE";
 	setAttr ".ihi" 0;
 	setAttr ".HipsTy" 3.4739480018615723;
 	setAttr ".HipsTz" -0.010700404644012451;
@@ -41647,70 +40820,70 @@ createNode HIKState2SK -n "karen_latest:HIKState2SK1";
 	setAttr ".Spine2PreRx" 9.5409563637555027e-15;
 	setAttr ".Spine2PreRy" -1.1620843742546774e-16;
 	setAttr ".Spine2PreRz" 0.70866450538996373;
-createNode HIKControlSetNode -n "karen_latest:QuickRigCharacter_ControlRig";
-	rename -uid "6FD5BFB7-B048-3A4F-1F78-72AB6E7C1174";
+createNode HIKControlSetNode -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_ControlRig";
+	rename -uid "1AB15986-5A43-03F7-F457-9498D0BF630C";
 	setAttr ".ihi" 0;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_FullBodyKG1";
-	rename -uid "3DA10C51-B84E-60D1-EFF9-D1BCD2966D92";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1";
+	rename -uid "B4C2E9C9-7D43-C4A9-7FB1-87AEFA2F851F";
 	setAttr ".ihi" 0;
 	setAttr -s 10 ".dnsm";
 	setAttr ".cat" -type "string" "FullBody";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_HipsBPKG";
-	rename -uid "EB115FE8-7B47-2F8F-6CC3-089E64C1D303";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_HipsBPKG";
+	rename -uid "2DA5739A-3841-22FF-AC26-A5923D59FF8D";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_ChestBPKG";
-	rename -uid "1F3EC793-BC4E-C813-2CB0-0B863379D1A3";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_ChestBPKG";
+	rename -uid "2F1F2540-6444-E815-87FC-56AB250E7097";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_LeftArmBPKG";
-	rename -uid "AB1533EF-3746-FEFD-8526-828B9312F696";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftArmBPKG";
+	rename -uid "D22037D4-3742-951F-B9A5-A6A84689718D";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_RightArmBPKG";
-	rename -uid "12092E44-834E-5FEE-A3EA-139154913734";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightArmBPKG";
+	rename -uid "8FB86D34-594C-2FBD-4831-5682D43705AD";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_LeftLegBPKG";
-	rename -uid "CF530453-F34F-1CAC-4B03-6F9C18B02B47";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftLegBPKG";
+	rename -uid "339B4A38-1B41-1246-B678-4B904D5D218B";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_RightLegBPKG";
-	rename -uid "927A4E98-2646-937F-B6AB-1ABBD57124B3";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightLegBPKG";
+	rename -uid "E9E47060-EB45-4E42-8BBF-DB871CFC5C35";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_HeadBPKG";
-	rename -uid "BAD12D15-E949-2524-A871-CFA25BC9382F";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_HeadBPKG";
+	rename -uid "2B05BA75-3945-9045-966D-02B6FFF622D0";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_LeftHandBPKG1";
-	rename -uid "251A95CF-A64C-C8DE-AC15-18921BEED53C";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftHandBPKG1";
+	rename -uid "B86CA79F-9945-AF00-FC8A-A0B4D338C407";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_RightHandBPKG1";
-	rename -uid "D0E9357C-DC4A-D662-B860-D38FB30AE180";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightHandBPKG1";
+	rename -uid "9383C0E8-0B40-935F-31FA-F392FED439CF";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_LeftFootBPKG1";
-	rename -uid "56103BC4-514C-9DEC-BCEE-F9BDB74EB026";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftFootBPKG1";
+	rename -uid "326ADBC9-AF44-04C5-4B9E-0BBC895C82A2";
 	setAttr ".ihi" 0;
 	setAttr ".cat" -type "string" "BodyPart";
 	setAttr ".mr" yes;
-createNode keyingGroup -n "karen_latest:QuickRigCharacter_RightFootBPKG1";
-	rename -uid "61FB53A6-5940-C01C-1FE2-F0BEBE17B1DA";
+createNode keyingGroup -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightFootBPKG1";
+	rename -uid "3C5A6959-C541-652D-6BD5-D0AB56E3F7C4";
 	setAttr ".cat" -type "string" "BodyPart";
-createNode HIKCharacterNode -n "karen_latest:QuickRigCharacter1";
-	rename -uid "C35D1B26-E846-F673-6AE7-10B20EBBA071";
+createNode HIKCharacterNode -n "bedroom_SET_latest1:karen_latest:QuickRigCharacter1";
+	rename -uid "C56B7183-874F-D1CD-66D3-0D878AC9F4A4";
 	addAttr -r false -ci true -sn "quickRigInfo" -ln "quickRigInfo" -at "compound" 
 		-nc 3;
 	addAttr -r false -s false -ci true -m -im false -sn "meshes" -ln "meshes" -at "message" 
@@ -42499,8 +41672,8 @@ createNode HIKCharacterNode -n "karen_latest:QuickRigCharacter1";
 	setAttr ".LeftShoulderExtraTy" 146.58868419999999;
 	setAttr ".RightShoulderExtraTx" -12.353637216499999;
 	setAttr ".RightShoulderExtraTy" 146.58898;
-createNode HIKState2SK -n "karen_latest:HIKState2SK2";
-	rename -uid "100B8F2C-3A47-D610-7B7D-918890257D07";
+createNode HIKState2SK -n "bedroom_SET_latest1:karen_latest:HIKState2SK2";
+	rename -uid "00F864F9-604E-85F9-E018-5C974E93FC49";
 	setAttr ".ihi" 0;
 	setAttr ".HipsTx" -5.1694116592407227;
 	setAttr ".HipsTy" 1.9103493541479111;
@@ -42874,11 +42047,11 @@ createNode HIKState2SK -n "karen_latest:HIKState2SK2";
 	setAttr ".Spine2PreRx" 9.5409563637555027e-15;
 	setAttr ".Spine2PreRy" -1.1620843742546774e-16;
 	setAttr ".Spine2PreRz" 0.70866450538996373;
-createNode HIKSolverNode -n "karen_latest:HIKSolverNode2";
-	rename -uid "23DB8D25-EC48-CFCD-3937-D1A3D0A25FF4";
+createNode HIKSolverNode -n "bedroom_SET_latest1:karen_latest:HIKSolverNode2";
+	rename -uid "4EFE0430-8D42-CEB7-0355-E58DB7B35484";
 	setAttr ".ihi" 0;
-createNode HIKFK2State -n "karen_latest:HIKFK2State1";
-	rename -uid "FCD37313-4648-D37C-3D27-36B0CCB4B7DF";
+createNode HIKFK2State -n "bedroom_SET_latest1:karen_latest:HIKFK2State1";
+	rename -uid "DC85054F-1C47-23C0-F747-C4B1BEE629FC";
 	setAttr ".ihi" 0;
 	setAttr ".ReferenceGX" -type "matrix" -0.044730634279094496 0 0.4919544292404992 0
 		 0 0.49398379537425663 0 0 -0.4919544292404992 0 -0.044730634279094496 0 -5.1741206614110054 0.052359824326634219 -0.81232325382547155 1;
@@ -42948,8 +42121,8 @@ createNode HIKFK2State -n "karen_latest:HIKFK2State1";
 	setAttr ".Spine2GX" -type "matrix" -0.044730634898293362 -6.133665539098627e-13 0.4919544291841989 0
 		 -5.5288384256279247e-14 0.49398379537425657 6.1086969835975439e-13 0 -0.49195442918419896 2.534980491699241e-16 -0.044730634898293362 0
 		 -5.1700882001701016 2.3654933531715634 -0.81195637634411066 1;
-createNode HIKProperty2State -n "karen_latest:HIKproperties2";
-	rename -uid "72D98EA9-0043-388D-BAF5-19A92D8104B3";
+createNode HIKProperty2State -n "bedroom_SET_latest1:karen_latest:HIKproperties2";
+	rename -uid "F49531D8-0349-8D20-C2FD-8EAD15BF7D5D";
 	setAttr ".lkr" 0.60000002384185791;
 	setAttr ".rkr" 0.60000002384185791;
 	setAttr ".FootBottomToAnkle" 0.29750179495510398;
@@ -43040,25 +42213,25 @@ createNode HIKProperty2State -n "karen_latest:HIKproperties2";
 	setAttr ".ParamLeafLeftForeArmRoll5" 0;
 	setAttr ".ParamLeafRightArmRoll5" 0;
 	setAttr ".ParamLeafRightForeArmRoll5" 0;
-createNode file -n "karen_latest:PxrSurface3_view_norm";
-	rename -uid "00EB18BB-F040-7362-D6B2-BB99DFB32022";
+createNode file -n "bedroom_SET_latest1:karen_latest:PxrSurface3_view_norm";
+	rename -uid "9772EF86-1B46-4618-C894-119B9E89F044";
 	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "karen_latest:PxrSurface10_view_norm";
-	rename -uid "2BA2F19D-6A4D-C4DD-1ECB-23A35659E288";
+createNode file -n "bedroom_SET_latest1:karen_latest:PxrSurface10_view_norm";
+	rename -uid "91324095-D74B-9717-5951-848ECB174910";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket//assets/Characters/karen/karen_textures/karen_dress_lambert1_Normal.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "karen_latest:PxrSurface6_view_norm";
-	rename -uid "3788E0EA-AD4D-F23D-25FA-97907589BF80";
+createNode file -n "bedroom_SET_latest1:karen_latest:PxrSurface6_view_norm";
+	rename -uid "7868FFD0-0145-4097-57E0-0D99AA5F7A4F";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_apron_lambert5_Normal.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode lambert -n "karen_latest:apron_shader_lambert";
-	rename -uid "23CE9E22-D34E-9320-88A1-5E8A73C0D3E9";
-createNode file -n "karen_latest:apron_shader_viewport_tex";
-	rename -uid "087C149E-6643-6C90-5B5A-0B9E096DD9C8";
+createNode lambert -n "bedroom_SET_latest1:karen_latest:apron_shader_lambert";
+	rename -uid "BCFBE838-D546-3B12-52B1-E9BF1074471E";
+createNode file -n "bedroom_SET_latest1:karen_latest:apron_shader_viewport_tex";
+	rename -uid "25597B6C-DC4A-AD30-844A-8AAFE71D2290";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_apron_lambert5_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode GLSLShader -n "karen_latest:apron_shader_GLSL";
-	rename -uid "C11BCDC8-674F-0CBA-A994-3DB7F1AF2194";
+createNode GLSLShader -n "bedroom_SET_latest1:karen_latest:apron_shader_GLSL";
+	rename -uid "D51CDFA7-AE42-7FB1-CE6C-B9A2FA27811B";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Name" -ln "ShadowFilterTaps_Name" 
 		-ct "HW_shader_parameter" -dt "string";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Type" -ln "ShadowFilterTaps_Type" 
@@ -45194,17 +44367,17 @@ createNode GLSLShader -n "karen_latest:apron_shader_GLSL";
 	setAttr ".rShadowBlend_Name" -type "string" "rShadowBlend";
 	setAttr ".rShadowBlend_Type" -type "string" "float";
 	setAttr ".rShadowBlend" 1;
-createNode file -n "karen_latest:apron_shader_view_norm";
-	rename -uid "9A5CFA78-014D-7E4F-76A4-8FAF726F99B2";
+createNode file -n "bedroom_SET_latest1:karen_latest:apron_shader_view_norm";
+	rename -uid "0AD57B22-F742-6DA9-6034-D3A1A3487953";
 	setAttr ".cs" -type "string" "sRGB";
-createNode lambert -n "karen_latest:dress_shader_lambert";
-	rename -uid "ED3955DD-7D4D-BB25-B06A-EFBDF90303C2";
-createNode file -n "karen_latest:dress_shader_viewport_tex";
-	rename -uid "1BC99269-DD4B-7CB7-9828-53A74CF7E88B";
+createNode lambert -n "bedroom_SET_latest1:karen_latest:dress_shader_lambert";
+	rename -uid "2E366C42-FD43-2182-2A76-068FBF679484";
+createNode file -n "bedroom_SET_latest1:karen_latest:dress_shader_viewport_tex";
+	rename -uid "D5343F1B-EB4F-D853-B2A9-A79E10AB3F36";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_dress_lambert1_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode GLSLShader -n "karen_latest:dress_shader_GLSL";
-	rename -uid "C2D7D649-8646-BB25-1BFB-BA9D6BEC07BE";
+createNode GLSLShader -n "bedroom_SET_latest1:karen_latest:dress_shader_GLSL";
+	rename -uid "6F25097A-0A44-E638-3D9A-669A9DBEC5A6";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Name" -ln "ShadowFilterTaps_Name" 
 		-ct "HW_shader_parameter" -dt "string";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Type" -ln "ShadowFilterTaps_Type" 
@@ -47340,18 +46513,18 @@ createNode GLSLShader -n "karen_latest:dress_shader_GLSL";
 	setAttr ".rShadowBlend_Name" -type "string" "rShadowBlend";
 	setAttr ".rShadowBlend_Type" -type "string" "float";
 	setAttr ".rShadowBlend" 1;
-createNode file -n "karen_latest:dress_shader_view_norm";
-	rename -uid "F1E7D5DE-B84B-59CD-EBBB-65BDD62BC126";
+createNode file -n "bedroom_SET_latest1:karen_latest:dress_shader_view_norm";
+	rename -uid "83E371B9-4F46-71A7-319A-FA8549E5DB0D";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket//assets/Characters/karen/karen_textures/karen_dress_lambert1_Normal.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode lambert -n "karen_latest:skin_shader_lambert";
-	rename -uid "676DE27F-D341-9C92-B78E-AC92AF7E6D77";
-createNode file -n "karen_latest:skin_shader_viewport_tex";
-	rename -uid "90D2E4BB-3D48-AF85-6C88-08896DCD43E0";
+createNode lambert -n "bedroom_SET_latest1:karen_latest:skin_shader_lambert";
+	rename -uid "112E0450-964A-33C3-BF79-93A324BF1AB1";
+createNode file -n "bedroom_SET_latest1:karen_latest:skin_shader_viewport_tex";
+	rename -uid "E2A72F3C-5E4B-1B5D-A5EE-8C8159D673C0";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/stallWorker_lambert7_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode GLSLShader -n "karen_latest:skin_shader_GLSL";
-	rename -uid "2D0400DA-7042-84BF-8110-DCB094927470";
+createNode GLSLShader -n "bedroom_SET_latest1:karen_latest:skin_shader_GLSL";
+	rename -uid "A37C816A-3E49-3779-D3A7-549C513213D6";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Name" -ln "ShadowFilterTaps_Name" 
 		-ct "HW_shader_parameter" -dt "string";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Type" -ln "ShadowFilterTaps_Type" 
@@ -49487,14 +48660,14 @@ createNode GLSLShader -n "karen_latest:skin_shader_GLSL";
 	setAttr ".rShadowBlend_Name" -type "string" "rShadowBlend";
 	setAttr ".rShadowBlend_Type" -type "string" "float";
 	setAttr ".rShadowBlend" 1;
-createNode lambert -n "karen_latest:eye_shader_lambert";
-	rename -uid "7BACF63D-8046-7987-D738-C6AE23EF2D42";
-createNode file -n "karen_latest:eye_shader_viewport_tex";
-	rename -uid "FEA9B1FB-BC45-E788-EBDE-97A6804E031B";
+createNode lambert -n "bedroom_SET_latest1:karen_latest:eye_shader_lambert";
+	rename -uid "07CB672C-3846-90DB-AA74-968F0049427E";
+createNode file -n "bedroom_SET_latest1:karen_latest:eye_shader_viewport_tex";
+	rename -uid "7E5DD555-7A45-239D-CF22-F4AD898A25A8";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_eye.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode GLSLShader -n "karen_latest:eye_shader_GLSL";
-	rename -uid "99EAB245-2347-4614-BCE7-C99C41F8D241";
+createNode GLSLShader -n "bedroom_SET_latest1:karen_latest:eye_shader_GLSL";
+	rename -uid "2E5EC79E-7945-E8EA-7036-0DA50A97B540";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Name" -ln "ShadowFilterTaps_Name" 
 		-ct "HW_shader_parameter" -dt "string";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Type" -ln "ShadowFilterTaps_Type" 
@@ -51630,11 +50803,11 @@ createNode GLSLShader -n "karen_latest:eye_shader_GLSL";
 	setAttr ".rShadowBlend_Name" -type "string" "rShadowBlend";
 	setAttr ".rShadowBlend_Type" -type "string" "float";
 	setAttr ".rShadowBlend" 1;
-createNode lambert -n "karen_latest:sole_shader_lambert";
-	rename -uid "27AC16BB-9843-3622-36C9-C88946BE2D83";
+createNode lambert -n "bedroom_SET_latest1:karen_latest:sole_shader_lambert";
+	rename -uid "0D14DA1C-6147-0F94-68C2-939436768929";
 	setAttr ".c" -type "float3" 0.057 0.045167286 0.022344001 ;
-createNode GLSLShader -n "karen_latest:sole_shader_GLSL";
-	rename -uid "0D0A8E86-F54D-34F0-A001-0EAB25842041";
+createNode GLSLShader -n "bedroom_SET_latest1:karen_latest:sole_shader_GLSL";
+	rename -uid "7A93FB69-4D4A-351A-78FD-2CAB9C5964E2";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Name" -ln "ShadowFilterTaps_Name" 
 		-ct "HW_shader_parameter" -dt "string";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Type" -ln "ShadowFilterTaps_Type" 
@@ -53770,14 +52943,14 @@ createNode GLSLShader -n "karen_latest:sole_shader_GLSL";
 	setAttr ".rShadowBlend_Name" -type "string" "rShadowBlend";
 	setAttr ".rShadowBlend_Type" -type "string" "float";
 	setAttr ".rShadowBlend" 1;
-createNode lambert -n "karen_latest:hair_shader_lambert";
-	rename -uid "C31C21C9-C143-AA43-0896-699332C2263D";
-createNode file -n "karen_latest:hair_shader_viewport_tex";
-	rename -uid "36E9835B-D54C-CD27-F71B-6EBC9F0A9991";
+createNode lambert -n "bedroom_SET_latest1:karen_latest:hair_shader_lambert";
+	rename -uid "719A09E5-954F-09D8-E1D6-A9B1603DC68F";
+createNode file -n "bedroom_SET_latest1:karen_latest:hair_shader_viewport_tex";
+	rename -uid "4326F33C-7A4A-3788-585D-48AD85F3D45F";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_hair_lambert8_BaseColor.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode GLSLShader -n "karen_latest:hair_shader_GLSL";
-	rename -uid "AB6407C3-1640-B14C-0272-F8B7D6BD7857";
+createNode GLSLShader -n "bedroom_SET_latest1:karen_latest:hair_shader_GLSL";
+	rename -uid "BF40B43F-E54D-0879-9F9D-D7B8D3202E23";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Name" -ln "ShadowFilterTaps_Name" 
 		-ct "HW_shader_parameter" -dt "string";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Type" -ln "ShadowFilterTaps_Type" 
@@ -55913,15 +55086,15 @@ createNode GLSLShader -n "karen_latest:hair_shader_GLSL";
 	setAttr ".rShadowBlend_Name" -type "string" "rShadowBlend";
 	setAttr ".rShadowBlend_Type" -type "string" "float";
 	setAttr ".rShadowBlend" 1;
-createNode file -n "karen_latest:hair_shader_view_norm";
-	rename -uid "13185FD6-1B4C-FB4E-D744-AAA3168DC0B0";
+createNode file -n "bedroom_SET_latest1:karen_latest:hair_shader_view_norm";
+	rename -uid "B0C2A030-944C-080A-3B55-28AB471AEB07";
 	setAttr ".ftn" -type "string" "/Users/abbyrcohn/Desktop/CNMNightMarket/assets/Characters/BG_Chars/karen/karen_textures/karen_apron_lambert5_Normal.png";
 	setAttr ".cs" -type "string" "sRGB";
-createNode lambert -n "karen_latest:shoes_shadder_lambert";
-	rename -uid "DFB38D77-9F41-3D24-C0CE-3589DDD23604";
+createNode lambert -n "bedroom_SET_latest1:karen_latest:shoes_shadder_lambert";
+	rename -uid "8A48C50E-7845-F89A-CB5D-1DB147A5F179";
 	setAttr ".c" -type "float3" 0.14 0.11093719 0.054880004 ;
-createNode GLSLShader -n "karen_latest:shoes_shadder_GLSL";
-	rename -uid "BABE6553-C144-304C-AC4D-D5AC7B6F6513";
+createNode GLSLShader -n "bedroom_SET_latest1:karen_latest:shoes_shadder_GLSL";
+	rename -uid "07814126-E34E-6144-DFE0-2682D37C4793";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Name" -ln "ShadowFilterTaps_Name" 
 		-ct "HW_shader_parameter" -dt "string";
 	addAttr -is true -ci true -h true -sn "ShadowFilterTaps_Type" -ln "ShadowFilterTaps_Type" 
@@ -58062,17 +57235,13 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 350;
-	setAttr -av ".unw" 350;
+	setAttr -k on ".o" 1;
+	setAttr -av ".unw" 1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
-	setAttr ".etmr" no;
-	setAttr ".tmr" 4096;
-	setAttr ".aoon" yes;
-	setAttr ".msaa" yes;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
@@ -58102,7 +57271,7 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 	setAttr -s 47 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 113 ".r";
+	setAttr -s 114 ".r";
 select -ne :lightList1;
 	setAttr -s 9 ".l";
 select -ne :defaultTextureList1;
@@ -58135,107 +57304,16 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr -k on ".ro" yes;
-select -ne :defaultRenderGlobals;
-	setAttr -k on ".cch";
-	setAttr -cb on ".ihi";
-	setAttr -k on ".nds";
-	setAttr -cb on ".bnm";
-	setAttr -k on ".macc";
-	setAttr -k on ".macd";
-	setAttr -k on ".macq";
-	setAttr -k on ".mcfr";
-	setAttr -cb on ".ifg";
-	setAttr -k on ".clip";
-	setAttr -k on ".edm";
-	setAttr -k on ".edl";
-	setAttr -cb on ".ren" -type "string" "renderman";
-	setAttr -av -k on ".esr";
-	setAttr -k on ".ors";
-	setAttr -cb on ".sdf";
-	setAttr -av -k on ".outf";
-	setAttr -k on ".imfkey";
-	setAttr -k on ".gama";
-	setAttr -k on ".an";
-	setAttr -cb on ".ar";
-	setAttr -k on ".fs";
-	setAttr -k on ".ef";
-	setAttr -av -k on ".bfs";
-	setAttr -cb on ".me";
-	setAttr -cb on ".se";
-	setAttr -k on ".be";
-	setAttr -cb on ".ep";
-	setAttr -k on ".fec";
-	setAttr -av -k on ".ofc";
-	setAttr -cb on ".ofe";
-	setAttr -cb on ".efe";
-	setAttr -cb on ".oft";
-	setAttr -cb on ".umfn";
-	setAttr -cb on ".ufe";
-	setAttr -cb on ".pff";
-	setAttr -cb on ".peie";
-	setAttr -cb on ".ifp";
-	setAttr -k on ".comp";
-	setAttr -k on ".cth";
-	setAttr -k on ".soll";
-	setAttr -k on ".sosl";
-	setAttr -k on ".rd";
-	setAttr -k on ".lp";
-	setAttr -av -k on ".sp";
-	setAttr -k on ".shs";
-	setAttr -av -k on ".lpr";
-	setAttr -cb on ".gv";
-	setAttr -cb on ".sv";
-	setAttr -k on ".mm";
-	setAttr -k on ".npu";
-	setAttr -k on ".itf";
-	setAttr -k on ".shp";
-	setAttr -cb on ".isp";
-	setAttr -k on ".uf";
-	setAttr -k on ".oi";
-	setAttr -k on ".rut";
-	setAttr -k on ".mb";
-	setAttr -av -k on ".mbf";
-	setAttr -k on ".afp";
-	setAttr -k on ".pfb";
-	setAttr -k on ".pram";
-	setAttr -k on ".poam";
-	setAttr -k on ".prlm";
-	setAttr -k on ".polm";
-	setAttr -cb on ".prm";
-	setAttr -cb on ".pom";
-	setAttr -cb on ".pfrm";
-	setAttr -cb on ".pfom";
-	setAttr -av -k on ".bll";
-	setAttr -av -k on ".bls";
-	setAttr -av -k on ".smv";
-	setAttr -k on ".ubc";
-	setAttr -k on ".mbc";
-	setAttr -cb on ".mbt";
-	setAttr -k on ".udbx";
-	setAttr -k on ".smc";
-	setAttr -k on ".kmv";
-	setAttr -cb on ".isl";
-	setAttr -cb on ".ism";
-	setAttr -cb on ".imb";
-	setAttr -k on ".rlen";
-	setAttr -av -k on ".frts";
-	setAttr -k on ".tlwd";
-	setAttr -k on ".tlht";
-	setAttr -k on ".jfc";
-	setAttr -cb on ".rsb";
-	setAttr -k on ".ope";
-	setAttr -k on ".oppf";
-	setAttr -cb on ".hbl";
 select -ne :defaultResolution;
 	setAttr -av -k on ".cch";
 	setAttr -k on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -k on ".bnm";
-	setAttr -av ".w" 1920;
-	setAttr -av ".h" 1080;
+	setAttr -av ".w";
+	setAttr -av ".h";
 	setAttr -av -k on ".pa" 1;
 	setAttr -av -k on ".al";
-	setAttr -av ".dar" 1.7777777910232544;
+	setAttr -av ".dar";
 	setAttr -av -k on ".ldar";
 	setAttr -k on ".dpi";
 	setAttr -av -k on ".off";
@@ -58283,1588 +57361,2302 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".bswa";
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
-connectAttr "nightstandRN.phl[4]" ":initialShadingGroup.dsm" -na;
-connectAttr "scarfRN.phl[1]" ":initialShadingGroup.dsm" -na;
-connectAttr "polyCube1.out" "RoofShape.i";
-connectAttr "fox:groupId1.id" "fox:fox_meshShape.iog.og[0].gid";
-connectAttr "fox:initialShadingGroup.mwc" "fox:fox_meshShape.iog.og[0].gco";
-connectAttr "tvstand:groupId1.id" "tvstand:tvCabinetShape.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "tvstand:tvCabinetShape.iog.og[0].gco";
-connectAttr "television:polyExtrudeFace86.out" "television:pCubeShape1.i";
-connectAttr "television:polyDelEdge1.out" "television:TVShape.i";
-connectAttr "console:groupId17.id" "|MAY_REMOVE|console:PS2|console:Controller|console:Remote|console:RemoteShape.iog.og[0].gid"
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
+connectAttr "bedroom_SET_latest1:nightstandRN.phl[4]" ":initialShadingGroup.dsm" 
+		-na;
+connectAttr "bedroom_SET_latest1:scarfRN.phl[1]" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:polyCube1.out" "bedroom_SET_latest1:RoofShape.i"
 		;
-connectAttr ":initialShadingGroup.mwc" "|MAY_REMOVE|console:PS2|console:Controller|console:Remote|console:RemoteShape.iog.og[0].gco"
+connectAttr "bedroom_SET_latest1:fox:groupId1.id" "bedroom_SET_latest1:fox:fox_meshShape.iog.og[0].gid"
 		;
-connectAttr "console:groupId18.id" "|MAY_REMOVE|console:PS2|console:Controller|console:Buttons|console:ButtonsShape.iog.og[0].gid"
+connectAttr "bedroom_SET_latest1:fox:initialShadingGroup.mwc" "bedroom_SET_latest1:fox:fox_meshShape.iog.og[0].gco"
 		;
-connectAttr ":initialShadingGroup.mwc" "|MAY_REMOVE|console:PS2|console:Controller|console:Buttons|console:ButtonsShape.iog.og[0].gco"
+connectAttr "bedroom_SET_latest1:tvstand:groupId1.id" "bedroom_SET_latest1:tvstand:tvCabinetShape.iog.og[0].gid"
 		;
-connectAttr "console:groupId19.id" "|MAY_REMOVE|console:PS2|console:Controller1|console:Remote|console:RemoteShape.iog.og[0].gid"
+connectAttr ":initialShadingGroup.mwc" "bedroom_SET_latest1:tvstand:tvCabinetShape.iog.og[0].gco"
 		;
-connectAttr ":initialShadingGroup.mwc" "|MAY_REMOVE|console:PS2|console:Controller1|console:Remote|console:RemoteShape.iog.og[0].gco"
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace86.out" "bedroom_SET_latest1:television:pCubeShape1.i"
 		;
-connectAttr "console:groupId20.id" "|MAY_REMOVE|console:PS2|console:Controller1|console:Buttons|console:ButtonsShape.iog.og[0].gid"
+connectAttr "bedroom_SET_latest1:television:polyDelEdge1.out" "bedroom_SET_latest1:television:TVShape.i"
 		;
-connectAttr ":initialShadingGroup.mwc" "|MAY_REMOVE|console:PS2|console:Controller1|console:Buttons|console:ButtonsShape.iog.og[0].gco"
+connectAttr "bedroom_SET_latest1:console:groupId17.id" "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller|bedroom_SET_latest1:console:Remote|bedroom_SET_latest1:console:RemoteShape.iog.og[0].gid"
 		;
-connectAttr ":rmanDefaultDisplay.msg" ":rmanGlobals.displays[0]";
-connectAttr ":PxrPathTracer.msg" ":rmanGlobals.ri_integrator";
-connectAttr "d_openexr.msg" ":rmanDefaultDisplay.displayType";
-connectAttr "Ci.msg" ":rmanDefaultDisplay.displayChannels[0]";
-connectAttr "a.msg" ":rmanDefaultDisplay.displayChannels[1]";
-connectAttr ":rmanFinalGlobals.msg" ":renderManGlobals.p" -na;
-connectAttr ":rmanRerenderRISGlobals.msg" ":renderManGlobals.p" -na;
-connectAttr ":rmanFinalGlobals.msg" ":renderManRISGlobals.p" -na;
-connectAttr ":rmanRerenderRISGlobals.msg" ":renderManRISGlobals.p" -na;
-connectAttr ":rmanBakeGlobals.msg" ":renderManRISGlobals.p" -na;
-connectAttr ":rmanFinalOutputGlobals0.msg" ":rmanFinalGlobals.d" -na;
-connectAttr ":rmanRerenderRISOutputGlobals0.msg" ":rmanRerenderRISGlobals.d" -na
+connectAttr ":initialShadingGroup.mwc" "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller|bedroom_SET_latest1:console:Remote|bedroom_SET_latest1:console:RemoteShape.iog.og[0].gco"
+		;
+connectAttr "bedroom_SET_latest1:console:groupId18.id" "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller|bedroom_SET_latest1:console:Buttons|bedroom_SET_latest1:console:ButtonsShape.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller|bedroom_SET_latest1:console:Buttons|bedroom_SET_latest1:console:ButtonsShape.iog.og[0].gco"
+		;
+connectAttr "bedroom_SET_latest1:console:groupId19.id" "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller1|bedroom_SET_latest1:console:Remote|bedroom_SET_latest1:console:RemoteShape.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller1|bedroom_SET_latest1:console:Remote|bedroom_SET_latest1:console:RemoteShape.iog.og[0].gco"
+		;
+connectAttr "bedroom_SET_latest1:console:groupId20.id" "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller1|bedroom_SET_latest1:console:Buttons|bedroom_SET_latest1:console:ButtonsShape.iog.og[0].gid"
+		;
+connectAttr ":initialShadingGroup.mwc" "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller1|bedroom_SET_latest1:console:Buttons|bedroom_SET_latest1:console:ButtonsShape.iog.og[0].gco"
 		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface5SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface6SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface7SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface8SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface9SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface10SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface11SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface12SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface13SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface14SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface15SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface16SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "PxrSurface17SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "fox:initialShadingGroup.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "fatVase:initialShadingGroup.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "fatVase:initialShadingGroup2.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "string2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "starSG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "pSphere2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "starSG1.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "wood_partSG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "top_partSG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "lights:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "lights:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrLayerSurface1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe1:PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe1:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe1:PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe1:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrSurface5SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrSurface6SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrSurface7SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrSurface8SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe:PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe:PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe2:PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe2:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe2:PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe2:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe3:PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe3:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe3:PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:jackieShoe3:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrSurface9SG.message" ":defaultLightSet.message";
-relationship "link" ":lightLinker1" "karen_latest:PxrSurface10SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface8SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface9SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface10SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface11SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface12SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface13SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface14SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface15SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface16SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:PxrSurface17SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:fox:initialShadingGroup.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:fatVase:initialShadingGroup.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:fatVase:initialShadingGroup2.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:string2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:starSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:pSphere2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:starSG1.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:wood_partSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:top_partSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:lights:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:lights:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrLayerSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface8SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface9SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface10SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface5SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface6SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface7SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface8SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface9SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface10SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface11SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface12SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface13SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface14SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface15SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface16SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "PxrSurface17SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "fox:initialShadingGroup.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "fatVase:initialShadingGroup.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "fatVase:initialShadingGroup2.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "string2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "starSG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "pSphere2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "starSG1.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "wood_partSG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "top_partSG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "lights:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "lights:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrLayerSurface1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe1:PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe1:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe1:PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe1:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrSurface5SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrSurface6SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrSurface7SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrSurface8SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe:PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe:PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe2:PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe2:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe2:PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe2:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe3:PxrSurface3SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe3:PxrSurface2SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe3:PxrSurface4SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:jackieShoe3:PxrSurface1SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrSurface9SG.message" ":defaultLightSet.message";
-relationship "shadowLink" ":lightLinker1" "karen_latest:PxrSurface10SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface8SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface9SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface10SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface11SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface12SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface13SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface14SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface15SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface16SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:PxrSurface17SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:fox:initialShadingGroup.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:fatVase:initialShadingGroup.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:fatVase:initialShadingGroup2.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:string2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:starSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:pSphere2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:starSG1.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:wood_partSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:top_partSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:lights:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:lights:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrLayerSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface8SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface9SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "bedroom_SET_latest1:karen_latest:PxrSurface10SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "PxrLayerMixer1.pxrMaterialOut" "deskShader.inputMaterial";
-connectAttr "wood1.oa" "deskShader.diffuseGain";
-connectAttr "deskShader.oc" "PxrSurface1SG.ss";
-connectAttr "PxrSurface1SG.msg" "materialInfo1.sg";
-connectAttr "deskShader.msg" "materialInfo1.m";
-connectAttr "deskShader.msg" "materialInfo1.t" -na;
-connectAttr ":defaultRenderGlobals.msg" "mtorPartition.rgcnx";
-connectAttr "knobShader.oc" "PxrSurface2SG.ss";
-connectAttr "PxrSurface2SG.msg" "materialInfo2.sg";
-connectAttr "knobShader.msg" "materialInfo2.m";
-connectAttr "knobShader.msg" "materialInfo2.t" -na;
-connectAttr "lampshader.oc" "PxrSurface3SG.ss";
-connectAttr "PxrSurface3SG.msg" "materialInfo3.sg";
-connectAttr "lampshader.msg" "materialInfo3.m";
-connectAttr "lampshader.msg" "materialInfo3.t" -na;
-connectAttr "PxrSurface4.oc" "PxrSurface4SG.ss";
-connectAttr "PxrSurface4SG.msg" "materialInfo4.sg";
-connectAttr "PxrSurface4.msg" "materialInfo4.m";
-connectAttr "PxrSurface4.msg" "materialInfo4.t" -na;
-connectAttr "file8.oc" "Book1Shader.diffuseColor";
-connectAttr "Book1Shader.oc" "PxrSurface5SG.ss";
-connectAttr "PxrSurface5SG.msg" "materialInfo5.sg";
-connectAttr "Book1Shader.msg" "materialInfo5.m";
-connectAttr "file8.msg" "materialInfo5.t" -na;
-connectAttr "book2Shader.oc" "PxrSurface6SG.ss";
-connectAttr "PxrSurface6SG.msg" "materialInfo6.sg";
-connectAttr "book2Shader.msg" "materialInfo6.m";
-connectAttr "book2Shader.msg" "materialInfo6.t" -na;
-connectAttr "book3Shader.oc" "PxrSurface7SG.ss";
-connectAttr "PxrSurface7SG.msg" "materialInfo7.sg";
-connectAttr "book3Shader.msg" "materialInfo7.m";
-connectAttr "book3Shader.msg" "materialInfo7.t" -na;
-connectAttr "file1.oa" "PxrSurface8.diffuseGain";
-connectAttr "file2.oc" "PxrSurface8.diffuseColor";
-connectAttr "PxrSurface8.oc" "PxrSurface8SG.ss";
-connectAttr "PxrSurface8SG.msg" "materialInfo8.sg";
-connectAttr "PxrSurface8.msg" "materialInfo8.m";
-connectAttr "PxrSurface8.msg" "materialInfo8.t" -na;
-connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1.ws";
-connectAttr "place2dTexture1.c" "file1.c";
-connectAttr "place2dTexture1.tf" "file1.tf";
-connectAttr "place2dTexture1.rf" "file1.rf";
-connectAttr "place2dTexture1.mu" "file1.mu";
-connectAttr "place2dTexture1.mv" "file1.mv";
-connectAttr "place2dTexture1.s" "file1.s";
-connectAttr "place2dTexture1.wu" "file1.wu";
-connectAttr "place2dTexture1.wv" "file1.wv";
-connectAttr "place2dTexture1.re" "file1.re";
-connectAttr "place2dTexture1.of" "file1.of";
-connectAttr "place2dTexture1.r" "file1.ro";
-connectAttr "place2dTexture1.n" "file1.n";
-connectAttr "place2dTexture1.vt1" "file1.vt1";
-connectAttr "place2dTexture1.vt2" "file1.vt2";
-connectAttr "place2dTexture1.vt3" "file1.vt3";
-connectAttr "place2dTexture1.vc1" "file1.vc1";
-connectAttr "place2dTexture1.o" "file1.uv";
-connectAttr "place2dTexture1.ofs" "file1.fs";
-connectAttr ":defaultColorMgtGlobals.cme" "file2.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2.ws";
-connectAttr "place2dTexture2.c" "file2.c";
-connectAttr "place2dTexture2.tf" "file2.tf";
-connectAttr "place2dTexture2.rf" "file2.rf";
-connectAttr "place2dTexture2.mu" "file2.mu";
-connectAttr "place2dTexture2.mv" "file2.mv";
-connectAttr "place2dTexture2.s" "file2.s";
-connectAttr "place2dTexture2.wu" "file2.wu";
-connectAttr "place2dTexture2.wv" "file2.wv";
-connectAttr "place2dTexture2.re" "file2.re";
-connectAttr "place2dTexture2.of" "file2.of";
-connectAttr "place2dTexture2.r" "file2.ro";
-connectAttr "place2dTexture2.n" "file2.n";
-connectAttr "place2dTexture2.vt1" "file2.vt1";
-connectAttr "place2dTexture2.vt2" "file2.vt2";
-connectAttr "place2dTexture2.vt3" "file2.vt3";
-connectAttr "place2dTexture2.vc1" "file2.vc1";
-connectAttr "place2dTexture2.o" "file2.uv";
-connectAttr "place2dTexture2.ofs" "file2.fs";
-connectAttr "file3.oc" "PxrSurface9.diffuseColor";
-connectAttr "PxrSurface9.oc" "PxrSurface9SG.ss";
-connectAttr "PxrSurface9SG.msg" "materialInfo9.sg";
-connectAttr "PxrSurface9.msg" "materialInfo9.m";
-connectAttr "file3.msg" "materialInfo9.t" -na;
-connectAttr ":defaultColorMgtGlobals.cme" "file3.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file3.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file3.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file3.ws";
-connectAttr "place2dTexture3.c" "file3.c";
-connectAttr "place2dTexture3.tf" "file3.tf";
-connectAttr "place2dTexture3.rf" "file3.rf";
-connectAttr "place2dTexture3.mu" "file3.mu";
-connectAttr "place2dTexture3.mv" "file3.mv";
-connectAttr "place2dTexture3.s" "file3.s";
-connectAttr "place2dTexture3.wu" "file3.wu";
-connectAttr "place2dTexture3.wv" "file3.wv";
-connectAttr "place2dTexture3.re" "file3.re";
-connectAttr "place2dTexture3.of" "file3.of";
-connectAttr "place2dTexture3.r" "file3.ro";
-connectAttr "place2dTexture3.n" "file3.n";
-connectAttr "place2dTexture3.vt1" "file3.vt1";
-connectAttr "place2dTexture3.vt2" "file3.vt2";
-connectAttr "place2dTexture3.vt3" "file3.vt3";
-connectAttr "place2dTexture3.vc1" "file3.vc1";
-connectAttr "place2dTexture3.o" "file3.uv";
-connectAttr "place2dTexture3.ofs" "file3.fs";
-connectAttr "file4.oc" "PxrSurface10.diffuseColor";
-connectAttr "PxrSurface10.oc" "PxrSurface10SG.ss";
-connectAttr "PxrSurface10SG.msg" "materialInfo10.sg";
-connectAttr "PxrSurface10.msg" "materialInfo10.m";
-connectAttr "PxrSurface10.msg" "materialInfo10.t" -na;
-connectAttr ":defaultColorMgtGlobals.cme" "file4.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file4.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file4.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file4.ws";
-connectAttr "place2dTexture4.c" "file4.c";
-connectAttr "place2dTexture4.tf" "file4.tf";
-connectAttr "place2dTexture4.rf" "file4.rf";
-connectAttr "place2dTexture4.mu" "file4.mu";
-connectAttr "place2dTexture4.mv" "file4.mv";
-connectAttr "place2dTexture4.s" "file4.s";
-connectAttr "place2dTexture4.wu" "file4.wu";
-connectAttr "place2dTexture4.wv" "file4.wv";
-connectAttr "place2dTexture4.re" "file4.re";
-connectAttr "place2dTexture4.of" "file4.of";
-connectAttr "place2dTexture4.r" "file4.ro";
-connectAttr "place2dTexture4.n" "file4.n";
-connectAttr "place2dTexture4.vt1" "file4.vt1";
-connectAttr "place2dTexture4.vt2" "file4.vt2";
-connectAttr "place2dTexture4.vt3" "file4.vt3";
-connectAttr "place2dTexture4.vc1" "file4.vc1";
-connectAttr "place2dTexture4.o" "file4.uv";
-connectAttr "place2dTexture4.ofs" "file4.fs";
-connectAttr "file5.oc" "PxrSurface11.diffuseColor";
-connectAttr "PxrSurface11.oc" "PxrSurface11SG.ss";
-connectAttr "PxrSurface11SG.msg" "materialInfo11.sg";
-connectAttr "PxrSurface11.msg" "materialInfo11.m";
-connectAttr "PxrSurface11.msg" "materialInfo11.t" -na;
-connectAttr ":defaultColorMgtGlobals.cme" "file5.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file5.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file5.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file5.ws";
-connectAttr "place2dTexture5.c" "file5.c";
-connectAttr "place2dTexture5.tf" "file5.tf";
-connectAttr "place2dTexture5.rf" "file5.rf";
-connectAttr "place2dTexture5.mu" "file5.mu";
-connectAttr "place2dTexture5.mv" "file5.mv";
-connectAttr "place2dTexture5.s" "file5.s";
-connectAttr "place2dTexture5.wu" "file5.wu";
-connectAttr "place2dTexture5.wv" "file5.wv";
-connectAttr "place2dTexture5.re" "file5.re";
-connectAttr "place2dTexture5.of" "file5.of";
-connectAttr "place2dTexture5.r" "file5.ro";
-connectAttr "place2dTexture5.n" "file5.n";
-connectAttr "place2dTexture5.vt1" "file5.vt1";
-connectAttr "place2dTexture5.vt2" "file5.vt2";
-connectAttr "place2dTexture5.vt3" "file5.vt3";
-connectAttr "place2dTexture5.vc1" "file5.vc1";
-connectAttr "place2dTexture5.o" "file5.uv";
-connectAttr "place2dTexture5.ofs" "file5.fs";
-connectAttr "file6.oc" "PxrSurface12.diffuseColor";
-connectAttr "PxrSurface12.oc" "PxrSurface12SG.ss";
-connectAttr "PxrSurface12SG.msg" "materialInfo12.sg";
-connectAttr "PxrSurface12.msg" "materialInfo12.m";
-connectAttr "PxrSurface12.msg" "materialInfo12.t" -na;
-connectAttr ":defaultColorMgtGlobals.cme" "file6.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file6.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file6.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file6.ws";
-connectAttr "place2dTexture6.c" "file6.c";
-connectAttr "place2dTexture6.tf" "file6.tf";
-connectAttr "place2dTexture6.rf" "file6.rf";
-connectAttr "place2dTexture6.mu" "file6.mu";
-connectAttr "place2dTexture6.mv" "file6.mv";
-connectAttr "place2dTexture6.s" "file6.s";
-connectAttr "place2dTexture6.wu" "file6.wu";
-connectAttr "place2dTexture6.wv" "file6.wv";
-connectAttr "place2dTexture6.re" "file6.re";
-connectAttr "place2dTexture6.of" "file6.of";
-connectAttr "place2dTexture6.r" "file6.ro";
-connectAttr "place2dTexture6.n" "file6.n";
-connectAttr "place2dTexture6.vt1" "file6.vt1";
-connectAttr "place2dTexture6.vt2" "file6.vt2";
-connectAttr "place2dTexture6.vt3" "file6.vt3";
-connectAttr "place2dTexture6.vc1" "file6.vc1";
-connectAttr "place2dTexture6.o" "file6.uv";
-connectAttr "place2dTexture6.ofs" "file6.fs";
-connectAttr "PxrSurface13.oc" "PxrSurface13SG.ss";
-connectAttr "PxrSurface13SG.msg" "materialInfo13.sg";
-connectAttr "PxrSurface13.msg" "materialInfo13.m";
-connectAttr "PxrSurface13.msg" "materialInfo13.t" -na;
-connectAttr "PxrSurface14.oc" "PxrSurface14SG.ss";
-connectAttr "PxrSurface14SG.msg" "materialInfo14.sg";
-connectAttr "PxrSurface14.msg" "materialInfo14.m";
-connectAttr "PxrSurface14.msg" "materialInfo14.t" -na;
-connectAttr "PageShader.oc" "PxrSurface15SG.ss";
-connectAttr "PxrSurface15SG.msg" "materialInfo15.sg";
-connectAttr "PageShader.msg" "materialInfo15.m";
-connectAttr "PageShader.msg" "materialInfo15.t" -na;
-connectAttr "file7.oc" "scribblesShader.diffuseColor";
-connectAttr "scribblesShader.oc" "PxrSurface16SG.ss";
-connectAttr "PxrSurface16SG.msg" "materialInfo16.sg";
-connectAttr "scribblesShader.msg" "materialInfo16.m";
-connectAttr "scribblesShader.msg" "materialInfo16.t" -na;
-connectAttr ":defaultColorMgtGlobals.cme" "file7.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file7.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file7.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file7.ws";
-connectAttr "place2dTexture7.c" "file7.c";
-connectAttr "place2dTexture7.tf" "file7.tf";
-connectAttr "place2dTexture7.rf" "file7.rf";
-connectAttr "place2dTexture7.mu" "file7.mu";
-connectAttr "place2dTexture7.mv" "file7.mv";
-connectAttr "place2dTexture7.s" "file7.s";
-connectAttr "place2dTexture7.wu" "file7.wu";
-connectAttr "place2dTexture7.wv" "file7.wv";
-connectAttr "place2dTexture7.re" "file7.re";
-connectAttr "place2dTexture7.of" "file7.of";
-connectAttr "place2dTexture7.r" "file7.ro";
-connectAttr "place2dTexture7.n" "file7.n";
-connectAttr "place2dTexture7.vt1" "file7.vt1";
-connectAttr "place2dTexture7.vt2" "file7.vt2";
-connectAttr "place2dTexture7.vt3" "file7.vt3";
-connectAttr "place2dTexture7.vc1" "file7.vc1";
-connectAttr "place2dTexture7.o" "file7.uv";
-connectAttr "place2dTexture7.ofs" "file7.fs";
-connectAttr ":defaultColorMgtGlobals.cme" "file8.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file8.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file8.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file8.ws";
-connectAttr "place2dTexture8.c" "file8.c";
-connectAttr "place2dTexture8.tf" "file8.tf";
-connectAttr "place2dTexture8.rf" "file8.rf";
-connectAttr "place2dTexture8.mu" "file8.mu";
-connectAttr "place2dTexture8.mv" "file8.mv";
-connectAttr "place2dTexture8.s" "file8.s";
-connectAttr "place2dTexture8.wu" "file8.wu";
-connectAttr "place2dTexture8.wv" "file8.wv";
-connectAttr "place2dTexture8.re" "file8.re";
-connectAttr "place2dTexture8.of" "file8.of";
-connectAttr "place2dTexture8.r" "file8.ro";
-connectAttr "place2dTexture8.n" "file8.n";
-connectAttr "place2dTexture8.vt1" "file8.vt1";
-connectAttr "place2dTexture8.vt2" "file8.vt2";
-connectAttr "place2dTexture8.vt3" "file8.vt3";
-connectAttr "place2dTexture8.vc1" "file8.vc1";
-connectAttr "place2dTexture8.o" "file8.uv";
-connectAttr "place2dTexture8.ofs" "file8.fs";
-connectAttr "bookRedShader.oc" "PxrSurface17SG.ss";
-connectAttr "PxrSurface17SG.msg" "materialInfo17.sg";
-connectAttr "bookRedShader.msg" "materialInfo17.m";
-connectAttr "bookRedShader.msg" "materialInfo17.t" -na;
-connectAttr "sharedReferenceNode.sr" "bed_NEWRN.sr";
-connectAttr "sharedReferenceNode.sr" "doorRN.sr";
-connectAttr "sharedReferenceNode.sr" "book_stackRN.sr";
-connectAttr "vase:renderLayerManager.rlmi[0]" "vase:defaultRenderLayer.rlid";
-connectAttr ":PxrPathTracer.msg" "vase:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr ":rmanDefaultDisplay.msg" ":rmanGlobals.displays[0]";
+connectAttr ":PxrPathTracer.msg" ":rmanGlobals.ri_integrator";
+connectAttr "bedroom_SET_latest1:d_openexr.msg" ":rmanDefaultDisplay.displayType"
 		;
-connectAttr ":rmanGlobals.msg" "vase:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "bedroom_SET_latest1:Ci.msg" ":rmanDefaultDisplay.displayChannels[0]"
 		;
-connectAttr ":rmanDefaultDisplay.msg" "vase:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "bedroom_SET_latest1:a.msg" ":rmanDefaultDisplay.displayChannels[1]"
 		;
-connectAttr "vase:d_openexr.msg" "vase:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "bedroom_SET_latest1:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:defaultRenderLayer.rlid"
 		;
-connectAttr "fox:initialShadingGroup1.oc" "fox:initialShadingGroup.ss";
-connectAttr "fox:groupId1.msg" "fox:initialShadingGroup.gn" -na;
-connectAttr "fox:fox_meshShape.iog.og[0]" "fox:initialShadingGroup.dsm" -na;
-connectAttr "fox:initialShadingGroup.msg" "fox:materialInfo1.sg";
-connectAttr "fox:initialShadingGroup1.msg" "fox:materialInfo1.m";
-connectAttr "fatVase:initialShadingGroup1.oc" "fatVase:initialShadingGroup.ss";
-connectAttr "fatVase:initialShadingGroup.msg" "fatVase:materialInfo1.sg";
-connectAttr "fatVase:initialShadingGroup1.msg" "fatVase:materialInfo1.m";
-connectAttr "fatVase:initialShadingGroup3.oc" "fatVase:initialShadingGroup2.ss";
-connectAttr "fatVase:initialShadingGroup2.msg" "fatVase:materialInfo2.sg";
-connectAttr "fatVase:initialShadingGroup3.msg" "fatVase:materialInfo2.m";
-connectAttr "lambert2.oc" "string2SG.ss";
-connectAttr "string2SG.msg" "materialInfo18.sg";
-connectAttr "lambert2.msg" "materialInfo18.m";
-connectAttr "lambert3.oc" "starSG.ss";
-connectAttr "starSG.msg" "materialInfo19.sg";
-connectAttr "lambert3.msg" "materialInfo19.m";
-connectAttr "lambert4.oc" "pSphere2SG.ss";
-connectAttr "pSphere2SG.msg" "materialInfo20.sg";
-connectAttr "lambert4.msg" "materialInfo20.m";
-connectAttr "lambert5.oc" "starSG1.ss";
-connectAttr "starSG1.msg" "materialInfo21.sg";
-connectAttr "lambert5.msg" "materialInfo21.m";
-connectAttr "minidesk_wood_shader.oc" "wood_partSG.ss";
-connectAttr "wood_partSG.msg" "materialInfo22.sg";
-connectAttr "minidesk_wood_shader.msg" "materialInfo22.m";
-connectAttr "minidesk_top_shader.oc" "top_partSG.ss";
-connectAttr "top_partSG.msg" "materialInfo23.sg";
-connectAttr "minidesk_top_shader.msg" "materialInfo23.m";
-connectAttr "glasses:renderLayerManager.rlmi[0]" "glasses:defaultRenderLayer.rlid"
+connectAttr "bedroom_SET_latest1:PxrLayerMixer1.pxrMaterialOut" "bedroom_SET_latest1:deskShader.inputMaterial"
 		;
-connectAttr "sharedReferenceNode.sr" "Jacies_shoe_latestRN.sr";
-connectAttr "lamp_small:renderLayerManager.rlmi[0]" "lamp_small:defaultRenderLayer.rlid"
+connectAttr "bedroom_SET_latest1:wood1.oa" "bedroom_SET_latest1:deskShader.diffuseGain"
 		;
-connectAttr "toyBox:renderLayerManager.rlmi[0]" "toyBox:defaultRenderLayer.rlid"
+connectAttr "bedroom_SET_latest1:deskShader.oc" "bedroom_SET_latest1:PxrSurface1SG.ss"
 		;
-connectAttr "tvstand:renderLayerManager.rlmi[0]" "tvstand:defaultRenderLayer.rlid"
+connectAttr "bedroom_SET_latest1:PxrSurface1SG.msg" "bedroom_SET_latest1:materialInfo1.sg"
 		;
-connectAttr "television:renderLayerManager.rlmi[0]" "television:defaultRenderLayer.rlid"
+connectAttr "bedroom_SET_latest1:deskShader.msg" "bedroom_SET_latest1:materialInfo1.m"
 		;
-connectAttr "television:polyCube1.out" "television:polyExtrudeFace1.ip";
-connectAttr "television:TVShape.wm" "television:polyExtrudeFace1.mp";
-connectAttr "television:polyTweak1.out" "television:polyExtrudeFace2.ip";
-connectAttr "television:TVShape.wm" "television:polyExtrudeFace2.mp";
-connectAttr "television:polyExtrudeFace1.out" "television:polyTweak1.ip";
-connectAttr "television:polyTweak2.out" "television:polyExtrudeFace3.ip";
-connectAttr "television:TVShape.wm" "television:polyExtrudeFace3.mp";
-connectAttr "television:polyExtrudeFace2.out" "television:polyTweak2.ip";
-connectAttr "television:polyTweak3.out" "television:polyExtrudeFace4.ip";
-connectAttr "television:TVShape.wm" "television:polyExtrudeFace4.mp";
-connectAttr "television:polyExtrudeFace3.out" "television:polyTweak3.ip";
-connectAttr "television:polyTweak4.out" "television:polySplitRing1.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing1.mp";
-connectAttr "television:polyExtrudeFace4.out" "television:polyTweak4.ip";
-connectAttr "television:polySplitRing1.out" "television:polySplitRing2.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing2.mp";
-connectAttr "television:polyTweak5.out" "television:polySplitRing3.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing3.mp";
-connectAttr "television:polySplitRing2.out" "television:polyTweak5.ip";
-connectAttr "television:polySplitRing3.out" "television:polySplitRing4.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing4.mp";
-connectAttr "television:polySplitRing4.out" "television:polySplitRing5.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing5.mp";
-connectAttr "television:polySplitRing5.out" "television:polySplitRing6.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing6.mp";
-connectAttr "television:polySplitRing6.out" "television:polySplitRing7.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing7.mp";
-connectAttr "television:polySplitRing7.out" "television:polySplitRing8.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing8.mp";
-connectAttr "television:polySplitRing8.out" "television:polySplitRing9.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing9.mp";
-connectAttr "television:polySplitRing9.out" "television:polySplitRing10.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing10.mp";
-connectAttr "television:polySplitRing10.out" "television:polySplitRing11.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing11.mp";
-connectAttr "television:polySplitRing11.out" "television:polySplitRing12.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing12.mp";
-connectAttr "television:polySplitRing12.out" "television:polySplitRing13.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing13.mp";
-connectAttr "television:polySplitRing13.out" "television:polySplitRing14.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing14.mp";
-connectAttr "television:polySplitRing14.out" "television:polySplitRing15.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing15.mp";
-connectAttr "television:polySplitRing15.out" "television:polySplitRing16.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing16.mp";
-connectAttr "television:polySplitRing16.out" "television:polyTweak6.ip";
-connectAttr "television:polyTweak6.out" "television:polySplit1.ip";
-connectAttr "television:polyTweak7.out" "television:polyExtrudeFace5.ip";
-connectAttr "television:TVShape.wm" "television:polyExtrudeFace5.mp";
-connectAttr "television:polySplit1.out" "television:polyTweak7.ip";
-connectAttr "television:polyTweak8.out" "television:polySplitRing17.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing17.mp";
-connectAttr "television:polyExtrudeFace5.out" "television:polyTweak8.ip";
-connectAttr "television:polySplitRing17.out" "television:polySplitRing18.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing18.mp";
-connectAttr "television:polySplitRing18.out" "television:polySplitRing19.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing19.mp";
-connectAttr "television:polySplitRing19.out" "television:polySplitRing20.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing20.mp";
-connectAttr "television:polySplitRing20.out" "television:polySplit2.ip";
-connectAttr "television:polyTweak9.out" "television:polyExtrudeFace6.ip";
-connectAttr "television:TVShape.wm" "television:polyExtrudeFace6.mp";
-connectAttr "television:polySplit2.out" "television:polyTweak9.ip";
-connectAttr "television:polyExtrudeFace6.out" "television:polyExtrudeFace7.ip";
-connectAttr "television:TVShape.wm" "television:polyExtrudeFace7.mp";
-connectAttr "television:polyTweak10.out" "television:polySplitRing21.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing21.mp";
-connectAttr "television:polyExtrudeFace7.out" "television:polyTweak10.ip";
-connectAttr "television:polySplitRing21.out" "television:polySplitRing22.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing22.mp";
-connectAttr "television:polySplitRing22.out" "television:polySplitRing23.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing23.mp";
-connectAttr "television:polySplitRing23.out" "television:polySplitRing24.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing24.mp";
-connectAttr "television:polySplitRing24.out" "television:polySplitRing25.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing25.mp";
-connectAttr "television:polySplitRing25.out" "television:polySplitRing26.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing26.mp";
-connectAttr "television:polySplitRing26.out" "television:polySplitRing27.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing27.mp";
-connectAttr "television:polySplitRing27.out" "television:polySplitRing28.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing28.mp";
-connectAttr "television:polySplitRing28.out" "television:polySplitRing29.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing29.mp";
-connectAttr "television:polySplitRing29.out" "television:polySplitRing30.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing30.mp";
-connectAttr "television:polySplitRing30.out" "television:polyTweak11.ip";
-connectAttr "television:polyTweak11.out" "television:polySplit3.ip";
-connectAttr "television:polySplit3.out" "television:polySplit4.ip";
-connectAttr "television:polySplit4.out" "television:polySplit5.ip";
-connectAttr "television:polySplit5.out" "television:polyExtrudeFace8.ip";
-connectAttr "television:TVShape.wm" "television:polyExtrudeFace8.mp";
-connectAttr "television:polyExtrudeFace8.out" "television:polySplitRing31.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing31.mp";
-connectAttr "television:polySplitRing31.out" "television:polySplitRing32.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing32.mp";
-connectAttr "television:polySplitRing32.out" "television:polySplitRing33.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing33.mp";
-connectAttr "television:polySplitRing33.out" "television:polySplitRing34.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing34.mp";
-connectAttr "television:polySplitRing34.out" "television:polySplitRing35.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing35.mp";
-connectAttr "television:polySplitRing35.out" "television:polySplitRing36.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing36.mp";
-connectAttr "television:polySplitRing36.out" "television:polySplitRing37.ip";
-connectAttr "television:TVShape.wm" "television:polySplitRing37.mp";
-connectAttr "television:polySplitRing37.out" "television:polyDelEdge1.ip";
-connectAttr "television:polyCube2.out" "television:polyExtrudeFace9.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace9.mp";
-connectAttr "television:polyTweak12.out" "television:polyExtrudeFace10.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace10.mp";
-connectAttr "television:polyExtrudeFace9.out" "television:polyTweak12.ip";
-connectAttr "television:polyExtrudeFace10.out" "television:polyExtrudeFace11.ip"
-		;
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace11.mp";
-connectAttr "television:polyTweak13.out" "television:polyExtrudeFace12.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace12.mp";
-connectAttr "television:polyExtrudeFace11.out" "television:polyTweak13.ip";
-connectAttr "television:polyTweak14.out" "television:polyExtrudeFace13.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace13.mp";
-connectAttr "television:polyExtrudeFace12.out" "television:polyTweak14.ip";
-connectAttr "television:polyExtrudeFace13.out" "television:polyExtrudeFace14.ip"
-		;
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace14.mp";
-connectAttr "television:polyTweak15.out" "television:polyExtrudeFace15.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace15.mp";
-connectAttr "television:polyExtrudeFace14.out" "television:polyTweak15.ip";
-connectAttr "television:polyTweak16.out" "television:polyExtrudeFace16.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace16.mp";
-connectAttr "television:polyExtrudeFace15.out" "television:polyTweak16.ip";
-connectAttr "television:polyTweak17.out" "television:polyExtrudeFace17.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace17.mp";
-connectAttr "television:polyExtrudeFace16.out" "television:polyTweak17.ip";
-connectAttr "television:polyTweak18.out" "television:polyExtrudeFace18.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace18.mp";
-connectAttr "television:polyExtrudeFace17.out" "television:polyTweak18.ip";
-connectAttr "television:polyTweak19.out" "television:polyExtrudeFace19.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace19.mp";
-connectAttr "television:polyExtrudeFace18.out" "television:polyTweak19.ip";
-connectAttr "television:polyTweak20.out" "television:polyExtrudeFace20.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace20.mp";
-connectAttr "television:polyExtrudeFace19.out" "television:polyTweak20.ip";
-connectAttr "television:polyTweak21.out" "television:polyExtrudeFace21.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace21.mp";
-connectAttr "television:polyExtrudeFace20.out" "television:polyTweak21.ip";
-connectAttr "television:polyTweak22.out" "television:polyExtrudeFace22.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace22.mp";
-connectAttr "television:polyExtrudeFace21.out" "television:polyTweak22.ip";
-connectAttr "television:polyTweak23.out" "television:polyExtrudeFace23.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace23.mp";
-connectAttr "television:polyExtrudeFace22.out" "television:polyTweak23.ip";
-connectAttr "television:polyTweak24.out" "television:polyExtrudeFace24.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace24.mp";
-connectAttr "television:polyExtrudeFace23.out" "television:polyTweak24.ip";
-connectAttr "television:polyTweak25.out" "television:polyExtrudeFace25.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace25.mp";
-connectAttr "television:polyExtrudeFace24.out" "television:polyTweak25.ip";
-connectAttr "television:polyTweak26.out" "television:polyExtrudeFace26.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace26.mp";
-connectAttr "television:polyExtrudeFace25.out" "television:polyTweak26.ip";
-connectAttr "television:polyTweak27.out" "television:polyExtrudeFace27.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace27.mp";
-connectAttr "television:polyExtrudeFace26.out" "television:polyTweak27.ip";
-connectAttr "television:polyTweak28.out" "television:polyExtrudeFace28.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace28.mp";
-connectAttr "television:polyExtrudeFace27.out" "television:polyTweak28.ip";
-connectAttr "television:polyTweak29.out" "television:polyExtrudeFace29.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace29.mp";
-connectAttr "television:polyExtrudeFace28.out" "television:polyTweak29.ip";
-connectAttr "television:polyTweak30.out" "television:polyExtrudeFace30.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace30.mp";
-connectAttr "television:polyExtrudeFace29.out" "television:polyTweak30.ip";
-connectAttr "television:polyTweak31.out" "television:polyExtrudeFace31.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace31.mp";
-connectAttr "television:polyExtrudeFace30.out" "television:polyTweak31.ip";
-connectAttr "television:polyTweak32.out" "television:polyExtrudeFace32.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace32.mp";
-connectAttr "television:polyExtrudeFace31.out" "television:polyTweak32.ip";
-connectAttr "television:polyTweak33.out" "television:polyExtrudeFace33.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace33.mp";
-connectAttr "television:polyExtrudeFace32.out" "television:polyTweak33.ip";
-connectAttr "television:polyTweak34.out" "television:polyExtrudeFace34.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace34.mp";
-connectAttr "television:polyExtrudeFace33.out" "television:polyTweak34.ip";
-connectAttr "television:polyTweak35.out" "television:polyExtrudeFace35.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace35.mp";
-connectAttr "television:polyExtrudeFace34.out" "television:polyTweak35.ip";
-connectAttr "television:polyTweak36.out" "television:polyExtrudeFace36.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace36.mp";
-connectAttr "television:polyExtrudeFace35.out" "television:polyTweak36.ip";
-connectAttr "television:polyTweak37.out" "television:polyExtrudeFace37.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace37.mp";
-connectAttr "television:polyExtrudeFace36.out" "television:polyTweak37.ip";
-connectAttr "television:polyTweak38.out" "television:polyExtrudeFace38.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace38.mp";
-connectAttr "television:polyExtrudeFace37.out" "television:polyTweak38.ip";
-connectAttr "television:polyTweak39.out" "television:polyExtrudeFace39.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace39.mp";
-connectAttr "television:polyExtrudeFace38.out" "television:polyTweak39.ip";
-connectAttr "television:polyTweak40.out" "television:polyExtrudeFace40.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace40.mp";
-connectAttr "television:polyExtrudeFace39.out" "television:polyTweak40.ip";
-connectAttr "television:polyTweak41.out" "television:polyExtrudeFace41.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace41.mp";
-connectAttr "television:polyExtrudeFace40.out" "television:polyTweak41.ip";
-connectAttr "television:polyTweak42.out" "television:polyExtrudeFace42.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace42.mp";
-connectAttr "television:polyExtrudeFace41.out" "television:polyTweak42.ip";
-connectAttr "television:polyTweak43.out" "television:polyExtrudeFace43.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace43.mp";
-connectAttr "television:polyExtrudeFace42.out" "television:polyTweak43.ip";
-connectAttr "television:polyTweak44.out" "television:polyExtrudeFace44.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace44.mp";
-connectAttr "television:polyExtrudeFace43.out" "television:polyTweak44.ip";
-connectAttr "television:polyTweak45.out" "television:polyExtrudeFace45.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace45.mp";
-connectAttr "television:polyExtrudeFace44.out" "television:polyTweak45.ip";
-connectAttr "television:polyTweak46.out" "television:polyExtrudeFace46.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace46.mp";
-connectAttr "television:polyExtrudeFace45.out" "television:polyTweak46.ip";
-connectAttr "television:polyTweak47.out" "television:polyExtrudeFace47.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace47.mp";
-connectAttr "television:polyExtrudeFace46.out" "television:polyTweak47.ip";
-connectAttr "television:polyTweak48.out" "television:polyExtrudeFace48.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace48.mp";
-connectAttr "television:polyExtrudeFace47.out" "television:polyTweak48.ip";
-connectAttr "television:polyExtrudeFace48.out" "television:polyExtrudeFace49.ip"
-		;
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace49.mp";
-connectAttr "television:polyTweak49.out" "television:polyExtrudeFace50.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace50.mp";
-connectAttr "television:polyExtrudeFace49.out" "television:polyTweak49.ip";
-connectAttr "television:polyTweak50.out" "television:polyExtrudeFace51.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace51.mp";
-connectAttr "television:polyExtrudeFace50.out" "television:polyTweak50.ip";
-connectAttr "television:polyTweak51.out" "television:polyExtrudeFace52.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace52.mp";
-connectAttr "television:polyExtrudeFace51.out" "television:polyTweak51.ip";
-connectAttr "television:polyTweak52.out" "television:polyExtrudeFace53.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace53.mp";
-connectAttr "television:polyExtrudeFace52.out" "television:polyTweak52.ip";
-connectAttr "television:polyTweak53.out" "television:polyExtrudeFace54.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace54.mp";
-connectAttr "television:polyExtrudeFace53.out" "television:polyTweak53.ip";
-connectAttr "television:polyExtrudeFace54.out" "television:polyExtrudeFace55.ip"
-		;
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace55.mp";
-connectAttr "television:polyTweak54.out" "television:polyExtrudeFace56.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace56.mp";
-connectAttr "television:polyExtrudeFace55.out" "television:polyTweak54.ip";
-connectAttr "television:polyExtrudeFace56.out" "television:polyExtrudeFace57.ip"
-		;
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace57.mp";
-connectAttr "television:polyTweak55.out" "television:polyExtrudeFace58.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace58.mp";
-connectAttr "television:polyExtrudeFace57.out" "television:polyTweak55.ip";
-connectAttr "television:polyExtrudeFace58.out" "television:polyExtrudeFace59.ip"
-		;
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace59.mp";
-connectAttr "television:polyTweak56.out" "television:polyExtrudeFace60.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace60.mp";
-connectAttr "television:polyExtrudeFace59.out" "television:polyTweak56.ip";
-connectAttr "television:polyTweak57.out" "television:polyExtrudeFace61.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace61.mp";
-connectAttr "television:polyExtrudeFace60.out" "television:polyTweak57.ip";
-connectAttr "television:polyTweak58.out" "television:polyExtrudeFace62.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace62.mp";
-connectAttr "television:polyExtrudeFace61.out" "television:polyTweak58.ip";
-connectAttr "television:polyTweak59.out" "television:polyExtrudeFace63.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace63.mp";
-connectAttr "television:polyExtrudeFace62.out" "television:polyTweak59.ip";
-connectAttr "television:polyTweak60.out" "television:polyExtrudeFace64.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace64.mp";
-connectAttr "television:polyExtrudeFace63.out" "television:polyTweak60.ip";
-connectAttr "television:polyTweak61.out" "television:polyExtrudeFace65.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace65.mp";
-connectAttr "television:polyExtrudeFace64.out" "television:polyTweak61.ip";
-connectAttr "television:polyTweak62.out" "television:polyExtrudeFace66.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace66.mp";
-connectAttr "television:polyExtrudeFace65.out" "television:polyTweak62.ip";
-connectAttr "television:polyExtrudeFace66.out" "television:polyExtrudeFace67.ip"
-		;
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace67.mp";
-connectAttr "television:polyTweak63.out" "television:polyExtrudeFace68.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace68.mp";
-connectAttr "television:polyExtrudeFace67.out" "television:polyTweak63.ip";
-connectAttr "television:polyExtrudeFace68.out" "television:polyExtrudeFace69.ip"
-		;
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace69.mp";
-connectAttr "television:polyTweak64.out" "television:polyExtrudeFace70.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace70.mp";
-connectAttr "television:polyExtrudeFace69.out" "television:polyTweak64.ip";
-connectAttr "television:polyTweak65.out" "television:polyExtrudeFace71.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace71.mp";
-connectAttr "television:polyExtrudeFace70.out" "television:polyTweak65.ip";
-connectAttr "television:polyExtrudeFace71.out" "television:polyExtrudeFace72.ip"
-		;
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace72.mp";
-connectAttr "television:polyTweak66.out" "television:polyExtrudeFace73.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace73.mp";
-connectAttr "television:polyExtrudeFace72.out" "television:polyTweak66.ip";
-connectAttr "television:polyTweak67.out" "television:polyExtrudeFace74.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace74.mp";
-connectAttr "television:polyExtrudeFace73.out" "television:polyTweak67.ip";
-connectAttr "television:polyExtrudeFace74.out" "television:polyExtrudeFace75.ip"
-		;
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace75.mp";
-connectAttr "television:polyTweak68.out" "television:polyExtrudeFace76.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace76.mp";
-connectAttr "television:polyExtrudeFace75.out" "television:polyTweak68.ip";
-connectAttr "television:polyTweak69.out" "television:polyExtrudeFace77.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace77.mp";
-connectAttr "television:polyExtrudeFace76.out" "television:polyTweak69.ip";
-connectAttr "television:polyTweak70.out" "television:polyExtrudeFace78.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace78.mp";
-connectAttr "television:polyExtrudeFace77.out" "television:polyTweak70.ip";
-connectAttr "television:polyTweak71.out" "television:polyExtrudeFace79.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace79.mp";
-connectAttr "television:polyExtrudeFace78.out" "television:polyTweak71.ip";
-connectAttr "television:polyTweak72.out" "television:polyExtrudeFace80.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace80.mp";
-connectAttr "television:polyExtrudeFace79.out" "television:polyTweak72.ip";
-connectAttr "television:polyTweak73.out" "television:polyExtrudeFace81.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace81.mp";
-connectAttr "television:polyExtrudeFace80.out" "television:polyTweak73.ip";
-connectAttr "television:polyTweak74.out" "television:polyExtrudeFace82.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace82.mp";
-connectAttr "television:polyExtrudeFace81.out" "television:polyTweak74.ip";
-connectAttr "television:polyTweak75.out" "television:polyExtrudeFace83.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace83.mp";
-connectAttr "television:polyExtrudeFace82.out" "television:polyTweak75.ip";
-connectAttr "television:polyTweak76.out" "television:polyExtrudeFace84.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace84.mp";
-connectAttr "television:polyExtrudeFace83.out" "television:polyTweak76.ip";
-connectAttr "television:polyTweak77.out" "television:polyExtrudeFace85.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace85.mp";
-connectAttr "television:polyExtrudeFace84.out" "television:polyTweak77.ip";
-connectAttr "television:polyTweak78.out" "television:polyExtrudeFace86.ip";
-connectAttr "television:pCubeShape1.wm" "television:polyExtrudeFace86.mp";
-connectAttr "television:polyExtrudeFace85.out" "television:polyTweak78.ip";
-connectAttr "console:renderLayerManager.rlmi[0]" "console:defaultRenderLayer.rlid"
-		;
-connectAttr ":defaultRenderGlobals.msg" "console:mtorPartition.rgcnx";
-connectAttr "coathanger:renderLayerManager.rlmi[0]" "coathanger:defaultRenderLayer.rlid"
-		;
-connectAttr "mug:renderLayerManager.rlmi[0]" "mug:defaultRenderLayer.rlid";
-connectAttr "pencil:renderLayerManager.rlmi[0]" "pencil:defaultRenderLayer.rlid"
-		;
-connectAttr "easel:renderLayerManager.rlmi[0]" "easel:defaultRenderLayer.rlid";
-connectAttr "canvas:renderLayerManager.rlmi[0]" "canvas:defaultRenderLayer.rlid"
-		;
-connectAttr "lights:renderLayerManager.rlmi[0]" "lights:defaultRenderLayer.rlid"
-		;
-connectAttr "lights:mountain1.oc" "lights:PxrSurface1.diffuseColor";
-connectAttr "lights:PxrSurface1.oc" "lights:PxrSurface1SG.ss";
-connectAttr "lights:PxrSurface1SG.msg" "lights:materialInfo1.sg";
-connectAttr "lights:PxrSurface1.msg" "lights:materialInfo1.m";
-connectAttr "lights:PxrSurface1.msg" "lights:materialInfo1.t" -na;
-connectAttr "lights:PxrSurface2.oc" "lights:PxrSurface2SG.ss";
-connectAttr "lights:PxrSurface2SG.msg" "lights:materialInfo2.sg";
-connectAttr "lights:PxrSurface2.msg" "lights:materialInfo2.m";
-connectAttr "lights:PxrSurface2.msg" "lights:materialInfo2.t" -na;
-connectAttr "lights:place2dTexture1.o" "lights:mountain1.uv";
-connectAttr "lights:place2dTexture1.ofs" "lights:mountain1.fs";
-connectAttr "layerManager.dli[1]" "lights:layer1.id";
-connectAttr "layerManager.dli[2]" "lights:layer2.id";
-connectAttr ":defaultRenderGlobals.msg" "lights:mtorPartition.rgcnx";
-connectAttr "layerManager.dli[3]" "lights:layer3.id";
-connectAttr "sharedReferenceNode.sr" "floor_walls_latestRN.sr";
-connectAttr "sharedReferenceNode.sr" "desk_latestRN.sr";
-connectAttr "sharedReferenceNode.sr" "teacupRN.sr";
-connectAttr "sharedReferenceNode.sr" "toyPlaneRN1.sr";
-connectAttr "karen_latest:renderLayerManager.rlmi[0]" "karen_latest:defaultRenderLayer.rlid"
-		;
-connectAttr "karen_latest:PxrSurface1SG.msg" "karen_latest:materialInfo1.sg";
-connectAttr "karen_latest:PxrLayerMixer1.pxrMaterialOut" "karen_latest:PxrLayerSurface1.inputMaterial"
-		;
-connectAttr "karen_latest:PxrLayerSurface1.oc" "karen_latest:PxrLayerSurface1SG.rman__surface"
-		;
-connectAttr "karen_latest:PxrLayerSurface1SG.msg" "karen_latest:materialInfo2.sg"
-		;
-connectAttr "karen_latest:PxrLayer1.pxrMaterialOut" "karen_latest:PxrLayerMixer1.baselayer"
-		;
-connectAttr "karen_latest:PxrLayer2.pxrMaterialOut" "karen_latest:PxrLayerMixer1.layer1"
-		;
-connectAttr "karen_latest:PxrSurface2SG.msg" "karen_latest:materialInfo3.sg";
-connectAttr "karen_latest:apron_shader_render_tex.oc" "karen_latest:apron_shader_Pxr.diffuseColor"
-		;
-connectAttr "karen_latest:apron_shader_render_norm.resultN" "karen_latest:apron_shader_Pxr.bumpNormal"
-		;
-connectAttr "karen_latest:apron_shader_Pxr.oc" "karen_latest:PxrSurface3SG.rman__surface"
-		;
-connectAttr "karen_latest:apron_shader_GLSL.oc" "karen_latest:PxrSurface3SG.ss";
-connectAttr "karen_latest:PxrSurface3SG.msg" "karen_latest:materialInfo4.sg";
-connectAttr "karen_latest:apron_shader_GLSL.msg" "karen_latest:materialInfo4.m";
-connectAttr "karen_latest:jackieShoe1:PxrSurface3SG.msg" "karen_latest:jackieShoe1:materialInfo1.sg"
-		;
-connectAttr "karen_latest:jackieShoe1:PxrSurface2SG.msg" "karen_latest:jackieShoe1:materialInfo2.sg"
-		;
-connectAttr "karen_latest:jackieShoe1:PxrSurface4SG.msg" "karen_latest:jackieShoe1:materialInfo3.sg"
-		;
-connectAttr "karen_latest:jackieShoe1:PxrSurface1SG.msg" "karen_latest:jackieShoe1:materialInfo4.sg"
-		;
-connectAttr "karen_latest:eye_shader_render_tex.oc" "karen_latest:eye_shader_Pxr.diffuseColor"
-		;
-connectAttr "karen_latest:eye_shader_Pxr.oc" "karen_latest:PxrSurface4SG.rman__surface"
-		;
-connectAttr "karen_latest:eye_shader_GLSL.oc" "karen_latest:PxrSurface4SG.ss";
-connectAttr "karen_latest:PxrSurface4SG.msg" "karen_latest:materialInfo5.sg";
-connectAttr "karen_latest:eye_shader_GLSL.msg" "karen_latest:materialInfo5.m";
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:eye_shader_render_tex.cme"
-		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:eye_shader_render_tex.cmcf"
-		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:eye_shader_render_tex.cmcp"
-		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:eye_shader_render_tex.ws"
-		;
-connectAttr "karen_latest:place2dTexture1.c" "karen_latest:eye_shader_render_tex.c"
-		;
-connectAttr "karen_latest:place2dTexture1.tf" "karen_latest:eye_shader_render_tex.tf"
-		;
-connectAttr "karen_latest:place2dTexture1.rf" "karen_latest:eye_shader_render_tex.rf"
-		;
-connectAttr "karen_latest:place2dTexture1.mu" "karen_latest:eye_shader_render_tex.mu"
-		;
-connectAttr "karen_latest:place2dTexture1.mv" "karen_latest:eye_shader_render_tex.mv"
-		;
-connectAttr "karen_latest:place2dTexture1.s" "karen_latest:eye_shader_render_tex.s"
-		;
-connectAttr "karen_latest:place2dTexture1.wu" "karen_latest:eye_shader_render_tex.wu"
-		;
-connectAttr "karen_latest:place2dTexture1.wv" "karen_latest:eye_shader_render_tex.wv"
-		;
-connectAttr "karen_latest:place2dTexture1.re" "karen_latest:eye_shader_render_tex.re"
-		;
-connectAttr "karen_latest:place2dTexture1.of" "karen_latest:eye_shader_render_tex.of"
-		;
-connectAttr "karen_latest:place2dTexture1.r" "karen_latest:eye_shader_render_tex.ro"
-		;
-connectAttr "karen_latest:place2dTexture1.n" "karen_latest:eye_shader_render_tex.n"
-		;
-connectAttr "karen_latest:place2dTexture1.vt1" "karen_latest:eye_shader_render_tex.vt1"
-		;
-connectAttr "karen_latest:place2dTexture1.vt2" "karen_latest:eye_shader_render_tex.vt2"
-		;
-connectAttr "karen_latest:place2dTexture1.vt3" "karen_latest:eye_shader_render_tex.vt3"
-		;
-connectAttr "karen_latest:place2dTexture1.vc1" "karen_latest:eye_shader_render_tex.vc1"
-		;
-connectAttr "karen_latest:place2dTexture1.o" "karen_latest:eye_shader_render_tex.uv"
-		;
-connectAttr "karen_latest:place2dTexture1.ofs" "karen_latest:eye_shader_render_tex.fs"
-		;
-connectAttr "karen_latest:skin_shader_render_tex.oc" "karen_latest:skin_shader_Pxr.diffuseColor"
-		;
-connectAttr "karen_latest:skin_shader_Pxr.oc" "karen_latest:PxrSurface5SG.rman__surface"
-		;
-connectAttr "karen_latest:skin_shader_GLSL.oc" "karen_latest:PxrSurface5SG.ss";
-connectAttr "karen_latest:PxrSurface5SG.msg" "karen_latest:materialInfo6.sg";
-connectAttr "karen_latest:skin_shader_GLSL.msg" "karen_latest:materialInfo6.m";
-connectAttr "karen_latest:hair_shader_render_tex.oc" "karen_latest:hair_shader_Pxr.diffuseColor"
-		;
-connectAttr "karen_latest:hair_shader_render_norm.resultN" "karen_latest:hair_shader_Pxr.bumpNormal"
-		;
-connectAttr "karen_latest:hair_shader_Pxr.oc" "karen_latest:PxrSurface6SG.rman__surface"
-		;
-connectAttr "karen_latest:hair_shader_GLSL.oc" "karen_latest:PxrSurface6SG.ss";
-connectAttr "karen_latest:PxrSurface6SG.msg" "karen_latest:materialInfo7.sg";
-connectAttr "karen_latest:hair_shader_GLSL.msg" "karen_latest:materialInfo7.m";
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:skin_shader_render_tex.cme"
-		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:skin_shader_render_tex.cmcf"
-		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:skin_shader_render_tex.cmcp"
-		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:skin_shader_render_tex.ws"
-		;
-connectAttr "karen_latest:place2dTexture2.c" "karen_latest:skin_shader_render_tex.c"
-		;
-connectAttr "karen_latest:place2dTexture2.tf" "karen_latest:skin_shader_render_tex.tf"
-		;
-connectAttr "karen_latest:place2dTexture2.rf" "karen_latest:skin_shader_render_tex.rf"
-		;
-connectAttr "karen_latest:place2dTexture2.mu" "karen_latest:skin_shader_render_tex.mu"
-		;
-connectAttr "karen_latest:place2dTexture2.mv" "karen_latest:skin_shader_render_tex.mv"
-		;
-connectAttr "karen_latest:place2dTexture2.s" "karen_latest:skin_shader_render_tex.s"
-		;
-connectAttr "karen_latest:place2dTexture2.wu" "karen_latest:skin_shader_render_tex.wu"
-		;
-connectAttr "karen_latest:place2dTexture2.wv" "karen_latest:skin_shader_render_tex.wv"
-		;
-connectAttr "karen_latest:place2dTexture2.re" "karen_latest:skin_shader_render_tex.re"
-		;
-connectAttr "karen_latest:place2dTexture2.of" "karen_latest:skin_shader_render_tex.of"
-		;
-connectAttr "karen_latest:place2dTexture2.r" "karen_latest:skin_shader_render_tex.ro"
-		;
-connectAttr "karen_latest:place2dTexture2.n" "karen_latest:skin_shader_render_tex.n"
-		;
-connectAttr "karen_latest:place2dTexture2.vt1" "karen_latest:skin_shader_render_tex.vt1"
-		;
-connectAttr "karen_latest:place2dTexture2.vt2" "karen_latest:skin_shader_render_tex.vt2"
-		;
-connectAttr "karen_latest:place2dTexture2.vt3" "karen_latest:skin_shader_render_tex.vt3"
-		;
-connectAttr "karen_latest:place2dTexture2.vc1" "karen_latest:skin_shader_render_tex.vc1"
-		;
-connectAttr "karen_latest:place2dTexture2.o" "karen_latest:skin_shader_render_tex.uv"
-		;
-connectAttr "karen_latest:place2dTexture2.ofs" "karen_latest:skin_shader_render_tex.fs"
-		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:hair_shader_render_tex.cme"
-		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:hair_shader_render_tex.cmcf"
-		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:hair_shader_render_tex.cmcp"
-		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:hair_shader_render_tex.ws"
-		;
-connectAttr "karen_latest:place2dTexture3.c" "karen_latest:hair_shader_render_tex.c"
-		;
-connectAttr "karen_latest:place2dTexture3.tf" "karen_latest:hair_shader_render_tex.tf"
-		;
-connectAttr "karen_latest:place2dTexture3.rf" "karen_latest:hair_shader_render_tex.rf"
-		;
-connectAttr "karen_latest:place2dTexture3.mu" "karen_latest:hair_shader_render_tex.mu"
-		;
-connectAttr "karen_latest:place2dTexture3.mv" "karen_latest:hair_shader_render_tex.mv"
-		;
-connectAttr "karen_latest:place2dTexture3.s" "karen_latest:hair_shader_render_tex.s"
-		;
-connectAttr "karen_latest:place2dTexture3.wu" "karen_latest:hair_shader_render_tex.wu"
-		;
-connectAttr "karen_latest:place2dTexture3.wv" "karen_latest:hair_shader_render_tex.wv"
-		;
-connectAttr "karen_latest:place2dTexture3.re" "karen_latest:hair_shader_render_tex.re"
-		;
-connectAttr "karen_latest:place2dTexture3.of" "karen_latest:hair_shader_render_tex.of"
-		;
-connectAttr "karen_latest:place2dTexture3.r" "karen_latest:hair_shader_render_tex.ro"
-		;
-connectAttr "karen_latest:place2dTexture3.n" "karen_latest:hair_shader_render_tex.n"
-		;
-connectAttr "karen_latest:place2dTexture3.vt1" "karen_latest:hair_shader_render_tex.vt1"
-		;
-connectAttr "karen_latest:place2dTexture3.vt2" "karen_latest:hair_shader_render_tex.vt2"
-		;
-connectAttr "karen_latest:place2dTexture3.vt3" "karen_latest:hair_shader_render_tex.vt3"
-		;
-connectAttr "karen_latest:place2dTexture3.vc1" "karen_latest:hair_shader_render_tex.vc1"
-		;
-connectAttr "karen_latest:place2dTexture3.o" "karen_latest:hair_shader_render_tex.uv"
-		;
-connectAttr "karen_latest:place2dTexture3.ofs" "karen_latest:hair_shader_render_tex.fs"
-		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:apron_shader_render_tex.cme"
-		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:apron_shader_render_tex.cmcf"
-		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:apron_shader_render_tex.cmcp"
-		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:apron_shader_render_tex.ws"
-		;
-connectAttr "karen_latest:place2dTexture4.c" "karen_latest:apron_shader_render_tex.c"
-		;
-connectAttr "karen_latest:place2dTexture4.tf" "karen_latest:apron_shader_render_tex.tf"
-		;
-connectAttr "karen_latest:place2dTexture4.rf" "karen_latest:apron_shader_render_tex.rf"
-		;
-connectAttr "karen_latest:place2dTexture4.mu" "karen_latest:apron_shader_render_tex.mu"
-		;
-connectAttr "karen_latest:place2dTexture4.mv" "karen_latest:apron_shader_render_tex.mv"
-		;
-connectAttr "karen_latest:place2dTexture4.s" "karen_latest:apron_shader_render_tex.s"
-		;
-connectAttr "karen_latest:place2dTexture4.wu" "karen_latest:apron_shader_render_tex.wu"
-		;
-connectAttr "karen_latest:place2dTexture4.wv" "karen_latest:apron_shader_render_tex.wv"
-		;
-connectAttr "karen_latest:place2dTexture4.re" "karen_latest:apron_shader_render_tex.re"
-		;
-connectAttr "karen_latest:place2dTexture4.of" "karen_latest:apron_shader_render_tex.of"
-		;
-connectAttr "karen_latest:place2dTexture4.r" "karen_latest:apron_shader_render_tex.ro"
-		;
-connectAttr "karen_latest:place2dTexture4.n" "karen_latest:apron_shader_render_tex.n"
-		;
-connectAttr "karen_latest:place2dTexture4.vt1" "karen_latest:apron_shader_render_tex.vt1"
-		;
-connectAttr "karen_latest:place2dTexture4.vt2" "karen_latest:apron_shader_render_tex.vt2"
-		;
-connectAttr "karen_latest:place2dTexture4.vt3" "karen_latest:apron_shader_render_tex.vt3"
-		;
-connectAttr "karen_latest:place2dTexture4.vc1" "karen_latest:apron_shader_render_tex.vc1"
-		;
-connectAttr "karen_latest:place2dTexture4.o" "karen_latest:apron_shader_render_tex.uv"
-		;
-connectAttr "karen_latest:place2dTexture4.ofs" "karen_latest:apron_shader_render_tex.fs"
-		;
-connectAttr "karen_latest:PxrSurface7SG.msg" "karen_latest:materialInfo8.sg";
-connectAttr "karen_latest:shoes_shadder_Pxr.oc" "karen_latest:PxrSurface8SG.rman__surface"
-		;
-connectAttr "karen_latest:shoes_shadder_GLSL.oc" "karen_latest:PxrSurface8SG.ss"
-		;
-connectAttr "karen_latest:PxrSurface8SG.msg" "karen_latest:materialInfo9.sg";
-connectAttr "karen_latest:shoes_shadder_GLSL.msg" "karen_latest:materialInfo9.m"
-		;
-connectAttr "karen_latest:jackieShoe:PxrSurface3SG.msg" "karen_latest:jackieShoe:materialInfo1.sg"
-		;
-connectAttr "karen_latest:jackieShoe:PxrSurface2SG.msg" "karen_latest:jackieShoe:materialInfo2.sg"
-		;
-connectAttr "karen_latest:jackieShoe:PxrSurface4SG.msg" "karen_latest:jackieShoe:materialInfo3.sg"
-		;
-connectAttr "karen_latest:jackieShoe:PxrSurface1SG.msg" "karen_latest:jackieShoe:materialInfo4.sg"
-		;
-connectAttr "karen_latest:jackieShoe2:PxrSurface3SG.msg" "karen_latest:jackieShoe2:materialInfo1.sg"
-		;
-connectAttr "karen_latest:jackieShoe2:PxrSurface2SG.msg" "karen_latest:jackieShoe2:materialInfo2.sg"
-		;
-connectAttr "karen_latest:jackieShoe2:PxrSurface4SG.msg" "karen_latest:jackieShoe2:materialInfo3.sg"
-		;
-connectAttr "karen_latest:jackieShoe2:PxrSurface1SG.msg" "karen_latest:jackieShoe2:materialInfo4.sg"
-		;
-connectAttr "karen_latest:jackieShoe3:PxrSurface3SG.msg" "karen_latest:jackieShoe3:materialInfo1.sg"
-		;
-connectAttr "karen_latest:jackieShoe3:PxrSurface2SG.msg" "karen_latest:jackieShoe3:materialInfo2.sg"
-		;
-connectAttr "karen_latest:jackieShoe3:PxrSurface4SG.msg" "karen_latest:jackieShoe3:materialInfo3.sg"
-		;
-connectAttr "karen_latest:jackieShoe3:PxrSurface1SG.msg" "karen_latest:jackieShoe3:materialInfo4.sg"
-		;
-connectAttr "karen_latest:sole_shader_Pxr.oc" "karen_latest:PxrSurface9SG.rman__surface"
-		;
-connectAttr "karen_latest:sole_shader_GLSL.oc" "karen_latest:PxrSurface9SG.ss";
-connectAttr "karen_latest:PxrSurface9SG.msg" "karen_latest:materialInfo10.sg";
-connectAttr "karen_latest:sole_shader_GLSL.msg" "karen_latest:materialInfo10.m";
-connectAttr "karen_latest:dress_shader_render_tex.oc" "karen_latest:dress_shader_Pxr.diffuseColor"
-		;
-connectAttr "karen_latest:dress_shader_render_norm.resultN" "karen_latest:dress_shader_Pxr.bumpNormal"
-		;
-connectAttr "karen_latest:dress_shader_Pxr.oc" "karen_latest:PxrSurface10SG.rman__surface"
-		;
-connectAttr "karen_latest:dress_shader_GLSL.oc" "karen_latest:PxrSurface10SG.ss"
-		;
-connectAttr "karen_latest:PxrSurface10SG.msg" "karen_latest:materialInfo11.sg";
-connectAttr "karen_latest:dress_shader_GLSL.msg" "karen_latest:materialInfo11.m"
-		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:dress_shader_render_tex.cme"
-		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:dress_shader_render_tex.cmcf"
-		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:dress_shader_render_tex.cmcp"
-		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:dress_shader_render_tex.ws"
-		;
-connectAttr "karen_latest:place2dTexture5.c" "karen_latest:dress_shader_render_tex.c"
-		;
-connectAttr "karen_latest:place2dTexture5.tf" "karen_latest:dress_shader_render_tex.tf"
-		;
-connectAttr "karen_latest:place2dTexture5.rf" "karen_latest:dress_shader_render_tex.rf"
-		;
-connectAttr "karen_latest:place2dTexture5.mu" "karen_latest:dress_shader_render_tex.mu"
-		;
-connectAttr "karen_latest:place2dTexture5.mv" "karen_latest:dress_shader_render_tex.mv"
-		;
-connectAttr "karen_latest:place2dTexture5.s" "karen_latest:dress_shader_render_tex.s"
-		;
-connectAttr "karen_latest:place2dTexture5.wu" "karen_latest:dress_shader_render_tex.wu"
-		;
-connectAttr "karen_latest:place2dTexture5.wv" "karen_latest:dress_shader_render_tex.wv"
-		;
-connectAttr "karen_latest:place2dTexture5.re" "karen_latest:dress_shader_render_tex.re"
-		;
-connectAttr "karen_latest:place2dTexture5.of" "karen_latest:dress_shader_render_tex.of"
-		;
-connectAttr "karen_latest:place2dTexture5.r" "karen_latest:dress_shader_render_tex.ro"
-		;
-connectAttr "karen_latest:place2dTexture5.n" "karen_latest:dress_shader_render_tex.n"
-		;
-connectAttr "karen_latest:place2dTexture5.vt1" "karen_latest:dress_shader_render_tex.vt1"
-		;
-connectAttr "karen_latest:place2dTexture5.vt2" "karen_latest:dress_shader_render_tex.vt2"
-		;
-connectAttr "karen_latest:place2dTexture5.vt3" "karen_latest:dress_shader_render_tex.vt3"
-		;
-connectAttr "karen_latest:place2dTexture5.vc1" "karen_latest:dress_shader_render_tex.vc1"
-		;
-connectAttr "karen_latest:place2dTexture5.o" "karen_latest:dress_shader_render_tex.uv"
-		;
-connectAttr "karen_latest:place2dTexture5.ofs" "karen_latest:dress_shader_render_tex.fs"
-		;
-connectAttr "karen_latest:apron_shader_Pxr.msg" "karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "karen_latest:apron_shader_render_norm.msg" "karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "karen_latest:place2dTexture4.msg" "karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "karen_latest:apron_shader_render_tex.msg" "karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "karen_latest:PxrSurface3SG.msg" "karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "karen_latest:QuickRigCharacter_LeftHandBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG.dnsm"
+connectAttr "bedroom_SET_latest1:deskShader.msg" "bedroom_SET_latest1:materialInfo1.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_RightHandBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG.dnsm"
+connectAttr ":defaultRenderGlobals.msg" "bedroom_SET_latest1:mtorPartition.rgcnx"
+		;
+connectAttr "bedroom_SET_latest1:knobShader.oc" "bedroom_SET_latest1:PxrSurface2SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface2SG.msg" "bedroom_SET_latest1:materialInfo2.sg"
+		;
+connectAttr "bedroom_SET_latest1:knobShader.msg" "bedroom_SET_latest1:materialInfo2.m"
+		;
+connectAttr "bedroom_SET_latest1:knobShader.msg" "bedroom_SET_latest1:materialInfo2.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_LeftFootBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG.dnsm"
+connectAttr "bedroom_SET_latest1:lampshader.oc" "bedroom_SET_latest1:PxrSurface3SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface3SG.msg" "bedroom_SET_latest1:materialInfo3.sg"
+		;
+connectAttr "bedroom_SET_latest1:lampshader.msg" "bedroom_SET_latest1:materialInfo3.m"
+		;
+connectAttr "bedroom_SET_latest1:lampshader.msg" "bedroom_SET_latest1:materialInfo3.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_RightFootBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG.dnsm"
+connectAttr "bedroom_SET_latest1:PxrSurface4.oc" "bedroom_SET_latest1:PxrSurface4SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface4SG.msg" "bedroom_SET_latest1:materialInfo4.sg"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface4.msg" "bedroom_SET_latest1:materialInfo4.m"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface4.msg" "bedroom_SET_latest1:materialInfo4.t"
 		 -na;
-connectAttr "karen_latest:HIKproperties1.msg" "karen_latest:QuickRigCharacter.propertyState"
+connectAttr "bedroom_SET_latest1:file8.oc" "bedroom_SET_latest1:Book1Shader.diffuseColor"
 		;
-connectAttr "karen_latest:HIKproperties1.OutputPropertySetState" "karen_latest:HIKSolverNode1.InputPropertySetState"
+connectAttr "bedroom_SET_latest1:Book1Shader.oc" "bedroom_SET_latest1:PxrSurface5SG.ss"
 		;
-connectAttr "karen_latest:QuickRigCharacter.OutputCharacterDefinition" "karen_latest:HIKSolverNode1.InputCharacterDefinition"
+connectAttr "bedroom_SET_latest1:PxrSurface5SG.msg" "bedroom_SET_latest1:materialInfo5.sg"
 		;
-connectAttr "karen_latest:QuickRigCharacter.OutputCharacterDefinition" "karen_latest:HIKState2SK1.InputCharacterDefinition"
+connectAttr "bedroom_SET_latest1:Book1Shader.msg" "bedroom_SET_latest1:materialInfo5.m"
 		;
-connectAttr "karen_latest:HIKSolverNode1.OutputCharacterState" "karen_latest:HIKState2SK1.InputCharacterState"
-		;
-connectAttr "karen_latest:QuickRigCharacter.OutputCharacterDefinition" "karen_latest:QuickRigCharacter_ControlRig.HIC"
-		;
-connectAttr "karen_latest:QuickRigCharacter_HipsBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+connectAttr "bedroom_SET_latest1:file8.msg" "bedroom_SET_latest1:materialInfo5.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_ChestBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+connectAttr "bedroom_SET_latest1:book2Shader.oc" "bedroom_SET_latest1:PxrSurface6SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface6SG.msg" "bedroom_SET_latest1:materialInfo6.sg"
+		;
+connectAttr "bedroom_SET_latest1:book2Shader.msg" "bedroom_SET_latest1:materialInfo6.m"
+		;
+connectAttr "bedroom_SET_latest1:book2Shader.msg" "bedroom_SET_latest1:materialInfo6.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_LeftArmBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+connectAttr "bedroom_SET_latest1:book3Shader.oc" "bedroom_SET_latest1:PxrSurface7SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface7SG.msg" "bedroom_SET_latest1:materialInfo7.sg"
+		;
+connectAttr "bedroom_SET_latest1:book3Shader.msg" "bedroom_SET_latest1:materialInfo7.m"
+		;
+connectAttr "bedroom_SET_latest1:book3Shader.msg" "bedroom_SET_latest1:materialInfo7.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_RightArmBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+connectAttr "bedroom_SET_latest1:file1.oa" "bedroom_SET_latest1:PxrSurface8.diffuseGain"
+		;
+connectAttr "bedroom_SET_latest1:file2.oc" "bedroom_SET_latest1:PxrSurface8.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface8.oc" "bedroom_SET_latest1:PxrSurface8SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface8SG.msg" "bedroom_SET_latest1:materialInfo8.sg"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface8.msg" "bedroom_SET_latest1:materialInfo8.m"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface8.msg" "bedroom_SET_latest1:materialInfo8.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_LeftLegBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:file1.ws";
+connectAttr "bedroom_SET_latest1:place2dTexture1.c" "bedroom_SET_latest1:file1.c"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.tf" "bedroom_SET_latest1:file1.tf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.rf" "bedroom_SET_latest1:file1.rf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.mu" "bedroom_SET_latest1:file1.mu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.mv" "bedroom_SET_latest1:file1.mv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.s" "bedroom_SET_latest1:file1.s"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.wu" "bedroom_SET_latest1:file1.wu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.wv" "bedroom_SET_latest1:file1.wv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.re" "bedroom_SET_latest1:file1.re"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.of" "bedroom_SET_latest1:file1.of"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.r" "bedroom_SET_latest1:file1.ro"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.n" "bedroom_SET_latest1:file1.n"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.vt1" "bedroom_SET_latest1:file1.vt1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.vt2" "bedroom_SET_latest1:file1.vt2"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.vt3" "bedroom_SET_latest1:file1.vt3"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.vc1" "bedroom_SET_latest1:file1.vc1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.o" "bedroom_SET_latest1:file1.uv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture1.ofs" "bedroom_SET_latest1:file1.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:file2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:file2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:file2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:file2.ws";
+connectAttr "bedroom_SET_latest1:place2dTexture2.c" "bedroom_SET_latest1:file2.c"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.tf" "bedroom_SET_latest1:file2.tf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.rf" "bedroom_SET_latest1:file2.rf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.mu" "bedroom_SET_latest1:file2.mu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.mv" "bedroom_SET_latest1:file2.mv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.s" "bedroom_SET_latest1:file2.s"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.wu" "bedroom_SET_latest1:file2.wu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.wv" "bedroom_SET_latest1:file2.wv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.re" "bedroom_SET_latest1:file2.re"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.of" "bedroom_SET_latest1:file2.of"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.r" "bedroom_SET_latest1:file2.ro"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.n" "bedroom_SET_latest1:file2.n"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.vt1" "bedroom_SET_latest1:file2.vt1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.vt2" "bedroom_SET_latest1:file2.vt2"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.vt3" "bedroom_SET_latest1:file2.vt3"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.vc1" "bedroom_SET_latest1:file2.vc1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.o" "bedroom_SET_latest1:file2.uv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture2.ofs" "bedroom_SET_latest1:file2.fs"
+		;
+connectAttr "bedroom_SET_latest1:file3.oc" "bedroom_SET_latest1:PxrSurface9.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface9.oc" "bedroom_SET_latest1:PxrSurface9SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface9SG.msg" "bedroom_SET_latest1:materialInfo9.sg"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface9.msg" "bedroom_SET_latest1:materialInfo9.m"
+		;
+connectAttr "bedroom_SET_latest1:file3.msg" "bedroom_SET_latest1:materialInfo9.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_RightLegBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:file3.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:file3.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:file3.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:file3.ws";
+connectAttr "bedroom_SET_latest1:place2dTexture3.c" "bedroom_SET_latest1:file3.c"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.tf" "bedroom_SET_latest1:file3.tf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.rf" "bedroom_SET_latest1:file3.rf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.mu" "bedroom_SET_latest1:file3.mu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.mv" "bedroom_SET_latest1:file3.mv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.s" "bedroom_SET_latest1:file3.s"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.wu" "bedroom_SET_latest1:file3.wu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.wv" "bedroom_SET_latest1:file3.wv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.re" "bedroom_SET_latest1:file3.re"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.of" "bedroom_SET_latest1:file3.of"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.r" "bedroom_SET_latest1:file3.ro"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.n" "bedroom_SET_latest1:file3.n"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.vt1" "bedroom_SET_latest1:file3.vt1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.vt2" "bedroom_SET_latest1:file3.vt2"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.vt3" "bedroom_SET_latest1:file3.vt3"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.vc1" "bedroom_SET_latest1:file3.vc1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.o" "bedroom_SET_latest1:file3.uv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture3.ofs" "bedroom_SET_latest1:file3.fs"
+		;
+connectAttr "bedroom_SET_latest1:file4.oc" "bedroom_SET_latest1:PxrSurface10.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface10.oc" "bedroom_SET_latest1:PxrSurface10SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface10SG.msg" "bedroom_SET_latest1:materialInfo10.sg"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface10.msg" "bedroom_SET_latest1:materialInfo10.m"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface10.msg" "bedroom_SET_latest1:materialInfo10.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_HeadBPKG.msg" "karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:file4.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:file4.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:file4.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:file4.ws";
+connectAttr "bedroom_SET_latest1:place2dTexture4.c" "bedroom_SET_latest1:file4.c"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.tf" "bedroom_SET_latest1:file4.tf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.rf" "bedroom_SET_latest1:file4.rf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.mu" "bedroom_SET_latest1:file4.mu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.mv" "bedroom_SET_latest1:file4.mv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.s" "bedroom_SET_latest1:file4.s"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.wu" "bedroom_SET_latest1:file4.wu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.wv" "bedroom_SET_latest1:file4.wv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.re" "bedroom_SET_latest1:file4.re"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.of" "bedroom_SET_latest1:file4.of"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.r" "bedroom_SET_latest1:file4.ro"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.n" "bedroom_SET_latest1:file4.n"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.vt1" "bedroom_SET_latest1:file4.vt1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.vt2" "bedroom_SET_latest1:file4.vt2"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.vt3" "bedroom_SET_latest1:file4.vt3"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.vc1" "bedroom_SET_latest1:file4.vc1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.o" "bedroom_SET_latest1:file4.uv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture4.ofs" "bedroom_SET_latest1:file4.fs"
+		;
+connectAttr "bedroom_SET_latest1:file5.oc" "bedroom_SET_latest1:PxrSurface11.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface11.oc" "bedroom_SET_latest1:PxrSurface11SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface11SG.msg" "bedroom_SET_latest1:materialInfo11.sg"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface11.msg" "bedroom_SET_latest1:materialInfo11.m"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface11.msg" "bedroom_SET_latest1:materialInfo11.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_LeftHandBPKG1.msg" "karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:file5.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:file5.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:file5.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:file5.ws";
+connectAttr "bedroom_SET_latest1:place2dTexture5.c" "bedroom_SET_latest1:file5.c"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.tf" "bedroom_SET_latest1:file5.tf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.rf" "bedroom_SET_latest1:file5.rf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.mu" "bedroom_SET_latest1:file5.mu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.mv" "bedroom_SET_latest1:file5.mv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.s" "bedroom_SET_latest1:file5.s"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.wu" "bedroom_SET_latest1:file5.wu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.wv" "bedroom_SET_latest1:file5.wv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.re" "bedroom_SET_latest1:file5.re"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.of" "bedroom_SET_latest1:file5.of"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.r" "bedroom_SET_latest1:file5.ro"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.n" "bedroom_SET_latest1:file5.n"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.vt1" "bedroom_SET_latest1:file5.vt1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.vt2" "bedroom_SET_latest1:file5.vt2"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.vt3" "bedroom_SET_latest1:file5.vt3"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.vc1" "bedroom_SET_latest1:file5.vc1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.o" "bedroom_SET_latest1:file5.uv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture5.ofs" "bedroom_SET_latest1:file5.fs"
+		;
+connectAttr "bedroom_SET_latest1:file6.oc" "bedroom_SET_latest1:PxrSurface12.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface12.oc" "bedroom_SET_latest1:PxrSurface12SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface12SG.msg" "bedroom_SET_latest1:materialInfo12.sg"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface12.msg" "bedroom_SET_latest1:materialInfo12.m"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface12.msg" "bedroom_SET_latest1:materialInfo12.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_RightHandBPKG1.msg" "karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:file6.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:file6.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:file6.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:file6.ws";
+connectAttr "bedroom_SET_latest1:place2dTexture6.c" "bedroom_SET_latest1:file6.c"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.tf" "bedroom_SET_latest1:file6.tf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.rf" "bedroom_SET_latest1:file6.rf"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.mu" "bedroom_SET_latest1:file6.mu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.mv" "bedroom_SET_latest1:file6.mv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.s" "bedroom_SET_latest1:file6.s"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.wu" "bedroom_SET_latest1:file6.wu"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.wv" "bedroom_SET_latest1:file6.wv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.re" "bedroom_SET_latest1:file6.re"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.of" "bedroom_SET_latest1:file6.of"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.r" "bedroom_SET_latest1:file6.ro"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.n" "bedroom_SET_latest1:file6.n"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.vt1" "bedroom_SET_latest1:file6.vt1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.vt2" "bedroom_SET_latest1:file6.vt2"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.vt3" "bedroom_SET_latest1:file6.vt3"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.vc1" "bedroom_SET_latest1:file6.vc1"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.o" "bedroom_SET_latest1:file6.uv"
+		;
+connectAttr "bedroom_SET_latest1:place2dTexture6.ofs" "bedroom_SET_latest1:file6.fs"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface13.oc" "bedroom_SET_latest1:PxrSurface13SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface13SG.msg" "bedroom_SET_latest1:materialInfo13.sg"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface13.msg" "bedroom_SET_latest1:materialInfo13.m"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface13.msg" "bedroom_SET_latest1:materialInfo13.t"
 		 -na;
-connectAttr "karen_latest:QuickRigCharacter_LeftFootBPKG1.msg" "karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+connectAttr "bedroom_SET_latest1:PxrSurface14.oc" "bedroom_SET_latest1:PxrSurface14SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface14SG.msg" "bedroom_SET_latest1:materialInfo14.sg"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface14.msg" "bedroom_SET_latest1:materialInfo14.m"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface14.msg" "bedroom_SET_latest1:materialInfo14.t"
 		 -na;
-connectAttr "karen_latest:HIKproperties2.msg" "karen_latest:QuickRigCharacter1.propertyState"
+connectAttr "bedroom_SET_latest1:PageShader.oc" "bedroom_SET_latest1:PxrSurface15SG.ss"
 		;
-connectAttr "karen_latest:QuickRigCharacter1.OutputCharacterDefinition" "karen_latest:HIKState2SK2.InputCharacterDefinition"
+connectAttr "bedroom_SET_latest1:PxrSurface15SG.msg" "bedroom_SET_latest1:materialInfo15.sg"
 		;
-connectAttr "karen_latest:HIKSolverNode2.OutputCharacterState" "karen_latest:HIKState2SK2.InputCharacterState"
+connectAttr "bedroom_SET_latest1:PageShader.msg" "bedroom_SET_latest1:materialInfo15.m"
 		;
-connectAttr "karen_latest:HIKproperties2.OutputPropertySetState" "karen_latest:HIKSolverNode2.InputPropertySetState"
+connectAttr "bedroom_SET_latest1:PageShader.msg" "bedroom_SET_latest1:materialInfo15.t"
+		 -na;
+connectAttr "bedroom_SET_latest1:file7.oc" "bedroom_SET_latest1:scribblesShader.diffuseColor"
 		;
-connectAttr "karen_latest:QuickRigCharacter1.OutputCharacterDefinition" "karen_latest:HIKSolverNode2.InputCharacterDefinition"
+connectAttr "bedroom_SET_latest1:scribblesShader.oc" "bedroom_SET_latest1:PxrSurface16SG.ss"
 		;
-connectAttr "karen_latest:HIKFK2State1.OutputCharacterState" "karen_latest:HIKSolverNode2.InputCharacterState"
+connectAttr "bedroom_SET_latest1:PxrSurface16SG.msg" "bedroom_SET_latest1:materialInfo16.sg"
 		;
-connectAttr "karen_latest:QuickRigCharacter1.OutputCharacterDefinition" "karen_latest:HIKFK2State1.InputCharacterDefinition"
+connectAttr "bedroom_SET_latest1:scribblesShader.msg" "bedroom_SET_latest1:materialInfo16.m"
 		;
-connectAttr "karen_latest:apron_shader_viewport_tex.oc" "karen_latest:apron_shader_lambert.c"
+connectAttr "bedroom_SET_latest1:scribblesShader.msg" "bedroom_SET_latest1:materialInfo16.t"
+		 -na;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:file7.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:file7.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:file7.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:file7.ws";
+connectAttr "bedroom_SET_latest1:place2dTexture7.c" "bedroom_SET_latest1:file7.c"
 		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:apron_shader_viewport_tex.cme"
+connectAttr "bedroom_SET_latest1:place2dTexture7.tf" "bedroom_SET_latest1:file7.tf"
 		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:apron_shader_viewport_tex.cmcf"
+connectAttr "bedroom_SET_latest1:place2dTexture7.rf" "bedroom_SET_latest1:file7.rf"
 		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:apron_shader_viewport_tex.cmcp"
+connectAttr "bedroom_SET_latest1:place2dTexture7.mu" "bedroom_SET_latest1:file7.mu"
 		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:apron_shader_viewport_tex.ws"
+connectAttr "bedroom_SET_latest1:place2dTexture7.mv" "bedroom_SET_latest1:file7.mv"
 		;
-connectAttr "karen_latest:apron_shader_viewport_tex.oc" "karen_latest:apron_shader_GLSL.diffuse_color_tex"
+connectAttr "bedroom_SET_latest1:place2dTexture7.s" "bedroom_SET_latest1:file7.s"
 		;
-connectAttr "karen_latest:apron_shader_view_norm.oc" "karen_latest:apron_shader_GLSL.normalMap"
+connectAttr "bedroom_SET_latest1:place2dTexture7.wu" "bedroom_SET_latest1:file7.wu"
 		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:apron_shader_view_norm.cme"
+connectAttr "bedroom_SET_latest1:place2dTexture7.wv" "bedroom_SET_latest1:file7.wv"
 		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:apron_shader_view_norm.cmcf"
+connectAttr "bedroom_SET_latest1:place2dTexture7.re" "bedroom_SET_latest1:file7.re"
 		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:apron_shader_view_norm.cmcp"
+connectAttr "bedroom_SET_latest1:place2dTexture7.of" "bedroom_SET_latest1:file7.of"
 		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:apron_shader_view_norm.ws"
+connectAttr "bedroom_SET_latest1:place2dTexture7.r" "bedroom_SET_latest1:file7.ro"
 		;
-connectAttr "karen_latest:dress_shader_viewport_tex.oc" "karen_latest:dress_shader_lambert.c"
+connectAttr "bedroom_SET_latest1:place2dTexture7.n" "bedroom_SET_latest1:file7.n"
 		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:dress_shader_viewport_tex.cme"
+connectAttr "bedroom_SET_latest1:place2dTexture7.vt1" "bedroom_SET_latest1:file7.vt1"
 		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:dress_shader_viewport_tex.cmcf"
+connectAttr "bedroom_SET_latest1:place2dTexture7.vt2" "bedroom_SET_latest1:file7.vt2"
 		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:dress_shader_viewport_tex.cmcp"
+connectAttr "bedroom_SET_latest1:place2dTexture7.vt3" "bedroom_SET_latest1:file7.vt3"
 		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:dress_shader_viewport_tex.ws"
+connectAttr "bedroom_SET_latest1:place2dTexture7.vc1" "bedroom_SET_latest1:file7.vc1"
 		;
-connectAttr "karen_latest:dress_shader_viewport_tex.oc" "karen_latest:dress_shader_GLSL.diffuse_color_tex"
+connectAttr "bedroom_SET_latest1:place2dTexture7.o" "bedroom_SET_latest1:file7.uv"
 		;
-connectAttr "karen_latest:dress_shader_view_norm.oc" "karen_latest:dress_shader_GLSL.normalMap"
+connectAttr "bedroom_SET_latest1:place2dTexture7.ofs" "bedroom_SET_latest1:file7.fs"
 		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:dress_shader_view_norm.cme"
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:file8.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:file8.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:file8.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:file8.ws";
+connectAttr "bedroom_SET_latest1:place2dTexture8.c" "bedroom_SET_latest1:file8.c"
 		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:dress_shader_view_norm.cmcf"
+connectAttr "bedroom_SET_latest1:place2dTexture8.tf" "bedroom_SET_latest1:file8.tf"
 		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:dress_shader_view_norm.cmcp"
+connectAttr "bedroom_SET_latest1:place2dTexture8.rf" "bedroom_SET_latest1:file8.rf"
 		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:dress_shader_view_norm.ws"
+connectAttr "bedroom_SET_latest1:place2dTexture8.mu" "bedroom_SET_latest1:file8.mu"
 		;
-connectAttr "karen_latest:skin_shader_viewport_tex.oc" "karen_latest:skin_shader_lambert.c"
+connectAttr "bedroom_SET_latest1:place2dTexture8.mv" "bedroom_SET_latest1:file8.mv"
 		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:skin_shader_viewport_tex.cme"
+connectAttr "bedroom_SET_latest1:place2dTexture8.s" "bedroom_SET_latest1:file8.s"
 		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:skin_shader_viewport_tex.cmcf"
+connectAttr "bedroom_SET_latest1:place2dTexture8.wu" "bedroom_SET_latest1:file8.wu"
 		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:skin_shader_viewport_tex.cmcp"
+connectAttr "bedroom_SET_latest1:place2dTexture8.wv" "bedroom_SET_latest1:file8.wv"
 		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:skin_shader_viewport_tex.ws"
+connectAttr "bedroom_SET_latest1:place2dTexture8.re" "bedroom_SET_latest1:file8.re"
 		;
-connectAttr "karen_latest:skin_shader_viewport_tex.oc" "karen_latest:skin_shader_GLSL.diffuse_color_tex"
+connectAttr "bedroom_SET_latest1:place2dTexture8.of" "bedroom_SET_latest1:file8.of"
 		;
-connectAttr "karen_latest:eye_shader_viewport_tex.oc" "karen_latest:eye_shader_lambert.c"
+connectAttr "bedroom_SET_latest1:place2dTexture8.r" "bedroom_SET_latest1:file8.ro"
 		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:eye_shader_viewport_tex.cme"
+connectAttr "bedroom_SET_latest1:place2dTexture8.n" "bedroom_SET_latest1:file8.n"
 		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:eye_shader_viewport_tex.cmcf"
+connectAttr "bedroom_SET_latest1:place2dTexture8.vt1" "bedroom_SET_latest1:file8.vt1"
 		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:eye_shader_viewport_tex.cmcp"
+connectAttr "bedroom_SET_latest1:place2dTexture8.vt2" "bedroom_SET_latest1:file8.vt2"
 		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:eye_shader_viewport_tex.ws"
+connectAttr "bedroom_SET_latest1:place2dTexture8.vt3" "bedroom_SET_latest1:file8.vt3"
 		;
-connectAttr "karen_latest:eye_shader_viewport_tex.oc" "karen_latest:eye_shader_GLSL.diffuse_color_tex"
+connectAttr "bedroom_SET_latest1:place2dTexture8.vc1" "bedroom_SET_latest1:file8.vc1"
 		;
-connectAttr "karen_latest:hair_shader_viewport_tex.oc" "karen_latest:hair_shader_lambert.c"
+connectAttr "bedroom_SET_latest1:place2dTexture8.o" "bedroom_SET_latest1:file8.uv"
 		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:hair_shader_viewport_tex.cme"
+connectAttr "bedroom_SET_latest1:place2dTexture8.ofs" "bedroom_SET_latest1:file8.fs"
 		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:hair_shader_viewport_tex.cmcf"
+connectAttr "bedroom_SET_latest1:bookRedShader.oc" "bedroom_SET_latest1:PxrSurface17SG.ss"
 		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:hair_shader_viewport_tex.cmcp"
+connectAttr "bedroom_SET_latest1:PxrSurface17SG.msg" "bedroom_SET_latest1:materialInfo17.sg"
 		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:hair_shader_viewport_tex.ws"
+connectAttr "bedroom_SET_latest1:bookRedShader.msg" "bedroom_SET_latest1:materialInfo17.m"
 		;
-connectAttr "karen_latest:hair_shader_viewport_tex.oc" "karen_latest:hair_shader_GLSL.diffuse_color_tex"
+connectAttr "bedroom_SET_latest1:bookRedShader.msg" "bedroom_SET_latest1:materialInfo17.t"
+		 -na;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bed_NEWRN.sr"
 		;
-connectAttr "karen_latest:hair_shader_view_norm.oc" "karen_latest:hair_shader_GLSL.normalMap"
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:doorRN.sr"
 		;
-connectAttr ":defaultColorMgtGlobals.cme" "karen_latest:hair_shader_view_norm.cme"
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:book_stackRN.sr"
 		;
-connectAttr ":defaultColorMgtGlobals.cfe" "karen_latest:hair_shader_view_norm.cmcf"
+connectAttr "bedroom_SET_latest1:vase:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:vase:defaultRenderLayer.rlid"
 		;
-connectAttr ":defaultColorMgtGlobals.cfp" "karen_latest:hair_shader_view_norm.cmcp"
-		;
-connectAttr ":defaultColorMgtGlobals.wsn" "karen_latest:hair_shader_view_norm.ws"
-		;
-connectAttr "PxrSurface1SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface2SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface3SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface4SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface5SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface6SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface7SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface8SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface9SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface10SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface11SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface12SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface13SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface14SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface15SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface16SG.pa" ":renderPartition.st" -na;
-connectAttr "PxrSurface17SG.pa" ":renderPartition.st" -na;
-connectAttr "fox:initialShadingGroup.pa" ":renderPartition.st" -na;
-connectAttr "fatVase:initialShadingGroup.pa" ":renderPartition.st" -na;
-connectAttr "fatVase:initialShadingGroup2.pa" ":renderPartition.st" -na;
-connectAttr "string2SG.pa" ":renderPartition.st" -na;
-connectAttr "starSG.pa" ":renderPartition.st" -na;
-connectAttr "pSphere2SG.pa" ":renderPartition.st" -na;
-connectAttr "starSG1.pa" ":renderPartition.st" -na;
-connectAttr "wood_partSG.pa" ":renderPartition.st" -na;
-connectAttr "top_partSG.pa" ":renderPartition.st" -na;
-connectAttr "lights:PxrSurface1SG.pa" ":renderPartition.st" -na;
-connectAttr "lights:PxrSurface2SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:PxrSurface1SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:PxrLayerSurface1SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:PxrSurface2SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:PxrSurface3SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:jackieShoe1:PxrSurface3SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe1:PxrSurface2SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe1:PxrSurface4SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe1:PxrSurface1SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:PxrSurface4SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:PxrSurface5SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:PxrSurface6SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:PxrSurface7SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:PxrSurface8SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:jackieShoe:PxrSurface3SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe:PxrSurface2SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe:PxrSurface4SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe:PxrSurface1SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe2:PxrSurface3SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe2:PxrSurface2SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe2:PxrSurface4SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe2:PxrSurface1SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe3:PxrSurface3SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe3:PxrSurface2SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe3:PxrSurface4SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:jackieShoe3:PxrSurface1SG.pa" ":renderPartition.st" -na
-		;
-connectAttr "karen_latest:PxrSurface9SG.pa" ":renderPartition.st" -na;
-connectAttr "karen_latest:PxrSurface10SG.pa" ":renderPartition.st" -na;
-connectAttr "deskShader.msg" ":defaultShaderList1.s" -na;
-connectAttr "knobShader.msg" ":defaultShaderList1.s" -na;
-connectAttr "lampshader.msg" ":defaultShaderList1.s" -na;
-connectAttr "PxrSurface4.msg" ":defaultShaderList1.s" -na;
-connectAttr "Book1Shader.msg" ":defaultShaderList1.s" -na;
-connectAttr "book2Shader.msg" ":defaultShaderList1.s" -na;
-connectAttr "book3Shader.msg" ":defaultShaderList1.s" -na;
-connectAttr "PxrSurface8.msg" ":defaultShaderList1.s" -na;
-connectAttr "PxrSurface9.msg" ":defaultShaderList1.s" -na;
-connectAttr "PxrSurface10.msg" ":defaultShaderList1.s" -na;
-connectAttr "PxrSurface11.msg" ":defaultShaderList1.s" -na;
-connectAttr "PxrSurface12.msg" ":defaultShaderList1.s" -na;
-connectAttr "PxrSurface13.msg" ":defaultShaderList1.s" -na;
-connectAttr "PxrSurface14.msg" ":defaultShaderList1.s" -na;
-connectAttr "PageShader.msg" ":defaultShaderList1.s" -na;
-connectAttr "scribblesShader.msg" ":defaultShaderList1.s" -na;
-connectAttr "bookRedShader.msg" ":defaultShaderList1.s" -na;
-connectAttr "fox:initialShadingGroup1.msg" ":defaultShaderList1.s" -na;
-connectAttr "fatVase:initialShadingGroup1.msg" ":defaultShaderList1.s" -na;
-connectAttr "fatVase:initialShadingGroup3.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert4.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert5.msg" ":defaultShaderList1.s" -na;
-connectAttr "minidesk_wood_shader.msg" ":defaultShaderList1.s" -na;
-connectAttr "minidesk_top_shader.msg" ":defaultShaderList1.s" -na;
-connectAttr "lights:PxrSurface1.msg" ":defaultShaderList1.s" -na;
-connectAttr "lights:PxrSurface2.msg" ":defaultShaderList1.s" -na;
-connectAttr "karen_latest:PxrLayerSurface1.msg" ":defaultShaderList1.s" -na;
-connectAttr "karen_latest:apron_shader_Pxr.msg" ":defaultShaderList1.s" -na;
-connectAttr "karen_latest:eye_shader_Pxr.msg" ":defaultShaderList1.s" -na;
-connectAttr "karen_latest:skin_shader_Pxr.msg" ":defaultShaderList1.s" -na;
-connectAttr "karen_latest:hair_shader_Pxr.msg" ":defaultShaderList1.s" -na;
-connectAttr "karen_latest:shoes_shadder_Pxr.msg" ":defaultShaderList1.s" -na;
-connectAttr "karen_latest:sole_shader_Pxr.msg" ":defaultShaderList1.s" -na;
-connectAttr "karen_latest:dress_shader_Pxr.msg" ":defaultShaderList1.s" -na;
-connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture6.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "place2dTexture8.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "lights:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
-connectAttr "karen_latest:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na
-		;
-connectAttr "karen_latest:place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na
-		;
-connectAttr "karen_latest:place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na
-		;
-connectAttr "karen_latest:place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na
-		;
-connectAttr "karen_latest:place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na
+connectAttr ":PxrPathTracer.msg" "bedroom_SET_latest1:vase:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
+connectAttr ":rmanGlobals.msg" "bedroom_SET_latest1:vase:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr ":rmanDefaultDisplay.msg" "bedroom_SET_latest1:vase:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "bedroom_SET_latest1:vase:d_openexr.msg" "bedroom_SET_latest1:vase:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "bedroom_SET_latest1:fox:initialShadingGroup1.oc" "bedroom_SET_latest1:fox:initialShadingGroup.ss"
+		;
+connectAttr "bedroom_SET_latest1:fox:groupId1.msg" "bedroom_SET_latest1:fox:initialShadingGroup.gn"
+		 -na;
+connectAttr "bedroom_SET_latest1:fox:fox_meshShape.iog.og[0]" "bedroom_SET_latest1:fox:initialShadingGroup.dsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:fox:initialShadingGroup.msg" "bedroom_SET_latest1:fox:materialInfo1.sg"
+		;
+connectAttr "bedroom_SET_latest1:fox:initialShadingGroup1.msg" "bedroom_SET_latest1:fox:materialInfo1.m"
+		;
+connectAttr "bedroom_SET_latest1:fatVase:initialShadingGroup1.oc" "bedroom_SET_latest1:fatVase:initialShadingGroup.ss"
+		;
+connectAttr "bedroom_SET_latest1:fatVase:initialShadingGroup.msg" "bedroom_SET_latest1:fatVase:materialInfo1.sg"
+		;
+connectAttr "bedroom_SET_latest1:fatVase:initialShadingGroup1.msg" "bedroom_SET_latest1:fatVase:materialInfo1.m"
+		;
+connectAttr "bedroom_SET_latest1:fatVase:initialShadingGroup3.oc" "bedroom_SET_latest1:fatVase:initialShadingGroup2.ss"
+		;
+connectAttr "bedroom_SET_latest1:fatVase:initialShadingGroup2.msg" "bedroom_SET_latest1:fatVase:materialInfo2.sg"
+		;
+connectAttr "bedroom_SET_latest1:fatVase:initialShadingGroup3.msg" "bedroom_SET_latest1:fatVase:materialInfo2.m"
+		;
+connectAttr "bedroom_SET_latest1:lambert2.oc" "bedroom_SET_latest1:string2SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:string2SG.msg" "bedroom_SET_latest1:materialInfo18.sg"
+		;
+connectAttr "bedroom_SET_latest1:lambert2.msg" "bedroom_SET_latest1:materialInfo18.m"
+		;
+connectAttr "bedroom_SET_latest1:lambert3.oc" "bedroom_SET_latest1:starSG.ss";
+connectAttr "bedroom_SET_latest1:starSG.msg" "bedroom_SET_latest1:materialInfo19.sg"
+		;
+connectAttr "bedroom_SET_latest1:lambert3.msg" "bedroom_SET_latest1:materialInfo19.m"
+		;
+connectAttr "bedroom_SET_latest1:lambert4.oc" "bedroom_SET_latest1:pSphere2SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:pSphere2SG.msg" "bedroom_SET_latest1:materialInfo20.sg"
+		;
+connectAttr "bedroom_SET_latest1:lambert4.msg" "bedroom_SET_latest1:materialInfo20.m"
+		;
+connectAttr "bedroom_SET_latest1:lambert5.oc" "bedroom_SET_latest1:starSG1.ss";
+connectAttr "bedroom_SET_latest1:starSG1.msg" "bedroom_SET_latest1:materialInfo21.sg"
+		;
+connectAttr "bedroom_SET_latest1:lambert5.msg" "bedroom_SET_latest1:materialInfo21.m"
+		;
+connectAttr "bedroom_SET_latest1:minidesk_wood_shader.oc" "bedroom_SET_latest1:wood_partSG.ss"
+		;
+connectAttr "bedroom_SET_latest1:wood_partSG.msg" "bedroom_SET_latest1:materialInfo22.sg"
+		;
+connectAttr "bedroom_SET_latest1:minidesk_wood_shader.msg" "bedroom_SET_latest1:materialInfo22.m"
+		;
+connectAttr "bedroom_SET_latest1:minidesk_top_shader.oc" "bedroom_SET_latest1:top_partSG.ss"
+		;
+connectAttr "bedroom_SET_latest1:top_partSG.msg" "bedroom_SET_latest1:materialInfo23.sg"
+		;
+connectAttr "bedroom_SET_latest1:minidesk_top_shader.msg" "bedroom_SET_latest1:materialInfo23.m"
+		;
+connectAttr "bedroom_SET_latest1:glasses:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:glasses:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:Jacies_shoe_latestRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:lamp_small:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:lamp_small:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:toyBox:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:toyBox:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:tvstand:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:tvstand:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:television:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:television:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:television:polyCube1.out" "bedroom_SET_latest1:television:polyExtrudeFace1.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polyExtrudeFace1.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak1.out" "bedroom_SET_latest1:television:polyExtrudeFace2.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polyExtrudeFace2.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace1.out" "bedroom_SET_latest1:television:polyTweak1.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak2.out" "bedroom_SET_latest1:television:polyExtrudeFace3.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polyExtrudeFace3.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace2.out" "bedroom_SET_latest1:television:polyTweak2.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak3.out" "bedroom_SET_latest1:television:polyExtrudeFace4.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polyExtrudeFace4.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace3.out" "bedroom_SET_latest1:television:polyTweak3.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak4.out" "bedroom_SET_latest1:television:polySplitRing1.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing1.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace4.out" "bedroom_SET_latest1:television:polyTweak4.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing1.out" "bedroom_SET_latest1:television:polySplitRing2.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing2.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak5.out" "bedroom_SET_latest1:television:polySplitRing3.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing3.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing2.out" "bedroom_SET_latest1:television:polyTweak5.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing3.out" "bedroom_SET_latest1:television:polySplitRing4.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing4.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing4.out" "bedroom_SET_latest1:television:polySplitRing5.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing5.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing5.out" "bedroom_SET_latest1:television:polySplitRing6.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing6.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing6.out" "bedroom_SET_latest1:television:polySplitRing7.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing7.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing7.out" "bedroom_SET_latest1:television:polySplitRing8.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing8.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing8.out" "bedroom_SET_latest1:television:polySplitRing9.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing9.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing9.out" "bedroom_SET_latest1:television:polySplitRing10.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing10.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing10.out" "bedroom_SET_latest1:television:polySplitRing11.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing11.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing11.out" "bedroom_SET_latest1:television:polySplitRing12.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing12.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing12.out" "bedroom_SET_latest1:television:polySplitRing13.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing13.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing13.out" "bedroom_SET_latest1:television:polySplitRing14.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing14.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing14.out" "bedroom_SET_latest1:television:polySplitRing15.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing15.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing15.out" "bedroom_SET_latest1:television:polySplitRing16.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing16.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing16.out" "bedroom_SET_latest1:television:polyTweak6.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak6.out" "bedroom_SET_latest1:television:polySplit1.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak7.out" "bedroom_SET_latest1:television:polyExtrudeFace5.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polyExtrudeFace5.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplit1.out" "bedroom_SET_latest1:television:polyTweak7.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak8.out" "bedroom_SET_latest1:television:polySplitRing17.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing17.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace5.out" "bedroom_SET_latest1:television:polyTweak8.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing17.out" "bedroom_SET_latest1:television:polySplitRing18.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing18.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing18.out" "bedroom_SET_latest1:television:polySplitRing19.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing19.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing19.out" "bedroom_SET_latest1:television:polySplitRing20.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing20.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing20.out" "bedroom_SET_latest1:television:polySplit2.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak9.out" "bedroom_SET_latest1:television:polyExtrudeFace6.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polyExtrudeFace6.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplit2.out" "bedroom_SET_latest1:television:polyTweak9.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace6.out" "bedroom_SET_latest1:television:polyExtrudeFace7.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polyExtrudeFace7.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak10.out" "bedroom_SET_latest1:television:polySplitRing21.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing21.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace7.out" "bedroom_SET_latest1:television:polyTweak10.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing21.out" "bedroom_SET_latest1:television:polySplitRing22.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing22.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing22.out" "bedroom_SET_latest1:television:polySplitRing23.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing23.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing23.out" "bedroom_SET_latest1:television:polySplitRing24.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing24.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing24.out" "bedroom_SET_latest1:television:polySplitRing25.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing25.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing25.out" "bedroom_SET_latest1:television:polySplitRing26.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing26.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing26.out" "bedroom_SET_latest1:television:polySplitRing27.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing27.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing27.out" "bedroom_SET_latest1:television:polySplitRing28.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing28.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing28.out" "bedroom_SET_latest1:television:polySplitRing29.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing29.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing29.out" "bedroom_SET_latest1:television:polySplitRing30.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing30.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing30.out" "bedroom_SET_latest1:television:polyTweak11.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak11.out" "bedroom_SET_latest1:television:polySplit3.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplit3.out" "bedroom_SET_latest1:television:polySplit4.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplit4.out" "bedroom_SET_latest1:television:polySplit5.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplit5.out" "bedroom_SET_latest1:television:polyExtrudeFace8.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polyExtrudeFace8.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace8.out" "bedroom_SET_latest1:television:polySplitRing31.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing31.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing31.out" "bedroom_SET_latest1:television:polySplitRing32.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing32.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing32.out" "bedroom_SET_latest1:television:polySplitRing33.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing33.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing33.out" "bedroom_SET_latest1:television:polySplitRing34.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing34.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing34.out" "bedroom_SET_latest1:television:polySplitRing35.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing35.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing35.out" "bedroom_SET_latest1:television:polySplitRing36.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing36.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing36.out" "bedroom_SET_latest1:television:polySplitRing37.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:TVShape.wm" "bedroom_SET_latest1:television:polySplitRing37.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polySplitRing37.out" "bedroom_SET_latest1:television:polyDelEdge1.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyCube2.out" "bedroom_SET_latest1:television:polyExtrudeFace9.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace9.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak12.out" "bedroom_SET_latest1:television:polyExtrudeFace10.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace10.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace9.out" "bedroom_SET_latest1:television:polyTweak12.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace10.out" "bedroom_SET_latest1:television:polyExtrudeFace11.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace11.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak13.out" "bedroom_SET_latest1:television:polyExtrudeFace12.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace12.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace11.out" "bedroom_SET_latest1:television:polyTweak13.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak14.out" "bedroom_SET_latest1:television:polyExtrudeFace13.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace13.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace12.out" "bedroom_SET_latest1:television:polyTweak14.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace13.out" "bedroom_SET_latest1:television:polyExtrudeFace14.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace14.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak15.out" "bedroom_SET_latest1:television:polyExtrudeFace15.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace15.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace14.out" "bedroom_SET_latest1:television:polyTweak15.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak16.out" "bedroom_SET_latest1:television:polyExtrudeFace16.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace16.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace15.out" "bedroom_SET_latest1:television:polyTweak16.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak17.out" "bedroom_SET_latest1:television:polyExtrudeFace17.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace17.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace16.out" "bedroom_SET_latest1:television:polyTweak17.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak18.out" "bedroom_SET_latest1:television:polyExtrudeFace18.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace18.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace17.out" "bedroom_SET_latest1:television:polyTweak18.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak19.out" "bedroom_SET_latest1:television:polyExtrudeFace19.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace19.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace18.out" "bedroom_SET_latest1:television:polyTweak19.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak20.out" "bedroom_SET_latest1:television:polyExtrudeFace20.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace20.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace19.out" "bedroom_SET_latest1:television:polyTweak20.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak21.out" "bedroom_SET_latest1:television:polyExtrudeFace21.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace21.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace20.out" "bedroom_SET_latest1:television:polyTweak21.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak22.out" "bedroom_SET_latest1:television:polyExtrudeFace22.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace22.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace21.out" "bedroom_SET_latest1:television:polyTweak22.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak23.out" "bedroom_SET_latest1:television:polyExtrudeFace23.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace23.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace22.out" "bedroom_SET_latest1:television:polyTweak23.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak24.out" "bedroom_SET_latest1:television:polyExtrudeFace24.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace24.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace23.out" "bedroom_SET_latest1:television:polyTweak24.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak25.out" "bedroom_SET_latest1:television:polyExtrudeFace25.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace25.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace24.out" "bedroom_SET_latest1:television:polyTweak25.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak26.out" "bedroom_SET_latest1:television:polyExtrudeFace26.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace26.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace25.out" "bedroom_SET_latest1:television:polyTweak26.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak27.out" "bedroom_SET_latest1:television:polyExtrudeFace27.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace27.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace26.out" "bedroom_SET_latest1:television:polyTweak27.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak28.out" "bedroom_SET_latest1:television:polyExtrudeFace28.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace28.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace27.out" "bedroom_SET_latest1:television:polyTweak28.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak29.out" "bedroom_SET_latest1:television:polyExtrudeFace29.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace29.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace28.out" "bedroom_SET_latest1:television:polyTweak29.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak30.out" "bedroom_SET_latest1:television:polyExtrudeFace30.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace30.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace29.out" "bedroom_SET_latest1:television:polyTweak30.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak31.out" "bedroom_SET_latest1:television:polyExtrudeFace31.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace31.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace30.out" "bedroom_SET_latest1:television:polyTweak31.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak32.out" "bedroom_SET_latest1:television:polyExtrudeFace32.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace32.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace31.out" "bedroom_SET_latest1:television:polyTweak32.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak33.out" "bedroom_SET_latest1:television:polyExtrudeFace33.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace33.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace32.out" "bedroom_SET_latest1:television:polyTweak33.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak34.out" "bedroom_SET_latest1:television:polyExtrudeFace34.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace34.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace33.out" "bedroom_SET_latest1:television:polyTweak34.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak35.out" "bedroom_SET_latest1:television:polyExtrudeFace35.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace35.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace34.out" "bedroom_SET_latest1:television:polyTweak35.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak36.out" "bedroom_SET_latest1:television:polyExtrudeFace36.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace36.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace35.out" "bedroom_SET_latest1:television:polyTweak36.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak37.out" "bedroom_SET_latest1:television:polyExtrudeFace37.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace37.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace36.out" "bedroom_SET_latest1:television:polyTweak37.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak38.out" "bedroom_SET_latest1:television:polyExtrudeFace38.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace38.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace37.out" "bedroom_SET_latest1:television:polyTweak38.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak39.out" "bedroom_SET_latest1:television:polyExtrudeFace39.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace39.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace38.out" "bedroom_SET_latest1:television:polyTweak39.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak40.out" "bedroom_SET_latest1:television:polyExtrudeFace40.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace40.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace39.out" "bedroom_SET_latest1:television:polyTweak40.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak41.out" "bedroom_SET_latest1:television:polyExtrudeFace41.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace41.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace40.out" "bedroom_SET_latest1:television:polyTweak41.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak42.out" "bedroom_SET_latest1:television:polyExtrudeFace42.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace42.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace41.out" "bedroom_SET_latest1:television:polyTweak42.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak43.out" "bedroom_SET_latest1:television:polyExtrudeFace43.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace43.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace42.out" "bedroom_SET_latest1:television:polyTweak43.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak44.out" "bedroom_SET_latest1:television:polyExtrudeFace44.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace44.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace43.out" "bedroom_SET_latest1:television:polyTweak44.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak45.out" "bedroom_SET_latest1:television:polyExtrudeFace45.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace45.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace44.out" "bedroom_SET_latest1:television:polyTweak45.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak46.out" "bedroom_SET_latest1:television:polyExtrudeFace46.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace46.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace45.out" "bedroom_SET_latest1:television:polyTweak46.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak47.out" "bedroom_SET_latest1:television:polyExtrudeFace47.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace47.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace46.out" "bedroom_SET_latest1:television:polyTweak47.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak48.out" "bedroom_SET_latest1:television:polyExtrudeFace48.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace48.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace47.out" "bedroom_SET_latest1:television:polyTweak48.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace48.out" "bedroom_SET_latest1:television:polyExtrudeFace49.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace49.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak49.out" "bedroom_SET_latest1:television:polyExtrudeFace50.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace50.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace49.out" "bedroom_SET_latest1:television:polyTweak49.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak50.out" "bedroom_SET_latest1:television:polyExtrudeFace51.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace51.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace50.out" "bedroom_SET_latest1:television:polyTweak50.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak51.out" "bedroom_SET_latest1:television:polyExtrudeFace52.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace52.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace51.out" "bedroom_SET_latest1:television:polyTweak51.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak52.out" "bedroom_SET_latest1:television:polyExtrudeFace53.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace53.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace52.out" "bedroom_SET_latest1:television:polyTweak52.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak53.out" "bedroom_SET_latest1:television:polyExtrudeFace54.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace54.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace53.out" "bedroom_SET_latest1:television:polyTweak53.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace54.out" "bedroom_SET_latest1:television:polyExtrudeFace55.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace55.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak54.out" "bedroom_SET_latest1:television:polyExtrudeFace56.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace56.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace55.out" "bedroom_SET_latest1:television:polyTweak54.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace56.out" "bedroom_SET_latest1:television:polyExtrudeFace57.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace57.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak55.out" "bedroom_SET_latest1:television:polyExtrudeFace58.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace58.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace57.out" "bedroom_SET_latest1:television:polyTweak55.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace58.out" "bedroom_SET_latest1:television:polyExtrudeFace59.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace59.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak56.out" "bedroom_SET_latest1:television:polyExtrudeFace60.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace60.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace59.out" "bedroom_SET_latest1:television:polyTweak56.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak57.out" "bedroom_SET_latest1:television:polyExtrudeFace61.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace61.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace60.out" "bedroom_SET_latest1:television:polyTweak57.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak58.out" "bedroom_SET_latest1:television:polyExtrudeFace62.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace62.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace61.out" "bedroom_SET_latest1:television:polyTweak58.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak59.out" "bedroom_SET_latest1:television:polyExtrudeFace63.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace63.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace62.out" "bedroom_SET_latest1:television:polyTweak59.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak60.out" "bedroom_SET_latest1:television:polyExtrudeFace64.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace64.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace63.out" "bedroom_SET_latest1:television:polyTweak60.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak61.out" "bedroom_SET_latest1:television:polyExtrudeFace65.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace65.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace64.out" "bedroom_SET_latest1:television:polyTweak61.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak62.out" "bedroom_SET_latest1:television:polyExtrudeFace66.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace66.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace65.out" "bedroom_SET_latest1:television:polyTweak62.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace66.out" "bedroom_SET_latest1:television:polyExtrudeFace67.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace67.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak63.out" "bedroom_SET_latest1:television:polyExtrudeFace68.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace68.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace67.out" "bedroom_SET_latest1:television:polyTweak63.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace68.out" "bedroom_SET_latest1:television:polyExtrudeFace69.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace69.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak64.out" "bedroom_SET_latest1:television:polyExtrudeFace70.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace70.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace69.out" "bedroom_SET_latest1:television:polyTweak64.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak65.out" "bedroom_SET_latest1:television:polyExtrudeFace71.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace71.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace70.out" "bedroom_SET_latest1:television:polyTweak65.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace71.out" "bedroom_SET_latest1:television:polyExtrudeFace72.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace72.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak66.out" "bedroom_SET_latest1:television:polyExtrudeFace73.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace73.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace72.out" "bedroom_SET_latest1:television:polyTweak66.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak67.out" "bedroom_SET_latest1:television:polyExtrudeFace74.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace74.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace73.out" "bedroom_SET_latest1:television:polyTweak67.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace74.out" "bedroom_SET_latest1:television:polyExtrudeFace75.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace75.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak68.out" "bedroom_SET_latest1:television:polyExtrudeFace76.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace76.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace75.out" "bedroom_SET_latest1:television:polyTweak68.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak69.out" "bedroom_SET_latest1:television:polyExtrudeFace77.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace77.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace76.out" "bedroom_SET_latest1:television:polyTweak69.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak70.out" "bedroom_SET_latest1:television:polyExtrudeFace78.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace78.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace77.out" "bedroom_SET_latest1:television:polyTweak70.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak71.out" "bedroom_SET_latest1:television:polyExtrudeFace79.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace79.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace78.out" "bedroom_SET_latest1:television:polyTweak71.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak72.out" "bedroom_SET_latest1:television:polyExtrudeFace80.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace80.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace79.out" "bedroom_SET_latest1:television:polyTweak72.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak73.out" "bedroom_SET_latest1:television:polyExtrudeFace81.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace81.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace80.out" "bedroom_SET_latest1:television:polyTweak73.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak74.out" "bedroom_SET_latest1:television:polyExtrudeFace82.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace82.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace81.out" "bedroom_SET_latest1:television:polyTweak74.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak75.out" "bedroom_SET_latest1:television:polyExtrudeFace83.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace83.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace82.out" "bedroom_SET_latest1:television:polyTweak75.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak76.out" "bedroom_SET_latest1:television:polyExtrudeFace84.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace84.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace83.out" "bedroom_SET_latest1:television:polyTweak76.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak77.out" "bedroom_SET_latest1:television:polyExtrudeFace85.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace85.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace84.out" "bedroom_SET_latest1:television:polyTweak77.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:polyTweak78.out" "bedroom_SET_latest1:television:polyExtrudeFace86.ip"
+		;
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.wm" "bedroom_SET_latest1:television:polyExtrudeFace86.mp"
+		;
+connectAttr "bedroom_SET_latest1:television:polyExtrudeFace85.out" "bedroom_SET_latest1:television:polyTweak78.ip"
+		;
+connectAttr "bedroom_SET_latest1:console:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:console:defaultRenderLayer.rlid"
+		;
+connectAttr ":defaultRenderGlobals.msg" "bedroom_SET_latest1:console:mtorPartition.rgcnx"
+		;
+connectAttr "bedroom_SET_latest1:coathanger:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:coathanger:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:mug:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:mug:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:pencil:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:pencil:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:easel:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:easel:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:canvas:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:canvas:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:lights:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:lights:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:lights:mountain1.oc" "bedroom_SET_latest1:lights:PxrSurface1.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface1.oc" "bedroom_SET_latest1:lights:PxrSurface1SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface1SG.msg" "bedroom_SET_latest1:lights:materialInfo1.sg"
+		;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface1.msg" "bedroom_SET_latest1:lights:materialInfo1.m"
+		;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface1.msg" "bedroom_SET_latest1:lights:materialInfo1.t"
+		 -na;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface2.oc" "bedroom_SET_latest1:lights:PxrSurface2SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface2SG.msg" "bedroom_SET_latest1:lights:materialInfo2.sg"
+		;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface2.msg" "bedroom_SET_latest1:lights:materialInfo2.m"
+		;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface2.msg" "bedroom_SET_latest1:lights:materialInfo2.t"
+		 -na;
+connectAttr "bedroom_SET_latest1:lights:place2dTexture1.o" "bedroom_SET_latest1:lights:mountain1.uv"
+		;
+connectAttr "bedroom_SET_latest1:lights:place2dTexture1.ofs" "bedroom_SET_latest1:lights:mountain1.fs"
+		;
+connectAttr "layerManager.dli[1]" "bedroom_SET_latest1:lights:layer1.id";
+connectAttr "layerManager.dli[2]" "bedroom_SET_latest1:lights:layer2.id";
+connectAttr ":defaultRenderGlobals.msg" "bedroom_SET_latest1:lights:mtorPartition.rgcnx"
+		;
+connectAttr "layerManager.dli[3]" "bedroom_SET_latest1:lights:layer3.id";
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:floor_walls_latestRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:desk_latestRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:teacupRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:toyPlaneRN1.sr"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:karen_latest:defaultRenderLayer.rlid"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface1SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo1.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrLayerMixer1.pxrMaterialOut" "bedroom_SET_latest1:karen_latest:PxrLayerSurface1.inputMaterial"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrLayerSurface1.oc" "bedroom_SET_latest1:karen_latest:PxrLayerSurface1SG.rman__surface"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrLayerSurface1SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo2.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrLayer1.pxrMaterialOut" "bedroom_SET_latest1:karen_latest:PxrLayerMixer1.baselayer"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrLayer2.pxrMaterialOut" "bedroom_SET_latest1:karen_latest:PxrLayerMixer1.layer1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface2SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo3.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.oc" "bedroom_SET_latest1:karen_latest:apron_shader_Pxr.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_render_norm.resultN" "bedroom_SET_latest1:karen_latest:apron_shader_Pxr.bumpNormal"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_Pxr.oc" "bedroom_SET_latest1:karen_latest:PxrSurface3SG.rman__surface"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_GLSL.oc" "bedroom_SET_latest1:karen_latest:PxrSurface3SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface3SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo4.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_GLSL.msg" "bedroom_SET_latest1:karen_latest:materialInfo4.m"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface3SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe1:materialInfo1.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface2SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe1:materialInfo2.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface4SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe1:materialInfo3.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface1SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe1:materialInfo4.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.oc" "bedroom_SET_latest1:karen_latest:eye_shader_Pxr.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:eye_shader_Pxr.oc" "bedroom_SET_latest1:karen_latest:PxrSurface4SG.rman__surface"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:eye_shader_GLSL.oc" "bedroom_SET_latest1:karen_latest:PxrSurface4SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface4SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo5.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:eye_shader_GLSL.msg" "bedroom_SET_latest1:karen_latest:materialInfo5.m"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.c" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.c"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.tf" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.tf"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.rf" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.rf"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.mu" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.mu"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.mv" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.mv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.s" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.s"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.wu" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.wu"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.wv" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.wv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.re" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.re"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.of" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.of"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.r" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.ro"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.n" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.n"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.vt1" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.vt1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.vt2" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.vt2"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.vt3" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.vt3"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.vc1" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.vc1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.o" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.uv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.ofs" "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.fs"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.oc" "bedroom_SET_latest1:karen_latest:skin_shader_Pxr.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:skin_shader_Pxr.oc" "bedroom_SET_latest1:karen_latest:PxrSurface5SG.rman__surface"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:skin_shader_GLSL.oc" "bedroom_SET_latest1:karen_latest:PxrSurface5SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface5SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo6.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:skin_shader_GLSL.msg" "bedroom_SET_latest1:karen_latest:materialInfo6.m"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.oc" "bedroom_SET_latest1:karen_latest:hair_shader_Pxr.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_render_norm.resultN" "bedroom_SET_latest1:karen_latest:hair_shader_Pxr.bumpNormal"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_Pxr.oc" "bedroom_SET_latest1:karen_latest:PxrSurface6SG.rman__surface"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_GLSL.oc" "bedroom_SET_latest1:karen_latest:PxrSurface6SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface6SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo7.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_GLSL.msg" "bedroom_SET_latest1:karen_latest:materialInfo7.m"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.c" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.c"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.tf" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.tf"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.rf" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.rf"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.mu" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.mu"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.mv" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.mv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.s" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.s"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.wu" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.wu"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.wv" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.wv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.re" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.re"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.of" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.of"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.r" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.ro"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.n" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.n"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.vt1" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.vt1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.vt2" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.vt2"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.vt3" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.vt3"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.vc1" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.vc1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.o" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.uv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.ofs" "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.c" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.c"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.tf" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.tf"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.rf" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.rf"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.mu" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.mu"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.mv" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.mv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.s" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.s"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.wu" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.wu"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.wv" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.wv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.re" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.re"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.of" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.of"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.r" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.ro"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.n" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.n"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.vt1" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.vt1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.vt2" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.vt2"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.vt3" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.vt3"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.vc1" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.vc1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.o" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.uv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.ofs" "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.fs"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.c" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.c"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.tf" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.tf"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.rf" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.rf"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.mu" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.mu"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.mv" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.mv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.s" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.s"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.wu" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.wu"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.wv" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.wv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.re" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.re"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.of" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.of"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.r" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.ro"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.n" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.n"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.vt1" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.vt1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.vt2" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.vt2"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.vt3" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.vt3"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.vc1" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.vc1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.o" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.uv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.ofs" "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.fs"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface7SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo8.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:shoes_shadder_Pxr.oc" "bedroom_SET_latest1:karen_latest:PxrSurface8SG.rman__surface"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:shoes_shadder_GLSL.oc" "bedroom_SET_latest1:karen_latest:PxrSurface8SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface8SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo9.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:shoes_shadder_GLSL.msg" "bedroom_SET_latest1:karen_latest:materialInfo9.m"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface3SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe:materialInfo1.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface2SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe:materialInfo2.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface4SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe:materialInfo3.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface1SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe:materialInfo4.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface3SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe2:materialInfo1.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface2SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe2:materialInfo2.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface4SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe2:materialInfo3.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface1SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe2:materialInfo4.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface3SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe3:materialInfo1.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface2SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe3:materialInfo2.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface4SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe3:materialInfo3.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface1SG.msg" "bedroom_SET_latest1:karen_latest:jackieShoe3:materialInfo4.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:sole_shader_Pxr.oc" "bedroom_SET_latest1:karen_latest:PxrSurface9SG.rman__surface"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:sole_shader_GLSL.oc" "bedroom_SET_latest1:karen_latest:PxrSurface9SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface9SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo10.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:sole_shader_GLSL.msg" "bedroom_SET_latest1:karen_latest:materialInfo10.m"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.oc" "bedroom_SET_latest1:karen_latest:dress_shader_Pxr.diffuseColor"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_render_norm.resultN" "bedroom_SET_latest1:karen_latest:dress_shader_Pxr.bumpNormal"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_Pxr.oc" "bedroom_SET_latest1:karen_latest:PxrSurface10SG.rman__surface"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_GLSL.oc" "bedroom_SET_latest1:karen_latest:PxrSurface10SG.ss"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface10SG.msg" "bedroom_SET_latest1:karen_latest:materialInfo11.sg"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_GLSL.msg" "bedroom_SET_latest1:karen_latest:materialInfo11.m"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.c" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.c"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.tf" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.tf"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.rf" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.rf"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.mu" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.mu"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.mv" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.mv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.s" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.s"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.wu" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.wu"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.wv" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.wv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.re" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.re"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.of" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.of"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.r" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.ro"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.n" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.n"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.vt1" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.vt1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.vt2" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.vt2"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.vt3" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.vt3"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.vc1" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.vc1"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.o" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.uv"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.ofs" "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.fs"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_Pxr.msg" "bedroom_SET_latest1:karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_render_norm.msg" "bedroom_SET_latest1:karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.msg" "bedroom_SET_latest1:karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.msg" "bedroom_SET_latest1:karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface3SG.msg" "bedroom_SET_latest1:karen_latest:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftHandBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightHandBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftFootBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightFootBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:HIKproperties1.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter.propertyState"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:HIKproperties1.OutputPropertySetState" "bedroom_SET_latest1:karen_latest:HIKSolverNode1.InputPropertySetState"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter.OutputCharacterDefinition" "bedroom_SET_latest1:karen_latest:HIKSolverNode1.InputCharacterDefinition"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter.OutputCharacterDefinition" "bedroom_SET_latest1:karen_latest:HIKState2SK1.InputCharacterDefinition"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:HIKSolverNode1.OutputCharacterState" "bedroom_SET_latest1:karen_latest:HIKState2SK1.InputCharacterState"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter.OutputCharacterDefinition" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_ControlRig.HIC"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_HipsBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_ChestBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftArmBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightArmBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftLegBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightLegBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_HeadBPKG.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftHandBPKG1.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_RightHandBPKG1.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter_LeftFootBPKG1.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter_FullBodyKG1.dnsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:HIKproperties2.msg" "bedroom_SET_latest1:karen_latest:QuickRigCharacter1.propertyState"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter1.OutputCharacterDefinition" "bedroom_SET_latest1:karen_latest:HIKState2SK2.InputCharacterDefinition"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:HIKSolverNode2.OutputCharacterState" "bedroom_SET_latest1:karen_latest:HIKState2SK2.InputCharacterState"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:HIKproperties2.OutputPropertySetState" "bedroom_SET_latest1:karen_latest:HIKSolverNode2.InputPropertySetState"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter1.OutputCharacterDefinition" "bedroom_SET_latest1:karen_latest:HIKSolverNode2.InputCharacterDefinition"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:HIKFK2State1.OutputCharacterState" "bedroom_SET_latest1:karen_latest:HIKSolverNode2.InputCharacterState"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:QuickRigCharacter1.OutputCharacterDefinition" "bedroom_SET_latest1:karen_latest:HIKFK2State1.InputCharacterDefinition"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_viewport_tex.oc" "bedroom_SET_latest1:karen_latest:apron_shader_lambert.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:apron_shader_viewport_tex.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:apron_shader_viewport_tex.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:apron_shader_viewport_tex.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:apron_shader_viewport_tex.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_viewport_tex.oc" "bedroom_SET_latest1:karen_latest:apron_shader_GLSL.diffuse_color_tex"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_view_norm.oc" "bedroom_SET_latest1:karen_latest:apron_shader_GLSL.normalMap"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:apron_shader_view_norm.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:apron_shader_view_norm.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:apron_shader_view_norm.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:apron_shader_view_norm.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_viewport_tex.oc" "bedroom_SET_latest1:karen_latest:dress_shader_lambert.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:dress_shader_viewport_tex.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:dress_shader_viewport_tex.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:dress_shader_viewport_tex.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:dress_shader_viewport_tex.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_viewport_tex.oc" "bedroom_SET_latest1:karen_latest:dress_shader_GLSL.diffuse_color_tex"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_view_norm.oc" "bedroom_SET_latest1:karen_latest:dress_shader_GLSL.normalMap"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:dress_shader_view_norm.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:dress_shader_view_norm.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:dress_shader_view_norm.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:dress_shader_view_norm.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:skin_shader_viewport_tex.oc" "bedroom_SET_latest1:karen_latest:skin_shader_lambert.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:skin_shader_viewport_tex.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:skin_shader_viewport_tex.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:skin_shader_viewport_tex.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:skin_shader_viewport_tex.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:skin_shader_viewport_tex.oc" "bedroom_SET_latest1:karen_latest:skin_shader_GLSL.diffuse_color_tex"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:eye_shader_viewport_tex.oc" "bedroom_SET_latest1:karen_latest:eye_shader_lambert.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:eye_shader_viewport_tex.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:eye_shader_viewport_tex.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:eye_shader_viewport_tex.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:eye_shader_viewport_tex.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:eye_shader_viewport_tex.oc" "bedroom_SET_latest1:karen_latest:eye_shader_GLSL.diffuse_color_tex"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_viewport_tex.oc" "bedroom_SET_latest1:karen_latest:hair_shader_lambert.c"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:hair_shader_viewport_tex.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:hair_shader_viewport_tex.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:hair_shader_viewport_tex.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:hair_shader_viewport_tex.ws"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_viewport_tex.oc" "bedroom_SET_latest1:karen_latest:hair_shader_GLSL.diffuse_color_tex"
+		;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_view_norm.oc" "bedroom_SET_latest1:karen_latest:hair_shader_GLSL.normalMap"
+		;
+connectAttr ":defaultColorMgtGlobals.cme" "bedroom_SET_latest1:karen_latest:hair_shader_view_norm.cme"
+		;
+connectAttr ":defaultColorMgtGlobals.cfe" "bedroom_SET_latest1:karen_latest:hair_shader_view_norm.cmcf"
+		;
+connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:hair_shader_view_norm.cmcp"
+		;
+connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:hair_shader_view_norm.ws"
+		;
+connectAttr "bedroom_SET_latest1:PxrSurface1SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface2SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface3SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface4SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface5SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface6SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface7SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface8SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface9SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface10SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface11SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface12SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface13SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface14SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface15SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface16SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface17SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:fox:initialShadingGroup.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:fatVase:initialShadingGroup.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:fatVase:initialShadingGroup2.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:string2SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:starSG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:pSphere2SG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:starSG1.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:wood_partSG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:top_partSG.pa" ":renderPartition.st" -na;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface1SG.pa" ":renderPartition.st" 
+		-na;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface2SG.pa" ":renderPartition.st" 
+		-na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface1SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrLayerSurface1SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface2SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface3SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface3SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface2SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface4SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe1:PxrSurface1SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface4SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface5SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface6SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface7SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface8SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface3SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface2SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface4SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe:PxrSurface1SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface3SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface2SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface4SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe2:PxrSurface1SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface3SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface2SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface4SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:jackieShoe3:PxrSurface1SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface9SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface10SG.pa" ":renderPartition.st"
+		 -na;
+connectAttr "bedroom_SET_latest1:deskShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:knobShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:lampshader.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface4.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:Book1Shader.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:book2Shader.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:book3Shader.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface8.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface9.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface10.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface11.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface12.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface13.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:PxrSurface14.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:PageShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:scribblesShader.msg" ":defaultShaderList1.s" -na
+		;
+connectAttr "bedroom_SET_latest1:bookRedShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:fox:initialShadingGroup1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:fatVase:initialShadingGroup1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:fatVase:initialShadingGroup3.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:lambert2.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:lambert3.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:lambert4.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:lambert5.msg" ":defaultShaderList1.s" -na;
+connectAttr "bedroom_SET_latest1:minidesk_wood_shader.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:minidesk_top_shader.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:lights:PxrSurface2.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrLayerSurface1.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_Pxr.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:eye_shader_Pxr.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:skin_shader_Pxr.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_Pxr.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:shoes_shadder_Pxr.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:sole_shader_Pxr.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_Pxr.msg" ":defaultShaderList1.s"
+		 -na;
+connectAttr "bedroom_SET_latest1:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:place2dTexture2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:place2dTexture3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:place2dTexture4.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:place2dTexture5.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:place2dTexture6.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:place2dTexture7.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:place2dTexture8.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:lights:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture1.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture2.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture3.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture4.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:place2dTexture5.msg" ":defaultRenderUtilityList1.u"
+		 -na;
+connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr ":rmanGlobals.msg" ":defaultRenderingList1.r" -na;
 connectAttr ":rmanDefaultDisplay.msg" ":defaultRenderingList1.r" -na;
-connectAttr "d_openexr.msg" ":defaultRenderingList1.r" -na;
-connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "bedroom_SET_latest1:d_openexr.msg" ":defaultRenderingList1.r" -na;
+connectAttr "bedroom_SET_latest1:defaultRenderLayer.msg" ":defaultRenderingList1.r"
+		 -na;
 connectAttr ":PxrPathTracer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "vase:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "vase:d_openexr.msg" ":defaultRenderingList1.r" -na;
-connectAttr "glasses:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "lamp_small:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "toyBox:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "tvstand:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "tvstand:d_openexr.msg" ":defaultRenderingList1.r" -na;
-connectAttr "television:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "console:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "coathanger:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "coathanger:d_openexr.msg" ":defaultRenderingList1.r" -na;
-connectAttr "mug:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "mug:d_openexr.msg" ":defaultRenderingList1.r" -na;
-connectAttr "pencil:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "pencil:d_openexr.msg" ":defaultRenderingList1.r" -na;
-connectAttr "easel:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "easel:d_openexr.msg" ":defaultRenderingList1.r" -na;
-connectAttr "canvas:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "canvas:d_openexr.msg" ":defaultRenderingList1.r" -na;
-connectAttr "lights:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "karen_latest:d_openexr.msg" ":defaultRenderingList1.r" -na;
-connectAttr "karen_latest:defaultRenderLayer.msg" ":defaultRenderingList1.r" -na
-		;
-connectAttr "desklampShape.msg" ":lightList1.l" -na;
-connectAttr "mac_lightShape.msg" ":lightList1.l" -na;
-connectAttr "overhead_2Shape.msg" ":lightList1.l" -na;
-connectAttr "moon_decor_lightShape.msg" ":lightList1.l" -na;
-connectAttr "window1Shape.msg" ":lightList1.l" -na;
-connectAttr "overhead_1Shape.msg" ":lightList1.l" -na;
-connectAttr "PxrSphereLightShape.msg" ":lightList1.l" -na;
-connectAttr "rim_lightShape.msg" ":lightList1.l" -na;
-connectAttr "face_lightShape.msg" ":lightList1.l" -na;
-connectAttr "PxrLayerMixer1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "wood1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file6.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file7.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file8.msg" ":defaultTextureList1.tx" -na;
-connectAttr "lights:mountain1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "karen_latest:PxrLayerMixer1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "karen_latest:PxrLayer1.msg" ":defaultTextureList1.tx" -na;
-connectAttr "karen_latest:PxrLayer2.msg" ":defaultTextureList1.tx" -na;
-connectAttr "karen_latest:eye_shader_render_tex.msg" ":defaultTextureList1.tx" -na
-		;
-connectAttr "karen_latest:skin_shader_render_tex.msg" ":defaultTextureList1.tx" 
+connectAttr "bedroom_SET_latest1:vase:defaultRenderLayer.msg" ":defaultRenderingList1.r"
+		 -na;
+connectAttr "bedroom_SET_latest1:vase:d_openexr.msg" ":defaultRenderingList1.r" 
 		-na;
-connectAttr "karen_latest:hair_shader_render_tex.msg" ":defaultTextureList1.tx" 
-		-na;
-connectAttr "karen_latest:hair_shader_render_norm.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:glasses:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
-connectAttr "karen_latest:apron_shader_render_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:lamp_small:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
-connectAttr "karen_latest:apron_shader_render_norm.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:toyBox:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
-connectAttr "karen_latest:dress_shader_render_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:tvstand:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
-connectAttr "karen_latest:dress_shader_render_norm.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:tvstand:d_openexr.msg" ":defaultRenderingList1.r"
 		 -na;
-connectAttr "karen_latest:PxrSurface3_viewport_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:television:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
-connectAttr "karen_latest:PxrSurface10_viewport_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:console:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
-connectAttr "karen_latest:PxrSurface5_viewport_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:coathanger:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
-connectAttr "karen_latest:PxrSurface4_viewport_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:coathanger:d_openexr.msg" ":defaultRenderingList1.r"
 		 -na;
-connectAttr "karen_latest:PxrSurface6_viewport_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:mug:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
-connectAttr "karen_latest:PxrSurface3_view_norm.msg" ":defaultTextureList1.tx" -na
+connectAttr "bedroom_SET_latest1:mug:d_openexr.msg" ":defaultRenderingList1.r" -na
 		;
-connectAttr "karen_latest:PxrSurface10_view_norm.msg" ":defaultTextureList1.tx" 
-		-na;
-connectAttr "karen_latest:PxrSurface6_view_norm.msg" ":defaultTextureList1.tx" -na
+connectAttr "bedroom_SET_latest1:pencil:defaultRenderLayer.msg" ":defaultRenderingList1.r"
+		 -na;
+connectAttr "bedroom_SET_latest1:pencil:d_openexr.msg" ":defaultRenderingList1.r"
+		 -na;
+connectAttr "bedroom_SET_latest1:easel:defaultRenderLayer.msg" ":defaultRenderingList1.r"
+		 -na;
+connectAttr "bedroom_SET_latest1:easel:d_openexr.msg" ":defaultRenderingList1.r"
+		 -na;
+connectAttr "bedroom_SET_latest1:canvas:defaultRenderLayer.msg" ":defaultRenderingList1.r"
+		 -na;
+connectAttr "bedroom_SET_latest1:canvas:d_openexr.msg" ":defaultRenderingList1.r"
+		 -na;
+connectAttr "bedroom_SET_latest1:lights:defaultRenderLayer.msg" ":defaultRenderingList1.r"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:d_openexr.msg" ":defaultRenderingList1.r"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:defaultRenderLayer.msg" ":defaultRenderingList1.r"
+		 -na;
+connectAttr "bedroom_SET_latest1:desklampShape.msg" ":lightList1.l" -na;
+connectAttr "bedroom_SET_latest1:mac_lightShape.msg" ":lightList1.l" -na;
+connectAttr "bedroom_SET_latest1:overhead_2Shape.msg" ":lightList1.l" -na;
+connectAttr "bedroom_SET_latest1:moon_decor_lightShape.msg" ":lightList1.l" -na;
+connectAttr "bedroom_SET_latest1:window1Shape.msg" ":lightList1.l" -na;
+connectAttr "bedroom_SET_latest1:overhead_1Shape.msg" ":lightList1.l" -na;
+connectAttr "bedroom_SET_latest1:PxrSphereLightShape.msg" ":lightList1.l" -na;
+connectAttr "bedroom_SET_latest1:rim_lightShape.msg" ":lightList1.l" -na;
+connectAttr "bedroom_SET_latest1:face_lightShape.msg" ":lightList1.l" -na;
+connectAttr "bedroom_SET_latest1:PxrLayerMixer1.msg" ":defaultTextureList1.tx" -na
 		;
-connectAttr "karen_latest:apron_shader_viewport_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:wood1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "bedroom_SET_latest1:file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "bedroom_SET_latest1:file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "bedroom_SET_latest1:file3.msg" ":defaultTextureList1.tx" -na;
+connectAttr "bedroom_SET_latest1:file4.msg" ":defaultTextureList1.tx" -na;
+connectAttr "bedroom_SET_latest1:file5.msg" ":defaultTextureList1.tx" -na;
+connectAttr "bedroom_SET_latest1:file6.msg" ":defaultTextureList1.tx" -na;
+connectAttr "bedroom_SET_latest1:file7.msg" ":defaultTextureList1.tx" -na;
+connectAttr "bedroom_SET_latest1:file8.msg" ":defaultTextureList1.tx" -na;
+connectAttr "bedroom_SET_latest1:lights:mountain1.msg" ":defaultTextureList1.tx"
 		 -na;
-connectAttr "karen_latest:apron_shader_view_norm.msg" ":defaultTextureList1.tx" 
-		-na;
-connectAttr "karen_latest:dress_shader_viewport_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:karen_latest:PxrLayerMixer1.msg" ":defaultTextureList1.tx"
 		 -na;
-connectAttr "karen_latest:dress_shader_view_norm.msg" ":defaultTextureList1.tx" 
-		-na;
-connectAttr "karen_latest:skin_shader_viewport_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:karen_latest:PxrLayer1.msg" ":defaultTextureList1.tx"
 		 -na;
-connectAttr "karen_latest:eye_shader_viewport_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:karen_latest:PxrLayer2.msg" ":defaultTextureList1.tx"
 		 -na;
-connectAttr "karen_latest:hair_shader_viewport_tex.msg" ":defaultTextureList1.tx"
+connectAttr "bedroom_SET_latest1:karen_latest:eye_shader_render_tex.msg" ":defaultTextureList1.tx"
 		 -na;
-connectAttr "karen_latest:hair_shader_view_norm.msg" ":defaultTextureList1.tx" -na
+connectAttr "bedroom_SET_latest1:karen_latest:skin_shader_render_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_render_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_render_norm.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_render_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_render_norm.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_render_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_render_norm.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface3_viewport_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface10_viewport_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface5_viewport_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface4_viewport_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface6_viewport_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface3_view_norm.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface10_view_norm.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:PxrSurface6_view_norm.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_viewport_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:apron_shader_view_norm.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_viewport_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:dress_shader_view_norm.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:skin_shader_viewport_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:eye_shader_viewport_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_viewport_tex.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_view_norm.msg" ":defaultTextureList1.tx"
+		 -na;
+connectAttr "bedroom_SET_latest1:nightstandRN.phl[1]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:nightstandRN.phl[2]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:nightstandRN.phl[3]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:celloRN.phl[1]" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:celloRN.phl[2]" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:celloRN.phl[3]" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:celloRN.phl[4]" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:celloRN.phl[5]" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:celloRN.phl[6]" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:celloRN.phl[7]" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:celloRN.phl[8]" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:celloRN.phl[9]" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:celloRN.phl[10]" ":initialShadingGroup.dsm" -na
 		;
-connectAttr "nightstandRN.phl[1]" ":initialShadingGroup.dsm" -na;
-connectAttr "nightstandRN.phl[2]" ":initialShadingGroup.dsm" -na;
-connectAttr "nightstandRN.phl[3]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[1]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[2]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[3]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[4]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[5]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[6]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[7]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[8]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[9]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[10]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[11]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[12]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[13]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[14]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[15]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[16]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[17]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[18]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[19]" ":initialShadingGroup.dsm" -na;
-connectAttr "celloRN.phl[20]" ":initialShadingGroup.dsm" -na;
-connectAttr "RoofShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "tvstand:tvCabinetShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "television:TVShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "television:pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "console:ConsoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|MAY_REMOVE|console:PS2|console:Controller|console:Remote|console:RemoteShape.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "bedroom_SET_latest1:celloRN.phl[11]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:celloRN.phl[12]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:celloRN.phl[13]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:celloRN.phl[14]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:celloRN.phl[15]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:celloRN.phl[16]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:celloRN.phl[17]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:celloRN.phl[18]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:celloRN.phl[19]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:celloRN.phl[20]" ":initialShadingGroup.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:RoofShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "bedroom_SET_latest1:tvstand:tvCabinetShape.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|MAY_REMOVE|console:PS2|console:Controller|console:Buttons|console:ButtonsShape.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "bedroom_SET_latest1:television:TVShape.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|MAY_REMOVE|console:PS2|console:Controller1|console:Remote|console:RemoteShape.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "bedroom_SET_latest1:television:pCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|MAY_REMOVE|console:PS2|console:Controller1|console:Buttons|console:ButtonsShape.iog.og[0]" ":initialShadingGroup.dsm"
+connectAttr "bedroom_SET_latest1:console:ConsoleShape.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "tvstand:groupId1.msg" ":initialShadingGroup.gn" -na;
-connectAttr "console:groupId17.msg" ":initialShadingGroup.gn" -na;
-connectAttr "console:groupId18.msg" ":initialShadingGroup.gn" -na;
-connectAttr "console:groupId19.msg" ":initialShadingGroup.gn" -na;
-connectAttr "console:groupId20.msg" ":initialShadingGroup.gn" -na;
-connectAttr "desklamp.iog" ":defaultLightSet.dsm" -na;
-connectAttr "mac_light.iog" ":defaultLightSet.dsm" -na;
-connectAttr "overhead_2.iog" ":defaultLightSet.dsm" -na;
-connectAttr "moon_decor_light.iog" ":defaultLightSet.dsm" -na;
-connectAttr "window1.iog" ":defaultLightSet.dsm" -na;
-connectAttr "overhead_1.iog" ":defaultLightSet.dsm" -na;
-connectAttr "PxrSphereLight.iog" ":defaultLightSet.dsm" -na;
-connectAttr "rim_light.iog" ":defaultLightSet.dsm" -na;
-connectAttr "face_light.iog" ":defaultLightSet.dsm" -na;
-// End of bedroom_SET_latest.ma
+connectAttr "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller|bedroom_SET_latest1:console:Remote|bedroom_SET_latest1:console:RemoteShape.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller|bedroom_SET_latest1:console:Buttons|bedroom_SET_latest1:console:ButtonsShape.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller1|bedroom_SET_latest1:console:Remote|bedroom_SET_latest1:console:RemoteShape.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "|bedroom_SET_latest1:MAY_REMOVE|bedroom_SET_latest1:console:PS2|bedroom_SET_latest1:console:Controller1|bedroom_SET_latest1:console:Buttons|bedroom_SET_latest1:console:ButtonsShape.iog.og[0]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:tvstand:groupId1.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "bedroom_SET_latest1:console:groupId17.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "bedroom_SET_latest1:console:groupId18.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "bedroom_SET_latest1:console:groupId19.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "bedroom_SET_latest1:console:groupId20.msg" ":initialShadingGroup.gn"
+		 -na;
+connectAttr "bedroom_SET_latest1:desklamp.iog" ":defaultLightSet.dsm" -na;
+connectAttr "bedroom_SET_latest1:mac_light.iog" ":defaultLightSet.dsm" -na;
+connectAttr "bedroom_SET_latest1:overhead_2.iog" ":defaultLightSet.dsm" -na;
+connectAttr "bedroom_SET_latest1:moon_decor_light.iog" ":defaultLightSet.dsm" -na
+		;
+connectAttr "bedroom_SET_latest1:window1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "bedroom_SET_latest1:overhead_1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "bedroom_SET_latest1:PxrSphereLight.iog" ":defaultLightSet.dsm" -na;
+connectAttr "bedroom_SET_latest1:rim_light.iog" ":defaultLightSet.dsm" -na;
+connectAttr "bedroom_SET_latest1:face_light.iog" ":defaultLightSet.dsm" -na;
+// End of scene9.ma
