@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: bedroom_SET_latest.ma
-//Last modified: Tue, Nov 19, 2019 06:37:08 PM
+//Last modified: Tue, Nov 19, 2019 07:02:18 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "bed_NEW" -rfn "bed_NEWRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
 file -rdi 1 -ns "window" -rfn "windowRN" -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/window.ma";
@@ -155,7 +155,6 @@ requires -nodeType "PxrVisualizer" -nodeType "PxrLayer" -nodeType "PxrNormalMap"
 		 -nodeType "PxrVCM" -nodeType "PxrRectLight" -nodeType "PxrPathTracer" -nodeType "PxrSphereLight"
 		 -nodeType "rmanDisplay" "RenderMan_for_Maya.py" "22.4 @ 1946009";
 requires -nodeType "GLSLShader" "glslShader" "1.0";
-requires "stereoCamera" "10.0";
 requires "mtoa" "3.3.0.1";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -167,14 +166,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "C758C018-ED44-A183-828A-47A742AD3A6E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -17.668694392221049 2.51106785841346 1.3777349494816788 ;
+	setAttr ".t" -type "double3" -29.054081291237313 3.2959782975192211 1.9744177928373314 ;
 	setAttr ".r" -type "double3" -3.9383527251643633 2792.9999999984943 -7.5964855507134479e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1B620404-1B40-2D8C-0ABD-78BC6EE5B967";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 14.406800201791935;
+	setAttr ".coi" 25.834798699047127;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -28379,29 +28378,29 @@ createNode RenderMan -s -n "rmanBakeGlobals";
 	setAttr ".rman__riopt__Hider_name" -type "string" "bake";
 	setAttr ".nt" -type "string" "pass:render";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A0D68860-554A-3958-AE05-C4B80654DCB5";
-	setAttr -s 194 ".lnk";
+	rename -uid "EE745BBD-CC4A-A55C-D3D0-4EB5B41A563B";
+	setAttr -s 178 ".lnk";
 	setAttr -s 184 ".ign";
-	setAttr -s 194 ".slnk";
+	setAttr -s 178 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "69263C96-9D4D-521F-5A46-24BE508C5F86";
+	rename -uid "CF0BACB8-F547-7369-27A2-BE8BA837F1F4";
 	setAttr -s 4 ".dli[1:3]"  1 2 3;
 	setAttr -s 4 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8A7F0DD2-9D4D-AF04-764F-F3BB9F08D5A5";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "BEBD61BF-3F4C-474E-A792-C98181165259";
+	rename -uid "54602B08-3E4E-CF51-C818-3DA71F62029B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "022D8653-2746-FB22-3444-F2B0A98C47E0";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "EE56EEE4-CC42-18DF-2A13-87A6DBA860E9";
+	rename -uid "35816F89-7C4C-66BC-666C-F898274ECB3B";
 	setAttr -s 2 ".bsdt";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 1 0 -1 ;
 	setAttr ".bsdt[1].bscd" -type "Int32Array" 0 ;
 	setAttr ".bsdt[1].bsdn" -type "string" "karen_latest";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "DCB1730A-5645-03F9-3B3F-80BFC5FB084E";
+	rename -uid "587C165E-A442-5956-69DE-5BA944322731";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "759C0F75-F047-76D1-C3B4-469CE667BB5D";
 	setAttr ".b" -type "string" (
@@ -36563,25 +36562,25 @@ createNode reference -n "floor_walls_latestRN";
 		"floor_walls_latestRN" 0
 		"floor_walls_latestRN" 16
 		2 "|floor_walls_latest:Wall" "visibility" " -av 0"
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|rim_light|rim_lightShape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|moon_decor_light|moon_decor_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "floor_walls_latest:PxrSurface1SG.message" "|rim_light|rim_lightShape.message" 
 		0
@@ -36760,6 +36759,7 @@ createNode reference -n "golem_plushieRN";
 	rename -uid "6CE3B293-474F-892E-F105-8988782BA9EF";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"golem_plushieRN"
+		"golem_plushieRN" 0
 		"golem_plushieRN" 3
 		2 "|golem_plushie:plushie" "translate" " -type \"double3\" 1.72639321751956398 1.51630942597518592 5.02098302005963415"
 		
@@ -36772,14 +36772,14 @@ createNode reference -n "macRN";
 	rename -uid "108F4B55-A743-B7D5-3F6F-1C8C0787C096";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"macRN"
-		"macRN" 0
-		"macRN" 88
+		"macRN" 1
+		2 "|mac:PxrDomeLight" "visibility" " 0"
+		"macRN" 87
 		2 "|mac:base" "translate" " -type \"double3\" -5.17430333614271376 1.69652125937362919 -0.33089714399545528"
 		
 		2 "|mac:base" "rotate" " -type \"double3\" 0 89.99999999999992895 0"
 		2 "|mac:base" "scale" " -type \"double3\" 0.829416218558509 0.14554945180466017 0.14554945180466017"
 		
-		2 "|mac:PxrDomeLight" "visibility" " 0"
 		7 "ignore" ":lightLinker1" 2 "|mac:base|mac:baseShape.message" "|mac_light|mac_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|mac:base|mac:monitor|mac:monitorShape.message" "|mac_light|mac_lightShape.message" 
@@ -37116,13 +37116,7 @@ createNode reference -n "bedroom_light_rig:macRN";
 	rename -uid "4E8BD325-EE42-8213-9B65-AC8C30D9FB99";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_light_rig:macRN"
-		"macRN" 0
-		"macRN" 94
-		2 "|mac:base" "translate" " -type \"double3\" -5.17430333614271376 1.69652125937362919 -0.33089714399545528"
-		
-		2 "|mac:base" "rotate" " -type \"double3\" 0 89.99999999999992895 0"
-		2 "|mac:base" "scale" " -type \"double3\" 0.829416218558509 0.14554945180466017 0.14554945180466017"
-		
+		"macRN" 7
 		2 "|mac:PxrDomeLight" "visibility" " 1"
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "intensity" " 0.15000000596046448"
 		
@@ -37133,6 +37127,12 @@ createNode reference -n "bedroom_light_rig:macRN";
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "enableTemperature" " 1"
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "temperature" " 4500"
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "color" " -type \"float3\" 0.53100002000000002 0.56334530999999999 1"
+		
+		"macRN" 87
+		2 "|mac:base" "translate" " -type \"double3\" -5.17430333614271376 1.69652125937362919 -0.33089714399545528"
+		
+		2 "|mac:base" "rotate" " -type \"double3\" 0 89.99999999999992895 0"
+		2 "|mac:base" "scale" " -type \"double3\" 0.829416218558509 0.14554945180466017 0.14554945180466017"
 		
 		7 "ignore" ":lightLinker1" 2 "|mac:base|mac:baseShape.message" "|:mac_light|:mac_lightShape.message" 
 		0
@@ -41717,7 +41717,6 @@ createNode HIKCharacterNode -n "karen_latest:QuickRigCharacter1";
 		-p "quickRigInfo";
 	addAttr -r false -s false -ci true -sn "guides" -ln "guides" -at "message" -p "quickRigInfo";
 	addAttr -r false -s false -ci true -sn "skeleton" -ln "skeleton" -at "message" -p "quickRigInfo";
-	setAttr ".OutputCharacterDefinition" -type "HIKCharacter" ;
 	setAttr ".InputCharacterizationLock" yes;
 	setAttr ".ReferenceTy" -0.14070068299770355;
 	setAttr ".ReferenceTz" -0.27876979112625122;
@@ -42559,7 +42558,7 @@ createNode HIKState2SK -n "karen_latest:HIKState2SK2";
 	setAttr ".LeftFootTz" -7.4305214814440745e-08;
 	setAttr ".LeftFootRx" 0.54455341399246571;
 	setAttr ".LeftFootRy" -1.0065003382652626;
-	setAttr ".LeftFootRz" 0.094385437636506198;
+	setAttr ".LeftFootRz" 0.094385437636506211;
 	setAttr ".LeftFootSx" 0.49398382992684764;
 	setAttr ".LeftFootSy" 0.4939838442220475;
 	setAttr ".LeftFootSz" 0.49398389054404662;
@@ -42722,7 +42721,7 @@ createNode HIKState2SK -n "karen_latest:HIKState2SK2";
 	setAttr ".RightForeArmTx" -1.1353486926712266;
 	setAttr ".RightForeArmTy" -3.2807221828079491e-08;
 	setAttr ".RightForeArmTz" 2.7426585980094842e-07;
-	setAttr ".RightForeArmRx" -0.00019642051174020039;
+	setAttr ".RightForeArmRx" -0.00019642051174020042;
 	setAttr ".RightForeArmRy" -0.0014603712906947951;
 	setAttr ".RightForeArmRz" 4.776774820711676;
 	setAttr ".RightForeArmSx" 0.49398385320313443;
@@ -42849,7 +42848,7 @@ createNode HIKState2SK -n "karen_latest:HIKState2SK2";
 	setAttr ".Spine1Sx" 0.4939837639525026;
 	setAttr ".Spine1Sy" 0.49398376689364848;
 	setAttr ".Spine1Sz" 0.49398374943796808;
-	setAttr ".Spine1PGX" -type "matrix" -0.00052986984125489743 0.49398347742238496 -4.816971308516178e-05 0
+	setAttr ".Spine1PGX" -type "matrix" -0.00052986984125489743 0.49398347742238496 -4.8169713085161773e-05 0
 		 -0.49195411960894109 -0.00053205485923229329 -0.04473056082654174 0 -0.04473058518255324 -8.2722792281832802e-09 0.49195438757878718 0
 		 -5.1696619987487793 1.9682642221450806 -0.81191766262054443 1;
 	setAttr ".Spine1SC" yes;
@@ -42865,7 +42864,7 @@ createNode HIKState2SK -n "karen_latest:HIKState2SK2";
 	setAttr ".Spine2Sx" 0.49398378451850944;
 	setAttr ".Spine2Sy" 0.49398378240004104;
 	setAttr ".Spine2Sz" 0.4939837184087672;
-	setAttr ".Spine2PGX" -type "matrix" -0.00052986984125489743 0.49398347742238496 -4.816971308516178e-05 0
+	setAttr ".Spine2PGX" -type "matrix" -0.00052986984125489743 0.49398347742238496 -4.8169713085161773e-05 0
 		 -0.49195411960894109 -0.00053205485923229329 -0.04473056082654174 0 -0.044730585182553233 -8.2722792281832785e-09 0.49195438757878707 0
 		 -5.1698751449584961 2.1668787002563477 -0.81193703413009632 1;
 	setAttr ".Spine2SC" yes;
@@ -42878,15 +42877,11 @@ createNode HIKState2SK -n "karen_latest:HIKState2SK2";
 createNode HIKSolverNode -n "karen_latest:HIKSolverNode2";
 	rename -uid "23DB8D25-EC48-CFCD-3937-D1A3D0A25FF4";
 	setAttr ".ihi" 0;
-	setAttr ".InputEffectorState" -type "HIKEffectorState" ;
-	setAttr ".InputEffectorStateNoAux" -type "HIKEffectorState" ;
-	setAttr ".OutputCharacterState" -type "HIKCharacterState" ;
 createNode HIKFK2State -n "karen_latest:HIKFK2State1";
 	rename -uid "FCD37313-4648-D37C-3D27-36B0CCB4B7DF";
 	setAttr ".ihi" 0;
-	setAttr ".OutputCharacterState" -type "HIKCharacterState" ;
 	setAttr ".ReferenceGX" -type "matrix" -0.044730634279094496 0 0.4919544292404992 0
-		 0 0.49398379537425663 0 0 -0.4919544292404992 -0 -0.044730634279094496 0 -5.1741206614110054 0.052359824326634219 -0.81232325382547155 1;
+		 0 0.49398379537425663 0 0 -0.4919544292404992 0 -0.044730634279094496 0 -5.1741206614110054 0.052359824326634219 -0.81232325382547155 1;
 	setAttr ".HipsGX" -type "matrix" -0.044730634279064138 -5.7710063064279002e-07 0.49195442924016347 0
 		 -5.2256931559590534e-08 0.49398379537391951 5.7472980694608339e-07 0 -0.4919544292404992 -2.7421599560150287e-16 -0.044730634279094662 0
 		 -5.1694114682962269 1.7696486252146593 -0.81189507793300575 1;
@@ -42955,7 +42950,6 @@ createNode HIKFK2State -n "karen_latest:HIKFK2State1";
 		 -5.1700882001701016 2.3654933531715634 -0.81195637634411066 1;
 createNode HIKProperty2State -n "karen_latest:HIKproperties2";
 	rename -uid "72D98EA9-0043-388D-BAF5-19A92D8104B3";
-	setAttr ".OutputPropertySetState" -type "HIKPropertySetState" ;
 	setAttr ".lkr" 0.60000002384185791;
 	setAttr ".rkr" 0.60000002384185791;
 	setAttr ".FootBottomToAnkle" 0.29750179495510398;
@@ -58085,7 +58079,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 194 ".st";
+	setAttr -s 178 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -58098,7 +58092,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 162 ".s";
+	setAttr -s 165 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -58106,19 +58100,19 @@ select -ne :postProcessList1;
 	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 64 ".u";
+	setAttr -s 47 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 112 ".r";
+	setAttr -s 113 ".r";
 select -ne :lightList1;
-	setAttr -s 11 ".l";
+	setAttr -s 9 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 151 ".tx";
+	setAttr -s 132 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 53 ".dsm";
+	setAttr -s 50 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -58250,7 +58244,7 @@ select -ne :defaultResolution;
 	setAttr -k on ".isu";
 	setAttr -k on ".pdu";
 select -ne :defaultLightSet;
-	setAttr -s 11 ".dsm";
+	setAttr -s 9 ".dsm";
 select -ne :hardwareRenderGlobals;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
