@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: scene08_rockGolem_Intro.ma
-//Last modified: Mon, Dec 02, 2019 11:38:45 PM
+//Last modified: Fri, Dec 06, 2019 12:44:59 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "forest_golem_SET_latest" -rfn "forest_golem_SET_latestRN" -op
 		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//scenes/forest_golem_SET_latest.ma";
@@ -43,6 +43,8 @@ requires "stereoCamera" "10.0";
 requires -nodeType "rmanGlobals" -nodeType "PxrPathTracer" -nodeType "rmanDisplay"
 		 "RenderMan_for_Maya.py" "22.4 @ 1946009";
 requires "mtoa" "3.3.0.1";
+requires "stereoCamera" "10.0";
+requires "mtoa" "3.3.0.1";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
@@ -53,14 +55,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "03B47DC3-2D40-033A-E283-D689A3B30717";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.4026455666020539 15.476007482293547 27.071947180366291 ;
-	setAttr ".r" -type "double3" -9.9383527296128218 -350.99999999997146 1.0063127173886985e-16 ;
+	setAttr ".t" -type "double3" 1.5862352828302377 12.755447709132577 20.148710427089974 ;
+	setAttr ".r" -type "double3" -9.3383527296117599 -360.19999999996281 1.8636176124662689e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E1628328-CA4E-C776-D493-ACB6CF55B3DF";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 24.420542414800046;
+	setAttr ".coi" 17.748051658419104;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -143,7 +145,7 @@ createNode locator -n "locatorShape2" -p "locator2";
 	rename -uid "252DB42D-E141-C9CD-7A68-278C5218FEC7";
 	setAttr -k off ".v";
 createNode fosterParent -n "earthGolem_RIGRNfosterParent1";
-	rename -uid "C414EEC2-7C40-250E-2A8F-EFBC58008B93";
+	rename -uid "B48F31E7-5B48-A131-F8E9-159816883ED7";
 createNode parentConstraint -n "rightArm_ik1_parentConstraint1" -p "earthGolem_RIGRNfosterParent1";
 	rename -uid "3AEAB405-5941-84E3-6835-8892E10E5974";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "locator1W0" -dv 1 -min 0 -at "double";
@@ -162,7 +164,7 @@ createNode parentConstraint -n "rightArm_ik1_parentConstraint1" -p "earthGolem_R
 	setAttr ".tg[0].tot" -type "double3" -0.029667424592700442 -0.80179515356037023 
 		-0.94656185509079016 ;
 	setAttr ".tg[0].tor" -type "double3" -87.990031473710971 0 0 ;
-	setAttr ".lr" -type "double3" -85.051532759005951 21.417225358915058 11.000052383031081 ;
+	setAttr ".lr" -type "double3" -89.37144353376236 -32.993015502696629 -2.7714245617786504 ;
 	setAttr ".rst" -type "double3" -0.22865114159667943 7.0073378158194171 4.3913194702887379 ;
 	setAttr ".rsrr" -type "double3" -87.990031473710971 0 0 ;
 	setAttr -k on ".w0";
@@ -183,31 +185,31 @@ createNode parentConstraint -n "leftArm_ik1_parentConstraint1" -p "earthGolem_RI
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.15713850936381024 0.07079943208277184 -0.17062608870464269 ;
 	setAttr ".tg[0].tor" -type "double3" -110.58968336715195 -7.3297600070851416 -14.296148321477441 ;
-	setAttr ".lr" -type "double3" -118.09138069187344 45.292860818505503 -15.037524100618272 ;
+	setAttr ".lr" -type "double3" -100.51159259432301 -6.9458689724317235 -22.8246291197528 ;
 	setAttr ".rst" -type "double3" -0.090936517603178224 7.3278789348677726 4.9120472273262878 ;
 	setAttr ".rsrr" -type "double3" -110.58968336715195 -7.3297600070851399 -14.296148321477441 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C19E0F73-9C4F-3867-1017-57BC666D316D";
+	rename -uid "01233AB6-9144-0D5D-D20D-5DAA70325EB6";
 	setAttr -s 42 ".lnk";
 	setAttr -s 42 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "42FAC5F4-6D48-C3F6-0320-36A7B97BF68A";
+	rename -uid "56DEEC12-8842-7884-4D98-28834F13CACC";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "1984A9AA-9043-0CB6-25FE-0897B9EA980C";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9BEADD97-E344-2DE1-9F48-FBA2CE549033";
+	rename -uid "4A82D21C-1842-2C1C-6B93-D58364161C7A";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E05294C1-E942-FB74-2824-0F8254AB4373";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "E8421C10-B148-D8AA-0067-48A362D67A81";
-	setAttr ".bsdt[0].bscd" -type "Int32Array" 6 1 2 3 4 0
-		 5 ;
-	setAttr -s 6 ".bspr";
-	setAttr -s 6 ".obsv";
+	rename -uid "A242CA1F-9846-94EC-B6DF-42B213B1E255";
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 7 1 2 3 4 0
+		 5 6 ;
+	setAttr -s 7 ".bspr";
+	setAttr -s 7 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3D19A403-A049-80C4-EB0B-62A6B0D80D18";
+	rename -uid "D9146814-9947-25DD-5D43-FBA5E5E7AA44";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "E337D064-DC48-C1BE-289C-87963B4B123F";
 	setAttr ".b" -type "string" (
@@ -216,15 +218,15 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
 		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"SCENE_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1348\n            -height 517\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 0\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n"
+		+ "            -hulls 0\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1028\n            -height 517\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
 		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 510\n            -height 517\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 372\n            -height 517\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n"
@@ -247,14 +249,14 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n"
 		+ "                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererOverrideName \"stereoOverrideVP2\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n"
 		+ "                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
-		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n"
-		+ "            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n"
-		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n"
-		+ "                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n"
-		+ "\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"SCENE_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1348\\n    -height 517\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"SCENE_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1348\\n    -height 517\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
+		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
+		+ "            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n"
+		+ "            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n"
+		+ "\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"SCENE_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 0\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1028\\n    -height 517\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"SCENE_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 0\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1028\\n    -height 517\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -292,8 +294,8 @@ createNode reference -n "forest_golem_SET_latestRN";
 		"forest_golem_SET_latest:roots_latestRN1" 0
 		"forest_golem_SET_latest:lilyBush_latestRN1" 0
 		"forest_golem_SET_latest:roots_latestRN5" 0
-		"forest_golem_SET_latest:roots_latestRN3" 0
 		"forest_golem_SET_latest:roots_latestRN6" 0
+		"forest_golem_SET_latest:roots_latestRN3" 0
 		"forest_golem_SET_latest:fallenTree_latestRN" 20
 		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
 		"translate" " -type \"double3\" 5.2993369272773112 -0.18078285191942645 0"
@@ -603,7 +605,7 @@ createNode reference -n "sharedReferenceNode";
 		"sharedReferenceNode";
 createNode reference -n "earthGolem_RIGRN";
 	rename -uid "1175E4F4-F648-7F81-D076-BABD51881CB4";
-	setAttr -s 68 ".phl";
+	setAttr -s 79 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -672,26 +674,44 @@ createNode reference -n "earthGolem_RIGRN";
 	setAttr ".phl[66]" 0;
 	setAttr ".phl[67]" 0;
 	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"earthGolem_RIGRN"
-		"earthGolem_RIG:earthGolem_latestRN" 0
+		"earthGolem_RIG:earthGolem_latestRN" 1
+		3 "earthGolem_RIG:earthGolem_latest:mouth_angry.inputTarget[0].vertex[0]" 
+		"|earthGolem_RIG:earthGolem_latest:earthGolem|earthGolem_RIG:earthGolem_latest:body|earthGolem_RIG:earthGolem_latest:bodyShape.tweakLocation" 
+		""
 		"earthGolem_RIGRN" 0
-		"earthGolem_RIG:earthGolem_latestRN" 18
+		"earthGolem_RIG:earthGolem_latestRN" 25
 		2 "|earthGolem_RIG:earthGolem_latest:earthGolem|earthGolem_RIG:earthGolem_latest:eyes" 
 		"visibility" " 0"
 		2 "|earthGolem_RIG:earthGolem_latest:earthGolem|earthGolem_RIG:earthGolem_latest:stem" 
 		"visibility" " 0"
 		2 "|earthGolem_RIG:earthGolem_latest:earthGolem|earthGolem_RIG:earthGolem_latest:leaf" 
 		"visibility" " 0"
-		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "w[0:1]" " -s 2 0.27379730000000002 0.27500798999999998"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "w[0:5]" " -s 6 0.32960895000000001 0.32402235000000001 0 0 1 1"
 		
-		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight" " -s 2"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight" " -s 6"
 		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[0]" " -av"
 		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[1]" " -av"
-		2 "earthGolem_RIG:earthGolem_latest:mouth_closed" "weight[0]" " 0.79863691000000003"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[2]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[3]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[4]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[5]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:mouth_closed" "weight[0]" " 0.80446929"
 		
 		2 "earthGolem_RIG:earthGolem_latest:mouth_closed" "weight[0]" " -av"
-		2 "earthGolem_RIG:earthGolem_latest:mouth_angry" "envelope" " -av 0.00020731495169457048"
+		2 "earthGolem_RIG:earthGolem_latest:mouth_angry" "envelope" " -av 0.089385472238063812"
 		
 		2 "earthGolem_RIG:earthGolem_latest:mouth_angry" "w[0:5]" " -s 6 1 1 1 0.63687152000000002 0.70391059 0.37988826999999997"
 		
@@ -699,18 +719,23 @@ createNode reference -n "earthGolem_RIGRN";
 		" -1"
 		2 "earthGolem_RIG:earthGolem_latest:mouth_angry" "inputTarget[0].sculptInbetweenWeight" 
 		" 1"
-		3 "earthGolem_RIG:earthGolem_latest:mouth_angry.inputTarget[0].vertex[0]" 
-		"|earthGolem_RIG:earthGolem_latest:earthGolem|earthGolem_RIG:earthGolem_latest:body|earthGolem_RIG:earthGolem_latest:bodyShape.tweakLocation" 
-		""
 		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[0]" 
 		"earthGolem_RIGRN.placeHolderList[1]" ""
 		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[1]" 
 		"earthGolem_RIGRN.placeHolderList[2]" ""
-		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:mouth_closed.weight[0]" 
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[2]" 
 		"earthGolem_RIGRN.placeHolderList[3]" ""
-		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:mouth_angry.envelope" 
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[3]" 
 		"earthGolem_RIGRN.placeHolderList[4]" ""
-		"earthGolem_RIGRN" 145
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[4]" 
+		"earthGolem_RIGRN.placeHolderList[5]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[5]" 
+		"earthGolem_RIGRN.placeHolderList[6]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:mouth_closed.weight[0]" 
+		"earthGolem_RIGRN.placeHolderList[7]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:mouth_angry.envelope" 
+		"earthGolem_RIGRN.placeHolderList[8]" ""
+		"earthGolem_RIGRN" 4193
 		0 "|earthGolem_RIGRNfosterParent1|leftArm_ik1_parentConstraint1" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"-s -r "
 		0 "|earthGolem_RIGRNfosterParent1|rightArm_ik1_parentConstraint1" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
@@ -719,21 +744,21 @@ createNode reference -n "earthGolem_RIGRN";
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		1 |earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		2 "|earthGolem_RIG:rightArm_ik" "translate" " -type \"double3\" 3.24007318855270299 11.09473541005910491 8.55480604382637111"
+		2 "|earthGolem_RIG:rightArm_ik" "translate" " -type \"double3\" 10.60666784909456517 11.54578120768480254 2.06014195890997254"
 		
 		2 "|earthGolem_RIG:rightArm_ik" "translateX" " -av"
 		2 "|earthGolem_RIG:rightArm_ik" "translateY" " -av"
 		2 "|earthGolem_RIG:rightArm_ik" "translateZ" " -av"
-		2 "|earthGolem_RIG:SPINE_IK" "translate" " -type \"double3\" 0.33623433415033938 10.9768515115974914 3.41902418710894995"
+		2 "|earthGolem_RIG:SPINE_IK" "translate" " -type \"double3\" 1.18254521335887119 10.74445180309698955 4.41608221665823297"
 		
-		2 "|earthGolem_RIG:SPINE_IK" "rotate" " -type \"double3\" -22.21232290119368713 -12.51691859182990108 77.30644225033871919"
+		2 "|earthGolem_RIG:SPINE_IK" "rotate" " -type \"double3\" 22.84785004796784946 -13.49655774537895425 105.16444444248719492"
 		
 		2 "|earthGolem_RIG:Master_CTRL" "translate" " -type \"double3\" 0 0 0.093868613172169546"
 		
 		2 "|earthGolem_RIG:Master_CTRL" "rotate" " -type \"double3\" 0 0 0"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "visibility" " -av 1"
 		
-		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "translate" " -type \"double3\" 0 -1.63333127447272797 1.21674011018856576"
+		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "translate" " -type \"double3\" 1.69659234953748506 -1.81943771673307708 2.14382749249566995"
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "translateX" " -av"
 		
@@ -741,7 +766,7 @@ createNode reference -n "earthGolem_RIGRN";
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "translateZ" " -av"
 		
-		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "rotate" " -type \"double3\" 12.15137664176195464 -20.25805867063153798 -4.25555177284678887"
+		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "rotate" " -type \"double3\" 13.02750207180647912 29.07768346262719561 6.415761324354599"
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "rotateY" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "rotateX" " -av"
@@ -762,7 +787,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL" 
 		"translateZ" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL" 
-		"rotate" " -type \"double3\" -15.14437305874958106 -6.5414708694161483 1.42829488734193144"
+		"rotate" " -type \"double3\" -15.02868649918648458 -0.70100931491421192 -0.14595088049511815"
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL" 
 		"rotateY" " -av"
@@ -781,7 +806,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"visibility" " -av 1"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
-		"translate" " -type \"double3\" 1.70718965833676917 2.84832629318011321 5.28069884433681302"
+		"translate" " -type \"double3\" -2.83758993192110243 4.63037294631365448 -1.83206214892954167"
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"translateX" " -av"
@@ -790,7 +815,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"translateZ" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
-		"rotate" " -type \"double3\" -118.09138069187343945 45.29286081850550261 -15.03752410061827227"
+		"rotate" " -type \"double3\" -100.5115925943230053 -6.94586897243172352 -22.82462911975279951"
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"rotateX" " -av"
@@ -811,7 +836,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
 		"visibility" " -av 1"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
-		"translate" " -type \"double3\" -0.058321245963595156 4.52778989727464776 4.03847522002209747"
+		"translate" " -type \"double3\" 2.18988457803008796 4.12158505927078078 2.89265986452893786"
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
 		"translateX" " -av"
@@ -820,7 +845,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
 		"translateZ" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
-		"rotate" " -type \"double3\" -18.13064853222514472 -47.41638264898251975 -64.91189480333481754"
+		"rotate" " -type \"double3\" -52.92185787684570641 42.84341645814316735 34.38575860581445909"
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
 		"rotateX" " -av"
@@ -850,7 +875,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL" 
 		"translateZ" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL" 
-		"rotate" " -type \"double3\" 22.60029464509751662 22.75684919733758704 3.49710877503779161"
+		"rotate" " -type \"double3\" 18.20923887097594118 24.0004229691050206 3.78679622841915409"
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL" 
 		"rotateX" " -av"
@@ -869,466 +894,8525 @@ createNode reference -n "earthGolem_RIGRN";
 		"scaleZ" " -av"
 		2 "|earthGolem_RIG:rightArm_PV" "translate" " -type \"double3\" 0 0 0"
 		2 "|earthGolem_RIG:leftArm_PV" "translate" " -type \"double3\" 0 0 0"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"instObjGroups.objectGroups" " -s 14"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet" " -s 2"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[0].colorName" " -type \"string\" \"SculptFreezeColorTemp\""
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[0].clamped" " 0"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[0].representation" " 4"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[1].colorName" " -type \"string\" \"SculptMaskColorTemp\""
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[1].clamped" " 0"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[1].representation" " 4"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"useMeshSculptCache" " 0"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"computeFromSculptCache" " 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex" " -s 4028"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[0]" " -type \"float3\" 0 0 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1]" " -type \"float3\" 0 0 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2]" " -type \"float3\" 0 0 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3]" " -type \"float3\" 0 0 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4]" " -type \"float3\" 0 0 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[5]" " -type \"float3\" 0 0 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[6]" " -type \"float3\" 0 0 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[7]" " -type \"float3\" 0 0 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[8]" " -type \"float3\" 0 0 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[9]" " -type \"float3\" 0 0 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[10]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[11]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[12]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[13]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[14]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[15]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[16]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[17]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[18]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[19]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[20]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[21]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[22]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[23]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[24]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[25]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[26]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[27]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[28]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[29]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[30]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[31]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[32]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[33]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[34]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[35]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[36]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[37]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[38]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[39]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[40]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[41]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[42]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[43]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[44]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[45]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[46]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[47]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[48]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[49]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[50]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[51]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[52]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[53]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[54]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[55]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[56]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[57]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[58]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[59]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[60]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[61]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[62]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[63]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[64]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[65]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[66]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[67]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[68]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[69]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[70]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[71]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[72]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[73]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[74]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[75]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[76]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[77]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[78]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[79]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[80]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[81]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[82]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[83]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[84]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[85]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[86]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[87]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[88]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[89]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[90]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[91]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[92]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[93]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[94]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[95]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[96]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[97]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[98]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[99]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[100]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[101]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[102]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[103]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[104]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[105]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[106]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[107]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[108]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[109]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[110]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[111]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[112]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[113]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[114]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[115]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[116]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[117]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[118]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[119]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[120]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[121]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[122]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[123]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[124]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[125]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[126]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[127]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[128]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[129]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[130]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[131]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[132]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[133]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[134]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[135]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[136]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[137]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[138]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[139]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[140]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[141]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[142]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[143]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[144]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[145]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[146]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[147]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[148]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[149]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[150]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[151]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[152]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[153]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[154]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[155]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[156]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[157]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[158]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[159]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[160]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[161]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[162]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[163]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[164]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[165]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[166]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[167]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[168]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[169]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[170]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[171]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[172]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[173]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[174]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[175]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[176]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[177]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[178]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[179]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[180]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[181]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[182]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[183]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[184]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[185]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[186]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[187]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[188]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[189]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[190]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[191]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[192]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[193]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[194]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[195]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[196]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[197]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[198]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[199]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[200]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[201]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[202]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[203]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[204]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[205]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[206]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[207]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[208]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[209]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[210]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[211]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[212]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[213]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[214]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[215]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[216]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[217]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[218]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[219]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[220]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[221]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[222]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[223]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[224]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[225]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[226]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[227]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[228]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[229]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[230]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[231]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[232]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[233]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[234]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[235]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[236]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[237]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[238]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[239]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[240]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[241]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[242]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[243]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[244]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[245]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[246]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[247]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[248]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[249]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[250]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[251]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[252]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[253]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[254]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[255]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[256]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[257]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[258]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[259]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[260]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[261]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[262]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[263]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[264]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[265]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[266]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[267]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[268]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[269]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[270]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[271]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[272]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[273]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[274]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[275]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[276]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[277]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[278]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[279]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[280]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[281]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[282]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[283]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[284]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[285]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[286]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[287]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[288]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[289]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[290]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[291]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[292]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[293]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[294]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[295]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[296]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[297]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[298]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[299]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[300]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[301]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[302]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[303]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[304]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[305]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[306]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[307]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[308]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[309]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[310]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[311]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[312]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[313]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[314]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[315]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[316]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[317]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[318]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[319]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[320]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[321]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[322]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[323]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[324]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[325]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[326]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[327]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[328]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[329]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[330]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[331]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[332]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[333]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[334]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[335]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[336]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[337]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[338]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[339]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[340]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[341]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[342]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[343]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[344]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[345]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[346]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[347]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[348]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[349]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[350]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[351]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[352]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[353]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[354]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[355]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[356]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[357]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[358]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[359]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[360]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[361]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[362]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[363]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[364]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[365]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[366]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[367]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[368]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[369]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[370]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[371]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[372]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[373]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[374]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[375]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[376]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[377]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[378]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[379]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[380]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[381]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[382]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[383]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[384]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[385]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[386]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[387]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[388]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[389]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[390]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[391]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[392]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[393]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[394]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[395]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[396]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[397]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[398]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[399]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[400]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[401]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[402]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[403]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[404]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[405]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[406]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[407]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[408]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[409]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[410]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[411]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[412]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[413]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[414]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[415]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[416]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[417]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[418]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[419]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[420]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[421]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[422]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[423]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[424]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[425]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[426]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[427]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[428]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[429]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[430]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[431]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[432]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[433]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[434]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[435]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[436]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[437]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[438]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[439]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[440]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[441]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[442]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[443]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[444]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[445]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[446]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[447]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[448]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[449]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[450]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[451]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[452]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[453]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[454]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[455]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[456]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[457]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[458]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[459]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[460]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[461]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[462]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[463]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[464]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[465]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[466]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[467]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[468]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[469]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[470]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[471]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[472]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[473]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[474]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[475]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[476]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[477]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[478]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[479]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[480]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[481]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[482]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[483]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[484]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[485]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[486]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[487]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[488]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[489]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[490]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[491]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[492]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[493]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[494]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[495]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[496]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[497]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[498]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[499]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[500]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[501]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[502]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[503]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[504]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[505]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[506]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[507]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[508]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[509]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[510]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[511]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[512]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[513]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[514]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[515]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[516]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[517]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[518]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[519]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[520]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[521]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[522]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[523]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[524]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[525]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[526]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[527]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[528]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[529]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[530]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[531]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[532]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[533]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[534]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[535]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[536]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[537]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[538]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[539]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[540]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[541]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[542]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[543]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[544]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[545]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[546]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[547]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[548]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[549]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[550]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[551]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[552]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[553]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[554]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[555]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[556]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[557]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[558]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[559]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[560]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[561]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[562]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[563]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[564]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[565]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[566]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[567]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[568]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[569]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[570]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[571]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[572]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[573]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[574]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[575]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[576]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[577]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[578]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[579]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[580]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[581]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[582]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[583]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[584]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[585]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[586]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[587]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[588]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[589]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[590]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[591]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[592]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[593]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[594]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[595]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[596]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[597]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[598]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[599]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[600]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[601]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[602]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[603]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[604]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[605]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[606]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[607]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[608]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[609]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[610]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[611]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[612]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[613]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[614]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[615]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[616]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[617]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[618]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[619]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[620]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[621]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[622]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[623]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[624]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[625]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[626]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[627]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[628]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[629]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[630]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[631]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[632]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[633]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[634]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[635]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[636]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[637]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[638]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[639]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[640]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[641]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[642]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[643]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[644]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[645]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[646]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[647]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[648]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[649]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[650]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[651]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[652]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[653]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[654]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[655]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[656]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[657]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[658]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[659]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[660]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[661]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[662]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[663]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[664]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[665]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[666]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[667]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[668]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[669]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[670]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[671]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[672]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[673]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[674]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[675]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[676]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[677]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[678]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[679]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[680]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[681]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[682]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[683]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[684]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[685]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[686]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[687]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[688]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[689]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[690]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[691]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[692]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[693]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[694]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[695]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[696]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[697]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[698]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[699]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[700]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[701]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[702]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[703]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[704]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[705]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[706]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[707]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[708]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[709]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[710]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[711]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[712]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[713]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[714]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[715]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[716]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[717]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[718]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[719]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[720]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[721]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[722]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[723]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[724]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[725]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[726]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[727]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[728]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[729]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[730]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[731]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[732]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[733]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[734]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[735]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[736]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[737]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[738]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[739]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[740]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[741]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[742]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[743]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[744]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[745]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[746]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[747]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[748]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[749]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[750]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[751]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[752]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[753]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[754]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[755]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[756]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[757]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[758]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[759]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[760]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[761]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[762]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[763]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[764]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[765]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[766]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[767]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[768]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[769]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[770]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[771]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[772]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[773]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[774]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[775]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[776]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[777]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[778]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[779]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[780]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[781]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[782]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[783]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[784]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[785]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[786]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[787]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[788]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[789]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[790]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[791]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[792]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[793]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[794]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[795]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[796]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[797]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[798]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[799]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[800]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[801]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[802]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[803]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[804]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[805]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[806]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[807]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[808]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[809]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[810]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[811]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[812]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[813]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[814]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[815]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[816]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[817]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[818]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[819]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[820]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[821]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[822]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[823]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[824]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[825]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[826]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[827]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[828]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[829]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[830]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[831]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[832]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[833]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[834]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[835]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[836]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[837]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[838]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[839]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[840]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[841]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[842]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[843]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[844]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[845]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[846]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[847]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[848]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[849]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[850]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[851]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[852]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[853]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[854]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[855]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[856]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[857]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[858]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[859]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[860]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[861]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[862]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[863]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[864]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[865]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[866]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[867]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[868]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[869]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[870]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[871]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[872]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[873]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[874]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[875]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[876]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[877]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[878]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[879]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[880]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[881]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[882]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[883]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[884]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[885]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[886]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[887]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[888]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[889]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[890]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[891]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[892]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[893]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[894]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[895]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[896]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[897]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[898]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[899]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[900]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[901]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[902]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[903]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[904]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[905]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[906]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[907]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[908]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[909]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[910]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[911]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[912]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[913]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[914]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[915]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[916]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[917]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[918]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[919]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[920]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[921]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[922]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[923]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[924]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[925]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[926]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[927]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[928]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[929]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[930]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[931]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[932]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[933]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[934]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[935]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[936]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[937]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[938]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[939]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[940]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[941]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[942]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[943]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[944]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[945]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[946]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[947]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[948]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[949]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[950]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[951]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[952]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[953]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[954]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[955]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[956]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[957]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[958]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[959]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[960]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[961]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[962]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[963]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[964]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[965]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[966]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[967]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[968]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[969]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[970]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[971]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[972]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[973]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[974]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[975]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[976]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[977]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[978]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[979]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[980]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[981]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[982]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[983]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[984]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[985]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[986]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[987]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[988]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[989]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[990]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[991]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[992]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[993]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[994]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[995]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[996]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[997]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[998]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[999]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1000]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1001]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1002]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1003]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1004]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1005]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1006]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1007]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1008]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1009]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1010]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1011]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1012]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1013]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1014]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1015]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1016]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1017]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1018]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1019]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1020]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1021]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1022]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1023]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1024]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1025]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1026]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1027]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1028]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1029]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1030]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1031]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1032]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1033]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1034]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1035]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1036]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1037]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1038]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1039]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1040]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1041]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1042]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1043]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1044]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1045]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1046]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1047]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1048]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1049]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1050]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1051]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1052]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1053]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1054]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1055]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1056]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1057]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1058]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1059]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1060]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1061]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1062]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1063]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1064]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1065]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1066]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1067]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1068]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1069]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1070]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1071]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1072]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1073]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1074]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1075]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1076]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1077]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1078]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1079]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1080]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1081]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1082]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1083]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1084]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1085]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1086]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1087]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1088]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1089]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1090]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1091]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1092]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1093]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1094]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1095]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1096]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1097]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1098]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1099]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1100]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1101]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1102]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1103]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1104]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1105]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1106]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1107]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1108]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1109]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1110]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1111]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1112]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1113]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1114]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1115]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1116]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1117]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1118]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1119]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1120]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1121]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1122]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1123]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1124]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1125]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1126]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1127]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1128]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1129]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1130]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1131]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1132]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1133]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1134]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1135]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1136]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1137]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1138]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1139]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1140]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1141]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1142]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1143]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1144]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1145]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1146]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1147]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1148]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1149]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1150]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1151]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1152]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1153]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1154]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1155]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1156]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1157]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1158]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1159]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1160]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1161]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1162]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1163]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1164]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1165]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1166]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1167]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1168]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1169]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1170]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1171]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1172]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1173]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1174]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1175]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1176]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1177]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1178]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1179]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1180]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1181]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1182]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1183]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1184]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1185]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1186]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1187]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1188]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1189]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1190]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1191]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1192]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1193]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1194]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1195]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1196]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1197]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1198]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1199]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1200]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1201]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1202]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1203]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1204]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1205]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1206]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1207]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1208]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1209]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1210]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1211]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1212]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1213]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1214]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1215]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1216]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1217]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1218]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1219]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1220]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1221]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1222]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1223]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1224]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1225]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1226]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1227]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1228]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1229]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1230]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1231]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1232]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1233]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1234]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1235]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1236]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1237]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1238]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1239]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1240]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1241]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1242]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1243]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1244]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1245]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1246]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1247]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1248]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1249]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1250]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1251]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1252]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1253]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1254]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1255]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1256]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1257]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1258]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1259]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1260]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1261]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1262]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1263]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1264]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1265]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1266]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1267]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1268]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1269]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1270]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1271]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1272]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1273]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1274]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1275]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1276]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1277]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1278]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1279]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1280]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1281]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1282]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1283]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1284]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1285]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1286]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1287]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1288]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1289]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1290]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1291]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1292]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1293]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1294]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1295]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1296]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1297]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1298]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1299]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1300]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1301]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1302]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1303]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1304]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1305]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1306]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1307]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1308]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1309]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1310]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1311]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1312]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1313]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1314]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1315]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1316]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1317]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1318]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1319]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1320]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1321]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1322]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1323]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1324]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1325]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1326]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1327]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1328]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1329]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1330]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1331]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1332]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1333]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1334]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1335]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1336]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1337]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1338]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1339]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1340]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1341]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1342]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1343]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1344]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1345]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1346]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1347]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1348]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1349]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1350]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1351]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1352]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1353]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1354]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1355]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1356]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1357]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1358]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1359]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1360]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1361]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1362]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1363]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1364]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1365]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1366]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1367]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1368]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1369]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1370]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1371]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1372]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1373]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1374]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1375]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1376]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1377]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1378]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1379]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1380]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1381]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1382]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1383]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1384]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1385]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1386]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1387]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1388]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1389]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1390]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1391]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1392]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1393]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1394]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1395]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1396]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1397]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1398]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1399]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1400]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1401]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1402]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1403]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1404]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1405]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1406]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1407]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1408]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1409]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1410]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1411]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1412]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1413]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1414]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1415]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1416]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1417]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1418]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1419]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1420]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1421]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1422]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1423]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1424]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1425]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1426]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1427]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1428]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1429]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1430]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1431]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1432]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1433]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1434]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1435]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1436]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1437]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1438]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1439]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1440]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1441]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1442]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1443]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1444]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1445]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1446]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1447]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1448]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1449]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1450]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1451]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1452]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1453]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1454]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1455]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1456]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1457]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1458]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1459]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1460]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1461]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1462]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1463]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1464]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1465]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1466]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1467]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1468]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1469]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1470]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1471]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1472]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1473]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1474]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1475]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1476]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1477]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1478]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1479]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1480]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1481]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1482]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1483]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1484]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1485]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1486]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1487]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1488]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1489]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1490]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1491]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1492]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1493]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1494]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1495]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1496]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1497]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1498]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1499]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1500]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1501]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1502]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1503]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1504]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1505]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1506]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1507]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1508]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1509]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1510]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1511]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1512]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1513]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1514]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1515]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1516]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1517]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1518]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1519]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1520]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1521]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1522]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1523]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1524]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1525]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1526]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1527]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1528]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1529]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1530]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1531]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1532]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1533]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1534]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1535]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1536]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1537]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1538]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1539]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1540]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1541]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1542]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1543]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1544]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1545]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1546]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1547]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1548]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1549]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1550]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1551]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1552]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1553]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1554]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1555]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1556]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1557]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1558]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1559]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1560]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1561]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1562]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1563]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1564]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1565]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1566]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1567]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1568]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1569]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1570]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1571]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1572]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1573]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1574]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1575]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1576]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1577]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1578]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1579]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1580]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1581]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1582]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1583]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1584]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1585]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1586]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1587]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1588]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1589]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1590]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1591]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1592]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1593]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1594]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1595]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1596]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1597]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1598]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1599]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1600]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1601]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1602]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1603]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1604]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1605]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1606]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1607]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1608]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1609]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1610]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1611]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1612]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1613]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1614]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1615]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1616]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1617]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1618]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1619]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1620]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1621]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1622]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1623]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1624]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1625]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1626]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1627]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1628]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1629]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1630]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1631]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1632]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1633]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1634]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1635]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1636]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1637]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1638]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1639]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1640]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1641]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1642]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1643]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1644]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1645]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1646]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1647]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1648]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1649]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1650]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1651]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1652]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1653]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1654]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1655]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1656]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1657]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1658]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1659]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1660]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1661]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1662]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1663]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1664]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1665]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1666]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1667]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1668]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1669]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1670]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1671]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1672]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1673]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1674]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1675]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1676]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1677]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1678]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1679]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1680]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1681]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1682]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1683]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1684]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1685]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1686]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1687]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1688]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1689]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1690]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1691]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1692]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1693]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1694]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1695]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1696]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1697]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1698]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1699]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1700]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1701]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1702]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1703]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1704]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1705]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1706]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1707]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1708]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1709]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1710]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1711]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1712]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1713]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1714]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1715]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1716]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1717]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1718]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1719]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1720]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1721]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1722]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1723]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1724]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1725]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1726]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1727]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1728]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1729]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1730]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1731]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1732]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1733]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1734]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1735]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1736]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1737]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1738]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1739]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1740]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1741]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1742]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1743]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1744]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1745]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1746]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1747]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1748]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1749]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1750]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1751]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1752]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1753]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1754]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1755]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1756]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1757]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1758]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1759]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1760]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1761]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1762]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1763]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1764]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1765]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1766]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1767]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1768]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1769]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1770]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1771]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1772]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1773]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1774]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1775]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1776]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1777]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1778]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1779]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1780]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1781]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1782]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1783]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1784]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1785]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1786]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1787]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1788]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1789]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1790]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1791]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1792]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1793]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1794]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1795]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1796]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1797]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1798]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1799]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1800]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1801]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1802]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1803]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1804]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1805]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1806]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1807]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1808]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1809]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1810]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1811]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1812]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1813]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1814]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1815]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1816]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1817]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1818]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1819]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1820]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1821]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1822]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1823]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1824]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1825]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1826]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1827]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1828]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1829]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1830]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1831]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1832]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1833]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1834]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1835]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1836]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1837]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1838]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1839]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1840]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1841]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1842]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1843]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1844]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1845]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1846]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1847]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1848]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1849]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1850]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1851]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1852]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1853]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1854]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1855]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1856]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1857]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1858]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1859]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1860]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1861]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1862]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1863]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1864]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1865]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1866]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1867]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1868]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1869]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1870]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1871]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1872]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1873]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1874]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1875]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1876]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1877]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1878]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1879]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1880]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1881]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1882]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1883]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1884]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1885]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1886]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1887]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1888]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1889]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1890]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1891]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1892]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1893]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1894]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1895]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1896]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1897]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1898]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1899]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1900]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1901]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1902]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1903]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1904]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1905]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1906]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1907]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1908]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1909]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1910]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1911]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1912]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1913]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1914]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1915]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1916]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1917]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1918]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1919]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1920]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1921]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1922]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1923]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1924]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1925]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1926]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1927]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1928]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1929]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1930]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1931]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1932]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1933]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1934]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1935]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1936]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1937]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1938]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1939]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1940]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1941]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1942]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1943]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1944]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1945]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1946]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1947]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1948]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1949]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1950]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1951]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1952]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1953]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1954]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1955]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1956]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1957]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1958]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1959]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1960]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1961]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1962]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1963]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1964]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1965]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1966]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1967]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1968]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1969]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1970]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1971]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1972]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1973]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1974]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1975]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1976]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1977]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1978]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1979]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1980]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1981]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1982]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1983]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1984]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1985]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1986]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1987]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1988]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1989]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1990]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1991]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1992]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1993]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1994]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1995]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1996]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1997]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1998]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[1999]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2000]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2001]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2002]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2003]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2004]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2005]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2006]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2007]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2008]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2009]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2010]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2011]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2012]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2013]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2014]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2015]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2016]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2017]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2018]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2019]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2020]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2021]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2022]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2023]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2024]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2025]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2026]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2027]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2028]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2029]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2030]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2031]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2032]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2033]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2034]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2035]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2036]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2037]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2038]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2039]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2040]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2041]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2042]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2043]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2044]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2045]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2046]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2047]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2048]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2049]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2050]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2051]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2052]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2053]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2054]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2055]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2056]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2057]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2058]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2059]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2060]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2061]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2062]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2063]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2064]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2065]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2066]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2067]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2068]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2069]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2070]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2071]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2072]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2073]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2074]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2075]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2076]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2077]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2078]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2079]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2080]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2081]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2082]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2083]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2084]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2085]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2086]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2087]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2088]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2089]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2090]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2091]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2092]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2093]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2094]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2095]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2096]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2097]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2098]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2099]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2100]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2101]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2102]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2103]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2104]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2105]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2106]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2107]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2108]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2109]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2110]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2111]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2112]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2113]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2114]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2115]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2116]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2117]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2118]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2119]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2120]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2121]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2122]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2123]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2124]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2125]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2126]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2127]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2128]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2129]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2130]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2131]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2132]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2133]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2134]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2135]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2136]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2137]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2138]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2139]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2140]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2141]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2142]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2143]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2144]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2145]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2146]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2147]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2148]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2149]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2150]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2151]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2152]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2153]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2154]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2155]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2156]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2157]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2158]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2159]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2160]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2161]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2162]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2163]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2164]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2165]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2166]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2167]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2168]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2169]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2170]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2171]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2172]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2173]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2174]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2175]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2176]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2177]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2178]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2179]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2180]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2181]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2182]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2183]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2184]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2185]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2186]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2187]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2188]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2189]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2190]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2191]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2192]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2193]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2194]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2195]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2196]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2197]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2198]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2199]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2200]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2201]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2202]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2203]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2204]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2205]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2206]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2207]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2208]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2209]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2210]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2211]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2212]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2213]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2214]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2215]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2216]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2217]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2218]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2219]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2220]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2221]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2222]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2223]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2224]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2225]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2226]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2227]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2228]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2229]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2230]" " -type \"float3\" 0 1.1175870999999999e-08 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2231]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2232]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2233]" " -type \"float3\" 4.6566128999999998e-10 3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2234]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2235]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2236]" " -type \"float3\" 2.7939677000000001e-09 -3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2237]" " -type \"float3\" -1.8626450999999999e-09 3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2238]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2239]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2240]" " -type \"float3\" 0 5.5879354000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2241]" " -type \"float3\" 0 1.8626450999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2242]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2243]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2244]" " -type \"float3\" 0 -9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2245]" " -type \"float3\" -1.8626450999999999e-09 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2246]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2247]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2248]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2249]" " -type \"float3\" 0 2.9103829999999999e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2250]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2251]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2252]" " -type \"float3\" 0 1.4551914999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2253]" " -type \"float3\" 0 -9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2254]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2255]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2256]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2257]" " -type \"float3\" 9.3132257000000002e-10 3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2258]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2259]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2260]" " -type \"float3\" 0 -1.3969838999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2261]" " -type \"float3\" 4.6566128999999998e-10 -9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2262]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2263]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2264]" " -type \"float3\" 0 -2.0954758000000002e-09 1.8626450999999999e-09"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2265]" " -type \"float3\" 0 -1.1641532000000001e-09 -9.3132257000000002e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2266]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2267]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2268]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2269]" " -type \"float3\" -9.3132257000000002e-10 6.9849192999999995e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2270]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2271]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2272]" " -type \"float3\" -4.6566128999999998e-10 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2273]" " -type \"float3\" -9.3132257000000002e-10 4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2274]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2275]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2276]" " -type \"float3\" 0 -1.1175870999999999e-08 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2277]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2278]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2279]" " -type \"float3\" -9.3132257000000002e-10 7.4505806000000003e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2280]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2281]" " -type \"float3\" 0 -7.4505806000000003e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2282]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2283]" " -type \"float3\" 0 -3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2284]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2285]" " -type \"float3\" 1.8626450999999999e-09 -2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2286]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2287]" " -type \"float3\" 0 5.5879354000000002e-09 -4.6566128999999998e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2288]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2289]" " -type \"float3\" 0 -9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2290]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2291]" " -type \"float3\" 0 5.9662851999999996e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2292]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2293]" " -type \"float3\" -1.1641532000000001e-10 -1.9790604999999997e-09 -1.1641532000000001e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2294]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2295]" " -type \"float3\" 0 1.2805685e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2296]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2297]" " -type \"float3\" -9.3132257000000002e-10 9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2298]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2299]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2300]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2301]" " -type \"float3\" 0 -1.7462298e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2302]" " -type \"float3\" -2.3283064000000002e-10 1.2805685e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2303]" " -type \"float3\" 4.6566128999999998e-10 -4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2304]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2305]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2306]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2307]" " -type \"float3\" 0 3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2308]" " -type \"float3\" 0 2.3283064000000003e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2309]" " -type \"float3\" 4.6566128999999998e-10 4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2310]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2311]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2312]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2313]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2314]" " -type \"float3\" 0 -2.5611371e-09 3.7252903000000002e-09"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2315]" " -type \"float3\" -2.3283064000000002e-10 -2.5611371e-09 -3.7252903000000002e-09"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2316]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2317]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2318]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2319]" " -type \"float3\" 4.6566128999999998e-10 -2.3283064000000003e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2320]" " -type \"float3\" 0 -8.1490725000000009e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2321]" " -type \"float3\" -4.6566128999999998e-10 -1.8626450999999999e-09 -3.7252903000000002e-09"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2322]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2323]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2324]" " -type \"float3\" -9.3132257000000002e-10 4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2325]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2326]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2327]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2328]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2329]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2330]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2331]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2332]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2333]" " -type \"float3\" 0 1.1641532000000001e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2334]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2335]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2336]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2337]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2338]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2339]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2340]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2341]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2342]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2343]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2344]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2345]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2346]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2347]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2348]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2349]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2350]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2351]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2352]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2353]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2354]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2355]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2356]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2357]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2358]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2359]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2360]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2361]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2362]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2363]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2364]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2365]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2366]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2367]" " -type \"float3\" 0 1.1641532000000001e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2368]" " -type \"float3\" -4.6566128999999998e-10 -3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2369]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2370]" " -type \"float3\" 4.6566128999999998e-10 -3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2371]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2372]" " -type \"float3\" 9.3132257000000002e-10 3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2373]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2374]" " -type \"float3\" 1.8626450999999999e-09 -5.8207661000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2375]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2376]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2377]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2378]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2379]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2380]" " -type \"float3\" 0 1.0477379000000001e-09 4.6566128999999998e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2381]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2382]" " -type \"float3\" 0 -3.4924597e-10 1.8626450999999999e-09"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2383]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2384]" " -type \"float3\" 0 -2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2385]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2386]" " -type \"float3\" 0 -9.3132257000000002e-10 2.3283064000000002e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2387]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2388]" " -type \"float3\" 0 1.8626450999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2389]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2390]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2391]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2392]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2393]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2394]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2395]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2396]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2397]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2398]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2399]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2400]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2401]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2402]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2403]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2404]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2405]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2406]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2407]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2408]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2409]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2410]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2411]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2412]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2413]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2414]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2415]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2416]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2417]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2418]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2419]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2420]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2421]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2422]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2423]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2424]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2425]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2426]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2427]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2428]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2429]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2430]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2431]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2432]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2433]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2434]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2435]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2436]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2437]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2438]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2439]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2440]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2441]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2442]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2443]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2444]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2445]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2446]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2447]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2448]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2449]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2450]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2451]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2452]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2453]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2454]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2455]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2456]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2457]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2458]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2459]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2460]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2461]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2462]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2463]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2464]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2465]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2466]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2467]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2468]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2469]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2470]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2471]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2472]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2473]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2474]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2475]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2476]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2477]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2478]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2479]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2480]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2481]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2482]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2483]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2484]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2485]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2486]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2487]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2488]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2489]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2490]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2491]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2492]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2493]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2494]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2495]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2496]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2497]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2498]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2499]" " -type \"float3\" 0 -1.1641532000000001e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2500]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2501]" " -type \"float3\" 0 9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2502]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2503]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2504]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2505]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2506]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2507]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2508]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2509]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2510]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2511]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2512]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2513]" " -type \"float3\" 0 -2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2514]" " -type \"float3\" 0 -3.7834979999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2515]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2516]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2517]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2518]" " -type \"float3\" 0 -2.3865140999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2519]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2520]" " -type \"float3\" 0 1.5279510999999999e-10 -4.6566128999999998e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2521]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2522]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2523]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2524]" " -type \"float3\" 0 4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2525]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2526]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2527]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2528]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2529]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2530]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2531]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2532]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2533]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2534]" " -type \"float3\" 0 -4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2535]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2536]" " -type \"float3\" -1.1641532000000001e-10 -3.7252903000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2537]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2538]" " -type \"float3\" 0 -2.7939677000000001e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2539]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2540]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2541]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2542]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2543]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2544]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2545]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2546]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2547]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2548]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2549]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2550]" " -type \"float3\" 0 4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2551]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2552]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2553]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2554]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2555]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2556]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2557]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2558]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2559]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2560]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2561]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2562]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2563]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2564]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2565]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2566]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2567]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2568]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2569]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2570]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2571]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2572]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2573]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2574]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2575]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2576]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2577]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2578]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2579]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2580]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2581]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2582]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2583]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2584]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2585]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2586]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2587]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2588]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2589]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2590]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2591]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2592]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2593]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2594]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2595]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2596]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2597]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2598]" " -type \"float3\" 0 2.5611371e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2599]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2600]" " -type \"float3\" 0 -8.6147337999999992e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2601]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2602]" " -type \"float3\" 0 8.2945916999999997e-10 -1.8626450999999999e-09"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2603]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2604]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2605]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2606]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2607]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2608]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2609]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2610]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2611]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2612]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2613]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2614]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2615]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2616]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2617]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2618]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2619]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2620]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2621]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2622]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2623]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2624]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2625]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2626]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2627]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2628]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2629]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2630]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2631]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2632]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2633]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2634]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2635]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2636]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2637]" " -type \"float3\" -6.9849192999999995e-10 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2638]" " -type \"float3\" 4.6566128999999998e-10 1.1641532000000001e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2639]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2640]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2641]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2642]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2643]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2644]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2645]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2646]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2647]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2648]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2649]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2650]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2651]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2652]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2653]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2654]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2655]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2656]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2657]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2658]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2659]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2660]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2661]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2662]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2663]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2664]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2665]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2666]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2667]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2668]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2669]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2670]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2671]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2672]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2673]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2674]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2675]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2676]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2677]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2678]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2679]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2680]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2681]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2682]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2683]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2684]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2685]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2686]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2687]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2688]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2689]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2690]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2691]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2692]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2693]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2694]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2695]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2696]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2697]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2698]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2699]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2700]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2701]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2702]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2703]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2704]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2705]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2706]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2707]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2708]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2709]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2710]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2711]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2712]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2713]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2714]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2715]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2716]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2717]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2718]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2719]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2720]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2721]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2722]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2723]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2724]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2725]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2726]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2727]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2728]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2729]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2730]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2731]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2732]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2733]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2734]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2735]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2736]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2737]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2738]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2739]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2740]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2741]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2742]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2743]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2744]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2745]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2746]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2747]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2748]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2749]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2750]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2751]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2752]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2753]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2754]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2755]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2756]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2757]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2758]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2759]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2760]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2761]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2762]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2763]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2764]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2765]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2766]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2767]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2768]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2769]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2770]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2771]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2772]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2773]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2774]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2775]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2776]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2777]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2778]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2779]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2780]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2781]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2782]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2783]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2784]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2785]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2786]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2787]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2788]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2789]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2790]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2791]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2792]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2793]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2794]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2795]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2796]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2797]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2798]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2799]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2800]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2801]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2802]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2803]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2804]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2805]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2806]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2807]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2808]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2809]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2810]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2811]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2812]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2813]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2814]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2815]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2816]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2817]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2818]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2819]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2820]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2821]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2822]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2823]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2824]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2825]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2826]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2827]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2828]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2829]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2830]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2831]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2832]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2833]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2834]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2835]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2836]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2837]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2838]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2839]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2840]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2841]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2842]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2843]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2844]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2845]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2846]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2847]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2848]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2849]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2850]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2851]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2852]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2853]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2854]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2855]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2856]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2857]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2858]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2859]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2860]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2861]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2862]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2863]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2864]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2865]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2866]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2867]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2868]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2869]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2870]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2871]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2872]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2873]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2874]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2875]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2876]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2877]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2878]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2879]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2880]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2881]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2882]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2883]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2884]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2885]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2886]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2887]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2888]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2889]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2890]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2891]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2892]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2893]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2894]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2895]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2896]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2897]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2898]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2899]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2900]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2901]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2902]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2903]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2904]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2905]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2906]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2907]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2908]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2909]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2910]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2911]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2912]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2913]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2914]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2915]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2916]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2917]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2918]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2919]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2920]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2921]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2922]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2923]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2924]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2925]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2926]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2927]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2928]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2929]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2930]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2931]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2932]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2933]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2934]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2935]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2936]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2937]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2938]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2939]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2940]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2941]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2942]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2943]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2944]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2945]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2946]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2947]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2948]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2949]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2950]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2951]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2952]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2953]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2954]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2955]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2956]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2957]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2958]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2959]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2960]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2961]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2962]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2963]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2964]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2965]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2966]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2967]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2968]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2969]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2970]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2971]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2972]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2973]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2974]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2975]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2976]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2977]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2978]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2979]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2980]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2981]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2982]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2983]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2984]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2985]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2986]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2987]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2988]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2989]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2990]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2991]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2992]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2993]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2994]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2995]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2996]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2997]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2998]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[2999]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3000]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3001]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3002]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3003]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3004]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3005]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3006]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3007]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3008]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3009]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3010]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3011]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3012]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3013]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3014]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3015]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3016]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3017]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3018]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3019]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3020]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3021]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3022]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3023]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3024]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3025]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3026]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3027]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3028]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3029]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3030]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3031]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3032]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3033]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3034]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3035]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3036]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3037]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3038]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3039]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3040]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3041]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3042]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3043]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3044]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3045]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3046]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3047]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3048]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3049]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3050]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3051]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3052]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3053]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3054]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3055]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3056]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3057]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3058]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3059]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3060]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3061]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3062]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3063]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3064]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3065]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3066]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3067]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3068]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3069]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3070]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3071]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3072]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3073]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3074]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3075]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3076]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3077]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3078]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3079]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3080]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3081]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3082]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3083]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3084]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3085]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3086]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3087]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3088]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3089]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3090]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3091]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3092]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3093]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3094]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3095]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3096]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3097]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3098]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3099]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3100]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3101]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3102]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3103]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3104]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3105]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3106]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3107]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3108]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3109]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3110]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3111]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3112]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3113]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3114]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3115]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3116]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3117]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3118]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3119]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3120]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3121]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3122]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3123]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3124]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3125]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3126]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3127]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3128]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3129]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3130]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3131]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3132]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3133]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3134]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3135]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3136]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3137]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3138]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3139]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3140]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3141]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3142]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3143]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3144]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3145]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3146]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3147]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3148]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3149]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3150]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3151]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3152]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3153]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3154]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3155]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3156]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3157]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3158]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3159]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3160]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3161]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3162]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3163]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3164]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3165]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3166]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3167]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3168]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3169]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3170]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3171]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3172]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3173]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3174]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3175]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3176]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3177]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3178]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3179]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3180]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3181]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3182]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3183]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3184]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3185]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3186]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3187]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3188]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3189]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3190]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3191]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3192]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3193]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3194]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3195]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3196]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3197]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3198]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3199]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3200]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3201]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3202]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3203]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3204]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3205]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3206]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3207]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3208]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3209]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3210]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3211]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3212]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3213]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3214]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3215]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3216]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3217]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3218]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3219]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3220]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3221]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3222]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3223]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3224]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3225]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3226]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3227]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3228]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3229]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3230]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3231]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3232]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3233]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3234]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3235]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3236]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3237]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3238]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3239]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3240]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3241]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3242]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3243]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3244]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3245]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3246]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3247]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3248]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3249]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3250]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3251]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3252]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3253]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3254]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3255]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3256]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3257]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3258]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3259]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3260]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3261]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3262]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3263]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3264]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3265]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3266]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3267]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3268]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3269]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3270]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3271]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3272]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3273]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3274]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3275]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3276]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3277]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3278]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3279]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3280]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3281]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3282]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3283]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3284]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3285]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3286]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3287]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3288]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3289]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3290]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3291]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3292]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3293]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3294]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3295]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3296]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3297]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3298]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3299]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3300]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3301]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3302]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3303]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3304]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3305]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3306]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3307]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3308]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3309]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3310]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3311]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3312]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3313]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3314]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3315]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3316]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3317]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3318]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3319]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3320]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3321]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3322]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3323]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3324]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3325]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3326]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3327]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3328]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3329]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3330]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3331]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3332]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3333]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3334]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3335]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3336]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3337]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3338]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3339]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3340]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3341]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3342]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3343]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3344]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3345]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3346]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3347]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3348]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3349]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3350]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3351]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3352]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3353]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3354]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3355]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3356]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3357]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3358]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3359]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3360]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3361]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3362]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3363]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3364]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3365]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3366]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3367]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3368]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3369]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3370]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3371]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3372]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3373]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3374]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3375]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3376]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3377]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3378]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3379]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3380]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3381]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3382]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3383]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3384]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3385]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3386]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3387]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3388]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3389]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3390]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3391]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3392]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3393]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3394]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3395]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3396]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3397]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3398]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3399]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3400]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3401]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3402]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3403]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3404]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3405]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3406]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3407]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3408]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3409]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3410]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3411]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3412]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3413]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3414]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3415]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3416]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3417]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3418]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3419]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3420]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3421]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3422]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3423]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3424]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3425]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3426]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3427]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3428]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3429]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3430]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3431]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3432]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3433]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3434]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3435]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3436]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3437]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3438]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3439]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3440]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3441]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3442]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3443]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3444]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3445]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3446]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3447]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3448]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3449]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3450]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3451]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3452]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3453]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3454]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3455]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3456]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3457]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3458]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3459]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3460]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3461]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3462]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3463]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3464]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3465]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3466]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3467]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3468]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3469]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3470]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3471]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3472]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3473]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3474]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3475]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3476]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3477]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3478]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3479]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3480]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3481]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3482]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3483]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3484]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3485]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3486]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3487]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3488]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3489]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3490]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3491]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3492]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3493]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3494]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3495]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3496]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3497]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3498]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3499]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3500]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3501]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3502]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3503]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3504]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3505]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3506]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3507]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3508]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3509]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3510]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3511]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3512]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3513]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3514]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3515]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3516]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3517]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3518]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3519]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3520]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3521]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3522]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3523]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3524]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3525]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3526]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3527]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3528]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3529]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3530]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3531]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3532]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3533]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3534]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3535]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3536]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3537]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3538]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3539]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3540]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3541]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3542]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3543]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3544]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3545]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3546]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3547]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3548]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3549]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3550]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3551]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3552]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3553]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3554]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3555]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3556]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3557]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3558]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3559]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3560]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3561]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3562]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3563]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3564]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3565]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3566]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3567]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3568]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3569]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3570]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3571]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3572]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3573]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3574]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3575]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3576]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3577]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3578]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3579]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3580]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3581]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3582]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3583]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3584]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3585]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3586]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3587]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3588]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3589]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3590]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3591]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3592]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3593]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3594]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3595]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3596]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3597]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3598]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3599]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3600]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3601]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3602]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3603]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3604]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3605]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3606]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3607]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3608]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3609]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3610]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3611]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3612]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3613]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3614]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3615]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3616]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3617]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3618]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3619]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3620]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3621]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3622]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3623]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3624]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3625]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3626]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3627]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3628]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3629]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3630]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3631]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3632]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3633]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3634]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3635]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3636]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3637]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3638]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3639]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3640]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3641]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3642]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3643]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3644]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3645]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3646]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3647]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3648]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3649]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3650]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3651]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3652]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3653]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3654]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3655]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3656]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3657]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3658]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3659]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3660]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3661]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3662]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3663]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3664]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3665]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3666]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3667]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3668]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3669]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3670]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3671]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3672]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3673]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3674]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3675]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3676]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3677]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3678]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3679]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3680]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3681]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3682]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3683]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3684]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3685]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3686]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3687]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3688]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3689]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3690]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3691]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3692]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3693]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3694]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3695]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3696]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3697]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3698]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3699]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3700]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3701]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3702]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3703]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3704]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3705]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3706]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3707]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3708]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3709]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3710]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3711]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3712]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3713]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3714]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3715]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3716]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3717]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3718]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3719]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3720]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3721]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3722]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3723]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3724]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3725]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3726]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3727]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3728]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3729]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3730]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3731]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3732]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3733]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3734]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3735]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3736]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3737]" " -type \"float3\" 2.3283064000000002e-10 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3738]" " -type \"float3\" 0 9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3739]" " -type \"float3\" 0 -1.8626450999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3740]" " -type \"float3\" 0 -9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3741]" " -type \"float3\" 0 -2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3742]" " -type \"float3\" 0 2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3743]" " -type \"float3\" 0 -1.2951204999999999e-09 -4.6566128999999998e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3744]" " -type \"float3\" 0 0 4.6566128999999998e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3745]" " -type \"float3\" 0 -4.6566128999999998e-10 -1.1641532000000001e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3746]" " -type \"float3\" 0 1.1641532000000001e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3747]" " -type \"float3\" 0 3.7834979999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3748]" " -type \"float3\" 0 2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3749]" " -type \"float3\" 0 -1.8626450999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3750]" " -type \"float3\" 1.1641532000000001e-10 1.1641532000000001e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3751]" " -type \"float3\" 0 0 -2.3283064000000002e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3752]" " -type \"float3\" -1.1641532000000001e-10 1.1641532000000001e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3753]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3754]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3755]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3756]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3757]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3758]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3759]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3760]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3761]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3762]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3763]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3764]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3765]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3766]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3767]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3768]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3769]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3770]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3771]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3772]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3773]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3774]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3775]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3776]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3777]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3778]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3779]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3780]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3781]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3782]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3783]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3784]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3785]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3786]" " -type \"float3\" 1.1641532000000001e-10 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3787]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3788]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3789]" " -type \"float3\" 0 0 -1.1641532000000001e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3790]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3791]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3792]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3793]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3794]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3795]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3796]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3797]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3798]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3799]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3800]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3801]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3802]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3803]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3804]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3805]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3806]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3807]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3808]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3809]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3810]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3811]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3812]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3813]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3814]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3815]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3816]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3817]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3818]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3819]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3820]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3821]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3822]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3823]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3824]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3825]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3826]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3827]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3828]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3829]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3830]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3831]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3832]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3833]" " -type \"float3\" 0 2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3834]" " -type \"float3\" 0 2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3835]" " -type \"float3\" 0 -9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3836]" " -type \"float3\" 1.1641532000000001e-10 -9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3837]" " -type \"float3\" 0 -4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3838]" " -type \"float3\" -1.1641532000000001e-10 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3839]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3840]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3841]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3842]" " -type \"float3\" 0 0 2.3283064000000002e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3843]" " -type \"float3\" 0 4.292815e-10 -1.1641532000000001e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3844]" " -type \"float3\" 0 -2.9103829999999999e-10 1.1641532000000001e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3845]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3846]" " -type \"float3\" 0 -2.6193447e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3847]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3848]" " -type \"float3\" -4.6566128999999998e-10 -2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3849]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3850]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3851]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3852]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3853]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3854]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3855]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3856]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3857]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3858]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3859]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3860]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3861]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3862]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3863]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3864]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3865]" " -type \"float3\" 9.3132257000000002e-10 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3866]" " -type \"float3\" 0 1.8626450999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3867]" " -type \"float3\" 2.3283064000000002e-10 -1.8626450999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3868]" " -type \"float3\" -4.6566128999999998e-10 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3869]" " -type \"float3\" 2.3283064000000002e-10 9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3870]" " -type \"float3\" 2.3283064000000002e-10 -6.9849192999999995e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3871]" " -type \"float3\" 2.3283064000000002e-10 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3872]" " -type \"float3\" 0 2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3873]" " -type \"float3\" 0 -2.3283064000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3874]" " -type \"float3\" 0 6.2573234999999999e-10 -9.3132257000000002e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3875]" " -type \"float3\" 0 -2.1682353999999997e-09 2.3283064000000002e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3876]" " -type \"float3\" 0 9.3132257000000002e-10 -1.1641532000000001e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3877]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3878]" " -type \"float3\" 0 -5.8207661000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3879]" " -type \"float3\" 0 4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3880]" " -type \"float3\" -1.8626450999999999e-09 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3881]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3882]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3883]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3884]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3885]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3886]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3887]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3888]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3889]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3890]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3891]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3892]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3893]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3894]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3895]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3896]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3897]" " -type \"float3\" 0 4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3898]" " -type \"float3\" 0 9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3899]" " -type \"float3\" -1.8626450999999999e-09 1.8626450999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3900]" " -type \"float3\" 0 -1.8626450999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3901]" " -type \"float3\" 0 1.8626450999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3902]" " -type \"float3\" 0 5.5879354000000002e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3903]" " -type \"float3\" 2.3283064000000002e-10 -1.8626450999999999e-09 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3904]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3905]" " -type \"float3\" -4.6566128999999998e-10 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3906]" " -type \"float3\" 0 -4.6566128999999998e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3907]" " -type \"float3\" 1.1641532000000001e-10 9.3132257000000002e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3908]" " -type \"float3\" 0 -2.6921043e-10 9.3132257000000002e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3909]" " -type \"float3\" 0 -1.8626450999999999e-09 2.3283064000000002e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3910]" " -type \"float3\" 0 6.4028426999999998e-10 -1.1641532000000001e-10"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3911]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3912]" " -type \"float3\" 2.3283064000000002e-10 3.4924597e-10 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3913]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3914]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3915]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3916]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3917]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3918]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3919]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3920]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3921]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3922]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3923]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3924]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3925]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3926]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3927]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3928]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3929]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3930]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3931]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3932]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3933]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3934]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3935]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3936]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3937]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3938]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3939]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3940]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3941]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3942]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3943]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3944]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3945]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3946]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3947]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3948]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3949]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3950]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3951]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3952]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3953]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3954]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3955]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3956]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3957]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3958]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3959]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3960]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3961]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3962]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3963]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3964]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3965]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3966]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3967]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3968]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3969]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3970]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3971]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3972]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3973]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3974]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3975]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3976]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3977]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3978]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3979]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3980]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3981]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3982]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3983]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3984]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3985]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3986]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3987]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3988]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3989]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3990]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3991]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3992]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3993]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3994]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3995]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3996]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3997]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3998]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[3999]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4000]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4001]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4002]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4003]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4004]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4005]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4006]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4007]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4008]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4009]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4010]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4011]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4012]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4013]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4014]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4015]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4016]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4017]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4018]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4019]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4020]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4021]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4022]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4023]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4024]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4025]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4026]" " -type \"float3\" 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex[4027]" " -type \"float3\" 0 0 0"
+		
+		3 "earthGolem_RIG:skinCluster1.outputGeometry[0]" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.inMesh" 
+		""
+		3 "earthGolem_RIG:tweak1.vlist[0].vertex[0]" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.tweakLocation" 
+		""
 		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.rotateY" 
-		"earthGolem_RIGRN.placeHolderList[5]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.rotateX" 
-		"earthGolem_RIGRN.placeHolderList[6]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.rotateZ" 
-		"earthGolem_RIGRN.placeHolderList[7]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateX" 
-		"earthGolem_RIGRN.placeHolderList[8]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateY" 
 		"earthGolem_RIGRN.placeHolderList[9]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.rotateX" 
 		"earthGolem_RIGRN.placeHolderList[10]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.visibility" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.rotateZ" 
 		"earthGolem_RIGRN.placeHolderList[11]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateX" 
 		"earthGolem_RIGRN.placeHolderList[12]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateY" 
 		"earthGolem_RIGRN.placeHolderList[13]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateZ" 
 		"earthGolem_RIGRN.placeHolderList[14]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.visibility" 
 		"earthGolem_RIGRN.placeHolderList[15]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleX" 
 		"earthGolem_RIGRN.placeHolderList[16]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleY" 
 		"earthGolem_RIGRN.placeHolderList[17]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleZ" 
 		"earthGolem_RIGRN.placeHolderList[18]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateY" 
 		"earthGolem_RIGRN.placeHolderList[19]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateX" 
 		"earthGolem_RIGRN.placeHolderList[20]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.visibility" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateZ" 
 		"earthGolem_RIGRN.placeHolderList[21]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.visibility" 
 		"earthGolem_RIGRN.placeHolderList[22]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateX" 
 		"earthGolem_RIGRN.placeHolderList[23]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateY" 
 		"earthGolem_RIGRN.placeHolderList[24]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateZ" 
 		"earthGolem_RIGRN.placeHolderList[25]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleX" 
 		"earthGolem_RIGRN.placeHolderList[26]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleY" 
 		"earthGolem_RIGRN.placeHolderList[27]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateOrder" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleZ" 
 		"earthGolem_RIGRN.placeHolderList[28]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateOrder" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateX" 
 		"earthGolem_RIGRN.placeHolderList[29]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateY" 
 		"earthGolem_RIGRN.placeHolderList[30]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateZ" 
 		"earthGolem_RIGRN.placeHolderList[31]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateZ" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateOrder" 
 		"earthGolem_RIGRN.placeHolderList[32]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotatePivot" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateOrder" 
 		"earthGolem_RIGRN.placeHolderList[33]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotatePivotTranslate" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateX" 
 		"earthGolem_RIGRN.placeHolderList[34]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.blendParent1" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateY" 
 		"earthGolem_RIGRN.placeHolderList[35]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.blendParent1" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateZ" 
 		"earthGolem_RIGRN.placeHolderList[36]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.visibility" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotatePivot" 
 		"earthGolem_RIGRN.placeHolderList[37]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleX" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotatePivotTranslate" 
 		"earthGolem_RIGRN.placeHolderList[38]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleY" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.blendParent1" 
 		"earthGolem_RIGRN.placeHolderList[39]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.blendParent1" 
 		"earthGolem_RIGRN.placeHolderList[40]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.parentInverseMatrix" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.visibility" 
 		"earthGolem_RIGRN.placeHolderList[41]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleX" 
 		"earthGolem_RIGRN.placeHolderList[42]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleY" 
 		"earthGolem_RIGRN.placeHolderList[43]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleZ" 
 		"earthGolem_RIGRN.placeHolderList[44]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateOrder" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.parentInverseMatrix" 
 		"earthGolem_RIGRN.placeHolderList[45]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateOrder" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateX" 
 		"earthGolem_RIGRN.placeHolderList[46]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateY" 
 		"earthGolem_RIGRN.placeHolderList[47]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateZ" 
 		"earthGolem_RIGRN.placeHolderList[48]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateZ" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateOrder" 
 		"earthGolem_RIGRN.placeHolderList[49]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotatePivot" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateOrder" 
 		"earthGolem_RIGRN.placeHolderList[50]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotatePivotTranslate" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateX" 
 		"earthGolem_RIGRN.placeHolderList[51]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.blendParent1" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateY" 
 		"earthGolem_RIGRN.placeHolderList[52]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.blendParent1" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateZ" 
 		"earthGolem_RIGRN.placeHolderList[53]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.visibility" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotatePivot" 
 		"earthGolem_RIGRN.placeHolderList[54]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleX" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotatePivotTranslate" 
 		"earthGolem_RIGRN.placeHolderList[55]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleY" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.blendParent1" 
 		"earthGolem_RIGRN.placeHolderList[56]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.blendParent1" 
 		"earthGolem_RIGRN.placeHolderList[57]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.parentInverseMatrix" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.visibility" 
 		"earthGolem_RIGRN.placeHolderList[58]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleX" 
 		"earthGolem_RIGRN.placeHolderList[59]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleY" 
 		"earthGolem_RIGRN.placeHolderList[60]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleZ" 
 		"earthGolem_RIGRN.placeHolderList[61]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateX" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.parentInverseMatrix" 
 		"earthGolem_RIGRN.placeHolderList[62]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateX" 
 		"earthGolem_RIGRN.placeHolderList[63]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateY" 
 		"earthGolem_RIGRN.placeHolderList[64]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.visibility" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateZ" 
 		"earthGolem_RIGRN.placeHolderList[65]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.scaleX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.visibility" 
 		"earthGolem_RIGRN.placeHolderList[66]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.scaleY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateX" 
 		"earthGolem_RIGRN.placeHolderList[67]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateY" 
+		"earthGolem_RIGRN.placeHolderList[68]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateZ" 
+		"earthGolem_RIGRN.placeHolderList[69]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.scaleX" 
+		"earthGolem_RIGRN.placeHolderList[70]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.scaleY" 
+		"earthGolem_RIGRN.placeHolderList[71]" ""
 		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.scaleZ" 
-		"earthGolem_RIGRN.placeHolderList[68]" "";
+		"earthGolem_RIGRN.placeHolderList[72]" ""
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.instObjGroups.objectGroups[6]" 
+		"earthGolem_RIGRN.placeHolderList[73]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.instObjGroups.objectGroups[6].objectGroupId" 
+		"earthGolem_RIGRN.placeHolderList[74]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.instObjGroups.objectGroups[6].objectGrpColor" 
+		"earthGolem_RIGRN.placeHolderList[75]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.inMesh" 
+		"earthGolem_RIGRN.placeHolderList[76]" ""
+		5 0 "earthGolem_RIGRN" "earthGolem_RIG:tweak1.vlist[0].vertex[0]" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.tweakLocation" 
+		"earthGolem_RIGRN.placeHolderList[77]" "earthGolem_RIGRN.placeHolderList[78]" "earthGolem_RIG:bodyShapeDeformed.twl"
+		
+		5 3 "earthGolem_RIGRN" "earthGolem_RIG:skinCluster1.outputGeometry[0]" 
+		"earthGolem_RIGRN.placeHolderList[79]" "earthGolem_RIG:bodyShapeDeformed.i";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "HIP_CTRL_translateX";
 	rename -uid "9FF5D12D-3E4D-B791-8BDE-A7929AC1A2B8";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 22 0 30 0 40 0 50 0 58 0 90.535220748299324 0
-		 108.36216802721088 0 117.36216802721088 0 125.36216802721088 0 133.36216802721088 0
-		 140.36216802721088 1.6965923495374851 144.36216802721088 1.6965923495374851;
+	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 22 0 30 0 40 0 50 0 58 0 91 0 108 0
+		 117 0 125 0 133 0 140 1.6965923495374851 144 1.6965923495374851;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		1.3556341978458053 0.74278946995464867 0.375 0.375 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.3556341978458053 
-		0.74278946995464867 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "HIP_CTRL_translateY";
 	rename -uid "22F6CF7F-3844-AAA1-39AF-50BE85118EBB";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 -6.3082519808037762 14 -6.0063580125497289
 		 22 -6.007502702492892 30 -5.9398863752512323 40 -5.9086616824269287 50 -5.8938525304092524
-		 58 -6.3193157736826393 90.535220748299324 -1.3037997845819618 108.36216802721088 -1.3886453736463213
-		 117.36216802721088 -1.74634673246487 125.36216802721088 -1.8625055079801083 133.36216802721088 -1.6319565505357057
-		 140.36216802721088 -1.8194377167330771 144.36216802721088 -1.8194377167330771;
+		 58 -6.3193157736826393 91 -1.3037997845819618 108 -1.3886453736463213 117 -1.74634673246487
+		 125 -1.8625055079801083 133 -1.6319565505357057 140 -1.8194377167330771 144 -1.8194377167330771;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		1.3556341978458053 0.74278946995464867 0.375 0.375 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 -0.25453676719307872 -0.25086712994141674 
 		0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.3556341978458053 
-		0.74278946995464867 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696 0.16666666666666696;
-	setAttr -s 14 ".koy[5:13]"  0 0 0 -0.12850382451333395 -0.22299300439237024 
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
+	setAttr -s 14 ".koy[5:13]"  0 0 0 -0.13475475910221812 -0.22299300439237024 
 		0 0 0 0;
 createNode animCurveTL -n "HIP_CTRL_translateZ";
 	rename -uid "809C1DBB-674C-BF93-0210-61994B5FD8A6";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 22 -0.0006557425843487126 30 -0.0007524849655055415
-		 40 -0.00041967569581845613 50 0 58 0 90.535220748299324 0 108.36216802721088 -0.090702559023249751
-		 117.36216802721088 1.7800920082366278 125.36216802721088 2.2016415137258258 133.36216802721088 1.2108320832942343
-		 140.36216802721088 2.14382749249567 144.36216802721088 2.14382749249567;
+		 40 -0.00041967569581845613 50 0 58 0 91 0 108 -0.090702559023249751 117 1.7800920082366278
+		 125 2.2016415137258258 133 1.2108320832942343 140 2.14382749249567 144 2.14382749249567;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		1.3556341978458053 0.74278946995464867 0.375 0.375 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 1.213593920867158 0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.3556341978458053 
-		0.74278946995464867 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 1.0787501518819174 0 0 0 0;
 createNode animCurveTU -n "HIP_CTRL_visibility";
 	rename -uid "0048A384-6B40-D27A-EECF-6F8C33A65910";
 	setAttr ".tan" 5;
-	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 90.535220748299324 1
-		 108.36216802721088 1 117.36216802721088 1 125.36216802721088 1 133.36216802721088 1
-		 140.36216802721088 1 144.36216802721088 1;
+	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 91 1 108 1
+		 117 1 125 1 133 1 140 1 144 1;
 	setAttr -s 14 ".kit[0:13]"  9 9 9 9 9 1 9 9 
 		9 9 1 9 9 9;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		1.3556341978458053 0.74278946995464867 0.375 0.375 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "HIP_CTRL_rotateX";
 	rename -uid "57B5A98C-5748-99EF-1616-DCB030107F57";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 5.1430197075673361 14 1.5725426592854526
-		 22 -0.21414008093178438 30 0.42348441381854007 40 -1.6119188530203781 50 1.1008530611022771
-		 58 0 90.535220748299324 9.506967581720648 108.36216802721088 0 117.36216802721088 15.405646446110506
-		 125.36216802721088 15.405646446110506 133.36216802721088 12.131855587718928 140.36216802721088 12.553424476356955
-		 144.36216802721088 13.027502071806479;
+		 22 -0.21414008093178438 30 0.42348441381854007 40 -1.6119188530203781 50 1.1008530611022773
+		 58 0 91 9.5069675817206498 108 0 117 15.405646446110506 125 15.405646446110506 133 12.131855587718928
+		 140 12.553424476356955 144 13.027502071806479;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		1.3556341978458053 0.74278946995464867 0.375 0.375 0.33333333333333304 0.29166666666666696 
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
+	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0.0099476236880610119 0;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
 		0.16666666666666696;
-	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0.009947623688061024 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.3556341978458053 
-		0.74278946995464867 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696 0.16666666666666696;
-	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0.0056843563931777323 0;
+	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0.0056843563931777428 0;
 createNode animCurveTA -n "HIP_CTRL_rotateY";
 	rename -uid "BA2DB555-D644-3A5D-5BBB-74AFCB381EF0";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 22 0 30 0 40 -1.1735533919559085
-		 50 0 58 0 90.535220748299324 0 108.36216802721088 0 117.36216802721088 0 125.36216802721088 0
-		 133.36216802721088 -20.379578606559328 140.36216802721088 24.986619437347311 144.36216802721088 29.077683462627196;
+		 50 0 58 0 91 0 108 0 117 0 125 0 133 -20.379578606559328 140 24.986619437347311 144 29.077683462627196;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		1.3556341978458053 0.74278946995464867 0.375 0.375 0.33333333333333304 0.29166666666666696 
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
+	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0.3748633200428878 0;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
 		0.16666666666666696;
-	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0.37486332004288891 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.3556341978458053 
-		0.74278946995464867 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696 0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0.21420761145307954 0;
 createNode animCurveTA -n "HIP_CTRL_rotateZ";
 	rename -uid "D252A2A3-A54B-8F27-E3A6-9C9557BE2332";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 22 0 30 0 40 0.033022319915028749
-		 50 0 58 0 90.535220748299324 0 108.36216802721088 0 117.36216802721088 0 125.36216802721088 0
-		 133.36216802721088 -4.2810791141967988 140.36216802721088 5.3733518016488198 144.36216802721088 6.415761324354599;
+		 50 0 58 0 91 0 108 0 117 0 125 0 133 -4.2810791141967988 140 5.3733518016488198 144 6.415761324354599;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		1.3556341978458053 0.74278946995464867 0.375 0.375 0.33333333333333304 0.29166666666666696 
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
+	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0.095515761208131419 0;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
 		0.16666666666666696;
-	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0.095515761208131697 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.3556341978458053 
-		0.74278946995464867 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696 0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0.054580434976075301 0;
 createNode animCurveTU -n "HIP_CTRL_scaleX";
 	rename -uid "CF723572-5C4A-6346-A4A3-35BF2F2EE50E";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 90.535220748299324 1
-		 108.36216802721088 1 117.36216802721088 1 125.36216802721088 1 133.36216802721088 1
-		 140.36216802721088 1 144.36216802721088 1;
+	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 91 1 108 1
+		 117 1 125 1 133 1 140 1 144 1;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		1.3556341978458053 0.74278946995464867 0.375 0.375 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.3556341978458053 
-		0.74278946995464867 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "HIP_CTRL_scaleY";
 	rename -uid "F64E4208-4845-B5AB-2CC1-53A47B694C9E";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 90.535220748299324 1
-		 108.36216802721088 1 117.36216802721088 1 125.36216802721088 1 133.36216802721088 1
-		 140.36216802721088 1 144.36216802721088 1;
+	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 91 1 108 1
+		 117 1 125 1 133 1 140 1 144 1;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		1.3556341978458053 0.74278946995464867 0.375 0.375 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.3556341978458053 
-		0.74278946995464867 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "HIP_CTRL_scaleZ";
 	rename -uid "5EE005E1-174A-8F61-3935-B1B5C443110B";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 90.535220748299324 1
-		 108.36216802721088 1 117.36216802721088 1 125.36216802721088 1 133.36216802721088 1
-		 140.36216802721088 1 144.36216802721088 1;
+	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 91 1 108 1
+		 117 1 125 1 133 1 140 1 144 1;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		1.3556341978458053 0.74278946995464867 0.375 0.375 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.3556341978458053 
-		0.74278946995464867 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666696 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "rightArm_ik1_translateX";
 	rename -uid "33E92FFB-6E4C-D868-03D7-04833376D7C5";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 0 9 1.0861530960644301 16 -0.57864687662447167
-		 27 -0.023367822289434695 28 -0.22865114159667854 132.36216802721088 -0.13336544595740157
-		 138.36216802721088 2.2047078706320846 143.36216802721088 2.189884578030088;
+		 27 -0.023367822289434695 28 -0.22865114159667854 132 -0.13336544595740157 138 2.2047078706320846
+		 143 2.189884578030088;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 4.3484236678004535 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0.2858570869178309 0 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		4.3484236678004535 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 0 0 0.016434523677773611 0 0;
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0.016491755014490246 0 0;
 createNode animCurveTL -n "rightArm_ik1_translateY";
 	rename -uid "1DCF2EB1-654A-4041-8891-3090F508AA23";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 0 9 6.4009507427303651 16 8.3169141499079569
-		 27 7.1993712239277015 28 7.0073378158194179 132.36216802721088 4.5752322337238391
-		 138.36216802721088 3.5724635046918252 143.36216802721088 4.1215850592707808;
+		 27 7.1993712239277015 28 7.0073378158194179 132 4.5752322337238391 138 3.5724635046918252
+		 143 4.1215850592707808;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 4.3484236678004535 0.25 0.20833333333333304;
-	setAttr -s 8 ".kiy[2:7]"  0 -1.2004449729144939 -0.024905894016210402 
-		-3.2481323665358182 0 0;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
+	setAttr -s 8 ".kiy[2:7]"  0 -1.2004449729144939 -0.024991799906703496 
+		-3.2475175305206334 0 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		4.3484236678004535 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 -0.10913136117404508 -2.5992330961876515 
-		-0.18674194459177482 0 0;
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 -0.10913136117404508 -2.5991471902971588 
+		-0.18735678060695962 0 0;
 createNode animCurveTL -n "rightArm_ik1_translateZ";
 	rename -uid "EFC15C8E-3847-AACF-7DA0-C09BA2549344";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 1.7390954919774568 9 0.35985447838937967
-		 16 3.3383231728149907 27 3.8250666657221077 28 4.3913194702887379 132.36216802721088 4.041607542804897
-		 138.36216802721088 3.8243232237198947 143.36216802721088 2.8926598645289379;
+		 16 3.3383231728149907 27 3.8250666657221077 28 4.3913194702887379 132 4.041607542804897
+		 138 3.8243232237198947 143 2.8926598645289379;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 4.3484236678004535 0.25 0.20833333333333304;
-	setAttr -s 8 ".kiy[2:7]"  0 0.96524660601760148 0 -0.53617066983158423 
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
+	setAttr -s 8 ".kiy[2:7]"  0 0.96524660601760148 0 -0.53606917857417902 
 		-0.626698733605069 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		4.3484236678004535 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 0.087749691456145737 0 -0.030825576737258983 
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 0.087749691456145737 0 -0.030927067994664176 
 		-0.52224894467089011 0;
 createNode animCurveTU -n "rightArm_ik1_visibility";
 	rename -uid "D75B450E-AC45-413A-2615-9DB8F10DC843";
 	setAttr ".tan" 5;
-	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132.36216802721088 1
-		 138.36216802721088 1 143.36216802721088 1;
+	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132 1 138 1 143 1;
 	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 4.3484236678004535 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTA -n "rightArm_ik1_rotateX";
 	rename -uid "1DCEE4D0-6248-DE73-72F1-D2BD32DC9E71";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 0 9 -110.08364090832426 16 -151.23825969713272
-		 27 -92.103787712796404 28 -87.990031473710957 132.36216802721088 -17.160159659929747
-		 138.36216802721088 -50.622978297701707 143.36216802721088 -52.921857876845706;
+		 27 -92.103787712796404 28 -87.990031473710957 132 -17.160159659929747 138 -50.622978297701707
+		 143 -52.921857876845706;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 4.3484236678004535 0.25 0.20833333333333304;
-	setAttr -s 8 ".kiy[2:7]"  0 1.011899009505554 0.012414447115160957 
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
+	setAttr -s 8 ".kiy[2:7]"  0 1.011899009505554 0.012457267265833452 
 		0 -0.14444286394652794 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		4.3484236678004535 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 0.091990819045959599 1.2955986157973491 
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 0.091990819045959599 1.2955557956466768 
 		0 -0.12036905328877312 0;
 createNode animCurveTA -n "rightArm_ik1_rotateY";
 	rename -uid "75DDA994-4B4C-7019-6F0A-94B05F996ECE";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 0 9 -27.126314697352711 16 0 27 0.059578728854610928
-		 28 0 132.36216802721088 -49.930088524831511 138.36216802721088 36.821418701041488
-		 143.36216802721088 42.843416458143167;
+		 28 0 132 -49.930088524831511 138 36.821418701041488 143 42.843416458143167;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 4.3484236678004535 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 -0.0031195349479977322 0 0.37837327827289763 
 		0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		4.3484236678004535 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 0 -0.32556143040969532 0 0.31531106522741426 
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 0 -0.32443163459176355 0 0.31531106522741426 
 		0;
 createNode animCurveTA -n "rightArm_ik1_rotateZ";
 	rename -uid "3E6E4AE3-E747-42D5-5F83-1DBD423539A7";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 0 9 9.4646131772512714 16 0 27 1.6214392426846154
-		 28 0 132.36216802721088 -67.736882959919996 138.36216802721088 28.611136614480984
-		 143.36216802721088 34.385758605814459;
+		 28 0 132 -67.736882959919996 138 28.611136614480984 143 34.385758605814459;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 4.3484236678004535 0.25 0.20833333333333304;
-	setAttr -s 8 ".kiy[2:7]"  0 0 -0.011489238583073821 0 0.36283020050462667 
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
+	setAttr -s 8 ".kiy[2:7]"  0 0 -0.011528867486614651 0 0.36283020050462667 
 		0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		4.3484236678004535 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 0 -1.1990418475114624 0 0.30235850042052181 
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 0 -1.1990022186079214 0 0.30235850042052181 
 		0;
 createNode animCurveTU -n "rightArm_ik1_scaleX";
 	rename -uid "EB0CFB87-B147-DA64-15C8-CC9187AFE0D1";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132.36216802721088 1
-		 138.36216802721088 1 143.36216802721088 1;
+	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132 1 138 1 143 1;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 4.3484236678004535 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		4.3484236678004535 0.25 0.20833333333333304 0.20833333333333304;
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
 	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "rightArm_ik1_scaleY";
 	rename -uid "E77E843C-8C4C-51FC-78CE-BBA2CCCA2EC3";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132.36216802721088 1
-		 138.36216802721088 1 143.36216802721088 1;
+	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132 1 138 1 143 1;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 4.3484236678004535 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		4.3484236678004535 0.25 0.20833333333333304 0.20833333333333304;
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
 	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "rightArm_ik1_scaleZ";
 	rename -uid "77B2E181-DB45-952B-CD8A-B7AE2625CB92";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132.36216802721088 1
-		 138.36216802721088 1 143.36216802721088 1;
+	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132 1 138 1 143 1;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 4.3484236678004535 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		4.3484236678004535 0.25 0.20833333333333304 0.20833333333333304;
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
 	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode pairBlend -n "pairBlend1";
 	rename -uid "E0C63388-BE4C-F7E0-0489-20AF05F4F93E";
 createNode animCurveTU -n "rightArm_ik1_blendParent1";
 	rename -uid "E6396C34-E44C-9C63-50F9-68A6110A5154";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  9 0 16 0 27 0 28 1 128.36216802721088 1
-		 132.36216802721088 0 138.36216802721088 0 143.36216802721088 0;
+	setAttr -s 8 ".ktv[0:7]"  9 0 16 0 27 0 28 1 128 1 132 0 138 0 143 0;
 createNode animCurveTA -n "leftArm_ik1_rotateX";
 	rename -uid "135D9D2D-E040-1139-5B5D-A584DF5625FF";
 	setAttr ".tan" 18;
@@ -1459,273 +9543,256 @@ createNode animCurveTA -n "Chest_CTRL_rotateX";
 	rename -uid "861EF009-8140-9A96-89B3-F69FDC3B0A67";
 	setAttr ".tan" 18;
 	setAttr -s 12 ".ktv[0:11]"  2 36.295727283095552 13 4.5098116151394647
-		 40 2.1377914329861496 54 0 70 4.5371318315098135 90.535220748299324 -10.604390642370724
-		 108.36216802721088 -7.8940860115613622 120.36216802721088 -22.318685063895391 128.36216802721088 -16.039224483755568
-		 133.36216802721088 -15.132561694504009 140.36216802721088 -15.046696130426959 144.36216802721088 -15.028686499186485;
+		 40 2.1377914329861496 54 0 70 4.5371318315098135 91 -10.604390642370724 108 -7.8940860115613622
+		 120 -22.318685063895391 128 -16.039224483755568 133 -15.132561694504009 140 -15.046696130426959
+		 144 -15.028686499186485;
 createNode animCurveTA -n "Chest_CTRL_rotateY";
 	rename -uid "55EBD59E-4E45-8E19-A854-739F0A8E8D75";
 	setAttr ".tan" 18;
 	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 -5.2321526814547887 54 -6.2049993438855244
-		 70 -1.8087453807302361 90.535220748299324 -1.7039542082651056 108.36216802721088 -1.7739446630082334
-		 120.36216802721088 2.2855789250078424 128.36216802721088 2.2855789250078438 133.36216802721088 -6.6757093306476687
-		 140.36216802721088 -2.8582941602092613 144.36216802721088 -0.70100931491421192;
+		 70 -1.8087453807302361 91 -1.7039542082651056 108 -1.7739446630082334 120 2.2855789250078424
+		 128 2.2855789250078438 133 -6.6757093306476687 140 -2.8582941602092613 144 -0.70100931491421192;
 createNode animCurveTA -n "Chest_CTRL_rotateZ";
 	rename -uid "B8AF5DFE-5A41-F5E0-2E8F-578EB5EC12A9";
 	setAttr ".tan" 18;
 	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 -0.19503801299825174 54 0 70 0.029495552846061181
-		 90.535220748299324 0.16738872558023465 108.36216802721088 -0.13720862052862445 120.36216802721088 -1.0828744319719166
-		 128.36216802721088 -1.0828744319719155 133.36216802721088 1.4664838081214921 140.36216802721088 0.4338536409133722
-		 144.36216802721088 -0.14595088049511815;
+		 91 0.16738872558023465 108 -0.13720862052862445 120 -1.0828744319719166 128 -1.0828744319719155
+		 133 1.4664838081214921 140 0.4338536409133722 144 -0.14595088049511815;
 createNode animCurveTU -n "Chest_CTRL_visibility";
 	rename -uid "BEDFB375-564D-0AAD-B411-3DAD7EDD7BED";
 	setAttr ".tan" 9;
-	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 90.535220748299324 1
-		 108.36216802721088 1 120.36216802721088 1 128.36216802721088 1 133.36216802721088 1
-		 140.36216802721088 1 144.36216802721088 1;
+	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 91 1 108 1 120 1
+		 128 1 133 1 140 1 144 1;
 	setAttr -s 12 ".kot[0:11]"  5 5 5 5 5 5 5 5 
 		5 5 5 5;
 createNode animCurveTL -n "Chest_CTRL_translateX";
 	rename -uid "AFB451F2-5941-1A7B-FF25-A498BB7DB682";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 90.535220748299324 0
-		 108.36216802721088 0 120.36216802721088 0 128.36216802721088 0 133.36216802721088 0
-		 140.36216802721088 0 144.36216802721088 0;
+	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 91 0 108 0 120 0
+		 128 0 133 0 140 0 144 0;
 createNode animCurveTL -n "Chest_CTRL_translateY";
 	rename -uid "66E957BD-7841-FA14-6083-CD80E49F2759";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 90.535220748299324 0
-		 108.36216802721088 0 120.36216802721088 0 128.36216802721088 0 133.36216802721088 0
-		 140.36216802721088 0 144.36216802721088 0;
+	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 91 0 108 0 120 0
+		 128 0 133 0 140 0 144 0;
 createNode animCurveTL -n "Chest_CTRL_translateZ";
 	rename -uid "C0232123-804A-6744-5772-7FBFDE5D10B9";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 90.535220748299324 0
-		 108.36216802721088 0 120.36216802721088 0 128.36216802721088 0 133.36216802721088 0
-		 140.36216802721088 0 144.36216802721088 0;
+	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 91 0 108 0 120 0
+		 128 0 133 0 140 0 144 0;
 createNode animCurveTU -n "Chest_CTRL_scaleX";
 	rename -uid "78223E33-DC4C-779F-5C35-929113F26331";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 90.535220748299324 1
-		 108.36216802721088 1 120.36216802721088 1 128.36216802721088 1 133.36216802721088 1
-		 140.36216802721088 1 144.36216802721088 1;
+	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 91 1 108 1 120 1
+		 128 1 133 1 140 1 144 1;
 createNode animCurveTU -n "Chest_CTRL_scaleY";
 	rename -uid "C353C16D-9C47-1D63-8E9D-90BFE604A382";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 90.535220748299324 1
-		 108.36216802721088 1 120.36216802721088 1 128.36216802721088 1 133.36216802721088 1
-		 140.36216802721088 1 144.36216802721088 1;
+	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 91 1 108 1 120 1
+		 128 1 133 1 140 1 144 1;
 createNode animCurveTU -n "Chest_CTRL_scaleZ";
 	rename -uid "E07216C9-784D-7101-E00F-BD9CD41618B6";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 90.535220748299324 1
-		 108.36216802721088 1 120.36216802721088 1 128.36216802721088 1 133.36216802721088 1
-		 140.36216802721088 1 144.36216802721088 1;
+	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 91 1 108 1 120 1
+		 128 1 133 1 140 1 144 1;
 createNode animCurveTA -n "head_CTRL_rotateX";
 	rename -uid "FAC67AF4-9D45-6101-0F15-B5B27AEFD93C";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 14.997426198684423 14 -36.234198077481402
 		 27 -33.954542081432734 37 -25.95316591003148 51 -4.8210816924728528 56 12.557248017150096
-		 70 29.630666126229119 90.535220748299324 17.521075671721974 108.36216802721088 22.289810414191656
-		 114.36216802721088 29.549515016163639 119.36216802721088 9.1185990778408481 124.36216802721088 3.840936361251444
-		 131.36216802721088 22.880109410137742 142.36216802721088 18.209238870975941;
+		 70 29.630666126229119 91 28.882996166264864 108 31.797054450369501 114 35.405121900903517
+		 119 9.1185990778408481 124 3.840936361251444 131 21.862332225657809 142 18.209238870975941;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 
-		0.20833333333333304 0.20833333333333304 0.29166666666666696 0.45833333333333304;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0.11936250883164035 0.49525627740488287 
-		0.15823590329029588 0 0 0.15707071705085909 0 -0.22434967176807644 0 0 0;
+		0.15823590329029588 0 0 0.084137115698890222 0 -0.27544948168865541 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 0.20833333333333304 
-		0.20833333333333304 0.29166666666666696 0.45833333333333304 0.45833333333333304;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0.036726925794350898 0.17687724193031545 
-		0.44306052921282796 0 0 0.052865153386076245 0 -0.22434967176807644 0 0 0;
+		0.44306052921282796 0 0 0.029695452599608308 0 -0.27544948168865657 0 0 0;
 createNode animCurveTA -n "head_CTRL_rotateY";
 	rename -uid "B5630DAD-2C43-C580-7A27-C2ADECD5DADF";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 27 2.0648338470708367 37 2.0648338470708394
-		 51 -1.4110567022616887 56 -0.68617601970234088 70 11.132695746128885 90.535220748299324 14.895003831119434
-		 108.36216802721088 14.392251414799876 114.36216802721088 13.096432943631578 119.36216802721088 11.376673861525498
-		 124.36216802721088 10.29682513555194 131.36216802721088 21.983356011031184 142.36216802721088 24.000422969105021;
+		 51 -1.4110567022616887 56 -0.68617601970234088 70 11.132695746128885 91 19.521913178682773
+		 108 18.202378985320177 114 13.09643294363158 119 11.376673861525498 124 10.29682513555194
+		 131 14.488565985982834 142 24.000422969105021;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 
-		0.20833333333333304 0.20833333333333304 0.29166666666666696 0.45833333333333304;
-	setAttr -s 14 ".kiy[3:13]"  0 0 0.037954663784293366 0.11024109225011476 
-		0 -0.023486240473504325 -0.028708231174839609 -0.024431187007765601 0 0.067208513880279416 
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
+	setAttr -s 14 ".kiy[3:13]"  0 0 0.037954663784293366 0.14107907681940871 
+		0 -0.069090648800474497 -0.064980560825707828 -0.024431187007765576 0 0.093011683941813278 
 		0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 0.20833333333333304 
-		0.20833333333333304 0.29166666666666696 0.45833333333333304 0.45833333333333304;
-	setAttr -s 14 ".koy[3:13]"  0 0 0.10627305859602129 0.16170179749212416 
-		0 -0.0079047433436752572 -0.023923525979032974 -0.024431187007765601 0 0.10561337895472461 
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
+	setAttr -s 14 ".koy[3:13]"  0 0 0.10627305859602129 0.21161861522911316 
+		0 -0.024384934870755701 -0.054150467354756447 -0.024431187007765681 0 0.14616121762284992 
 		0;
 createNode animCurveTA -n "head_CTRL_rotateZ";
 	rename -uid "CCD5FB38-904D-1F92-7958-FE94029F0B11";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 27 -1.2827210435362957 37 -1.2827210435362968
-		 51 0.11900040893415824 56 0.21793564754313627 70 1.9371094234053756 90.535220748299324 2.5822186805340612
-		 108.36216802721088 1.8693197006320317 114.36216802721088 1.3709368922323999 119.36216802721088 1.0080686288706646
-		 124.36216802721088 0.8106218972823197 131.36216802721088 3.3169254385635298 142.36216802721088 3.7867962284191541;
+	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 27 -1.2827210435362957 37 -1.282721043536297
+		 51 0.11900040893415824 56 0.21793564754313627 70 1.9371094234053756 91 4.9547036767809356
+		 108 4.0889062267913276 114 1.3709368922324037 119 1.0080686288706646 124 0.8106218972823197
+		 131 0.07226118425455734 142 3.7867962284191541;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 
-		0.20833333333333304 0.20833333333333304 0.29166666666666696 0.45833333333333304;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0.01450466354377219 0.005180236979918644 
-		0.016727946563789075 0 -0.015817255555028133 -0.0081990910301268146 -0.0048896707550871495 
-		0 0.01565605810731523 0;
+		0.033068879205361043 0 -0.0453330484730688 -0.022799685407962535 -0.0048896707550871721 
+		-0.0068053837805106682 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 0.20833333333333304 
-		0.20833333333333304 0.29166666666666696 0.45833333333333304 0.45833333333333304;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0.005180236979918644 0.014504663543772185 
-		0.024536576810940285 0 -0.005323599820280793 -0.0068325758584390026 -0.0048896707550871495 
-		0 0.024602377025781039 0;
+		0.049603318808041585 0 -0.015999899461083104 -0.018999737839968753 -0.0048896707550871929 
+		-0.0095275372927148896 0 0;
 createNode animCurveTU -n "head_CTRL_visibility";
 	rename -uid "F6A9C751-C544-E71C-49F9-89AD651D66F1";
 	setAttr ".tan" 5;
-	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 27 1 37 1 51 1 56 1 70 1 90.535220748299324 1
-		 108.36216802721088 1 114.36216802721088 1 119.36216802721088 1 124.36216802721088 1
-		 131.36216802721088 1 142.36216802721088 1;
+	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 27 1 37 1 51 1 56 1 70 1 91 1 108 1
+		 114 1 119 1 124 1 131 1 142 1;
 	setAttr -s 14 ".kit[0:13]"  9 9 9 1 9 9 9 9 
 		9 9 9 9 9 9;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 
-		0.20833333333333304 0.20833333333333304 0.29166666666666696 0.45833333333333304;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "head_CTRL_translateX";
 	rename -uid "94960A84-554E-375D-D7FB-2CB5BF3EF0DB";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 0.2151417106354121 14 0.2151417106354121
 		 27 0.2151417106354121 37 0.2151417106354121 51 0.2151417106354121 56 0.2151417106354121
-		 70 0.2151417106354121 90.535220748299324 0.2151417106354121 108.36216802721088 0.2151417106354121
-		 114.36216802721088 0.2151417106354121 119.36216802721088 0.2151417106354121 124.36216802721088 0.2151417106354121
-		 131.36216802721088 0.2151417106354121 142.36216802721088 0.2151417106354121;
+		 70 0.2151417106354121 91 0.2151417106354121 108 0.2151417106354121 114 0.2151417106354121
+		 119 0.2151417106354121 124 0.2151417106354121 131 0.2151417106354121 142 0.2151417106354121;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 
-		0.20833333333333304 0.20833333333333304 0.29166666666666696 0.45833333333333304;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 0.20833333333333304 
-		0.20833333333333304 0.29166666666666696 0.45833333333333304 0.45833333333333304;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "head_CTRL_translateY";
 	rename -uid "1179FD3C-EC48-CB7E-C084-4486D8B0B399";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 16.147792309560206 14 16.147792309560206
 		 27 16.147792309560206 37 16.147792309560206 51 16.147792309560206 56 16.147792309560206
-		 70 16.147792309560206 90.535220748299324 16.147792309560206 108.36216802721088 16.147792309560206
-		 114.36216802721088 16.147792309560206 119.36216802721088 16.147792309560206 124.36216802721088 16.147792309560206
-		 131.36216802721088 16.147792309560206 142.36216802721088 16.147792309560206;
+		 70 16.147792309560206 91 16.147792309560206 108 16.147792309560206 114 16.147792309560206
+		 119 16.147792309560206 124 16.147792309560206 131 16.147792309560206 142 16.147792309560206;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 
-		0.20833333333333304 0.20833333333333304 0.29166666666666696 0.45833333333333304;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 0.20833333333333304 
-		0.20833333333333304 0.29166666666666696 0.45833333333333304 0.45833333333333304;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "head_CTRL_translateZ";
 	rename -uid "84735E7D-9D4F-7877-EBE7-F1B5FE6AC6FC";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 3.029956632532834 14 3.029956632532834
 		 27 3.029956632532834 37 3.029956632532834 51 3.029956632532834 56 3.029956632532834
-		 70 3.029956632532834 90.535220748299324 3.029956632532834 108.36216802721088 3.029956632532834
-		 114.36216802721088 3.029956632532834 119.36216802721088 3.029956632532834 124.36216802721088 3.029956632532834
-		 131.36216802721088 3.029956632532834 142.36216802721088 3.029956632532834;
+		 70 3.029956632532834 91 3.029956632532834 108 3.029956632532834 114 3.029956632532834
+		 119 3.029956632532834 124 3.029956632532834 131 3.029956632532834 142 3.029956632532834;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 
-		0.20833333333333304 0.20833333333333304 0.29166666666666696 0.45833333333333304;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 0.20833333333333304 
-		0.20833333333333304 0.29166666666666696 0.45833333333333304 0.45833333333333304;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "head_CTRL_scaleX";
 	rename -uid "3371A5A2-EA40-8317-D0C3-4C9FCC961A37";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 2.1506867580646523 14 2.1506867580646523
 		 27 2.1506867580646523 37 2.1506867580646523 51 2.1506867580646523 56 2.1506867580646523
-		 70 2.1506867580646523 90.535220748299324 2.1506867580646523 108.36216802721088 2.1506867580646523
-		 114.36216802721088 2.1506867580646523 119.36216802721088 2.1506867580646523 124.36216802721088 2.1506867580646523
-		 131.36216802721088 2.1506867580646523 142.36216802721088 2.1506867580646523;
+		 70 2.1506867580646523 91 2.1506867580646523 108 2.1506867580646523 114 2.1506867580646523
+		 119 2.1506867580646523 124 2.1506867580646523 131 2.1506867580646523 142 2.1506867580646523;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 
-		0.20833333333333304 0.20833333333333304 0.29166666666666696 0.45833333333333304;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 0.20833333333333304 
-		0.20833333333333304 0.29166666666666696 0.45833333333333304 0.45833333333333304;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "head_CTRL_scaleY";
 	rename -uid "B7C93C46-924D-CBB0-85D3-3A89546A9ACD";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 2.1506867580646523 14 2.1506867580646523
 		 27 2.1506867580646523 37 2.1506867580646523 51 2.1506867580646523 56 2.1506867580646523
-		 70 2.1506867580646523 90.535220748299324 2.1506867580646523 108.36216802721088 2.1506867580646523
-		 114.36216802721088 2.1506867580646523 119.36216802721088 2.1506867580646523 124.36216802721088 2.1506867580646523
-		 131.36216802721088 2.1506867580646523 142.36216802721088 2.1506867580646523;
+		 70 2.1506867580646523 91 2.1506867580646523 108 2.1506867580646523 114 2.1506867580646523
+		 119 2.1506867580646523 124 2.1506867580646523 131 2.1506867580646523 142 2.1506867580646523;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 
-		0.20833333333333304 0.20833333333333304 0.29166666666666696 0.45833333333333304;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 0.20833333333333304 
-		0.20833333333333304 0.29166666666666696 0.45833333333333304 0.45833333333333304;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "head_CTRL_scaleZ";
 	rename -uid "A7050AD7-1241-CC26-B5CF-2BAB3C5BBC5A";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 2.1506867580646523 14 2.1506867580646523
 		 27 2.1506867580646523 37 2.1506867580646523 51 2.1506867580646523 56 2.1506867580646523
-		 70 2.1506867580646523 90.535220748299324 2.1506867580646523 108.36216802721088 2.1506867580646523
-		 114.36216802721088 2.1506867580646523 119.36216802721088 2.1506867580646523 124.36216802721088 2.1506867580646523
-		 131.36216802721088 2.1506867580646523 142.36216802721088 2.1506867580646523;
+		 70 2.1506867580646523 91 2.1506867580646523 108 2.1506867580646523 114 2.1506867580646523
+		 119 2.1506867580646523 124 2.1506867580646523 131 2.1506867580646523 142 2.1506867580646523;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 
-		0.20833333333333304 0.20833333333333304 0.29166666666666696 0.45833333333333304;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.8556341978458053 0.74278946995464867 0.25 0.20833333333333304 
-		0.20833333333333304 0.29166666666666696 0.45833333333333304 0.45833333333333304;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "locator1_translateX";
 	rename -uid "1A59C09B-0442-3B5A-A24F-D4B11B54FFAE";
 	setAttr ".tan" 18;
 	setAttr -s 9 ".ktv[0:8]"  28 5.5781086251427903 37 5.5775119147670376
 		 50 5.5781086251427903 58 5.5847816958210936 63 5.5830761600756222 70 5.5668120646977473
-		 85 5.5498224638251239 97 5.5498224638251239 101 6.0813832448724598;
+		 85 5.5498224638251239 97 5.5498224638251239 101 6.0943531975949714;
 	setAttr -s 9 ".kit[7:8]"  1 18;
 	setAttr -s 9 ".kot[7:8]"  1 18;
 	setAttr -s 9 ".kix[7:8]"  0.625 0.16666666666666607;
@@ -1737,7 +9804,7 @@ createNode animCurveTL -n "locator1_translateY";
 	setAttr ".tan" 18;
 	setAttr -s 9 ".ktv[0:8]"  28 9.8811565700813428 37 9.8235443939749079
 		 50 9.8811565700813428 58 9.6120367345508537 63 9.6543864786479219 70 9.8631529681549654
-		 85 9.8678112931383843 97 9.8678112931383843 101 9.9505737052608065;
+		 85 9.8678112931383843 97 9.8678112931383843 101 9.7877005990747481;
 	setAttr -s 9 ".kit[7:8]"  1 18;
 	setAttr -s 9 ".kot[7:8]"  1 18;
 	setAttr -s 9 ".kix[7:8]"  0.625 0.16666666666666607;
@@ -1749,7 +9816,7 @@ createNode animCurveTL -n "locator1_translateZ";
 	setAttr ".tan" 18;
 	setAttr -s 9 ".ktv[0:8]"  28 5.7048590062628852 37 5.7079501688633005
 		 50 5.7048590062628852 58 5.7751755438204055 63 5.759672729764528 70 5.7402102860297406
-		 85 5.8138472255792726 97 5.8138472255792726 101 5.7070584786018674;
+		 85 5.8138472255792726 97 5.8138472255792726 101 5.7202036730355372;
 	setAttr -s 9 ".kit[7:8]"  1 18;
 	setAttr -s 9 ".kot[7:8]"  1 18;
 	setAttr -s 9 ".kix[7:8]"  0.625 0.16666666666666607;
@@ -1907,7 +9974,7 @@ createNode animCurveTA -n "locator2_rotateY";
 	rename -uid "AE5F5D95-9C4F-646F-620F-7DBBBA4B27BD";
 	setAttr ".tan" 18;
 	setAttr -s 7 ".ktv[0:6]"  51 0 64 11.360703190089366 83 15.412881991571767
-		 95 18.048360585732752 102 18.048360585732748 109 25.702536753551581 115 25.702536753551584;
+		 95 18.048360585732752 102 18.048360585732748 109 25.702536753551584 115 25.702536753551584;
 	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
 	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
 	setAttr -s 7 ".kix[2:6]"  0.54166666666666652 0.5 0.29166666666666652 
@@ -1920,7 +9987,7 @@ createNode animCurveTA -n "locator2_rotateZ";
 	rename -uid "77D00C6F-1440-E363-F95E-7BB4FE2C8488";
 	setAttr ".tan" 18;
 	setAttr -s 7 ".ktv[0:6]"  51 0 64 -1.1285601694120047 83 -1.314887908819997
-		 95 -1.4399109973838495 102 -1.4399109973838498 109 -2.1057374311159545 115 -2.1057374311159536;
+		 95 -1.4399109973838495 102 -1.43991099738385 109 -2.1057374311159545 115 -2.1057374311159536;
 	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
 	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
 	setAttr -s 7 ".kix[2:6]"  0.54166666666666652 0.5 0.29166666666666652 
@@ -2163,13 +10230,13 @@ createNode animCurveTU -n "SCENE_CAM_scaleZ";
 createNode animCurveTU -n "eyes_basic_blinkRight";
 	rename -uid "23D9005A-BB42-8D39-1CA7-0585EFFFC877";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  90 0 95 0.22346368432044983 108 0.32960894703865051
-		 114 0 119 0 128 0.24581006169319153 135 0.27932959794998169 146 0.32960894703865051;
+	setAttr -s 7 ".ktv[0:6]"  90 0 108 0.32960894703865051 114 0 119 0
+		 128 0.24581006169319153 135 0.27932959794998169 146 0.32960894703865051;
 createNode animCurveTU -n "eyes_basic_blinkLeft";
 	rename -uid "1CE1BBF1-C443-7968-E2D9-988966E513E8";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  90 0 95 0.26815643906593323 108 0.37988826632499695
-		 114 0 119 0 128 0.25698325037956238 135 0.27932959794998169 146 0.32402235269546509;
+	setAttr -s 7 ".ktv[0:6]"  90 0 108 0.37988826632499695 114 0 119 0
+		 128 0.25698325037956238 135 0.27932959794998169 146 0.32402235269546509;
 createNode animCurveTU -n "mouth_closed_closed";
 	rename -uid "D1AE9748-F945-FDE1-10C3-C19186C41706";
 	setAttr ".tan" 18;
@@ -2180,13 +10247,190 @@ createNode animCurveTU -n "mouth_angry_envelope";
 	setAttr ".tan" 18;
 	setAttr -s 7 ".ktv[0:6]"  107 0 115 1 122 0.91061455011367798 126 0.10614525526762009
 		 134 0 142 0.15083798766136169 146 0.089385472238063812;
+createNode animCurveTU -n "eyes_basic_weight_5_";
+	rename -uid "899BF869-EB40-5F79-82AD-8D9A54CF2DBA";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  90 0.77094972133636475 108 0.89944136142730713
+		 119 1 124 1;
+createNode animCurveTU -n "eyes_basic_weight_4_";
+	rename -uid "1290F859-C449-6EE6-52B2-78B710FC557C";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  90 0.72625696659088135 108 0.88826817274093628
+		 119 1 124 1;
+createNode animCurveTU -n "eyes_basic_weight_2_";
+	rename -uid "2E5B1FE2-8047-E790-2254-CD982EA2A2C4";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  79 0 90 0 95 1 108 0 119 1 124 1 130 0;
+createNode animCurveTU -n "eyes_basic_weight_3_";
+	rename -uid "8F9DBF5C-EA45-8F82-2863-C69BEDDB050B";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  79 0 90 0 95 1 108 0 119 0.99441343545913696
+		 124 0.99441343545913696 130 0;
+createNode blendShape -n "blendShape1";
+	rename -uid "8B0D0F4B-0F41-41AB-C57D-F6A85CD83ECB";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr ".w[0]"  1;
+	setAttr -s 2 ".it[0].itg";
+	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 265 0 0 0 1 -0.014111000826341039
+		 -0.00044999403060869136 -0.0010305022355883292 1 0 0 0 1 -0.053848399395384883 -0.019878919576654885
+		 0.052667521513920401 1 -0.0015189879467179083 -0.00038015335492816785 0.0024741765993298824
+		 1 0 0 0 1 0 0 0 1 -0.0089889003956151042 0.012932023731878392 -0.015146322136908516
+		 1 -2.497770481581544e-06 -2.2558775278861505e-05 2.5438400468985362e-05 1 0 -0 0
+		 1 -0.1047155903668134 0.0018848942780677613 -0.01797437409370542 1 -0.1423559665006604
+		 -0.022786636706443097 0.1184078817893357 1 -0.00041658716994658236 -1.2123551561550941e-05
+		 0.00043491533001911047 1 0.0043974111516754399 0.00014662444938896846 -0.010680395190228453
+		 1 0 0 0 1 -0.0010033612877781237 0.00025284726145576725 -0.0016569770119292341 1 0
+		 -0 0 1 0 0 0 1 -0.037473225291890067 -0.09709819443599832 0.049762662620906228 1 -0.13355856355379692
+		 0.048825150936273376 -0.098138204474036206 1 -0.045445408213485555 0.01546910473742813
+		 -0.071137295306707413 1 0 -0 0 1 1.7745080910429534e-06 7.82077030631887e-08 7.0144013808193126e-07
+		 1 0.0035145063821444065 -0.0030884652525518313 0.021952731854289635 1 0.048867334455731611
+		 0.024256775365076644 -0.098240319043940122 1 -0.011564786232276442 0.0030453962312214332
+		 0.014085416271511247 1 -0.0055463848494649859 -0.00029814516488964327 -0.001797942358246693
+		 1 4.8951633395887398e-06 -1.0868263748621784e-06 -2.2039403529023459e-06 1 0 0 0
+		 1 -0.0020714270159547139 -0.0012581252386182906 -0.00019877886367812569 1 0.00021900203030796126
+		 -0.00035350263970873423 0.00048375424135826983 1 -0.014962738513034146 -0.0051189625469529459
+		 0.0018219236000009409 1 -0.05499537895484985 -0.0067172696184265579 0.062367332845689183
+		 1 0.0052531691429980043 0.041627754972450859 0.09425415254724312 1 0 0 0 1 -0.038916928277343943
+		 -0.0082272700810959165 0.0036445738212609879 1 0.0227192027332071 0.041133744958639973
+		 0.010198909812697332 1 0.063816196459288516 0.0036748478900728715 0.026991584240730115
+		 1 0.22923895313700893 -0.0081551837174322871 -0.07250711758825519 1 0.048994619479083457
+		 0.060317307805520241 -0.11830552028904145 1 -0.021525642145483331 0.036803118132915022
+		 0.0068813694185961005 1 0 0 0 1 0 -0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.036613958762155285
+		 -0.0010330025981913349 -0.010201477322458297 1 0 0 0 1 -0.045417889455834637 0.018700245102817481
+		 0.052342622648312576 1 0 0 0 1 -0.10276856521212607 -0.0047826077553789759 0.00053046601040496189
+		 1 -0.065421191753131186 0.016605485181897806 0.082935293604828347 1 0.12268691987880609
+		 -0.02308630286959934 -0.080131223130644136 1 0.19422799523252937 0.018215840889557189
+		 0.14649513171064166 1 0.0051322561485445117 0.023336684471341407 0.070153350550162585
+		 1 0.0073782999055538138 0.0051460754239140948 0.0023602230399836534 1 0 -0 0 1 0
+		 -0 0 1 0 0 0 1 0 0 0 1 -0.0023504287222417125 -0.00097117238817368175 0.00040159959651231425
+		 1 0.0069519184625826957 0.021624668353261128 -0.063416162393168329 1 -0.016702886959411245
+		 0.048452865431208969 0.09006118679568817 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+		 1 0 0 0 1 0 0 0 1 -0.024066932575297212 0.0091997673685748071 -0.0043718226048187238
+		 1 -0.10239176018835862 0.033920263897500885 -0.0025144744664006291 1 -0.080354024265400698
+		 0.07658720085585316 0.0058275459573930016 1 0.00069610481964664495 -4.1215301024326821e-05
+		 0.0003056690172638395 1 0 0 0 1 3.6717352625847976e-06 -2.9926559136003622e-05 -3.0588273907270142e-06
+		 1 -0.026135767418551031 0.011164904842747014 0.00058351075863849466 1 -0.054471321694565533
+		 0.038794731113454273 -0.019843113722762748 1 -0.0020667381067887266 0.0018925330104271197
+		 -9.6897138249812942e-05 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.00036163523494088176 -7.740310206126198e-06
+		 -0.00022926574613746191 1 -0.004581454094269001 0.00039145225310597762 -0.0012067111756258603
+		 1 6.6447664143044036e-05 -7.5397265927504948e-06 -6.106454258519922e-05 1 0 0 0 1 0
+		 0 0 1 0 0 0 1 0 0 0 1 -0.0015808308600838254 0.0051969469001972319 -0.0070546482448667833
+		 1 0.020459696093688529 -0.004329091780131294 -0.06102387428273752 1 0.076516311103548285
+		 -0.057064159043767715 -0.12643900963284005 1 0.13294701277269333 -0.072839200627869527
+		 -0.08253372721758323 1 0.079001131307786521 -0.0085697279981515884 -0.028167287074619352
+		 1 -0.036741219050394985 0.011726441548752548 -0.021219232225656526 1 0.0020015583926592528
+		 -0.00071390053442876855 0.0096612986508051724 1 0 0 0 1 0 0 0 1 0 0 0 1 0.00010315416997688787
+		 0.0015295921261914147 -0.0031569871677962699 1 -0.0080980586306528823 -0.012444729302011404
+		 -0.032756193255552124 1 -0.0085367789119362714 -0.023319533153690675 -0.040473072350641348
+		 1 -0.048413294632806192 0.013094212504626557 0.0066730986483776178 1 -0.0025749731650688366
+		 -6.4746005335986068e-05 0.00079198541198102074 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.011967485382571835
+		 -0.002543076586122836 -0.016183093487287914 1 -0.012689213369747904 -0.011969584297693459
+		 -0.024523286678918468 1 -0.0015923352409828173 -0.0047219685711380466 -0.0093427712657312145
+		 1 0.0026982661218761016 -0.0017825126511671026 -0.0022461168669652507 1 0.0010865973010851094
+		 -0.0014015436180265283 0.0013785961354660231 1 -0.0015637476566542213 -0.00072454239733474313
+		 0.0018240901117384523 1 0 0 0 1 0 0 0 1 -0.0097544803567573939 -0.0014324086790567063
+		 0.008241161299076049 1 0 0 0 1 2.2450056219720533e-05 4.9042354932259591e-05 -0.00012286308603877091
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.13062482032849543 -0.016624604426704326 0.071031544583961326
+		 1 -0.017180918851516232 0.0025169005014553979 -0.0087533557734294724 1 0 0 0 1 0
+		 0 0 1 -0 0 0 1 0.016373932206138753 -0.059704214940316191 -0.045043939717077985 1 0.054677655325961999
+		 -0.12382447568095394 -0.11116756052934923 1 -0 0 0 1 -0 0 0 1 0 0 0 1 0 0 0 1 0 0
+		 0 1 0.00049416043376027119 -0.00050375895585119679 -0.00067411162761743526 1 -0.0034235967591058625
+		 -0.00842139155690802 -0.014767096651212341 1 0.00019151369607489557 8.5393864983059151e-05
+		 0.00019473000394201051 1 -0.00091400454217055449 1.059525083491053e-05 -0.00014315406005804832
+		 1 -0.20012239643492385 0.2058322140288367 -0.080044652538545299 1 0 0 0 1 -0.12200855377238518
+		 -0.0098558014299435781 0.055084721232706801 1 -0.074295430207523994 0.17402514976304295
+		 0.23976244900804922 1 -0.021047651165436391 0.057662413131207568 -0.041238021462303709
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.29468375519912077 -0.024199453260009718 0.010001909350395348
+		 1 -0.00020421197113762446 4.0378531496187975e-06 -0.0001080010852660962 1 0 0 0 1 0
+		 0 0 1 0 0 0 1 -0.19435588546981078 0.14425911697144694 0.15616719745863467 1 -0.024288514951010143
+		 -0.0089090419851345359 0.010657729618912981 1 -0.29378641613995438 0.022794866702509076
+		 -0.22638711346290252 1 0 0 0 1 -0.13126651998434991 -0.010713649279188164 0.076767895750982085
+		 1 0.018465888886087137 0.11555669735019847 0.10009899269959767 1 -0.00050083134649114153
+		 -0.0049134119919146887 -0.00048193158984639536 1 0 0 0 1 -0 0 0 1 0 0 0 1 0 0 0 1 0.031385953205574357
+		 -0.037929156090739255 -0.032380133662782598 1 0.11563671537523865 -0.11924608143141573
+		 -0.12946551097527642 1 -0.061944501214283257 0.035465366750284361 -0.17627172889306031
+		 1 -0.31755492020680331 0.26264087387657198 0.039874689417100928 1 -0.2568382644274938
+		 -0.034836451964743401 -0.10395585240698461 1 0 0 0 1 -0.06956238398418603 -0.050936981516081475
+		 -0.094452884040844898 1 -0.02076342136160253 0.00028240323148958149 0.024939946506262467
+		 1 -0.19672118573100095 0.20089817263454324 0.22510009227279248 1 -0.25659872405030598
+		 0.056502961118598427 -0.14050173162662677 1 -0.44160565795359674 0.090782912760583923
+		 0.074392254516225331 1 -0.38378430495928845 0.2431528090160005 0.00059198329369192226
+		 1 -0.33656983668198637 0.37200153162051086 -0.48971972597900504 1 -0.065042348102509445
+		 -0.15228773808158522 0.1314821852399688 1 0 -0 0 1 0 -0 0 1 -0 0 0 1 0.0031187232385470054
+		 0.0024581506792724639 0.0056766197292432707 1 0.0032256714057510294 0.017818353756958061
+		 0.013623303698921063 1 0.0020617777678282323 0.0080806961627715168 0.0058707669568462961
+		 1 -0 0 0 1 -0 0 0 1 -0.060544223205141634 0.0082764605199585617 -0.017919068999319165
+		 1 -0.36851221628587494 0.015352757257620378 0.15642909254477555 1 -0.36955259136704782
+		 0.054503943795569443 0.026448832461869909 1 -0.13730088340747551 0.11863173869062588
+		 0.035159091131981721 1 -0.0071196165549557815 0.066114809211029205 0.058789546285939576
+		 1 0.038606333764026064 0.039739933168709142 0.032782288944728087 1 0.0028330981164423896
+		 0.0023445540945914445 0.002268075807187131 1 0 0 0 1 0 0 0 1 0 -0 0 1 0 -0 0 1 0
+		 0 0 1 0 0 0 1 0 -0 0 1 0 0 0 1 0 -0 0 1 0 0 0 1 0 -0 0 1 0 -0 0 1 0 0 0 1 0 0 0 1 0
+		 0 0 1 0 0 0 1 0 0 0 1 -0.00010781716068648513 1.4151164741954244e-05 -3.6751859792515248e-06
+		 1 -0.0073976073304500151 0.0018228683580962446 0.00038229781649601682 1 -0.012237201831117192
+		 0.0036587653813282411 0.0010692955704318802 1 -0.0018377121820944559 0.0010963360966296729
+		 0.00042714392853680089 1 0 0 -0 1 0 0 0 1 0 0 -0 1 -0.002090084127042164 -0.00031876266713863448
+		 0.00049716467564197252 1 -0.0091247469662540243 -0.0024546186140972301 0.001136264953798205
+		 1 -0.00054582583802285228 -0.0001771286544596626 0.00020302559188869335 1 0 0 0 1 0
+		 0 0 1 0.00016142114326689436 -0.00029912515875051162 0.0010276583201174186 1 -0.047627779379796342
+		 -0.002339713010018959 -0.0063945145495775853 1 -0.072468324320940025 -0.0052286867231517709
+		 0.0063317302859402513 1 -0.00071762781489815089 -0.0018497835948365019 0.0010011727968794563
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.0033162254721309514 -0.0020149193658782309 0.0017384151953141261
+		 1 -0.04427503377861447 -0.02282468501499732 0.013644496547233487 1 -0.030186459016271133
+		 -0.024755090138120342 0.027623524027228851 1 -0.072401172053229879 -0.020842476858715708
+		 0.015535242850999831 1 -0.0042285121826387516 -0.00072019652933810047 0.0011252522099026961
+		 1 0 0 0 1 5.6047977120194043e-05 -0.00010060991507264476 2.550382980019369e-06 1 -0.025689810365059323
+		 0.0020628228947308092 -0.033429744215688444 1 -0.18436598157461059 -0.023340184422533383
+		 -0.1009196567443178 1 -0.19240799154008781 -0.029364228488745647 -0.01625061480493617
+		 1 -0.024757473746083503 0.04058509904415486 -0.0050581899269380171 1 -0.031242187723580228
+		 0.052684822089225092 0.05009950061434354 1 -0.0052251794239167315 -0.0012314531865674494
+		 0.0018947158021037219 1 0 0 -0 1 0 0 0 1 -0.00054495634861727316 -0.00028371529208570667
+		 4.8033731161051252e-05 1 -0.050869669049425997 0.012644908858512494 0.0044011282033534216
+		 1 -0.11774886241037197 0.0055640722236161011 0.016940766380445837 1 -0.14887322339670006
+		 0.016927826208035013 0.033204735385113038 1 -0.18894595720171325 -0.018446645734070843
+		 0.050773325202979169 1 -0.053544035252469993 -0.0050290922451830533 0.010717567891979418
+		 1 1.6929364570622552e-07 -0.00068766146958878019 -0.00013968139258003359 1 -0.0018924794452846736
+		 -0.00037336309456537705 0.00094320172758367328 1 -0.05877142334040153 0.025493918124630977
+		 -0.02674794449169704 1 -0.18125411546978443 0.038224760333904761 -0.083593236216734423
+		 1 -0.18161065736817839 0.032902625506678662 -0.068921042901071816 1 -0.089151484119705082
+		 0.021663084639851338 -0.029545103436277032 1 -0.040878277741924735 -0.0070479015446138771
+		 -0.0029060774365088082 1 -0.013262807965149614 0.0040672373223814562 -0.0016952627786094299
+		 1 0 0 0 1 0 0 0 1 -0.077093854497811642 -0.04087985750143807 -0.076475921779757941
+		 1 -0.038952040988916803 -0.13798266022772754 -0.18330494478286719 1 -0.00045502389042439972
+		 -0.16475605040575614 -0.18080889867443117 1 -0.031262513893263844 -0.073167518550275146
+		 -0.054917116176269487 1 -0.082585801951749915 0.028284082056222459 0.045749765603031456
+		 1 -0.023267805631531711 0.0040771148718343198 0.00022726352827906471 1 -0.0036509808477732247
+		 0.0043557379452391284 -0.0023213663642776133 1 ;
+	setAttr ".it[0].itg[0].iti[6000].ict" -type "componentList" 79 "vtx[20]" "vtx[22:27]" "vtx[32:33]" "vtx[47:49]" "vtx[64]" "vtx[66]" "vtx[71:72]" "vtx[79]" "vtx[94]" "vtx[106:107]" "vtx[110:111]" "vtx[156:157]" "vtx[163]" "vtx[176:178]" "vtx[185:187]" "vtx[203:214]" "vtx[219]" "vtx[223:224]" "vtx[230]" "vtx[232]" "vtx[236:237]" "vtx[244:250]" "vtx[265:267]" "vtx[269]" "vtx[278:281]" "vtx[684:688]" "vtx[708:713]" "vtx[792:796]" "vtx[883:889]" "vtx[969:979]" "vtx[1011:1018]" "vtx[1102:1109]" "vtx[1130]" "vtx[1132:1135]" "vtx[1142]" "vtx[1157:1159]" "vtx[1176]" "vtx[1182]" "vtx[1193:1195]" "vtx[1214:1217]" "vtx[1220]" "vtx[1271:1273]" "vtx[1306:1307]" "vtx[1316:1321]" "vtx[1328:1329]" "vtx[1333:1334]" "vtx[1336]" "vtx[1340]" "vtx[1342]" "vtx[1346:1347]" "vtx[1353:1357]" "vtx[1367:1368]" "vtx[1373:1378]" "vtx[1382:1383]" "vtx[1385:1389]" "vtx[1391]" "vtx[1393]" "vtx[2069:2070]" "vtx[2081:2084]" "vtx[2122:2123]" "vtx[2198:2205]" "vtx[2866]" "vtx[2884]" "vtx[2888:2889]" "vtx[2892]" "vtx[2927]" "vtx[2933]" "vtx[2939]" "vtx[2945]" "vtx[2951]" "vtx[2963]" "vtx[2975]" "vtx[3312:3314]" "vtx[3322:3327]" "vtx[3359:3364]" "vtx[3396:3402]" "vtx[3504:3518]" "vtx[3608:3623]" "vtx[3713:3720]";
+	setAttr ".it[0].itg[0].pdm" 1;
+	setAttr ".it[0].itg[1].pdm" 1;
+	setAttr ".it[0].siw" 1;
+	setAttr ".mlid" 6;
+	setAttr ".mlpr" 0;
+	setAttr -s 2 ".pndr[0:1]"  0 0;
+	setAttr -s 2 ".tgvs[0:1]" yes yes;
+	setAttr -s 2 ".tpvs[0:1]" yes yes;
+	setAttr ".tgdt[0].cid" -type "Int32Array" 1 0 ;
+	setAttr ".dfo" 1;
+	setAttr ".aal" -type "attributeAlias" {"body","weight[0]"} ;
+createNode objectSet -n "blendShape1Set";
+	rename -uid "9230CCF4-F849-351B-4767-1B84EE0C1112";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "blendShape1GroupId";
+	rename -uid "CAB63CF2-F14D-1484-AE94-EDAF5ABDCF0E";
+	setAttr ".ihi" 0;
+createNode groupParts -n "blendShape1GroupParts";
+	rename -uid "7C4E9E56-8449-402B-D53A-7F9F0184A3EE";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 133;
-	setAttr -av ".unw" 133;
+	setAttr -k on ".o" 147;
+	setAttr -av ".unw" 147;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -2411,72 +10655,82 @@ select -ne :ikSystem;
 	setAttr -s 4 ".sol";
 connectAttr "eyes_basic_blinkRight.o" "earthGolem_RIGRN.phl[1]";
 connectAttr "eyes_basic_blinkLeft.o" "earthGolem_RIGRN.phl[2]";
-connectAttr "mouth_closed_closed.o" "earthGolem_RIGRN.phl[3]";
-connectAttr "mouth_angry_envelope.o" "earthGolem_RIGRN.phl[4]";
-connectAttr "HIP_CTRL_rotateY.o" "earthGolem_RIGRN.phl[5]";
-connectAttr "HIP_CTRL_rotateX.o" "earthGolem_RIGRN.phl[6]";
-connectAttr "HIP_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[7]";
-connectAttr "HIP_CTRL_translateX.o" "earthGolem_RIGRN.phl[8]";
-connectAttr "HIP_CTRL_translateY.o" "earthGolem_RIGRN.phl[9]";
-connectAttr "HIP_CTRL_translateZ.o" "earthGolem_RIGRN.phl[10]";
-connectAttr "HIP_CTRL_visibility.o" "earthGolem_RIGRN.phl[11]";
-connectAttr "HIP_CTRL_scaleX.o" "earthGolem_RIGRN.phl[12]";
-connectAttr "HIP_CTRL_scaleY.o" "earthGolem_RIGRN.phl[13]";
-connectAttr "HIP_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[14]";
-connectAttr "Chest_CTRL_rotateY.o" "earthGolem_RIGRN.phl[15]";
-connectAttr "Chest_CTRL_rotateX.o" "earthGolem_RIGRN.phl[16]";
-connectAttr "Chest_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[17]";
-connectAttr "Chest_CTRL_translateX.o" "earthGolem_RIGRN.phl[18]";
-connectAttr "Chest_CTRL_translateY.o" "earthGolem_RIGRN.phl[19]";
-connectAttr "Chest_CTRL_translateZ.o" "earthGolem_RIGRN.phl[20]";
-connectAttr "Chest_CTRL_visibility.o" "earthGolem_RIGRN.phl[21]";
-connectAttr "Chest_CTRL_scaleX.o" "earthGolem_RIGRN.phl[22]";
-connectAttr "Chest_CTRL_scaleY.o" "earthGolem_RIGRN.phl[23]";
-connectAttr "Chest_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[24]";
-connectAttr "pairBlend2.orx" "earthGolem_RIGRN.phl[25]";
-connectAttr "pairBlend2.ory" "earthGolem_RIGRN.phl[26]";
-connectAttr "pairBlend2.orz" "earthGolem_RIGRN.phl[27]";
-connectAttr "earthGolem_RIGRN.phl[28]" "pairBlend2.ro";
-connectAttr "earthGolem_RIGRN.phl[29]" "leftArm_ik1_parentConstraint1.cro";
-connectAttr "pairBlend2.otx" "earthGolem_RIGRN.phl[30]";
-connectAttr "pairBlend2.oty" "earthGolem_RIGRN.phl[31]";
-connectAttr "pairBlend2.otz" "earthGolem_RIGRN.phl[32]";
-connectAttr "earthGolem_RIGRN.phl[33]" "leftArm_ik1_parentConstraint1.crp";
-connectAttr "earthGolem_RIGRN.phl[34]" "leftArm_ik1_parentConstraint1.crt";
-connectAttr "earthGolem_RIGRN.phl[35]" "pairBlend2.w";
-connectAttr "leftArm_ik1_blendParent1.o" "earthGolem_RIGRN.phl[36]";
-connectAttr "leftArm_ik1_visibility.o" "earthGolem_RIGRN.phl[37]";
-connectAttr "leftArm_ik1_scaleX.o" "earthGolem_RIGRN.phl[38]";
-connectAttr "leftArm_ik1_scaleY.o" "earthGolem_RIGRN.phl[39]";
-connectAttr "leftArm_ik1_scaleZ.o" "earthGolem_RIGRN.phl[40]";
-connectAttr "earthGolem_RIGRN.phl[41]" "leftArm_ik1_parentConstraint1.cpim";
-connectAttr "pairBlend1.orx" "earthGolem_RIGRN.phl[42]";
-connectAttr "pairBlend1.ory" "earthGolem_RIGRN.phl[43]";
-connectAttr "pairBlend1.orz" "earthGolem_RIGRN.phl[44]";
-connectAttr "earthGolem_RIGRN.phl[45]" "pairBlend1.ro";
-connectAttr "earthGolem_RIGRN.phl[46]" "rightArm_ik1_parentConstraint1.cro";
-connectAttr "pairBlend1.otx" "earthGolem_RIGRN.phl[47]";
-connectAttr "pairBlend1.oty" "earthGolem_RIGRN.phl[48]";
-connectAttr "pairBlend1.otz" "earthGolem_RIGRN.phl[49]";
-connectAttr "earthGolem_RIGRN.phl[50]" "rightArm_ik1_parentConstraint1.crp";
-connectAttr "earthGolem_RIGRN.phl[51]" "rightArm_ik1_parentConstraint1.crt";
-connectAttr "earthGolem_RIGRN.phl[52]" "pairBlend1.w";
-connectAttr "rightArm_ik1_blendParent1.o" "earthGolem_RIGRN.phl[53]";
-connectAttr "rightArm_ik1_visibility.o" "earthGolem_RIGRN.phl[54]";
-connectAttr "rightArm_ik1_scaleX.o" "earthGolem_RIGRN.phl[55]";
-connectAttr "rightArm_ik1_scaleY.o" "earthGolem_RIGRN.phl[56]";
-connectAttr "rightArm_ik1_scaleZ.o" "earthGolem_RIGRN.phl[57]";
-connectAttr "earthGolem_RIGRN.phl[58]" "rightArm_ik1_parentConstraint1.cpim";
-connectAttr "head_CTRL_rotateX.o" "earthGolem_RIGRN.phl[59]";
-connectAttr "head_CTRL_rotateY.o" "earthGolem_RIGRN.phl[60]";
-connectAttr "head_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[61]";
-connectAttr "head_CTRL_translateX.o" "earthGolem_RIGRN.phl[62]";
-connectAttr "head_CTRL_translateY.o" "earthGolem_RIGRN.phl[63]";
-connectAttr "head_CTRL_translateZ.o" "earthGolem_RIGRN.phl[64]";
-connectAttr "head_CTRL_visibility.o" "earthGolem_RIGRN.phl[65]";
-connectAttr "head_CTRL_scaleX.o" "earthGolem_RIGRN.phl[66]";
-connectAttr "head_CTRL_scaleY.o" "earthGolem_RIGRN.phl[67]";
-connectAttr "head_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[68]";
+connectAttr "eyes_basic_weight_2_.o" "earthGolem_RIGRN.phl[3]";
+connectAttr "eyes_basic_weight_3_.o" "earthGolem_RIGRN.phl[4]";
+connectAttr "eyes_basic_weight_4_.o" "earthGolem_RIGRN.phl[5]";
+connectAttr "eyes_basic_weight_5_.o" "earthGolem_RIGRN.phl[6]";
+connectAttr "mouth_closed_closed.o" "earthGolem_RIGRN.phl[7]";
+connectAttr "mouth_angry_envelope.o" "earthGolem_RIGRN.phl[8]";
+connectAttr "HIP_CTRL_rotateY.o" "earthGolem_RIGRN.phl[9]";
+connectAttr "HIP_CTRL_rotateX.o" "earthGolem_RIGRN.phl[10]";
+connectAttr "HIP_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[11]";
+connectAttr "HIP_CTRL_translateX.o" "earthGolem_RIGRN.phl[12]";
+connectAttr "HIP_CTRL_translateY.o" "earthGolem_RIGRN.phl[13]";
+connectAttr "HIP_CTRL_translateZ.o" "earthGolem_RIGRN.phl[14]";
+connectAttr "HIP_CTRL_visibility.o" "earthGolem_RIGRN.phl[15]";
+connectAttr "HIP_CTRL_scaleX.o" "earthGolem_RIGRN.phl[16]";
+connectAttr "HIP_CTRL_scaleY.o" "earthGolem_RIGRN.phl[17]";
+connectAttr "HIP_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[18]";
+connectAttr "Chest_CTRL_rotateY.o" "earthGolem_RIGRN.phl[19]";
+connectAttr "Chest_CTRL_rotateX.o" "earthGolem_RIGRN.phl[20]";
+connectAttr "Chest_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[21]";
+connectAttr "Chest_CTRL_visibility.o" "earthGolem_RIGRN.phl[22]";
+connectAttr "Chest_CTRL_translateX.o" "earthGolem_RIGRN.phl[23]";
+connectAttr "Chest_CTRL_translateY.o" "earthGolem_RIGRN.phl[24]";
+connectAttr "Chest_CTRL_translateZ.o" "earthGolem_RIGRN.phl[25]";
+connectAttr "Chest_CTRL_scaleX.o" "earthGolem_RIGRN.phl[26]";
+connectAttr "Chest_CTRL_scaleY.o" "earthGolem_RIGRN.phl[27]";
+connectAttr "Chest_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[28]";
+connectAttr "pairBlend2.orx" "earthGolem_RIGRN.phl[29]";
+connectAttr "pairBlend2.ory" "earthGolem_RIGRN.phl[30]";
+connectAttr "pairBlend2.orz" "earthGolem_RIGRN.phl[31]";
+connectAttr "earthGolem_RIGRN.phl[32]" "pairBlend2.ro";
+connectAttr "earthGolem_RIGRN.phl[33]" "leftArm_ik1_parentConstraint1.cro";
+connectAttr "pairBlend2.otx" "earthGolem_RIGRN.phl[34]";
+connectAttr "pairBlend2.oty" "earthGolem_RIGRN.phl[35]";
+connectAttr "pairBlend2.otz" "earthGolem_RIGRN.phl[36]";
+connectAttr "earthGolem_RIGRN.phl[37]" "leftArm_ik1_parentConstraint1.crp";
+connectAttr "earthGolem_RIGRN.phl[38]" "leftArm_ik1_parentConstraint1.crt";
+connectAttr "earthGolem_RIGRN.phl[39]" "pairBlend2.w";
+connectAttr "leftArm_ik1_blendParent1.o" "earthGolem_RIGRN.phl[40]";
+connectAttr "leftArm_ik1_visibility.o" "earthGolem_RIGRN.phl[41]";
+connectAttr "leftArm_ik1_scaleX.o" "earthGolem_RIGRN.phl[42]";
+connectAttr "leftArm_ik1_scaleY.o" "earthGolem_RIGRN.phl[43]";
+connectAttr "leftArm_ik1_scaleZ.o" "earthGolem_RIGRN.phl[44]";
+connectAttr "earthGolem_RIGRN.phl[45]" "leftArm_ik1_parentConstraint1.cpim";
+connectAttr "pairBlend1.orx" "earthGolem_RIGRN.phl[46]";
+connectAttr "pairBlend1.ory" "earthGolem_RIGRN.phl[47]";
+connectAttr "pairBlend1.orz" "earthGolem_RIGRN.phl[48]";
+connectAttr "earthGolem_RIGRN.phl[49]" "pairBlend1.ro";
+connectAttr "earthGolem_RIGRN.phl[50]" "rightArm_ik1_parentConstraint1.cro";
+connectAttr "pairBlend1.otx" "earthGolem_RIGRN.phl[51]";
+connectAttr "pairBlend1.oty" "earthGolem_RIGRN.phl[52]";
+connectAttr "pairBlend1.otz" "earthGolem_RIGRN.phl[53]";
+connectAttr "earthGolem_RIGRN.phl[54]" "rightArm_ik1_parentConstraint1.crp";
+connectAttr "earthGolem_RIGRN.phl[55]" "rightArm_ik1_parentConstraint1.crt";
+connectAttr "earthGolem_RIGRN.phl[56]" "pairBlend1.w";
+connectAttr "rightArm_ik1_blendParent1.o" "earthGolem_RIGRN.phl[57]";
+connectAttr "rightArm_ik1_visibility.o" "earthGolem_RIGRN.phl[58]";
+connectAttr "rightArm_ik1_scaleX.o" "earthGolem_RIGRN.phl[59]";
+connectAttr "rightArm_ik1_scaleY.o" "earthGolem_RIGRN.phl[60]";
+connectAttr "rightArm_ik1_scaleZ.o" "earthGolem_RIGRN.phl[61]";
+connectAttr "earthGolem_RIGRN.phl[62]" "rightArm_ik1_parentConstraint1.cpim";
+connectAttr "head_CTRL_rotateX.o" "earthGolem_RIGRN.phl[63]";
+connectAttr "head_CTRL_rotateY.o" "earthGolem_RIGRN.phl[64]";
+connectAttr "head_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[65]";
+connectAttr "head_CTRL_visibility.o" "earthGolem_RIGRN.phl[66]";
+connectAttr "head_CTRL_translateX.o" "earthGolem_RIGRN.phl[67]";
+connectAttr "head_CTRL_translateY.o" "earthGolem_RIGRN.phl[68]";
+connectAttr "head_CTRL_translateZ.o" "earthGolem_RIGRN.phl[69]";
+connectAttr "head_CTRL_scaleX.o" "earthGolem_RIGRN.phl[70]";
+connectAttr "head_CTRL_scaleY.o" "earthGolem_RIGRN.phl[71]";
+connectAttr "head_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[72]";
+connectAttr "earthGolem_RIGRN.phl[73]" "blendShape1Set.dsm" -na;
+connectAttr "blendShape1GroupId.id" "earthGolem_RIGRN.phl[74]";
+connectAttr "blendShape1Set.mwc" "earthGolem_RIGRN.phl[75]";
+connectAttr "blendShape1.og[0]" "earthGolem_RIGRN.phl[76]";
+connectAttr "earthGolem_RIGRN.phl[77]" "earthGolem_RIGRN.phl[78]";
+connectAttr "earthGolem_RIGRN.phl[79]" "blendShape1GroupParts.ig";
 connectAttr "SCENE_CAM_translateX.o" "SCENE_CAM.tx";
 connectAttr "SCENE_CAM_translateY.o" "SCENE_CAM.ty";
 connectAttr "SCENE_CAM_translateZ.o" "SCENE_CAM.tz";
@@ -2531,6 +10785,7 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "blendShape1.mlpr" "shapeEditorManager.bspr[6]";
 connectAttr "sharedReferenceNode.sr" "forest_golem_SET_latestRN.sr";
 connectAttr "forest_golem_SET_latestRN.phl[1]" "forest_golem_SET_latestRN.phl[2]"
 		;
@@ -2559,5 +10814,11 @@ connectAttr "leftArm_ik1_parentConstraint1.ctz" "pairBlend2.itz2";
 connectAttr "leftArm_ik1_parentConstraint1.crx" "pairBlend2.irx2";
 connectAttr "leftArm_ik1_parentConstraint1.cry" "pairBlend2.iry2";
 connectAttr "leftArm_ik1_parentConstraint1.crz" "pairBlend2.irz2";
+connectAttr "blendShape1GroupParts.og" "blendShape1.ip[0].ig";
+connectAttr "blendShape1GroupId.id" "blendShape1.ip[0].gi";
+connectAttr "shapeEditorManager.obsv[6]" "blendShape1.tgdt[0].dpvs";
+connectAttr "blendShape1GroupId.msg" "blendShape1Set.gn" -na;
+connectAttr "blendShape1.msg" "blendShape1Set.ub[0]";
+connectAttr "blendShape1GroupId.id" "blendShape1GroupParts.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of scene08_rockGolem_Intro.ma
