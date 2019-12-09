@@ -1,11 +1,9 @@
 //Maya ASCII 2018 scene
 //Name: scene08_rockGolem_Intro.ma
-//Last modified: Mon, Dec 02, 2019 08:46:23 PM
+//Last modified: Mon, Dec 09, 2019 02:57:29 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "forest_golem_SET_latest" -rfn "forest_golem_SET_latestRN" -op
 		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//scenes/forest_golem_SET_latest.ma";
-file -rdi 2 -ns "earthGolem_latest" -dr 1 -rfn "forest_golem_SET_latest:earthGolem_latestRN"
-		 -op "v=0;" -typ "mayaAscii" "C:/Users/jakeh/OneDrive/Desktop/poweredup//assets/characters/earthGolem/earthGolem_latest.ma";
 file -rdi 2 -ns "fallenTree_latest" -rfn "forest_golem_SET_latest:fallenTree_latestRN"
 		 -op "v=0;" -typ "mayaAscii" "C:/Users/jakeh/OneDrive/Desktop/poweredup//assets/fallenTree_latest.ma";
 file -rdi 2 -ns "roots_latest" -rfn "forest_golem_SET_latest:roots_latestRN"
@@ -40,8 +38,8 @@ file -r -ns "earthGolem_RIG" -dr 1 -rfn "earthGolem_RIGRN" -op "v=0;" -typ "maya
 		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/characters/earthGolem/earthGolem_RIG.ma";
 requires maya "2018";
 requires "stereoCamera" "10.0";
-requires -nodeType "rmanGlobals" -nodeType "PxrPathTracer" -nodeType "rmanDisplay"
-		 "RenderMan_for_Maya.py" "22.4 @ 1946009";
+requires -nodeType "rmanDisplayChannel" -nodeType "rmanGlobals" -nodeType "PxrPathTracer"
+		 -nodeType "rmanDisplay" "RenderMan_for_Maya.py" "22.4 @ 1946009";
 requires "mtoa" "3.3.0.1";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -53,14 +51,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "03B47DC3-2D40-033A-E283-D689A3B30717";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 28.986665344927779 13.217548740502494 16.736176061502547 ;
-	setAttr ".r" -type "double3" -3.9383527296128342 -288.19999999997344 1.2728942926947475e-15 ;
+	setAttr ".t" -type "double3" 1.5862352828302377 12.755447709132577 20.148710427089974 ;
+	setAttr ".r" -type "double3" -9.3383527296117599 -360.19999999996281 1.8636176124662689e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E1628328-CA4E-C776-D493-ACB6CF55B3DF";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 35.753244970167913;
+	setAttr ".coi" 17.748051658419104;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -120,21 +118,12 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "SCENE_CAM";
 	rename -uid "32665062-094C-E8B9-7533-79A6953D8B75";
-	setAttr ".t" -type "double3" -0.058544664178298185 13.360089133417315 28.064340080517411 ;
-	setAttr -l on ".tx";
-	setAttr -l on ".ty";
-	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" -2.1383527296024076 -1.0000000000000164 -3.1064835636100448e-18 ;
-	setAttr -l on ".rx";
-	setAttr -l on ".ry";
-	setAttr -l on ".rz";
 createNode camera -n "SCENE_CAMShape" -p "SCENE_CAM";
 	rename -uid "95A67C2E-5E44-DC79-5A94-5399A647CFCD";
 	setAttr -k off ".v";
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999986;
-	setAttr -l on ".coi" 31.731247859351619;
-	setAttr -l on ".ow";
+	setAttr ".coi" 28.533426261937546;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -152,7 +141,7 @@ createNode locator -n "locatorShape2" -p "locator2";
 	rename -uid "252DB42D-E141-C9CD-7A68-278C5218FEC7";
 	setAttr -k off ".v";
 createNode fosterParent -n "earthGolem_RIGRNfosterParent1";
-	rename -uid "C1A5BA9C-FC4E-3A34-572F-E49567A822DD";
+	rename -uid "CCFF1F07-054E-5D0E-4472-179B70BF63EE";
 createNode parentConstraint -n "rightArm_ik1_parentConstraint1" -p "earthGolem_RIGRNfosterParent1";
 	rename -uid "3AEAB405-5941-84E3-6835-8892E10E5974";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "locator1W0" -dv 1 -min 0 -at "double";
@@ -171,7 +160,7 @@ createNode parentConstraint -n "rightArm_ik1_parentConstraint1" -p "earthGolem_R
 	setAttr ".tg[0].tot" -type "double3" -0.029667424592700442 -0.80179515356037023 
 		-0.94656185509079016 ;
 	setAttr ".tg[0].tor" -type "double3" -87.990031473710971 0 0 ;
-	setAttr ".lr" -type "double3" -89.37144353376236 -32.993015502696629 -2.7714245617786504 ;
+	setAttr ".lr" -type "double3" -129.42877846437386 0 0 ;
 	setAttr ".rst" -type "double3" -0.22865114159667943 7.0073378158194171 4.3913194702887379 ;
 	setAttr ".rsrr" -type "double3" -87.990031473710971 0 0 ;
 	setAttr -k on ".w0";
@@ -192,48 +181,51 @@ createNode parentConstraint -n "leftArm_ik1_parentConstraint1" -p "earthGolem_RI
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.15713850936381024 0.07079943208277184 -0.17062608870464269 ;
 	setAttr ".tg[0].tor" -type "double3" -110.58968336715195 -7.3297600070851416 -14.296148321477441 ;
-	setAttr ".lr" -type "double3" -100.51159259432301 -6.9458689724317235 -22.8246291197528 ;
+	setAttr ".lr" -type "double3" -152.17601155699313 -14.935529310775534 -5.8910616713525483 ;
 	setAttr ".rst" -type "double3" -0.090936517603178224 7.3278789348677726 4.9120472273262878 ;
 	setAttr ".rsrr" -type "double3" -110.58968336715195 -7.3297600070851399 -14.296148321477441 ;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C19E0F73-9C4F-3867-1017-57BC666D316D";
+	rename -uid "A1EF57A9-6B49-D138-9D8D-4FA39EA9F009";
 	setAttr -s 42 ".lnk";
 	setAttr -s 42 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "42FAC5F4-6D48-C3F6-0320-36A7B97BF68A";
+	rename -uid "19461ACD-C144-0910-1538-B993B04075EF";
+	setAttr ".cdl" 5;
+	setAttr -s 6 ".dli[1:5]"  3 2 1 4 5;
+	setAttr -s 4 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "1984A9AA-9043-0CB6-25FE-0897B9EA980C";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9BEADD97-E344-2DE1-9F48-FBA2CE549033";
+	rename -uid "BFB0A434-994B-D50B-B660-05B0B4537E44";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E05294C1-E942-FB74-2824-0F8254AB4373";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "E8421C10-B148-D8AA-0067-48A362D67A81";
-	setAttr ".bsdt[0].bscd" -type "Int32Array" 6 1 2 3 4 0
-		 5 ;
-	setAttr -s 6 ".bspr";
-	setAttr -s 6 ".obsv";
+	rename -uid "D08CA318-C745-DC1E-4B55-16A4E93843D6";
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 7 1 2 3 4 0
+		 5 6 ;
+	setAttr -s 7 ".bspr";
+	setAttr -s 7 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "3D19A403-A049-80C4-EB0B-62A6B0D80D18";
+	rename -uid "998C8EB9-F84B-B3F8-F4E2-7E9606B68901";
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "E337D064-DC48-C1BE-289C-87963B4B123F";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
-		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
-		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
-		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"SCENE_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
+		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
+		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 633\n            -height 516\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"SCENE_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1028\n            -height 517\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 0\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n"
+		+ "            -hulls 0\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 528\n            -height 516\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1009\n            -height 516\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 510\n            -height 517\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 528\n            -height 516\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n"
@@ -259,28 +251,43 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n"
 		+ "            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n"
-		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n"
-		+ "                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n"
-		+ "\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"SCENE_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1028\\n    -height 517\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"SCENE_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1028\\n    -height 517\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
+		+ "                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n"
+		+ "\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"SCENE_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 633\\n    -height 516\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"SCENE_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 633\\n    -height 516\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "56244A08-F843-4A51-6204-C195026DE403";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 135 -ast -10 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 147 -ast -10 -aet 200 ";
 	setAttr ".st" 6;
 createNode reference -n "forest_golem_SET_latestRN";
 	rename -uid "D164C0BC-8540-F44F-C166-9083EFA7D2B2";
-	setAttr -s 2 ".phl";
+	setAttr -s 15 ".phl";
 	setAttr ".phl[1]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"forest_golem_SET_latestRN"
 		"forest_golem_SET_latest:fallenTree_latestRN" 0
 		"forest_golem_SET_latest:lilyBush_latestRN" 0
 		"forest_golem_SET_latest:roots_latestRN2" 0
 		"forest_golem_SET_latest:smallLavenderClump_latestRN" 0
-		"forest_golem_SET_latestRN" 0
+		"forest_golem_SET_latestRN" 1
+		2 "forest_golem_SET_latest:earthGolem_latestRN" "fileNames[0]" " -type \"string\" \"/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/characters/earthGolem/earthGolem_latest.ma\""
+		
 		"forest_golem_SET_latest:roots_latestRN4" 0
 		"forest_golem_SET_latest:earthGolem_latestRN" 5
 		2 "|forest_golem_SET_latest:earthGolem_latest:earthGolem" "visibility" " 1"
@@ -303,14 +310,48 @@ createNode reference -n "forest_golem_SET_latestRN";
 		"forest_golem_SET_latest:roots_latestRN5" 0
 		"forest_golem_SET_latest:roots_latestRN3" 0
 		"forest_golem_SET_latest:roots_latestRN6" 0
-		"forest_golem_SET_latest:fallenTree_latestRN" 20
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
-		"translate" " -type \"double3\" 5.2993369272773112 -0.18078285191942645 0"
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"forest_golem_SET_latest:fallenTree_latestRN" 1702
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"overrideDisplayType" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"overrideLevelOfDetail" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"overrideShading" " 1"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"overrideTexturing" " 1"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"overridePlayback" " 1"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"overrideEnabled" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"overrideVisibility" " 1"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"hideOnPlayback" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"overrideRGBColors" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"overrideColor" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"overrideColorRGB" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"translate" " -type \"double3\" 5.25375962290557652 -0.5130098604587221 -0.006223782068737832"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"rotate" " -type \"double3\" 90.35443019851071256 -9.35522451373803499 -3.52986429301881133"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"rotatePivot" " -type \"double3\" -1.98687674254539282 -2.08565172121758602 -3.70109544605484553"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log" 
+		"scalePivot" " -type \"double3\" -1.98687674254539326 -2.08565172121758602 -3.70109544605484553"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvSet[0].uvSetPoints" " -s 2304"
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvst[0].uvsp[0:249]" (" -type \"float2\" 0.19567472 0.33074582000000002 0.21440624999999999 0.33018809999999998 0.21446097 0.35924333000000003 0.19558822000000001 0.35947596999999998 0.19523879999999999 0.30043893999999999 0.21419947 0.30071637000000001 0.23336804 0.3299357 0.23345137999999999 0.35910990999999998 0.21546607000000001 0.46898573999999998 0.19633052000000001 0.46915849999999998 0.17670313000000001 0.33054127999999999 0.17667526 0.35979601999999999 0.17637156000000001 0.30088874999999998 0.19527633 0.23808900999999999 0.21439006999999999 0.23803957000000001 0.23307347 0.30089471000000001 0.25240513999999997 0.32997805000000002 0.25165710000000002 0.37112986999999997 0.23460411 0.46876078999999998 0.21609419999999999 0.53108703999999995 0.19892346999999999 0.53115272999999996 0.17728779 0.46931475 0.17624064 0.23840752000000001 0.19705202999999999 0.15163292 0.21474879999999999 0.15166885999999999 0.23348691999999999 0.23825736 0.24991912999999999 0.30101576000000002 0.26456907000000002 0.33323671999999999 0.2611591799999"
 		+ "9999 0.37985381000000001 0.2536678 0.46847460000000002 0.23324209000000001 0.53073077999999996 0.21648817000000001 0.56024050999999997 0.20078145999999999 0.56039839999999996 0.18166663999999999 0.53099357999999997 0.17917129000000001 0.15168522000000001 0.19739860000000001 0.14437066000000001 0.21477800999999999 0.14449968999999999 0.23244155999999999 0.15180640000000001 0.25250450000000002 0.23871839 0.26470034999999997 0.28691541999999998 0.25042307000000003 0.53014528999999999 0.232209 0.55999374000000002 0.21655253999999999 0.56527925000000001 0.20120774 0.56546616999999999 0.18481474000000001 0.55860525000000005 0.17978438999999999 0.14415733999999999 0.19791853000000001 0.12773683999999999 0.21484268000000001 0.12811743 0.23215684 0.14453767000000001 0.25030571000000001 0.15203822 0.24889901 0.55692613000000002 0.23191576 0.56507468000000005 0.21662505000000001 0.57107072999999997 0.20124172000000001 0.57129483999999997 0.18517302999999999 0.56565182999999997 0.18072647 0.12681556999999999 0.19615489 0"
 		+ ".069757260000000001 0.21508858 0.069241010000000006 0.23177281 0.12788637999999999 0.24976519999999999 0.14449486 0.24791588000000001 0.56480949999999996 0.2320419 0.57091093000000004 0.21697247 0.59781914999999997 0.49664295000000003 0.37123518999999999 0.18618034 0.57727550999999999 0.17731716 0.071355014999999994 0.79678369000000004 0.35718360999999998 0.80900812 0.33699706000000001 0.23401553999999999 0.069912024000000003 0.24898145999999999 0.12711342 0.24736863000000001 0.57591647000000001 0.23249855999999999 0.59774267999999997 0.49597949000000002 0.36271115999999998 0.21706877999999999 0.60353069999999998 0.18398287999999999 0.5970065 0.17335394000000001 0.0047780842999999998 0.77480775000000002 0.34800621999999998 0.78068280000000001 0.33450738000000002 0.76060539000000005 0.12472293 0.25284194999999998 0.071667485000000003 0.24813316999999999 0.59799062999999997 0.23257525000000001 0.60346913000000002 0.50321965999999996 0.36709183000000001 0.49840393999999999 0.36277667000000002 0.49665411999999998"
@@ -321,7 +362,7 @@ createNode reference -n "forest_golem_SET_latestRN";
 		+ "747466000000002 0.22285791999999999 0.071266666000000006 0.23213828 0.089687771999999999 0.25304699000000003 0.092881813999999993 0.27652149999999998 0.089102782000000005 0.36599873999999999 0.074183382000000006 0.36814266000000001 0.051880334 0.28431261000000002 0.051801130000000001 0.26418438999999999 0.047869328000000003 0.2436374 0.049901745999999997 0.18526724999999999 0.064493649 0.18342011999999999 0.086254581999999996 0.22998250000000001 0.10481374 0.25075287000000002 0.1080863 0.27430402999999998 0.10413115000000001 0.36418878999999998 0.095418832999999995 0.41646492000000002 0.081015527000000004 0.41851407000000002 0.040817792999999998 0.31040388000000002 0.059164844000000001 0.37073698999999999 0.042132865999999998 0.29263306 0.64276195000000003 0.17182375 0.62543457999999996 0.18056891999999999 0.69176656000000003 0.18341510999999999 0.039829220999999998 0.22450165 0.038932099999999997 0.24177127000000001 0.035178850999999997 0.18675596 0.040112846000000001 0.11650273 0.054917812000000003 0.114633"
 		+ "41000000001 0.079065174000000002 0.18122366000000001 0.10121622 0.22771085999999999 0.11939913000000001 0.36257145000000002 0.11012448 0.41526359000000002 0.096706687999999999 0.43009174 0.081377364999999993 0.43277865999999998 0.066901988999999995 0.42139401999999998 0.640477 0.18010393999999999 0.62673162999999998 0.18258648999999999 0.69000930000000005 0.18518448000000001 0.039722312000000003 0.24865805999999999 0.025408252999999999 0.11796352 0.039053615 0.11015408 0.053979892000000002 0.10814564 0.073090583000000001 0.11038043 0.093686177999999995 0.1785658 0.12507793 0.41460666000000002 0.11354615999999999 0.44249277999999997 0.098765187000000004 0.45367104000000003 0.083466485000000007 0.45436527999999998 0.067264623999999995 0.43770066000000002 0.63107365000000004 0.19394304000000001 0.68723612999999995 0.18981898 0.024503238 0.11209027000000001 0.036672436000000003 0.095214358999999998"
 		)
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvst[0].uvsp[250:499]" (" 0.051947980999999997 0.092908828999999998 0.069332629000000007 0.10533722 0.079474449000000003 0.10898766 0.12925803999999999 0.43987566 0.1142164 0.44769969999999998 0.099411293999999997 0.46737309999999999 0.083856970000000003 0.46731958000000001 0.068630262999999997 0.45457419999999998 0.022041554000000001 0.098312712999999996 0.032958701 0.058198813000000002 0.047953061999999998 0.056610145000000001 0.81354594000000002 0.38025808 0.13033196 0.45028393999999999 0.11525078 0.46425014999999997 0.099733971000000005 0.48117547999999999 0.084942019999999993 0.48114559000000001 0.069317289000000004 0.46589388999999998 0.018081043000000002 0.059735178999999999 0.025225502 0.0086435694000000004 0.81404310000000002 0.050813234999999998 0.062938638000000005 0.054909597999999997 0.13138573000000001 0.46363068000000002 0.11503666 0.48090690000000003 0.099743350999999994 0.48671997 0.084946819000000007 0.48648818999999999 0.070741958999999993 0.48087998999999998 0.0079748994000000007 0.0098020434 0.84662073999999998 0"
 		+ ".019773033999999998 0.62351584000000004 0.17008898 0.81593459999999995 0.072115943000000002 0.82793808000000002 0.32953738999999999 0.077832236999999999 0.053180628000000001 0.13078888999999999 0.48031369000000002 0.11504886 0.48664754999999998 0.099715337000000001 0.49034870000000003 0.084911249999999994 0.48999303999999999 0.070681646000000001 0.48595205000000002 0.82077401999999999 0.30037596999999999 0.62152653999999996 0.14279447000000001 0.64810497 0.16439739 0.076740376999999999 0.0021426862000000001 0.82939702000000004 0.34970146000000002 0.83576607999999997 0.37145697999999999 0.13087146 0.48628926 0.11501401999999999 0.49040856999999999 0.099060111000000006 0.51005995000000004 0.084275140999999998 0.50913304000000004 0.070572576999999997 0.48929885000000001 0.71232658999999998 0.0010759681000000001 0.82328051000000002 0.31361373999999997 0.64478665999999996 0.1384832 0.13085859999999999 0.49023506 0.11428779 0.51076555000000001 0.098767183999999994 0.51519775000000001 0.084000789000000006 0.51413470"
 		+ "999999999 0.069884083999999999 0.50800329 0.73069720999999999 0.012097551999999999 0.72300708000000002 0.016376287 0.85984342999999996 0.095865413999999996 0.13006282 0.51122593999999999 0.11394148 0.51608372000000002 0.098304212000000002 0.52205758999999996 0.083519920999999997 0.52082276000000005 0.069547660999999997 0.51285875000000003 0.86585723999999997 0.12497152 0.85375237000000004 0.13293746000000001 0.1297334 0.51685625000000002 0.11343794 0.52317606999999999 0.097358629000000002 0.53367293000000005 0.082585447000000006 0.53219508999999998 0.069002940999999998 0.51940786999999999 0.87060272999999999 0.16977632000000001 0.86024290000000003 0.17076495 0.83904104999999995 0.12053102 0.68952274000000002 0.038918212000000001 0.12908407999999999 0.52434128999999996 0.11234487999999999 0.53511386999999999 0.091012515000000002 0.58952950999999998 0.076946832000000007 0.58767349000000002 0.067965059999999994 0.53061897000000002 0.87137449 0.17244881000000001 0.86112761000000004 0.17402728000000001 0.127535939"
@@ -332,7 +373,7 @@ createNode reference -n "forest_golem_SET_latestRN";
 		+ "3660000000002 0.374951 0.60138380999999996 0.37521154000000001 0.58632857000000005 0.38505113000000002 0.59420002000000005 0.37989353999999997 0.60100900999999995 0.37937605000000002 0.5999198 0.40610594 0.59580641999999995 0.40688550000000001 0.60404146000000003 0.40520829000000003 0.60123044000000003 0.40975623999999999 0.61843490999999995 0.41263728999999999 0.78348976000000004 0.1205865 0.77429831000000005 0.10406174999999999 0.79312455999999998 0.099835373000000005 0.78981279999999998 0.11451558000000001 0.78278541999999995 0.075375131999999997 0.79715639000000005 0.072138399000000006 0.78217309999999995 0.044620641000000003 0.79102855999999999 0.040690723999999998 0.895989 0.16973124000000001 0.88163775 0.16689308999999999 0.88665837000000003 0.11733892999999999 0.91306186 0.1304186 0.89363926999999999 0.17285634999999999 0.88126033999999998 0.16878035999999999 0.71241546 0.026845484999999999 0.92361181999999997 0.11398301 0.68791740999999995 0.092903286000000002 0.42625499 0.34789935 0.7816433299999999"
 		+ "7 0.16506967 0.79055434000000002 0.16451646 0.41563356000000001 0.27346754000000001 0.42763519 0.27868410999999998 0.71448743000000003 0.034209191999999999 0.63089185999999997 0.34817409999999999 0.61106377999999995 0.34239673999999998 0.61251515000000001 0.32063037 0.62898451 0.35431761000000001 0.60970831000000003 0.35054173999999999 0.62356590999999995 0.37264704999999998 0.61007696 0.37159771000000003 0.62161361999999998 0.37670112 0.61101746999999995 0.3759343 0.61941612000000001 0.38281026000000001 0.60916703999999999 0.38049730999999998 0.61201726999999995 0.40513023999999997 0.60810160999999996 0.40493235 0.61155283000000005 0.40788981000000002 0.60790104 0.40785157999999999 0.82834273999999997 0.015044867999999999 0.82761549999999995 0.018334448 0.82326900999999997 0.013839841 0.82501519000000001 0.011884748000000001 0.82650953999999999 0.013315825 0.82201928000000002 0.013028087000000001 0.82077336000000001 0.017199091999999999 0.82397472999999999 0.020792998 0.62637781999999997 0.066396199000000003"
 		+ " 0.61299437000000001 0.071906909000000005 0.63092786000000001 0.038204174")
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvst[0].uvsp[500:749]" (" 0.63926125 0.035343899999999998 0.62290137999999995 0.097834975000000005 0.60779886999999999 0.098870872999999998 0.62252355000000004 0.10599498 0.60865318999999996 0.10638069999999999 0.64353161999999997 0.10631087 0.64135288999999995 0.065245210999999997 0.64248240000000001 0.11760879 0.12974411 0.018503395999999998 0.78630113999999995 0.0033948345 0.12559849000000001 0.015768147999999999 0.12667274000000001 0.016345281 0.12809449000000001 0.013691844 0.42479607000000003 0.080246686999999997 0.41460532 0.062153927999999997 0.85926758999999997 0.027706534000000001 0.85976911 0.047751725000000002 0.41402775000000003 0.061147235000000001 0.85923766999999995 0.026327699 0.86257826999999998 0.029852927000000001 0.86296284000000001 0.047856181999999997 0.43499487999999997 0.099548407000000005 0.86019933000000004 0.067625344000000004 0.86260181999999996 0.028523653999999999 0.86307906999999995 0.030173212000000001 0.86344801999999998 0.047872632999999998 0.86353314000000003 0.065722196999999996 0.8630936099999999"
 		+ "6 0.028856486000000001 0.86402844999999995 0.065417885999999995 0.43967050000000002 0.16465927999999999 0.45010063 0.14608467999999999 0.90492094000000001 0.081538110999999996 0.91511165999999999 0.060709923999999998 0.45143666999999998 0.144933 0.90391087999999997 0.083170563000000003 0.90453196000000002 0.076262443999999999 0.91101801000000004 0.059203266999999997 0.91590470000000002 0.048933625000000001 0.43718398000000003 0.17495454999999999 0.90295053000000003 0.078570068000000007 0.90453576999999996 0.075406283000000005 0.91039413000000002 0.058975070999999997 0.91181146999999996 0.048733144999999999 0.91930699000000005 0.038377583 0.43423413999999999 0.18444304 0.89503157 0.078511834000000003 0.89684069 0.075597405000000006 0.90278517999999996 0.077863336000000005 0.91118520000000003 0.048703164 0.91522597999999999 0.03913486 0.42831575999999999 0.019015022999999999 0.919949 0.036644011999999997 0.88966577999999996 0.080224156000000005 0.89290488000000001 0.075026691000000006 0.89739745999999998 0.0748"
 		+ "42750999999999 0.34015197000000003 0.37402719000000001 0.91572737999999998 0.037795216 0.91633313999999999 0.034338533999999997 0.42821234000000002 0.023128161000000001 0.44813296000000002 0.13642657999999999 0.44923189000000002 0.13115056999999999 0.89337527999999999 0.074269891000000005 0.91505563000000001 0.037955969999999999 0.91269993999999999 0.036026478000000001 0.91115820000000003 0.030571878 0.42876965 0.029124853999999999 0.8842622 0.076806485999999993 0.40142857999999998 0.32842972999999998 0.91213495 0.036282747999999997 0.90802115000000005 0.033207119 0.90835248999999996 0.028348862999999998 0.429241 0.032455295000000002 0.90745293999999999 0.033575892000000003 0.90523516999999998 0.031359552999999998 0.90489131 0.031935631999999999 0.39377135000000002 0.35683166999999999 0.39393073000000001 0.35228746999999999 0.39506300999999999 0.35484427000000002 0.39562344999999999 0.35772644999999997 0.38881423999999998 0.35508900999999998 0.39101680999999999 0.34538403000000001 0.39498042999999999 0.350907"
@@ -343,7 +384,7 @@ createNode reference -n "forest_golem_SET_latestRN";
 		+ "2137000000002 0.27684352000000001 0.72115231000000002 0.27679210999999998 0.72790741999999997 0.29465913999999999 0.71421217999999997 0.29474183999999998 0.70983850999999998 0.28548715000000002 0.70985180000000003 0.27771467 0.71529107999999997 0.27412187999999998 0.72005755000000005 0.27265530999999998 0.91974555999999996 0.16226515 0.70980810999999999 0.27266023 0.71121763999999998 0.24088267999999999 0.71475822 0.24047071 0.70735787999999999 0.24127605999999999 0.70845323999999998 0.20669612000000001 0.71058487999999997 0.20635524 0.70617861000000004 0.20711133000000001 0.70632178000000001 0.16638884000000001 0.70803331999999997 0.165949 0.70446885000000004 0.16683561 0.92460768999999998 0.34151593000000002 0.92206657000000003 0.34991833999999999 0.92072993999999997 0.34957456999999997 0.92269427000000004 0.34158367000000001 0.91803199000000002 0.35754898000000002 0.9172768 0.35741984999999998 0.91287505999999996 0.34729539999999998 0.91192125999999996 0.34264833 0.87694633 0.26246851999999998 0.9153572300"
 		+ "0000002 0.025813498000000001 0.91220820000000002 0.35361664999999998 0.597785 0.11768310999999999 0.87659763999999996 0.26613086000000002 0.87362801999999995 0.26445991000000002 0.59834187999999999 0.11318485 0.87439489000000004 0.30773231000000001 0.87148881 0.30607855 0.92363888000000005 0.0097018685000000004 0.91513973000000004 0.013660001999999999 0.60385155999999995 0.074026122999999999 0.87355625999999997 0.31127705999999999 0.87070935999999999 0.31060951999999997 0.92256916 0.0063482262000000003 0.91694920999999996 0.0067477357000000002 0.60381578999999996 0.070125966999999997 0.87261772000000004 0.31615967 0.86999093999999999 0.31663042000000002 0.60192071999999996 0.065202177 0.87526417000000001 0.37084085 0.87331723999999999 0.37125337000000003 0.59590423000000003 0.0080492496000000007"
 		)
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvst[0].uvsp[750:999]" (" 0.59936666000000005 0.066198549999999995 0.13322179000000001 0.064768381 0.90609019999999996 0.32955309999999999 0.90866201999999996 0.33144718000000001 0.86704075000000003 0.26115301000000002 0.86374021000000001 0.26267475000000001 0.90958415999999997 0.32190766999999998 0.91864067000000005 0.32267877 0.86698067000000001 0.26468494999999997 0.86400193000000003 0.2663084 0.90241384999999996 0.32796034000000002 0.86040925999999995 0.26401457 0.45810103000000002 0.35232173999999999 0.86480438999999998 0.30630248999999998 0.86179525000000001 0.30788009999999999 0.86089325000000005 0.26770579999999999 0.86478840999999995 0.31087226000000001 0.8619076 0.31145077999999998 0.85871719999999996 0.30924392000000001 0.86469554999999998 0.31611752999999998 0.86214435 0.31561055999999998 0.85900944000000001 0.31197681999999999 0.86938225999999996 0.37078252 0.86744142000000002 0.37034187000000002 0.85956144000000001 0.31549439000000001 0.86730050999999997 0.31658428999999999 0.87132918999999998 0.3711988 0.86545324000000"
 		+ "001 0.37024238999999998 0.33440235000000001 0.29132416999999999 0.34205057999999999 0.29107949 0.34225029000000001 0.31498936 0.33786482000000001 0.31361830000000002 0.34200164999999999 0.31685894999999997 0.33879798999999999 0.31602147000000003 0.36076352 0.28117653999999997 0.37105852 0.28176375999999997 0.31210056000000003 0.057482119999999998 0.35208851000000002 0.31319808999999998 0.31953462999999999 0.054324813 0.35049387999999998 0.31756338000000001 0.32362269999999999 0.046341981999999997 0.32039222000000001 0.048691287999999999 0.31603616000000001 0.028501677999999999 0.31805130999999998 0.027650883000000001 0.32385921000000001 0.048065248999999997 0.32101563 0.050787829 0.31532424999999997 0.026705056000000001 0.31736520000000001 0.026760262 0.31092768999999998 0.028767945 0.30855106999999998 0.028133404000000001 0.30959469000000001 0.027173189 0.31147361000000001 0.027149520999999999 0.31202379000000002 0.050204009000000001 0.30729219000000002 0.049012765 0.31260684 0.053245250000000001 0.306328560"
 		+ "00000003 0.052256785 0.61346268999999998 0.41151726 0.60911143000000001 0.41140326999999999 0.81801069000000004 0.0009923565699999999 0.61304908999999996 0.41102361999999998 0.81531328000000003 0.010671025000000001 0.81283033000000005 0.011538899 0.81220859000000001 0.019057227 0.81106924999999996 0.019829465000000001 0.80983232999999999 0.0037687239000000002 0.81059724 0.011653909 0.81305682999999995 0.020284709000000001 0.81212293999999996 0.020891387000000001 0.65045273000000003 0.18482721999999999 0.65687054 0.18219683 0.65345310999999995 0.22606689999999999 0.64848709000000004 0.22797071999999999 0.64952951999999997 0.17464219 0.65771460999999998 0.17265351000000001 0.65326916999999995 0.22891057000000001 0.64812481 0.23060428999999999 0.64439391999999995 0.18947818999999999 0.64381741999999997 0.23045515999999999 0.041943248000000002 0.28401238000000001 0.65755205999999999 0.16835644999999999 0.65302890999999996 0.23241317 0.64783310999999999 0.23408808 0.64354747999999995 0.23316345999999999 0.63858974"
@@ -354,7 +395,7 @@ createNode reference -n "forest_golem_SET_latestRN";
 		+ "0000001 0.26724234000000002 0.32482791 0.34534745999999999 0.85791075000000006 0.0071513923 0.85712491999999996 0.0077819517000000003 0.85643362999999995 0.0069725430000000003 0.85821610999999998 0.0061929626 0.31240090999999998 0.38850226999999998 0.30434766000000002 0.38541919000000002 0.30440211 0.38267317000000001 0.31187049 0.38539335000000002 0.29859444000000002 0.37934613 0.29949357999999998 0.37645629000000003 0.31002324999999997 0.35763015999999997 0.31432738999999998 0.35869157000000002 0.32039514000000002 0.38533427999999997 0.31944319999999998 0.38243031999999999 0.30696633000000001 0.35443776999999999 0.31358361000000001 0.32763132 0.31717148000000001 0.32808738999999998 0.31900761 0.35960710000000001 0.31073642000000001 0.32607978999999998 0.31553461999999999 0.32005227000000003 0.31253396999999999 0.31928334000000003 0.32030018999999998 0.32695013000000001 0.30964607 0.31995394999999999 0.31835859999999999 0.32094708 0.31502604000000001 0.31592014000000002 0.31146755999999998 0.31521779 0.30792"
 		+ "543 0.31614184000000001 0.31860238000000002 0.31678221000000001 0.30789250000000001 0.28268748999999999 0.30436238999999998 0.28218237000000002 0.30091458999999998 0.28308307999999999 0.31139191999999999 0.28335226000000002 0.84314889000000004 0.37334096 0.84475761999999999 0.36975502999999998 0.84406829000000005 0.37027204000000002 0.84915041999999996 0.37699452 0.84506362999999995 0.36912941999999999 0.84896808999999995 0.37112549 0.84942424000000005 0.37217876 0.84276545000000003 0.35122985000000001 0.84491455999999998 0.36754310000000001 0.84887314000000003 0.37036180000000002 0.85013192999999998 0.36822894 0.85213488000000004 0.36838755000000001 0.14214033000000001 0.14232188000000001 0.84688187000000004 0.36897287000000001 0.84888375000000005 0.36846816999999998 0.85123360000000003 0.36553752 0.85387855999999995 0.36464003 0.84763789 0.36874351 0.85267537999999998 0.33980879000000003 0.85522710999999996 0.3388581 0.84606289999999995 0.36629349"
 		)
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvst[0].uvsp[1000:1249]" (" 0.84868270000000001 0.36642879 0.85008030999999995 0.34061617 0.84738873999999997 0.34035227000000001 0.81476247000000002 0.093469828000000005 0.66917318000000003 0.16496716 0.65944122999999999 0.13676822 0.72065765000000004 0.41868311000000002 0.72152567000000001 0.42969462000000003 0.65884542000000001 0.11110871 0.44234066999999999 0.34165514000000002 0.74810522999999995 0.41235527 0.65576374999999998 0.096265956999999999 0.44031977999999999 0.29284588 0.75572740999999999 0.39479688000000002 0.72184174999999995 0.39515117 0.78158574999999997 0.40350297000000002 0.60219336000000001 0.14735048000000001 0.65883409999999998 0.069296732999999999 0.45161511999999998 0.29378617000000001 0.43763265000000001 0.24811298000000001 0.43013035999999999 0.24610815999999999 0.78706551000000002 0.37979326000000002 0.64792596999999996 0.034843869999999999 0.66278976000000001 0.038487217999999997 0.44418712999999999 0.25747692999999999 0.42076196999999999 0.25010478000000003 0.43715721000000002 0.22435714000000001 0.44276475"
 		+ "999999998 0.22466651000000001 0.74120498000000001 0.38611036999999998 0.12280697 0.0074816500000000003 0.11790812000000001 0.014949728000000001 0.44833141999999998 0.22475336000000001 0.42893448000000001 0.22317545 0.44431349999999997 0.19352974000000001 0.44832655999999999 0.19372615000000001 0.12692064 0.0053940094000000001 0.45234159000000002 0.19392889999999999 0.43829525000000003 0.19320793 0.77736735000000001 0.02395837 0.76794207000000003 0.046315311999999997 0.73245119999999997 0.035558894000000001 0.73769717999999995 0.0073491334999999996 0.76123613000000001 0.070371701999999994 0.72907876999999999 0.062978193000000002 0.72827452000000004 0.023828625999999999 0.72434454999999998 0.061567903 0.72871803999999996 0.044652864 0.72176731000000005 0.024141370999999998 0.72255820000000004 0.029401152999999999 0.72235948000000005 0.069852768999999995 0.64435887000000003 0.33805066 0.71383470000000004 0.031480833999999999 0.63794017000000003 0.35196966000000002 0.64719283999999999 0.35563165000000002 0.644737"
 		+ "89999999997 0.36175342999999999 0.63632721000000003 0.35843909000000002 0.63626700999999997 0.37589877999999999 0.62944703999999996 0.37481374000000001 0.63201642000000002 0.38018602000000001 0.62626523000000001 0.37855124000000001 0.86640625999999998 0.19471247 0.87777364000000002 0.18543223 0.62489605000000004 0.38521102000000002 0.63069087000000001 0.38591391000000003 0.85892493000000003 0.19457653 0.86736857999999994 0.20106781000000001 0.87605279999999996 0.19742915 0.61584771000000005 0.40619950999999999 0.61950987999999996 0.40849345999999997 0.85891265000000006 0.19853613000000001 0.87617670999999997 0.20329958000000001 0.86804760000000003 0.20752229999999999 0.61557353000000004 0.40894404000000001 0.85961240999999999 0.20413442000000001 0.87345653999999995 0.24544388 0.86973911999999998 0.24795195 0.44209018 0.059525191999999998 0.61622911999999996 0.41450041999999998 0.80559349000000002 0.0028914472000000002 0.86535883000000002 0.24887034 0.60047333999999997 0.41297098999999998 0.44556192 0.07340653"
@@ -366,7 +407,7 @@ createNode reference -n "forest_golem_SET_latestRN";
 		+ "21 0.032996169999999998 0.90747464 0.026742130999999999 0.42374673000000002 0.040694768999999999 0.90795725999999999 0.027224689999999999 0.71414405000000003 0.060519293000000002 0.36514825000000001 0.11372781999999999 0.36294432999999998 0.12737617000000001 0.68583064999999999 0.32336384000000001 0.71319836000000003 0.052945852000000002 0.35637208999999997 0.099280893999999995 0.41721338000000002 0.12521156999999999 0.42146111000000003 0.13078429999999999 0.36833885 0.13467451999999999 0.69271713000000001 0.32303923000000001 0.68719428999999999 0.33523595 0.70700854000000002 0.064160988000000002 0.32028963999999999 0.091820947999999999 0.33173989999999998 0.090391181000000001 0.41429540999999998 0.10890461999999999 0.70528900999999999 0.053200200000000003 0.42152416999999998 0.12526820999999999 0.42272412999999998 0.12746072999999999 0.42354256000000001 0.13484086000000001 0.37061280000000002 0.14385264 0.69969249 0.32083514000000002 0.69700234999999999 0.33161797999999998 0.69569515999999998 0.0676512719999"
 		+ "99998 0.69530809000000005 0.34532803000000001 0.32580128000000003 0.080798857000000002"
 		)
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvst[0].uvsp[1250:1499]" (" 0.36017019 0.084553673999999995 0.71059578999999995 0.041770755999999999 0.40890893 0.099773689999999998 0.42189052999999999 0.12309037 0.78652555000000002 0.31173462000000002 0.43412265 0.12485046 0.43475165999999998 0.12748618 0.43470204000000001 0.13176267999999999 0.43645149 0.13601340000000001 0.42681643000000002 0.14532450999999999 0.34138295000000002 0.15637688 0.70557641999999998 0.33480757 0.69034523000000003 0.36749193000000002 0.70061832999999996 0.36319453000000002 0.60364741 0.31904101000000001 0.60924469999999997 0.31102278999999999 0.70619750000000003 0.041639625999999999 0.42182374 0.099779822000000004 0.42778434999999998 0.10902098 0.43288091000000001 0.1207472 0.80871040000000005 0.32037103 0.69877546999999995 0.037127420000000001 0.76295424000000001 0.28511751000000002 0.44792535999999999 0.1249296 0.44831660000000001 0.12545595000000001 0.44146094000000002 0.14544967 0.71204387999999996 0.32618048999999999 0.61149072999999998 0.26897432999999998 0.70571565999999997 0.37846616 0.6847795800"
 		+ "0000005 0.084197536000000003 0.60237098 0.34239754 0.70828818999999998 0.037709056999999997 0.44108733999999999 0.10916256000000001 0.44798823999999998 0.12447285 0.82822739999999995 0.13272241000000001 0.80639601000000005 0.30534180999999999 0.81396204000000005 0.31404315999999999 0.77096993000000003 0.28130838000000002 0.88355541000000004 0.080676496 0.88297312999999999 0.080369501999999995 0.70953721000000003 0.37452888000000001 0.70566379999999995 0.3918758 0.71354519999999999 0.3855539 0.86842549000000002 0.073243469000000005 0.88250768000000002 0.080451936000000002 0.83786523000000002 0.1703248 0.84753495000000001 0.16373414999999999 0.82403040000000005 0.32492252999999999 0.81055074999999999 0.26842904000000001 0.77668130000000002 0.26964757 0.88356555000000003 0.076562643 0.59303265999999999 0.26791640999999999 0.71558856999999998 0.38091764 0.47062706999999998 0.28338 0.46197992999999998 0.28928930000000003 0.72647196000000003 0.38870817000000002 0.88281918000000004 0.076594830000000003 0.86951732999"
 		+ "999998 0.069570391999999995 0.83775818000000002 0.17141312 0.84813559000000005 0.16777126000000001 0.82094573999999998 0.26350653000000002 0.78594898999999996 0.25676926999999999 0.80926114000000005 0.26122045999999999 0.88362443000000002 0.075921625000000006 0.58101111999999999 0.27553760999999999 0.58215868000000004 0.28178312999999999 0.72476178000000002 0.38447320000000001 0.47427838999999999 0.27289698000000001 0.49444893000000001 0.29947552 0.46533856000000001 0.255337 0.45847028000000001 0.25725329000000002 0.88282543000000002 0.075943111999999993 0.86968082000000002 0.069000601999999994 0.81953549000000003 0.25783461000000002 0.80310446000000002 0.23415670999999999 0.79245531999999996 0.22967678 0.57649618000000002 0.26684525999999997 0.57328480000000004 0.28286897999999999 0.57574230000000004 0.28670093000000002 0.80384456999999998 0.16638892999999999 0.47090726999999999 0.25394594999999998 0.45637 0.22670285000000001 0.46177983 0.22769655 0.81251127000000001 0.23344913 0.79689341999999996 0.04090673"
@@ -377,7 +418,7 @@ createNode reference -n "forest_golem_SET_latestRN";
 		+ "28 0.40081119999999998 0.35860239999999999 0.40268183000000002 0.39979511000000001 0.40150160000000001 0.39970431000000001 0.39889580000000002 0.38495277999999999 0.39486903000000001 0.37882750999999998 0.39664571999999998 0.36909625000000001 0.39870429000000002 0.36662766000000002 0.39743297999999999 0.36513588000000002 0.90431296999999999 0.031525670999999998 0.90461849999999999 0.031747729000000002 0.40015703000000002 0.39989951000000001 0.39563178999999998 0.38460003999999998 0.38776802999999999 0.38024618999999998 0.90477001999999995 0.031019478999999999 0.90505378999999997 0.031228064999999999 0.39557283999999998 0.39963311000000001 0.38563973000000001 0.397962 0.38254142000000002 0.37854960999999998 0.39331191999999998 0.36794311000000002 0.90755903999999998 0.027670800999999998 0.90774511999999996 0.027832359000000001 0.36877822999999998 0.39289549000000001 0.40155962000000001 0.33159118999999998 0.40046071999999999 0.33070028000000001 0.40136938999999999 0.34020516000000001 0.39889780000000002 0.3385"
 		+ "2416000000002 0.39329671999999999 0.32827970000000001 0.40311307000000002 0.33282587000000002 0.39438707000000001 0.33569384000000002 0.40389167999999998 0.34203991 0.38860559 0.32863140000000002 0.41030287999999998 0.34030029000000001 0.40315100999999998 0.34824561999999998 0.38917476000000001 0.33383383999999999 0.40763073999999999 0.34556504999999998 0.38360833999999999 0.32656618999999998 0.41029917999999999 0.34542695000000001 0.40601810999999999 0.34888983000000001 0.38519111 0.33422190000000002 0.40751623999999997 0.34906343000000001 0.40628778999999998 0.35115384999999999 0.40161156999999997 0.35225203999999999 0.40309989000000002 0.35234495999999998 0.38079362999999999 0.34220677999999999 0.37861382999999998 0.33488353999999998 0.40384622999999997 0.35383213000000002 0.32471498999999998 0.31354525999999999 0.32672188000000002 0.31055704000000001 0.32905181999999999 0.31422781999999999 0.32700685000000002 0.31712478 0.32920506999999999 0.33225173000000002 0.32707586999999999 0.33511945999999998"
 		)
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvst[0].uvsp[1500:1749]" (" 0.32389030000000002 0.33198907999999999 0.32930353000000001 0.33439815000000001 0.32700827999999998 0.33709997000000003 0.32402377999999998 0.33402874999999999 0.67235595000000004 0.35683119000000002 0.6702745 0.35391280000000003 0.67028177 0.35192143999999997 0.67236929999999995 0.35471570000000002 0.66731678999999999 0.35696959 0.66729176000000001 0.35495657000000003 0.67016511999999995 0.33420717999999999 0.67224627999999997 0.33698407000000002 0.66719132999999997 0.33726173999999998 0.92378777000000001 0.15737081999999999 0.91564619999999997 0.1571988 0.10370831 0.082286528999999997 0.91504246 0.15427393 0.1059759 0.080449291000000006 0.9138056 0.15059432 0.11163864 0.083649784000000005 0.066123693999999997 0.70678854000000002 0.057807933999999998 0.72465663999999996 0.048098359 0.72450835000000002 0.66024768 0.02485764 0.71477853999999996 0.29612565000000002 0.66195225999999996 0.024458230000000001 0.66277814000000002 0.027855009 0.66032124000000003 0.021530001999999999 0.66279273999999999 0.01954478000"
 		+ "0000001 0.67027742000000001 0.026076287 0.66999626000000001 0.028590023999999999 0.67219393999999999 0.023382931999999999 0.67226076000000001 0.026936828999999999 0.67093378000000004 0.028090595999999999 0.67386723000000004 0.025093555 0.67835407999999997 0.035676478999999997 0.67769915000000003 0.036254555000000001 0.67904651000000005 0.034999162 0.90380943000000002 0.32296774 0.51155740000000005 0.17380613 0.46597402999999998 0.35490853 0.46627572 0.35381447999999999 0.45972097000000001 0.34782347000000002 0.46494347000000003 0.34868568 0.47555396 0.35951671000000002 0.46671915000000003 0.33297296999999998 0.59442949 0.11553876 0.13236307 0.082524419000000002 0.13326056 0.082177161999999998 0.92028414999999997 0.0023328084000000002 0.91968530000000004 0.0027020145000000001 0.92061704 0.0068451874000000001 0.91869168999999995 0.0066042338000000004 0.92232460000000005 0.011675155 0.92359077999999994 0.010319224 0.92277478999999996 0.011537187000000001 0.91999268999999995 0.015144836 0.92029083 0.024161683 0.9"
 		+ "1828692000000001 0.0025436505999999999 0.90975046000000004 0.33560726000000002 0.42107256999999998 0.35292776999999997 0.41916880000000001 0.35405611999999997 0.13236303999999999 0.065651669999999995 0.41708767000000002 0.35351854999999999 0.4211452 0.35068342000000002 0.13239697 0.062964588000000002 0.41955385000000001 0.34908894000000001 0.41787559000000002 0.34906617000000001 0.59669351999999998 0.066662103 0.4469322 0.35196339999999998 0.44539898999999999 0.35098356000000003 0.44763230999999998 0.34983286000000002 0.44494906000000001 0.34907311000000002 0.44864997000000001 0.35143906000000003 0.44584578000000002 0.34735118999999998 0.44965368999999999 0.34878125999999998 0.44881260000000001 0.34901863 0.70391082999999999 0.20741494999999999 0.69777750999999999 0.20699286 0.77792417999999997 0.01983064 0.77409607000000002 0.018609998999999999 0.77683771000000001 0.013102023000000001 0.77198845000000005 0.015285653999999999 0.78042363999999997 0.011762002000000001 0.77445185000000005 0.010178711 0.777735889"
@@ -388,7 +429,7 @@ createNode reference -n "forest_golem_SET_latestRN";
 		+ ".23920048999999999 0.15732266 0.23882402 0.16435689000000001 0.53083760000000002 0.14705868 0.53103827999999997 0.13863449 0.15030977000000001 0.16095148000000001 0.15179889999999999 0.16829375999999999 0.55880618000000004 0.15116215999999999 0.55926960999999997 0.16172091999999999 0.14385542000000001 0.16896233999999999 0.56789069999999997 0.15213877000000001 0.57070147999999998 0.16302475 0.12555048999999999 0.17060160999999999 0.58064585999999996 0.15474979999999999 0.58457488000000002 0.14045930000000001 0.076593958000000004 0.15869826000000001 0.073754429999999996 0.17040222999999999 0.60000730000000002 0.15456882 0.60144268999999995 0.13236303999999999 0.014857179 0.152759 0.0094353156000000007 0.17065288000000001 0.60583538000000003 0.15492334999999999 0.60725147000000002 0.52871519 0.37378182999999998 0.17081341 0.60963255000000005 0.15514663000000001 0.61103863000000003 0.52612840999999999 0.37116650000000001 0.17167305999999999 0.62999033999999998 0.15631257000000001 0.63141859 0.51784253000000002 0"
 		+ ".31909227000000001 0.17191897 0.63524806 0.15662898 0.63672185000000003 0.5165168 0.31475085000000003 0.17239492000000001 0.64222038000000004 0.15729768999999999 0.64372784000000005 0.17321750999999999 0.65390015000000001 0.15844375999999999 0.65534228000000005 0.17649466999999999 0.70919739999999998 0.16267920999999999 0.71040230999999998 0.17803062 0.73196870000000003 0.16444995000000001 0.73304771999999996 0.096306950000000002 0.72775513000000003 0.087116577000000001 0.70101111999999999 0.070936702000000004 0.72800893 0.072499207999999996 0.709701 0.56679212999999995 0.077388800999999993 0.56346046999999999 0.0021259484 0.27258733000000002 0.46844444000000002 0.26762747999999997 0.52961378999999997 0.29126215 0.46893995999999999 0.28477259999999999 0.52949135999999997 0.26492094999999999 0.55275869 0.28502643 0.39233625 0.28139525999999998 0.54868888999999998 0.2640999 0.56648295999999998"
 		)
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvst[0].uvsp[1750:1999]" (" 0.27855062000000003 0.36320629999999998 0.29108381 0.37059378999999998 0.28089976 0.56859987999999995 0.26308568999999998 0.57869636999999996 0.27686569 0.33868614000000002 0.28588730000000001 0.35453256999999999 0.29447982 0.36010440999999999 0.27909133000000003 0.58196323999999999 0.26392188999999999 0.59860522000000005 0.28257506999999998 0.339564 0.27985173000000002 0.59950566000000005 0.26386061 0.60444379000000004 0.29069277999999998 0.28646203999999997 0.28389481 0.32347277000000002 0.27968042999999998 0.60539805999999996 0.26381188999999999 0.60824847000000004 0.27137715000000001 0.23924913 0.29000883999999999 0.23961616999999999 0.27955401000000002 0.60923373999999997 0.26344087999999999 0.62866151000000003 0.26849424999999999 0.15234685000000001 0.28706937999999999 0.15273264 0.27884322 0.62971812000000005 0.26332506999999999 0.63393383999999997 0.26782843000000001 0.14439356 0.28660848999999999 0.14413334 0.27863932000000002 0.63502431000000004 0.26303047000000002 0.64092850999999995 0.26671751999"
 		+ "999999 0.12598848000000001 0.28504731999999999 0.12471896 0.27814862000000001 0.64202696000000004 0.26253164000000001 0.65264785000000003 0.27143784999999998 0.074228503000000001 0.28964218000000003 0.077235869999999998 0.27735111000000001 0.65365225000000005 0.26087825999999997 0.70830749999999998 0.27795493999999998 0.0099466144999999992 0.29832911000000001 0.01554611 0.27478831999999997 0.70890385 0.26036310000000001 0.73174846000000004 0.25738418000000002 0.0051218048 0.27441186000000001 0.73135536999999995 0.055061447999999999 0.96168184000000001 0.27530401999999998 0.76185495000000003 0.92437594999999995 0.33218265000000002 0.92199098999999995 0.33270981999999999 0.50718777999999998 0.13129699 0.51415281999999995 0.078369305 0.51294196000000003 0.15841775999999999 0.51372640999999997 0.0034371127999999998 0.50348866000000003 0.31727105 0.50386297999999996 0.31618290999999998 0.80976652999999998 0.12090794000000001 0.81654738999999998 0.13243758999999999 0.82342910999999996 0.13803088999999999 0.37823430"
 		+ "000000002 0.076538429000000005 0.38478664000000001 0.071440465999999994 0.39533085000000001 0.071786717 0.39924628000000001 0.082826667000000007 0.40480327999999999 0.068198076999999996 0.41241273000000001 0.081698328000000001 0.76476109000000003 0.17300053000000001 0.54822725000000005 0.28069669000000003 0.42176851999999998 0.18480838999999999 0.42449868000000002 0.17516045 0.42710784000000002 0.16505907 0.44025353 0.14693825999999999 0.35945337999999999 0.3530758 0.35881292999999997 0.38377717 0.37202466000000001 0.36232013000000002 0.37592589999999998 0.37924068999999999 0.37003753 0.34063389999999999 0.38611999000000002 0.37264043000000002 0.38129448999999999 0.36476441999999998 0.37371211999999998 0.34556009999999998 0.38012075000000001 0.329835 0.37823066 0.34955022000000002 0.38958871 0.36340946000000002 0.41058248000000003 0.36298736999999998 0.41212523000000001 0.35469880999999998 0.40617167999999998 0.36126788999999998 0.40882689 0.3555181 0.40336132000000002 0.35861504 0.40204886000000001 0.3581336"
@@ -399,7 +440,7 @@ createNode reference -n "forest_golem_SET_latestRN";
 		+ "70243924999999997 0.34395694999999998 0.34485933000000002 0.34999615000000001 0.34362268000000001 0.34846403999999997 0.34334445000000002 0.34692838999999998 0.34372044000000002 0.34549092999999997 0.34441157999999999 0.30940294000000002 0.00079508498000000003 0.3077049 0.026741285 0.30616134 0.027644164999999998 0.30299044000000003 0.047724277000000002 0.30212443999999999 0.049156852000000001 0.30143911000000001 0.049789279999999998 0.31421924000000001 0.00071383639999999995 0.31582969 0.00049949996 0.31262331999999998 0.0010570417999999999 0.31099957 0.0011362563999999999 0.31745036999999998 0.00067642889999999995 0.31902902999999999 0.0010753144000000001 0.13247675 0.05644238 0.46216901999999999 0.19615504 0.45817983000000001 0.19551516999999999 0.46616453000000002 0.19679351 0.60883116999999998 0.028824975999999999 0.72067112 0.40696486999999998 0.47109959000000001 0.31533438000000003 0.45764213999999998 0.33806037999999999 0.48631101999999998 0.31401216999999998 0.67989308000000004 0.10307156000000001 0."
 		+ "40339160000000002 0.31427029000000001 0.68322187999999995 0.071380362000000003 0.69235605 0.051814317999999998 0.67261188999999999 0.089231758999999994 0.67434245000000004 0.095313013000000002 0.67403120000000005 0.10084961000000001 0.80748569999999997 0.10440135 0.80906009999999995 0.075350798999999996 0.78747022 0.19233713 0.85059070999999997 0.071118741999999999 0.84862751000000003 0.092200272 0.84738880000000005 0.046424887999999997 0.59672426999999995 0.17420000999999999 0.85197884000000002 0.31345942999999998 0.82299060000000002 0.16227459999999999 0.79446983000000004 0.0013431928000000001 0.81825459 0.15956448000000001 0.79142374000000004 0.0019714746000000002 0.82803117999999998 0.16233334999999999 0.61880457 0.0055007705999999996 0.63382607999999996 0.0036143782000000002 0.12582152999999999 0.023853565 0.62121046000000002 0.0016474098999999999 0.62574034999999995 0.0015183063 0.76415062 0.30455821999999999 0.72165215000000005 0.31308627 0.75518465000000001 0.29956460000000001"
 		)
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvst[0].uvsp[2000:2249]" (" 0.59240168000000004 0.3044191 0.33029347999999997 0.1012591 0.34052592999999998 0.11430919 0.34243804 0.12547547000000001 0.34173166999999999 0.13434757 0.34201902000000001 0.14394477 0.70840334999999999 0.31739267999999998 0.72320448999999998 0.32123864000000002 0.72471231000000003 0.32923973000000001 0.59012038 0.28338911999999999 0.78007685999999998 0.42761823999999998 0.74223804000000004 0.43327388 0.10726434 0.074943422999999995 0.015596784000000001 0.94640683999999997 0.026628358000000001 0.90791118000000004 0.69759709000000003 0.16648461000000001 0.70084924000000004 0.16700533000000001 0.59192270000000002 0.0092133236999999996 0.59397303999999995 0.0088362079000000003 0.39138049000000003 0.34615389000000002 0.38945292999999997 0.35538223000000002 0.39026809000000001 0.36307689999999998 0.39348346000000001 0.36757630000000002 0.39665502000000002 0.36865567999999999 0.39864938999999999 0.36850238000000002 0.40059948000000001 0.36837637000000001 0.40266292999999997 0.36711505 0.40581682000000002 0.364379"
 		+ "85000000001 0.40623909000000002 0.36294441999999999 0.40596687999999997 0.36201543000000003 0.40597755000000002 0.36098789999999997 0.40610349000000001 0.35137570000000001 0.40547614999999998 0.34930649000000003 0.40289598999999998 0.34881380000000001 0.40140647000000002 0.34843301999999998 0.39956524999999998 0.34755385 0.39715665999999999 0.34649025999999999 0.39351499000000001 0.34446809 0.85329664000000005 0.0087459254999999996 0.50570117999999997 0.28617597 0.85390513999999995 0.0078002139999999998 0.85462426999999996 0.0074154753 0.86260663999999998 0.011798537 0.50346303000000003 0.26783090999999998 0.50246692000000004 0.28208250000000001 0.49725825000000001 0.31050074 0.50259483000000005 0.28388535999999998 0.49630252000000002 0.31294754000000002 0.49413234 0.31670141000000002 0.47993450999999998 0.36465239999999999 0.53216450999999998 0.36870523999999999 0.32539268999999998 0.34272668000000001 0.50350653999999995 0.26722204999999999 0.32456942999999999 0.34238189000000002 0.50659239 0.268352360000000"
 		+ "01 0.50579536000000003 0.26789807999999998 0.32626548 0.34596238000000001 0.32665533000000002 0.34325567000000001 0.00046207284000000001 0.96787065000000005 0.045559387999999999 0.65060907999999995 0.69363772999999995 0.00077491999000000005 0.039062398999999998 0.65295004999999995 0.045187752999999997 0.63595104000000002 0.91895937999999999 0.0027759206000000001 0.13269030000000001 0.083477587000000006 0.13358806000000001 0.083129792999999993 0.87571114000000005 0.25604469000000002 0.87027739999999998 0.26386820999999999 0.89894037999999998 0.34196328999999998 0.91483121999999995 0.005841583 0.91765302000000004 0.0021717864999999999 0.91260969999999997 0.0083088372000000004 0.91111576999999999 0.0072186682000000002 0.84061735999999998 0.33593603999999999 0.13889789999999999 0.12610404 0.070919341999999996 0.093366622999999996 0.077456273000000006 0.093505307999999995 0.41304201000000001 0.35416698000000002 0.41115587999999997 0.34440651999999999 0.39687054999999999 0.40290564000000001 0.40175906 0.40122581000"
@@ -411,53 +452,3677 @@ createNode reference -n "forest_golem_SET_latestRN";
 		+ "88000000003 0.45344234 0.032524562999999999 0.45224372000000002 0.024139206999999999 0.57847959000000004 0.028814454999999999 0.45321392999999999 0.030226339000000001 0.45538627999999998 0.015057904 0.57947689000000002 0.046074892999999999 0.51019168000000004 0.0023678254999999998 0.45582204999999998 0.013799926000000001 0.46142139999999998 0.0045523732000000003 0.57984935999999998 0.047399227000000002 0.59330094 0.18240185 0.59009825999999999 0.16431055999999999 0.59077561000000001 0.12995714 0.59283518999999996 0.18985857 0.49833657999999997 0.078954861000000001 0.57587027999999996 0.075924835999999996 0.0096259024000000006 0.89250731000000005 0.51172251000000002 0.18274162999999999 0.030939788999999999 0.77886778000000001 0.56908040999999998 0.18670893999999999 0.56936556000000005 0.18416453999999999 0.51902305999999998 0.19017416000000001 0.52717762999999995 0.18133326 0.540811 0.18113844000000001 0.093587517999999995 0.043027580000000003 0.085384548000000005 0.032845616000000001 0.086274325999999998 0.03"
 		+ "4897088999999999 0.47303304000000002 0.18786501999999999 0.47777944999999999 0.18753269 0.46834785000000001 0.18850428999999999 0.47926918000000002 0.18776930999999999"
 		)
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"uvst[0].uvsp[2250:2303]" (" 0.72796941000000004 0.29538846000000002 0.48206802999999998 0.18778004000000001 0.71728468000000001 0.29721220999999998 0.45894802000000001 0.19005878000000001 0.11637773999999999 0.084208563 0.68932157999999999 0.30050318999999998 0.92322552000000002 0.15349281000000001 0.92407304000000001 0.15206864 0.91586732999999998 0.14936562 0.68887346999999999 0.29698830999999998 0.10342411999999999 0.082428969000000005 0.91233962999999996 0.14778361000000001 0.91070545000000003 0.14950952000000001 0.89559924999999996 0.32505357000000001 0.78064745999999996 0.018348125999999999 0.89777589000000002 0.27967447000000001 0.89763528000000004 0.27712196 0.89520741000000004 0.24450959 0.10352931999999999 0.12107382999999999 0.10189934 0.092127234000000002 0.098586328000000001 0.084311402999999993 0.12693334000000001 0.029762566000000001 0.11037445 0.075109362999999998 0.33243862000000002 0.34018811999999998 0.10995972 0.073942930000000004 0.78940445000000004 0.32165778 0.77561908999999996 0.30975622000000003 0.7681980699999"
 		+ "9996 0.15342109000000001 0.70373982000000002 0.043363810000000003 0.70498371000000004 0.038306653000000003 0.71450018999999998 0.029205024 0.13252963000000001 0.066627144999999999 0.87712811999999996 0.37014338000000002 0.41603952999999999 0.35186967000000002 0.41766780999999997 0.34985318999999998 0.8750658 0.31537563000000002 0.87605202000000004 0.31237081 0.87712729 0.30965303999999999 0.47569244999999999 0.35860628 0.47071886000000002 0.35268757000000001 0.87944984000000004 0.26807134999999999 0.89650226 0.35183299000000001 0.89104623000000005 0.3384549 0.88943355999999996 0.33605909 0.59130371000000004 0.11365482 0.46970835 0.33409166000000001 0.47264621000000001 0.33496404000000002 0.88035666999999995 0.26408499000000002 0.89619112000000001 0.34900355 0.89261776000000004 0.34088471999999997 0.87017237999999997 0.25413221000000003 0.90011722000000005 0.34447139999999998 0.45759702000000002 0.35346979000000001 0.90348523999999997 0.32392836000000003"
 		)
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"colorSet" " -s 2"
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"colorSet[0].colorName" " -type \"string\" \"SculptFreezeColorTemp\""
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"colorSet[0].clamped" " 0"
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"colorSet[0].representation" " 4"
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"colorSet[1].colorName" " -type \"string\" \"SculptMaskColorTemp\""
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"colorSet[1].clamped" " 0"
-		2 "|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
 		"colorSet[1].representation" " 4"
-		"forest_golem_SET_latest:lilyBush_latestRN" 1
-		2 "|forest_golem_SET_latest:lilyBush_latest:LilyBush" "visibility" " 0"
-		"forest_golem_SET_latest:roots_latestRN2" 1
-		2 "|forest_golem_SET_latest:roots_latest2:RootsCntrl" "visibility" " 0"
-		"forest_golem_SET_latest:smallLavenderClump_latestRN" 1
-		2 "|forest_golem_SET_latest:smallLavenderClump_latest:SmallLavenderClump" 
-		"visibility" " 0"
-		"forest_golem_SET_latestRN" 2
-		2 "|forest_golem_SET_latest:PxrDiskLight|forest_golem_SET_latest:PxrDiskLightShape" 
-		"color" " -type \"float3\" 0.50980002000000002 0.41769999000000002 0.7101"
-		2 "forest_golem_SET_latest:earthGolem_latestRN" "fileNames[0]" " -type \"string\" \"/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/characters/earthGolem/earthGolem_latest.ma\""
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts" " -s 1664"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[0]" " -type \"float3\" 0 0 8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[2]" " -type \"float3\" 4.7683716000000005e-07 1.1920929000000001e-07 -1.1920929000000001e-07"
 		
-		"forest_golem_SET_latest:roots_latestRN4" 1
-		2 "|forest_golem_SET_latest:roots_latest4:RootsCntrl" "visibility" " 0"
-		"forest_golem_SET_latest:roots_latestRN" 1
-		2 "|forest_golem_SET_latest:roots_latest:RootsCntrl" "visibility" " 0"
-		"forest_golem_SET_latest:smallLavenderClump_latestRN1" 1
-		2 "|forest_golem_SET_latest:smallLavenderClump_latest1:SmallLavenderClump" 
-		"visibility" " 0"
-		"forest_golem_SET_latest:roots_latestRN1" 1
-		2 "|forest_golem_SET_latest:roots_latest1:RootsCntrl" "visibility" " 0"
-		"forest_golem_SET_latest:lilyBush_latestRN1" 1
-		2 "|forest_golem_SET_latest:lilyBush_latest1:LilyBush" "visibility" " 0"
-		"forest_golem_SET_latest:roots_latestRN5" 1
-		2 "|forest_golem_SET_latest:roots_latest5:RootsCntrl" "visibility" " 0"
-		"forest_golem_SET_latest:roots_latestRN3" 1
-		2 "|forest_golem_SET_latest:roots_latest3:RootsCntrl" "visibility" " 0"
-		"forest_golem_SET_latest:roots_latestRN6" 1
-		2 "|forest_golem_SET_latest:roots_latest6:RootsCntrl" "visibility" " 0";
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[3]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[4]" " -type \"float3\" 0 0 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[5]" " -type \"float3\" 0 2.3841858000000002e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[6]" " -type \"float3\" 0 4.7683716000000005e-07 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[7]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[8]" " -type \"float3\" 0 -2.3841858000000002e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[9]" " -type \"float3\" 0 -1.2386589999999999e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[10]" " -type \"float3\" 0 1.7881393000000001e-07 -4.1723251000000004e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[11]" " -type \"float3\" 0 -2.9802322000000001e-08 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[12]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[13]" " -type \"float3\" -4.7683716000000005e-07 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[14]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[15]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[16]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[17]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[18]" " -type \"float3\" 0 2.3841858000000002e-07 8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[19]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[20]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[21]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[22]" " -type \"float3\" 0 1.4901161e-07 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[23]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[24]" " -type \"float3\" 0 0 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[25]" " -type \"float3\" 0 0 -2.5145710000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[26]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[27]" " -type \"float3\" 0 2.3841858000000002e-07 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[28]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[29]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[30]" " -type \"float3\" 0 -2.9802322000000001e-08 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[31]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[32]" " -type \"float3\" 0 1.4901161000000001e-08 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[33]" " -type \"float3\" 0 -1.7881393000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[34]" " -type \"float3\" -4.7683716000000005e-07 -3.5762787000000001e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[35]" " -type \"float3\" 0 -1.7881393000000001e-07 2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[36]" " -type \"float3\" 0 8.9406967000000001e-08 -1.3690442000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[37]" " -type \"float3\" 0 5.9604644999999993e-08 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[38]" " -type \"float3\" 0 -1.1920929000000001e-07 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[39]" " -type \"float3\" 0 0 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[40]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[41]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[42]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[43]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[44]" " -type \"float3\" 0 5.9604644999999993e-08 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[45]" " -type \"float3\" 0 8.1956386999999997e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[46]" " -type \"float3\" -4.7683716000000005e-07 -1.7881393000000001e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[47]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[48]" " -type \"float3\" 4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[49]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[50]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[51]" " -type \"float3\" 0 2.3841858000000002e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[52]" " -type \"float3\" 0 -4.7683716000000005e-07 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[53]" " -type \"float3\" 0 4.7683716000000005e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[54]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[55]" " -type \"float3\" 0 -2.3841858000000002e-07 -8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[56]" " -type \"float3\" 0 0 2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[57]" " -type \"float3\" 0 1.1920929000000001e-07 -1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[58]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[59]" " -type \"float3\" 0 2.3841858000000002e-07 2.5331974e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[60]" " -type \"float3\" -4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[61]" " -type \"float3\" 0 2.3841858000000002e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[62]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[63]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[64]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[65]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[66]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[67]" " -type \"float3\" 4.7683716000000005e-07 0 -2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[68]" " -type \"float3\" 0 -1.1920929000000001e-07 2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[69]" " -type \"float3\" 0 0 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[70]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[71]" " -type \"float3\" 0 -2.3841858000000002e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[72]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[73]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[74]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[75]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[76]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[77]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[78]" " -type \"float3\" 0 0 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[79]" " -type \"float3\" 0 -4.7683716000000005e-07 -3.8743018999999997e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[80]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[81]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[82]" " -type \"float3\" 0 1.1920929000000001e-07 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[83]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[84]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[85]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[86]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[87]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[88]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[89]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[90]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[91]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[92]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[93]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[94]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[95]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[96]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[97]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[98]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[99]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[100]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[101]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[102]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[103]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[104]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[105]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[106]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[107]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[108]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[109]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[110]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[111]" " -type \"float3\" 0 2.3841858000000002e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[112]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[113]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[114]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[115]" " -type \"float3\" 0 -4.7683716000000005e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[116]" " -type \"float3\" 0 4.7683716000000005e-07 3.4272670999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[117]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[118]" " -type \"float3\" 0 -2.3841858000000002e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[119]" " -type \"float3\" -4.7683716000000005e-07 -4.7683716000000005e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[120]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[121]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[122]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[123]" " -type \"float3\" 0 1.1920929000000001e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[124]" " -type \"float3\" 0 2.9802322e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[125]" " -type \"float3\" -4.7683716000000005e-07 -2.3841858000000002e-07 -1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[126]" " -type \"float3\" 0 0 -4.4703483999999995e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[127]" " -type \"float3\" 0 0 2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[128]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 2.0861626000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[129]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[130]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[131]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[132]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[133]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[134]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[135]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[136]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[137]" " -type \"float3\" 0 -1.1920929000000001e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[138]" " -type \"float3\" 0 0 -8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[139]" " -type \"float3\" 0 -4.7683716000000005e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[140]" " -type \"float3\" 4.7683716000000005e-07 2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[141]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[142]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[143]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[144]" " -type \"float3\" 0 -2.3841858000000002e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[145]" " -type \"float3\" 0 4.7683716000000005e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[146]" " -type \"float3\" 0 4.7683716000000005e-07 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[147]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[148]" " -type \"float3\" -4.7683716000000005e-07 -1.1920929000000001e-07 3.7252903000000004e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[149]" " -type \"float3\" 0 -1.5646218999999999e-07 3.2782555e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[150]" " -type \"float3\" 0 0 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[151]" " -type \"float3\" 0 1.1920929000000001e-07 2.1606684e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[152]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[153]" " -type \"float3\" 0 -2.3841858000000002e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[154]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[155]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[156]" " -type \"float3\" 0 -1.4901161e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[157]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[158]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[159]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[160]" " -type \"float3\" 0 1.1920929000000001e-07 -2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[161]" " -type \"float3\" 0 0 1.3411044999999999e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[162]" " -type \"float3\" 0 -1.7881393000000001e-07 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[163]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[164]" " -type \"float3\" 0 2.3841858000000002e-07 -3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[165]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[166]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[167]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[168]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[169]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[170]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[171]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[172]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[173]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[174]" " -type \"float3\" 0 2.1606684e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[175]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[176]" " -type \"float3\" 0 5.9604644999999993e-08 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[177]" " -type \"float3\" 0 8.9406967000000001e-08 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[178]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[179]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[180]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[181]" " -type \"float3\" 0 2.3841858000000002e-07 2.6822089999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[182]" " -type \"float3\" 0 -2.3841858000000002e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[183]" " -type \"float3\" 0 -2.3841858000000002e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[184]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[185]" " -type \"float3\" 0 3.5762787000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[186]" " -type \"float3\" 0 1.2665987e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[187]" " -type \"float3\" 0 2.9802322000000001e-08 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[188]" " -type \"float3\" 0 1.1920929000000001e-07 -3.3900142000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[189]" " -type \"float3\" 0 -8.9406967000000001e-08 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[190]" " -type \"float3\" 0 -5.9604644999999993e-08 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[191]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[192]" " -type \"float3\" 0 2.3841858000000002e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[193]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[194]" " -type \"float3\" 0 0 1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[195]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[196]" " -type \"float3\" 0 0 2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[197]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[198]" " -type \"float3\" 0 0 -3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[199]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[200]" " -type \"float3\" 0 1.1920929000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[201]" " -type \"float3\" 0 -1.8626450999999999e-08 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[202]" " -type \"float3\" 0 -5.9604644999999993e-08 -2.9802322000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[203]" " -type \"float3\" 0 1.7881393000000001e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[204]" " -type \"float3\" 0 -4.4703483999999995e-08 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[205]" " -type \"float3\" 0 -1.1920929000000001e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[206]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[207]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[208]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[209]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[210]" " -type \"float3\" -4.7683716000000005e-07 1.1920929000000001e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[211]" " -type \"float3\" 0 3.2782555e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[212]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[213]" " -type \"float3\" 4.7683716000000005e-07 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[214]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[215]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[216]" " -type \"float3\" 0 -1.1920929000000001e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[217]" " -type \"float3\" 0 -5.9604644999999993e-08 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[218]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[219]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[220]" " -type \"float3\" 0 -2.9802322e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[221]" " -type \"float3\" 0 -1.1920929000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[222]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[223]" " -type \"float3\" -4.7683716000000005e-07 -2.3841858000000002e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[224]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[225]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[226]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[227]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[228]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[229]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[230]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[231]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[232]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[233]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[234]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[235]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[236]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[237]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[238]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[239]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[240]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[241]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[242]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[243]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[244]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[245]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[246]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[247]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[248]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[249]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[250]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[251]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[252]" " -type \"float3\" 0 -4.7683716000000005e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[253]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[254]" " -type \"float3\" -4.7683716000000005e-07 -4.7683716000000005e-07 9.536743200000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[255]" " -type \"float3\" 0 3.5762787000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[256]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[257]" " -type \"float3\" 0 -3.5762787000000001e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[258]" " -type \"float3\" 0 4.1723251000000004e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[259]" " -type \"float3\" 0 -1.7881393000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[260]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[261]" " -type \"float3\" 0 1.1920929000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[262]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[263]" " -type \"float3\" 4.7683716000000005e-07 -1.1920929000000001e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[264]" " -type \"float3\" 0 3.5762787000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[265]" " -type \"float3\" 0 1.1920929000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[266]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[267]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[268]" " -type \"float3\" 0 -2.9802322e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[269]" " -type \"float3\" 0 -1.1920929000000001e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[270]" " -type \"float3\" 4.7683716000000005e-07 2.3841858000000002e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[271]" " -type \"float3\" 0 -3.5762787000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[272]" " -type \"float3\" 0 -1.1920929000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[273]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[274]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[275]" " -type \"float3\" 0 1.1920929000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[276]" " -type \"float3\" 0 -1.1920929000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[277]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[278]" " -type \"float3\" 0 1.7881393000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[279]" " -type \"float3\" -4.7683716000000005e-07 -1.1920929000000001e-07 0"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[280]" " -type \"float3\" 0 -1.1920929000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[281]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[282]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[283]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[284]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[285]" " -type \"float3\" 0 -1.1920929000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[286]" " -type \"float3\" 0 1.7881393000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[287]" " -type \"float3\" 0 -3.5762787000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[288]" " -type \"float3\" 4.7683716000000005e-07 3.5762787000000001e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[289]" " -type \"float3\" 0 1.1920929000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[290]" " -type \"float3\" 4.7683716000000005e-07 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[291]" " -type \"float3\" 0 1.1920929000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[292]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[293]" " -type \"float3\" 0 3.5762787000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[294]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[295]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[296]" " -type \"float3\" 0 1.1920929000000001e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[297]" " -type \"float3\" 0 5.9604644999999993e-08 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[298]" " -type \"float3\" 0 5.9604644999999993e-08 2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[299]" " -type \"float3\" 0 2.3841858000000002e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[300]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[301]" " -type \"float3\" 0 -4.7683716000000005e-07 -1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[302]" " -type \"float3\" 0 0 -2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[303]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[304]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[305]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[306]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[307]" " -type \"float3\" 0 4.7683716000000005e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[308]" " -type \"float3\" 0 0 -1.6391277000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[309]" " -type \"float3\" 0 0 1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[310]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[311]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[312]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[313]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[314]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[315]" " -type \"float3\" 0 -1.7881393000000001e-07 -3.5762787000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[316]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[317]" " -type \"float3\" 0 0 4.4703483999999995e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[318]" " -type \"float3\" 0 0 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[319]" " -type \"float3\" 0 4.7683716000000005e-07 1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[320]" " -type \"float3\" 0 0 -1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[321]" " -type \"float3\" 0 4.7683716000000005e-07 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[322]" " -type \"float3\" 0 4.7683716000000005e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[323]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[324]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[325]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[326]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[327]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[328]" " -type \"float3\" 0 1.1920929000000001e-07 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[329]" " -type \"float3\" 0 1.1920929000000001e-07 1.1688098000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[330]" " -type \"float3\" 0 0 -8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[331]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.9802322000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[332]" " -type \"float3\" 0 0 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[333]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[334]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[335]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[336]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[337]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[338]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[339]" " -type \"float3\" 0 -1.7881393000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[340]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[341]" " -type \"float3\" 0 0 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[342]" " -type \"float3\" 0 -4.7683716000000005e-07 -1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[343]" " -type \"float3\" 0 0 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[344]" " -type \"float3\" 0 0 -5.7960278e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[345]" " -type \"float3\" 0 -2.3841858000000002e-07 -3.5762787000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[346]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[347]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[348]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[349]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[350]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[351]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[352]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[353]" " -type \"float3\" 0 2.3841858000000002e-07 7.4505806000000003e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[354]" " -type \"float3\" 0 2.3841858000000002e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[355]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[356]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[357]" " -type \"float3\" 0 -1.1920929000000001e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[358]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[359]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[360]" " -type \"float3\" 0 -2.3841858000000002e-07 -7.4505806000000003e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[361]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[362]" " -type \"float3\" 0 2.3841858000000002e-07 1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[363]" " -type \"float3\" 0 0 -8.1956386999999997e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[364]" " -type \"float3\" 0 0 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[365]" " -type \"float3\" 0 4.7683716000000005e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[366]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[367]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[368]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[369]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[370]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[371]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[372]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[373]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[374]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[375]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[376]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[377]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[378]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[379]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[380]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[381]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[382]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[383]" " -type \"float3\" 0 -4.7683716000000005e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[384]" " -type \"float3\" 0 4.7683716000000005e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[385]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[386]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[387]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[388]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[389]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[390]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[391]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[392]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[393]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[394]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[395]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[396]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[397]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[398]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[399]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[400]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[401]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[402]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[403]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[404]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[405]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[406]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[407]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[408]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[409]" " -type \"float3\" -4.7683716000000005e-07 -4.7683716000000005e-07 0"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[410]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[411]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[412]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[413]" " -type \"float3\" -4.7683716000000005e-07 -4.7683716000000005e-07 0"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[414]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[415]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[416]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[417]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[418]" " -type \"float3\" 0 5.9604644999999993e-08 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[419]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[420]" " -type \"float3\" 0 -3.5762787000000001e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[421]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[422]" " -type \"float3\" 0 0 2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[423]" " -type \"float3\" 0 0 -5.5879354000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[424]" " -type \"float3\" 0 0 -2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[425]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[426]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[427]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[428]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[429]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[430]" " -type \"float3\" 0 -1.4901161e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[431]" " -type \"float3\" 0 -2.9802322000000001e-08 3.2782555e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[432]" " -type \"float3\" 0 2.9802322000000001e-08 -1.5646218999999999e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[433]" " -type \"float3\" 0 1.1920929000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[434]" " -type \"float3\" 0 0 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[435]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[436]" " -type \"float3\" 0 0 4.4703483999999995e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[437]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[438]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[439]" " -type \"float3\" 0 -3.5762787000000001e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[440]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[441]" " -type \"float3\" 0 -1.1920929000000001e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[442]" " -type \"float3\" 0 -7.4505806000000003e-08 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[443]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[444]" " -type \"float3\" 0 -2.3841858000000002e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[445]" " -type \"float3\" 0 5.9604644999999993e-08 -2.6822089999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[446]" " -type \"float3\" 0 -1.7881393000000001e-07 1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[447]" " -type \"float3\" 0 1.1920929000000001e-07 1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[448]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[449]" " -type \"float3\" 0 -2.3841858000000002e-07 1.4901161000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[450]" " -type \"float3\" 0 2.3841858000000002e-07 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[451]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[452]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[453]" " -type \"float3\" 0 -1.1920929000000001e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[454]" " -type \"float3\" 0 2.9802322000000001e-08 3.7252903000000002e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[455]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[456]" " -type \"float3\" 0 0 4.4703483999999995e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[457]" " -type \"float3\" 0 0 1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[458]" " -type \"float3\" 0 -2.9802322000000001e-08 2.6077032000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[459]" " -type \"float3\" 0 0 2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[460]" " -type \"float3\" 0 0 1.1175871e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[461]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[462]" " -type \"float3\" -4.7683716000000005e-07 0 -9.3132256999999996e-09"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[463]" " -type \"float3\" 0 0 -8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[464]" " -type \"float3\" 0 0 -2.9057263999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[465]" " -type \"float3\" 0 1.1920929000000001e-07 -2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[466]" " -type \"float3\" 0 1.1920929000000001e-07 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[467]" " -type \"float3\" 0 0 -2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[468]" " -type \"float3\" 0 0 -1.3411044999999999e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[469]" " -type \"float3\" 0 0 1.1175871e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[470]" " -type \"float3\" 0 0 -1.3411044999999999e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[471]" " -type \"float3\" 0 2.3841858000000002e-07 -8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[472]" " -type \"float3\" 0 2.3841858000000002e-07 -3.8743018999999997e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[473]" " -type \"float3\" 0 0 3.1292439000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[474]" " -type \"float3\" 0 0 -3.4272670999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[475]" " -type \"float3\" 0 0 -1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[476]" " -type \"float3\" 0 2.3841858000000002e-07 -2.6822089999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[477]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[478]" " -type \"float3\" 0 0 -1.3411044999999999e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[479]" " -type \"float3\" 0 1.1920929000000001e-07 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[480]" " -type \"float3\" 0 8.9406967000000001e-08 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[481]" " -type \"float3\" 0 0 -8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[482]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[483]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[484]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[485]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[486]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[487]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[488]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[489]" " -type \"float3\" 0 1.0430813000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[490]" " -type \"float3\" 0 -2.9802322000000001e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[491]" " -type \"float3\" 0 5.9604644999999993e-08 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[492]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[493]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[494]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[495]" " -type \"float3\" -4.7683716000000005e-07 0 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[496]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[497]" " -type \"float3\" -4.7683716000000005e-07 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[498]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[499]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[500]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[501]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[502]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[503]" " -type \"float3\" 0 7.4505806000000003e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[504]" " -type \"float3\" 0 4.7683716000000005e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[505]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[506]" " -type \"float3\" 0 1.1920929000000001e-07 -3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[507]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[508]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[509]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[510]" " -type \"float3\" 0 1.1920929000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[511]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[512]" " -type \"float3\" 0 -1.1920929000000001e-07 -2.9802322000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[513]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[514]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[515]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[516]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[517]" " -type \"float3\" 0 0 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[518]" " -type \"float3\" 0 4.7683716000000005e-07 -2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[519]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[520]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[521]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[522]" " -type \"float3\" 0 -1.1920929000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[523]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[524]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[525]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[526]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[527]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[528]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[529]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[530]" " -type \"float3\" 0 -4.0978193000000003e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[531]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[532]" " -type \"float3\" -4.7683716000000005e-07 -2.3841858000000002e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[533]" " -type \"float3\" 0 2.9802322e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[534]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[535]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[536]" " -type \"float3\" 0 0 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[537]" " -type \"float3\" 0 0 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[538]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[539]" " -type \"float3\" 0 -8.9406967000000001e-08 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[540]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[541]" " -type \"float3\" 0 -2.3841858000000002e-07 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[542]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[543]" " -type \"float3\" 0 1.1920929000000001e-07 -2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[544]" " -type \"float3\" 0 -2.1187589000000001e-07 3.2782555e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[545]" " -type \"float3\" 0 1.1920929000000001e-07 -1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[546]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[547]" " -type \"float3\" 0 1.1920929000000001e-07 -3.0919908999999997e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[548]" " -type \"float3\" 0 2.3841858000000002e-07 -2.6822089999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[549]" " -type \"float3\" 0 0 -2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[550]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[551]" " -type \"float3\" 0 2.3841858000000002e-07 -2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[552]" " -type \"float3\" 0 0 -2.9429793000000004e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[553]" " -type \"float3\" 0 -2.3841858000000002e-07 3.1664968000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[554]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[555]" " -type \"float3\" 0 0 -3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[556]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[557]" " -type \"float3\" 0 -2.3841858000000002e-07 5.9604644999999993e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[558]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[559]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[560]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[561]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[562]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[563]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[564]" " -type \"float3\" 0 3.5762787000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[565]" " -type \"float3\" 0 1.1920929000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[566]" " -type \"float3\" 0 2.9802322e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[567]" " -type \"float3\" 0 -1.7881393000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[568]" " -type \"float3\" 0 -2.8155046e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[569]" " -type \"float3\" 0 -1.4901161000000001e-08 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[570]" " -type \"float3\" -4.7683716000000005e-07 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[571]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[572]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[573]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[574]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[575]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[576]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[577]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[578]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[579]" " -type \"float3\" 0 0 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[580]" " -type \"float3\" 0 -1.1920929000000001e-07 1.6391277000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[581]" " -type \"float3\" 0 -1.7881393000000001e-07 3.4272670999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[582]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[583]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[584]" " -type \"float3\" 0 -7.4505806000000003e-08 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[585]" " -type \"float3\" 0 0 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[586]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[587]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[588]" " -type \"float3\" 0 -1.7881393000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[589]" " -type \"float3\" 0 -2.9802322000000001e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[590]" " -type \"float3\" 0 0 -1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[591]" " -type \"float3\" 0 2.3841858000000002e-07 -8.5681677000000005e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[592]" " -type \"float3\" 0 -1.1920929000000001e-07 3.7252903000000004e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[593]" " -type \"float3\" 0 2.3841858000000002e-07 -3.8743018999999997e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[594]" " -type \"float3\" 0 1.1920929000000001e-07 -2.0116567999999999e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[595]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[596]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[597]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[598]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[599]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[600]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[601]" " -type \"float3\" 0 -1.1920929000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[602]" " -type \"float3\" 0 1.7881393000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[603]" " -type \"float3\" 0 -1.6763806000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[604]" " -type \"float3\" 0 -5.9604644999999993e-08 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[605]" " -type \"float3\" 0 -1.1920929000000001e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[606]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[607]" " -type \"float3\" 0 1.1920929000000001e-07 -3.0733644999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[608]" " -type \"float3\" 0 1.1920929000000001e-07 -2.6822089999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[609]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[610]" " -type \"float3\" 0 4.4703483999999995e-08 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[611]" " -type \"float3\" 0 5.9604644999999993e-08 7.4505806000000003e-09"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[612]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[613]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[614]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[615]" " -type \"float3\" 0 3.5762787000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[616]" " -type \"float3\" 0 -8.9406967000000001e-08 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[617]" " -type \"float3\" 4.7683716000000005e-07 1.1920929000000001e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[618]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[619]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[620]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[621]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[622]" " -type \"float3\" 0 -2.3841858000000002e-07 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[623]" " -type \"float3\" 0 2.3841858000000002e-07 -2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[624]" " -type \"float3\" 0 -1.1920929000000001e-07 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[625]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[626]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[627]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[628]" " -type \"float3\" 0 2.6822089999999998e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[629]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[630]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[631]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[632]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[633]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[634]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[635]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[636]" " -type \"float3\" 4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[637]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[638]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[639]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[640]" " -type \"float3\" 0 3.5762787000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[641]" " -type \"float3\" 0 -1.7881393000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[642]" " -type \"float3\" 0 -2.0861626000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[643]" " -type \"float3\" 0 -4.1723251000000004e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[644]" " -type \"float3\" 0 -2.9802322e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[645]" " -type \"float3\" 0 -2.0861626000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[646]" " -type \"float3\" 0 1.937151e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[647]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[648]" " -type \"float3\" 0 4.1723251000000004e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[649]" " -type \"float3\" 0 1.1920929000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[650]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[651]" " -type \"float3\" 0 -4.1723251000000004e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[652]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[653]" " -type \"float3\" 0 -1.1920929000000001e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[654]" " -type \"float3\" 0 -4.1723251000000004e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[655]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[656]" " -type \"float3\" 0 -2.9802322e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[657]" " -type \"float3\" 0 7.4505806000000003e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[658]" " -type \"float3\" 0 -2.9802322000000001e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[659]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[660]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[661]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[662]" " -type \"float3\" -4.7683716000000005e-07 -1.1920929000000001e-07 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[663]" " -type \"float3\" 0 8.9406967000000001e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[664]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[665]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[666]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[667]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[668]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[669]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[670]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[671]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[672]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[673]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[674]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[675]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[676]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[677]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[678]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[679]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[680]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[681]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[682]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[683]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[684]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[685]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[686]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[687]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[688]" " -type \"float3\" 4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[689]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[690]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[691]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[692]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[693]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[694]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[695]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[696]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[697]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[698]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[699]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[700]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[701]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[702]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[703]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[704]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[705]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[706]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[707]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[708]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[709]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[710]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[711]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[712]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[713]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[714]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[715]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[716]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[717]" " -type \"float3\" 0 4.7683716000000005e-07 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[718]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[719]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[720]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[721]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[722]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[723]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[724]" " -type \"float3\" 0 0 -7.1525574000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[725]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[726]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[727]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[728]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[729]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[730]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[731]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[732]" " -type \"float3\" 0 0 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[733]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[734]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[735]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[736]" " -type \"float3\" -4.7683716000000005e-07 -2.3841858000000002e-07 0"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[737]" " -type \"float3\" 4.7683716000000005e-07 3.5762787000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[738]" " -type \"float3\" 0 0 -9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[739]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[740]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[741]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[742]" " -type \"float3\" 0 -4.7683716000000005e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[743]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[744]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[745]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[746]" " -type \"float3\" 0 -9.536743200000001e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[747]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[748]" " -type \"float3\" 4.7683716000000005e-07 2.3841858000000002e-07 -9.536743200000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[749]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[750]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[751]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 -9.536743200000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[752]" " -type \"float3\" 0 4.7683716000000005e-07 -9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[753]" " -type \"float3\" 0 2.3841858000000002e-07 -9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[754]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[755]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[756]" " -type \"float3\" 0 4.7683716000000005e-07 -9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[757]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[758]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[759]" " -type \"float3\" 0 -2.3841858000000002e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[760]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[761]" " -type \"float3\" -4.7683716000000005e-07 -2.3841858000000002e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[762]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[763]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[764]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[765]" " -type \"float3\" -4.7683716000000005e-07 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[766]" " -type \"float3\" 0 1.1920929000000001e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[767]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[768]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[769]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[770]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[771]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[772]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[773]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[774]" " -type \"float3\" 0 4.7683716000000005e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[775]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[776]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[777]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[778]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[779]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[780]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[781]" " -type \"float3\" 0 4.7683716000000005e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[782]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[783]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[784]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[785]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[786]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[787]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[788]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[789]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[790]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[791]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[792]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[793]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[794]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[795]" " -type \"float3\" -4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[796]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[797]" " -type \"float3\" -4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[798]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[799]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[800]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[801]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[802]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[803]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[804]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[805]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[806]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[807]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[808]" " -type \"float3\" -4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[809]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[810]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[811]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[812]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[813]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[814]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[815]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[816]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[817]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[818]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[819]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[820]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[821]" " -type \"float3\" 0 1.1920929000000001e-07 -3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[822]" " -type \"float3\" 4.7683716000000005e-07 1.7881393000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[823]" " -type \"float3\" 0 -2.9802322e-07 8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[824]" " -type \"float3\" 0 -5.9604644999999993e-08 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[825]" " -type \"float3\" 0 0 1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[826]" " -type \"float3\" 0 0 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[827]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[828]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[829]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[830]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[831]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[832]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[833]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[834]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[835]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[836]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[837]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[838]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[839]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[840]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[841]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[842]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[843]" " -type \"float3\" 0 0 7.1525574000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[844]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[845]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[846]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[847]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[848]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[849]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[850]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[851]" " -type \"float3\" -4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[852]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[853]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[854]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[855]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[856]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[857]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[858]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[859]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[860]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[861]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[862]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[863]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[864]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[865]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[866]" " -type \"float3\" 0 4.7683716000000005e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[867]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[868]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[869]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[870]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[871]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[872]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[873]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[874]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[875]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[876]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[877]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[878]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[879]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[880]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[881]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[882]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[883]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[884]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[885]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[886]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[887]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[888]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[889]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[890]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[891]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[892]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[893]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[894]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[895]" " -type \"float3\" 4.7683716000000005e-07 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[896]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[897]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[898]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[899]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[900]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[901]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[902]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[903]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[904]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[905]" " -type \"float3\" -4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[906]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[907]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[908]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[909]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[910]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[911]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[912]" " -type \"float3\" 0 0 -7.1525574000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[913]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[914]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[915]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[916]" " -type \"float3\" 0 4.7683716000000005e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[917]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[918]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[919]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[920]" " -type \"float3\" 0 -2.3841858000000002e-07 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[921]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[922]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[923]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[924]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[925]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[926]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[927]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[928]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[929]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[930]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[931]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[932]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[933]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[934]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[935]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[936]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[937]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[938]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[939]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[940]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[941]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[942]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[943]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[944]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[945]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[946]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[947]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[948]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[949]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[950]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[951]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[952]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[953]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[954]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[955]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[956]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[957]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[958]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[959]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[960]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[961]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[962]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[963]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[964]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[965]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[966]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[967]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[968]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[969]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[970]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[971]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[972]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[973]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[974]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[975]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[976]" " -type \"float3\" 0 4.7683716000000005e-07 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[977]" " -type \"float3\" -4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[978]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[979]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[980]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[981]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[982]" " -type \"float3\" -4.7683716000000005e-07 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[983]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[984]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[985]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[986]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[987]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[988]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[989]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[990]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[991]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[992]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[993]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[994]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[995]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[996]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[997]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[998]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[999]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1000]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1001]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1002]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1003]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1004]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1005]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1006]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1007]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1008]" " -type \"float3\" 0 0 7.1525574000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1009]" " -type \"float3\" 0 4.7683716000000005e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1010]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1011]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1012]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1013]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1014]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1015]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1016]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1017]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1018]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1019]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1020]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1021]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1022]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1023]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1024]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1025]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1026]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1027]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1028]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1029]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1030]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1031]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1032]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1033]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1034]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1035]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1036]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1037]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1038]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1039]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1040]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1041]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1042]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1043]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1044]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1045]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1046]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1047]" " -type \"float3\" -4.7683716000000005e-07 -4.7683716000000005e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1048]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1049]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1050]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1051]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1052]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1053]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1054]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1055]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1056]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1057]" " -type \"float3\" 4.7683716000000005e-07 0 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1058]" " -type \"float3\" 0 -4.7683716000000005e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1059]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1060]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1061]" " -type \"float3\" -4.7683716000000005e-07 -4.7683716000000005e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1062]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1063]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1064]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1065]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1066]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1067]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1068]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1069]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1070]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1071]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1072]" " -type \"float3\" 0 0 7.1525574000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1073]" " -type \"float3\" -4.7683716000000005e-07 -3.5762787000000001e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1074]" " -type \"float3\" 0 3.5762787000000001e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1075]" " -type \"float3\" 0 -2.9802322000000001e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1076]" " -type \"float3\" 0 -2.9802322e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1077]" " -type \"float3\" 0 3.5762787000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1078]" " -type \"float3\" -4.7683716000000005e-07 -3.5762787000000001e-07 9.536743200000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1079]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1080]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1081]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1082]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1083]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1084]" " -type \"float3\" 0 -1.1920929000000001e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1085]" " -type \"float3\" 0 -1.1920929000000001e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1086]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1087]" " -type \"float3\" 0 0 -9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1088]" " -type \"float3\" 0 -7.4505806000000003e-08 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1089]" " -type \"float3\" 0 -1.7881393000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1090]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1091]" " -type \"float3\" 0 -2.6822089999999998e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1092]" " -type \"float3\" 0 -3.7252903000000004e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1093]" " -type \"float3\" 0 1.4901161e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1094]" " -type \"float3\" 0 0 -3.1292439000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1095]" " -type \"float3\" 0 0 2.5331974e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1096]" " -type \"float3\" 0 0 4.4889748000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1097]" " -type \"float3\" 0 0 -4.8428773999999996e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1098]" " -type \"float3\" 0 -2.3841858000000002e-07 1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1099]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1100]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1101]" " -type \"float3\" 0 0 -1.7322599999999999e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1102]" " -type \"float3\" -4.7683716000000005e-07 0 3.9115548000000003e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1103]" " -type \"float3\" 0 0 7.8231095999999998e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1104]" " -type \"float3\" 0 0 2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1105]" " -type \"float3\" 0 2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1106]" " -type \"float3\" 0 0 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1107]" " -type \"float3\" 0 0 1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1108]" " -type \"float3\" 0 0 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1109]" " -type \"float3\" 0 0 1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1110]" " -type \"float3\" 0 2.3841858000000002e-07 1.4901161000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1111]" " -type \"float3\" 0 0 -1.7695129e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1112]" " -type \"float3\" -4.7683716000000005e-07 0 2.1606684e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1113]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1114]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1115]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1116]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1117]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1118]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1119]" " -type \"float3\" 0 -8.9406967000000001e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1120]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1121]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1122]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1123]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1124]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1125]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1126]" " -type \"float3\" 0 -1.7881393000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1127]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1128]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1129]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1130]" " -type \"float3\" 0 -1.1920929000000001e-07 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1131]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1132]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1133]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1134]" " -type \"float3\" 0 1.7881393000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1135]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1136]" " -type \"float3\" 0 1.7881393000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1137]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1138]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1139]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1140]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1141]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1142]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1143]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1144]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1145]" " -type \"float3\" 0 2.9802322000000001e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1146]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1147]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1148]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1149]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1150]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1151]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1152]" " -type \"float3\" -4.7683716000000005e-07 -2.3841858000000002e-07 0"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1153]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1154]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1155]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1156]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1157]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1158]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1159]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1160]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1161]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1162]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1163]" " -type \"float3\" 0 1.1920929000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1164]" " -type \"float3\" 0 -3.7252903000000002e-08 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1165]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1166]" " -type \"float3\" 0 1.7881393000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1167]" " -type \"float3\" 0 1.0989606000000001e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1168]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1169]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1170]" " -type \"float3\" 0 4.7683716000000005e-07 7.0780516000000008e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1171]" " -type \"float3\" 0 0 7.4505806000000003e-09"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1172]" " -type \"float3\" 0 -2.3841858000000002e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1173]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1174]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1175]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1176]" " -type \"float3\" 4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1177]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1178]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1179]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1180]" " -type \"float3\" 0 3.5762787000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1181]" " -type \"float3\" 0 2.3841858000000002e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1182]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1183]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1184]" " -type \"float3\" 0 2.3841858000000002e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1185]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1186]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1187]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1188]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1189]" " -type \"float3\" 0 -1.1920929000000001e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1190]" " -type \"float3\" 4.7683716000000005e-07 2.3841858000000002e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1191]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1192]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1193]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1194]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1195]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1196]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1197]" " -type \"float3\" 0 -1.1920929000000001e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1198]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1199]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1200]" " -type \"float3\" 0 2.3841858000000002e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1201]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1202]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1203]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1204]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1205]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1206]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 3.5762787000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1207]" " -type \"float3\" 0 2.3841858000000002e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1208]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1209]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1210]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1211]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1212]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1213]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1214]" " -type \"float3\" 4.7683716000000005e-07 2.3841858000000002e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1215]" " -type \"float3\" -4.7683716000000005e-07 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1216]" " -type \"float3\" 0 4.7683716000000005e-07 -7.4505806000000003e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1217]" " -type \"float3\" 0 4.7683716000000005e-07 -2.9802322000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1218]" " -type \"float3\" 0 -2.3841858000000002e-07 -3.5762787000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1219]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1220]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1221]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1222]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1223]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1224]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1225]" " -type \"float3\" 0 2.3841858000000002e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1226]" " -type \"float3\" 0 -2.3841858000000002e-07 5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1227]" " -type \"float3\" 0 -3.5762787000000001e-07 -1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1228]" " -type \"float3\" 0 -1.1920929000000001e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1229]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1230]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1231]" " -type \"float3\" 0 2.3841858000000002e-07 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1232]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1233]" " -type \"float3\" 0 -1.1920929000000001e-07 -3.5762787000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1234]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1235]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1236]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1237]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1238]" " -type \"float3\" 0 0 2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1239]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1240]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1241]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1242]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1243]" " -type \"float3\" 0 3.5762787000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1244]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1245]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1246]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1247]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1248]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1249]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1250]" " -type \"float3\" 0 0 8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1251]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1252]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1253]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1254]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1255]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1256]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1257]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1258]" " -type \"float3\" 0 1.1920929000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1259]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1260]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1261]" " -type \"float3\" 0 1.1920929000000001e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1262]" " -type \"float3\" 0 2.3841858000000002e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1263]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1264]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1265]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1266]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1267]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1268]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1269]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1270]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1271]" " -type \"float3\" 0 -3.5762787000000001e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1272]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1273]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1274]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1275]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1276]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1277]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1278]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1279]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1280]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1281]" " -type \"float3\" 4.7683716000000005e-07 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1282]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1283]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1284]" " -type \"float3\" 0 2.9802322e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1285]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1286]" " -type \"float3\" 0 2.3841858000000002e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1287]" " -type \"float3\" 0 -1.1920929000000001e-07 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1288]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1289]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1290]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1291]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1292]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1293]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1294]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1295]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1296]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1297]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1298]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1299]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1300]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1301]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1302]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1303]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1304]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1305]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1306]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1307]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1308]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1309]" " -type \"float3\" 0 -4.7683716000000005e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1310]" " -type \"float3\" 0 -4.7683716000000005e-07 -1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1311]" " -type \"float3\" 0 -2.3841858000000002e-07 1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1312]" " -type \"float3\" 0 -2.3841858000000002e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1313]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1314]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1315]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1316]" " -type \"float3\" 0 -2.3841858000000002e-07 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1317]" " -type \"float3\" -4.7683716000000005e-07 0 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1318]" " -type \"float3\" 0 0 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1319]" " -type \"float3\" 0 -3.5762787000000001e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1320]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1321]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1322]" " -type \"float3\" 0 3.5762787000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1323]" " -type \"float3\" 0 1.1920929000000001e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1324]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1325]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1326]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1327]" " -type \"float3\" -4.7683716000000005e-07 -4.7683716000000005e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1328]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1329]" " -type \"float3\" 0 2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1330]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1331]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1332]" " -type \"float3\" 0 2.3841858000000002e-07 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1333]" " -type \"float3\" -4.7683716000000005e-07 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1334]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1335]" " -type \"float3\" 0 1.1920929000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1336]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1337]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1338]" " -type \"float3\" 0 2.3841858000000002e-07 1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1339]" " -type \"float3\" 0 -4.7683716000000005e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1340]" " -type \"float3\" 0 0 -8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1341]" " -type \"float3\" 0 2.3841858000000002e-07 2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1342]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.0861626000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1343]" " -type \"float3\" 0 7.1525574000000002e-07 8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1344]" " -type \"float3\" 0 4.7683716000000005e-07 2.6822089999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1345]" " -type \"float3\" 0 -2.3841858000000002e-07 5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1346]" " -type \"float3\" 0 4.7683716000000005e-07 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1347]" " -type \"float3\" 0 2.3841858000000002e-07 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1348]" " -type \"float3\" 0 -4.7683716000000005e-07 -3.7997961000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1349]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3096800000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1350]" " -type \"float3\" 0 4.7683716000000005e-07 2.841698e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1351]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1352]" " -type \"float3\" 0 -4.7683716000000005e-07 -3.1292439000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1353]" " -type \"float3\" 0 0 1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1354]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1355]" " -type \"float3\" 0 -4.7683716000000005e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1356]" " -type \"float3\" 0 0 -2.6822089999999998e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1357]" " -type \"float3\" 0 0 -4.4703483999999995e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1358]" " -type \"float3\" 0 4.7683716000000005e-07 1.5646218999999999e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1359]" " -type \"float3\" 0 0 8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1360]" " -type \"float3\" 0 0 2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1361]" " -type \"float3\" 0 0 4.4703483999999995e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1362]" " -type \"float3\" 0 4.7683716000000005e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1363]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1364]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 2.9802322000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1365]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.9802322000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1366]" " -type \"float3\" 0 2.3841858000000002e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1367]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1368]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1369]" " -type \"float3\" 0 4.7683716000000005e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1370]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1371]" " -type \"float3\" 0 2.3841858000000002e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1372]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1373]" " -type \"float3\" 0 -2.3841858000000002e-07 5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1374]" " -type \"float3\" 0 -2.3841858000000002e-07 -4.1723251000000004e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1375]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1376]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1377]" " -type \"float3\" 0 -2.3841858000000002e-07 1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1378]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1379]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1380]" " -type \"float3\" 0 4.7683716000000005e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1381]" " -type \"float3\" 0 -4.7683716000000005e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1382]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1383]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1384]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1385]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1386]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1387]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1388]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1389]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1390]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1391]" " -type \"float3\" 0 1.1920929000000001e-07 -3.5762787000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1392]" " -type \"float3\" 0 2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1393]" " -type \"float3\" 0 -3.5762787000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1394]" " -type \"float3\" -4.7683716000000005e-07 0 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1395]" " -type \"float3\" 0 -1.1920929000000001e-07 1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1396]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.6822089999999998e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1397]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1398]" " -type \"float3\" 0 -4.7683716000000005e-07 -1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1399]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1400]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1401]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1402]" " -type \"float3\" 0 2.3841858000000002e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1403]" " -type \"float3\" 0 4.7683716000000005e-07 1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1404]" " -type \"float3\" 0 -4.7683716000000005e-07 -3.6507844999999997e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1405]" " -type \"float3\" 0 0 2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1406]" " -type \"float3\" 0 2.3841858000000002e-07 -1.6391277000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1407]" " -type \"float3\" -4.7683716000000005e-07 -4.7683716000000005e-07 -1.5925616e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1408]" " -type \"float3\" -4.7683716000000005e-07 0 1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1409]" " -type \"float3\" 0 -4.7683716000000005e-07 -3.2782555e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1410]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1411]" " -type \"float3\" 0 0 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1412]" " -type \"float3\" 0 0 -7.4505806000000003e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1413]" " -type \"float3\" 0 0 2.9802322000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1414]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1415]" " -type \"float3\" 0 0 -1.2665987e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1416]" " -type \"float3\" 0 2.3841858000000002e-07 8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1417]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1418]" " -type \"float3\" 4.7683716000000005e-07 4.7683716000000005e-07 2.9802322000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1419]" " -type \"float3\" 0 -4.7683716000000005e-07 -4.4703483999999998e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1420]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1421]" " -type \"float3\" 0 0 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1422]" " -type \"float3\" 0 0 -8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1423]" " -type \"float3\" 0 0 8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1424]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1425]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.9802322000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1426]" " -type \"float3\" 0 4.7683716000000005e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1427]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1428]" " -type \"float3\" 0 2.3841858000000002e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1429]" " -type \"float3\" 0 2.3841858000000002e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1430]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1431]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1432]" " -type \"float3\" 0 2.3841858000000002e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1433]" " -type \"float3\" 0 0 -2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1434]" " -type \"float3\" 0 0 -1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1435]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1436]" " -type \"float3\" 0 4.7683716000000005e-07 3.5762787000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1437]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1438]" " -type \"float3\" 0 0 1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1439]" " -type \"float3\" 0 4.7683716000000005e-07 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1440]" " -type \"float3\" 0 0 8.3586200999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1441]" " -type \"float3\" 0 0 8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1442]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.2724270999999997e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1443]" " -type \"float3\" 0 -2.3841858000000002e-07 5.2154063999999999e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1444]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1445]" " -type \"float3\" 0 0 -7.4505806000000003e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1446]" " -type \"float3\" 0 0 8.9406967000000001e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1447]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1448]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.8312206000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1449]" " -type \"float3\" 0 -2.3841858000000002e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1450]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1451]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1452]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1453]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1454]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1455]" " -type \"float3\" 0 -4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1456]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1457]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1458]" " -type \"float3\" 0 3.5762787000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1459]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1460]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1461]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1462]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1463]" " -type \"float3\" 0 2.3841858000000002e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1464]" " -type \"float3\" 0 0 -1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1465]" " -type \"float3\" 0 -3.5762787000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1466]" " -type \"float3\" 0 5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1467]" " -type \"float3\" 0 2.9802322e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1468]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1469]" " -type \"float3\" 0 -2.3841858000000002e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1470]" " -type \"float3\" 0 1.1920929000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1471]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1472]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1473]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1474]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1475]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1476]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1477]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1478]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1479]" " -type \"float3\" 0 0 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1480]" " -type \"float3\" 0 -2.3841858000000002e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1481]" " -type \"float3\" 0 2.3841858000000002e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1482]" " -type \"float3\" 0 5.9604644999999993e-08 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1483]" " -type \"float3\" 0 -1.1920929000000001e-07 -3.5762787000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1484]" " -type \"float3\" 0 5.9604644999999993e-08 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1485]" " -type \"float3\" 0 2.9802322e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1486]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1487]" " -type \"float3\" 0 -5.9604644999999993e-08 2.9802322e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1488]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1489]" " -type \"float3\" 0 -5.9604644999999993e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1490]" " -type \"float3\" 0 1.7881393000000001e-07 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1491]" " -type \"float3\" 0 7.4505806000000003e-08 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1492]" " -type \"float3\" 0 0 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1493]" " -type \"float3\" 0 5.9604644999999993e-08 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1494]" " -type \"float3\" 0 2.0861626000000001e-07 1.1920929000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1495]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1496]" " -type \"float3\" 0 -2.3841858000000002e-07 1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1497]" " -type \"float3\" 0 7.4505806000000003e-08 5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1498]" " -type \"float3\" 0 0 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1499]" " -type \"float3\" 0 -1.7881393000000001e-07 -1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1500]" " -type \"float3\" 0 -1.6391277000000001e-07 -1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1501]" " -type \"float3\" 0 -2.6822089999999998e-07 5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1502]" " -type \"float3\" 0 -2.9802322000000001e-08 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1503]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1504]" " -type \"float3\" 0 8.9406967000000001e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1505]" " -type \"float3\" 0 -2.9802322000000001e-08 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1506]" " -type \"float3\" 0 2.3841858000000002e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1507]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1508]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1509]" " -type \"float3\" 0 -5.9604644999999993e-08 -2.9802322000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1510]" " -type \"float3\" 0 -8.9406967000000001e-08 8.9406967000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1511]" " -type \"float3\" 0 1.0430813000000001e-07 7.4505806000000003e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1512]" " -type \"float3\" 0 -9.6857547999999994e-08 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1513]" " -type \"float3\" 0 1.4901161e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1514]" " -type \"float3\" 0 1.4901161e-07 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1515]" " -type \"float3\" 0 -5.9604644999999993e-08 -1.7881393000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1516]" " -type \"float3\" 0 1.1175871e-07 -5.9604644999999993e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1517]" " -type \"float3\" 0.020753384 0.0013715476000000001 0.048465072999999997"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1518]" " -type \"float3\" 0 -2.2351741999999998e-08 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1519]" " -type \"float3\" 0 -2.3841858000000002e-07 1.1920929000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1520]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1521]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1522]" " -type \"float3\" 0 -1.1920929000000001e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1523]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1524]" " -type \"float3\" 0 2.3841858000000002e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1525]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1526]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1527]" " -type \"float3\" 0 7.4505806000000003e-08 -0.031619340000000003"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1528]" " -type \"float3\" 0 0 -2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1529]" " -type \"float3\" 0 -2.3096800000000001e-07 1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1530]" " -type \"float3\" -0.047528266999999999 -0.0031405538000000002 -0.017536580999999999"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1531]" " -type \"float3\" 0 -2.2351741999999998e-08 -8.9406967000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1532]" " -type \"float3\" 0 -1.4901161000000001e-08 -1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1533]" " -type \"float3\" 0 5.9604644999999993e-08 1.3411044999999999e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1534]" " -type \"float3\" 0 -6.5192579999999992e-08 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1535]" " -type \"float3\" -0.036063670999999999 -0.0023830830999999999 -0.038615704000000001"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1536]" " -type \"float3\" 0.028930187 0.0019113272000000001 -0.038106440999999998"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1537]" " -type \"float3\" 0 -6.7753717000000005e-08 -1.0430813000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1538]" " -type \"float3\" 0 -8.9406967000000001e-08 -8.9406967000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1539]" " -type \"float3\" 0 -5.9604644999999993e-08 4.4703483999999995e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1540]" " -type \"float3\" 0 -1.7881393000000001e-07 -1.3038516e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1541]" " -type \"float3\" 0 -1.1920929000000001e-07 -1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1542]" " -type \"float3\" 0 -1.1920929000000001e-07 1.1594966e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1543]" " -type \"float3\" 0 -1.1920929000000001e-07 -8.9406967000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1544]" " -type \"float3\" 0 5.9604644999999993e-08 -1.3411044999999999e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1545]" " -type \"float3\" 0 1.7881393000000001e-07 -4.4703483999999995e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1546]" " -type \"float3\" 0 0 -2.2351741999999998e-08"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1547]" " -type \"float3\" 0 1.7881393000000001e-07 -2.2351741999999998e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1548]" " -type \"float3\" 0 1.7881393000000001e-07 1.7136335e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1549]" " -type \"float3\" 0 5.9604644999999993e-08 -2.0861626000000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1550]" " -type \"float3\" 0 0 1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1551]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1552]" " -type \"float3\" 0 -1.1920929000000001e-07 -2.9802322000000001e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1553]" " -type \"float3\" 0 0 1.4901161e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1554]" " -type \"float3\" 0 2.3841858000000002e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1555]" " -type \"float3\" 0 1.1920929000000001e-07 -5.9604644999999993e-08"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1556]" " -type \"float3\" 0 0 -2.0861626000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1557]" " -type \"float3\" 0 0 1.7881393000000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1558]" " -type \"float3\" 0 -4.1723251000000004e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1559]" " -type \"float3\" 0 4.7683716000000005e-07 -9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1560]" " -type \"float3\" -4.7683716000000005e-07 -3.2782555e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1561]" " -type \"float3\" 0 -3.7997961000000001e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1562]" " -type \"float3\" 0 -4.0233135000000006e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1563]" " -type \"float3\" 0 -1.7881393000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1564]" " -type \"float3\" 0 4.0978193000000002e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1565]" " -type \"float3\" 0 -7.4505806000000003e-08 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1566]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1567]" " -type \"float3\" 0 -3.2782555e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1568]" " -type \"float3\" 0 -1.937151e-07 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1569]" " -type \"float3\" 0 8.9406967000000001e-08 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1570]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1571]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1572]" " -type \"float3\" 0 4.7683716000000005e-07 -9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1573]" " -type \"float3\" 0 -2.3841858000000002e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1574]" " -type \"float3\" -4.7683716000000005e-07 -2.3841858000000002e-07 4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1575]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1576]" " -type \"float3\" 0 -3.5762787000000001e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1577]" " -type \"float3\" 0 1.1920929000000001e-07 -9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1578]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1579]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1580]" " -type \"float3\" -4.7683716000000005e-07 -3.5762787000000001e-07 9.536743200000001e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1581]" " -type \"float3\" 0 -2.3841858000000002e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1582]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1583]" " -type \"float3\" 0 4.7683716000000005e-07 -9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1584]" " -type \"float3\" 0 1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1585]" " -type \"float3\" 0 3.5762787000000001e-07 -9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1586]" " -type \"float3\" 0 2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1587]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1588]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1589]" " -type \"float3\" 0 -1.1920929000000001e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1590]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1591]" " -type \"float3\" 0 -2.3841858000000002e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1592]" " -type \"float3\" 0 -4.7683716000000005e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1593]" " -type \"float3\" 0 -1.1920929000000001e-07 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1594]" " -type \"float3\" -4.7683716000000005e-07 0 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1595]" " -type \"float3\" -4.7683716000000005e-07 -1.1920929000000001e-07 0"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1596]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1597]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1598]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1599]" " -type \"float3\" 0 0 9.536743200000001e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1600]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1601]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1602]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1603]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1604]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1605]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1606]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1607]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1608]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1609]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1610]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1611]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1612]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1613]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1614]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1615]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1616]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1617]" " -type \"float3\" 4.7683716000000005e-07 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1618]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1619]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1620]" " -type \"float3\" 0 -4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1621]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1622]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1623]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1624]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1625]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1626]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1627]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1628]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1629]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1630]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1631]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1632]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1633]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1634]" " -type \"float3\" 0 4.7683716000000005e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1635]" " -type \"float3\" 0 4.7683716000000005e-07 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1636]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1637]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1638]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1639]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1640]" " -type \"float3\" 0 -2.3841858000000002e-07 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1641]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1642]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1643]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1644]" " -type \"float3\" 0 0 -2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1645]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1646]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1647]" " -type \"float3\" 0 4.7683716000000005e-07 -2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1648]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1649]" " -type \"float3\" 0 -4.7683716000000005e-07 2.3841858000000002e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1650]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1651]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1652]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1653]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1654]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1655]" " -type \"float3\" 0 4.7683716000000005e-07 -4.7683716000000005e-07"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1656]" " -type \"float3\" 0 0 4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1657]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1658]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1659]" " -type \"float3\" 0 0 -4.7683716000000005e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1660]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1661]" " -type \"float3\" 0 0 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1662]" " -type \"float3\" 0 0 2.3841858000000002e-07"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_logShape" 
+		"pnts[1663]" " -type \"float3\" 0 0 0"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:fallen_log.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[3]" ""
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:fallenTree_latest:fallen_log|forest_golem_SET_latest:fallenTree_latest:ground.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[4]" ""
+		"forest_golem_SET_latest:lilyBush_latestRN" 3
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:lilyBush_latest:LilyBush" 
+		"visibility" " 1"
+		2 "forest_golem_SET_latest:lilyBush_latest:lily_latest:layer1" "displayOrder" 
+		" 5"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:lilyBush_latest:LilyBush.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[12]" ""
+		"forest_golem_SET_latest:roots_latestRN2" 2
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest2:RootsCntrl" 
+		"visibility" " 1"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest2:RootsCntrl.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[7]" ""
+		"forest_golem_SET_latest:smallLavenderClump_latestRN" 2
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:smallLavenderClump_latest:SmallLavenderClump" 
+		"visibility" " 1"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:smallLavenderClump_latest:SmallLavenderClump.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[14]" ""
+		"forest_golem_SET_latestRN" 14
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "overrideDisplayType" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "overrideLevelOfDetail" " 0"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "overrideShading" " 1"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "overrideTexturing" " 1"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "overridePlayback" " 1"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "overrideEnabled" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "overrideVisibility" " 1"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "hideOnPlayback" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "overrideRGBColors" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "overrideColor" " 0"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET" "overrideColorRGB" " -type \"float3\" 0 0 0"
+		
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:LIGHTING|forest_golem_SET_latest:PxrDiskLight|forest_golem_SET_latest:PxrDiskLightShape" 
+		"color" " -type \"float3\" 0.50980002000000002 0.41769999000000002 0.7101"
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:LIGHTING|forest_golem_SET_latest:DomeLight|forest_golem_SET_latest:DomeLightShape" 
+		"color" " -type \"float3\" 0.059700001000000003 0.041200001 0.235"
+		2 "forest_golem_SET_latest:layer1" "displayOrder" " 4"
+		"forest_golem_SET_latest:roots_latestRN4" 2
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest4:RootsCntrl" 
+		"visibility" " 1"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest4:RootsCntrl.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[9]" ""
+		"forest_golem_SET_latest:roots_latestRN" 2
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest:RootsCntrl" 
+		"visibility" " 1"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest:RootsCntrl.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[5]" ""
+		"forest_golem_SET_latest:smallLavenderClump_latestRN1" 2
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:smallLavenderClump_latest1:SmallLavenderClump" 
+		"visibility" " 1"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:smallLavenderClump_latest1:SmallLavenderClump.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[15]" ""
+		"forest_golem_SET_latest:roots_latestRN1" 2
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest1:RootsCntrl" 
+		"visibility" " 1"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest1:RootsCntrl.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[6]" ""
+		"forest_golem_SET_latest:lilyBush_latestRN1" 3
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:lilyBush_latest1:LilyBush" 
+		"visibility" " 1"
+		2 "forest_golem_SET_latest:lilyBush_latest1:lily_latest:layer1" "displayOrder" 
+		" 6"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:lilyBush_latest1:LilyBush.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[13]" ""
+		"forest_golem_SET_latest:roots_latestRN5" 2
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest5:RootsCntrl" 
+		"visibility" " 1"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest5:RootsCntrl.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[10]" ""
+		"forest_golem_SET_latest:roots_latestRN3" 2
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest3:RootsCntrl" 
+		"visibility" " 1"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest3:RootsCntrl.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[8]" ""
+		"forest_golem_SET_latest:roots_latestRN6" 2
+		2 "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest6:RootsCntrl" 
+		"visibility" " 1"
+		5 4 "forest_golem_SET_latestRN" "|forest_golem_SET_latest:Forest_Golem_SET|forest_golem_SET_latest:roots_latest6:RootsCntrl.drawOverride" 
+		"forest_golem_SET_latestRN.placeHolderList[11]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode rmanGlobals -s -n "rmanGlobals";
@@ -467,7 +4132,7 @@ createNode rmanGlobals -s -n "rmanGlobals";
 	setAttr ".ihi" 2;
 	setAttr ".nds" 0;
 	setAttr ".hider_minSamples" 0;
-	setAttr ".hider_maxSamples" 128;
+	setAttr ".hider_maxSamples" 32;
 	setAttr ".ri_pixelVariance" 0.0099999997764825821;
 	setAttr ".hider_darkfalloff" 0.02500000037252903;
 	setAttr ".hider_incremental" yes;
@@ -544,8 +4209,8 @@ createNode rmanGlobals -s -n "rmanGlobals";
 	setAttr ".ribFileFormat" -type "string" "<camera><layer>.<f4>.rib";
 	setAttr ".version" 1;
 	setAttr ".take" 1;
-	setAttr ".imageOutputDir" -type "string" "<ws>/images/<scene>_v<version>_t<take>";
-	setAttr ".ribOutputDir" -type "string" "<ws>/renderman/rib/<scene>/v<version>_t<take>";
+	setAttr ".imageOutputDir" -type "string" "/Users/ashnachoudhury/Desktop/RENDERS/LOG";
+	setAttr ".ribOutputDir" -type "string" "/Users/ashnachoudhury/Desktop/RENDERS/LOG";
 	setAttr -s 10 ".UserTokens";
 	setAttr ".UserTokens[0].userTokenKeys" -type "string" "";
 	setAttr ".UserTokens[0].userTokenValues" -type "string" "";
@@ -612,7 +4277,7 @@ createNode reference -n "sharedReferenceNode";
 		"sharedReferenceNode";
 createNode reference -n "earthGolem_RIGRN";
 	rename -uid "1175E4F4-F648-7F81-D076-BABD51881CB4";
-	setAttr -s 64 ".phl";
+	setAttr -s 80 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -677,25 +4342,74 @@ createNode reference -n "earthGolem_RIGRN";
 	setAttr ".phl[62]" 0;
 	setAttr ".phl[63]" 0;
 	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"earthGolem_RIGRN"
-		"earthGolem_RIG:earthGolem_latestRN" 0
+		"earthGolem_RIG:earthGolem_latestRN" 1
+		3 "earthGolem_RIG:earthGolem_latest:mouth_angry.inputTarget[0].vertex[0]" 
+		"|earthGolem_RIG:earthGolem_latest:earthGolem|earthGolem_RIG:earthGolem_latest:body|earthGolem_RIG:earthGolem_latest:bodyShape.tweakLocation" 
+		""
 		"earthGolem_RIGRN" 0
-		"earthGolem_RIG:earthGolem_latestRN" 6
+		"earthGolem_RIG:earthGolem_latestRN" 27
 		2 "|earthGolem_RIG:earthGolem_latest:earthGolem|earthGolem_RIG:earthGolem_latest:eyes" 
-		"visibility" " 0"
+		"visibility" " 1"
 		2 "|earthGolem_RIG:earthGolem_latest:earthGolem|earthGolem_RIG:earthGolem_latest:stem" 
-		"visibility" " 0"
+		"visibility" " 1"
 		2 "|earthGolem_RIG:earthGolem_latest:earthGolem|earthGolem_RIG:earthGolem_latest:leaf" 
-		"visibility" " 0"
+		"visibility" " 1"
+		2 "earthGolem_RIG:earthGolem_latest:Zbrush_Sculpt" "displayOrder" " 2"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "w[0:5]" " -s 6 0 0 0 0 0.72625697 0.77094971999999995"
+		
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight" " -s 6"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[0]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[1]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[2]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[3]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[4]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:eyes_basic" "weight[5]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:mouth_closed" "weight[0]" " 0"
+		2 "earthGolem_RIG:earthGolem_latest:mouth_closed" "weight[0]" " -av"
+		2 "earthGolem_RIG:earthGolem_latest:mouth_angry" "envelope" " -av 0"
+		2 "earthGolem_RIG:earthGolem_latest:mouth_angry" "w[0:5]" " -s 6 1 1 1 0.63687152000000002 0.70391059 0.37988826999999997"
+		
 		2 "earthGolem_RIG:earthGolem_latest:mouth_angry" "inputTarget[0].sculptTargetIndex" 
 		" -1"
 		2 "earthGolem_RIG:earthGolem_latest:mouth_angry" "inputTarget[0].sculptInbetweenWeight" 
 		" 1"
-		3 "earthGolem_RIG:earthGolem_latest:mouth_angry.inputTarget[0].vertex[0]" 
-		"|earthGolem_RIG:earthGolem_latest:earthGolem|earthGolem_RIG:earthGolem_latest:body|earthGolem_RIG:earthGolem_latest:bodyShape.tweakLocation" 
-		""
-		"earthGolem_RIGRN" 145
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:earthGolem_latest:earthGolem.drawOverride" 
+		"earthGolem_RIGRN.placeHolderList[1]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[0]" 
+		"earthGolem_RIGRN.placeHolderList[2]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[1]" 
+		"earthGolem_RIGRN.placeHolderList[3]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[2]" 
+		"earthGolem_RIGRN.placeHolderList[4]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[3]" 
+		"earthGolem_RIGRN.placeHolderList[5]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[4]" 
+		"earthGolem_RIGRN.placeHolderList[6]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:eyes_basic.weight[5]" 
+		"earthGolem_RIGRN.placeHolderList[7]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:mouth_closed.weight[0]" 
+		"earthGolem_RIGRN.placeHolderList[8]" ""
+		5 4 "earthGolem_RIGRN" "earthGolem_RIG:earthGolem_latest:mouth_angry.envelope" 
+		"earthGolem_RIGRN.placeHolderList[9]" ""
+		"earthGolem_RIGRN" 190
 		0 "|earthGolem_RIGRNfosterParent1|leftArm_ik1_parentConstraint1" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"-s -r "
 		0 "|earthGolem_RIGRNfosterParent1|rightArm_ik1_parentConstraint1" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
@@ -704,21 +4418,21 @@ createNode reference -n "earthGolem_RIGRN";
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		1 |earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1 
 		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
-		2 "|earthGolem_RIG:rightArm_ik" "translate" " -type \"double3\" 10.60666784909456517 11.54578120768480254 2.06014195890997254"
+		2 "|earthGolem_RIG:rightArm_ik" "translate" " -type \"double3\" 5.9825200000000045 1.4917817514235665 0.13842593680602411"
 		
 		2 "|earthGolem_RIG:rightArm_ik" "translateX" " -av"
 		2 "|earthGolem_RIG:rightArm_ik" "translateY" " -av"
 		2 "|earthGolem_RIG:rightArm_ik" "translateZ" " -av"
-		2 "|earthGolem_RIG:SPINE_IK" "translate" " -type \"double3\" 1.18254521335887119 10.74445180309698955 4.41608221665823297"
+		2 "|earthGolem_RIG:SPINE_IK" "translate" " -type \"double3\" -0.0044917426599718584 6.53848530633166369 1.62622322317630896"
 		
-		2 "|earthGolem_RIG:SPINE_IK" "rotate" " -type \"double3\" 22.84785004796784946 -13.49655774537895425 105.16444444248719492"
+		2 "|earthGolem_RIG:SPINE_IK" "rotate" " -type \"double3\" 0 -3.8835976042210798 89.99999999999997158"
 		
 		2 "|earthGolem_RIG:Master_CTRL" "translate" " -type \"double3\" 0 0 0.093868613172169546"
 		
 		2 "|earthGolem_RIG:Master_CTRL" "rotate" " -type \"double3\" 0 0 0"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "visibility" " -av 1"
 		
-		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "translate" " -type \"double3\" 1.69659234953748506 -1.81943771673307708 2.14382749249566995"
+		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "translate" " -type \"double3\" 0 -6.30825198080377625 0"
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "translateX" " -av"
 		
@@ -726,7 +4440,7 @@ createNode reference -n "earthGolem_RIGRN";
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "translateZ" " -av"
 		
-		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "rotate" " -type \"double3\" 13.02750207180647912 29.07768346262719561 6.415761324354599"
+		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "rotate" " -type \"double3\" 5.14301970756733606 0 0"
 		
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "rotateY" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL" "rotateX" " -av"
@@ -747,8 +4461,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL" 
 		"translateZ" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL" 
-		"rotate" " -type \"double3\" -15.02868649918648458 -0.70100931491421192 -0.14595088049511815"
-		
+		"rotate" " -type \"double3\" 36.29572728309555174 0 0"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL" 
 		"rotateY" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL" 
@@ -766,8 +4479,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"visibility" " -av 1"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
-		"translate" " -type \"double3\" -2.83758993192110243 4.63037294631365448 -1.83206214892954167"
-		
+		"translate" " -type \"double3\" 0 0 1.73909549197745683"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"translateX" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
@@ -775,8 +4487,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"translateZ" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
-		"rotate" " -type \"double3\" -100.5115925943230053 -6.94586897243172352 -22.82462911975279951"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"rotateX" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
@@ -792,12 +4503,11 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
 		"scaleZ" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1" 
-		"blendParent1" " -av -k 1 1"
+		"blendParent1" " -av -k 1 0"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
 		"visibility" " -av 1"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
-		"translate" " -type \"double3\" 2.18988457803008796 4.12158505927078078 2.89265986452893786"
-		
+		"translate" " -type \"double3\" 0 0 1.73909549197745683"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
 		"translateX" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
@@ -805,8 +4515,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
 		"translateZ" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
-		"rotate" " -type \"double3\" -52.92185787684570641 42.84341645814316735 34.38575860581445909"
-		
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
 		"rotateX" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1" 
@@ -835,8 +4544,7 @@ createNode reference -n "earthGolem_RIGRN";
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL" 
 		"translateZ" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL" 
-		"rotate" " -type \"double3\" 18.20923887097594118 24.0004229691050206 3.78679622841915409"
-		
+		"rotate" " -type \"double3\" 14.99742619868442262 0 0"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL" 
 		"rotateX" " -av"
 		2 "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL" 
@@ -854,466 +4562,536 @@ createNode reference -n "earthGolem_RIGRN";
 		"scaleZ" " -av"
 		2 "|earthGolem_RIG:rightArm_PV" "translate" " -type \"double3\" 0 0 0"
 		2 "|earthGolem_RIG:leftArm_PV" "translate" " -type \"double3\" 0 0 0"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"instObjGroups.objectGroups" " -s 14"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet" " -s 2"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[0].colorName" " -type \"string\" \"SculptFreezeColorTemp\""
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[0].clamped" " 0"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[0].representation" " 4"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[1].colorName" " -type \"string\" \"SculptMaskColorTemp\""
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[1].clamped" " 0"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"colorSet[1].representation" " 4"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"useMeshSculptCache" " 0"
+		2 "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed" 
+		"computeFromSculptCache" " 0"
+		2 "earthGolem_RIG:tweak1" "vlist[0].vertex" " -s 4028"
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[0:165]" " -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[166:331]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[332:497]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[498:663]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[664:829]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[830:995]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[996:1161]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[1162:1327]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[1328:1493]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[1494:1659]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[1660:1825]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[1826:1991]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[1992:2157]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[2158:2323]" (" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.1175870999999999e-08 0 0 0 0 0 3.7252903000000002e-09 0 4.6566128999999998e-10 3.7252903000000002e-09 0 0 0 0 0 0 0 2.7939677000000001e-09 -3.7252903000000002e-09 0 -1.8626450999999999e-09 3.7252903000000002e-09 0 0 0 0 0 0 0 0 5.5879354000000002e-09 0 0 1.8626450999999999e-09 0 0 0 0 0 0 0 0 -9.3132257000000002e-10 0 -1.8626450999999999e-09 0 0 0 0 0 0 0 0 0 0 0 0 2.9103829999999999e-10 0 0 0 0 0 0 0 0 1.4551914999999999e-09 0 0 -9.3132257000000002e-10 0 0 0 0 0 0 0 0 -3.7252903000000002e-09 0 9.3132257000000002e-10 3.7252903000000002e-09 0 0 0 0 0 0 0 0 -1.3969838999999999e-09 0"
+		+ " 4.6566128999999998e-10 -9.3132257000000002e-10 0 0 0 0 0 0 0 0 -2.0954758000000002e-09 1.8626450999999999e-09 0 -1.1641532000000001e-09 -9.3132257000000002e-10 0 0 0 0 0 0 0 -3.7252903000000002e-09 0 -9.3132257000000002e-10 6.9849192999999995e-10 0 0 0 0 0 0 0 -4.6566128999999998e-10 0 0 -9.3132257000000002e-10 4.6566128999999998e-10 0 0 0 0 0 0 0 0 -1.1175870999999999e-08 0 0 0 0 0 0 0 -9.3132257000000002e-10 7.4505806000000003e-09 0 0 0 0 0 -7.4505806000000003e-09 0 0 0 0 0 -3.7252903000000002e-09 0 0 0 0 1.8626450999999999e-09 -2.3283064000000002e-10 0 0 0 0 0 5.5879354000000002e-09 -4.6566128999999998e-10 0 0 0 0 -9.3132257000000002e-10 0 0 0 0 0 5.9662851999999996e-10 0 0 0 0 -1.1641532000000001e-10 -1.9790604999999997e-09 -1.1641532000000001e-10 0 0 0 0 1.2805685e-09 0 0 0 0 -9.3132257000000002e-10 9.3132257000000002e-10 0 0 0 0 0 0 0 0 0 0 0 -1.7462298e-10 0 -2.3283064000000002e-10 1.2805685e-09 0 4.6566128999999998e-10 -4.6566128999999998e-10 0 0 0 0 0 0 0 0 0 0 0 3.7252903000000002e-09 0 0 2.3283064"
+		+ "000000003e-09 0 4.6566128999999998e-10 4.6566128999999998e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.5611371e-09 3.7252903000000002e-09 -2.3283064000000002e-10 -2.5611371e-09 -3.7252903000000002e-09 0 0 0 0 0 0 0 0 0 4.6566128999999998e-10 -2.3283064000000003e-09 0 0 -8.1490725000000009e-10 0 -4.6566128999999998e-10 -1.8626450999999999e-09 -3.7252903000000002e-09 0 0 0 0 0 0"
+		)
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[2324:2489]" (" -9.3132257000000002e-10 4.6566128999999998e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.1641532000000001e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.1641532000000001e-10 0 -4.6566128999999998e-10 -3.7252903000000002e-09 0 0 0 0 4.6566128999999998e-10 -3.7252903000000002e-09 0 0 0 0 9.3132257000000002e-10 3.7252903000000002e-09 0 0 0 0 1.8626450999999999e-09 -5.8207661000000002e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.0477379000000001e-09 4.6566128999999998e-10 0 0 0 0 -3.4924597e-10 1.8626450999999999e-09 0 0 0 0 -2.3283064000000002e-10 0 0 0 0 0 -9.3132257000000002e-10 2.3283064000000002e-10 0 0 0 0 1.8626450999999999e-09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "
+		+ "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		)
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[2490:2655]" (" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.1641532000000001e-10 0 0 0 0 0 9.3132257000000002e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.3283064000000002e-10 0 0 -3.7834979999999998e-10 0 0 0 0 0 0 0 0 0 0 0 -2.3865140999999999e-09 0 0 0 0 0 1.5279510999999999e-10 -4.6566128999999998e-10 0 0 0 0 0 0 0 0 0 0 4.6566128999999998e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4.6566128999999998e-10 0 0 0 0 -1.1641532000000001e-10 -3.7252903000000002e-09 0 0 0 0 0 -2.7939677000000001e-09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4.6566128999999998e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.5611371e-09 0 0 0 0 0 -8.6147337999999992e-09 0 0 0 0 0 8.2945916999999997e-10 -1.8626450"
+		+ "999999999e-09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6.9849192999999995e-10 0 0 4.6566128999999998e-10 1.1641532000000001e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		)
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[2656:2821]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[2822:2987]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[2988:3153]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[3154:3319]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[3320:3485]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[3486:3651]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[3652:3817]" (" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.3283064000000002e-10 0 0 0 9.3132257000000002e-10 0 0 -1.8626450999999999e-09 0 0 -9.3132257000000002e-10 0 0 -2.3283064000000002e-10 0 0 2.3283064000000002e-10 0 0 -1.2951204999999999e-09 -4.6566128999999998e-10 0 0 4.6566128999999998e-10 0 -4.6566128999999998e-10 -1.1641532000000001e-10 0 1.1641532000000001e-10 0 0 3.7834979999999998e-10 0 0 2.3283064000000002e-10 0 0 -1.8626450999999999e-09 0 1.1641532000000001e-10 1.1641532000000001e-10 0 0 0 -2.3283064000000002e-10 -1.1641532000000001e-10 1.1641532000"
+		+ "000001e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.1641532000000001e-10 0 0 0 0 0 0 0 0 0 0 -1.1641532000000001e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		)
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[3818:3983]" (" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.3283064000000002e-10 0 0 2.3283064000000002e-10 0 0 -9.3132257000000002e-10 0 1.1641532000000001e-10 -9.3132257000000002e-10 0 0 -4.6566128999999998e-10 0 -1.1641532000000001e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 2.3283064000000002e-10 0 4.292815e-10 -1.1641532000000001e-10 0 -2.9103829999999999e-10 1.1641532000000001e-10 0 0 0 0 -2.6193447e-10 0 0 0 0 -4.6566128999999998e-10 -2.3283064000000002e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9.3132257000000002e-10 0 0 0 1.8626450999999999e-09 0 2.3283064000000002e-10 -1.8626450999999999e-09 0 -4.6566128999999998e-10 0 0 2.3283064000000002e-10 9.3132257000000002e-10 0 2.3283064000000002e-10 -6.9849192999999995e-10 0 2.3283064000000002e-10 0 0 0 2.3283064000000002e-10 0 0 -2.3283064000000002e-10 0 0 6.2573234999999999e-10 -9.3132257000000002e-10 0 -2.1682353999999997e-09 2.3283064000000002e-10 0 9.3132257000000002e-10 -1."
+		+ "1641532000000001e-10 0 0 0 0 -5.8207661000000002e-10 0 0 4.6566128999999998e-10 0 -1.8626450999999999e-09 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4.6566128999999998e-10 0 0 9.3132257000000002e-10 0 -1.8626450999999999e-09 1.8626450999999999e-09 0 0 -1.8626450999999999e-09 0 0 1.8626450999999999e-09 0 0 5.5879354000000002e-09 0 2.3283064000000002e-10 -1.8626450999999999e-09 0 0 0 0 -4.6566128999999998e-10 0 0 0 -4.6566128999999998e-10 0 1.1641532000000001e-10 9.3132257000000002e-10 0 0 -2.6921043e-10 9.3132257000000002e-10 0 -1.8626450999999999e-09 2.3283064000000002e-10 0 6.4028426999999998e-10 -1.1641532000000001e-10 0 0 0 2.3283064000000002e-10 3.4924597e-10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		+ " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		)
+		2 "earthGolem_RIG:tweak1" "vl[0].vt[3984:4027]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		
+		3 "earthGolem_RIG:skinCluster1.outputGeometry[0]" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.inMesh" 
+		""
+		3 "earthGolem_RIG:tweak1.vlist[0].vertex[0]" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.tweakLocation" 
+		""
 		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.rotateY" 
-		"earthGolem_RIGRN.placeHolderList[1]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.rotateX" 
-		"earthGolem_RIGRN.placeHolderList[2]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.rotateZ" 
-		"earthGolem_RIGRN.placeHolderList[3]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateX" 
-		"earthGolem_RIGRN.placeHolderList[4]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateY" 
-		"earthGolem_RIGRN.placeHolderList[5]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateZ" 
-		"earthGolem_RIGRN.placeHolderList[6]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.visibility" 
-		"earthGolem_RIGRN.placeHolderList[7]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleX" 
-		"earthGolem_RIGRN.placeHolderList[8]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleY" 
-		"earthGolem_RIGRN.placeHolderList[9]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleZ" 
 		"earthGolem_RIGRN.placeHolderList[10]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.rotateX" 
 		"earthGolem_RIGRN.placeHolderList[11]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.rotateZ" 
 		"earthGolem_RIGRN.placeHolderList[12]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateX" 
 		"earthGolem_RIGRN.placeHolderList[13]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateY" 
 		"earthGolem_RIGRN.placeHolderList[14]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.translateZ" 
 		"earthGolem_RIGRN.placeHolderList[15]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.visibility" 
 		"earthGolem_RIGRN.placeHolderList[16]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.visibility" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleX" 
 		"earthGolem_RIGRN.placeHolderList[17]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleY" 
 		"earthGolem_RIGRN.placeHolderList[18]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL.scaleZ" 
 		"earthGolem_RIGRN.placeHolderList[19]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateY" 
 		"earthGolem_RIGRN.placeHolderList[20]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateX" 
 		"earthGolem_RIGRN.placeHolderList[21]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.rotateZ" 
 		"earthGolem_RIGRN.placeHolderList[22]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.visibility" 
 		"earthGolem_RIGRN.placeHolderList[23]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateOrder" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateX" 
 		"earthGolem_RIGRN.placeHolderList[24]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateOrder" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateY" 
 		"earthGolem_RIGRN.placeHolderList[25]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.translateZ" 
 		"earthGolem_RIGRN.placeHolderList[26]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleX" 
 		"earthGolem_RIGRN.placeHolderList[27]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleY" 
 		"earthGolem_RIGRN.placeHolderList[28]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotatePivot" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL.scaleZ" 
 		"earthGolem_RIGRN.placeHolderList[29]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotatePivotTranslate" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateX" 
 		"earthGolem_RIGRN.placeHolderList[30]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.blendParent1" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateY" 
 		"earthGolem_RIGRN.placeHolderList[31]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.blendParent1" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateZ" 
 		"earthGolem_RIGRN.placeHolderList[32]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.visibility" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateOrder" 
 		"earthGolem_RIGRN.placeHolderList[33]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleX" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotateOrder" 
 		"earthGolem_RIGRN.placeHolderList[34]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateX" 
 		"earthGolem_RIGRN.placeHolderList[35]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateY" 
 		"earthGolem_RIGRN.placeHolderList[36]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.parentInverseMatrix" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.translateZ" 
 		"earthGolem_RIGRN.placeHolderList[37]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateX" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotatePivot" 
 		"earthGolem_RIGRN.placeHolderList[38]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateY" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.rotatePivotTranslate" 
 		"earthGolem_RIGRN.placeHolderList[39]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateZ" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.blendParent1" 
 		"earthGolem_RIGRN.placeHolderList[40]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateOrder" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.blendParent1" 
 		"earthGolem_RIGRN.placeHolderList[41]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateOrder" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.visibility" 
 		"earthGolem_RIGRN.placeHolderList[42]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleX" 
 		"earthGolem_RIGRN.placeHolderList[43]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleY" 
 		"earthGolem_RIGRN.placeHolderList[44]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.scaleZ" 
 		"earthGolem_RIGRN.placeHolderList[45]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotatePivot" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:leftArm_ik1.parentInverseMatrix" 
 		"earthGolem_RIGRN.placeHolderList[46]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotatePivotTranslate" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateX" 
 		"earthGolem_RIGRN.placeHolderList[47]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.blendParent1" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateY" 
 		"earthGolem_RIGRN.placeHolderList[48]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.blendParent1" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateZ" 
 		"earthGolem_RIGRN.placeHolderList[49]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.visibility" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateOrder" 
 		"earthGolem_RIGRN.placeHolderList[50]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleX" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotateOrder" 
 		"earthGolem_RIGRN.placeHolderList[51]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateX" 
 		"earthGolem_RIGRN.placeHolderList[52]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateY" 
 		"earthGolem_RIGRN.placeHolderList[53]" ""
-		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.parentInverseMatrix" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.translateZ" 
 		"earthGolem_RIGRN.placeHolderList[54]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateX" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotatePivot" 
 		"earthGolem_RIGRN.placeHolderList[55]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateY" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.rotatePivotTranslate" 
 		"earthGolem_RIGRN.placeHolderList[56]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateZ" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.blendParent1" 
 		"earthGolem_RIGRN.placeHolderList[57]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.blendParent1" 
 		"earthGolem_RIGRN.placeHolderList[58]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateY" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.visibility" 
 		"earthGolem_RIGRN.placeHolderList[59]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateZ" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleX" 
 		"earthGolem_RIGRN.placeHolderList[60]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.visibility" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleY" 
 		"earthGolem_RIGRN.placeHolderList[61]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.scaleX" 
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.scaleZ" 
 		"earthGolem_RIGRN.placeHolderList[62]" ""
-		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.scaleY" 
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:rightArm_ik1.parentInverseMatrix" 
 		"earthGolem_RIGRN.placeHolderList[63]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateX" 
+		"earthGolem_RIGRN.placeHolderList[64]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateY" 
+		"earthGolem_RIGRN.placeHolderList[65]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.rotateZ" 
+		"earthGolem_RIGRN.placeHolderList[66]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.visibility" 
+		"earthGolem_RIGRN.placeHolderList[67]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateX" 
+		"earthGolem_RIGRN.placeHolderList[68]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateY" 
+		"earthGolem_RIGRN.placeHolderList[69]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.translateZ" 
+		"earthGolem_RIGRN.placeHolderList[70]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.scaleX" 
+		"earthGolem_RIGRN.placeHolderList[71]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.scaleY" 
+		"earthGolem_RIGRN.placeHolderList[72]" ""
 		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:Master_CTRL|earthGolem_RIG:HIP_CTRL|earthGolem_RIG:Chest_CTRL|earthGolem_RIG:head_CTRL.scaleZ" 
-		"earthGolem_RIGRN.placeHolderList[64]" "";
+		"earthGolem_RIGRN.placeHolderList[73]" ""
+		5 3 "earthGolem_RIGRN" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.instObjGroups.objectGroups[6]" 
+		"earthGolem_RIGRN.placeHolderList[74]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.instObjGroups.objectGroups[6].objectGroupId" 
+		"earthGolem_RIGRN.placeHolderList[75]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.instObjGroups.objectGroups[6].objectGrpColor" 
+		"earthGolem_RIGRN.placeHolderList[76]" ""
+		5 4 "earthGolem_RIGRN" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.inMesh" 
+		"earthGolem_RIGRN.placeHolderList[77]" ""
+		5 0 "earthGolem_RIGRN" "earthGolem_RIG:tweak1.vlist[0].vertex[0]" "|earthGolem_RIG:earthGolem_latestRNfosterParent1|earthGolem_RIG:bodyShapeDeformed.tweakLocation" 
+		"earthGolem_RIGRN.placeHolderList[78]" "earthGolem_RIGRN.placeHolderList[79]" "earthGolem_RIG:bodyShapeDeformed.twl"
+		
+		5 3 "earthGolem_RIGRN" "earthGolem_RIG:skinCluster1.outputGeometry[0]" 
+		"earthGolem_RIGRN.placeHolderList[80]" "earthGolem_RIG:bodyShapeDeformed.i";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "HIP_CTRL_translateX";
 	rename -uid "9FF5D12D-3E4D-B791-8BDE-A7929AC1A2B8";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 22 0 30 0 40 0 50 0 58 0 78.556535714285715 0
-		 96.383482993197276 0 105.38348299319728 0 113.38348299319728 0 121.38348299319728 0
-		 128.38348299319728 1.6965923495374851 132.38348299319728 1.6965923495374851;
+	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 22 0 30 0 40 0 50 0 58 0 91 0 108 0
+		 117 0 125 0 133 0 140 1.6965923495374851 144 1.6965923495374851;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		0.85652232142857176 0.74278946995464823 0.375 0.375 0.33333333333333393 0.29166666666666607 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 0.85652232142857176 
-		0.74278946995464823 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "HIP_CTRL_translateY";
 	rename -uid "22F6CF7F-3844-AAA1-39AF-50BE85118EBB";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 -6.3082519808037762 14 -6.0063580125497289
 		 22 -6.007502702492892 30 -5.9398863752512323 40 -5.9086616824269287 50 -5.8938525304092524
-		 58 -6.3193157736826393 78.556535714285715 -1.3037997845819618 96.383482993197276 -1.3886453736463213
-		 105.38348299319728 -1.74634673246487 113.38348299319728 -1.8625055079801083 121.38348299319728 -1.6319565505357057
-		 128.38348299319728 -1.8194377167330771 132.38348299319728 -1.8194377167330771;
+		 58 -6.3193157736826393 91 -1.3037997845819618 108 -1.3886453736463213 117 -1.74634673246487
+		 125 -1.8625055079801083 133 -1.6319565505357057 140 -1.8194377167330771 144 -1.8194377167330771;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		0.85652232142857176 0.74278946995464823 0.375 0.375 0.33333333333333393 0.29166666666666607 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 -0.25453676719307872 -0.25086712994141674 
 		0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 0.85652232142857176 
-		0.74278946995464823 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 
-		0.16666666666666696 0.16666666666666696;
-	setAttr -s 14 ".koy[5:13]"  0 0 0 -0.12850382451333403 -0.22299300439237024 
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
+	setAttr -s 14 ".koy[5:13]"  0 0 0 -0.13475475910221812 -0.22299300439237024 
 		0 0 0 0;
 createNode animCurveTL -n "HIP_CTRL_translateZ";
 	rename -uid "809C1DBB-674C-BF93-0210-61994B5FD8A6";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 22 -0.0006557425843487126 30 -0.0007524849655055415
-		 40 -0.00041967569581845613 50 0 58 0 78.556535714285715 0 96.383482993197276 -0.090702559023249751
-		 105.38348299319728 1.7800920082366278 113.38348299319728 2.2016415137258258 121.38348299319728 1.2108320832942343
-		 128.38348299319728 2.14382749249567 132.38348299319728 2.14382749249567;
+		 40 -0.00041967569581845613 50 0 58 0 91 0 108 -0.090702559023249751 117 1.7800920082366278
+		 125 2.2016415137258258 133 1.2108320832942343 140 2.14382749249567 144 2.14382749249567;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		0.85652232142857176 0.74278946995464823 0.375 0.375 0.33333333333333393 0.29166666666666607 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 1.213593920867158 0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 0.85652232142857176 
-		0.74278946995464823 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 1.0787501518819174 0 0 0 0;
 createNode animCurveTU -n "HIP_CTRL_visibility";
 	rename -uid "0048A384-6B40-D27A-EECF-6F8C33A65910";
 	setAttr ".tan" 5;
-	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 78.556535714285715 1
-		 96.383482993197276 1 105.38348299319728 1 113.38348299319728 1 121.38348299319728 1
-		 128.38348299319728 1 132.38348299319728 1;
+	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 91 1 108 1
+		 117 1 125 1 133 1 140 1 144 1;
 	setAttr -s 14 ".kit[0:13]"  9 9 9 9 9 1 9 9 
 		9 9 1 9 9 9;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		0.85652232142857176 0.74278946995464823 0.375 0.375 0.33333333333333393 0.29166666666666607 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "HIP_CTRL_rotateX";
 	rename -uid "57B5A98C-5748-99EF-1616-DCB030107F57";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 5.1430197075673361 14 1.5725426592854526
-		 22 -0.21414008093178438 30 0.42348441381854007 40 -1.6119188530203781 50 1.1008530611022771
-		 58 0 78.556535714285715 9.506967581720648 96.383482993197276 0 105.38348299319728 15.405646446110506
-		 113.38348299319728 15.405646446110506 121.38348299319728 12.131855587718928 128.38348299319728 12.553424476356955
-		 132.38348299319728 13.027502071806479;
+		 22 -0.21414008093178438 30 0.42348441381854007 40 -1.6119188530203781 50 1.1008530611022773
+		 58 0 91 9.5069675817206498 108 0 117 15.405646446110506 125 15.405646446110506 133 12.131855587718928
+		 140 12.553424476356955 144 13.027502071806479;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		0.85652232142857176 0.74278946995464823 0.375 0.375 0.33333333333333393 0.29166666666666607 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0.0099476236880610119 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 0.85652232142857176 
-		0.74278946995464823 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0.0056843563931777428 0;
 createNode animCurveTA -n "HIP_CTRL_rotateY";
 	rename -uid "BA2DB555-D644-3A5D-5BBB-74AFCB381EF0";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 22 0 30 0 40 -1.1735533919559085
-		 50 0 58 0 78.556535714285715 0 96.383482993197276 0 105.38348299319728 0 113.38348299319728 0
-		 121.38348299319728 -20.379578606559328 128.38348299319728 24.986619437347311 132.38348299319728 29.077683462627196;
+		 50 0 58 0 91 0 108 0 117 0 125 0 133 -20.379578606559328 140 24.986619437347311 144 29.077683462627196;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		0.85652232142857176 0.74278946995464823 0.375 0.375 0.33333333333333393 0.29166666666666607 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0.3748633200428878 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 0.85652232142857176 
-		0.74278946995464823 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0.21420761145307954 0;
 createNode animCurveTA -n "HIP_CTRL_rotateZ";
 	rename -uid "D252A2A3-A54B-8F27-E3A6-9C9557BE2332";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 22 0 30 0 40 0.033022319915028749
-		 50 0 58 0 78.556535714285715 0 96.383482993197276 0 105.38348299319728 0 113.38348299319728 0
-		 121.38348299319728 -4.2810791141967988 128.38348299319728 5.3733518016488198 132.38348299319728 6.415761324354599;
+		 50 0 58 0 91 0 108 0 117 0 125 0 133 -4.2810791141967988 140 5.3733518016488198 144 6.415761324354599;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		0.85652232142857176 0.74278946995464823 0.375 0.375 0.33333333333333393 0.29166666666666607 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0.095515761208131419 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 0.85652232142857176 
-		0.74278946995464823 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0.054580434976075301 0;
 createNode animCurveTU -n "HIP_CTRL_scaleX";
 	rename -uid "CF723572-5C4A-6346-A4A3-35BF2F2EE50E";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 78.556535714285715 1
-		 96.383482993197276 1 105.38348299319728 1 113.38348299319728 1 121.38348299319728 1
-		 128.38348299319728 1 132.38348299319728 1;
+	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 91 1 108 1
+		 117 1 125 1 133 1 140 1 144 1;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		0.85652232142857176 0.74278946995464823 0.375 0.375 0.33333333333333393 0.29166666666666607 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 0.85652232142857176 
-		0.74278946995464823 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "HIP_CTRL_scaleY";
 	rename -uid "F64E4208-4845-B5AB-2CC1-53A47B694C9E";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 78.556535714285715 1
-		 96.383482993197276 1 105.38348299319728 1 113.38348299319728 1 121.38348299319728 1
-		 128.38348299319728 1 132.38348299319728 1;
+	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 91 1 108 1
+		 117 1 125 1 133 1 140 1 144 1;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		0.85652232142857176 0.74278946995464823 0.375 0.375 0.33333333333333393 0.29166666666666607 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 0.85652232142857176 
-		0.74278946995464823 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "HIP_CTRL_scaleZ";
 	rename -uid "5EE005E1-174A-8F61-3935-B1B5C443110B";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 78.556535714285715 1
-		 96.383482993197276 1 105.38348299319728 1 113.38348299319728 1 121.38348299319728 1
-		 128.38348299319728 1 132.38348299319728 1;
+	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 22 1 30 1 40 1 50 1 58 1 91 1 108 1
+		 117 1 125 1 133 1 140 1 144 1;
 	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 1 18 18 
 		18;
 	setAttr -s 14 ".kix[5:13]"  0.55314846931739592 0.33333333333333304 
-		0.85652232142857176 0.74278946995464823 0.375 0.375 0.33333333333333393 0.29166666666666607 
-		0.16666666666666696;
+		1.375 0.70833333333333348 0.375 0.375 0.33333333333333393 0.29166666666666607 0.16666666666666696;
 	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
-	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 0.85652232142857176 
-		0.74278946995464823 0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 
-		0.16666666666666696 0.16666666666666696;
+	setAttr -s 14 ".kox[5:13]"  0.56961936879696839 1.375 0.70833333333333348 
+		0.375 0.33333333333333304 0.33333333333333304 0.29166666666666607 0.16666666666666696 
+		0.16666666666666696;
 	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "rightArm_ik1_translateX";
 	rename -uid "33E92FFB-6E4C-D868-03D7-04833376D7C5";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 0 9 1.0861530960644301 16 -0.57864687662447167
-		 27 -0.023367822289434695 28 -0.22865114159667854 120.38348299319728 -0.13336544595740157
-		 126.38348299319728 2.2047078706320846 131.38348299319728 2.189884578030088;
+		 27 -0.023367822289434695 28 -0.22865114159667854 132 -0.13336544595740157 138 2.2047078706320846
+		 143 2.189884578030088;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 3.8493117913832195 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0.2858570869178309 0 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		3.8493117913832195 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 0 0 0.018565467180245643 0 0;
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 0 0 0.016491755014490246 0 0;
 createNode animCurveTL -n "rightArm_ik1_translateY";
 	rename -uid "1DCF2EB1-654A-4041-8891-3090F508AA23";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 0 9 6.4009507427303651 16 8.3169141499079569
-		 27 7.1993712239277015 28 7.0073378158194179 120.38348299319728 4.5752322337238391
-		 126.38348299319728 3.5724635046918252 131.38348299319728 4.1215850592707808;
+		 27 7.1993712239277015 28 7.0073378158194179 132 4.5752322337238391 138 3.5724635046918252
+		 143 4.1215850592707808;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 3.8493117913832195 0.25 0.20833333333333304;
-	setAttr -s 8 ".kiy[2:7]"  0 -1.2004449729144939 -0.028100675902129588 
-		-3.2253955933616179 0 0;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
+	setAttr -s 8 ".kiy[2:7]"  0 -1.2004449729144939 -0.024991799906703496 
+		-3.2475175305206334 0 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		3.8493117913832195 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 -0.10913136117404508 -2.5960383143017327 
-		-0.20947871776597485 0 0;
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 -0.10913136117404508 -2.5991471902971588 
+		-0.18735678060695962 0 0;
 createNode animCurveTL -n "rightArm_ik1_translateZ";
 	rename -uid "EFC15C8E-3847-AACF-7DA0-C09BA2549344";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 1.7390954919774568 9 0.35985447838937967
-		 16 3.3383231728149907 27 3.8250666657221077 28 4.3913194702887379 120.38348299319728 4.041607542804897
-		 126.38348299319728 3.8243232237198947 131.38348299319728 2.8926598645289379;
+		 16 3.3383231728149907 27 3.8250666657221077 28 4.3913194702887379 132 4.041607542804897
+		 138 3.8243232237198947 143 2.8926598645289379;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 3.8493117913832195 0.25 0.20833333333333304;
-	setAttr -s 8 ".kiy[2:7]"  0 0.96524660601760148 0 -0.53241750046317537 
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
+	setAttr -s 8 ".kiy[2:7]"  0 0.96524660601760148 0 -0.53606917857417902 
 		-0.626698733605069 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		3.8493117913832195 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 0.087749691456145737 0 -0.03457874610566785 
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 0.087749691456145737 0 -0.030927067994664176 
 		-0.52224894467089011 0;
 createNode animCurveTU -n "rightArm_ik1_visibility";
 	rename -uid "D75B450E-AC45-413A-2615-9DB8F10DC843";
 	setAttr ".tan" 5;
-	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 120.38348299319728 1
-		 126.38348299319728 1 131.38348299319728 1;
+	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132 1 138 1 143 1;
 	setAttr -s 8 ".kit[0:7]"  9 9 1 9 9 9 9 9;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 3.8493117913832195 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTA -n "rightArm_ik1_rotateX";
 	rename -uid "1DCEE4D0-6248-DE73-72F1-D2BD32DC9E71";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 0 9 -110.08364090832426 16 -151.23825969713272
-		 27 -92.103787712796404 28 -87.990031473710957 120.38348299319728 -17.160159659929747
-		 126.38348299319728 -50.622978297701707 131.38348299319728 -52.921857876845706;
+		 27 -92.103787712796404 28 -87.990031473710957 132 -17.160159659929747 138 -50.622978297701707
+		 143 -52.921857876845706;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 3.8493117913832195 0.25 0.20833333333333304;
-	setAttr -s 8 ".kiy[2:7]"  0 1.011899009505554 0.0140068995178494 
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
+	setAttr -s 8 ".kiy[2:7]"  0 1.011899009505554 0.012457267265833452 
 		0 -0.14444286394652794 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		3.8493117913832195 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 0.091990819045959599 1.2940061633946609 
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 0.091990819045959599 1.2955557956466768 
 		0 -0.12036905328877312 0;
 createNode animCurveTA -n "rightArm_ik1_rotateY";
 	rename -uid "75DDA994-4B4C-7019-6F0A-94B05F996ECE";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 0 9 -27.126314697352711 16 0 27 0.059578728854610928
-		 28 0 120.38348299319728 -49.930088524831511 126.38348299319728 36.821418701041488
-		 131.38348299319728 42.843416458143167;
+		 28 0 132 -49.930088524831511 138 36.821418701041488 143 42.843416458143167;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 3.8493117913832195 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 -0.0031195349479977322 0 0.37837327827289763 
 		0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		3.8493117913832195 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 0 -0.2881935038150325 0 0.31531106522741426 
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 0 -0.32443163459176355 0 0.31531106522741426 
 		0;
 createNode animCurveTA -n "rightArm_ik1_rotateZ";
 	rename -uid "3E6E4AE3-E747-42D5-5F83-1DBD423539A7";
 	setAttr ".tan" 18;
 	setAttr -s 8 ".ktv[0:7]"  2 0 9 9.4646131772512714 16 0 27 1.6214392426846154
-		 28 0 120.38348299319728 -67.736882959919996 126.38348299319728 28.611136614480984
-		 131.38348299319728 34.385758605814459;
+		 28 0 132 -67.736882959919996 138 28.611136614480984 143 34.385758605814459;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 3.8493117913832195 0.25 0.20833333333333304;
-	setAttr -s 8 ".kiy[2:7]"  0 0 -0.012963010666272987 0 0.36283020050462667 
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
+	setAttr -s 8 ".kiy[2:7]"  0 0 -0.011528867486614651 0 0.36283020050462667 
 		0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		3.8493117913832195 0.25 0.20833333333333304 0.20833333333333304;
-	setAttr -s 8 ".koy[2:7]"  0 0 -1.1975680754282632 0 0.30235850042052181 
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
+	setAttr -s 8 ".koy[2:7]"  0 0 -1.1990022186079214 0 0.30235850042052181 
 		0;
 createNode animCurveTU -n "rightArm_ik1_scaleX";
 	rename -uid "EB0CFB87-B147-DA64-15C8-CC9187AFE0D1";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 120.38348299319728 1
-		 126.38348299319728 1 131.38348299319728 1;
+	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132 1 138 1 143 1;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 3.8493117913832195 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		3.8493117913832195 0.25 0.20833333333333304 0.20833333333333304;
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
 	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "rightArm_ik1_scaleY";
 	rename -uid "E77E843C-8C4C-51FC-78CE-BBA2CCCA2EC3";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 120.38348299319728 1
-		 126.38348299319728 1 131.38348299319728 1;
+	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132 1 138 1 143 1;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 3.8493117913832195 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		3.8493117913832195 0.25 0.20833333333333304 0.20833333333333304;
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
 	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode animCurveTU -n "rightArm_ik1_scaleZ";
 	rename -uid "77B2E181-DB45-952B-CD8A-B7AE2625CB92";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 120.38348299319728 1
-		 126.38348299319728 1 131.38348299319728 1;
+	setAttr -s 8 ".ktv[0:7]"  2 1 9 1 16 1 27 1 28 1 132 1 138 1 143 1;
 	setAttr -s 8 ".kit[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kot[2:7]"  1 18 18 18 18 18;
 	setAttr -s 8 ".kix[2:7]"  0.87400683339796237 0.45833333333333337 
-		0.041666666666666741 3.8493117913832195 0.25 0.20833333333333304;
+		0.041666666666666741 4.333333333333333 0.25 0.20833333333333304;
 	setAttr -s 8 ".kiy[2:7]"  0 0 0 0 0 0;
 	setAttr -s 8 ".kox[2:7]"  0.73674442193429812 0.041666666666666741 
-		3.8493117913832195 0.25 0.20833333333333304 0.20833333333333304;
+		4.333333333333333 0.25 0.20833333333333304 0.20833333333333304;
 	setAttr -s 8 ".koy[2:7]"  0 0 0 0 0 0;
 createNode pairBlend -n "pairBlend1";
 	rename -uid "E0C63388-BE4C-F7E0-0489-20AF05F4F93E";
 createNode animCurveTU -n "rightArm_ik1_blendParent1";
 	rename -uid "E6396C34-E44C-9C63-50F9-68A6110A5154";
 	setAttr ".tan" 18;
-	setAttr -s 8 ".ktv[0:7]"  9 0 16 0 27 0 28 1 116.38348299319728 1
-		 120.38348299319728 0 126.38348299319728 0 131.38348299319728 0;
+	setAttr -s 8 ".ktv[0:7]"  9 0 16 0 27 0 28 1 128 1 132 0 138 0 143 0;
 createNode animCurveTA -n "leftArm_ik1_rotateX";
 	rename -uid "135D9D2D-E040-1139-5B5D-A584DF5625FF";
 	setAttr ".tan" 18;
@@ -1444,273 +5222,256 @@ createNode animCurveTA -n "Chest_CTRL_rotateX";
 	rename -uid "861EF009-8140-9A96-89B3-F69FDC3B0A67";
 	setAttr ".tan" 18;
 	setAttr -s 12 ".ktv[0:11]"  2 36.295727283095552 13 4.5098116151394647
-		 40 2.1377914329861496 54 0 70 4.5371318315098135 78.556535714285715 -10.604390642370724
-		 96.383482993197276 -7.8940860115613622 108.38348299319728 -22.318685063895391 116.38348299319728 -16.039224483755568
-		 121.38348299319728 -15.132561694504009 128.38348299319728 -15.046696130426959 132.38348299319728 -15.028686499186485;
+		 40 2.1377914329861496 54 0 70 4.5371318315098135 91 -10.604390642370724 108 -7.8940860115613622
+		 120 -22.318685063895391 128 -16.039224483755568 133 -15.132561694504009 140 -15.046696130426959
+		 144 -15.028686499186485;
 createNode animCurveTA -n "Chest_CTRL_rotateY";
 	rename -uid "55EBD59E-4E45-8E19-A854-739F0A8E8D75";
 	setAttr ".tan" 18;
 	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 -5.2321526814547887 54 -6.2049993438855244
-		 70 -1.8087453807302361 78.556535714285715 -1.7039542082651056 96.383482993197276 -1.7739446630082334
-		 108.38348299319728 2.2855789250078424 116.38348299319728 2.2855789250078438 121.38348299319728 -6.6757093306476687
-		 128.38348299319728 -2.8582941602092613 132.38348299319728 -0.70100931491421192;
+		 70 -1.8087453807302361 91 -1.7039542082651056 108 -1.7739446630082334 120 2.2855789250078424
+		 128 2.2855789250078438 133 -6.6757093306476687 140 -2.8582941602092613 144 -0.70100931491421192;
 createNode animCurveTA -n "Chest_CTRL_rotateZ";
 	rename -uid "B8AF5DFE-5A41-F5E0-2E8F-578EB5EC12A9";
 	setAttr ".tan" 18;
 	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 -0.19503801299825174 54 0 70 0.029495552846061181
-		 78.556535714285715 0.16738872558023465 96.383482993197276 -0.13720862052862445 108.38348299319728 -1.0828744319719166
-		 116.38348299319728 -1.0828744319719155 121.38348299319728 1.4664838081214921 128.38348299319728 0.4338536409133722
-		 132.38348299319728 -0.14595088049511815;
+		 91 0.16738872558023465 108 -0.13720862052862445 120 -1.0828744319719166 128 -1.0828744319719155
+		 133 1.4664838081214921 140 0.4338536409133722 144 -0.14595088049511815;
 createNode animCurveTU -n "Chest_CTRL_visibility";
 	rename -uid "BEDFB375-564D-0AAD-B411-3DAD7EDD7BED";
 	setAttr ".tan" 9;
-	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 78.556535714285715 1
-		 96.383482993197276 1 108.38348299319728 1 116.38348299319728 1 121.38348299319728 1
-		 128.38348299319728 1 132.38348299319728 1;
+	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 91 1 108 1 120 1
+		 128 1 133 1 140 1 144 1;
 	setAttr -s 12 ".kot[0:11]"  5 5 5 5 5 5 5 5 
 		5 5 5 5;
 createNode animCurveTL -n "Chest_CTRL_translateX";
 	rename -uid "AFB451F2-5941-1A7B-FF25-A498BB7DB682";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 78.556535714285715 0
-		 96.383482993197276 0 108.38348299319728 0 116.38348299319728 0 121.38348299319728 0
-		 128.38348299319728 0 132.38348299319728 0;
+	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 91 0 108 0 120 0
+		 128 0 133 0 140 0 144 0;
 createNode animCurveTL -n "Chest_CTRL_translateY";
 	rename -uid "66E957BD-7841-FA14-6083-CD80E49F2759";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 78.556535714285715 0
-		 96.383482993197276 0 108.38348299319728 0 116.38348299319728 0 121.38348299319728 0
-		 128.38348299319728 0 132.38348299319728 0;
+	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 91 0 108 0 120 0
+		 128 0 133 0 140 0 144 0;
 createNode animCurveTL -n "Chest_CTRL_translateZ";
 	rename -uid "C0232123-804A-6744-5772-7FBFDE5D10B9";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 78.556535714285715 0
-		 96.383482993197276 0 108.38348299319728 0 116.38348299319728 0 121.38348299319728 0
-		 128.38348299319728 0 132.38348299319728 0;
+	setAttr -s 12 ".ktv[0:11]"  2 0 13 0 40 0 54 0 70 0 91 0 108 0 120 0
+		 128 0 133 0 140 0 144 0;
 createNode animCurveTU -n "Chest_CTRL_scaleX";
 	rename -uid "78223E33-DC4C-779F-5C35-929113F26331";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 78.556535714285715 1
-		 96.383482993197276 1 108.38348299319728 1 116.38348299319728 1 121.38348299319728 1
-		 128.38348299319728 1 132.38348299319728 1;
+	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 91 1 108 1 120 1
+		 128 1 133 1 140 1 144 1;
 createNode animCurveTU -n "Chest_CTRL_scaleY";
 	rename -uid "C353C16D-9C47-1D63-8E9D-90BFE604A382";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 78.556535714285715 1
-		 96.383482993197276 1 108.38348299319728 1 116.38348299319728 1 121.38348299319728 1
-		 128.38348299319728 1 132.38348299319728 1;
+	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 91 1 108 1 120 1
+		 128 1 133 1 140 1 144 1;
 createNode animCurveTU -n "Chest_CTRL_scaleZ";
 	rename -uid "E07216C9-784D-7101-E00F-BD9CD41618B6";
 	setAttr ".tan" 18;
-	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 78.556535714285715 1
-		 96.383482993197276 1 108.38348299319728 1 116.38348299319728 1 121.38348299319728 1
-		 128.38348299319728 1 132.38348299319728 1;
+	setAttr -s 12 ".ktv[0:11]"  2 1 13 1 40 1 54 1 70 1 91 1 108 1 120 1
+		 128 1 133 1 140 1 144 1;
 createNode animCurveTA -n "head_CTRL_rotateX";
 	rename -uid "FAC67AF4-9D45-6101-0F15-B5B27AEFD93C";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 14.997426198684423 14 -36.234198077481402
 		 27 -33.954542081432734 37 -25.95316591003148 51 -4.8210816924728528 56 12.557248017150096
-		 70 29.630666126229119 78.556535714285715 17.521075671721974 96.383482993197276 22.289810414191656
-		 102.38348299319728 29.549515016163639 107.38348299319728 9.1185990778408481 112.38348299319728 3.840936361251444
-		 119.38348299319728 22.880109410137742 130.38348299319728 18.209238870975941;
+		 70 29.630666126229119 91 28.882996166264864 108 31.797054450369501 114 35.405121900903517
+		 119 9.1185990778408481 124 3.840936361251444 131 21.862332225657809 142 18.209238870975941;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 
-		0.20833333333333304 0.20833333333333393 0.29166666666666607 0.45833333333333393;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0.11936250883164035 0.49525627740488287 
-		0.15823590329029588 0 0 0.15707071705085907 0 -0.22434967176807596 0 0 0;
+		0.15823590329029588 0 0 0.084137115698890222 0 -0.27544948168865541 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 0.20833333333333304 
-		0.20833333333333393 0.29166666666666607 0.45833333333333393 0.45833333333333393;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0.036726925794350898 0.17687724193031545 
-		0.44306052921282796 0 0 0.052865153386076266 0 -0.22434967176807694 0 0 0;
+		0.44306052921282796 0 0 0.029695452599608308 0 -0.27544948168865657 0 0 0;
 createNode animCurveTA -n "head_CTRL_rotateY";
 	rename -uid "B5630DAD-2C43-C580-7A27-C2ADECD5DADF";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 27 2.0648338470708367 37 2.0648338470708394
-		 51 -1.4110567022616887 56 -0.68617601970234088 70 11.132695746128885 78.556535714285715 14.895003831119434
-		 96.383482993197276 14.392251414799876 102.38348299319728 13.096432943631578 107.38348299319728 11.376673861525498
-		 112.38348299319728 10.29682513555194 119.38348299319728 21.983356011031184 130.38348299319728 24.000422969105021;
+		 51 -1.4110567022616887 56 -0.68617601970234088 70 11.132695746128885 91 19.521913178682773
+		 108 18.202378985320177 114 13.09643294363158 119 11.376673861525498 124 10.29682513555194
+		 131 14.488565985982834 142 24.000422969105021;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 
-		0.20833333333333304 0.20833333333333393 0.29166666666666607 0.45833333333333393;
-	setAttr -s 14 ".kiy[3:13]"  0 0 0.037954663784293366 0.1687848038641914 
-		0 -0.023486240473504321 -0.028708231174839609 -0.024431187007765549 0 0.067208513880279083 
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
+	setAttr -s 14 ".kiy[3:13]"  0 0 0.037954663784293366 0.14107907681940871 
+		0 -0.069090648800474497 -0.064980560825707828 -0.024431187007765576 0 0.093011683941813278 
 		0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 0.20833333333333304 
-		0.20833333333333393 0.29166666666666607 0.45833333333333393 0.45833333333333393;
-	setAttr -s 14 ".koy[3:13]"  0 0 0.10627305859602129 0.10315808587804751 
-		0 -0.0079047433436752607 -0.023923525979032974 -0.024431187007765653 0 0.10561337895472461 
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
+	setAttr -s 14 ".koy[3:13]"  0 0 0.10627305859602129 0.21161861522911316 
+		0 -0.024384934870755701 -0.054150467354756447 -0.024431187007765681 0 0.14616121762284992 
 		0;
 createNode animCurveTA -n "head_CTRL_rotateZ";
 	rename -uid "CCD5FB38-904D-1F92-7958-FE94029F0B11";
 	setAttr ".tan" 18;
-	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 27 -1.2827210435362957 37 -1.2827210435362968
-		 51 0.11900040893415824 56 0.21793564754313627 70 1.9371094234053756 78.556535714285715 2.5822186805340612
-		 96.383482993197276 1.8693197006320317 102.38348299319728 1.3709368922323999 107.38348299319728 1.0080686288706646
-		 112.38348299319728 0.8106218972823197 119.38348299319728 3.3169254385635298 130.38348299319728 3.7867962284191541;
+	setAttr -s 14 ".ktv[0:13]"  0 0 14 0 27 -1.2827210435362957 37 -1.282721043536297
+		 51 0.11900040893415824 56 0.21793564754313627 70 1.9371094234053756 91 4.9547036767809356
+		 108 4.0889062267913276 114 1.3709368922324037 119 1.0080686288706646 124 0.8106218972823197
+		 131 0.07226118425455734 142 3.7867962284191541;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 
-		0.20833333333333304 0.20833333333333393 0.29166666666666607 0.45833333333333393;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0.01450466354377219 0.005180236979918644 
-		0.025611349835087231 0 -0.01581725555502813 -0.0081990910301268146 -0.0048896707550871391 
-		0 0.015656058107315154 0;
+		0.033068879205361043 0 -0.0453330484730688 -0.022799685407962535 -0.0048896707550871721 
+		-0.0068053837805106682 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 0.20833333333333304 
-		0.20833333333333393 0.29166666666666607 0.45833333333333393 0.45833333333333393;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0.005180236979918644 0.014504663543772185 
-		0.015653173539642126 0 -0.0053235998202807956 -0.0068325758584390026 -0.0048896707550871599 
-		0 0.024602377025781039 0;
+		0.049603318808041585 0 -0.015999899461083104 -0.018999737839968753 -0.0048896707550871929 
+		-0.0095275372927148896 0 0;
 createNode animCurveTU -n "head_CTRL_visibility";
 	rename -uid "F6A9C751-C544-E71C-49F9-89AD651D66F1";
 	setAttr ".tan" 5;
-	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 27 1 37 1 51 1 56 1 70 1 78.556535714285715 1
-		 96.383482993197276 1 102.38348299319728 1 107.38348299319728 1 112.38348299319728 1
-		 119.38348299319728 1 130.38348299319728 1;
+	setAttr -s 14 ".ktv[0:13]"  0 1 14 1 27 1 37 1 51 1 56 1 70 1 91 1 108 1
+		 114 1 119 1 124 1 131 1 142 1;
 	setAttr -s 14 ".kit[0:13]"  9 9 9 1 9 9 9 9 
 		9 9 9 9 9 9;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 
-		0.20833333333333304 0.20833333333333393 0.29166666666666607 0.45833333333333393;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "head_CTRL_translateX";
 	rename -uid "94960A84-554E-375D-D7FB-2CB5BF3EF0DB";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 0.2151417106354121 14 0.2151417106354121
 		 27 0.2151417106354121 37 0.2151417106354121 51 0.2151417106354121 56 0.2151417106354121
-		 70 0.2151417106354121 78.556535714285715 0.2151417106354121 96.383482993197276 0.2151417106354121
-		 102.38348299319728 0.2151417106354121 107.38348299319728 0.2151417106354121 112.38348299319728 0.2151417106354121
-		 119.38348299319728 0.2151417106354121 130.38348299319728 0.2151417106354121;
+		 70 0.2151417106354121 91 0.2151417106354121 108 0.2151417106354121 114 0.2151417106354121
+		 119 0.2151417106354121 124 0.2151417106354121 131 0.2151417106354121 142 0.2151417106354121;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 
-		0.20833333333333304 0.20833333333333393 0.29166666666666607 0.45833333333333393;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 0.20833333333333304 
-		0.20833333333333393 0.29166666666666607 0.45833333333333393 0.45833333333333393;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "head_CTRL_translateY";
 	rename -uid "1179FD3C-EC48-CB7E-C084-4486D8B0B399";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 16.147792309560206 14 16.147792309560206
 		 27 16.147792309560206 37 16.147792309560206 51 16.147792309560206 56 16.147792309560206
-		 70 16.147792309560206 78.556535714285715 16.147792309560206 96.383482993197276 16.147792309560206
-		 102.38348299319728 16.147792309560206 107.38348299319728 16.147792309560206 112.38348299319728 16.147792309560206
-		 119.38348299319728 16.147792309560206 130.38348299319728 16.147792309560206;
+		 70 16.147792309560206 91 16.147792309560206 108 16.147792309560206 114 16.147792309560206
+		 119 16.147792309560206 124 16.147792309560206 131 16.147792309560206 142 16.147792309560206;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 
-		0.20833333333333304 0.20833333333333393 0.29166666666666607 0.45833333333333393;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 0.20833333333333304 
-		0.20833333333333393 0.29166666666666607 0.45833333333333393 0.45833333333333393;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "head_CTRL_translateZ";
 	rename -uid "84735E7D-9D4F-7877-EBE7-F1B5FE6AC6FC";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 3.029956632532834 14 3.029956632532834
 		 27 3.029956632532834 37 3.029956632532834 51 3.029956632532834 56 3.029956632532834
-		 70 3.029956632532834 78.556535714285715 3.029956632532834 96.383482993197276 3.029956632532834
-		 102.38348299319728 3.029956632532834 107.38348299319728 3.029956632532834 112.38348299319728 3.029956632532834
-		 119.38348299319728 3.029956632532834 130.38348299319728 3.029956632532834;
+		 70 3.029956632532834 91 3.029956632532834 108 3.029956632532834 114 3.029956632532834
+		 119 3.029956632532834 124 3.029956632532834 131 3.029956632532834 142 3.029956632532834;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 
-		0.20833333333333304 0.20833333333333393 0.29166666666666607 0.45833333333333393;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 0.20833333333333304 
-		0.20833333333333393 0.29166666666666607 0.45833333333333393 0.45833333333333393;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "head_CTRL_scaleX";
 	rename -uid "3371A5A2-EA40-8317-D0C3-4C9FCC961A37";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 2.1506867580646523 14 2.1506867580646523
 		 27 2.1506867580646523 37 2.1506867580646523 51 2.1506867580646523 56 2.1506867580646523
-		 70 2.1506867580646523 78.556535714285715 2.1506867580646523 96.383482993197276 2.1506867580646523
-		 102.38348299319728 2.1506867580646523 107.38348299319728 2.1506867580646523 112.38348299319728 2.1506867580646523
-		 119.38348299319728 2.1506867580646523 130.38348299319728 2.1506867580646523;
+		 70 2.1506867580646523 91 2.1506867580646523 108 2.1506867580646523 114 2.1506867580646523
+		 119 2.1506867580646523 124 2.1506867580646523 131 2.1506867580646523 142 2.1506867580646523;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 
-		0.20833333333333304 0.20833333333333393 0.29166666666666607 0.45833333333333393;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 0.20833333333333304 
-		0.20833333333333393 0.29166666666666607 0.45833333333333393 0.45833333333333393;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "head_CTRL_scaleY";
 	rename -uid "B7C93C46-924D-CBB0-85D3-3A89546A9ACD";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 2.1506867580646523 14 2.1506867580646523
 		 27 2.1506867580646523 37 2.1506867580646523 51 2.1506867580646523 56 2.1506867580646523
-		 70 2.1506867580646523 78.556535714285715 2.1506867580646523 96.383482993197276 2.1506867580646523
-		 102.38348299319728 2.1506867580646523 107.38348299319728 2.1506867580646523 112.38348299319728 2.1506867580646523
-		 119.38348299319728 2.1506867580646523 130.38348299319728 2.1506867580646523;
+		 70 2.1506867580646523 91 2.1506867580646523 108 2.1506867580646523 114 2.1506867580646523
+		 119 2.1506867580646523 124 2.1506867580646523 131 2.1506867580646523 142 2.1506867580646523;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 
-		0.20833333333333304 0.20833333333333393 0.29166666666666607 0.45833333333333393;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 0.20833333333333304 
-		0.20833333333333393 0.29166666666666607 0.45833333333333393 0.45833333333333393;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "head_CTRL_scaleZ";
 	rename -uid "A7050AD7-1241-CC26-B5CF-2BAB3C5BBC5A";
 	setAttr ".tan" 18;
 	setAttr -s 14 ".ktv[0:13]"  0 2.1506867580646523 14 2.1506867580646523
 		 27 2.1506867580646523 37 2.1506867580646523 51 2.1506867580646523 56 2.1506867580646523
-		 70 2.1506867580646523 78.556535714285715 2.1506867580646523 96.383482993197276 2.1506867580646523
-		 102.38348299319728 2.1506867580646523 107.38348299319728 2.1506867580646523 112.38348299319728 2.1506867580646523
-		 119.38348299319728 2.1506867580646523 130.38348299319728 2.1506867580646523;
+		 70 2.1506867580646523 91 2.1506867580646523 108 2.1506867580646523 114 2.1506867580646523
+		 119 2.1506867580646523 124 2.1506867580646523 131 2.1506867580646523 142 2.1506867580646523;
 	setAttr -s 14 ".kit[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kot[3:13]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 14 ".kix[3:13]"  0.54166666666666663 0.58333333333333326 
-		0.20833333333333348 0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 
-		0.20833333333333304 0.20833333333333393 0.29166666666666607 0.45833333333333393;
+		0.20833333333333348 0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 
+		0.20833333333333393 0.29166666666666607 0.45833333333333393;
 	setAttr -s 14 ".kiy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 	setAttr -s 14 ".kox[3:13]"  0.16666666666666674 0.20833333333333348 
-		0.58333333333333304 0.35652232142857176 0.74278946995464823 0.25 0.20833333333333304 
-		0.20833333333333393 0.29166666666666607 0.45833333333333393 0.45833333333333393;
+		0.58333333333333304 0.875 0.70833333333333348 0.25 0.20833333333333304 0.20833333333333393 
+		0.29166666666666607 0.45833333333333393 0.45833333333333393;
 	setAttr -s 14 ".koy[3:13]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "locator1_translateX";
 	rename -uid "1A59C09B-0442-3B5A-A24F-D4B11B54FFAE";
 	setAttr ".tan" 18;
 	setAttr -s 9 ".ktv[0:8]"  28 5.5781086251427903 37 5.5775119147670376
 		 50 5.5781086251427903 58 5.5847816958210936 63 5.5830761600756222 70 5.5668120646977473
-		 85 5.5498224638251239 97 5.5498224638251239 101 6.0813832448724598;
+		 85 5.5498224638251239 97 5.5498224638251239 101 6.0943531975949714;
 	setAttr -s 9 ".kit[7:8]"  1 18;
 	setAttr -s 9 ".kot[7:8]"  1 18;
 	setAttr -s 9 ".kix[7:8]"  0.625 0.16666666666666607;
@@ -1722,7 +5483,7 @@ createNode animCurveTL -n "locator1_translateY";
 	setAttr ".tan" 18;
 	setAttr -s 9 ".ktv[0:8]"  28 9.8811565700813428 37 9.8235443939749079
 		 50 9.8811565700813428 58 9.6120367345508537 63 9.6543864786479219 70 9.8631529681549654
-		 85 9.8678112931383843 97 9.8678112931383843 101 9.9505737052608065;
+		 85 9.8678112931383843 97 9.8678112931383843 101 9.7877005990747481;
 	setAttr -s 9 ".kit[7:8]"  1 18;
 	setAttr -s 9 ".kot[7:8]"  1 18;
 	setAttr -s 9 ".kix[7:8]"  0.625 0.16666666666666607;
@@ -1734,7 +5495,7 @@ createNode animCurveTL -n "locator1_translateZ";
 	setAttr ".tan" 18;
 	setAttr -s 9 ".ktv[0:8]"  28 5.7048590062628852 37 5.7079501688633005
 		 50 5.7048590062628852 58 5.7751755438204055 63 5.759672729764528 70 5.7402102860297406
-		 85 5.8138472255792726 97 5.8138472255792726 101 5.7070584786018674;
+		 85 5.8138472255792726 97 5.8138472255792726 101 5.7202036730355372;
 	setAttr -s 9 ".kit[7:8]"  1 18;
 	setAttr -s 9 ".kot[7:8]"  1 18;
 	setAttr -s 9 ".kix[7:8]"  0.625 0.16666666666666607;
@@ -1892,7 +5653,7 @@ createNode animCurveTA -n "locator2_rotateY";
 	rename -uid "AE5F5D95-9C4F-646F-620F-7DBBBA4B27BD";
 	setAttr ".tan" 18;
 	setAttr -s 7 ".ktv[0:6]"  51 0 64 11.360703190089366 83 15.412881991571767
-		 95 18.048360585732752 102 18.048360585732748 109 25.702536753551581 115 25.702536753551584;
+		 95 18.048360585732752 102 18.048360585732748 109 25.702536753551584 115 25.702536753551584;
 	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
 	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
 	setAttr -s 7 ".kix[2:6]"  0.54166666666666652 0.5 0.29166666666666652 
@@ -1905,7 +5666,7 @@ createNode animCurveTA -n "locator2_rotateZ";
 	rename -uid "77D00C6F-1440-E363-F95E-7BB4FE2C8488";
 	setAttr ".tan" 18;
 	setAttr -s 7 ".ktv[0:6]"  51 0 64 -1.1285601694120047 83 -1.314887908819997
-		 95 -1.4399109973838495 102 -1.4399109973838498 109 -2.1057374311159545 115 -2.1057374311159536;
+		 95 -1.4399109973838495 102 -1.43991099738385 109 -2.1057374311159545 115 -2.1057374311159536;
 	setAttr -s 7 ".kit[2:6]"  1 18 18 18 18;
 	setAttr -s 7 ".kot[2:6]"  1 18 18 18 18;
 	setAttr -s 7 ".kix[2:6]"  0.54166666666666652 0.5 0.29166666666666652 
@@ -1956,18 +5717,449 @@ createNode animCurveTU -n "locator2_scaleZ";
 	setAttr -s 7 ".kox[2:6]"  0.79166666666666696 0.29166666666666652 
 		0.29166666666666696 0.25 0.25;
 	setAttr -s 7 ".koy[2:6]"  0 0 0 0 0;
+createNode animCurveTU -n "SCENE_CAM_visibility";
+	rename -uid "465404A9-6D47-946A-1FEC-169F50998D53";
+	setAttr ".tan" 5;
+	setAttr -s 19 ".ktv[0:18]"  0 1 26 1 28 1 30 1 33 1 37 1 50 1 52 1 54 1
+		 57 1 62 1 90 1 112 1 114 1 116 1 119 1 122 1 127 1 135 1;
+	setAttr -s 19 ".kit[0:18]"  9 9 9 9 9 1 9 9 
+		9 9 1 9 9 9 9 9 9 9 9;
+	setAttr -s 19 ".kix[5:18]"  1.0833333333333333 0.54166666666666674 
+		0.083333333333333037 0.083333333333333481 0.125 1.0833333333333333 1.1666666666666665 
+		0.91666666666666696 0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 
+		0.33333333333333304;
+	setAttr -s 19 ".kiy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTL -n "SCENE_CAM_translateX";
+	rename -uid "B74413C0-FB42-7D77-ED1A-95B399272D37";
+	setAttr ".tan" 18;
+	setAttr -s 19 ".ktv[0:18]"  0 -0.058544664178298185 26 -0.058544664178298185
+		 28 -0.48694584508693645 30 0.81939049287433741 33 0.31267258809960752 37 -0.058544664178298185
+		 50 -0.058544664178298185 52 -0.85848020577816775 54 -0.17023266222391997 57 0.80777226921642886
+		 62 0.0037851815986049697 90 0.43133578743349243 112 0.43133578743349243 114 0.76525035672868458
+		 116 -0.013703905864355104 119 -0.088537509396188055 122 0.2452832864577475 127 0.055265774804510892
+		 135 0.58068524326558635;
+	setAttr -s 19 ".kit[5:18]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kot[5:18]"  1 1 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kix[5:18]"  1.0833333333333333 0.54166666666666674 
+		0.083333333333333037 0.083333333333333481 0.125 1.0833333333333333 1.1666666666666665 
+		0.91666666666666696 0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 
+		0.33333333333333304;
+	setAttr -s 19 ".kiy[5:18]"  0 0 0 0.66650098999783935 0 0 0 0 0 -0.14966720706366538 
+		0 0 0 0;
+	setAttr -s 19 ".kox[5:18]"  0.083333333333333481 0.083333333333333481 
+		0.083333333333333481 0.125 0.20833333333333348 0.083333333333333481 0.91666666666666696 
+		0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 0.33333333333333304 
+		0.33333333333333304;
+	setAttr -s 19 ".koy[5:18]"  0 0 0 0.99975148499675726 0 0 0 0 0 -0.22450081059549887 
+		0 0 0 0;
+createNode animCurveTL -n "SCENE_CAM_translateY";
+	rename -uid "64C15568-0343-4B84-13D1-17B61EF6E8AC";
+	setAttr ".tan" 18;
+	setAttr -s 19 ".ktv[0:18]"  0 13.360089133417315 26 13.360089133417315
+		 28 14.258840792229071 30 12.082142026172079 33 13.071375458024422 37 13.360089133417315
+		 50 13.360089133417315 52 14.060929903194815 54 12.803444694676706 57 12.906396214943005
+		 62 13.771895214484957 90 10.875242609389927 112 10.875242609389927 114 11.02342857722134
+		 116 10.393638213937434 119 11.356847004841978 122 11.653218940504987 127 11.023428577221352
+		 135 10.91228910134782;
+	setAttr -s 19 ".kit[5:18]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kot[5:18]"  1 1 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kix[5:18]"  1.0833333333333333 0.54166666666666674 
+		0.083333333333333037 0.083333333333333481 0.125 1.0833333333333333 1.1666666666666665 
+		0.91666666666666696 0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 
+		0.33333333333333304;
+	setAttr -s 19 ".kiy[5:18]"  0 0 0 0 0.30885456079889551 0 0 0 0 0 0.62979036328377624 
+		0 -0.20838651726287372 0;
+	setAttr -s 19 ".kox[5:18]"  0.083333333333333481 0.083333333333333481 
+		0.083333333333333481 0.125 0.20833333333333348 0.083333333333333481 0.91666666666666696 
+		0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 0.33333333333333304 
+		0.33333333333333304;
+	setAttr -s 19 ".koy[5:18]"  0 0 0 0 0.51475760133149284 0 0 0 0 0 0.62979036328377624 
+		0 -0.3334184276205967 0;
+createNode animCurveTL -n "SCENE_CAM_translateZ";
+	rename -uid "588C5E6C-E84C-3C24-07BE-61BB774E5F0A";
+	setAttr ".tan" 18;
+	setAttr -s 2 ".ktv[0:1]"  0 29.874741082605045 107 28.845340717457528;
+createNode animCurveTA -n "SCENE_CAM_rotateX";
+	rename -uid "2777B622-AC4C-8B56-23D3-0192E5A08DED";
+	setAttr ".tan" 18;
+	setAttr -s 19 ".ktv[0:18]"  0 -2.1383527296024076 26 -2.1383527296024076
+		 28 -2.1383527296024076 30 -2.1383527296024076 33 -2.1383527296024076 37 -2.1383527296024076
+		 50 -2.1383527296024076 52 -2.1383527296024076 54 -2.1383527296024076 57 -2.1383527296024076
+		 62 -2.1383527296024076 90 3.4581745543004945 112 3.4581745543004945 114 3.4581745543004945
+		 116 3.4581745543004945 119 3.4581745543004945 122 3.4581745543004945 127 3.4581745543004945
+		 135 3.4581745543004945;
+	setAttr -s 19 ".kit[5:18]"  1 18 18 18 18 1 1 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kot[5:18]"  1 1 18 18 18 1 1 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".ktl[11:18]" no yes yes yes yes yes yes yes;
+	setAttr -s 19 ".kix[5:18]"  1.0833333333333333 0.54166666666666674 
+		0.083333333333333037 0.083333333333333481 0.125 1.0833333333333333 1.3205402528614234 
+		0.91666666666666696 0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 
+		0.33333333333333304;
+	setAttr -s 19 ".kiy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[5:18]"  0.083333333333333481 0.083333333333333481 
+		0.083333333333333481 0.125 0.20833333333333348 0.083333333333333481 0.75 0.083333333333333037 
+		0.083333333333333037 0.125 0.125 0.20833333333333393 0.33333333333333304 0.33333333333333304;
+	setAttr -s 19 ".koy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "SCENE_CAM_rotateY";
+	rename -uid "5985379E-E641-CBC8-7FF0-06A6E417E1F6";
+	setAttr ".tan" 18;
+	setAttr -s 19 ".ktv[0:18]"  0 -1.0000000000000164 26 -1.0000000000000164
+		 28 -1.0000000000000164 30 -1.0000000000000164 33 -1.0000000000000164 37 -1.0000000000000164
+		 50 -1.0000000000000164 52 -1.0000000000000164 54 -1.0000000000000164 57 -1.0000000000000164
+		 62 -1.0000000000000164 90 -0.60000000000001796 112 -0.60000000000001796 114 -0.60000000000001796
+		 116 -0.60000000000001796 119 -0.60000000000001796 122 -0.60000000000001796 127 -0.60000000000001796
+		 135 -0.60000000000001796;
+	setAttr -s 19 ".kit[5:18]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kot[5:18]"  1 1 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kix[5:18]"  1.0833333333333333 0.54166666666666674 
+		0.083333333333333037 0.083333333333333481 0.125 1.0833333333333333 1.1666666666666665 
+		0.91666666666666696 0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 
+		0.33333333333333304;
+	setAttr -s 19 ".kiy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[5:18]"  0.083333333333333481 0.083333333333333481 
+		0.083333333333333481 0.125 0.20833333333333348 0.083333333333333481 0.91666666666666696 
+		0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 0.33333333333333304 
+		0.33333333333333304;
+	setAttr -s 19 ".koy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTA -n "SCENE_CAM_rotateZ";
+	rename -uid "5F673FBD-654A-1933-DB9C-03A73517AAA8";
+	setAttr ".tan" 18;
+	setAttr -s 19 ".ktv[0:18]"  0 -3.1064835636100448e-18 26 -3.1064835636100448e-18
+		 28 0 30 0 33 0 37 0 50 -3.1064835636100448e-18 52 0 54 0 57 0 62 0 90 0 112 0 114 0
+		 116 0 119 0 122 0 127 0 135 0;
+	setAttr -s 19 ".kit[5:18]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kot[5:18]"  1 1 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kix[5:18]"  1.0833333333333333 0.54166666666666674 
+		0.083333333333333037 0.083333333333333481 0.125 1.0833333333333333 1.1666666666666665 
+		0.91666666666666696 0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 
+		0.33333333333333304;
+	setAttr -s 19 ".kiy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[5:18]"  0.083333333333333481 0.083333333333333481 
+		0.083333333333333481 0.125 0.20833333333333348 0.083333333333333481 0.91666666666666696 
+		0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 0.33333333333333304 
+		0.33333333333333304;
+	setAttr -s 19 ".koy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "SCENE_CAM_scaleX";
+	rename -uid "4F686ADC-6349-1E20-EEC8-D79F7555BB91";
+	setAttr ".tan" 18;
+	setAttr -s 19 ".ktv[0:18]"  0 1 26 1 28 1 30 1 33 1 37 1 50 1 52 1 54 1
+		 57 1 62 1 90 1 112 1 114 1 116 1 119 1 122 1 127 1 135 1;
+	setAttr -s 19 ".kit[5:18]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kot[5:18]"  1 1 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kix[5:18]"  1.0833333333333333 0.54166666666666674 
+		0.083333333333333037 0.083333333333333481 0.125 1.0833333333333333 1.1666666666666665 
+		0.91666666666666696 0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 
+		0.33333333333333304;
+	setAttr -s 19 ".kiy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[5:18]"  0.083333333333333481 0.083333333333333481 
+		0.083333333333333481 0.125 0.20833333333333348 0.083333333333333481 0.91666666666666696 
+		0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 0.33333333333333304 
+		0.33333333333333304;
+	setAttr -s 19 ".koy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "SCENE_CAM_scaleY";
+	rename -uid "7A49B4EE-A348-B833-F081-1E8A84D341E9";
+	setAttr ".tan" 18;
+	setAttr -s 19 ".ktv[0:18]"  0 1 26 1 28 1 30 1 33 1 37 1 50 1 52 1 54 1
+		 57 1 62 1 90 1 112 1 114 1 116 1 119 1 122 1 127 1 135 1;
+	setAttr -s 19 ".kit[5:18]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kot[5:18]"  1 1 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kix[5:18]"  1.0833333333333333 0.54166666666666674 
+		0.083333333333333037 0.083333333333333481 0.125 1.0833333333333333 1.1666666666666665 
+		0.91666666666666696 0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 
+		0.33333333333333304;
+	setAttr -s 19 ".kiy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[5:18]"  0.083333333333333481 0.083333333333333481 
+		0.083333333333333481 0.125 0.20833333333333348 0.083333333333333481 0.91666666666666696 
+		0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 0.33333333333333304 
+		0.33333333333333304;
+	setAttr -s 19 ".koy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "SCENE_CAM_scaleZ";
+	rename -uid "9371877A-B845-2185-3ABD-4BA47DC34463";
+	setAttr ".tan" 18;
+	setAttr -s 19 ".ktv[0:18]"  0 1 26 1 28 1 30 1 33 1 37 1 50 1 52 1 54 1
+		 57 1 62 1 90 1 112 1 114 1 116 1 119 1 122 1 127 1 135 1;
+	setAttr -s 19 ".kit[5:18]"  1 18 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kot[5:18]"  1 1 18 18 18 1 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 19 ".kix[5:18]"  1.0833333333333333 0.54166666666666674 
+		0.083333333333333037 0.083333333333333481 0.125 1.0833333333333333 1.1666666666666665 
+		0.91666666666666696 0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 
+		0.33333333333333304;
+	setAttr -s 19 ".kiy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[5:18]"  0.083333333333333481 0.083333333333333481 
+		0.083333333333333481 0.125 0.20833333333333348 0.083333333333333481 0.91666666666666696 
+		0.083333333333333037 0.083333333333333037 0.125 0.125 0.20833333333333393 0.33333333333333304 
+		0.33333333333333304;
+	setAttr -s 19 ".koy[5:18]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+createNode animCurveTU -n "eyes_basic_blinkRight";
+	rename -uid "23D9005A-BB42-8D39-1CA7-0585EFFFC877";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  90 0 108 0.32960894703865051 114 0 119 0
+		 128 0.24581006169319153 135 0.27932959794998169 146 0.32960894703865051;
+createNode animCurveTU -n "eyes_basic_blinkLeft";
+	rename -uid "1CE1BBF1-C443-7968-E2D9-988966E513E8";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  90 0 108 0.37988826632499695 114 0 119 0
+		 128 0.25698325037956238 135 0.27932959794998169 146 0.32402235269546509;
+createNode animCurveTU -n "mouth_closed_closed";
+	rename -uid "D1AE9748-F945-FDE1-10C3-C19186C41706";
+	setAttr ".tan" 18;
+	setAttr -s 5 ".ktv[0:4]"  90 0 96 0.38547486066818237 108 0.86033517122268677
+		 114 0 134 0.80446928739547729;
+createNode animCurveTU -n "mouth_angry_envelope";
+	rename -uid "8FF8D056-894C-1FF6-2562-06BF275E8F54";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  107 0 115 1 122 0.91061455011367798 126 0.10614525526762009
+		 134 0 142 0.15083798766136169 146 0.089385472238063812;
+createNode animCurveTU -n "eyes_basic_weight_5_";
+	rename -uid "899BF869-EB40-5F79-82AD-8D9A54CF2DBA";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  90 0.77094972133636475 108 0.89944136142730713
+		 119 1 124 1;
+createNode animCurveTU -n "eyes_basic_weight_4_";
+	rename -uid "1290F859-C449-6EE6-52B2-78B710FC557C";
+	setAttr ".tan" 18;
+	setAttr -s 4 ".ktv[0:3]"  90 0.72625696659088135 108 0.88826817274093628
+		 119 1 124 1;
+createNode animCurveTU -n "eyes_basic_weight_2_";
+	rename -uid "2E5B1FE2-8047-E790-2254-CD982EA2A2C4";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  79 0 90 0 95 1 108 0 119 1 124 1 130 0;
+createNode animCurveTU -n "eyes_basic_weight_3_";
+	rename -uid "8F9DBF5C-EA45-8F82-2863-C69BEDDB050B";
+	setAttr ".tan" 18;
+	setAttr -s 7 ".ktv[0:6]"  79 0 90 0 95 1 108 0 119 0.99441343545913696
+		 124 0.99441343545913696 130 0;
+createNode blendShape -n "blendShape1";
+	rename -uid "8B0D0F4B-0F41-41AB-C57D-F6A85CD83ECB";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr ".w[0]"  1;
+	setAttr -s 2 ".it[0].itg";
+	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 265 0 0 0 1 -0.014111000826341039
+		 -0.00044999403060869136 -0.0010305022355883292 1 0 0 0 1 -0.053848399395384883 -0.019878919576654885
+		 0.052667521513920401 1 -0.0015189879467179083 -0.00038015335492816785 0.0024741765993298824
+		 1 0 0 0 1 0 0 0 1 -0.0089889003956151042 0.012932023731878392 -0.015146322136908516
+		 1 -2.497770481581544e-06 -2.2558775278861505e-05 2.5438400468985362e-05 1 0 0 0 1 -0.1047155903668134
+		 0.0018848942780677613 -0.01797437409370542 1 -0.1423559665006604 -0.022786636706443097
+		 0.1184078817893357 1 -0.00041658716994658236 -1.2123551561550941e-05 0.00043491533001911047
+		 1 0.0043974111516754399 0.00014662444938896846 -0.010680395190228453 1 0 0 0 1 -0.0010033612877781237
+		 0.00025284726145576725 -0.0016569770119292341 1 0 0 0 1 0 0 0 1 -0.037473225291890067
+		 -0.09709819443599832 0.049762662620906228 1 -0.13355856355379692 0.048825150936273376
+		 -0.098138204474036206 1 -0.045445408213485555 0.01546910473742813 -0.071137295306707413
+		 1 0 0 0 1 1.7745080910429534e-06 7.82077030631887e-08 7.0144013808193126e-07 1 0.0035145063821444065
+		 -0.0030884652525518313 0.021952731854289635 1 0.048867334455731611 0.024256775365076644
+		 -0.098240319043940122 1 -0.011564786232276442 0.0030453962312214332 0.014085416271511247
+		 1 -0.0055463848494649859 -0.00029814516488964327 -0.001797942358246693 1 4.8951633395887398e-06
+		 -1.0868263748621784e-06 -2.2039403529023459e-06 1 0 0 0 1 -0.0020714270159547139
+		 -0.0012581252386182906 -0.00019877886367812569 1 0.00021900203030796126 -0.00035350263970873423
+		 0.00048375424135826983 1 -0.014962738513034146 -0.0051189625469529459 0.0018219236000009409
+		 1 -0.05499537895484985 -0.0067172696184265579 0.062367332845689183 1 0.0052531691429980043
+		 0.041627754972450859 0.09425415254724312 1 0 0 0 1 -0.038916928277343943 -0.0082272700810959165
+		 0.0036445738212609879 1 0.0227192027332071 0.041133744958639973 0.010198909812697332
+		 1 0.063816196459288516 0.0036748478900728715 0.026991584240730115 1 0.22923895313700893
+		 -0.0081551837174322871 -0.07250711758825519 1 0.048994619479083457 0.060317307805520241
+		 -0.11830552028904145 1 -0.021525642145483331 0.036803118132915022 0.0068813694185961005
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.036613958762155285 -0.0010330025981913349
+		 -0.010201477322458297 1 0 0 0 1 -0.045417889455834637 0.018700245102817481 0.052342622648312576
+		 1 0 0 0 1 -0.10276856521212607 -0.0047826077553789759 0.00053046601040496189 1 -0.065421191753131186
+		 0.016605485181897806 0.082935293604828347 1 0.12268691987880609 -0.02308630286959934
+		 -0.080131223130644136 1 0.19422799523252937 0.018215840889557189 0.14649513171064166
+		 1 0.0051322561485445117 0.023336684471341407 0.070153350550162585 1 0.0073782999055538138
+		 0.0051460754239140948 0.0023602230399836534 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.0023504287222417125
+		 -0.00097117238817368175 0.00040159959651231425 1 0.0069519184625826957 0.021624668353261128
+		 -0.063416162393168329 1 -0.016702886959411245 0.048452865431208969 0.09006118679568817
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.024066932575297212 0.0091997673685748071
+		 -0.0043718226048187238 1 -0.10239176018835862 0.033920263897500885 -0.0025144744664006291
+		 1 -0.080354024265400698 0.07658720085585316 0.0058275459573930016 1 0.00069610481964664495
+		 -4.1215301024326821e-05 0.0003056690172638395 1 0 0 0 1 3.6717352625847976e-06 -2.9926559136003622e-05
+		 -3.0588273907270142e-06 1 -0.026135767418551031 0.011164904842747014 0.00058351075863849466
+		 1 -0.054471321694565533 0.038794731113454273 -0.019843113722762748 1 -0.0020667381067887266
+		 0.0018925330104271197 -9.6897138249812942e-05 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.00036163523494088176
+		 -7.740310206126198e-06 -0.00022926574613746191 1 -0.004581454094269001 0.00039145225310597762
+		 -0.0012067111756258603 1 6.6447664143044036e-05 -7.5397265927504948e-06 -6.106454258519922e-05
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.0015808308600838254 0.0051969469001972319 -0.0070546482448667833
+		 1 0.020459696093688529 -0.004329091780131294 -0.06102387428273752 1 0.076516311103548285
+		 -0.057064159043767715 -0.12643900963284005 1 0.13294701277269333 -0.072839200627869527
+		 -0.08253372721758323 1 0.079001131307786521 -0.0085697279981515884 -0.028167287074619352
+		 1 -0.036741219050394985 0.011726441548752548 -0.021219232225656526 1 0.0020015583926592528
+		 -0.00071390053442876855 0.0096612986508051724 1 0 0 0 1 0 0 0 1 0 0 0 1 0.00010315416997688787
+		 0.0015295921261914147 -0.0031569871677962699 1 -0.0080980586306528823 -0.012444729302011404
+		 -0.032756193255552124 1 -0.0085367789119362714 -0.023319533153690675 -0.040473072350641348
+		 1 -0.048413294632806192 0.013094212504626557 0.0066730986483776178 1 -0.0025749731650688366
+		 -6.4746005335986068e-05 0.00079198541198102074 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.011967485382571835
+		 -0.002543076586122836 -0.016183093487287914 1 -0.012689213369747904 -0.011969584297693459
+		 -0.024523286678918468 1 -0.0015923352409828173 -0.0047219685711380466 -0.0093427712657312145
+		 1 0.0026982661218761016 -0.0017825126511671026 -0.0022461168669652507 1 0.0010865973010851094
+		 -0.0014015436180265283 0.0013785961354660231 1 -0.0015637476566542213 -0.00072454239733474313
+		 0.0018240901117384523 1 0 0 0 1 0 0 0 1 -0.0097544803567573939 -0.0014324086790567063
+		 0.008241161299076049 1 0 0 0 1 2.2450056219720533e-05 4.9042354932259591e-05 -0.00012286308603877091
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.13062482032849543 -0.016624604426704326 0.071031544583961326
+		 1 -0.017180918851516232 0.0025169005014553979 -0.0087533557734294724 1 0 0 0 1 0
+		 0 0 1 0 0 0 1 0.016373932206138753 -0.059704214940316191 -0.045043939717077985 1 0.054677655325961999
+		 -0.12382447568095394 -0.11116756052934923 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+		 1 0.00049416043376027119 -0.00050375895585119679 -0.00067411162761743526 1 -0.0034235967591058625
+		 -0.00842139155690802 -0.014767096651212341 1 0.00019151369607489557 8.5393864983059151e-05
+		 0.00019473000394201051 1 -0.00091400454217055449 1.059525083491053e-05 -0.00014315406005804832
+		 1 -0.20012239643492385 0.2058322140288367 -0.080044652538545299 1 0 0 0 1 -0.12200855377238518
+		 -0.0098558014299435781 0.055084721232706801 1 -0.074295430207523994 0.17402514976304295
+		 0.23976244900804922 1 -0.021047651165436391 0.057662413131207568 -0.041238021462303709
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.29468375519912077 -0.024199453260009718 0.010001909350395348
+		 1 -0.00020421197113762446 4.0378531496187975e-06 -0.0001080010852660962 1 0 0 0 1 0
+		 0 0 1 0 0 0 1 -0.19435588546981078 0.14425911697144694 0.15616719745863467 1 -0.024288514951010143
+		 -0.0089090419851345359 0.010657729618912981 1 -0.29378641613995438 0.022794866702509076
+		 -0.22638711346290252 1 0 0 0 1 -0.13126651998434991 -0.010713649279188164 0.076767895750982085
+		 1 0.018465888886087137 0.11555669735019847 0.10009899269959767 1 -0.00050083134649114153
+		 -0.0049134119919146887 -0.00048193158984639536 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0.031385953205574357
+		 -0.037929156090739255 -0.032380133662782598 1 0.11563671537523865 -0.11924608143141573
+		 -0.12946551097527642 1 -0.061944501214283257 0.035465366750284361 -0.17627172889306031
+		 1 -0.31755492020680331 0.26264087387657198 0.039874689417100928 1 -0.2568382644274938
+		 -0.034836451964743401 -0.10395585240698461 1 0 0 0 1 -0.06956238398418603 -0.050936981516081475
+		 -0.094452884040844898 1 -0.02076342136160253 0.00028240323148958149 0.024939946506262467
+		 1 -0.19672118573100095 0.20089817263454324 0.22510009227279248 1 -0.25659872405030598
+		 0.056502961118598427 -0.14050173162662677 1 -0.44160565795359674 0.090782912760583923
+		 0.074392254516225331 1 -0.38378430495928845 0.2431528090160005 0.00059198329369192226
+		 1 -0.33656983668198637 0.37200153162051086 -0.48971972597900504 1 -0.065042348102509445
+		 -0.15228773808158522 0.1314821852399688 1 0 0 0 1 0 0 0 1 0 0 0 1 0.0031187232385470054
+		 0.0024581506792724639 0.0056766197292432707 1 0.0032256714057510294 0.017818353756958061
+		 0.013623303698921063 1 0.0020617777678282323 0.0080806961627715168 0.0058707669568462961
+		 1 0 0 0 1 0 0 0 1 -0.060544223205141634 0.0082764605199585617 -0.017919068999319165
+		 1 -0.36851221628587494 0.015352757257620378 0.15642909254477555 1 -0.36955259136704782
+		 0.054503943795569443 0.026448832461869909 1 -0.13730088340747551 0.11863173869062588
+		 0.035159091131981721 1 -0.0071196165549557815 0.066114809211029205 0.058789546285939576
+		 1 0.038606333764026064 0.039739933168709142 0.032782288944728087 1 0.0028330981164423896
+		 0.0023445540945914445 0.002268075807187131 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0
+		 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+		 1 0 0 0 1 0 0 0 1 -0.00010781716068648513 1.4151164741954244e-05 -3.6751859792515248e-06
+		 1 -0.0073976073304500151 0.0018228683580962446 0.00038229781649601682 1 -0.012237201831117192
+		 0.0036587653813282411 0.0010692955704318802 1 -0.0018377121820944559 0.0010963360966296729
+		 0.00042714392853680089 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.002090084127042164 -0.00031876266713863448
+		 0.00049716467564197252 1 -0.0091247469662540243 -0.0024546186140972301 0.001136264953798205
+		 1 -0.00054582583802285228 -0.0001771286544596626 0.00020302559188869335 1 0 0 0 1 0
+		 0 0 1 0.00016142114326689436 -0.00029912515875051162 0.0010276583201174186 1 -0.047627779379796342
+		 -0.002339713010018959 -0.0063945145495775853 1 -0.072468324320940025 -0.0052286867231517709
+		 0.0063317302859402513 1 -0.00071762781489815089 -0.0018497835948365019 0.0010011727968794563
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.0033162254721309514 -0.0020149193658782309 0.0017384151953141261
+		 1 -0.04427503377861447 -0.02282468501499732 0.013644496547233487 1 -0.030186459016271133
+		 -0.024755090138120342 0.027623524027228851 1 -0.072401172053229879 -0.020842476858715708
+		 0.015535242850999831 1 -0.0042285121826387516 -0.00072019652933810047 0.0011252522099026961
+		 1 0 0 0 1 5.6047977120194043e-05 -0.00010060991507264476 2.550382980019369e-06 1 -0.025689810365059323
+		 0.0020628228947308092 -0.033429744215688444 1 -0.18436598157461059 -0.023340184422533383
+		 -0.1009196567443178 1 -0.19240799154008781 -0.029364228488745647 -0.01625061480493617
+		 1 -0.024757473746083503 0.04058509904415486 -0.0050581899269380171 1 -0.031242187723580228
+		 0.052684822089225092 0.05009950061434354 1 -0.0052251794239167315 -0.0012314531865674494
+		 0.0018947158021037219 1 0 0 0 1 0 0 0 1 -0.00054495634861727316 -0.00028371529208570667
+		 4.8033731161051252e-05 1 -0.050869669049425997 0.012644908858512494 0.0044011282033534216
+		 1 -0.11774886241037197 0.0055640722236161011 0.016940766380445837 1 -0.14887322339670006
+		 0.016927826208035013 0.033204735385113038 1 -0.18894595720171325 -0.018446645734070843
+		 0.050773325202979169 1 -0.053544035252469993 -0.0050290922451830533 0.010717567891979418
+		 1 1.6929364570622552e-07 -0.00068766146958878019 -0.00013968139258003359 1 -0.0018924794452846736
+		 -0.00037336309456537705 0.00094320172758367328 1 -0.05877142334040153 0.025493918124630977
+		 -0.02674794449169704 1 -0.18125411546978443 0.038224760333904761 -0.083593236216734423
+		 1 -0.18161065736817839 0.032902625506678662 -0.068921042901071816 1 -0.089151484119705082
+		 0.021663084639851338 -0.029545103436277032 1 -0.040878277741924735 -0.0070479015446138771
+		 -0.0029060774365088082 1 -0.013262807965149614 0.0040672373223814562 -0.0016952627786094299
+		 1 0 0 0 1 0 0 0 1 -0.077093854497811642 -0.04087985750143807 -0.076475921779757941
+		 1 -0.038952040988916803 -0.13798266022772754 -0.18330494478286719 1 -0.00045502389042439972
+		 -0.16475605040575614 -0.18080889867443117 1 -0.031262513893263844 -0.073167518550275146
+		 -0.054917116176269487 1 -0.082585801951749915 0.028284082056222459 0.045749765603031456
+		 1 -0.023267805631531711 0.0040771148718343198 0.00022726352827906471 1 -0.0036509808477732247
+		 0.0043557379452391284 -0.0023213663642776133 1 ;
+	setAttr ".it[0].itg[0].iti[6000].ict" -type "componentList" 79 "vtx[20]" "vtx[22:27]" "vtx[32:33]" "vtx[47:49]" "vtx[64]" "vtx[66]" "vtx[71:72]" "vtx[79]" "vtx[94]" "vtx[106:107]" "vtx[110:111]" "vtx[156:157]" "vtx[163]" "vtx[176:178]" "vtx[185:187]" "vtx[203:214]" "vtx[219]" "vtx[223:224]" "vtx[230]" "vtx[232]" "vtx[236:237]" "vtx[244:250]" "vtx[265:267]" "vtx[269]" "vtx[278:281]" "vtx[684:688]" "vtx[708:713]" "vtx[792:796]" "vtx[883:889]" "vtx[969:979]" "vtx[1011:1018]" "vtx[1102:1109]" "vtx[1130]" "vtx[1132:1135]" "vtx[1142]" "vtx[1157:1159]" "vtx[1176]" "vtx[1182]" "vtx[1193:1195]" "vtx[1214:1217]" "vtx[1220]" "vtx[1271:1273]" "vtx[1306:1307]" "vtx[1316:1321]" "vtx[1328:1329]" "vtx[1333:1334]" "vtx[1336]" "vtx[1340]" "vtx[1342]" "vtx[1346:1347]" "vtx[1353:1357]" "vtx[1367:1368]" "vtx[1373:1378]" "vtx[1382:1383]" "vtx[1385:1389]" "vtx[1391]" "vtx[1393]" "vtx[2069:2070]" "vtx[2081:2084]" "vtx[2122:2123]" "vtx[2198:2205]" "vtx[2866]" "vtx[2884]" "vtx[2888:2889]" "vtx[2892]" "vtx[2927]" "vtx[2933]" "vtx[2939]" "vtx[2945]" "vtx[2951]" "vtx[2963]" "vtx[2975]" "vtx[3312:3314]" "vtx[3322:3327]" "vtx[3359:3364]" "vtx[3396:3402]" "vtx[3504:3518]" "vtx[3608:3623]" "vtx[3713:3720]";
+	setAttr ".it[0].itg[0].pdm" 1;
+	setAttr ".it[0].itg[1].pdm" 1;
+	setAttr ".it[0].siw" 1;
+	setAttr ".mlid" 6;
+	setAttr ".mlpr" 0;
+	setAttr -s 2 ".pndr[0:1]"  0 0;
+	setAttr -s 2 ".tgvs[0:1]" yes yes;
+	setAttr -s 2 ".tpvs[0:1]" yes yes;
+	setAttr ".tgdt[0].cid" -type "Int32Array" 1 0 ;
+	setAttr ".dfo" 1;
+	setAttr ".aal" -type "attributeAlias" {"body","weight[0]"} ;
+createNode objectSet -n "blendShape1Set";
+	rename -uid "9230CCF4-F849-351B-4767-1B84EE0C1112";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "blendShape1GroupId";
+	rename -uid "CAB63CF2-F14D-1484-AE94-EDAF5ABDCF0E";
+	setAttr ".ihi" 0;
+createNode groupParts -n "blendShape1GroupParts";
+	rename -uid "7C4E9E56-8449-402B-D53A-7F9F0184A3EE";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode displayLayer -n "CHARACTER";
+	rename -uid "AF185CDF-2C42-08A8-9450-D4AD1390D616";
+	setAttr ".v" no;
+	setAttr ".do" 3;
+createNode displayLayer -n "LOG";
+	rename -uid "EBDD35B4-7842-7BA7-C884-9FA03E28257C";
+	setAttr ".do" 4;
+createNode displayLayer -n "SET";
+	rename -uid "E78D2283-B942-6DCC-FE2C-22B024E93A09";
+	setAttr ".v" no;
+	setAttr ".do" 5;
+createNode rmanDisplayChannel -n "Ci";
+	rename -uid "BD748768-8446-B4C3-DA37-A9A3B77AD670";
+	setAttr ".cch" no;
+	setAttr ".fzn" no;
+	setAttr ".ihi" 2;
+	setAttr ".nds" 0;
+	setAttr ".enable" yes;
+	setAttr ".channelType" -type "string" "color";
+	setAttr ".channelSource" -type "string" "Ci";
+	setAttr ".lpeLightGroup" -type "string" "";
+	setAttr ".filter" -type "string" "inherit from display";
+	setAttr ".filterwidth" -type "float2" -1 -1 ;
+	setAttr ".statistics" -type "string" "";
+	setAttr ".remapBreakPoint" 0;
+	setAttr ".remapMaxValue" 0;
+	setAttr ".remapSmoothness" 0;
+	setAttr ".name" -type "string" "";
+createNode rmanDisplayChannel -n "a";
+	rename -uid "3D7AF268-404D-7A6A-0FBB-99A6DB473450";
+	setAttr ".cch" no;
+	setAttr ".fzn" no;
+	setAttr ".ihi" 2;
+	setAttr ".nds" 0;
+	setAttr ".enable" yes;
+	setAttr ".channelType" -type "string" "float";
+	setAttr ".channelSource" -type "string" "a";
+	setAttr ".lpeLightGroup" -type "string" "";
+	setAttr ".filter" -type "string" "inherit from display";
+	setAttr ".filterwidth" -type "float2" -1 -1 ;
+	setAttr ".statistics" -type "string" "";
+	setAttr ".remapBreakPoint" 0;
+	setAttr ".remapMaxValue" 0;
+	setAttr ".remapSmoothness" 0;
+	setAttr ".name" -type "string" "";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 135;
-	setAttr -av ".unw" 135;
+	setAttr -k on ".o" 0;
+	setAttr -av ".unw";
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
+	setAttr ".msaa" yes;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
 	setAttr -k on ".cch";
@@ -1999,16 +6191,17 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 52 ".u";
+	setAttr -s 59 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 49 ".r";
 select -ne :lightList1;
+	setAttr -s 2 ".l";
 select -ne :defaultTextureList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 101 ".tx";
+	setAttr -s 109 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -2055,10 +6248,10 @@ select -ne :defaultRenderGlobals;
 	setAttr -av -k on ".outf";
 	setAttr -k on ".imfkey";
 	setAttr -k on ".gama";
-	setAttr -k on ".an";
+	setAttr -k on ".an" yes;
 	setAttr -cb on ".ar";
 	setAttr -k on ".fs";
-	setAttr -k on ".ef";
+	setAttr -k on ".ef" 147;
 	setAttr -av -k on ".bfs";
 	setAttr -cb on ".me";
 	setAttr -cb on ".se";
@@ -2071,9 +6264,9 @@ select -ne :defaultRenderGlobals;
 	setAttr -cb on ".oft";
 	setAttr -cb on ".umfn";
 	setAttr -cb on ".ufe";
-	setAttr -cb on ".pff";
+	setAttr -cb on ".pff" yes;
 	setAttr -cb on ".peie";
-	setAttr -cb on ".ifp";
+	setAttr -cb on ".ifp" -type "string" "";
 	setAttr -k on ".comp";
 	setAttr -k on ".cth";
 	setAttr -k on ".soll";
@@ -2144,6 +6337,7 @@ select -ne :defaultResolution;
 	setAttr -k on ".isu";
 	setAttr -k on ".pdu";
 select -ne :defaultLightSet;
+	setAttr -s 2 ".dsm";
 select -ne :hardwareRenderGlobals;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -2183,71 +6377,109 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
-connectAttr "HIP_CTRL_rotateY.o" "earthGolem_RIGRN.phl[1]";
-connectAttr "HIP_CTRL_rotateX.o" "earthGolem_RIGRN.phl[2]";
-connectAttr "HIP_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[3]";
-connectAttr "HIP_CTRL_translateX.o" "earthGolem_RIGRN.phl[4]";
-connectAttr "HIP_CTRL_translateY.o" "earthGolem_RIGRN.phl[5]";
-connectAttr "HIP_CTRL_translateZ.o" "earthGolem_RIGRN.phl[6]";
-connectAttr "HIP_CTRL_visibility.o" "earthGolem_RIGRN.phl[7]";
-connectAttr "HIP_CTRL_scaleX.o" "earthGolem_RIGRN.phl[8]";
-connectAttr "HIP_CTRL_scaleY.o" "earthGolem_RIGRN.phl[9]";
-connectAttr "HIP_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[10]";
-connectAttr "Chest_CTRL_rotateY.o" "earthGolem_RIGRN.phl[11]";
-connectAttr "Chest_CTRL_rotateX.o" "earthGolem_RIGRN.phl[12]";
-connectAttr "Chest_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[13]";
-connectAttr "Chest_CTRL_translateX.o" "earthGolem_RIGRN.phl[14]";
-connectAttr "Chest_CTRL_translateY.o" "earthGolem_RIGRN.phl[15]";
-connectAttr "Chest_CTRL_translateZ.o" "earthGolem_RIGRN.phl[16]";
-connectAttr "Chest_CTRL_visibility.o" "earthGolem_RIGRN.phl[17]";
-connectAttr "Chest_CTRL_scaleX.o" "earthGolem_RIGRN.phl[18]";
-connectAttr "Chest_CTRL_scaleY.o" "earthGolem_RIGRN.phl[19]";
-connectAttr "Chest_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[20]";
-connectAttr "pairBlend2.orx" "earthGolem_RIGRN.phl[21]";
-connectAttr "pairBlend2.ory" "earthGolem_RIGRN.phl[22]";
-connectAttr "pairBlend2.orz" "earthGolem_RIGRN.phl[23]";
-connectAttr "earthGolem_RIGRN.phl[24]" "pairBlend2.ro";
-connectAttr "earthGolem_RIGRN.phl[25]" "leftArm_ik1_parentConstraint1.cro";
-connectAttr "pairBlend2.otx" "earthGolem_RIGRN.phl[26]";
-connectAttr "pairBlend2.oty" "earthGolem_RIGRN.phl[27]";
-connectAttr "pairBlend2.otz" "earthGolem_RIGRN.phl[28]";
-connectAttr "earthGolem_RIGRN.phl[29]" "leftArm_ik1_parentConstraint1.crp";
-connectAttr "earthGolem_RIGRN.phl[30]" "leftArm_ik1_parentConstraint1.crt";
-connectAttr "earthGolem_RIGRN.phl[31]" "pairBlend2.w";
-connectAttr "leftArm_ik1_blendParent1.o" "earthGolem_RIGRN.phl[32]";
-connectAttr "leftArm_ik1_visibility.o" "earthGolem_RIGRN.phl[33]";
-connectAttr "leftArm_ik1_scaleX.o" "earthGolem_RIGRN.phl[34]";
-connectAttr "leftArm_ik1_scaleY.o" "earthGolem_RIGRN.phl[35]";
-connectAttr "leftArm_ik1_scaleZ.o" "earthGolem_RIGRN.phl[36]";
-connectAttr "earthGolem_RIGRN.phl[37]" "leftArm_ik1_parentConstraint1.cpim";
-connectAttr "pairBlend1.orx" "earthGolem_RIGRN.phl[38]";
-connectAttr "pairBlend1.ory" "earthGolem_RIGRN.phl[39]";
-connectAttr "pairBlend1.orz" "earthGolem_RIGRN.phl[40]";
-connectAttr "earthGolem_RIGRN.phl[41]" "pairBlend1.ro";
-connectAttr "earthGolem_RIGRN.phl[42]" "rightArm_ik1_parentConstraint1.cro";
-connectAttr "pairBlend1.otx" "earthGolem_RIGRN.phl[43]";
-connectAttr "pairBlend1.oty" "earthGolem_RIGRN.phl[44]";
-connectAttr "pairBlend1.otz" "earthGolem_RIGRN.phl[45]";
-connectAttr "earthGolem_RIGRN.phl[46]" "rightArm_ik1_parentConstraint1.crp";
-connectAttr "earthGolem_RIGRN.phl[47]" "rightArm_ik1_parentConstraint1.crt";
-connectAttr "earthGolem_RIGRN.phl[48]" "pairBlend1.w";
-connectAttr "rightArm_ik1_blendParent1.o" "earthGolem_RIGRN.phl[49]";
-connectAttr "rightArm_ik1_visibility.o" "earthGolem_RIGRN.phl[50]";
-connectAttr "rightArm_ik1_scaleX.o" "earthGolem_RIGRN.phl[51]";
-connectAttr "rightArm_ik1_scaleY.o" "earthGolem_RIGRN.phl[52]";
-connectAttr "rightArm_ik1_scaleZ.o" "earthGolem_RIGRN.phl[53]";
-connectAttr "earthGolem_RIGRN.phl[54]" "rightArm_ik1_parentConstraint1.cpim";
-connectAttr "head_CTRL_rotateX.o" "earthGolem_RIGRN.phl[55]";
-connectAttr "head_CTRL_rotateY.o" "earthGolem_RIGRN.phl[56]";
-connectAttr "head_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[57]";
-connectAttr "head_CTRL_translateX.o" "earthGolem_RIGRN.phl[58]";
-connectAttr "head_CTRL_translateY.o" "earthGolem_RIGRN.phl[59]";
-connectAttr "head_CTRL_translateZ.o" "earthGolem_RIGRN.phl[60]";
-connectAttr "head_CTRL_visibility.o" "earthGolem_RIGRN.phl[61]";
-connectAttr "head_CTRL_scaleX.o" "earthGolem_RIGRN.phl[62]";
-connectAttr "head_CTRL_scaleY.o" "earthGolem_RIGRN.phl[63]";
-connectAttr "head_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[64]";
+	setAttr -s 2 ".sol";
+connectAttr "LOG.di" "forest_golem_SET_latestRN.phl[3]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[4]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[12]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[7]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[14]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[9]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[5]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[15]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[6]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[13]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[10]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[8]";
+connectAttr "SET.di" "forest_golem_SET_latestRN.phl[11]";
+connectAttr "CHARACTER.di" "earthGolem_RIGRN.phl[1]";
+connectAttr "eyes_basic_blinkRight.o" "earthGolem_RIGRN.phl[2]";
+connectAttr "eyes_basic_blinkLeft.o" "earthGolem_RIGRN.phl[3]";
+connectAttr "eyes_basic_weight_2_.o" "earthGolem_RIGRN.phl[4]";
+connectAttr "eyes_basic_weight_3_.o" "earthGolem_RIGRN.phl[5]";
+connectAttr "eyes_basic_weight_4_.o" "earthGolem_RIGRN.phl[6]";
+connectAttr "eyes_basic_weight_5_.o" "earthGolem_RIGRN.phl[7]";
+connectAttr "mouth_closed_closed.o" "earthGolem_RIGRN.phl[8]";
+connectAttr "mouth_angry_envelope.o" "earthGolem_RIGRN.phl[9]";
+connectAttr "HIP_CTRL_rotateY.o" "earthGolem_RIGRN.phl[10]";
+connectAttr "HIP_CTRL_rotateX.o" "earthGolem_RIGRN.phl[11]";
+connectAttr "HIP_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[12]";
+connectAttr "HIP_CTRL_translateX.o" "earthGolem_RIGRN.phl[13]";
+connectAttr "HIP_CTRL_translateY.o" "earthGolem_RIGRN.phl[14]";
+connectAttr "HIP_CTRL_translateZ.o" "earthGolem_RIGRN.phl[15]";
+connectAttr "HIP_CTRL_visibility.o" "earthGolem_RIGRN.phl[16]";
+connectAttr "HIP_CTRL_scaleX.o" "earthGolem_RIGRN.phl[17]";
+connectAttr "HIP_CTRL_scaleY.o" "earthGolem_RIGRN.phl[18]";
+connectAttr "HIP_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[19]";
+connectAttr "Chest_CTRL_rotateY.o" "earthGolem_RIGRN.phl[20]";
+connectAttr "Chest_CTRL_rotateX.o" "earthGolem_RIGRN.phl[21]";
+connectAttr "Chest_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[22]";
+connectAttr "Chest_CTRL_visibility.o" "earthGolem_RIGRN.phl[23]";
+connectAttr "Chest_CTRL_translateX.o" "earthGolem_RIGRN.phl[24]";
+connectAttr "Chest_CTRL_translateY.o" "earthGolem_RIGRN.phl[25]";
+connectAttr "Chest_CTRL_translateZ.o" "earthGolem_RIGRN.phl[26]";
+connectAttr "Chest_CTRL_scaleX.o" "earthGolem_RIGRN.phl[27]";
+connectAttr "Chest_CTRL_scaleY.o" "earthGolem_RIGRN.phl[28]";
+connectAttr "Chest_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[29]";
+connectAttr "pairBlend2.orx" "earthGolem_RIGRN.phl[30]";
+connectAttr "pairBlend2.ory" "earthGolem_RIGRN.phl[31]";
+connectAttr "pairBlend2.orz" "earthGolem_RIGRN.phl[32]";
+connectAttr "earthGolem_RIGRN.phl[33]" "pairBlend2.ro";
+connectAttr "earthGolem_RIGRN.phl[34]" "leftArm_ik1_parentConstraint1.cro";
+connectAttr "pairBlend2.otx" "earthGolem_RIGRN.phl[35]";
+connectAttr "pairBlend2.oty" "earthGolem_RIGRN.phl[36]";
+connectAttr "pairBlend2.otz" "earthGolem_RIGRN.phl[37]";
+connectAttr "earthGolem_RIGRN.phl[38]" "leftArm_ik1_parentConstraint1.crp";
+connectAttr "earthGolem_RIGRN.phl[39]" "leftArm_ik1_parentConstraint1.crt";
+connectAttr "earthGolem_RIGRN.phl[40]" "pairBlend2.w";
+connectAttr "leftArm_ik1_blendParent1.o" "earthGolem_RIGRN.phl[41]";
+connectAttr "leftArm_ik1_visibility.o" "earthGolem_RIGRN.phl[42]";
+connectAttr "leftArm_ik1_scaleX.o" "earthGolem_RIGRN.phl[43]";
+connectAttr "leftArm_ik1_scaleY.o" "earthGolem_RIGRN.phl[44]";
+connectAttr "leftArm_ik1_scaleZ.o" "earthGolem_RIGRN.phl[45]";
+connectAttr "earthGolem_RIGRN.phl[46]" "leftArm_ik1_parentConstraint1.cpim";
+connectAttr "pairBlend1.orx" "earthGolem_RIGRN.phl[47]";
+connectAttr "pairBlend1.ory" "earthGolem_RIGRN.phl[48]";
+connectAttr "pairBlend1.orz" "earthGolem_RIGRN.phl[49]";
+connectAttr "earthGolem_RIGRN.phl[50]" "pairBlend1.ro";
+connectAttr "earthGolem_RIGRN.phl[51]" "rightArm_ik1_parentConstraint1.cro";
+connectAttr "pairBlend1.otx" "earthGolem_RIGRN.phl[52]";
+connectAttr "pairBlend1.oty" "earthGolem_RIGRN.phl[53]";
+connectAttr "pairBlend1.otz" "earthGolem_RIGRN.phl[54]";
+connectAttr "earthGolem_RIGRN.phl[55]" "rightArm_ik1_parentConstraint1.crp";
+connectAttr "earthGolem_RIGRN.phl[56]" "rightArm_ik1_parentConstraint1.crt";
+connectAttr "earthGolem_RIGRN.phl[57]" "pairBlend1.w";
+connectAttr "rightArm_ik1_blendParent1.o" "earthGolem_RIGRN.phl[58]";
+connectAttr "rightArm_ik1_visibility.o" "earthGolem_RIGRN.phl[59]";
+connectAttr "rightArm_ik1_scaleX.o" "earthGolem_RIGRN.phl[60]";
+connectAttr "rightArm_ik1_scaleY.o" "earthGolem_RIGRN.phl[61]";
+connectAttr "rightArm_ik1_scaleZ.o" "earthGolem_RIGRN.phl[62]";
+connectAttr "earthGolem_RIGRN.phl[63]" "rightArm_ik1_parentConstraint1.cpim";
+connectAttr "head_CTRL_rotateX.o" "earthGolem_RIGRN.phl[64]";
+connectAttr "head_CTRL_rotateY.o" "earthGolem_RIGRN.phl[65]";
+connectAttr "head_CTRL_rotateZ.o" "earthGolem_RIGRN.phl[66]";
+connectAttr "head_CTRL_visibility.o" "earthGolem_RIGRN.phl[67]";
+connectAttr "head_CTRL_translateX.o" "earthGolem_RIGRN.phl[68]";
+connectAttr "head_CTRL_translateY.o" "earthGolem_RIGRN.phl[69]";
+connectAttr "head_CTRL_translateZ.o" "earthGolem_RIGRN.phl[70]";
+connectAttr "head_CTRL_scaleX.o" "earthGolem_RIGRN.phl[71]";
+connectAttr "head_CTRL_scaleY.o" "earthGolem_RIGRN.phl[72]";
+connectAttr "head_CTRL_scaleZ.o" "earthGolem_RIGRN.phl[73]";
+connectAttr "earthGolem_RIGRN.phl[74]" "blendShape1Set.dsm" -na;
+connectAttr "blendShape1GroupId.id" "earthGolem_RIGRN.phl[75]";
+connectAttr "blendShape1Set.mwc" "earthGolem_RIGRN.phl[76]";
+connectAttr "blendShape1.og[0]" "earthGolem_RIGRN.phl[77]";
+connectAttr "earthGolem_RIGRN.phl[78]" "earthGolem_RIGRN.phl[79]";
+connectAttr "earthGolem_RIGRN.phl[80]" "blendShape1GroupParts.ig";
+connectAttr "SCENE_CAM_translateX.o" "SCENE_CAM.tx";
+connectAttr "SCENE_CAM_translateY.o" "SCENE_CAM.ty";
+connectAttr "SCENE_CAM_translateZ.o" "SCENE_CAM.tz";
+connectAttr "SCENE_CAM_rotateX.o" "SCENE_CAM.rx";
+connectAttr "SCENE_CAM_rotateY.o" "SCENE_CAM.ry";
+connectAttr "SCENE_CAM_rotateZ.o" "SCENE_CAM.rz";
+connectAttr "SCENE_CAM_visibility.o" "SCENE_CAM.v";
+connectAttr "SCENE_CAM_scaleX.o" "SCENE_CAM.sx";
+connectAttr "SCENE_CAM_scaleY.o" "SCENE_CAM.sy";
+connectAttr "SCENE_CAM_scaleZ.o" "SCENE_CAM.sz";
 connectAttr "locator1_translateX.o" "locator1.tx";
 connectAttr "locator1_translateY.o" "locator1.ty";
 connectAttr "locator1_translateZ.o" "locator1.tz";
@@ -2292,9 +6524,12 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "sharedReferenceNode.sr" "forest_golem_SET_latestRN.sr";
+connectAttr "blendShape1.mlpr" "shapeEditorManager.bspr[6]";
 connectAttr "forest_golem_SET_latestRN.phl[1]" "forest_golem_SET_latestRN.phl[2]"
 		;
+connectAttr "sharedReferenceNode.sr" "forest_golem_SET_latestRN.sr";
+connectAttr "Ci.msg" ":rmanDefaultDisplay.displayChannels[0]";
+connectAttr "a.msg" ":rmanDefaultDisplay.displayChannels[1]";
 connectAttr "earthGolem_RIGRNfosterParent1.msg" "earthGolem_RIGRN.fp";
 connectAttr "rightArm_ik1_translateX.o" "pairBlend1.itx1";
 connectAttr "rightArm_ik1_translateY.o" "pairBlend1.ity1";
@@ -2320,5 +6555,14 @@ connectAttr "leftArm_ik1_parentConstraint1.ctz" "pairBlend2.itz2";
 connectAttr "leftArm_ik1_parentConstraint1.crx" "pairBlend2.irx2";
 connectAttr "leftArm_ik1_parentConstraint1.cry" "pairBlend2.iry2";
 connectAttr "leftArm_ik1_parentConstraint1.crz" "pairBlend2.irz2";
+connectAttr "blendShape1GroupParts.og" "blendShape1.ip[0].ig";
+connectAttr "blendShape1GroupId.id" "blendShape1.ip[0].gi";
+connectAttr "shapeEditorManager.obsv[6]" "blendShape1.tgdt[0].dpvs";
+connectAttr "blendShape1GroupId.msg" "blendShape1Set.gn" -na;
+connectAttr "blendShape1.msg" "blendShape1Set.ub[0]";
+connectAttr "blendShape1GroupId.id" "blendShape1GroupParts.gi";
+connectAttr "layerManager.dli[1]" "CHARACTER.id";
+connectAttr "layerManager.dli[4]" "LOG.id";
+connectAttr "layerManager.dli[5]" "SET.id";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of scene08_rockGolem_Intro.ma
