@@ -1,0 +1,66 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 3.25,
+                    "horizonFade": 1.2999999523162842,
+                    "nbSamples": 16
+                },
+                "Parallax Occlusion Mapping": {
+                    "maxPOMSamples": 16,
+                    "minPOMSamples": 4,
+                    "pomStrength": 1,
+                    "usePOM": false
+                }
+            },
+            "shader": "pbr-metal-rough-with-alpha-blending",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "body": {
+            "shader": "Main shader"
+        },
+        "bootL": {
+            "shader": "Main shader"
+        },
+        "bootR": {
+            "shader": "Main shader"
+        },
+        "chestPlate": {
+            "shader": "Main shader"
+        },
+        "eyeL": {
+            "shader": "Main shader"
+        },
+        "eyeR": {
+            "shader": "Main shader"
+        },
+        "hair": {
+            "shader": "Main shader"
+        },
+        "harness": {
+            "shader": "Main shader"
+        },
+        "initialShadingGroup": {
+            "shader": "Main shader"
+        },
+        "pants": {
+            "shader": "Main shader"
+        },
+        "satchel": {
+            "shader": "Main shader"
+        },
+        "shirt": {
+            "shader": "Main shader"
+        },
+        "tie": {
+            "shader": "Main shader"
+        }
+    }
+}
