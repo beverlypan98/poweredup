@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: drinksPotion3.ma
-//Last modified: Tue, Dec 10, 2019 02:45:54 AM
+//Last modified: Tue, Dec 10, 2019 11:55:56 AM
 //Codeset: UTF-8
 file -rdi 1 -ns "mc_latest_rig_combined_latest_real" -rfn "mc_latest_rig_combined_latest_realRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/soohyun/Desktop/ucbugg/poweredup//assets/characters/mc/USE_THIS/mc_latest_rig_combined_latest_real.ma";
@@ -56,14 +56,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "A99CF5BB-3F4A-5DC1-A7FE-F8B3A82EAC7F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.1601923935341372 8.7396314231031713 0.17271648928589389 ;
-	setAttr ".r" -type "double3" 0.86164722601879951 -1385.7999999997926 0 ;
+	setAttr ".t" -type "double3" -5.0370299508679768 7.2925096550348885 2.8005974461814791 ;
+	setAttr ".r" -type "double3" 13.46164722602099 -1481.3999999995967 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3201BC0B-0E45-ABCD-D245-8C8FD42B45B1";
 	setAttr -k off ".v" no;
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 3.3938407213750299;
+	setAttr ".coi" 5.9988375598783694;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -173,7 +173,7 @@ createNode transform -n "cam3_192_310";
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
 	setAttr -l on ".tz";
-	setAttr ".r" -type "double3" 6.2616472259922684 -1400.5999999998294 0 ;
+	setAttr ".r" -type "double3" 6.2616472259922693 -1400.5999999998294 0 ;
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
 	setAttr -l on ".rz";
@@ -198,7 +198,143 @@ createNode transform -n "potion";
 	setAttr ".sp" -type "double3" -1.1920928955078125e-07 0.48449003248769507 -1.7881393421514957e-07 ;
 	setAttr ".spt" -type "double3" 1.1910131468503885e-07 -0.48405120136632429 1.7865197191663653e-07 ;
 createNode fosterParent -n "mc_latest_rig_combined_latest_realRNfosterParent1";
-	rename -uid "8CC6F66B-E14E-304D-23A9-2AAA5A725C70";
+	rename -uid "4ED20321-0C43-5BED-A94B-3D9C61BE1DDA";
+createNode transform -n "summon_light" -p "mc_latest_rig_combined_latest_realRNfosterParent1";
+	rename -uid "11FBCECE-3743-D7EC-01DC-30A33B7C76DC";
+	setAttr ".t" -type "double3" -0.38676361607910109 -1.7058579894204169 0.093616626176686812 ;
+createNode PxrSphereLight -n "summon_lightShape" -p "summon_light";
+	rename -uid "11B22E96-D343-034F-4AA2-03A41804990F";
+	setAttr ".cch" no;
+	setAttr ".fzn" no;
+	setAttr ".ihi" 2;
+	setAttr ".nds" 0;
+	setAttr ".isc" no;
+	setAttr ".bbx" no;
+	setAttr ".icn" -type "string" "";
+	setAttr ".vwm" 2;
+	setAttr ".tpv" 0;
+	setAttr ".uit" 0;
+	setAttr -k off ".v" yes;
+	setAttr ".io" no;
+	setAttr ".tmp" no;
+	setAttr ".gh" no;
+	setAttr ".obcc" -type "float3" 0 0 0 ;
+	setAttr ".wfcc" -type "float3" 0 0 0 ;
+	setAttr ".uoc" 0;
+	setAttr ".oc" 0;
+	setAttr ".ovdt" 0;
+	setAttr ".ovlod" 0;
+	setAttr ".ovs" no;
+	setAttr ".ovt" yes;
+	setAttr ".ovp" yes;
+	setAttr ".ove" yes;
+	setAttr ".ovv" yes;
+	setAttr ".hpb" no;
+	setAttr ".ovrgbf" no;
+	setAttr ".ovc" 0;
+	setAttr ".ovrgb" -type "float3" 0 0 0 ;
+	setAttr ".lodv" yes;
+	setAttr ".sech" yes;
+	setAttr ".rlid" 0;
+	setAttr ".rndr" yes;
+	setAttr ".lovc" 0;
+	setAttr ".gc" 0;
+	setAttr ".gpr" 3;
+	setAttr ".gps" 3;
+	setAttr ".gss" 1;
+	setAttr ".gap" 1;
+	setAttr ".gcp" -type "float3" 0.447 1 1 ;
+	setAttr ".gla" 1;
+	setAttr ".gac" -type "float3" 0.87800002 0.67799997 0.66299999 ;
+	setAttr ".grs" 0;
+	setAttr ".gre" 100;
+	setAttr ".rt" 0;
+	setAttr ".rv" no;
+	setAttr ".vf" 1;
+	setAttr ".hfm" 1;
+	setAttr ".mb" yes;
+	setAttr ".vir" no;
+	setAttr ".vif" no;
+	setAttr ".csh" yes;
+	setAttr ".rcsh" yes;
+	setAttr ".asbg" no;
+	setAttr ".vbo" no;
+	setAttr ".mvs" 1;
+	setAttr ".gao" no;
+	setAttr ".gal" 1;
+	setAttr ".sso" no;
+	setAttr ".ssa" 1;
+	setAttr ".msa" 1;
+	setAttr ".vso" no;
+	setAttr ".vss" 1;
+	setAttr ".dej" no;
+	setAttr ".iss" no;
+	setAttr ".vis" no;
+	setAttr ".tw" no;
+	setAttr ".rtw" yes;
+	setAttr ".pv" -type "double2" 0 0 ;
+	setAttr ".di" no;
+	setAttr ".dcol" no;
+	setAttr ".dcc" -type "string" "color";
+	setAttr ".ih" no;
+	setAttr ".ds" yes;
+	setAttr ".op" no;
+	setAttr ".hot" no;
+	setAttr ".smo" yes;
+	setAttr ".bbs" -type "float3" 1.5 1.5 1.5 ;
+	setAttr ".fbda" yes;
+	setAttr ".dsr" 6;
+	setAttr ".xsr" 5;
+	setAttr ".fth" 0;
+	setAttr ".nat" 30;
+	setAttr ".dhe" no;
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".intensity" 0;
+	setAttr ".exposure" 5.7831325531005859;
+	setAttr ".lightColor" -type "float3" 0 0.64102566 0.38903847 ;
+	setAttr ".enableTemperature" no;
+	setAttr ".temperature" 6500;
+	setAttr ".emissionFocus" 0;
+	setAttr ".emissionFocusNormalize" no;
+	setAttr ".emissionFocusTint" -type "float3" 0 0 0 ;
+	setAttr ".specular" 1;
+	setAttr ".diffuse" 1;
+	setAttr ".intensityNearDist" 0;
+	setAttr ".coneAngle" 90;
+	setAttr ".coneSoftness" 0;
+	setAttr ".iesProfile" -type "string" "";
+	setAttr ".iesProfileScale" 0;
+	setAttr ".iesProfileNormalize" no;
+	setAttr ".enableShadows" yes;
+	setAttr ".shadowColor" -type "float3" 0 0 0 ;
+	setAttr ".shadowDistance" -1;
+	setAttr ".shadowFalloff" -1;
+	setAttr ".shadowFalloffGamma" 1;
+	setAttr ".shadowSubset" -type "string" "";
+	setAttr ".shadowExcludeSubset" -type "string" "";
+	setAttr ".areaNormalize" no;
+	setAttr ".traceLightPaths" no;
+	setAttr ".thinShadow" yes;
+	setAttr ".visibleInRefractionPath" yes;
+	setAttr ".cheapCaustics" no;
+	setAttr ".cheapCausticsExcludeGroup" -type "string" "";
+	setAttr ".fixedSampleCount" 0;
+	setAttr ".lightGroup" -type "string" "";
+	setAttr ".importanceMultiplier" 1;
+	setAttr ".rman__lightfilters[0]" -type "float3"  0 0 0;
+	setAttr ".cl" -type "float3" 0 0.64102566 0.38903847 ;
+	setAttr ".ed" yes;
+	setAttr ".sn" yes;
+	setAttr ".lls" 1;
+	setAttr ".de" 2;
+	setAttr ".urs" yes;
+	setAttr ".col" 5;
+	setAttr ".hio" no;
+	setAttr ".uocol" no;
+	setAttr ".oclr" -type "float3" 0 0 0 ;
+	setAttr ".rman_coneAngleDepth" 10;
+	setAttr ".rman_coneAngleOpacity" 0.5;
 createNode transform -n "no_cap_potion_parent_wrist" -p "mc_latest_rig_combined_latest_realRNfosterParent1";
 	rename -uid "70222D4B-2E47-CB48-0C56-1D9333DE0C11";
 	setAttr ".t" -type "double3" 8.2244129151334988 -4.1797933369110654 2.1137345942133341 ;
@@ -16659,142 +16795,6 @@ createNode mesh -n "ropeShape" -p "|mc_latest_rig_combined_latest_realRNfosterPa
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
-createNode transform -n "summon_light" -p "mc_latest_rig_combined_latest_realRNfosterParent1";
-	rename -uid "11FBCECE-3743-D7EC-01DC-30A33B7C76DC";
-	setAttr ".t" -type "double3" -0.38676361607910109 -1.7058579894204169 0.093616626176686812 ;
-createNode PxrSphereLight -n "summon_lightShape" -p "summon_light";
-	rename -uid "11B22E96-D343-034F-4AA2-03A41804990F";
-	setAttr ".cch" no;
-	setAttr ".fzn" no;
-	setAttr ".ihi" 2;
-	setAttr ".nds" 0;
-	setAttr ".isc" no;
-	setAttr ".bbx" no;
-	setAttr ".icn" -type "string" "";
-	setAttr ".vwm" 2;
-	setAttr ".tpv" 0;
-	setAttr ".uit" 0;
-	setAttr -k off ".v" yes;
-	setAttr ".io" no;
-	setAttr ".tmp" no;
-	setAttr ".gh" no;
-	setAttr ".obcc" -type "float3" 0 0 0 ;
-	setAttr ".wfcc" -type "float3" 0 0 0 ;
-	setAttr ".uoc" 0;
-	setAttr ".oc" 0;
-	setAttr ".ovdt" 0;
-	setAttr ".ovlod" 0;
-	setAttr ".ovs" no;
-	setAttr ".ovt" yes;
-	setAttr ".ovp" yes;
-	setAttr ".ove" yes;
-	setAttr ".ovv" yes;
-	setAttr ".hpb" no;
-	setAttr ".ovrgbf" no;
-	setAttr ".ovc" 0;
-	setAttr ".ovrgb" -type "float3" 0 0 0 ;
-	setAttr ".lodv" yes;
-	setAttr ".sech" yes;
-	setAttr ".rlid" 0;
-	setAttr ".rndr" yes;
-	setAttr ".lovc" 0;
-	setAttr ".gc" 0;
-	setAttr ".gpr" 3;
-	setAttr ".gps" 3;
-	setAttr ".gss" 1;
-	setAttr ".gap" 1;
-	setAttr ".gcp" -type "float3" 0.447 1 1 ;
-	setAttr ".gla" 1;
-	setAttr ".gac" -type "float3" 0.87800002 0.67799997 0.66299999 ;
-	setAttr ".grs" 0;
-	setAttr ".gre" 100;
-	setAttr ".rt" 0;
-	setAttr ".rv" no;
-	setAttr ".vf" 1;
-	setAttr ".hfm" 1;
-	setAttr ".mb" yes;
-	setAttr ".vir" no;
-	setAttr ".vif" no;
-	setAttr ".csh" yes;
-	setAttr ".rcsh" yes;
-	setAttr ".asbg" no;
-	setAttr ".vbo" no;
-	setAttr ".mvs" 1;
-	setAttr ".gao" no;
-	setAttr ".gal" 1;
-	setAttr ".sso" no;
-	setAttr ".ssa" 1;
-	setAttr ".msa" 1;
-	setAttr ".vso" no;
-	setAttr ".vss" 1;
-	setAttr ".dej" no;
-	setAttr ".iss" no;
-	setAttr ".vis" no;
-	setAttr ".tw" no;
-	setAttr ".rtw" yes;
-	setAttr ".pv" -type "double2" 0 0 ;
-	setAttr ".di" no;
-	setAttr ".dcol" no;
-	setAttr ".dcc" -type "string" "color";
-	setAttr ".ih" no;
-	setAttr ".ds" yes;
-	setAttr ".op" no;
-	setAttr ".hot" no;
-	setAttr ".smo" yes;
-	setAttr ".bbs" -type "float3" 1.5 1.5 1.5 ;
-	setAttr ".fbda" yes;
-	setAttr ".dsr" 6;
-	setAttr ".xsr" 5;
-	setAttr ".fth" 0;
-	setAttr ".nat" 30;
-	setAttr ".dhe" no;
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".intensity" 0;
-	setAttr ".exposure" 5.7831325531005859;
-	setAttr ".lightColor" -type "float3" 0 0.64102566 0.38903847 ;
-	setAttr ".enableTemperature" no;
-	setAttr ".temperature" 6500;
-	setAttr ".emissionFocus" 0;
-	setAttr ".emissionFocusNormalize" no;
-	setAttr ".emissionFocusTint" -type "float3" 0 0 0 ;
-	setAttr ".specular" 1;
-	setAttr ".diffuse" 1;
-	setAttr ".intensityNearDist" 0;
-	setAttr ".coneAngle" 90;
-	setAttr ".coneSoftness" 0;
-	setAttr ".iesProfile" -type "string" "";
-	setAttr ".iesProfileScale" 0;
-	setAttr ".iesProfileNormalize" no;
-	setAttr ".enableShadows" yes;
-	setAttr ".shadowColor" -type "float3" 0 0 0 ;
-	setAttr ".shadowDistance" -1;
-	setAttr ".shadowFalloff" -1;
-	setAttr ".shadowFalloffGamma" 1;
-	setAttr ".shadowSubset" -type "string" "";
-	setAttr ".shadowExcludeSubset" -type "string" "";
-	setAttr ".areaNormalize" no;
-	setAttr ".traceLightPaths" no;
-	setAttr ".thinShadow" yes;
-	setAttr ".visibleInRefractionPath" yes;
-	setAttr ".cheapCaustics" no;
-	setAttr ".cheapCausticsExcludeGroup" -type "string" "";
-	setAttr ".fixedSampleCount" 0;
-	setAttr ".lightGroup" -type "string" "";
-	setAttr ".importanceMultiplier" 1;
-	setAttr ".rman__lightfilters[0]" -type "float3"  0 0 0;
-	setAttr ".cl" -type "float3" 0 0.64102566 0.38903847 ;
-	setAttr ".ed" yes;
-	setAttr ".sn" yes;
-	setAttr ".lls" 1;
-	setAttr ".de" 2;
-	setAttr ".urs" yes;
-	setAttr ".col" 5;
-	setAttr ".hio" no;
-	setAttr ".uocol" no;
-	setAttr ".oclr" -type "float3" 0 0 0 ;
-	setAttr ".rman_coneAngleDepth" 10;
-	setAttr ".rman_coneAngleOpacity" 0.5;
 createNode transform -n "no_cap_potion_parent_shoulder" -p "mc_latest_rig_combined_latest_realRNfosterParent1";
 	rename -uid "3BBEBAC0-1A41-4E20-A683-798F939C808B";
 	setAttr ".t" -type "double3" 0.36360038231250746 -8.1624336636663131 2.2456479352732246 ;
@@ -37663,24 +37663,24 @@ createNode mesh -n "ropeShape" -p "|mc_latest_rig_combined_latest_realRNfosterPa
 	setAttr ".dr" 3;
 	setAttr ".dsm" 2;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8BEB3439-D84F-32B7-D0E9-44907AF57846";
-	setAttr ".bsdt[0].bscd" -type "Int32Array" 6 0 1 2 3 4
-		 5 ;
-	setAttr -s 6 ".bspr";
-	setAttr -s 6 ".obsv";
+	rename -uid "97EAE3CB-F34C-696C-BD0D-44923C8E5192";
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 7 0 1 2 3 4
+		 5 6 ;
+	setAttr -s 7 ".bspr";
+	setAttr -s 7 ".obsv";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "72587FC5-894E-E319-9223-9E938E959258";
+	rename -uid "93A9E472-AB46-7F4D-184A-BAA3B0B8199D";
 	setAttr -s 104 ".lnk";
 	setAttr -s 104 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B39E94D5-5B4F-B773-F86D-D19E2A5F0DA2";
+	rename -uid "556EC956-994C-F674-BE84-68B05126DE98";
 	setAttr ".cdl" 2;
-	setAttr -s 2 ".dli[1:2]"  1 2;
+	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "4099D4D1-194A-79F2-124A-0287AA0A0C27";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "AAA65273-CC4C-A406-B94A-0A8DD51D1448";
+	rename -uid "B88A516F-2141-E15B-A381-5E92294B89A5";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B98C4A86-C74B-2FFE-A9B6-CAB162676D5B";
 	setAttr ".g" yes;
@@ -37688,10 +37688,10 @@ createNode shapeEditorManager -n "shapeEditorManager1";
 	rename -uid "2452323F-A84C-990A-3FF7-0094F4EF6213";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "442F87F0-0D45-711A-A4C6-14947E3C5B0F";
+	rename -uid "8209C9FD-AD4E-F492-68FA-7A8F583D5F52";
 createNode reference -n "mc_latest_rig_combined_latest_realRN";
 	rename -uid "1F27C547-6643-6DC8-5524-228BB19336CB";
-	setAttr -s 791 ".phl";
+	setAttr -s 796 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -38483,10 +38483,15 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 	setAttr ".phl[789]" 0;
 	setAttr ".phl[790]" 0;
 	setAttr ".phl[791]" 0;
+	setAttr ".phl[792]" 0;
+	setAttr ".phl[793]" 0;
+	setAttr ".phl[794]" 0;
+	setAttr ".phl[795]" 0;
+	setAttr ".phl[796]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"mc_latest_rig_combined_latest_realRN"
 		"mc_latest_rig_combined_latest_realRN" 0
-		"mc_latest_rig_combined_latest_real:mc_rig_onlyRN" 6
+		"mc_latest_rig_combined_latest_real:mc_rig_onlyRN" 7
 		2 "mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:L_eyeBlink" "w[0:1]" 
 		" -s 2 0.55624998000000003 0"
 		2 "faceRig:R_eyeBlink" "envelope" " 1"
@@ -38495,9 +38500,11 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		" -s 2 0.55624998000000003 0"
 		2 "mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:L_eyeBlink" "w[0:1]" 
 		" -s 2 0.55624998000000003 0"
+		2 "mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:L_eyeBlink" "w[0:1]" 
+		" -s 2 0.55624998000000003 0"
 		3 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist.message" 
 		"mc_latest_rig_combined_latest_real:skinCluster1.paintTrans" ""
-		"mc_latest_rig_combined_latest_realRN" 45
+		"mc_latest_rig_combined_latest_realRN" 62
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1" 
 		"visibility" " 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1" 
@@ -38505,7 +38512,29 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1" 
 		"smoothness" " -k 1 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
-		"uvPivot" " -type \"double2\" 0.61859044432640076 0.35175372660160065"
+		"instObjGroups.objectGroups" " -s 10"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"instObjGroups.objectGroups[0].objectGroupId" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"instObjGroups.objectGroups[1].objectGroupId" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"uvPivot" " -type \"double2\" 0.55740642547607422 0.66653329133987427"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"colorSet" " -s 2"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"colorSet[0].colorName" " -type \"string\" \"SculptFreezeColorTemp\""
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"colorSet[0].clamped" " 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"colorSet[0].representation" " 4"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"colorSet[1].colorName" " -type \"string\" \"SculptMaskColorTemp\""
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"colorSet[1].clamped" " 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
+		"colorSet[1].representation" " 4"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
 		"useMeshSculptCache" " 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape" 
@@ -38582,16 +38611,29 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		
 		2 "mc_latest_rig_combined_latest_real:tweak41" "vl[0].vt[664:806]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
+		3 "mc_latest_rig_combined_latest_real:skinCluster1.outputGeometry[0]" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.inMesh" 
+		""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara.drawOverride" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[791]" ""
-		"mc_latest_rig_combined_latest_real:mc_rig_onlyRN" 1373
+		5 3 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[17]" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[792]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[17].objectGroupId" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[793]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[17].objectGrpColor" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[794]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.inMesh" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[795]" ""
+		5 3 "mc_latest_rig_combined_latest_realRN" "mc_latest_rig_combined_latest_real:skinCluster1.outputGeometry[0]" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[796]" "mc_latest_rig_combined_latest_real:body1Shape.i"
+		
+		"mc_latest_rig_combined_latest_real:mc_rig_onlyRN" 1446
 		0 "|mc_latest_rig_combined_latest_realRNfosterParent1|no_cap_potion_parent_shoulder" 
 		"|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1" 
 		"-s -r "
-		0 "|mc_latest_rig_combined_latest_realRNfosterParent1|summon_light" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
-		"-s -r "
 		0 "|mc_latest_rig_combined_latest_realRNfosterParent1|no_cap_potion_parent_wrist" 
 		"|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
+		"-s -r "
+		0 "|mc_latest_rig_combined_latest_realRNfosterParent1|summon_light" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"-s -r "
 		1 |mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl 
 		"blendPoint1" "blendPoint1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
@@ -38644,7 +38686,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
-		"rotate" " -type \"double3\" 11.80889985583232971 -12.86534582807037275 6.63749832019134178"
+		"rotate" " -type \"double3\" -31.28837197559623462 -8.57282462792862532 -3.99208827170813185"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
 		"rotateX" " -av"
@@ -38682,7 +38724,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:null3|mc_latest_rig_combined_latest_real:mc_rig_only:teeth_v1_latest:Teeth|mc_latest_rig_combined_latest_real:mc_rig_only:bottomTeeth_rotateBuffer|mc_latest_rig_combined_latest_real:mc_rig_only:teeth_v1_latest:BottomCont1" 
 		"visibility" " 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null6|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl1" 
-		"translate" " -type \"double3\" 0 0.36798871557883495 -0.02028140319239851"
+		"translate" " -type \"double3\" -8.1000447412041515e-05 0.30822039226861386 -0.015221228651422556"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null6|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl1" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null6|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl1" 
@@ -38694,7 +38737,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null6|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl1" 
 		"rotateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1" 
-		"translate" " -type \"double3\" 0.084549638676500727 0.25084421773391458 -0.036859940929424788"
+		"translate" " -type \"double3\" 0.017269723328556565 0.15235272351679635 -0.35284976154463943"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1" 
 		"translateX" " -av"
@@ -38703,7 +38746,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1" 
-		"rotate" " -type \"double3\" 0 6.56187957846754344 0"
+		"rotate" " -type \"double3\" -1.03355104478521787 8.63963424957193737 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1" 
@@ -38735,7 +38778,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl" 
-		"rotate" " -type \"double3\" 5.98795207998260715 -31.49604528821662797 22.75384634663721073"
+		"rotate" " -type \"double3\" 19.02258293923892296 -27.29186400836867321 9.60648966141658178"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl" 
 		"rotateX" " -av"
@@ -38762,7 +38805,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow_ctrl" 
-		"rotate" " -type \"double3\" -26.83290746298033369 0 0"
+		"rotate" " -type \"double3\" -28.10281876316583904 -8.48407984395557335 -17.14956551544584684"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow_ctrl" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow_ctrl" 
@@ -38778,7 +38822,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow_ctrl" 
 		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.2700331331506578 0.12862649171825788 -0.15836240146800912"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl" 
@@ -38786,7 +38831,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl" 
-		"rotate" " -type \"double3\" -62.60450306728164804 16.1449721607789165 -9.04607948110726845"
+		"rotate" " -type \"double3\" 23.61115940859739837 -9.03613845382205128 -20.80013720689379042"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl" 
 		"rotateX" " -av"
@@ -38805,7 +38850,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow_ctrl" 
 		"visibility" " -av 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow_ctrl" 
-		"translate" " -type \"double3\" -0.2056889981434383 0.10071812202655299 0.053849232902283425"
+		"translate" " -type \"double3\" 0.29202158104660031 0.2334275995945525 -0.28098721962472167"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow_ctrl" 
 		"translateX" " -av"
@@ -38814,7 +38859,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow_ctrl" 
-		"rotate" " -type \"double3\" -58.19642993729331693 -12.88633593821891843 33.49121336969889029"
+		"rotate" " -type \"double3\" 4.31418299094055691 12.76863393873587249 -5.02947002949384814"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow_ctrl" 
 		"rotateX" " -av"
@@ -38842,7 +38887,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl" 
-		"rotate" " -type \"double3\" 4.36906365232870364 -4.37203277832716619 -0.33370722841628175"
+		"rotate" " -type \"double3\" 4.39289488974672171 -4.34808675315295634 -0.64717646832127829"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl" 
 		"rotateY" " -av"
@@ -38859,7 +38904,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl" 
 		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_4" 
-		"rotate" " -type \"double3\" 1.99380089118924331 0 0"
+		"rotate" " -type \"double3\" 8.71373177822340139 0 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_4" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_4" 
@@ -38867,7 +38912,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_4" 
 		"rotateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_4|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_3" 
-		"rotate" " -type \"double3\" -4.52381539170482938 -0.50946305964180216 0.040307079589070108"
+		"rotate" " -type \"double3\" -14.35725886254726724 -0.48956843408390127 0.038733956177290481"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_4|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_3" 
 		"rotateX" " -av"
@@ -38876,7 +38921,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_4|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_3" 
 		"rotateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_4|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_3|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_2" 
-		"rotate" " -type \"double3\" -6.65909791069880619 5.87122835276557531 -0.43180314994335434"
+		"rotate" " -type \"double3\" -7.95957263399061254 5.87122835276557531 -0.05335391117113103"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_4|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_3|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_2" 
 		"rotateX" " -av"
@@ -38893,7 +38938,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_4|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_3|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_2|mc_latest_rig_combined_latest_real:mc_rig_only:spine_fk_ctrl_1" 
 		"rotateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog" 
-		"translate" " -type \"double3\" -0.91472451880940153 5.77798387778800748 -0.78738111083681894"
+		"translate" " -type \"double3\" -0.91472451789077935 5.77798387778014444 -0.78738111076677608"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog" 
 		"translateX" " -av"
@@ -38901,8 +38946,110 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog" 
 		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog" 
+		"preferredAngle" " -type \"double3\" 2.82858156476862588 3.31445710037265373 0.081853595157352882"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:l_leg" 
+		"preferredAngle" " -type \"double3\" -7.83283344419369598 -2.06722371764409463 3.71001333963427804"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:l_leg|mc_latest_rig_combined_latest_real:mc_rig_only:l_mid_thigh" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:l_leg|mc_latest_rig_combined_latest_real:mc_rig_only:l_knee" 
+		"preferredAngle" " -type \"double3\" 0.060149435657384502 2.05312111503235961 0.023058266483503134"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:l_leg|mc_latest_rig_combined_latest_real:mc_rig_only:l_knee|mc_latest_rig_combined_latest_real:mc_rig_only:l_mid_shin" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:l_leg|mc_latest_rig_combined_latest_real:mc_rig_only:l_knee|mc_latest_rig_combined_latest_real:mc_rig_only:l_ankle" 
+		"preferredAngle" " -type \"double3\" 2.25393930402249953 2.31744754713384626 -8.0678267037507343"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:l_leg|mc_latest_rig_combined_latest_real:mc_rig_only:l_knee|mc_latest_rig_combined_latest_real:mc_rig_only:l_ankle|mc_latest_rig_combined_latest_real:mc_rig_only:l_ball" 
+		"preferredAngle" " -type \"double3\" 721.07249932098022782 -16.96713198579922732 -720.15997618491280718"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:l_leg|mc_latest_rig_combined_latest_real:mc_rig_only:l_knee|mc_latest_rig_combined_latest_real:mc_rig_only:l_ankle|mc_latest_rig_combined_latest_real:mc_rig_only:l_ball|mc_latest_rig_combined_latest_real:mc_rig_only:l_toe" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1" 
+		"preferredAngle" " -type \"double3\" -0.0062216404360905643 -1.99379118779348041 0.17882742081083397"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2" 
+		"preferredAngle" " -type \"double3\" 0.042547284672520183 4.52342724208324931 0.36074843824358249"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3" 
+		"preferredAngle" " -type \"double3\" -179.89647822482839956 185.3557950162921486 180.77793066377807918"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:neck" 
+		"preferredAngle" " -type \"double3\" -45.15033482659041653 -356.39100704041965173 1.29269212933851985"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:neck|mc_latest_rig_combined_latest_real:mc_rig_only:joint1" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder" 
+		"preferredAngle" " -type \"double3\" 5.45179554442466685 2.03556847301394006 0.096927290272239217"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm" 
+		"preferredAngle" " -type \"double3\" 117.109800456487676 7.12336277966693565 3.71466989749934395"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_mid_arm" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow" 
+		"preferredAngle" " -type \"double3\" -0.0088863371299684243 -0.0017926695714898494 0.031019345013490341"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_mid_elbow" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist" 
+		"preferredAngle" " -type \"double3\" 243.13129959511246625 36.07518338585958872 -34.40924796502132921"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb2" 
+		"preferredAngle" " -type \"double3\" -38.63289533780147167 -23.86951789626291287 -7.13882698782007274"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb2|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb3" 
+		"preferredAngle" " -type \"double3\" 38.14114867357548633 1.42524891426798428 -55.00443334940185025"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb2|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb3|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb_tip" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_index" 
+		"preferredAngle" " -type \"double3\" -180.54237173751513978 -181.62118189178107741 181.30133762705568756"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_index|mc_latest_rig_combined_latest_real:mc_rig_only:l_index2" 
+		"preferredAngle" " -type \"double3\" -214.10890933216256826 -194.40825492003804698 -88.49912322396046704"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_index|mc_latest_rig_combined_latest_real:mc_rig_only:l_index2|mc_latest_rig_combined_latest_real:mc_rig_only:l_index3" 
+		"preferredAngle" " -type \"double3\" 304.19165308729083108 -53.37906425899657137 -227.96606600341573312"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_index|mc_latest_rig_combined_latest_real:mc_rig_only:l_index2|mc_latest_rig_combined_latest_real:mc_rig_only:l_index3|mc_latest_rig_combined_latest_real:mc_rig_only:l_index_tip" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle" 
+		"preferredAngle" " -type \"double3\" -177.94504156954505447 -175.5429678123849726 165.84052909143036914"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle_2" 
+		"preferredAngle" " -type \"double3\" 30.96573547992794673 30.03527678118891586 96.38499065357498807"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle_3" 
+		"preferredAngle" " -type \"double3\" -28.40455826450651955 -35.32935271357079898 70.61735587933097236"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle_3|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle_tip" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring" 
+		"preferredAngle" " -type \"double3\" -180.26381440907874776 -179.87144117145697919 165.09711885060809777"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring2" 
+		"preferredAngle" " -type \"double3\" -195.17274394937342663 161.68353397834542307 -95.00678382255227916"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring2|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring3" 
+		"preferredAngle" " -type \"double3\" -158.08515690141280174 173.78539641327384402 -425.14482784928719639"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring2|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring3|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring_tip" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky" 
+		"preferredAngle" " -type \"double3\" -183.59297768292216801 -170.07303893760391134 169.76793213776727498"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky2" 
+		"preferredAngle" " -type \"double3\" 198.22109629972266021 172.57782370191051768 -124.51970453466782374"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky2|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky3" 
-		"rotate" " -type \"double3\" -164.39191936983635856 154.11714002181849992 -78.7715153017825287"
+		"rotate" " -type \"double3\" -164.39191936983633013 154.11714002181849992 -78.77151530178247185"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky2|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky3" 
 		"rotateX" " -av"
@@ -38910,8 +39057,16 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"rotateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky2|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky3" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky2|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky3" 
+		"preferredAngle" " -type \"double3\" -164.39191936983635856 154.1171400218184715 -78.7715153017825287"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm|mc_latest_rig_combined_latest_real:mc_rig_only:l_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky2|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky3|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky_tip" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder" 
+		"preferredAngle" " -type \"double3\" 5.46893262820675119 1.9889439708271941 0.095004881009632725"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm" 
-		"rotate" " -type \"double3\" -104.22550608438960751 237.78869886997406979 -169.40971093532189684"
+		"rotate" " -type \"double3\" -108.40213575159997106 145.68009193575912263 -162.33011786852884484"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm" 
 		"rotateX" " -av"
@@ -38919,8 +39074,18 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"rotateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm" 
+		"preferredAngle" " -type \"double3\" -137.84043593450510912 212.35994217048593669 -157.00182053962927853"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_mid_arm" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow" 
+		"preferredAngle" " -type \"double3\" -32.77546029165785058 1.44361994554667028 54.72542865326183659"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_mid_elbow" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist" 
-		"rotate" " -type \"double3\" -68.44214817088229097 46.24279795903229484 8.73452210314593813"
+		"rotate" " -type \"double3\" -90.33650590457313001 60.40338024278192108 -48.2186156515330353"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist" 
 		"rotateX" " -av"
@@ -38928,8 +39093,54 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"rotateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist" 
+		"preferredAngle" " -type \"double3\" -159.00478556328195623 40.48361540766190103 -56.21536862940344292"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb2" 
+		"preferredAngle" " -type \"double3\" -145.43267451355902153 190.59710051049808044 -196.62455050847850657"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb2|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb3" 
+		"preferredAngle" " -type \"double3\" -12.64837774094634781 -17.3816329984282234 42.39107561202035868"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb2|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb3|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_tip" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
+		"preferredAngle" " -type \"double3\" -31.59741251194090594 -11.54586291931901521 -15.28336639278309939"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index2" 
+		"preferredAngle" " -type \"double3\" 5.62980445117637451 5.14614079166844007 10.78507405196636348"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index3" 
+		"preferredAngle" " -type \"double3\" -139.8017112044480541 30.07200069283911503 12.33751198397929905"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index3|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_tip" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
+		"preferredAngle" " -type \"double3\" -16.67985658821596928 -5.5546708015427404 -33.98378242139548888"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle2" 
+		"preferredAngle" " -type \"double3\" -1.50340055896760028 -5.96492481255838314 30.43774889602726219"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle3" 
+		"preferredAngle" " -type \"double3\" 180.46723330889034287 178.15694329422757392 -204.1206604023708735"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle3|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_tip" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring" 
+		"preferredAngle" " -type \"double3\" 4.49206079429691574 -8.88845742068538769 -44.57820639965829201"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring2" 
+		"preferredAngle" " -type \"double3\" -12.89347784963512034 -26.96420225134660598 27.60242639902883255"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring3" 
+		"preferredAngle" " -type \"double3\" 177.04455020655726116 171.27415327070266926 -199.19865187179041754"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring3|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_tip" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
-		"rotate" " -type \"double3\" -2.41488576291082113 -3.64342306879051625 -18.3960940687517116"
+		"rotate" " -type \"double3\" -45.4233610513904793 -6.64832306860469835 78.30031148846913425"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
 		"rotateX" " -av"
@@ -38937,10 +39148,39 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"rotateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"preferredAngle" " -type \"double3\" 18.00446676662472001 5.14242651943300633 -12.6535790876361709"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky2" 
+		"preferredAngle" " -type \"double3\" 0.92720467851862798 -4.16232896545210806 -6.7625594410345613"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky3" 
+		"preferredAngle" " -type \"double3\" 40.842385536752289 6.8270022611964265 15.71865614354134877"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:spine1|mc_latest_rig_combined_latest_real:mc_rig_only:spine2|mc_latest_rig_combined_latest_real:mc_rig_only:spine3|mc_latest_rig_combined_latest_real:mc_rig_only:chest|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm|mc_latest_rig_combined_latest_real:mc_rig_only:r_elbow|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky3|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_tip" 
+		"preferredAngle" " -type \"double3\" 0 -1.2475243497409164e-08 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:r_leg" 
+		"preferredAngle" " -type \"double3\" -8.29845542262444091 -5.20683726752215215 -1.29107767754139391"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:r_leg|mc_latest_rig_combined_latest_real:mc_rig_only:r_mid_thigh" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:r_leg|mc_latest_rig_combined_latest_real:mc_rig_only:r_knee" 
+		"preferredAngle" " -type \"double3\" 0.12250095240292021 5.29168822104478132 -0.057734138831313821"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:r_leg|mc_latest_rig_combined_latest_real:mc_rig_only:r_knee|mc_latest_rig_combined_latest_real:mc_rig_only:r_mid_shin" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:r_leg|mc_latest_rig_combined_latest_real:mc_rig_only:r_knee|mc_latest_rig_combined_latest_real:mc_rig_only:r_ankle" 
+		"preferredAngle" " -type \"double3\" 7.20514187179692733 2.75770232014200944 -4.3014572927858481"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:r_leg|mc_latest_rig_combined_latest_real:mc_rig_only:r_knee|mc_latest_rig_combined_latest_real:mc_rig_only:r_ankle|mc_latest_rig_combined_latest_real:mc_rig_only:r_ball" 
+		"preferredAngle" " -type \"double3\" -4.712703116791904e-09 -13.03367464263132369 5.3938803055975441e-10"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog|mc_latest_rig_combined_latest_real:mc_rig_only:r_leg|mc_latest_rig_combined_latest_real:mc_rig_only:r_knee|mc_latest_rig_combined_latest_real:mc_rig_only:r_ankle|mc_latest_rig_combined_latest_real:mc_rig_only:r_ball|mc_latest_rig_combined_latest_real:mc_rig_only:r_toe" 
+		"preferredAngle" " -type \"double3\" 0 0 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"visibility" " -av 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
-		"translate" " -type \"double3\" -0.045229034810986411 -0.017430910685992073 0.10044875530156326"
+		"translate" " -type \"double3\" -0.15086034350290051 0.021164263447013006 -0.023158774861501204"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"translateX" " -av"
@@ -38949,7 +39189,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
-		"rotate" " -type \"double3\" -6.13264899588688195 1.62957613194008655 10.90263819053803829"
+		"rotate" " -type \"double3\" -5.58034289184590016 -3.02381561452118808 -32.28671816929735172"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"rotateX" " -av"
@@ -38976,7 +39216,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
-		"rotate" " -type \"double3\" -9.90502384992934992 7.87980971864684054 -14.87885110104386399"
+		"rotate" " -type \"double3\" -1.08474821558060475 8.34540059830366943 86.10153881227924444"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
 		"rotateX" " -av"
@@ -39030,7 +39270,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
-		"rotate" " -type \"double3\" -4.10598716990825618 -28.66794412963909622 31.33399381785925186"
+		"rotate" " -type \"double3\" -23.56378888927881476 -17.297049734926631 78.54028870599734091"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
 		"rotateX" " -av"
@@ -39057,7 +39297,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
-		"rotate" " -type \"double3\" -0.090656535400195234 -6.73453418729898967 44.32481104817914996"
+		"rotate" " -type \"double3\" 67.16315243092331855 -6.73453418729903053 44.3248110481791926"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
 		"rotateX" " -av"
@@ -39103,7 +39343,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
 		"visibility" " -av 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 2.011606331844178e-05 -7.0911360847487735e-06 1.3505225983110592e-05"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
@@ -39111,7 +39352,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
-		"rotate" " -type \"double3\" -1.70719488118957274 9.55474676205797913 -10.44646844469480484"
+		"rotate" " -type \"double3\" 21.19761675034505899 -4.26449142471753095 57.14651030220768746"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
 		"rotateX" " -av"
@@ -39138,7 +39379,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2" 
-		"rotate" " -type \"double3\" 5.57806870281071276 1.22842113552343002 11.7414612150640405"
+		"rotate" " -type \"double3\" 23.93852286793218198 -4.14411814301282266 41.69749796847111156"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2" 
 		"rotateX" " -av"
@@ -39165,7 +39406,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
-		"rotate" " -type \"double3\" 14.96711370996508705 10.87030419264802461 45.4431836009817971"
+		"rotate" " -type \"double3\" 50.53365897604000878 -21.70802135058050553 58.9085528159243168"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
 		"rotateX" " -av"
@@ -39192,7 +39433,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
-		"rotate" " -type \"double3\" -15.34697738693121138 12.77162539057599666 -35.29034726851192971"
+		"rotate" " -type \"double3\" 13.52091234637768302 14.69480823012915849 59.32792617919994882"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
 		"rotateX" " -av"
@@ -39246,7 +39487,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
-		"rotate" " -type \"double3\" 0 0 28.80639651600992934"
+		"rotate" " -type \"double3\" 0 0 81.98327468206302626"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
@@ -39272,7 +39513,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring" 
-		"rotate" " -type \"double3\" -12.58248062411008839 -1.40946230427070018 -30.54828323686054503"
+		"rotate" " -type \"double3\" -1.42659251394233699 19.55554243658722058 59.26611379790483625"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring" 
 		"rotateX" " -av"
@@ -39325,7 +39566,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3" 
-		"rotate" " -type \"double3\" 0 0 28.39295265003462632"
+		"rotate" " -type \"double3\" -24.36292602117328343 0 96.86198688875172991"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3" 
@@ -39343,7 +39584,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"visibility" " -av 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0.10813530897625971 0.30847790690680482 0.04876879803871479"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
@@ -39351,7 +39593,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
-		"rotate" " -type \"double3\" -20.52533360209817914 29.9484125534627843 -11.49440347481538005"
+		"rotate" " -type \"double3\" -20.90545839841938403 11.13524138902307747 -32.0496755290243982"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"rotateX" " -av"
@@ -39368,7 +39610,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb" 
-		"rotate" " -type \"double3\" 27.53710320913750209 0 0"
+		"rotate" " -type \"double3\" 66.71310246326517301 -17.77954448884656458 -35.35470103765081262"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb" 
@@ -39380,7 +39623,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:l_thumb_2" 
 		"rman_matteObject" " -1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_index" 
-		"rotate" " -type \"double3\" 0 0 -2.15306828117341142"
+		"rotate" " -type \"double3\" 17.88840397245535385 -10.2430185241019025 -26.03966277729474399"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_index" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_index" 
@@ -39394,7 +39638,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_index|mc_latest_rig_combined_latest_real:mc_rig_only:l_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:l_index_3" 
 		"rman_matteObject" " -1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle" 
-		"rotate" " -type \"double3\" 0 0 14.90605002813748925"
+		"rotate" " -type \"double3\" 0 0 -23.49684891845850387"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle" 
@@ -39408,7 +39652,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:l_middle_3" 
 		"rman_matteObject" " -1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring" 
-		"rotate" " -type \"double3\" 0 0 14.90605002813748925"
+		"rotate" " -type \"double3\" -12.15238164110763641 4.35171538546535874 -23.49684891845852519"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring" 
@@ -39422,7 +39667,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:l_ring_3" 
 		"rman_matteObject" " -1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky" 
-		"rotate" " -type \"double3\" 0 0 14.90605002813748925"
+		"rotate" " -type \"double3\" -10.62371262077697764 -10.89883964571915342 -27.46093142046622759"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:l_pinky" 
@@ -39438,10 +39684,10 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:spine_ik_handle" 
 		"visibility" " 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:spine_ik_handle" 
-		"translate" " -type \"double3\" -0.93140798961415006 7.85730656278105943 -0.70833856950350582"
+		"translate" " -type \"double3\" -0.90011127382797318 7.86640466488702117 -0.98894882508832338"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:spine_ik_handle" 
-		"rotate" " -type \"double3\" -179.93058443796016377 3.59704298859759941 91.10628088761245635"
+		"rotate" " -type \"double3\" -178.67976997324919353 15.39270832168002023 90.01554669699912381"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:spine_ik_handle" 
 		"scale" " -type \"double3\" 1 1 1"
@@ -39459,7 +39705,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"rotate" " -type \"double3\" 109.49872847712796897 -56.50991599471806381 -92.32471250079360914"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group4|mc_latest_rig_combined_latest_real:mc_rig_only:cluster4Handle" 
-		"translate" " -type \"double3\" -0.91507076164272916 -0.030806892282728704 -0.46804344078841953"
+		"translate" " -type \"double3\" -0.90340394312972305 -0.030890498927957033 -0.4671526337895866"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group4|mc_latest_rig_combined_latest_real:mc_rig_only:cluster4Handle" 
 		"translateX" " -av"
@@ -39487,7 +39733,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_foot_ik_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ankle_ik_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ball_ik_ctrl" 
 		"rotate" " -type \"double3\" -13.03367464263133435 0 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_foot_ik_ctrl" 
-		"translate" " -type \"double3\" -0.65657488975792999 0 -0.91843220409023385"
+		"translate" " -type \"double3\" -0.59522362082874514 -0.010013060231554682 -0.91843220409023385"
+		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_foot_ik_ctrl" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_foot_ik_ctrl" 
@@ -39528,7 +39775,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
-		"scale" " -type \"double3\" 1.02080738434408658 1.02080738434408658 1.02974134956875374"
+		"scale" " -type \"double3\" 1.03365174017054273 1.03365174017054273 1.04238448395595018"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
 		"scaleX" " -av"
@@ -39663,55 +39910,55 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:eyelid_CTRL|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle12" 
 		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:curve6" 
-		"translate" " -type \"double3\" 0.019698802410860583 -0.021550982500341931 0"
+		"translate" " -type \"double3\" 0.019698802410860583 -0.055267703398568457 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:curve6" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:curve6" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group33|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle16" 
-		"translate" " -type \"double3\" 0 -0.023627136650215874 0"
+		"translate" " -type \"double3\" 0 -0.057343857548442401 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group33|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle16" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group34|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle18" 
-		"translate" " -type \"double3\" 0 -0.023627136650215874 0"
+		"translate" " -type \"double3\" 0 -0.057343857548442401 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group34|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle18" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group35|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle19" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0 -0.033716720898226527 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group35|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle19" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group40|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:curve8" 
-		"translate" " -type \"double3\" -0.031902752003028501 -0.018181441775499962 0"
+		"translate" " -type \"double3\" -0.031902752003028501 -0.051898162673726489 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group40|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:curve8" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group40|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:curve8" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group40|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group36|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle17" 
-		"translate" " -type \"double3\" 0 -0.0049578239924414902 0"
+		"translate" " -type \"double3\" 0 -0.038674544890668017 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group40|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group36|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle17" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group40|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group37|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle20" 
-		"translate" " -type \"double3\" 0 -0.0049578239924414902 0"
+		"translate" " -type \"double3\" 0 -0.038674544890668017 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group40|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group37|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle20" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group40|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group38|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle21" 
-		"translate" " -type \"double3\" 0 0.058796924565575281 0"
+		"translate" " -type \"double3\" 0 0.025080203667348755 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group40|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group38|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle21" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group25|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth4" 
-		"translate" " -type \"double3\" -0.039130554112545013 0.092434026321553731 0"
+		"translate" " -type \"double3\" -0.039130554112545013 -0.064910671203506354 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group25|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth4" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group25|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth4" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group26|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth5" 
-		"translate" " -type \"double3\" -0.039130554112545013 0.16644102756566781 0"
+		"translate" " -type \"double3\" -0.039130554112545013 0.082149225320099717 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group26|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth5" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group26|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth5" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group30|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group27|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth7" 
-		"translate" " -type \"double3\" 0.066274662687647368 0.1487645516621498 0"
+		"translate" " -type \"double3\" 0.066274662687647368 0.10942837728088434 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group30|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group27|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth7" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group30|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group27|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth7" 
@@ -39721,7 +39968,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group30|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group27|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth7" 
 		"rotateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group30|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group28|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth6" 
-		"translate" " -type \"double3\" 0.057565588732074957 0.07673523212133837 0"
+		"translate" " -type \"double3\" 0.057565588732074957 -0.027224657314860679 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group30|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group28|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth6" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group30|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group28|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth6" 
@@ -39731,11 +39978,11 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group29|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group30|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group28|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth6" 
 		"rotateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth3" 
-		"translate" " -type \"double3\" 0 0.13859592043109892 0"
+		"translate" " -type \"double3\" 0 0.082401385600718413 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth3" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth2" 
-		"translate" " -type \"double3\" 0 -0.15761751391008083 0"
+		"translate" " -type \"double3\" 0 -0.2194315022234985 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth2" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:mouth_CRV_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:upMouthHigh_CRV" 
@@ -41092,9 +41339,9 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[645]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group33|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle16.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[646]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group34|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle18.translateY" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[647]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group34|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle18.translateX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[647]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group34|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle18.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[648]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:faceRig|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:CTRLs|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group39|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:group34|mc_latest_rig_combined_latest_real:mc_rig_only:faceRig:nurbsCircle18.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[649]" ""
@@ -41582,7 +41829,7 @@ createNode animCurveTA -n "neck_ctrl_rotateY";
 		 181.33521394557823 -16.138317113385202 186.33521394557823 -8.5728246279286058 201.33521394557823 -8.5728246279286271
 		 211.33521394557823 -8.5728246279286111 222.33521394557823 -8.5728246279286253 232.33521394557823 -8.5728246279286271
 		 256.33521394557823 -8.5728246279286253 257.33521394557823 -8.5728246279286235 262 -8.5728246279286271
-		 263 -8.5728246279286271 297 -8.5728246279286253 300 -8.5728246279286253 302 -8.5728246279286218
+		 263 -8.5728246279286271 297 -8.5728246279286253 300 -8.5728246279286253 302 -8.5728246279286235
 		 303 -8.5728246279286271;
 	setAttr -s 37 ".kit[12:36]"  18 1 1 1 1 1 1 1 
 		1 1 1 1 18 18 18 18 18 18 18 18 18 18 18 18 18;
@@ -42778,10 +43025,10 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"mc_latest_rig_combined_latest_real:mc_rig_only:faceRig_cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
 		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
-		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 348\n            -height 410\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"cam2_61_181\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
+		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"cam3_192_310\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
 		+ "            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
-		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 900\n            -height 410\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 884\n            -height 410\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n"
 		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
 		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n"
@@ -42817,13 +43064,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n"
 		+ "            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"cam2_61_181\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 900\\n    -height 410\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"cam2_61_181\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 900\\n    -height 410\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"cam3_192_310\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 884\\n    -height 410\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"cam3_192_310\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 884\\n    -height 410\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "5FF82556-1D4B-9E3F-5821-C694F6BA1707";
-	setAttr ".b" -type "string" "playbackOptions -min 61 -max 181 -ast 0 -aet 441 ";
+	setAttr ".b" -type "string" "playbackOptions -min 192 -max 310 -ast 0 -aet 441 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "r_ankle_ik_ctrl_translateX";
 	rename -uid "1289A4CF-7E40-811C-BCB8-10BA60D4D81E";
@@ -43061,7 +43308,7 @@ createNode animCurveTA -n "r_thumb_rotateY";
 	setAttr -s 11 ".ktv[0:10]"  0 0 60 0 106.23741768707482 -24.165653993733784
 		 112.33521394557823 -24.165653993733798 118.33521394557823 -24.165653993733798 125.33521394557823 -24.165653993733798
 		 171.33521394557823 -6.7345341872989897 181.33521394557823 -6.7345341872989897 186.33521394557823 -6.7345341872989897
-		 265 -6.7345341872989897 269 -6.7345341872990296;
+		 265 -6.7345341872989897 269 -6.7345341872990305;
 	setAttr -s 11 ".kit[7:10]"  1 18 1 18;
 	setAttr -s 11 ".kot[7:10]"  1 18 1 18;
 	setAttr -s 11 ".kix[7:10]"  1 1 1 1;
@@ -45051,7 +45298,7 @@ createNode animCurveTA -n "spine_fk_ctrl_3_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 0 60 0 69 0 106.23741768707482 0 162.33521394557823 0
 		 163.33521394557823 0.48631200577129557 171.33521394557823 0.21689584364695441 176.33521394557823 0.03873395617729037
-		 181.33521394557823 0.03873395617729037 286 0.03873395617729037 290 0.038733956177290474;
+		 181.33521394557823 0.03873395617729037 286 0.03873395617729037 290 0.038733956177290481;
 	setAttr -s 11 ".kit[9:10]"  1 18;
 	setAttr -s 11 ".kot[9:10]"  1 18;
 	setAttr -s 11 ".kix[9:10]"  1 1;
@@ -45335,7 +45582,7 @@ createNode animCurveTA -n "cog_ctrl_rotateX";
 		 60 30.040381508347807 97 4.5473007503393763 99.374895238095235 4.7332270085198029
 		 106.23741768707482 4.3563254418131692 161.33521394557823 4.3563254418131692 170.27684829931974 4.5643838088961264
 		 170.33521394557823 4.3702427580948129 174.27684829931974 4.3726902013460691 175.27684829931974 4.3690636523287036
-		 193 4.3690636523287036 212 4.4448743942485249 233 4.3928948897467208;
+		 193 4.3690636523287036 212 4.4448743942485249 233 4.3928948897467217;
 	setAttr -s 22 ".kit[8:21]"  1 1 1 1 18 1 18 18 
 		18 18 18 18 18 18;
 	setAttr -s 22 ".kot[8:21]"  1 1 1 1 18 1 18 18 
@@ -52159,13 +52406,109 @@ createNode animCurveTU -n "summon_lightShape_intensity";
 		1;
 	setAttr -s 4 ".koy[1:3]"  -0.99988703952570879 -0.76604109278623467 
 		0;
+createNode blendShape -n "blendShape1";
+	rename -uid "B5656CB9-E44E-90E6-EDB2-7E89BE494530";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 91 0 0 0 1 -1.4243468194176725e-13
+		 -5.6417929139226941e-13 1.4814365825645964e-12 1 0.00027315783716678511 0.0012159919806930975
+		 6.5963423328444881e-05 1 1.630665602547765e-10 1.7607880431480538e-11 4.3582068509628868e-10
+		 1 -0.0055996978755838978 -0.00039603965516097196 0.015880882705285294 1 0 -0 0 1 -0.010084155616861108
+		 -0.02260618124527294 -9.3575263075050904e-05 1 0.0038007755881507253 0.013919452020459458
+		 0.0053842042371035539 1 -0.002107209432959686 0.015836669092618993 0.02907428542541507
+		 1 0.0010783534492963646 0.0005225612958927265 0.00010627859146616035 1 0.00071263199151737735
+		 -8.6478927586870345e-05 -0.000413341113617369 1 7.7353115121917265e-05 4.4709991029845625e-05
+		 3.404699829271567e-05 1 0 0 0 1 -2.4673204451763908e-11 1.1098337526771473e-11 -1.0728131924486739e-11
+		 1 -0.0056157645045073964 -0.0013743712639432935 0.0027878618659748127 1 -0.019367103417939884
+		 0.0075484305855134798 0.0018032640279740993 1 -3.6007099803433702e-05 -0.020275101329782372
+		 0.0034996863042076505 1 -2.7437852337386381e-11 4.781595692310292e-12 8.4459227805977477e-12
+		 1 -0.013308289560995626 -0.0034415827072927872 0.0068538099335612966 1 -0.011157719339629852
+		 0.0023795258119077628 0.00049121824542238822 1 -6.179472350487103e-10 -8.0625557445646034e-11
+		 -1.4698539564303448e-10 1 0 0 0 1 0.0037633613796536226 -0.00039345142272400159 0.00058266713343203998
+		 1 0.0039985928823205452 7.7201002712791954e-05 -0.00049181547996426163 1 0.002554352141869656
+		 -0.00061565143386419635 0.0019895602766132744 1 -0.002589345260710859 0.00087169731196100417
+		 0.000538380904478249 1 -1.7685851698076571e-12 3.9232779216113664e-13 6.2054447545105765e-13
+		 1 3.6581526788878951e-13 -1.3861694181816625e-13 1.0674427108284951e-12 1 3.0341340377659787e-10
+		 3.1431507396817437e-10 1.6120405010866534e-10 1 0.017868932233575885 -0.0061928774454380123
+		 0.040952062673839718 1 7.5715940678691696e-12 8.721390038109178e-12 -1.2410927971093222e-11
+		 1 0.016836393899899733 -0.0073836196959740519 -0.033232472225766786 1 -0.014853354825326074
+		 -0.012603176714131935 0.0074734897718638105 1 5.2013701505593257e-12 3.249787158127182e-12
+		 1.3196319904873466e-11 1 -9.4053818552874979e-12 -2.9665668793005251e-12 -2.7381945669202601e-11
+		 1 -0.00015673616301705562 -9.2514803899673991e-05 0.00044348014163599211 1 3.048174776823509e-11
+		 -3.3520694900368575e-11 -5.6931369341040039e-11 1 5.1486361615088461e-11 -7.0383204039264902e-11
+		 -4.0162107146912707e-11 1 -0.00023477662171534903 0.000176233312569699 -0.00030060510573299442
+		 1 0.00074983559348147839 -0.00051397123332809979 0.00019225111681798416 1 -0.00020312045873809042
+		 -8.988199698121578e-05 -0.00019739086723552507 1 1.012607283180228e-11 6.5856688049974188e-12
+		 1.5214151011071209e-11 1 -0.004314800850222001 -0.0073272223202891645 -0.0027502755169776551
+		 1 -0.007355315859534169 -0.011268402023889078 -0.0060642105192256794 1 -0.0054474113898681942
+		 -0.0075929586818912487 -0.01031435440285711 1 0.0041079835548477051 0.0063549834764699553
+		 0.0031514056346922531 1 -0.0040649617437052022 0.00012877286991910789 0.00050511051067838502
+		 1 0.00021328420449207366 0.0014702630060261339 -0.0023857596215487737 1 0.00024741745999885562
+		 8.9852523566489716e-05 0.00069766686223301372 1 3.6422921487489976e-05 2.4551083539506302e-05
+		 6.4551875617364571e-05 1 -1.0068845984843172e-12 -1.0256259546075758e-12 -2.319245219050553e-12
+		 1 0.00098789589892083959 0.0027286269584105207 0.002059419245476314 1 -0.00081676217698576714
+		 -0.0033685809274531511 -0.0032525143584587884 1 -0.0035242617518529661 0.0010829825417748601
+		 -0.0022754336174410565 1 -0.0025979045460403118 0.00060412355447561476 -0.00022948951737724395
+		 1 0.0098592455422332262 0.001587144198272961 0.0011478482169766146 1 0.010160177621936649
+		 0.0077628155576663516 -0.0059855922700818576 1 3.0253530705033681e-05 0.00045782303527303883
+		 0.00075659639427410295 1 -0.00093607394613888853 -0.0021813683496838959 -0.0020763092979364083
+		 1 0.0019498543006131863 0.0051748641805662073 0.0042475245899447223 1 0.0021953177664841483
+		 -0.0087788574631888997 -0.0035611044976271971 1 -0.0025881295897321314 -0.00734328286725075
+		 -0.00071502201388971387 1 -0.004397262607587455 0.0022629457232087452 0.0010956157571920576
+		 1 0.0076101853746607462 0.0014423747024411085 0.0024157605668872033 1 -0.0014326276651661527
+		 -0.0031060491064825654 0.00035986153335644706 1 0.002918713898584726 0.0096777566289957071
+		 -0.0063825843297352271 1 1.8021842698723312e-12 1.033332100441875e-11 1.0086266891140561e-11
+		 1 -6.2339926127307751e-05 -0.00030986967844206723 0.00032037607503813069 1 -0.0019466363858828967
+		 -0.0056317630756418588 0.00098208344056994849 1 -0.00042393547258943618 -0.00073101429288270452
+		 -0.00045224616786443232 1 0.00025064518682132406 -0.0009164952096046286 0.00050914984489823165
+		 1 0.00050521410524131472 -0.0010201776461044878 0.00079971991083486495 1 7.7513610113877363e-11
+		 -1.552023613793363e-10 -1.992605429615435e-11 1 4.7080984943992377e-11 -9.7380506436373082e-11
+		 -9.7345985439201144e-11 1 0 0 0 1 3.3219046957633225e-10 1.1236944014170192e-10 3.0637073433759099e-10
+		 1 0.0073779556256250711 0.0023670210669821242 0.0047118097474467997 1 0.010943582451746776
+		 -0.0037966045267736415 0.0024432570289672599 1 0.00168179885284203 0.0056282764684765282
+		 -0.0081208590455213083 1 -0.017423677220708193 0.0034236338114065745 -0.0038783723512759733
+		 1 -0.0096522746681837798 -0.0035580674941243793 -0.0025351006907963596 1 -5.2872324574071428e-11
+		 -1.2882338425168616e-11 -2.065658234740031e-11 1 0.0018549246361988939 -0.0004475711753222744
+		 0.00082837734769847238 1 0.0026456312004697873 -0.00041384584441976136 0.00093010696018911115
+		 1 0.0025624796109399803 0.0010928158519785203 -0.00025089917086051298 1 6.8416610979032738e-05
+		 -0.0033636177228326611 -0.0023579068887857315 1 -0.0029963190551100562 -0.00061040930854643831
+		 -0.0014254495011178136 1 -0.00445243484992126 0.0010773826085545557 -0.004291894029705234
+		 1 -0.0022533442085580172 0.00062362103657979755 -0.0030534410091661969 1 -4.9027831707654235e-11
+		 3.4831191316614385e-11 -1.1851347160585224e-10 1 -4.4772149854731269e-12 -5.3685878984542634e-12
+		 -1.4803353855230572e-11 1 ;
+	setAttr ".it[0].itg[0].iti[6000].ict" -type "componentList" 26 "vtx[0]" "vtx[161]" "vtx[169]" "vtx[279]" "vtx[285]" "vtx[358]" "vtx[2572:2582]" "vtx[2621:2630]" "vtx[2634:2637]" "vtx[2640:2642]" "vtx[2644]" "vtx[2662]" "vtx[2664]" "vtx[3061]" "vtx[3063:3064]" "vtx[3068]" "vtx[3072]" "vtx[3390:3393]" "vtx[3411:3419]" "vtx[3437:3440]" "vtx[3444:3447]" "vtx[3465:3467]" "vtx[3535]" "vtx[3553:3555]" "vtx[3563:3574]" "vtx[3576:3584]";
+	setAttr ".it[0].itg[0].pdm" 1;
+	setAttr ".it[0].siw" 1;
+	setAttr ".mlid" 6;
+	setAttr ".mlpr" 0;
+	setAttr ".pndr[0]"  0;
+	setAttr ".tgvs[0]" yes;
+	setAttr ".tpvs[0]" yes;
+	setAttr ".tgdt[0].cid" -type "Int32Array" 1 0 ;
+	setAttr ".dfo" 1;
+	setAttr ".aal" -type "attributeAlias" {"body1","weight[0]"} ;
+createNode objectSet -n "blendShape1Set";
+	rename -uid "4293528F-964E-DD92-670B-57A6C0A27BEF";
+	setAttr ".ihi" 0;
+	setAttr ".vo" yes;
+createNode groupId -n "blendShape1GroupId";
+	rename -uid "B560DA3F-EE4F-FF92-408D-1C8A44FEDF07";
+	setAttr ".ihi" 0;
+createNode groupParts -n "blendShape1GroupParts";
+	rename -uid "ACE1D2A1-3847-9BF2-73E7-0D95459BA7A1";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "vtx[*]";
+createNode animCurveTU -n "blendShape1_body1";
+	rename -uid "03BBC37F-BD46-07D7-E3B9-AAA85EA8A0C8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  61 0 104 0 145 1 150 1 181 0;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 176;
-	setAttr -av ".unw" 176;
+	setAttr -k on ".o" 300;
+	setAttr -av ".unw" 300;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -52398,6 +52741,15 @@ select -ne :ikSystem;
 	setAttr -k on ".gsv";
 	setAttr -s 4 ".sol";
 connectAttr "mc_layer.di" "mc_latest_rig_combined_latest_realRN.phl[791]";
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[792]" "blendShape1Set.dsm"
+		 -na;
+connectAttr "blendShape1GroupId.id" "mc_latest_rig_combined_latest_realRN.phl[793]"
+		;
+connectAttr "blendShape1Set.mwc" "mc_latest_rig_combined_latest_realRN.phl[794]"
+		;
+connectAttr "blendShape1.og[0]" "mc_latest_rig_combined_latest_realRN.phl[795]";
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[796]" "blendShape1GroupParts.ig"
+		;
 connectAttr "master_control_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[1]"
 		;
 connectAttr "master_control_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[2]"
@@ -53597,9 +53949,9 @@ connectAttr "nurbsCircle16_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[6
 		;
 connectAttr "nurbsCircle16_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[646]"
 		;
-connectAttr "nurbsCircle18_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[647]"
+connectAttr "nurbsCircle18_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[647]"
 		;
-connectAttr "nurbsCircle18_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[648]"
+connectAttr "nurbsCircle18_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[648]"
 		;
 connectAttr "nurbsCircle18_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[649]"
 		;
@@ -53905,6 +54257,14 @@ connectAttr "group1_translateZ.o" "potion.tz";
 connectAttr "group1_rotateX.o" "potion.rx";
 connectAttr "group1_rotateY.o" "potion.ry";
 connectAttr "group1_rotateZ.o" "potion.rz";
+connectAttr "summon_light_rotateX.o" "summon_light.rx";
+connectAttr "summon_light_rotateY.o" "summon_light.ry";
+connectAttr "summon_light_rotateZ.o" "summon_light.rz";
+connectAttr "summon_light_visibility.o" "summon_light.v";
+connectAttr "summon_light_scaleX.o" "summon_light.sx";
+connectAttr "summon_light_scaleY.o" "summon_light.sy";
+connectAttr "summon_light_scaleZ.o" "summon_light.sz";
+connectAttr "summon_lightShape_intensity.o" "summon_lightShape.intensity";
 connectAttr "no_cap_potion_parent_wrist_visibility.o" "no_cap_potion_parent_wrist.v"
 		;
 connectAttr "makeNurbCircle2.oc" "no_cap_potion_parent_wristShape.cr";
@@ -53918,14 +54278,6 @@ connectAttr "potion_no_cap1_rotateZ.o" "potion_no_cap1.rz";
 connectAttr "potion_no_cap1_scaleX.o" "potion_no_cap1.sx";
 connectAttr "potion_no_cap1_scaleY.o" "potion_no_cap1.sy";
 connectAttr "potion_no_cap1_scaleZ.o" "potion_no_cap1.sz";
-connectAttr "summon_light_rotateX.o" "summon_light.rx";
-connectAttr "summon_light_rotateY.o" "summon_light.ry";
-connectAttr "summon_light_rotateZ.o" "summon_light.rz";
-connectAttr "summon_light_visibility.o" "summon_light.v";
-connectAttr "summon_light_scaleX.o" "summon_light.sx";
-connectAttr "summon_light_scaleY.o" "summon_light.sy";
-connectAttr "summon_light_scaleZ.o" "summon_light.sz";
-connectAttr "summon_lightShape_intensity.o" "summon_lightShape.intensity";
 connectAttr "no_cap_potion_parent_shoulder_visibility.o" "no_cap_potion_parent_shoulder.v"
 		;
 connectAttr "makeNurbCircle1.oc" "no_cap_potion_parent_shoulderShape.cr";
@@ -53969,6 +54321,7 @@ connectAttr "liquid1_rotateZ1.o" "liquid1.rz";
 connectAttr "liquid1_scaleX1.o" "liquid1.sx";
 connectAttr "liquid1_scaleY1.o" "liquid1.sy";
 connectAttr "liquid1_scaleZ1.o" "liquid1.sz";
+connectAttr "blendShape1.mlpr" "shapeEditorManager.bspr[6]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -53987,6 +54340,13 @@ connectAttr "pairBlend1_inTranslateZ1.o" "pairBlend1.itz1";
 connectAttr "sharedReferenceNode.sr" "potion_ropeRN.sr";
 connectAttr "layerManager.dli[1]" "bg_layer.id";
 connectAttr "layerManager.dli[2]" "mc_layer.id";
+connectAttr "blendShape1GroupParts.og" "blendShape1.ip[0].ig";
+connectAttr "blendShape1GroupId.id" "blendShape1.ip[0].gi";
+connectAttr "shapeEditorManager.obsv[6]" "blendShape1.tgdt[0].dpvs";
+connectAttr "blendShape1_body1.o" "blendShape1.w[0]";
+connectAttr "blendShape1GroupId.msg" "blendShape1Set.gn" -na;
+connectAttr "blendShape1.msg" "blendShape1Set.ub[0]";
+connectAttr "blendShape1GroupId.id" "blendShape1GroupParts.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "summon_lightShape.msg" ":lightList1.l" -na;
 connectAttr "summon_light.iog" ":defaultLightSet.dsm" -na;
