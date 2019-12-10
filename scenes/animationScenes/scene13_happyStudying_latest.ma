@@ -1,107 +1,208 @@
 //Maya ASCII 2018 scene
 //Name: scene13_happyStudying_latest.ma
-//Last modified: Mon, Dec 09, 2019 02:43:07 PM
+//Last modified: Tue, Dec 10, 2019 01:56:36 PM
 //Codeset: UTF-8
-file -rdi 1 -ns "bed_NEW" -rfn "bedroom_SET_latest1:bed_NEWRN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
-file -rdi 1 -ns "window" -rfn "bedroom_SET_latest1:windowRN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/window.ma";
+file -rdi 1 -ns "bed_NEW" -dr 1 -rfn "bedroom_SET_latest1:bed_NEWRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
+file -rdi 1 -ns "window" -dr 1 -rfn "bedroom_SET_latest1:windowRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/window.ma";
 file -rdi 1 -ns "door" -dr 1 -rfn "bedroom_SET_latest1:doorRN" -op "v=0;" -typ
 		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
-file -rdi 1 -ns "door1" -rfn "bedroom_SET_latest1:doorRN1" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
-file -rdi 1 -ns "rug" -rfn "bedroom_SET_latest1:rugRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/rug.ma";
-file -rdi 1 -ns "treeShelf" -rfn "bedroom_SET_latest1:treeShelfRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/treeShelf.ma";
-file -rdi 1 -ns "officeChair" -rfn "bedroom_SET_latest1:officeChairRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/officeChair.ma";
-file -rdi 1 -ns "nightstand" -rfn "bedroom_SET_latest1:nightstandRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/nightstand.ma";
-file -rdi 1 -ns "bookshelf" -rfn "bedroom_SET_latest1:bookshelfRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
-file -rdi 1 -ns "clock" -rfn "bedroom_SET_latest1:clockRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/clock.ma";
-file -rdi 1 -ns "scarf" -rfn "bedroom_SET_latest1:scarfRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
-file -rdi 1 -ns "curtains1" -rfn "bedroom_SET_latest1:curtainsRN1" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/curtains.ma";
+file -rdi 1 -ns "door1" -dr 1 -rfn "bedroom_SET_latest1:doorRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
+file -rdi 1 -ns "rug" -dr 1 -rfn "bedroom_SET_latest1:rugRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/rug.ma";
+file -rdi 1 -ns "treeShelf" -dr 1 -rfn "bedroom_SET_latest1:treeShelfRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/treeShelf.ma";
+file -rdi 1 -ns "officeChair" -dr 1 -rfn "bedroom_SET_latest1:officeChairRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/officeChair.ma";
+file -rdi 1 -ns "nightstand" -dr 1 -rfn "bedroom_SET_latest1:nightstandRN" 
+		-op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/nightstand.ma";
+file -rdi 1 -ns "bookshelf" -dr 1 -rfn "bedroom_SET_latest1:bookshelfRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
+file -rdi 1 -ns "clock" -dr 1 -rfn "bedroom_SET_latest1:clockRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/clock.ma";
+file -rdi 1 -ns "scarf" -dr 1 -rfn "bedroom_SET_latest1:scarfRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
+file -rdi 1 -ns "curtains1" -dr 1 -rfn "bedroom_SET_latest1:curtainsRN1" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/curtains.ma";
 file -rdi 1 -ns "book_stack" -dr 1 -rfn "bedroom_SET_latest1:book_stackRN" 
 		-op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book_stack.ma";
-file -rdi 1 -ns "moonDecoration" -rfn "bedroom_SET_latest1:moonDecorationRN"
+file -rdi 1 -ns "moonDecoration" -dr 1 -rfn "bedroom_SET_latest1:moonDecorationRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/moonDecoration.ma";
-file -rdi 1 -ns "smallTrashCan" -rfn "bedroom_SET_latest1:smallTrashCanRN" 
-		-op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/smallTrashCan.ma";
-file -rdi 1 -ns "phone" -rfn "bedroom_SET_latest1:phoneRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
-file -rdi 1 -ns "book27" -rfn "bedroom_SET_latest1:bookRN1" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book.ma";
+file -rdi 1 -ns "smallTrashCan" -dr 1 -rfn "bedroom_SET_latest1:smallTrashCanRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/smallTrashCan.ma";
+file -rdi 1 -ns "phone" -dr 1 -rfn "bedroom_SET_latest1:phoneRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
+file -rdi 1 -ns "book27" -dr 1 -rfn "bedroom_SET_latest1:bookRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book.ma";
 file -rdi 1 -ns "Jacies_shoe_latest" -dr 1 -rfn "bedroom_SET_latest1:Jacies_shoe_latestRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/Jacies_shoe_latest.ma";
-file -rdi 1 -ns "floor_walls_latest" -rfn "bedroom_SET_latest1:floor_walls_latestRN"
+file -rdi 1 -ns "floor_walls_latest" -dr 1 -rfn "bedroom_SET_latest1:floor_walls_latestRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/floor_walls_latest.ma";
-file -rdi 1 -ns "deskLamp_latest" -rfn "bedroom_SET_latest1:deskLamp_latestRN"
+file -rdi 1 -ns "deskLamp_latest" -dr 1 -rfn "bedroom_SET_latest1:deskLamp_latestRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/deskLamp_latest.ma";
-file -rdi 1 -ns "desk_latest" -rfn "bedroom_SET_latest1:desk_latestRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/desk_latest.ma";
-file -rdi 2 -ns "book_stack" -rfn "bedroom_SET_latest1:desk_latest:book_stackRN"
-		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book_stack.ma";
-file -rdi 1 -ns "bookshelf2" -rfn "bedroom_SET_latest1:bookshelfRN1" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
-file -rdi 1 -ns "boardGames_latest" -rfn "bedroom_SET_latest1:boardGames_latestRN"
+file -rdi 1 -ns "desk_latest" -dr 1 -rfn "bedroom_SET_latest1:desk_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/desk_latest.ma";
+file -rdi 1 -ns "bookshelf2" -dr 1 -rfn "bedroom_SET_latest1:bookshelfRN1" 
+		-op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
+file -rdi 1 -ns "boardGames_latest" -dr 1 -rfn "bedroom_SET_latest1:boardGames_latestRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/boardGames_latest.ma";
-file -rdi 1 -ns "houseSlippers_latest" -rfn "bedroom_SET_latest1:houseSlippers_latestRN"
+file -rdi 1 -ns "houseSlippers_latest" -dr 1 -rfn "bedroom_SET_latest1:houseSlippers_latestRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/houseSlippers_latest.ma";
-file -rdi 1 -ns "bookStack_TREESHELF" -rfn "bedroom_SET_latest1:bookStack_TREESHELFRN"
+file -rdi 1 -ns "bookStack_TREESHELF" -dr 1 -rfn "bedroom_SET_latest1:bookStack_TREESHELFRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_TREESHELF.ma";
-file -rdi 1 -ns "bookStack_LEFT_SHELF" -rfn "bedroom_SET_latest1:bookStack_LEFT_SHELFRN"
+file -rdi 1 -ns "bookStack_LEFT_SHELF" -dr 1 -rfn "bedroom_SET_latest1:bookStack_LEFT_SHELFRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_LEFT_SHELF.ma";
-file -rdi 1 -ns "bookStack_RIGHT_SHELF" -rfn "bedroom_SET_latest1:bookStack_RIGHT_SHELFRN"
+file -rdi 1 -ns "bookStack_RIGHT_SHELF" -dr 1 -rfn "bedroom_SET_latest1:bookStack_RIGHT_SHELFRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_RIGHT_SHELF.ma";
 file -rdi 1 -ns "teacup" -rfn "bedroom_SET_latest1:teacupRN" -op "v=0;" -typ
 		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/teacup.ma";
-file -rdi 1 -ns "backpack" -rfn "bedroom_SET_latest1:backpackRN" -op "v=0;"
+file -rdi 1 -ns "backpack" -dr 1 -rfn "bedroom_SET_latest1:backpackRN" -op "v=0;"
 		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/backpack.ma";
-file -rdi 1 -ns "CoffeeCupLatest" -rfn "bedroom_SET_latest1:CoffeeCupLatestRN"
+file -rdi 1 -ns "CoffeeCupLatest" -dr 1 -rfn "bedroom_SET_latest1:CoffeeCupLatestRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/CoffeeCupLatest.ma";
-file -rdi 1 -ns "gameboy" -rfn "bedroom_SET_latest1:gameboyRN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/gameboy.ma";
-file -rdi 1 -ns "golem_plushie" -rfn "bedroom_SET_latest1:golem_plushieRN" 
-		-op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/golem_plushie.ma";
-file -rdi 1 -ns "mac" -rfn "bedroom_SET_latest1:macRN" -op "v=0;" -typ "mayaAscii"
-		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
-file -rdi 1 -ns "musicbox" -rfn "bedroom_SET_latest1:musicboxRN" -op "v=0;"
+file -rdi 1 -ns "gameboy" -dr 1 -rfn "bedroom_SET_latest1:gameboyRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/gameboy.ma";
+file -rdi 1 -ns "golem_plushie" -dr 1 -rfn "bedroom_SET_latest1:golem_plushieRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/golem_plushie.ma";
+file -rdi 1 -ns "mac" -dr 1 -rfn "bedroom_SET_latest1:macRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
+file -rdi 1 -ns "musicbox" -dr 1 -rfn "bedroom_SET_latest1:musicboxRN" -op "v=0;"
 		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/musicbox.ma";
-file -rdi 1 -ns "phone1" -rfn "bedroom_SET_latest1:phoneRN1" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
-file -rdi 1 -ns "scarf1" -rfn "bedroom_SET_latest1:scarfRN1" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
-file -rdi 1 -ns "strewn_pants" -rfn "bedroom_SET_latest1:strewn_pantsRN" -op
-		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/strewn_pants.ma";
+file -rdi 1 -ns "phone1" -dr 1 -rfn "bedroom_SET_latest1:phoneRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
+file -rdi 1 -ns "scarf1" -dr 1 -rfn "bedroom_SET_latest1:scarfRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
+file -rdi 1 -ns "strewn_pants" -dr 1 -rfn "bedroom_SET_latest1:strewn_pantsRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/strewn_pants.ma";
 file -rdi 1 -ns "toyPlane" -dr 1 -rfn "bedroom_SET_latest1:toyPlaneRN1" -op
 		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyPlane.ma";
-file -rdi 1 -ns "toyTrain" -rfn "bedroom_SET_latest1:toyTrainRN1" -op "v=0;"
-		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyTrain.ma";
-file -rdi 1 -ns "bedsideTable1" -rfn "bedroom_SET_latest1:bedsideTableRN" -op
-		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideTable.ma";
-file -rdi 1 -ns "bedsideLamp1" -rfn "bedroom_SET_latest1:bedsideLampRN" -op
-		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideLamp.ma";
-file -rdi 1 -ns "beanbag1" -rfn "bedroom_SET_latest1:beanbagRN" -op "v=0;" 
-		-typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/beanbag.ma";
-file -rdi 1 -ns "hangingStars" -rfn "bedroom_SET_latest1:hangingStarsRN" -op
-		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/hangingStars.ma";
-file -rdi 1 -ns "alarmclock" -rfn "bedroom_SET_latest1:alarmclockRN" -op "VERS|2018ff09|UVER|undef|MADE|undef|CHNG|undef|ICON|undef|INFO|undef|OBJN|undef|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
+file -rdi 1 -ns "toyTrain" -dr 1 -rfn "bedroom_SET_latest1:toyTrainRN1" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyTrain.ma";
+file -rdi 1 -ns "bedsideTable1" -dr 1 -rfn "bedroom_SET_latest1:bedsideTableRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideTable.ma";
+file -rdi 1 -ns "bedsideLamp1" -dr 1 -rfn "bedroom_SET_latest1:bedsideLampRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideLamp.ma";
+file -rdi 1 -ns "beanbag1" -dr 1 -rfn "bedroom_SET_latest1:beanbagRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/beanbag.ma";
+file -rdi 1 -ns "hangingStars" -dr 1 -rfn "bedroom_SET_latest1:hangingStarsRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/hangingStars.ma";
+file -rdi 1 -ns "alarmclock" -dr 1 -rfn "bedroom_SET_latest1:alarmclockRN" 
+		-op "VERS|2018ff09|UVER|undef|MADE|undef|CHNG|undef|ICON|undef|INFO|undef|OBJN|undef|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
 		 -typ "mayaBinary" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/alarmclock.mb";
-file -rdi 1 -ns "poster1" -rfn "bedroom_SET_latest1:poster1RN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster1.ma";
-file -rdi 1 -ns "poster2" -rfn "bedroom_SET_latest1:poster2RN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster2.ma";
-file -rdi 1 -ns "mac" -rfn "bedroom_SET_latest1:bedroom_light_rig:macRN" -op
-		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
+file -rdi 1 -ns "poster1" -dr 1 -rfn "bedroom_SET_latest1:poster1RN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster1.ma";
+file -rdi 1 -ns "poster2" -dr 1 -rfn "bedroom_SET_latest1:poster2RN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster2.ma";
+file -rdi 1 -ns "mac" -dr 1 -rfn "bedroom_SET_latest1:bedroom_light_rig:macRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
 file -rdi 1 -ns "comfy_mc_latest_real" -rfn "comfy_mc_latest_realRN" -op "v=0;p=17;f=0"
 		 -typ "mayaAscii" "/Users/abbycohn/Documents/GitHub/poweredup//assets/characters/mc/USE_THIS/comfy_mc_latest_real.ma";
 file -rdi 2 -ns "mc_rig_only" -rfn "comfy_mc_latest_real:mc_rig_onlyRN" -op
 		 "v=0;" -typ "mayaAscii" "C:/Users/Alex/Documents/GitHub/poweredup//assets/characters/mc/mc_rig_only.ma";
+file -rdi 1 -ns "bedroom_SET_latest" -rfn "bedroom_SET_latestRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/abbycohn/Documents/GitHub/poweredup//scenes/bedroom_SET_latest.ma";
+file -rdi 2 -ns "bed_NEW" -rfn "bedroom_SET_latest:bed_NEWRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
+file -rdi 2 -ns "window" -rfn "bedroom_SET_latest:windowRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/window.ma";
+file -rdi 2 -ns "door" -dr 1 -rfn "bedroom_SET_latest:doorRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
+file -rdi 2 -ns "door1" -rfn "bedroom_SET_latest:doorRN1" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/door.ma";
+file -rdi 2 -ns "rug" -rfn "bedroom_SET_latest:rugRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/rug.ma";
+file -rdi 2 -ns "treeShelf" -rfn "bedroom_SET_latest:treeShelfRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/treeShelf.ma";
+file -rdi 2 -ns "officeChair" -rfn "bedroom_SET_latest:officeChairRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/officeChair.ma";
+file -rdi 2 -ns "nightstand" -rfn "bedroom_SET_latest:nightstandRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/nightstand.ma";
+file -rdi 2 -ns "bookshelf" -rfn "bedroom_SET_latest:bookshelfRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
+file -rdi 2 -ns "clock" -rfn "bedroom_SET_latest:clockRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/clock.ma";
+file -rdi 2 -ns "scarf" -rfn "bedroom_SET_latest:scarfRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
+file -rdi 2 -ns "curtains1" -rfn "bedroom_SET_latest:curtainsRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/curtains.ma";
+file -rdi 2 -ns "book_stack" -dr 1 -rfn "bedroom_SET_latest:book_stackRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book_stack.ma";
+file -rdi 2 -ns "moonDecoration" -rfn "bedroom_SET_latest:moonDecorationRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/moonDecoration.ma";
+file -rdi 2 -ns "smallTrashCan" -rfn "bedroom_SET_latest:smallTrashCanRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/smallTrashCan.ma";
+file -rdi 2 -ns "phone" -rfn "bedroom_SET_latest:phoneRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
+file -rdi 2 -ns "book27" -rfn "bedroom_SET_latest:bookRN1" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book.ma";
+file -rdi 2 -ns "Jacies_shoe_latest" -dr 1 -rfn "bedroom_SET_latest:Jacies_shoe_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/Jacies_shoe_latest.ma";
+file -rdi 2 -ns "floor_walls_latest" -rfn "bedroom_SET_latest:floor_walls_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/floor_walls_latest.ma";
+file -rdi 2 -ns "deskLamp_latest" -rfn "bedroom_SET_latest:deskLamp_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/deskLamp_latest.ma";
+file -rdi 2 -ns "desk_latest" -rfn "bedroom_SET_latest:desk_latestRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/desk_latest.ma";
+file -rdi 3 -ns "book_stack" -rfn "bedroom_SET_latest:desk_latest:book_stackRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/book_stack.ma";
+file -rdi 2 -ns "bookshelf2" -rfn "bedroom_SET_latest:bookshelfRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookshelf.ma";
+file -rdi 2 -ns "boardGames_latest" -rfn "bedroom_SET_latest:boardGames_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/boardGames_latest.ma";
+file -rdi 2 -ns "houseSlippers_latest" -rfn "bedroom_SET_latest:houseSlippers_latestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/houseSlippers_latest.ma";
+file -rdi 2 -ns "bookStack_TREESHELF" -rfn "bedroom_SET_latest:bookStack_TREESHELFRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_TREESHELF.ma";
+file -rdi 2 -ns "bookStack_LEFT_SHELF" -rfn "bedroom_SET_latest:bookStack_LEFT_SHELFRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_LEFT_SHELF.ma";
+file -rdi 2 -ns "bookStack_RIGHT_SHELF" -rfn "bedroom_SET_latest:bookStack_RIGHT_SHELFRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bookStack_RIGHT_SHELF.ma";
+file -rdi 2 -ns "teacup" -rfn "bedroom_SET_latest:teacupRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/teacup.ma";
+file -rdi 2 -ns "backpack" -rfn "bedroom_SET_latest:backpackRN" -op "v=0;" 
+		-typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/backpack.ma";
+file -rdi 2 -ns "CoffeeCupLatest" -rfn "bedroom_SET_latest:CoffeeCupLatestRN"
+		 -op "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/CoffeeCupLatest.ma";
+file -rdi 2 -ns "gameboy" -rfn "bedroom_SET_latest:gameboyRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/gameboy.ma";
+file -rdi 2 -ns "golem_plushie" -rfn "bedroom_SET_latest:golem_plushieRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/golem_plushie.ma";
+file -rdi 2 -ns "mac" -rfn "bedroom_SET_latest:macRN" -op "v=0;" -typ "mayaAscii"
+		 "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
+file -rdi 2 -ns "musicbox" -rfn "bedroom_SET_latest:musicboxRN" -op "v=0;" 
+		-typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/musicbox.ma";
+file -rdi 2 -ns "phone1" -rfn "bedroom_SET_latest:phoneRN1" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/phone.ma";
+file -rdi 2 -ns "scarf1" -rfn "bedroom_SET_latest:scarfRN1" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/scarf.ma";
+file -rdi 2 -ns "strewn_pants" -rfn "bedroom_SET_latest:strewn_pantsRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/strewn_pants.ma";
+file -rdi 2 -ns "toyPlane" -dr 1 -rfn "bedroom_SET_latest:toyPlaneRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyPlane.ma";
+file -rdi 2 -ns "toyTrain" -rfn "bedroom_SET_latest:toyTrainRN1" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/toyTrain.ma";
+file -rdi 2 -ns "bedsideTable1" -rfn "bedroom_SET_latest:bedsideTableRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideTable.ma";
+file -rdi 2 -ns "bedsideLamp1" -rfn "bedroom_SET_latest:bedsideLampRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bedsideLamp.ma";
+file -rdi 2 -ns "beanbag1" -rfn "bedroom_SET_latest:beanbagRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/beanbag.ma";
+file -rdi 2 -ns "hangingStars" -rfn "bedroom_SET_latest:hangingStarsRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/hangingStars.ma";
+file -rdi 2 -ns "alarmclock" -rfn "bedroom_SET_latest:alarmclockRN" -op "VERS|2018ff09|UVER|undef|MADE|undef|CHNG|undef|ICON|undef|INFO|undef|OBJN|undef|INCL|undef(|LUNI|cm|TUNI|film|AUNI|deg|TDUR|141120000|"
+		 -typ "mayaBinary" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/alarmclock.mb";
+file -rdi 2 -ns "poster1" -rfn "bedroom_SET_latest:poster1RN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster1.ma";
+file -rdi 2 -ns "poster2" -rfn "bedroom_SET_latest:poster2RN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/poster2.ma";
+file -rdi 2 -ns "mac" -rfn "bedroom_SET_latest:bedroom_light_rig:macRN" -op
+		 "v=0;" -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
+file -rdi 2 -ns "tatoePhoto" -rfn "bedroom_SET_latest:tatoePhotoRN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/tatoePhoto.ma";
+file -rdi 2 -ns "tatoePhoto2" -rfn "bedroom_SET_latest:tatoePhoto2RN" -op "v=0;"
+		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/tatoePhoto2.ma";
 file -r -ns "bed_NEW" -dr 1 -rfn "bedroom_SET_latest1:bed_NEWRN" -op "v=0;" -typ
 		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
 file -r -ns "window" -dr 1 -rfn "bedroom_SET_latest1:windowRN" -op "v=0;" -typ "mayaAscii"
@@ -198,6 +299,8 @@ file -r -ns "mac" -dr 1 -rfn "bedroom_SET_latest1:bedroom_light_rig:macRN" -op "
 		 -typ "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/mac.ma";
 file -r -ns "comfy_mc_latest_real" -dr 1 -rfn "comfy_mc_latest_realRN" -op "v=0;p=17;f=0"
 		 -typ "mayaAscii" "/Users/abbycohn/Documents/GitHub/poweredup//assets/characters/mc/USE_THIS/comfy_mc_latest_real.ma";
+file -r -ns "bedroom_SET_latest" -dr 1 -rfn "bedroom_SET_latestRN" -op "v=0;" -typ
+		 "mayaAscii" "/Users/abbycohn/Documents/GitHub/poweredup//scenes/bedroom_SET_latest.ma";
 requires maya "2018";
 requires -nodeType "HIKSolverNode" -nodeType "HIKCharacterNode" -nodeType "HIKControlSetNode"
 		 -nodeType "HIKFK2State" -nodeType "HIKState2SK" -nodeType "HIKProperty2State" -dataType "HIKCharacter"
@@ -223,8 +326,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "7DB98075-7D4F-75A2-489F-1FBC5A37AFE9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -6.1756308939133611 2.1247204932116612 -1.0321303231326506 ;
-	setAttr ".r" -type "double3" 2.6616472710779489 -96.999999999974634 0 ;
+	setAttr ".t" -type "double3" -6.8100621180344003 2.649781944245599 -0.62608853443387513 ;
+	setAttr ".r" -type "double3" -3.3383527289219579 -92.199999999974523 0 ;
 	setAttr ".rp" -type "double3" 4.4408920985006262e-16 0 8.8817841970012523e-16 ;
 	setAttr ".rpt" -type "double3" -1.3409899491432063e-15 1.1651996494217156e-16 -4.7821708841197502e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -232,11 +335,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 1.8575207131467304;
+	setAttr ".coi" 2.2001780503238071;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -4.3428732164501227 3.1017866528417701 -1.7312909019618132 ;
+	setAttr ".tp" -type "double3" -4.6152365995729614 2.5216605479717935 -0.54177184300217252 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "F6C9188B-5246-B56C-C070-8090E363C011";
@@ -285,20 +388,6 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "bedroom_SET_latest1:Roof";
-	rename -uid "8816C076-5D41-3E71-9924-0DA6371B0E60";
-	setAttr ".t" -type "double3" -1.3039637097550716 6.2486854519007906 -1.2138229827034146 ;
-	setAttr ".s" -type "double3" 10.119423089677296 0.41359481102789053 13.519483501423322 ;
-createNode mesh -n "bedroom_SET_latest1:RoofShape" -p "bedroom_SET_latest1:Roof";
-	rename -uid "A5FD52AC-B542-5F72-BB84-76A1F8F83CE0";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "bedroom_SET_latest1:TREE_SHELF";
 	rename -uid "B50C6761-1F4F-91AA-E1CE-3292D46C34BD";
 	setAttr ".t" -type "double3" 1.8062524179984871 0 3.2309311374941165 ;
@@ -317,4526 +406,6 @@ createNode transform -n "bedroom_SET_latest1:BOOK_CABINET";
 	setAttr ".r" -type "double3" 0 -89.999999999999972 0 ;
 	setAttr ".rp" -type "double3" -0.86090864101727149 1.3075353066381421 -7.3021343367576881 ;
 	setAttr ".sp" -type "double3" -0.86090864101727149 1.3075353066381421 -7.3021343367576881 ;
-createNode transform -n "bedroom_SET_latest1:fox:fox_mesh" -p "bedroom_SET_latest1:BOOK_CABINET";
-	rename -uid "088796C6-E044-E50A-1466-FB9D51CFBC8B";
-	setAttr ".t" -type "double3" -1.2768488046335564 2.0420868583902183 -7.3338206523548237 ;
-	setAttr ".r" -type "double3" 0.30975019093309819 -50.595516377765854 0.7243201765008852 ;
-	setAttr ".s" -type "double3" 0.044747954510419526 0.044747954510419526 0.044747954510419526 ;
-createNode mesh -n "bedroom_SET_latest1:fox:fox_meshShape" -p "bedroom_SET_latest1:fox:fox_mesh";
-	rename -uid "1FB3BC9C-FD40-7CCF-4FF1-B0BDB89A9EDA";
-	setAttr -k off ".v";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:1051]";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 1314 ".uvst[0].uvsp";
-	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.375 0.190045 0.48321199 0.190045
-		 0.48321199 0.25 0.375 0.25 0.48321199 0.5 0.375 0.5 0.625 0.190045 0.875 0.190045
-		 0.875 0.25 0.625 0.25 0.125 0.190045 0.125 0.25 0.125 0.026583999 0.375 0.026583999
-		 0.375 0.047851 0.125 0.047851 0.48321199 0.026583999 0.48321199 0.047851 0.625 0.026583999
-		 0.875 0.026583999 0.875 0.047851 0.625 0.047851 0.125 0.15577 0.375 0.15577 0.48321199
-		 0.15577 0.625 0.15577 0.875 0.15577 0.028898001 0 0.40660599 0 0.42004299 0.14969701
-		 0.0141 0.16461401 0.049648002 0.53329498 0.444763 0.49099299 0.44774199 0.54065901
-		 0.062059999 0.58625299 0.42772499 0.235278 0.0056400001 0.25872299 0.028898001 0
-		 0.40660599 0 0.40660599 0 0.028898001 0 0.90151298 0 0.95194602 0.130152 0.95194602
-		 0.130152 0.90151298 0 0.0141 0.16461401 0.0141 0.16461401 0.96247798 0.43556601 0.96247798
-		 0.43556601 0.953098 0.48091701 0.953098 0.48091701 0.45146599 0.60273999 0.077574
-		 0.65245098 0.077574 0.65245098 0.45146599 0.60273999 0.062059999 0.58625299 0.062059999
-		 0.58625299 0.049648002 0.53329498 0.049648002 0.53329498 0.98077798 0.204559 0.98077798
-		 0.204559 0.0056400001 0.25872299 0.0056400001 0.25872299 0.40660599 0 0.028898001
-		 0 0.95194602 0.130152 0.90151298 0 0.0141 0.16461401 0.96247798 0.43556601 0.953098
-		 0.48091701 0.077574 0.65245098 0.45146599 0.60273999 0.062059999 0.58625299 0.049648002
-		 0.53329498 0.98077798 0.204559 0.0056400001 0.25872299 0.95194602 0.130152 0.90151298
-		 0 0.96247798 0.43556601 0.953098 0.48091701 0.077574 0.65245098 0.45146599 0.60273999
-		 0.98077798 0.204559 0.5 0 0.554106 0 0.554106 0.125 0.5 0.125 0.5 0.125 0.554106
-		 0.125 0.554106 0.25 0.5 0.25 0.5 0.31383201 0.554106 0.31383201 0.554106 0.375 0.5
-		 0.375 0.554106 0.5 0.5 0.5 0.5 0.5 0.554106 0.5 0.554106 0.625 0.5 0.625 0.5 0.625
-		 0.554106 0.625 0.554106 0.72074997 0.5 0.70109099 0.5 0.75 0.554106 0.75 0.554106
-		 0.875 0.5 0.875 0.554106 0.93616802 0.5 0.93616802 0.75 0 0.875 0 0.875 0.125 0.75
-		 0.125 0.688833 0 0.688833 0.125 0.875 0.25 0.75 0.25 0.68883198 0.25 0.554106 0.5
-		 0.5 0.5 0.625 0.5 0.625 0.625 0.625 0.625 0.625 0.5 0.625 0.625 0.625 0.75 0.625
-		 0.75 0.625 0.625 0.5 0.75 0.554106 0.75 0.554106 0.5 0.5 0.5 0.625 0.625 0.625 0.5
-		 0.625 0.75 0.625 0.75 0.5 0.75 0.554106 0.75 0.625 0.625 0.625 0.5 0.554106 0.5 0.5
-		 0.5 0.5 0.75 0.554106 0.75 0.625 0.75 0.5 0 0.554106 0 0.554106 0 0.5 0 0.625 0.125
-		 0.625 0.25 0.625 0.25 0.625 0.125 0.554106 0.25 0.5 0.25 0.5 0.25 0.554106 0.25 0.49378201
-		 0.25 0.55645502 0.26648301 0.625 0.25 0.625 0.125 0.625 0.75 0.625 0.75 0.625 0.625
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.625 0.625 0.75 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.375 0 0.52094799 0 0.52094799 0.25 0.375 0.25 0.52094799
-		 0.375 0.375 0.375 0.52094799 0.5 0.375 0.5 0.52094799 0.75 0.375 0.75 0.375 0.75
-		 0.52094799 0.75 0.52094799 0.875 0.375 0.875 0.52094799 1 0.375 1 0.75 0 0.875 0
-		 0.875 0.25 0.75 0.25 0.625 0 0.625 0.25 0.375 0.75 0.52094799 0.75 0.52094799 0.75
-		 0.375 0.75 0.625 0.75 0.625 0.875 0.625 0.875;
-	setAttr ".uvst[0].uvsp[250:499]" 0.625 0.75 0.375 0.875 0.375 0.875 0.625 1
-		 0.625 1 0.52094799 1 0.375 1 0.375 1 0.52094799 1 0.625 0.75 0.625 0.875 0.625 0.875
-		 0.625 0.75 0.375 0.75 0.52094799 0.75 0.52094799 0.75 0.375 0.75 0.375 0.875 0.375
-		 0.875 0.375 1 0.375 1 0.52094799 1 0.52094799 1 0.625 1 0.625 1 0.625 0.75 0.625
-		 0.875 0.625 0.875 0.625 0.75 0.375 0.75 0.52094799 0.75 0.52094799 0.75 0.375 0.75
-		 0.375 0.875 0.375 0.875 0.375 1 0.375 1 0.52094799 1 0.52094799 1 0.625 1 0.625 1
-		 0.625 0.75 0.625 0.875 0.625 0.875 0.625 0.75 0.375 0.75 0.52094799 0.75 0.52094799
-		 0.75 0.375 0.75 0.375 0.875 0.375 0.875 0.375 1 0.375 1 0.52094799 1 0.52094799 1
-		 0.625 1 0.625 1 0.375 0.75 0.52094799 0.75 0.52094799 0.75 0.375 0.75 0.625 0.75
-		 0.625 0.875 0.625 0.875 0.625 0.75 0.375 0.875 0.375 0.75 0.375 0.75 0.375 0.875
-		 0.625 1 0.625 1 0.52094799 1 0.375 1 0.375 1 0.52094799 1 0.375 0.75 0.52094799 0.75
-		 0.52094799 0.75 0.375 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.52094799
-		 0.75 0.375 0.75 0.375 0.75 0.52094799 0.75 0.375 0.75 0.375 0.75 0.625 0.625 0.625
-		 0.5 0.625 0.75 0.5 0.75 0.554106 0.75 0.5 0.5 0.554106 0.5 0.554106 0.5 0.5 0.5 0.62129802
-		 0.51675302 0.62499201 0.62483603 0.625 0.625 0.625 0.5 0.5 0.75 0.554106 0.75 0.5
-		 0.5 0.554106 0.5 0.554106 0.5 0.5 0.5 0.625 0.5 0.625 0.50213301 0.625 0.625 0.625
-		 0.625 0.625 0.5 0.625 0.71437198 0.625 0.69641298 0.554106 0.75 0.5 0.75 0.5 0.75
-		 0.554106 0.75 0.554106 0.5 0.5 0.5 0.625 0.5 0.625 0.5 0.5 0.5 0.554106 0.5 0.554106
-		 0.5 0.5 0.5 0.5 0.75 0.554106 0.75 0.625 0.64106601 0.625 0.625 0.625 0.5 0.625 0.625
-		 0.625 0.625 0.625 0.5 0.5 0.5 0.554106 0.5 0.625 0.5 0.625 0.5 0.625 0.625 0.625
-		 0.5 0.625 0.625 0.625 0.5 0.625 0.5 0.625 0.625 0.625 0.625 0.625 0.5 0.625 0.5 0.625
-		 0.5 0.625 0.5 0.625 0.5 0.625 0.625 0.625 0.625 0.625 0.625 0.625 0.625 0.625 0.5
-		 0.625 0.5 0.625 0.625 0.625 0.625 0.5 0.75 0.554106 0.75 0.625 0.70176399 0.625 0.625
-		 0.625 0.5 0.554106 0.5 0.5 0.5 0.554106 0.5 0.625 0.5 0.625 0.625 0.625 0.71318001
-		 0.625 0.75 0.59876102 0.75 0.599105 0.75 0.625 0.75 0.625 0.75 0.60261399 0.75 0.59876102
-		 0.75 0.625 0.75 0.625 0.75 0.59818399 0.75 0.60261399 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.875 0.625 0.93616802 0.625 0 0.625 0 0.625 0 0.625 0.31383201 0.625 0.375
-		 0.625 0.5 0.94137198 0.53760499 0.94137198 0.53760499 0.94137198 0.53760499 0.94137198
-		 0.53760499 0.60119301 0.5 0.57561499 0.5 0.5 0.5 0.554106 0.5 0.554106 0.5 0.5 0.5
-		 0.554106 0.5 0.554106 0.625 0.554106 0.625 0.5 0.625 0.5 0.625 0.554106 0.5 0.5 0.5
-		 0.554106 0.625 0.5 0.625 0.5 0.5 0.554106 0.5 0.554106 0.5 0.5 0.5 0.554106 0.625
-		 0.554106 0.625 0.5 0.5 0.554106 0.5 0.5 0.75 0.554106 0.75 0.625 0.75 0.599105 0.75
-		 0.58899999 0.75 0.625 0.75 0.018633001 0.5 0.34721199 0.487755 0.36538899 0.97551101
-		 0.037264999 1 0.00911 0.42076501 0.99043 0.44201201 0.98085999 0.88402301 0 0.84153003
-		 0.041809998 0.476008 0.31495601 0.5 0.27103901 1 0 0.95201701 0.398554 0.41363001
-		 0.48819199 0.5 0.0064170002 1 0 0.82726002 0.027884001 0.60389102 0.48315299 0.311097
-		 0.5 0.336155 0 0.67231101 0.5 0.33615601 0.54529202 0.26878801 0.94508898 0.53757501
-		 1 0.67231101 0.48176801 0.5 0.57140601 0.41363099;
-	setAttr ".uvst[0].uvsp[500:749]" 0.96995401 0.82726097 0.96353602 1 0.043919001
-		 0.5 0.317065 0.476008 0.358877 0.952016 0.087839 1 0.01914 0.88402301 0.0095699998
-		 0.44201201 0.99089003 0.42076501 1 0.84153003 0.019919001 0.487755 0.319747 0.5 0.299328
-		 1 0 0.97551101 0.554106 0.125 0.5 0.125 0.5 0.125 0.5 0.125 0.554106 0.125 0.554106
-		 0.125 0.5 0.125 0.554106 0.25 0.554106 0.25 0.5 0.25 0.5 0.25 0.5 0.125 0.554106
-		 0.125 0.554106 0.125 0.5 0.125 0.554106 0.25 0.554106 0.25 0.5 0.25 0.5 0.25 0.5
-		 0.125 0.554106 0.125 0.554106 0.125 0.5 0.125 0.554106 0.25 0.554106 0.25 0.5 0.25
-		 0.5 0.25 0.5 0.125 0.554106 0.125 0.554106 0.125 0.5 0.125 0.554106 0.25 0.554106
-		 0.25 0.5 0.25 0.5 0.25 0.554106 1 0.625 1 0.5 1 0.625 0.375 0.625 0.5 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.875 0.625 1 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.52094799 0.75 0.375 0.75 0.52094799 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.60355902
-		 0.51245302 0.62499303 0.64718902 0.625 0.69502699 0.625 0.73573297 0.625 0.65587097
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.554106 0.75 0.5 0.75 0.554106 0.75
-		 0.45470801 0.268787 0.054910999 0.53757501 0.625 0.875 0.625 1 0.52094799 1 0.375
-		 1 0.375 0.875 0.5 0.125 0.554106 0.125 0.554106 0.25 0.5 0.25 0.5 0.125 0.554106
-		 0.125 0.554106 0.125 0.5 0.125 0.554106 0.25 0.554106 0.25 0.5 0.25 0.5 0.25 0.5
-		 0.25 0.554106 0.25 0.554106 0.125 0.5 0.125 0.5 0.125 0.554106 0.125 0.554106 0.125
-		 0.5 0.125 0.555803 0.26191199 0.55549502 0.259749 0.49550599 0.25 0.49632201 0.25
-		 0.49873799 0.25 0.55458301 0.25334501 0.554106 0.125 0.5 0.125 0.375 0.190045 0.375
-		 0.25 0.48321199 0.25 0.48321199 0.190045 0.375 0.5 0.48321199 0.5 0.625 0.190045
-		 0.625 0.25 0.875 0.25 0.875 0.190045 0.125 0.190045 0.125 0.25 0.375 0.026583999
-		 0.125 0.026583999 0.125 0.047851 0.375 0.047851 0.48321199 0.026583999 0.48321199
-		 0.047851 0.875 0.026583999 0.625 0.026583999 0.625 0.047851 0.875 0.047851 0.125
-		 0.132919 0.125 0.16148201 0.375 0.16148201 0.375 0.132919 0.48321199 0.16148201 0.48321199
-		 0.132919 0.625 0.132919 0.625 0.16148201 0.875 0.16148201 0.875 0.132919 0.028898001
-		 0 0.0141 0.16461401 0.42004299 0.14969701 0.40660599 0 0.444763 0.49099299 0.049648002
-		 0.53329498 0.062059999 0.58625299 0.44774199 0.54065901 0.42644501 0.22101399 0.0070500001
-		 0.243038 0 0.32146201 0.43284601 0.29233199 0.028898001 0 0.028898001 0 0.40660599
-		 0 0.40660599 0 0.90151298 0 0.90151298 0 0.95194602 0.130152 0.95194602 0.130152
-		 0.0141 0.16461401 0.0141 0.16461401 0.96247798 0.43556601 0.96247798 0.43556601 0.953098
-		 0.48091701 0.953098 0.48091701 0.45146599 0.60273999 0.45146599 0.60273999 0.077574
-		 0.65245098 0.077574 0.65245098 0.062059999 0.58625299 0.062059999 0.58625299 0.049648002
-		 0.53329498 0.049648002 0.53329498 0.97597301 0.192157 0.97597301 0.192157 1 0.254163
-		 1 0.254163 0 0.32146201 0 0.32146201 0.0070500001 0.243038 0.0070500001 0.243038
-		 0.028898001 0 0.40660599 0 0.90151298 0 0.95194602 0.130152 0.0141 0.16461401 0.96247798
-		 0.43556601 0.953098 0.48091701 0.45146599 0.60273999 0.077574 0.65245098 0.062059999
-		 0.58625299 0.049648002 0.53329498 0.97597301 0.192157 1 0.254163 0 0.32146201 0.0070500001
-		 0.243038 0.90151298 0 0.95194602 0.130152 0.96247798 0.43556601 0.953098 0.48091701
-		 0.45146599 0.60273999 0.077574 0.65245098 0.97597301 0.192157 1 0.254163 0.5 0 0.5
-		 0.125 0.554106 0.125 0.554106 0 0.5 0.125 0.5 0.25 0.554106 0.25 0.554106 0.125 0.5
-		 0.31383201 0.5 0.375 0.554106 0.375 0.554106 0.31383201 0.5 0.5 0.554106 0.5 0.5
-		 0.5;
-	setAttr ".uvst[0].uvsp[750:999]" 0.5 0.625 0.554106 0.625 0.554106 0.5 0.5
-		 0.625 0.5 0.70109099 0.554106 0.72074997 0.554106 0.625 0.5 0.75 0.5 0.875 0.554106
-		 0.875 0.554106 0.75 0.5 0.93616802 0.554106 0.93616802 0.75 0 0.75 0.125 0.875 0.125
-		 0.875 0 0.688833 0 0.688833 0.125 0.75 0.25 0.875 0.25 0.68883198 0.25 0.5 0.5 0.554106
-		 0.5 0.625 0.5 0.625 0.5 0.625 0.625 0.625 0.625 0.625 0.625 0.625 0.625 0.625 0.75
-		 0.625 0.75 0.554106 0.75 0.5 0.75 0.5 0.5 0.554106 0.5 0.625 0.5 0.625 0.625 0.625
-		 0.75 0.625 0.75 0.554106 0.75 0.5 0.75 0.625 0.5 0.625 0.625 0.5 0.5 0.554106 0.5
-		 0.554106 0.75 0.5 0.75 0.625 0.75 0.5 0 0.5 0 0.554106 0 0.554106 0 0.625 0.125 0.625
-		 0.125 0.625 0.25 0.625 0.25 0.554106 0.25 0.554106 0.25 0.5 0.25 0.5 0.25 0.55645502
-		 0.26648301 0.49378201 0.25 0.625 0.125 0.625 0.25 0.625 0.625 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.625 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.375 0 0.375 0.25 0.52094799 0.25 0.52094799 0 0.375
-		 0.375 0.52094799 0.375 0.375 0.5 0.52094799 0.5 0.375 0.75 0.52094799 0.75 0.375
-		 0.75 0.375 0.875 0.52094799 0.875 0.52094799 0.75 0.375 1 0.52094799 1 0.75 0 0.75
-		 0.25 0.875 0.25 0.875 0 0.625 0 0.625 0.25 0.375 0.75 0.375 0.75 0.52094799 0.75
-		 0.52094799 0.75 0.625 0.75 0.625 0.75 0.625 0.875 0.625 0.875 0.375 0.875 0.375 0.875
-		 0.625 1 0.625 1 0.52094799 1 0.52094799 1 0.375 1 0.375 1 0.625 0.75 0.625 0.75 0.625
-		 0.875 0.625 0.875 0.375 0.75 0.375 0.75 0.52094799 0.75 0.52094799 0.75 0.375 0.875
-		 0.375 0.875 0.375 1 0.375 1 0.52094799 1 0.52094799 1 0.625 1 0.625 1 0.625 0.75
-		 0.625 0.75 0.625 0.875 0.625 0.875 0.375 0.75 0.375 0.75 0.52094799 0.75 0.52094799
-		 0.75 0.375 0.875 0.375 0.875 0.375 1 0.375 1 0.52094799 1 0.52094799 1 0.625 1 0.625
-		 1 0.625 0.75 0.625 0.75 0.625 0.875 0.625 0.875 0.375 0.75 0.375 0.75 0.52094799
-		 0.75 0.52094799 0.75 0.375 0.875 0.375 0.875 0.375 1 0.375 1 0.52094799 1 0.52094799
-		 1 0.625 1 0.625 1 0.375 0.75 0.375 0.75 0.52094799 0.75 0.52094799 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.875 0.625 0.875 0.375 0.875 0.375 0.875 0.375 0.75 0.375 0.75
-		 0.625 1 0.625 1 0.52094799 1 0.52094799 1 0.375 1 0.375 1 0.375 0.75 0.375 0.75 0.52094799
-		 0.75 0.52094799 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.52094799 0.75
-		 0.52094799 0.75 0.375 0.75 0.375 0.75 0.375 0.75 0.375 0.75 0.625 0.5 0.625 0.625
-		 0.625 0.75 0.554106 0.75 0.5 0.75 0.5 0.5 0.5 0.5 0.554106 0.5 0.554106 0.5;
-	setAttr ".uvst[0].uvsp[1000:1249]" 0.62129802 0.51675302 0.625 0.5 0.625 0.625
-		 0.62499201 0.62483603 0.554106 0.75 0.5 0.75 0.5 0.5 0.5 0.5 0.554106 0.5 0.554106
-		 0.5 0.625 0.5 0.625 0.5 0.625 0.625 0.625 0.625 0.625 0.50213301 0.625 0.69641298
-		 0.625 0.71437198 0.554106 0.75 0.554106 0.75 0.5 0.75 0.5 0.75 0.5 0.5 0.554106 0.5
-		 0.625 0.5 0.625 0.5 0.554106 0.5 0.5 0.5 0.5 0.5 0.554106 0.5 0.554106 0.75 0.5 0.75
-		 0.625 0.625 0.625 0.64106601 0.625 0.5 0.625 0.5 0.625 0.625 0.625 0.625 0.5 0.5
-		 0.554106 0.5 0.625 0.5 0.625 0.5 0.625 0.5 0.625 0.625 0.625 0.625 0.625 0.5 0.625
-		 0.5 0.625 0.625 0.625 0.625 0.625 0.5 0.625 0.5 0.625 0.5 0.625 0.5 0.625 0.5 0.625
-		 0.625 0.625 0.625 0.625 0.625 0.625 0.625 0.625 0.5 0.625 0.5 0.625 0.625 0.625 0.625
-		 0.554106 0.75 0.5 0.75 0.625 0.625 0.625 0.70176399 0.625 0.5 0.5 0.5 0.554106 0.5
-		 0.554106 0.5 0.625 0.625 0.625 0.5 0.625 0.71318001 0.625 0.75 0.625 0.75 0.599105
-		 0.75 0.59876102 0.75 0.625 0.75 0.625 0.75 0.59876102 0.75 0.60261399 0.75 0.625
-		 0.75 0.625 0.75 0.60261399 0.75 0.59818399 0.75 0.625 0.75 0.625 0.875 0.625 0.93616802
-		 0.625 0 0.625 0 0.625 0 0.625 0.375 0.625 0.31383201 0.625 0.5 0.94137198 0.53760499
-		 0.94137198 0.53760499 0.94137198 0.53760499 0.94137198 0.53760499 0.60119301 0.5
-		 0.57561499 0.5 0.5 0.5 0.5 0.5 0.554106 0.5 0.554106 0.5 0.554106 0.5 0.554106 0.625
-		 0.554106 0.625 0.5 0.625 0.5 0.625 0.5 0.5 0.554106 0.5 0.554106 0.625 0.5 0.625
-		 0.5 0.5 0.5 0.5 0.554106 0.5 0.554106 0.5 0.554106 0.625 0.554106 0.625 0.5 0.5 0.554106
-		 0.5 0.554106 0.75 0.5 0.75 0.625 0.75 0.625 0.75 0.58899999 0.75 0.599105 0.75 0.018633001
-		 0.5 0.037264999 1 0.36538899 0.97551101 0.34721199 0.487755 0.00911 0.42076501 0
-		 0.84153003 0.98085999 0.88402301 0.99043 0.44201201 0.041809998 0.476008 0 0.95201701
-		 0.27103901 1 0.31495601 0.5 0.398554 0.41363001 0 0.82726002 0.0064170002 1 0.48819199
-		 0.5 0.027884001 0.60389102 0 0.67231101 0.5 0.336155 0.48315299 0.311097 0.5 0.33615601
-		 1 0.67231101 0.94508898 0.53757501 0.54529202 0.26878801 0.48176801 0.5 0.96353602
-		 1 0.96995401 0.82726097 0.57140601 0.41363099 0.043919001 0.5 0.087839 1 0.358877
-		 0.952016 0.317065 0.476008 0.01914 0.88402301 1 0.84153003 0.99089003 0.42076501
-		 0.0095699998 0.44201201 0.019919001 0.487755 0 0.97551101 0.299328 1 0.319747 0.5
-		 0.5 0.125 0.5 0.125 0.554106 0.125 0.5 0.125 0.5 0.125 0.554106 0.125 0.554106 0.125
-		 0.554106 0.25 0.554106 0.25 0.5 0.25 0.5 0.25 0.5 0.125 0.5 0.125 0.554106 0.125
-		 0.554106 0.125 0.554106 0.25 0.554106 0.25 0.5 0.25 0.5 0.25 0.5 0.125 0.5 0.125
-		 0.554106 0.125 0.554106 0.125 0.554106 0.25 0.554106 0.25 0.5 0.25 0.5 0.25 0.5 0.125
-		 0.5 0.125 0.554106 0.125 0.554106 0.125 0.554106 0.25 0.554106 0.25 0.5 0.25 0.5
-		 0.25 0.554106 1 0.625 1 0.5 1 0.625 0.375 0.625 0.5 0.625 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.875 0.625 0.75 0.625 1 0.625 0.75 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.52094799 0.75 0.52094799 0.75 0.375 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625
-		 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75
-		 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.625 0.75 0.60355902 0.51245302 0.62499303
-		 0.64718902 0.625 0.69502699 0.625 0.73573297 0.625 0.65587097 0.625 0.75 0.625 0.75;
-	setAttr ".uvst[0].uvsp[1250:1313]" 0.625 0.75 0.625 0.75 0.554106 0.75 0.5 0.75
-		 0.554106 0.75 0.45470801 0.268787 0.054910999 0.53757501 0.625 0.875 0.625 1 0.52094799
-		 1 0.375 1 0.375 0.875 0.5 0.125 0.554106 0.125 0.554106 0.25 0.5 0.25 0.5 0.125 0.5
-		 0.125 0.554106 0.125 0.554106 0.125 0.554106 0.25 0.554106 0.25 0.5 0.25 0.5 0.25
-		 0.554106 0.25 0.5 0.25 0.554106 0.125 0.5 0.125 0.5 0.125 0.5 0.125 0.554106 0.125
-		 0.554106 0.125 0.55549502 0.259749 0.555803 0.26191199 0.49632201 0.25 0.49550599
-		 0.25 0.55458301 0.25334501 0.49873799 0.25 0.554106 0.125 0.5 0.125 0.375 0.132919
-		 0.48321199 0.132919 0.625 0.132919 0.875 0.132919 1 0.254163 1 0.254163 1 0.254163
-		 1 0.254163 0.43284601 0.29233199 0 0.32146201 0 0.32146201 0 0.32146201 0 0.32146201
-		 0.125 0.132919 0.125 0 0.375 0 0.625 0 0.875 0 0.48321199 0 0.375 0 0.48321199 0
-		 0.625 0 0.875 0 0.125 0;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr -s 1053 ".vt";
-	setAttr ".vt[0:165]"  -0.198937 10.19004631 7.60745001 -1.77026701 8.94271564 7.80978394
-		 -1.57813597 11.28541946 8.9044838 -1.99487305 10.74739361 8.93821239 -1.70320594 11.56814861 9.64068508
-		 -2.051685095 11.0069732666 9.37042046 -0.126811 9.94205761 9.42792225 -1.65852797 9.01244545 9.1071434
-		 -1.99223304 9.6632452 9.12269306 -0.83467197 10.74701881 9.5375309 -0.83582401 10.89558029 8.067212105
-		 -1.87562501 9.16673088 8.030472755 -2.1293149 10.4157877 9.26895905 -1.33939397 11.28941059 9.57693481
-		 -1.44977605 11.063440323 8.43925953 -1.94560397 10.22402668 8.39983177 -1.622455 11.27780247 9.42093086
-		 -1.968153 10.86014366 9.20382118 -2.0065279007 10.36322784 9.126894 -1.37224698 11.0027494431 9.36941242
-		 -0.97662598 10.6558876 9.33927345 -1.89132702 9.72657394 9.02238369 -1.52658904 9.22661877 9.03523159
-		 -0.359588 9.90135765 9.32431602 -1.596071 11.10344219 9.28729439 -1.85234904 10.55167961 9.004365921
-		 -1.92078602 10.37191105 8.92922783 -1.31731296 10.93511772 9.2066021 -1.020027041 10.43459415 9.16042709
-		 -1.85530698 9.99622154 8.88803005 -1.83811998 9.5898304 8.77051258 -0.67175001 10.069396973 9.3024807
-		 -1.71210802 10.66263962 9.099791527 -1.77578604 10.60697269 9.075201035 -1.82668197 10.4896946 9.060688972
-		 -1.48622298 10.58685493 9.13713741 -1.33231795 10.33894253 9.17200947 -1.812464 10.20650578 9.036696434
-		 -1.70941496 9.88823891 8.98888969 -1.14159501 10.099497795 9.21549225 0 4.89627123 -1.026875973
-		 -1.16129601 5.66781378 -1.093685985 -1.73749602 7.7865448 -1.092897058 0 9.67264748 -1.15076995
-		 -0.80425 8.991539 -1.15076995 0 9.50710869 1.026046991 -0.80425 8.82600212 1.026046991
-		 0 9.25764656 2.73387003 -0.80425 8.57653904 2.73387003 -1.59594595 6.606462 2.78295493
-		 0 3.62286997 2.83204007 -1.13050497 4.37190819 3.029773951 0 3.92476201 1.026046991
-		 -1.13050497 4.67380095 1.026046991 -1.13050497 6.88214016 1.026046991 0 9.24400902 4.59727287
-		 -1.13050497 8.56290245 4.59727287 -1.77076995 7.15645981 5.32187414 0 3.88102698 4.70268393
-		 -1.30143595 5.057803154 5.50180817 0 9.96948624 7.22027206 -1.45234597 8.54984188 7.60083294
-		 -1.53901303 8.051336288 8.19871426 0 6.29174185 8.40803909 -1.076279998 7.1104188 8.33360863
-		 -1.29168403 7.52735996 6.57752323 -0.550062 8.80716515 6.26356506 0 9.43857956 6.22723913
-		 0 5.25996017 6.4648838 -1.26040804 5.95434999 6.65949678 0 5.17311811 -4.64593601
-		 0 7.11646414 -5.7741518 -1.16129601 5.51211691 -4.39226389 -1.73749602 7.43341208 -4.81940317
-		 0 8.72740173 -4.9732008 -1.13050497 8.046294212 -5.035433769 -1.73749602 7.89155912 -3.0067820549
-		 -0.73210502 5.58846283 -2.888237 0 5.24413586 -2.89068007 0 9.54519081 -3.12891698
-		 -1.13050497 8.86408424 -3.12891698 -2.21597195 5.64492321 3.41049194 -2.21597195 3.95527697 3.45957708
-		 -2.079708099 4.64117193 4.65167999 -2.046425104 6.19492102 4.61081314 -0.69019902 0.79371202 3.83614206
-		 -0.69019902 0.80346298 4.57394981 -1.83269203 0.80346298 4.57394981 -1.83269203 0.79371202 3.83614206
-		 -2.01154995 3.037116051 4.17664719 -0.77192497 3.037116051 4.17664719 -0.77192497 2.90930009 3.51576591
-		 -2.01154995 2.95126009 3.732723 -1.80179596 1.53519106 3.75371504 -1.80179596 1.65778399 4.21123314
-		 -0.69019997 1.65778399 4.21123314 -0.69019997 1.53519106 3.75371504 -0.83923298 0.31409299 3.91524792
-		 -0.83923298 0.011968 4.75734282 -1.67313099 0.011968 4.75734282 -1.67313099 0.31409299 3.91524792
-		 -0.87568301 0.49558699 5.28170776 -1.68737197 0.49558699 5.28170776 -1.67313099 0.011969 5.20155811
-		 -0.83923298 0.011969 5.20155811 -2.1483531 5.51870918 -4.36631203 -2.1483531 6.3006978 -4.49335909
-		 -2.18864489 6.77258921 -3.0037660599 -2.18864489 6.67276621 -1.45614398 -2.18864489 5.27368784 -1.51966798
-		 -2.36742997 5.60038185 -2.88579297 -0.79435003 0.832995 -3.67530799 -1.68519104 0.832995 -3.67530799
-		 -1.68519104 1.023573995 -4.049038887 -0.79434901 1.023573995 -4.049038887 -1.55759501 1.023573995 -4.36850309
-		 -0.92886502 1.023573995 -4.40541315 -1.69959199 2.91876197 -4.30214691 -1.54734802 2.91876101 -3.60469794
-		 -0.952169 2.91876101 -3.60469794 -0.83358598 2.91876197 -4.30214691 -0.952169 2.91876197 -5.014656067
-		 -1.50705695 2.91876197 -4.9743638 -2.21220493 4.1840229 -3.14479899 -2.033418894 4.18402195 -2.017627001
-		 -1.21980405 4.18402195 -2.017627001 -0.790613 4.1840229 -3.14479899 -0.79200298 4.1840229 -4.045462132
-		 -1.99312794 4.1840229 -4.0051698685 -1.57814097 1.78960299 -4.3303299 -1.50585306 1.78960097 -3.87400508
-		 -0.98901302 1.78960097 -3.87400508 -0.88603801 1.78960299 -4.3303299 -0.98901302 1.78960299 -4.57072401
-		 -1.47086501 1.78960299 -4.53573513 -0.79434901 0.076072 -3.066265106 -1.68519199 0.076072 -3.066265106
-		 -1.68519199 0.076073997 -3.69996905 -0.79434901 0.076073997 -3.69996905 -1.58968794 0.46348399 -4.30065584
-		 -0.86820102 0.46348399 -4.3409481 -0.794348 0.587008 -2.7616179 -1.68519199 0.587008 -2.7616179
-		 -1.68519199 0.062990002 -2.794559 -0.79434901 0.062990002 -2.794559 0 9.72699547 9.57298279
-		 -1.57529402 8.93277454 9.51801205 -1.53901196 7.97656584 9.30485153 -0.58285701 6.65794992 9.073167801
-		 0 6.28583193 9.17234707 0 7.49071407 10.54259109 -0.37858501 7.29606199 10.36424828
-		 -0.58623302 6.75666094 10.38325024 -0.61282998 6.26804781 10.17477608 0 6.040743828 10.069484711
-		 -0.34259301 6.28158283 11.53859138 -0.35747001 6.18375301 11.44205475 0 6.1485672 11.36547089
-		 -0.35401601 6.030336857 11.18863106 0 5.8884182 11.067817688 -1.029364944 7.86610222 9.87192631
-		 0 9.074419975 10.17716026 0 6.27217722 9.29249382 -0.760158 6.61977291 9.23041725
-		 -1.039978027 7.76110411 9.82788658 -0.51240999 7.52979803 10.37598419;
-	setAttr ".vt[166:331]" 0 7.86874008 10.38023758 0 6.20155191 9.49341202 -0.67417997 6.44123697 9.43299294
-		 -0.78858799 7.5367732 10.1555233 -0.95921099 7.76530123 9.26332188 -0.99007201 8.17069721 9.48924828
-		 -0.363974 7.55694103 9.62688255 -0.373613 7.86899614 10.088830948 -0.53255999 7.76906776 9.38585854
-		 -0.54453301 7.92997885 9.47350502 -0.30164701 7.69252777 9.52689743 -0.30538601 7.83466101 9.70610428
-		 -0.95289898 7.82381582 9.56093025 -0.49518999 7.585186 10.028345108 -0.65075499 7.68681002 9.83733654
-		 -1.10367405 7.8490181 9.56070328 -0.94429803 7.87666416 9.53038979 -0.46919799 7.64557505 10.039463043
-		 -0.59232801 7.67523718 9.79445839 -1.074241996 7.84232712 9.50011635 -1.0047489405 7.86983919 9.58290482
-		 -0.489108 7.55370808 10.061572075 -0.65548599 7.66711187 9.85560131 -1.14210105 7.83629608 9.55838585
-		 -0.94319397 7.84756279 9.53770065 -0.47507 7.6155529 10.031270981 -0.614564 7.68069887 9.81077766
-		 -1.08544302 7.84563398 9.52317333 0 7.0071902275 11.047625542 0 5.94443512 10.41377258
-		 -0.54009098 6.13470507 10.70493126 -0.53067702 6.4547801 10.88523197 -0.436959 6.82326317 11.079006195
-		 -0.23330601 6.54692411 11.50770473 -0.23330501 6.197299 11.52996826 -0.28306901 5.9221611 11.060914993
-		 -0.31088001 6.0099492073 10.4614296 -0.36482999 6.072021008 10.023739815 -0.334566 6.21904421 9.47237587
-		 -0.302715 6.27828598 9.31226254 -0.38774401 6.28865004 9.17158127 -0.46586201 6.65910292 8.37582207
-		 -0.40777799 5.56052399 6.44759178 -0.48933399 4.20524502 4.70268393 -0.48933399 3.947088 2.83204007
-		 -0.48933399 4.248981 1.026046991 -0.50266099 5.23022985 -1.055794954 -0.316888 5.39317703 -2.88962197
-		 -0.50266099 5.31985283 -4.652143 -0.51586503 7.55757809 -5.51422405 -0.48933399 8.43258667 -4.9732008
-		 -0.48933399 9.2503767 -3.12891698 -0.34811601 9.37783241 -1.15076995 -0.34811601 9.21229362 1.026046991
-		 -0.34811601 8.96283054 2.73387003 -0.48933399 8.94919491 4.59727287 -0.40777799 9.16527462 6.24296284
-		 -0.86189097 9.68292618 7.34035397 -1.050899029 9.95817089 7.61779881 -1.573452 10.38639545 7.97636986
-		 -1.86019802 10.7365818 8.37706757 -1.81921399 10.98134327 8.91908264 -1.94904995 11.25405407 9.52370262
-		 -1.86709499 11.097019196 9.32695675 -1.78520298 10.970294 9.16483021 -1.740116 10.63854599 9.089149475
-		 -1.72079003 10.5447998 9.10404682 -1.68491602 10.28161812 9.11343956 -1.57391596 10.0080547333 9.11740875
-		 -0.98754501 9.77487183 9.072219849 -0.857651 9.73684406 9.19918728 -0.77307498 9.61450863 9.28907394
-		 -0.68185902 9.46388054 9.54544544 -0.91082603 8.55162907 10.38285732 -0.30685201 7.8155489 10.37125778
-		 -0.297268 7.40645981 10.51711082 -0.237884 6.93457985 11.017497063 0 6.57464123 11.59861946
-		 -0.148582 6.54970598 11.58485317 -0.148582 6.42458916 11.51577568 0 6.56252098 11.58336926
-		 -0.142427 6.54545021 11.57394409 -0.148582 6.45047379 11.46889114 -0.23330601 6.56756878 11.45902443
-		 0 6.73726892 11.37134647 0 5.82644701 10.845047 -0.28306901 5.88551712 10.89559364
-		 -0.427937 6.076766968 11.021389008 -0.50160998 6.22907591 11.22267723 -0.352707 6.38112211 11.47621155
-		 0 6.50418615 11.56244087 -0.156645 6.48763084 11.54989147 -0.153946 6.40693998 11.4916153
-		 0 6.40741301 11.49254894 0 6.61545086 11.73227501 -0.22517399 6.59513617 11.59091854
-		 -0.171904 6.51961708 11.64183807 0 6.55963898 11.68631363 -0.25763801 6.23811293 11.54812908
-		 -0.192237 6.38822079 11.59421062 0 6.25553608 11.6033802 0 6.37881088 11.62937737
-		 -0.1478 6.48920822 11.60821915 -0.11667 6.50576401 11.62076759 -0.146071 6.43888712 11.5982399
-		 -0.114597 6.4227252 11.60257721 -0.222032 6.64273691 11.4809761 0 6.70838404 11.4484024
-		 0 6.053944111 11.19873047 -0.28306901 6.057794094 11.14022636 -0.35401601 6.074649811 11.10409737
-		 -0.427937 6.08190918 11.040384293 -0.488776 6.20107508 10.69911575 -0.601686 6.35348892 10.20246887
-		 0 6.030336857 11.18863106 0 6.076766968 11.021389008 0 6.2268548 10.74386024 0 6.33299112 10.014806747
-		 0 6.44123697 9.50967407 0 6.074649811 11.10409737 0 6.08190918 11.040384293 0 6.29346895 10.73731422
-		 0 6.35348892 10.20246887 0 7.33837223 -5.66381979 0 7.5863862 -5.54050922 -0.214902 7.94746208 -5.43222713
-		 0 6.3450551 -6.69409084 -1.22633696 6.89194393 -6.69408703 -1.16326702 8.67593098 -6.69407892
-		 0 9.19805241 -6.69407892 0 5.53127098 -8.72919559 -1.37786102 6.10817719 -8.72919178
-		 -1.30701101 8.15009689 -8.7291832 0 8.73671913 -8.7291832 0 5.53129196 -10.89462376
-		 -1.37787902 6.10819721 -10.89461994 -1.30704296 8.15010071 -10.89461136 0 8.73671913 -10.89461136
-		 0 6.17463207 -12.5487709 -1.15462005 6.80802584 -12.548769 -1.095273972 8.78402805 -12.54876232
-		 0 9.3685379 -12.54876232 0 7.26653099 -13.58999443 -0.36517 7.71395111 -13.58999252
-		 -0.34640101 8.091798782 -13.58999062 0 8.27665997 -13.58999062 -1.32774699 7.52581692 -0.010698
-		 -1.065492988 5.51258612 -0.011058 -0.46117899 5.11164379 0.0061880001 0 4.8056488 0.01935
-		 0 9.63105583 -0.037039001 -0.323764 9.35684299 -0.037039001 -0.74802297 8.99754524 -0.037039001
-		 -1.27610803 2.91876197 -5.25914478 -1.493209 4.1840229 -4.28994989 -1.73753202 5.51596498 -4.64512396
-		 -1.97735095 6.77214289 -4.78552294 -2.00087308884 7.23831415 -3.0050210953 -2.00087308884 7.13633108 -1.095275998
-		 -1.76105404 5.43772697 -1.132689 -1.69478595 4.18402195 -2.017627001 -1.29963005 2.91876101 -3.60469794
-		 -1.29074001 1.78960097 -3.87400508 -1.31745994 1.023571968 -3.67530799 -1.29142404 0.77758598 -2.54594994
-		 -1.31292105 0.062990002 -2.57889104;
-	setAttr ".vt[332:497]" -1.31292105 0.076072 -3.066265106 -1.31292105 0.17667399 -3.69996905
-		 -1.28939903 0.46348399 -4.58543682 -1.29591203 1.023573995 -4.6293788 -1.27031398 1.78960299 -4.78303194
-		 -1.23926902 0.79371202 3.63840795 -1.22441995 1.48401296 3.56271791 -1.36767495 2.87139392 3.31976795
-		 -1.53702295 4.17167997 2.99433088 -1.77877903 6.1443572 2.94524598 -1.91711295 6.69435501 4.9383111
-		 -1.848122 4.85757399 5.11913013 -1.36767495 3.072273016 4.35843086 -1.22441995 1.70525098 4.3883791
-		 -1.23926902 0.80346298 4.75734377 -1.26435602 0.621041 5.46109486 -1.239995 0.011969 5.38094378
-		 -1.239995 0.011968 4.75734282 -1.239995 0.31409299 3.71751404 -1.64842999 2.75656009 -4.31691599
-		 -1.51981401 2.7565589 -3.70900011 -1.29596806 2.7565589 -3.70900011 -0.98199099 2.7565589 -3.70900011
-		 -0.87483603 2.75656009 -4.31691599 -0.98199099 2.75656009 -4.90420723 -1.27471304 2.75656009 -5.1251359
-		 -1.48340595 2.75656009 -4.86779881 -1.67770696 3.014234066 -4.23091602 -1.54403996 3.014233112 -3.5984149
-		 -1.32342398 3.014233112 -3.5984149 -1.013980031 3.014233112 -3.5984149 -0.89090699 3.014234066 -4.23091602
-		 -0.98600602 3.014233112 -4.86067104 -1.29139805 3.014233112 -5.072542191 -1.50912297 3.014233112 -4.82575512
-		 -1.58526397 1.66530097 -4.28471899 -1.52336502 1.66529906 -3.8027029 -1.295609 1.66529906 -3.8027029
-		 -0.976147 1.66529906 -3.8027029 -0.870893 1.66530097 -4.28471899 -0.976147 1.66530097 -4.5465951
-		 -1.27473104 1.66530001 -4.76360512 -1.487602 1.66530097 -4.51083183 -1.31152594 0.97127801 -3.31134105
-		 -0.79435003 0.78070003 -3.55310988 -0.79434901 0.085258998 -3.024732113 -1.311324 0.085258998 -2.98974395
-		 -1.68519104 0.085258998 -3.024732113 -1.68519104 0.78070003 -3.34632897 -1.75137603 1.19285703 4.27522182
-		 -1.24242496 1.23911405 4.4282918 -0.77151501 1.19285703 4.27522182 -0.77151501 1.047742009 3.77201509
-		 -1.24242496 0.997868 3.60697699 -1.75137603 1.047742009 3.77201509 -1.76412106 1.34098804 3.74633408
-		 -1.76412106 1.51977801 4.20861197 -1.23627806 1.58130395 4.36769676 -0.74788702 1.51977801 4.20861197
-		 -0.74788702 1.34098804 3.74633408 -1.23627806 1.27465105 3.57481098 -2.15536594 3.77389598 3.4244771
-		 -2.15536594 4.00092506409 4.37294292 -1.640692 4.18458509 4.55604696 -1.16448498 4.34228802 4.37294292
-		 -1.16448498 4.10767794 3.033126116 -1.640692 3.93677497 2.968678 -1.58587205 0.65005398 -4.23928499
-		 -1.68519199 0.188721 -3.74146891 -1.68519199 0.166062 -3.13867402 -1.68519104 0.16794001 -3.062966108
-		 -1.68519199 0.12529001 -2.79064298 -1.31036496 0.147948 -2.57497501 -0.79434901 0.12529001 -2.79064298
-		 -0.79434901 0.16794001 -3.087549925 -0.79434901 0.166062 -3.13867402 -0.79434901 0.188721 -3.74146891
-		 -0.87541401 0.65005398 -4.2791748 -1.29017401 0.65005398 -4.52122402 -1.23984301 0.47759899 3.78199291
-		 -0.80806202 0.47759899 3.97972703 -0.80806202 0.177515 4.71898508 -0.84685701 0.113121 5.2183218
-		 -1.24509001 0.13936 5.39770794 -1.67611003 0.113121 5.2183218 -1.70650494 0.177515 4.71898508
-		 -1.70650399 0.47759899 3.97972703 -0.43268499 7.40633917 10.37534142 -0.42599401 7.62720585 10.39080811
-		 -1.058856964 7.96855307 9.89645576 -1.12018704 7.72725391 9.72968864 -0.77199697 7.46525097 10.08862114
-		 -0.38434899 7.51125193 10.43570423 -0.382128 7.28685904 10.36457062 -0.75044501 7.34395123 10.018888474
-		 -1.14965498 7.6407032 9.58962631 -1.11104596 8.19016171 9.91334343 -0.71872002 6.96843481 9.7751646
-		 -0.72902501 6.48526621 9.63929176 -0.59543997 6.42616606 10.23561478 -0.52800202 6.24290705 10.7351656
-		 -0.45785201 6.11608601 11.098044395 -0.35503399 6.10678816 11.20364666 -0.271424 6.090437889 11.23142433
-		 0 6.090967178 11.26397038 -0.54572099 6.35719299 9.44788837 -0.53486699 6.20399618 10.12680054
-		 -0.448636 6.1060009 10.63462353 -0.37502301 6.0069122314 10.97544193 -0.31798899 5.97540522 11.12377644
-		 0 5.97755003 11.14369392 -0.47215101 8.3114872 10.41511154 0 8.35105801 10.41025066
-		 -1.49516296 3.36888504 3.15582299 -2.07870698 3.33539796 3.58878398 -2.07870698 3.4871769 4.26830912
-		 -1.49516296 3.5916779 4.45070982 -0.955235 3.64657998 4.26830912 -0.955235 3.46889496 3.29039192
-		 -1.20775104 4.48969889 -1.82728505 -1.70843697 4.44229889 -1.83532 -2.065397024 4.40850592 -1.91504204
-		 -2.24418306 4.4758091 -3.091440916 -2.025105953 4.45898294 -4.079568863 -1.54354203 4.45841789 -4.36312008
-		 -0.86808097 4.45762491 -4.11690617 -0.77855998 4.47335291 -3.091943979 -2.121099 3.98463011 -3.32993007
-		 -1.91062796 3.98463011 -4.14504099 -1.45880997 3.98463011 -4.42334509 -0.82507098 3.98463011 -4.18441486
-		 -0.80770802 3.98463011 -3.32993007 -1.18472099 3.98462892 -2.28707504 -1.63148606 3.98462892 -2.28707504
-		 -1.95000398 3.98462892 -2.28707504 0 5.5312748 -9.13167953 -1.377864 6.108181 -9.13167572
-		 -1.30701697 8.15009689 -9.13166618 0 8.73671913 -9.13166618 0 5.60911798 -8.5345192
-		 -1.36336601 6.1831522 -8.53451538 -1.29326105 8.20039654 -8.53450775 0 8.78084946 -8.53450775
-		 0 6.21987009 -7.0071530342 -1.24964595 6.77137709 -7.0071501732 -1.18537903 8.59504128 -7.007142067
-		 0 9.12708473 -7.007142067 0 6.51311302 -6.53791189 -1.089403033 7.034845829 -6.52324915
-		 -1.033375025 8.60265064 -6.49272823 0 9.07071209 -6.49272823 0 5.53129005 -10.66348076
-		 0 8.73671913 -10.66346836 -1.30703998 8.15009975 -10.66346836 -1.377877 6.10819483 -10.66347694
-		 0 5.64828491 -11.19543266 -1.33727896 6.23546219 -11.19543076 -1.26853204 8.26538181 -11.19542313
-		 0 8.85161686 -11.19542313 0 7.29489899 -5.81139183 -0.45240599 7.69960594 -5.72853613
-		 -0.429138 8.26176357 -5.5560751 0 8.47834396 -5.5560751 0 7.50555277 -5.61562681
-		 -0.28076401 7.87872791 -5.51439714 -0.47264099 8.38521576 -5.13483906;
-	setAttr ".vt[498:663]" 0 8.65833473 -5.13483906 0 7.46729088 -5.65118504 0 8.62564278 -5.21134901
-		 -0.46473899 8.36279202 -5.21134901 -0.31194001 7.84619379 -5.55329084 0 7.20994091 -5.89034414
-		 0 8.54271698 -5.65786219 -0.49480101 8.2988081 -5.65786219 -0.52162898 7.62736702 -5.81489801
-		 0 7.35405588 -5.75641584 0 8.52888966 -5.43777895 -0.44135499 8.29643154 -5.43777895
-		 -0.40420401 7.74990892 -5.66839886 -0.71931702 0.75513202 4.68505478 -1.24320698 0.77482599 4.86782122
-		 -1.80988002 0.75513202 4.68505478 -1.70173299 0.16740599 4.79737186 -1.67313099 0.011968 4.82707596
-		 -1.239995 0.011968 4.85523701 -0.83923298 0.011968 4.82707596 -0.814152 0.16740599 4.79737186
-		 -1.239995 0.011968 4.93854713 -1.67313099 0.011968 4.8864212 -1.69767296 0.158803 4.86407995
-		 -1.790465 0.71400201 4.77960682 -1.24655795 0.75045502 4.96183777 -0.74409598 0.71400201 4.77960682
-		 -0.81933498 0.158803 4.86407995 -0.83923298 0.011968 4.8864212 -0.79435003 0.801952 -3.60277104
-		 -1.31393695 0.99252999 -3.45925498 -1.68519104 0.801952 -3.48002505 -1.68519199 0.16717701 -3.093734026
-		 -1.68519199 0.081524998 -3.041610003 -1.31197298 0.081524998 -3.020840883 -0.79434901 0.081524998 -3.041610003
-		 -0.79434901 0.16717701 -3.10832596 1.44977701 11.063440323 8.43925953 1.86019802 10.7365818 8.37706757
-		 1.81921506 10.98134327 8.91908264 1.57813704 11.28541946 8.9044838 1.94905102 11.25405407 9.52370262
-		 1.70320702 11.56814861 9.64068508 1.94560599 10.22402668 8.39983177 2.12931609 10.4157877 9.26895905
-		 2.051686049 11.0069732666 9.37042046 1.994874 10.74739361 8.93821239 1.33939505 11.28941059 9.57693481
-		 0.126812 9.94205761 9.42792225 0.198938 10.19004631 7.60745001 0.83582503 10.89558029 8.067212105
-		 0.83467299 10.74701881 9.5375309 1.050899982 9.95817089 7.61779881 1.57345295 10.38639545 7.97636986
-		 1.77026701 8.94271564 7.80978394 1.65852904 9.01244545 9.1071434 1.99223399 9.6632452 9.12269306
-		 1.87562597 9.16673088 8.030472755 1.71210897 10.66263962 9.099791527 1.74011695 10.63854599 9.089149475
-		 1.72079098 10.5447998 9.10404682 1.48622406 10.58685493 9.13713741 1.33231902 10.33894253 9.17200947
-		 1.68491697 10.28161812 9.11343956 1.57391703 10.0080547333 9.11740875 1.14159596 10.099497795 9.21549225
-		 1.86709595 11.097019196 9.32695675 1.622455 11.27780247 9.42093086 2.0065279007 10.36322784 9.126894
-		 1.968153 10.86014366 9.20382118 1.37224805 11.0027494431 9.36941242 1.52658999 9.22661877 9.03523159
-		 1.89132798 9.72657394 9.02238369 0.77307498 9.61450863 9.28907394 0.35958901 9.90135765 9.32431602
-		 0.85765201 9.73684406 9.19918728 0.97662699 10.6558876 9.33927345 1.78520298 10.970294 9.16483021
-		 1.59607196 11.10344219 9.28729439 1.92078805 10.37191105 8.92922783 1.85235 10.55167961 9.004365921
-		 1.31731403 10.93511772 9.2066021 1.83812106 9.5898304 8.77051258 1.85530806 9.99622154 8.88803005
-		 0.67175102 10.069396973 9.3024807 0.98754603 9.77487183 9.072219849 1.020027995 10.43459415 9.16042709
-		 1.82668304 10.4896946 9.060688972 1.775787 10.60697269 9.075201035 1.70941603 9.88823891 8.98888969
-		 1.812464 10.20650578 9.036696434 0.502662 5.31985283 -4.652143 0.51586598 7.55757809 -5.51422405
-		 0.36517099 7.71395111 -13.58999252 0.34640199 8.091798782 -13.58999062 0.32376501 9.35684299 -0.037039001
-		 0.34811699 9.21229362 1.026046991 0.34811699 8.96283054 2.73387003 0.156646 6.48763084 11.54989147
-		 0.153947 6.40693998 11.4916153 0.23330601 6.197299 11.52996826 0.27142501 6.090437889 11.23142433
-		 0.489335 3.947088 2.83204007 0.489335 4.248981 1.026046991 0.46118101 5.11164379 0.0061880001
-		 1.13050604 4.67380095 1.026046991 1.13050604 4.37190819 3.029773951 1.59594798 6.606462 2.78295493
-		 1.13050604 6.88214016 1.026046991 1.065492988 5.51258612 -0.011058 1.32774794 7.52581692 -0.010698
-		 0.80425102 8.57653904 2.73387003 0.80425102 8.82600212 1.026046991 0.74802399 8.99754524 -0.037039001
-		 0.489335 8.94919491 4.59727287 1.77077103 7.15645981 5.32187414 1.13050604 8.56290245 4.59727287
-		 2.2159729 5.64492321 3.41049194 2.2159729 3.95527697 3.45957708 2.079709053 4.64117193 4.65167999
-		 2.046426058 6.19492102 4.61081314 0.489335 4.20524502 4.70268393 0.40777901 9.16527462 6.24296284
-		 1.29168499 7.52735996 6.57752323 0.55006301 8.80716515 6.26356506 1.30143702 5.057803154 5.50180817
-		 1.260409 5.95434999 6.65949678 0.40777901 5.56052399 6.44759178 1.53901398 8.051336288 8.19871426
-		 1.44039094 8.54984188 7.60083294 0.86189198 9.68292618 7.34035397 0.46586299 6.65910292 8.37582207
-		 1.076280951 7.1104188 8.33360863 0.502662 5.23022985 -1.055794954 0.31688899 5.39317703 -2.88962197
-		 1.73749697 7.7865448 -1.092897058 0.80425102 8.991539 -1.15076995 1.13050604 8.86408424 -3.12891698
-		 1.73749697 7.89155912 -3.0067820549 0.34811699 9.37783241 -1.15076995 0.489335 9.2503767 -3.12891698
-		 0.489335 8.43258667 -4.9732008 1.13050604 8.046294212 -5.035433769 1.73749697 7.43341208 -4.81940317
-		 1.53702402 4.17167997 2.99433088 1.77877998 6.1443572 2.94524598 0.83923399 0.31409299 3.91524792
-		 0.83923399 0.011968 4.75734282 1.23999596 0.011968 4.75734282 1.23999596 0.31409299 3.71751404
-		 1.91711402 6.69435501 4.9383111 1.84812295 4.85757399 5.11913013 1.16448605 4.34228802 4.37294292
-		 1.16448605 4.10767794 3.033126116 1.64069295 4.18458509 4.55604696 2.1553669 3.77389598 3.4244771
-		 2.1553669 4.00092506409 4.37294292 1.640692 3.93677497 2.968678 0.77192599 3.037116051 4.17664719
-		 1.36767602 3.072273016 4.35843086 1.22442102 1.70525098 4.3883791 0.69020098 1.65778399 4.21123314
-		 0.77192599 2.90930009 3.51576591 0.69020098 1.53519106 3.75371504 1.22442102 1.48401296 3.56271791
-		 1.36767602 2.87139392 3.31976795;
-	setAttr ".vt[664:829]" 2.011550903 3.037116051 4.17664719 2.011550903 2.95126009 3.732723
-		 1.80179703 1.53519106 3.75371504 1.80179703 1.65778399 4.21123314 1.76412106 1.34098804 3.74633408
-		 1.76412106 1.51977801 4.20861197 1.23627901 1.58130395 4.36769676 0.74788803 1.51977801 4.20861197
-		 0.74788803 1.34098804 3.74633408 1.23627901 1.27465105 3.57481098 0.80806297 0.47759899 3.97972703
-		 0.80806297 0.177515 4.71898508 0.84685802 0.113121 5.2183218 1.24509096 0.13936 5.39770794
-		 1.23999596 0.011969 5.38094378 0.83923399 0.011969 5.20155811 1.70650601 0.177515 4.71898508
-		 1.70650494 0.47759899 3.97972703 1.67313194 0.31409299 3.91524792 1.67313194 0.011968 4.75734282
-		 1.23984396 0.47759899 3.78199291 0.71931797 0.75513202 4.68505478 1.24320805 0.77482599 4.86782122
-		 1.24655998 0.75045502 4.96183777 0.74409699 0.71400201 4.77960682 1.70173395 0.16740599 4.79737186
-		 1.67313194 0.011968 4.82707596 1.67313194 0.011968 4.8864212 1.69767404 0.158803 4.86407995
-		 1.23999596 0.011968 4.85523701 0.83923399 0.011968 4.82707596 0.83923399 0.011968 4.8864212
-		 1.23999596 0.011968 4.93854713 0.81415302 0.16740599 4.79737186 0.819336 0.158803 4.86407995
-		 1.16129696 5.51211691 -4.39226389 1.73753297 5.51596498 -4.64512396 1.97735202 6.77214289 -4.78552294
-		 2.00087404251 7.23831415 -3.0050210953 2.00087404251 7.13633108 -1.095275998 1.76105499 5.43772697 -1.132689
-		 1.16129696 5.66781378 -1.093685985 0.79435003 0.076072 -3.066265106 1.312922 0.076072 -3.066265106
-		 1.312922 0.17667399 -3.69996905 0.79435003 0.076073997 -3.69996905 1.28939998 0.46348399 -4.58543682
-		 0.86820197 0.46348399 -4.3409481 2.36743093 5.60038185 -2.88579297 2.18864608 5.27368784 -1.51966798
-		 2.18864608 6.67276621 -1.45614398 2.18864608 6.77258921 -3.0037660599 2.14835405 5.51870918 -4.36631203
-		 2.14835405 6.3006978 -4.49335909 1.20775199 4.48969889 -1.82728505 1.70843804 4.44229889 -1.83532
-		 1.69478703 4.18402195 -2.017627001 1.219805 4.18402195 -2.017627001 2.065397978 4.40850592 -1.91504204
-		 2.24418402 4.4758091 -3.091440916 2.21220589 4.1840229 -3.14479899 2.033420086 4.18402195 -2.017627001
-		 0.778561 4.47335291 -3.091943979 0.79061401 4.1840229 -3.14479899 2.025106907 4.45898294 -4.079568863
-		 1.99312901 4.1840229 -4.0051698685 1.54354298 4.45841789 -4.36312008 0.86808199 4.45762491 -4.11690617
-		 0.79200399 4.1840229 -4.045462132 1.49320996 4.1840229 -4.28994989 1.54734898 2.91876101 -3.60469794
-		 1.69959199 2.91876197 -4.30214691 1.64843094 2.75656009 -4.31691599 1.51981497 2.7565589 -3.70900011
-		 0.95217001 2.91876101 -3.60469794 1.29963005 2.91876101 -3.60469794 1.29596901 2.7565589 -3.70900011
-		 0.98199201 2.7565589 -3.70900011 0.83358699 2.91876197 -4.30214691 0.87483698 2.75656009 -4.31691599
-		 0.95217001 2.91876197 -5.014656067 0.98199201 2.75656009 -4.90420723 1.27471399 2.75656009 -5.1251359
-		 1.27610898 2.91876197 -5.25914478 1.50705802 2.91876197 -4.9743638 1.48340702 2.75656009 -4.86779881
-		 1.95000505 3.98462892 -2.28707504 2.121099 3.98463011 -3.32993007 1.67770803 3.014234066 -4.23091602
-		 1.54404104 3.014233112 -3.5984149 1.18472195 3.98462892 -2.28707504 1.63148701 3.98462892 -2.28707504
-		 1.32342505 3.014233112 -3.5984149 1.013980985 3.014233112 -3.5984149 0.80770898 3.98463011 -3.32993007
-		 0.890908 3.014234066 -4.23091602 0.82507199 3.98463011 -4.18441486 0.98600698 3.014233112 -4.86067104
-		 1.45881104 3.98463011 -4.42334509 1.291399 3.014233112 -5.072542191 1.91062903 3.98463011 -4.14504099
-		 1.50912404 3.014233112 -4.82575512 1.50585401 1.78960097 -3.87400508 1.57814205 1.78960299 -4.3303299
-		 1.58526504 1.66530097 -4.28471899 1.52336597 1.66529906 -3.8027029 0.98901403 1.78960097 -3.87400508
-		 1.29074097 1.78960097 -3.87400508 1.295609 1.66529906 -3.8027029 0.97614801 1.66529906 -3.8027029
-		 0.88603902 1.78960299 -4.3303299 0.87089401 1.66530097 -4.28471899 0.98901403 1.78960299 -4.57072401
-		 0.97614801 1.66530097 -4.5465951 1.27031505 1.78960299 -4.78303194 1.27473199 1.66530001 -4.76360512
-		 1.47086596 1.78960299 -4.53573513 1.48760295 1.66530097 -4.51083183 0.79434901 0.587008 -2.7616179
-		 1.29142499 0.77758598 -2.54594994 1.31036603 0.147948 -2.57497501 0.79435003 0.12529001 -2.79064298
-		 1.68519199 0.832995 -3.67530799 1.68519199 1.023573995 -4.049038887 1.68519294 0.188721 -3.74146891
-		 1.68519294 0.166062 -3.13867402 0.79435003 1.023573995 -4.049038887 0.79435098 0.832995 -3.67530799
-		 0.79435003 0.166062 -3.13867402 0.79435003 0.188721 -3.74146891 1.55759597 1.023573995 -4.36850309
-		 1.58587301 0.65005398 -4.23928499 1.29591298 1.023573995 -4.6293788 0.92886603 1.023573995 -4.40541315
-		 0.87541503 0.65005398 -4.2791748 1.29017401 0.65005398 -4.52122402 0.79435098 0.801952 -3.60277104
-		 1.31393802 0.99252999 -3.45925498 1.31152701 0.97127801 -3.31134105 0.79435098 0.78070003 -3.55310988
-		 1.68519199 0.801952 -3.48002505 1.68519294 0.16717701 -3.093734026 1.68519199 0.16794001 -3.062966108
-		 1.68519199 0.78070003 -3.34632897 1.31197405 0.081524998 -3.020840883 0.79435003 0.081524998 -3.041610003
-		 0.79435003 0.085258998 -3.024732113 1.31132495 0.085258998 -2.98974395 0.79435003 0.16717701 -3.10832596
-		 0.79435003 0.16794001 -3.087549925 1.53901398 7.97656584 9.30485153 1.57529497 8.93277454 9.51801205
-		 0.58285803 6.65794992 9.073167801 0.38774499 6.28865004 9.17158127 0.68186003 9.46388054 9.54544544
-		 0.91082698 8.55162907 10.38285732 1.058858037 7.96855307 9.89645576 1.120188 7.72725391 9.72968864
-		 1.039978981 7.76110411 9.82788658 1.029366016 7.86610222 9.87192631 0.30271599 6.27828598 9.31226254
-		 0.29726899 7.40645981 10.51711082 0.237885 6.93457985 11.017497063 0.37858599 7.29606199 10.36424828
-		 0.38212901 7.28685904 10.36457062 0.58623397 6.75666094 10.38325024;
-	setAttr ".vt[830:995]" 0.53067797 6.4547801 10.88523197 0.43696001 6.82326317 11.079006195
-		 0.59544098 6.42616606 10.23561478 0.52800298 6.24290705 10.7351656 0.364831 6.072021008 10.023739815
-		 0.31088099 6.0099492073 10.4614296 0.47215101 8.3114872 10.41511154 0.33456701 6.21904421 9.47237587
-		 0.77199799 7.46525097 10.08862114 0.788589 7.5367732 10.1555233 0.54453403 7.92997885 9.47350502
-		 0.532561 7.76906776 9.38585854 0.30164799 7.69252777 9.52689743 0.30538699 7.83466101 9.70610428
-		 0.30685201 7.8155489 10.37125778 0.432686 7.40633917 10.37534142 0.512411 7.52979803 10.37598419
-		 1.142102 7.83629608 9.55838585 1.0047500134 7.86983919 9.58290482 0.655487 7.66711187 9.85560131
-		 0.48910901 7.55370808 10.061572075 0.99007303 8.17069721 9.48924828 0.95921201 7.76530123 9.26332188
-		 0.36397499 7.55694103 9.62688255 0.37361401 7.86899614 10.088830948 0.49518999 7.585186 10.028345108
-		 0.95289999 7.82381582 9.56093025 0.94319499 7.84756279 9.53770065 0.47507101 7.6155529 10.031270981
-		 0.650756 7.68681002 9.83733654 0.61456501 7.68069887 9.81077766 1.10367501 7.8490181 9.56070328
-		 1.085443974 7.84563398 9.52317333 0.469199 7.64557505 10.039463043 0.94429898 7.87666416 9.53038979
-		 0.59232903 7.67523718 9.79445839 1.074242949 7.84232712 9.50011635 0.28307 5.88551712 10.89559364
-		 0.45785299 6.11608601 11.098044395 0.50161099 6.22907591 11.22267723 0.35270801 6.38112211 11.47621155
-		 0.233307 6.56756878 11.45902443 0.233307 6.54692411 11.50770473 0.342594 6.28158283 11.53859138
-		 0.35747099 6.18375301 11.44205475 0.35503501 6.10678816 11.20364666 0.54009199 6.13470507 10.70493126
-		 0.44863701 6.1060009 10.63462353 0.37502399 6.0069122314 10.97544193 0.42793801 6.076766968 11.021389008
-		 0.612831 6.26804781 10.17477608 0.534868 6.20399618 10.12680054 0.67418098 6.44123697 9.43299294
-		 0.54572201 6.35719299 9.44788837 0.76015902 6.61977291 9.23041725 0.73210597 5.58846283 -2.888237
-		 0.42599499 7.62720585 10.39080811 0.38435 7.51125193 10.43570423 0.22517499 6.59513617 11.59091854
-		 0.171905 6.51961708 11.64183807 0.25763899 6.23811293 11.54812908 0.192238 6.38822079 11.59421062
-		 0.147801 6.48920822 11.60821915 0.116671 6.50576401 11.62076759 0.146072 6.43888712 11.5982399
-		 0.114598 6.4227252 11.60257721 0.14858299 6.54970598 11.58485317 0.142428 6.54545021 11.57394409
-		 0.14858299 6.42458916 11.51577568 0.14858299 6.45047379 11.46889114 0.22203299 6.64273691 11.4809761
-		 0.28307 5.9221611 11.060914993 0.31799001 5.97540522 11.12377644 0.35401699 6.030336857 11.18863106
-		 0.28307 6.057794094 11.14022636 0.35401699 6.074649811 11.10409737 0.42793801 6.08190918 11.040384293
-		 0.48877701 6.20107508 10.69911575 0.60168701 6.35348892 10.20246887 0.214903 7.94746208 -5.43222713
-		 1.089403987 7.034845829 -6.52324915 1.22633803 6.89194393 -6.69408703 1.033375978 8.60265064 -6.49272823
-		 1.16326797 8.67593098 -6.69407892 1.36336696 6.1831522 -8.53451538 1.37786102 6.10817719 -8.72919178
-		 1.293262 8.20039654 -8.53450775 1.30701196 8.15009689 -8.7291832 1.37786496 6.108181 -9.13167572
-		 1.37787795 6.10819483 -10.66347694 1.30701804 8.15009689 -9.13166618 1.30704105 8.15009975 -10.66346836
-		 1.33728004 6.23546219 -11.19543076 1.15462101 6.80802584 -12.548769 1.26853299 8.26538181 -11.19542313
-		 1.095275044 8.78402805 -12.54876232 1.68519199 0.587008 -2.7616179 1.68519294 0.12529001 -2.79064298
-		 1.68519294 0.081524998 -3.041610003 1.68519199 0.085258998 -3.024732113 1.68519294 0.076072 -3.066265106
-		 1.68519294 0.076073997 -3.69996905 1.58968902 0.46348399 -4.30065584 1.79046702 0.71400201 4.77960682
-		 1.80988002 0.75513202 4.68505478 1.67611098 0.113121 5.2183218 1.67313194 0.011969 5.20155811
-		 1.31746101 1.023571968 -3.67530799 0.79435003 0.062990002 -2.794559 1.312922 0.062990002 -2.57889104
-		 1.68519294 0.062990002 -2.794559 1.23926902 0.80346298 4.75734377 1.24242604 1.23911405 4.4282918
-		 1.75137699 1.19285703 4.27522182 1.83269298 0.80346298 4.57394981 0.77151603 1.19285703 4.27522182
-		 0.69019997 0.80346298 4.57394981 0.77151603 1.047742009 3.77201509 0.69019997 0.79371202 3.83614206
-		 1.24242604 0.997868 3.60697699 1.23926902 0.79371202 3.63840795 1.75137699 1.047742009 3.77201509
-		 1.83269298 0.79371202 3.83614206 2.078707933 3.33539796 3.58878398 2.078707933 3.4871769 4.26830912
-		 1.49516404 3.5916779 4.45070982 0.95523602 3.64657998 4.26830912 0.95523602 3.46889496 3.29039192
-		 1.49516404 3.36888504 3.15582299 0.87568402 0.49558699 5.28170776 1.26435697 0.621041 5.46109486
-		 1.68737304 0.49558699 5.28170776 1.11104703 8.19016171 9.91334343 1.14965606 7.6407032 9.58962631
-		 0.71872097 6.96843481 9.7751646 0.72902602 6.48526621 9.63929176 0.75044602 7.34395123 10.018888474
-		 1.24964702 6.77137709 -7.0071501732 1.18537998 8.59504128 -7.007142067 0.452407 7.69960594 -5.72853613
-		 0.52162999 7.62736702 -5.81489801 0.42913899 8.26176357 -5.5560751 0.494802 8.2988081 -5.65786219
-		 1.30704403 8.15010071 -10.89461136 1.37787998 6.10819721 -10.89461994 0.280765 7.87872791 -5.51439714
-		 0.311941 7.84619379 -5.55329084 0.472642 8.38521576 -5.13483906 0.46474001 8.36279202 -5.21134901
-		 0.441356 8.29643154 -5.43777895 0.40420499 7.74990892 -5.66839886 1.14280105 10.97950935 8.25323677
-		 1.71682501 10.56148911 8.17671776 1.91061604 9.69537926 8.21515179 2.060775042 10.039516449 9.19582653
-		 1.948928 10.044900894 9.074638367 1.88804805 10.18406677 8.90862942 1.819574 10.34809971 9.048692703
-		 1.70285404 10.41320896 9.10874367 1.40927196 10.46289825 9.15457344 1.16867101 10.68485641 9.18351364
-		 1.174438 10.829319 9.35434341 1.087033987 11.018214226 9.55723381 -1.081405044 10.96272469 8.21603203
-		 -1.68815005 10.52647018 8.13664818 -1.90361702 9.58965015 8.17821503;
-	setAttr ".vt[996:1052]" -2.047065973 9.96426201 9.18120003 -1.93740702 9.98123646 9.064188004
-		 -1.88149905 10.14649773 8.90450954 -1.818151 10.3197813 9.046293259 -1.69926596 10.38688946 9.10968113
-		 -1.39388001 10.43810654 9.15805912 -1.13894105 10.63480377 9.1788969 -1.13487506 10.79463196 9.35132885
-		 -1.036561012 10.96397495 9.55329323 0.326316 10.33115292 7.69940186 0.26838401 10.10305023 9.44984436
-		 0.482997 10.05226326 9.32730675 0.74140698 10.14243698 9.27407074 1.17973995 10.14738655 9.20679665
-		 1.59611702 10.062767982 9.1166153 1.73002505 9.95189285 8.99845123 1.84155905 9.67110825 8.79401493
-		 1.59953797 9.32660961 9.032662392 1.72527003 9.14260578 9.11025333 1.79133904 8.98751831 7.85392094
-		 1.15541005 10.043815613 7.68951321 -0.32631499 10.33115292 7.69940186 -1.15541005 10.043815613 7.68951321
-		 -1.79133797 8.98751831 7.85392094 -1.72526896 9.14260578 9.11025333 -1.59953701 9.32660961 9.032662392
-		 -1.84155798 9.67110825 8.79401493 -1.73002398 9.95189285 8.99845123 -1.59611595 10.062767982 9.1166153
-		 -1.179739 10.14738655 9.20679665 -0.74140602 10.14243698 9.27407074 -0.48299599 10.05226326 9.32730675
-		 -0.26838401 10.10305023 9.44984436 -1.77866197 9.24673367 9.11274147 -1.80819595 9.023361206 7.88923216
-		 -1.23901796 10.11233139 7.74688387 -0.42821699 10.44403839 7.772964 -0.381641 10.23184299 9.46738052
-		 -0.58172202 10.17298794 9.32970047 -0.79712999 10.20086861 9.25134087 -1.21025503 10.18569756 9.19983768
-		 -1.61387599 10.10653687 9.11598015 -1.74651206 10.0028152466 9.0060997009 -1.84430802 9.73613071 8.81281757
-		 -1.65789497 9.40660286 9.030607224 0.38164201 10.23184299 9.46738052 0.42821801 10.44403839 7.772964
-		 1.23901904 10.11233139 7.74688387 1.80819702 9.023361206 7.88923216 1.77866304 9.24673367 9.11274147
-		 1.65789604 9.40660286 9.030607224 1.84430802 9.73613071 8.81281757 1.74651301 10.0028152466 9.0060997009
-		 1.61387706 10.10653687 9.11598015 1.21025598 10.18569756 9.19983768 0.797131 10.20086861 9.25134087
-		 0.58172297 10.17298794 9.32970047;
-	setAttr -s 2104 ".ed";
-	setAttr ".ed[0:165]"  14 226 0 226 227 0 227 2 0 2 14 0 227 228 0 228 4 0
-		 4 2 0 15 12 0 12 5 0 5 3 0 3 15 0 13 14 0 4 13 0 1028 1017 0 1017 1032 0 1032 1033 0
-		 1033 1028 0 1017 1018 0 1018 1031 0 1031 1032 0 1019 1020 0 1020 1029 0 1029 1030 0
-		 1030 1019 0 1004 993 0 993 14 0 13 1004 0 993 994 0 994 226 0 995 996 0 996 12 0
-		 15 995 0 32 231 0 231 232 0 232 35 0 35 32 0 1036 1037 0 1037 1024 0 1024 1025 0
-		 1025 1036 0 232 1000 0 1000 1001 0 1001 35 0 228 229 0 229 16 0 16 4 0 12 18 0 18 17 0
-		 17 5 0 16 19 0 19 13 0 1040 1029 0 1020 1021 0 1021 1040 0 237 6 0 6 23 0 23 236 0
-		 236 237 0 1027 1028 0 1033 1034 0 1034 1027 0 996 997 0 997 18 0 1003 1004 0 19 1003 0
-		 229 230 0 230 24 0 24 16 0 18 26 0 26 25 0 25 17 0 24 27 0 27 19 0 1039 1040 0 1021 1022 0
-		 1022 1039 0 23 31 0 31 235 0 235 236 0 1026 1027 0 1034 1035 0 1035 1026 0 997 998 0
-		 998 26 0 1002 1003 0 27 1002 0 230 231 0 32 24 0 26 34 0 34 33 0 33 25 0 35 27 0
-		 1038 1039 0 1022 1023 0 1023 1038 0 31 39 0 39 234 0 234 235 0 1025 1026 0 1035 1036 0
-		 998 999 0 999 34 0 1001 1002 0 70 214 0 214 215 0 215 71 0 71 70 0 308 309 0 309 310 0
-		 310 311 0 311 308 0 316 317 0 317 219 0 219 45 0 45 316 0 219 220 0 220 47 0 47 45 0
-		 256 257 0 257 258 0 258 259 0 259 256 0 157 200 0 200 435 0 435 436 0 436 157 0 50 210 0
-		 210 211 0 211 52 0 52 50 0 211 314 0 314 315 0 315 52 0 53 51 0 51 49 0 49 54 0 54 53 0
-		 313 53 0 54 312 0 312 313 0 49 48 0 48 46 0 46 54 0 318 312 0 46 318 0 220 221 0
-		 221 55 0 55 47 0 49 57 0 57 56 0 56 48 0 81 82 0 82 83 0 83 84 0 84 81 0 50 58 0
-		 58 209 0 209 210 0 221 222 0 222 67 0 67 55 0 57 65 0 65 66 0 66 56 0 57 59 0 59 69 0;
-	setAttr ".ed[166:331]" 69 65 0 58 68 0 68 208 0 208 209 0 65 62 0 62 61 0 61 66 0
-		 222 223 0 223 60 0 60 67 0 68 63 0 63 207 0 207 208 0 69 64 0 64 62 0 40 212 0 212 213 0
-		 213 78 0 78 40 0 42 44 0 44 80 0 80 76 0 76 42 0 218 43 0 43 79 0 79 217 0 217 218 0
-		 213 214 0 70 78 0 79 74 0 74 216 0 216 217 0 80 75 0 75 73 0 73 76 0 51 340 0 340 341 0
-		 341 49 0 97 98 0 98 349 0 349 350 0 350 97 0 57 342 0 342 343 0 343 59 0 341 342 0
-		 51 59 0 59 396 0 396 397 0 397 51 0 343 395 0 395 396 0 82 393 0 393 394 0 394 83 0
-		 398 340 0 397 398 0 90 344 0 344 345 0 345 95 0 95 90 0 91 90 0 95 96 0 96 91 0 338 339 0
-		 339 91 0 96 338 0 89 92 0 92 93 0 93 94 0 94 89 0 93 387 0 387 388 0 388 94 0 345 389 0
-		 389 390 0 390 95 0 390 391 0 391 96 0 391 392 0 392 338 0 412 413 0 413 98 0 97 412 0
-		 414 415 0 415 348 0 348 104 0 104 414 0 417 418 0 418 100 0 100 99 0 99 417 0 350 411 0
-		 411 412 0 511 512 0 512 523 0 523 524 0 524 511 0 514 515 0 515 520 0 520 521 0 521 514 0
-		 516 517 0 517 526 0 526 519 0 519 516 0 517 518 0 518 525 0 525 526 0 72 321 0 321 322 0
-		 322 73 0 73 72 0 322 323 0 323 76 0 323 324 0 324 42 0 324 325 0 325 41 0 41 42 0
-		 135 332 0 332 333 0 333 138 0 138 135 0 333 334 0 334 140 0 140 138 0 110 109 0 109 108 0
-		 108 107 0 107 110 0 105 110 0 107 106 0 106 105 0 451 452 0 452 326 0 326 125 0 125 451 0
-		 453 454 0 454 123 0 123 124 0 124 453 0 458 451 0 125 126 0 126 458 0 454 455 0 455 128 0
-		 128 123 0 456 457 0 457 127 0 127 320 0 320 456 0 457 458 0 126 127 0 118 117 0 117 351 0
-		 351 352 0 352 118 0 119 327 0 327 353 0 353 354 0 354 119 0 120 119 0 354 355 0 355 120 0
-		 121 120 0;
-	setAttr ".ed[332:497]" 355 356 0 356 121 0 357 319 0 319 121 0 356 357 0 117 122 0
-		 122 358 0 358 351 0 466 459 0 459 359 0 359 360 0 360 466 0 464 465 0 465 361 0 361 362 0
-		 362 464 0 463 464 0 362 363 0 363 463 0 462 463 0 363 364 0 364 462 0 461 462 0 364 365 0
-		 365 461 0 459 460 0 460 366 0 366 359 0 130 129 0 129 367 0 367 368 0 368 130 0 131 328 0
-		 328 369 0 369 370 0 370 131 0 132 131 0 370 371 0 371 132 0 133 132 0 371 372 0 372 133 0
-		 336 133 0 372 373 0 373 336 0 129 134 0 134 374 0 374 367 0 141 330 0 330 404 0 404 405 0
-		 405 141 0 112 113 0 113 400 0 400 401 0 401 112 0 114 111 0 111 407 0 407 408 0 408 114 0
-		 113 115 0 115 399 0 399 400 0 335 116 0 116 409 0 409 410 0 410 335 0 116 114 0 408 409 0
-		 527 528 0 528 375 0 375 376 0 376 527 0 529 530 0 530 402 0 402 380 0 380 529 0 532 533 0
-		 533 377 0 377 378 0 378 532 0 534 527 0 376 406 0 406 534 0 62 147 0 147 146 0 146 61 0
-		 64 148 0 148 147 0 63 149 0 149 206 0 206 207 0 145 238 0 238 239 0 239 161 0 161 145 0
-		 421 422 0 422 164 0 164 160 0 160 421 0 149 162 0 162 205 0 205 206 0 150 241 0 241 242 0
-		 242 194 0 194 150 0 151 425 0 425 152 0 152 197 0 197 198 0 198 151 0 152 431 0 431 432 0
-		 432 197 0 203 154 0 154 195 0 195 202 0 202 203 0 223 224 0 224 0 0 0 60 0 146 7 0
-		 7 1 0 1 61 0 145 6 0 237 238 0 145 60 0 0 6 0 239 443 0 443 444 0 444 161 0 162 167 0
-		 167 204 0 204 205 0 422 423 0 423 169 0 169 164 0 175 174 0 174 176 0 176 177 0 177 175 0
-		 166 240 0 240 241 0 150 166 0 167 154 0 203 204 0 423 419 0 419 165 0 165 169 0 164 189 0
-		 189 186 0 186 160 0 169 188 0 188 189 0 165 187 0 187 188 0 165 160 0 186 187 0 171 170 0
-		 170 174 0 175 171 0 170 172 0 172 176 0 172 173 0 173 177 0;
-	setAttr ".ed[498:663]" 173 171 0 179 178 0 178 190 0 190 191 0 191 179 0 180 179 0
-		 191 192 0 192 180 0 181 180 0 192 193 0 193 181 0 178 181 0 193 190 0 183 182 0 182 171 0
-		 173 183 0 184 183 0 172 184 0 185 184 0 170 185 0 182 185 0 186 178 0 179 187 0 180 188 0
-		 181 189 0 190 182 0 183 191 0 184 192 0 185 193 0 195 251 0 251 252 0 252 202 0 432 433 0
-		 433 254 0 254 197 0 254 255 0 255 198 0 242 249 0 249 250 0 250 194 0 199 155 0 155 156 0
-		 156 200 0 200 199 0 434 435 0 156 434 0 196 439 0 439 440 0 440 253 0 253 196 0 153 438 0
-		 438 439 0 196 153 0 168 437 0 437 438 0 153 168 0 163 205 0 204 437 0 168 163 0 148 206 0
-		 163 148 0 64 207 0 69 208 0 59 209 0 51 210 0 53 211 0 313 314 0 212 41 0 41 77 0
-		 77 213 0 77 72 0 72 214 0 73 215 0 216 215 0 75 216 0 80 217 0 44 218 0 317 318 0
-		 46 219 0 48 220 0 56 221 0 66 222 0 61 223 0 1 224 0 1030 1031 0 1018 1019 0 994 995 0
-		 15 226 0 3 227 0 5 228 0 17 229 0 25 230 0 33 231 0 34 232 0 999 1000 0 1023 1024 0
-		 1037 1038 0 30 235 0 234 38 0 38 30 0 22 236 0 30 22 0 7 237 0 22 7 0 146 238 0 420 421 0
-		 165 420 0 419 424 0 424 420 0 241 151 0 198 242 0 255 249 0 260 261 0 261 262 0 262 263 0
-		 263 260 0 261 264 0 264 265 0 265 262 0 264 266 0 266 267 0 267 265 0 262 268 0 268 269 0
-		 269 263 0 265 270 0 270 268 0 267 271 0 271 270 0 267 263 0 269 271 0 243 244 0 244 247 0
-		 247 246 0 246 243 0 244 245 0 245 248 0 248 247 0 271 259 0 258 270 0 269 256 0 273 272 0
-		 272 261 0 260 273 0 251 159 0 159 201 0 201 252 0 440 441 0 441 158 0 158 253 0 433 434 0
-		 156 254 0 155 255 0 199 249 0 247 257 0 256 246 0 248 258 0 200 264 0 261 199 0 157 266 0
-		 243 269 0 268 244 0 270 245 0 249 272 0 273 250 0 283 284 0;
-	setAttr ".ed[664:829]" 284 168 0 153 283 0 282 283 0 196 282 0 281 282 0 253 281 0
-		 280 281 0 158 280 0 441 442 0 442 280 0 285 274 0 274 275 0 275 276 0 276 285 0 286 285 0
-		 276 277 0 277 286 0 287 286 0 277 278 0 278 287 0 279 288 0 288 287 0 278 279 0 284 288 0
-		 279 168 0 215 291 0 291 290 0 290 289 0 289 71 0 216 291 0 479 480 0 480 293 0 293 292 0
-		 292 479 0 480 481 0 481 294 0 294 293 0 481 482 0 482 295 0 295 294 0 471 472 0 472 297 0
-		 297 296 0 296 471 0 472 473 0 473 298 0 298 297 0 473 474 0 474 299 0 299 298 0 467 468 0
-		 468 486 0 486 483 0 483 467 0 468 469 0 469 485 0 485 486 0 469 470 0 470 484 0 484 485 0
-		 487 488 0 488 305 0 305 304 0 304 487 0 488 489 0 489 306 0 306 305 0 489 490 0 490 307 0
-		 307 306 0 305 309 0 308 304 0 306 310 0 307 311 0 41 313 0 312 42 0 212 314 0 40 315 0
-		 218 317 0 316 43 0 44 318 0 460 461 0 365 366 0 455 456 0 320 128 0 321 105 0 106 322 0
-		 107 323 0 108 324 0 109 325 0 452 453 0 124 326 0 465 466 0 360 361 0 327 118 0 352 353 0
-		 328 130 0 368 369 0 380 375 0 528 529 0 330 142 0 142 403 0 403 404 0 531 532 0 378 379 0
-		 379 531 0 332 136 0 136 137 0 137 333 0 137 139 0 139 334 0 115 335 0 410 399 0 134 336 0
-		 373 374 0 122 319 0 357 358 0 93 338 0 392 387 0 92 339 0 82 340 0 398 393 0 81 341 0
-		 84 342 0 83 343 0 394 395 0 344 89 0 94 345 0 388 389 0 522 523 0 512 513 0 513 522 0
-		 415 416 0 416 103 0 103 348 0 515 516 0 519 520 0 349 99 0 100 350 0 418 411 0 351 129 0
-		 130 352 0 328 353 0 131 354 0 132 355 0 133 356 0 336 357 0 134 358 0 359 117 0 118 360 0
-		 327 361 0 119 362 0 120 363 0 121 364 0 319 365 0 122 366 0 367 113 0 112 368 0 329 369 0
-		 112 329 0 329 111 0 111 370 0 114 371 0 116 372 0 335 373 0 115 374 0;
-	setAttr ".ed[830:995]" 375 330 0 141 376 0 405 406 0 377 144 0 144 331 0 331 378 0
-		 331 143 0 143 379 0 402 403 0 142 380 0 346 382 0 382 381 0 381 87 0 87 346 0 383 382 0
-		 346 86 0 86 383 0 384 383 0 86 85 0 85 384 0 385 384 0 85 337 0 337 385 0 386 385 0
-		 337 88 0 88 386 0 381 386 0 88 87 0 381 388 0 387 386 0 382 389 0 383 390 0 384 391 0
-		 385 392 0 393 446 0 446 447 0 447 394 0 447 448 0 448 395 0 448 449 0 449 396 0 449 450 0
-		 450 397 0 450 445 0 445 398 0 445 446 0 399 139 0 137 400 0 136 401 0 530 531 0 379 402 0
-		 143 403 0 331 404 0 144 405 0 377 406 0 533 534 0 407 135 0 138 408 0 140 409 0 334 410 0
-		 411 337 0 85 412 0 86 413 0 524 525 0 518 511 0 101 347 0 347 415 0 414 101 0 347 102 0
-		 102 416 0 513 514 0 521 522 0 88 418 0 417 87 0 240 420 0 424 241 0 240 428 0 428 421 0
-		 146 428 0 428 239 0 427 147 0 163 427 0 429 163 0 168 430 0 430 429 0 152 429 0 430 431 0
-		 426 425 0 151 419 0 423 426 0 422 427 0 427 426 0 428 427 0 240 443 0 426 429 0 279 431 0
-		 278 432 0 277 433 0 276 434 0 275 435 0 274 436 0 203 438 0 202 439 0 252 440 0 201 441 0
-		 159 442 0 166 444 0 445 339 0 92 446 0 89 447 0 344 448 0 90 449 0 91 450 0 325 452 0
-		 451 41 0 109 453 0 110 454 0 105 455 0 321 456 0 72 457 0 77 458 0 128 460 0 459 123 0
-		 320 461 0 127 462 0 126 463 0 125 464 0 326 465 0 124 466 0 297 468 0 467 296 0 298 469 0
-		 299 470 0 475 476 0 476 472 0 471 475 0 476 477 0 477 473 0 477 478 0 478 474 0 293 476 0
-		 475 292 0 294 477 0 295 478 0 491 492 0 492 506 0 506 503 0 503 491 0 492 493 0 493 505 0
-		 505 506 0 493 494 0 494 504 0 504 505 0 484 303 0 303 302 0 302 485 0 302 301 0 301 486 0
-		 301 300 0 300 483 0 301 488 0 487 300 0 302 489 0 303 490 0 495 496 0;
-	setAttr ".ed[996:1161]" 496 502 0 502 499 0 499 495 0 496 497 0 497 501 0 501 502 0
-		 497 498 0 498 500 0 500 501 0 291 496 0 495 290 0 216 497 0 74 498 0 500 508 0 508 509 0
-		 509 501 0 509 510 0 510 502 0 510 507 0 507 499 0 504 482 0 481 505 0 480 506 0 479 503 0
-		 508 494 0 493 509 0 492 510 0 491 507 0 346 512 0 511 86 0 87 513 0 417 514 0 99 515 0
-		 349 516 0 98 517 0 413 518 0 519 348 0 103 520 0 416 521 0 102 522 0 347 523 0 101 524 0
-		 414 525 0 104 526 0 329 528 0 527 111 0 112 529 0 401 530 0 136 531 0 332 532 0 135 533 0
-		 407 534 0 535 538 0 538 537 0 537 536 0 536 535 0 538 540 0 540 539 0 539 537 0 541 544 0
-		 544 543 0 543 542 0 542 541 0 545 540 0 535 545 0 1005 1006 0 1006 1041 0 1041 1042 0
-		 1042 1005 0 1016 1005 0 1042 1043 0 1043 1016 0 1014 1015 0 1015 1044 0 1044 1045 0
-		 1045 1014 0 549 992 0 992 981 0 981 548 0 548 549 0 981 982 0 982 551 0 551 548 0
-		 555 983 0 983 984 0 984 554 0 554 555 0 556 559 0 559 558 0 558 557 0 557 556 0 1049 1050 0
-		 1050 1009 0 1009 1010 0 1010 1049 0 988 989 0 989 560 0 560 561 0 561 988 0 540 565 0
-		 565 564 0 564 539 0 543 567 0 567 566 0 566 542 0 545 568 0 568 565 0 1045 1046 0
-		 1046 1013 0 1013 1014 0 571 573 0 573 572 0 572 546 0 546 571 0 1006 1007 0 1007 1052 0
-		 1052 1041 0 984 985 0 985 570 0 570 554 0 549 574 0 574 991 0 991 992 0 565 576 0
-		 576 575 0 575 564 0 567 578 0 578 577 0 577 566 0 568 579 0 579 576 0 1046 1047 0
-		 1047 1012 0 1012 1013 0 573 583 0 583 582 0 582 572 0 1007 1008 0 1008 1051 0 1051 1052 0
-		 985 986 0 986 581 0 581 570 0 574 584 0 584 990 0 990 991 0 576 556 0 557 575 0 578 586 0
-		 586 585 0 585 577 0 579 559 0 1047 1048 0 1048 1011 0 1011 1012 0 583 562 0 562 563 0
-		 563 582 0 1008 1009 0 1050 1051 0 986 987 0 987 588 0 588 581 0 584 560 0 989 990 0
-		 71 590 0;
-	setAttr ".ed[1162:1327]" 590 589 0 589 70 0 311 592 0 592 591 0 591 308 0 45 594 0
-		 594 593 0 593 316 0 47 595 0 595 594 0 259 597 0 597 596 0 596 256 0 436 599 0 599 598 0
-		 598 157 0 52 601 0 601 600 0 600 50 0 315 602 0 602 601 0 603 606 0 606 605 0 605 604 0
-		 604 603 0 607 608 0 608 606 0 603 607 0 606 610 0 610 609 0 609 605 0 611 610 0 608 611 0
-		 55 612 0 612 595 0 609 614 0 614 613 0 613 605 0 615 618 0 618 617 0 617 616 0 616 615 0
-		 600 619 0 619 58 0 67 620 0 620 612 0 614 622 0 622 621 0 621 613 0 621 624 0 624 623 0
-		 623 613 0 619 625 0 625 68 0 622 627 0 627 626 0 626 621 0 60 628 0 628 620 0 625 629 0
-		 629 63 0 626 630 0 630 624 0 78 632 0 632 631 0 631 40 0 633 636 0 636 635 0 635 634 0
-		 634 633 0 637 638 0 638 79 0 43 637 0 589 632 0 638 639 0 639 74 0 636 641 0 641 640 0
-		 640 635 0 605 643 0 643 642 0 642 604 0 644 647 0 647 646 0 646 645 0 645 644 0 623 649 0
-		 649 648 0 648 613 0 648 643 0 604 651 0 651 650 0 650 623 0 623 604 0 650 652 0 652 649 0
-		 617 654 0 654 653 0 653 616 0 655 651 0 642 655 0 656 659 0 659 658 0 658 657 0 657 656 0
-		 660 661 0 661 659 0 656 660 0 662 661 0 660 663 0 663 662 0 664 667 0 667 666 0 666 665 0
-		 665 664 0 667 669 0 669 668 0 668 666 0 659 671 0 671 670 0 670 658 0 661 672 0 672 671 0
-		 662 673 0 673 672 0 674 644 0 645 675 0 675 674 0 676 679 0 679 678 0 678 677 0 677 676 0
-		 680 683 0 683 682 0 682 681 0 681 680 0 674 684 0 684 647 0 685 688 0 688 687 0 687 686 0
-		 686 685 0 689 692 0 692 691 0 691 690 0 690 689 0 693 696 0 696 695 0 695 694 0 694 693 0
-		 695 698 0 698 697 0 697 694 0 699 641 0 641 701 0 701 700 0 700 699 0 636 702 0 702 701 0
-		 633 703 0 703 702 0 633 705 0 705 704 0 704 703 0 706 709 0 709 708 0;
-	setAttr ".ed[1328:1493]" 708 707 0 707 706 0 709 711 0 711 710 0 710 708 0 712 715 0
-		 715 714 0 714 713 0 713 712 0 716 717 0 717 715 0 712 716 0 718 721 0 721 720 0 720 719 0
-		 719 718 0 722 725 0 725 724 0 724 723 0 723 722 0 726 727 0 727 721 0 718 726 0 724 729 0
-		 729 728 0 728 723 0 730 733 0 733 732 0 732 731 0 731 730 0 732 727 0 726 731 0 734 737 0
-		 737 736 0 736 735 0 735 734 0 738 741 0 741 740 0 740 739 0 739 738 0 742 743 0 743 741 0
-		 738 742 0 744 745 0 745 743 0 742 744 0 746 745 0 744 747 0 747 746 0 736 749 0 749 748 0
-		 748 735 0 750 753 0 753 752 0 752 751 0 751 750 0 754 757 0 757 756 0 756 755 0 755 754 0
-		 758 759 0 759 757 0 754 758 0 760 761 0 761 759 0 758 760 0 762 763 0 763 761 0 760 762 0
-		 752 765 0 765 764 0 764 751 0 766 769 0 769 768 0 768 767 0 767 766 0 770 773 0 773 772 0
-		 772 771 0 771 770 0 774 775 0 775 773 0 770 774 0 776 777 0 777 775 0 774 776 0 778 779 0
-		 779 777 0 776 778 0 768 781 0 781 780 0 780 767 0 782 785 0 785 784 0 784 783 0 783 782 0
-		 786 789 0 789 788 0 788 787 0 787 786 0 790 793 0 793 792 0 792 791 0 791 790 0 788 795 0
-		 795 794 0 794 787 0 796 799 0 799 798 0 798 797 0 797 796 0 798 793 0 790 797 0 800 803 0
-		 803 802 0 802 801 0 801 800 0 804 807 0 807 806 0 806 805 0 805 804 0 808 811 0 811 810 0
-		 810 809 0 809 808 0 812 813 0 813 803 0 800 812 0 627 815 0 815 814 0 814 626 0 814 816 0
-		 816 630 0 629 817 0 817 149 0 161 819 0 819 818 0 818 145 0 820 823 0 823 822 0 822 821 0
-		 821 820 0 817 824 0 824 162 0 194 826 0 826 825 0 825 150 0 827 831 0 831 830 0 830 829 0
-		 829 828 0 828 827 0 830 833 0 833 832 0 832 829 0 834 835 0 835 195 0 154 834 0 60 547 0
-		 547 550 0 550 628 0 627 552 0 552 553 0 553 815 0 818 571 0 546 145 0;
-	setAttr ".ed[1494:1659]" 546 547 0 444 836 0 836 819 0 824 837 0 837 167 0 822 839 0
-		 839 838 0 838 821 0 840 843 0 843 842 0 842 841 0 841 840 0 825 844 0 844 166 0 837 834 0
-		 839 846 0 846 845 0 845 838 0 823 848 0 848 847 0 847 822 0 847 849 0 849 839 0 849 850 0
-		 850 846 0 850 848 0 823 846 0 851 840 0 841 852 0 852 851 0 842 853 0 853 852 0 843 854 0
-		 854 853 0 851 854 0 855 858 0 858 857 0 857 856 0 856 855 0 859 860 0 860 858 0 855 859 0
-		 861 862 0 862 860 0 859 861 0 857 862 0 861 856 0 863 854 0 851 864 0 864 863 0 865 853 0
-		 863 865 0 866 852 0 865 866 0 866 864 0 850 855 0 856 848 0 849 859 0 847 861 0 858 863 0
-		 864 857 0 860 865 0 862 866 0 835 867 0 867 251 0 830 869 0 869 868 0 868 833 0 831 870 0
-		 870 869 0 250 871 0 871 826 0 872 598 0 598 874 0 874 873 0 873 872 0 875 874 0 599 875 0
-		 876 879 0 879 878 0 878 877 0 877 876 0 880 876 0 877 881 0 881 880 0 882 880 0 881 883 0
-		 883 882 0 884 882 0 883 837 0 824 884 0 816 884 0 817 816 0 629 630 0 625 624 0 619 623 0
-		 600 604 0 601 603 0 602 607 0 632 885 0 885 705 0 705 631 0 589 699 0 699 885 0 590 641 0
-		 639 640 0 590 639 0 638 635 0 637 634 0 594 610 0 611 593 0 595 609 0 612 614 0 620 622 0
-		 628 627 0 550 552 0 1043 1044 0 1015 1016 0 982 983 0 555 551 0 537 544 0 541 536 0
-		 539 543 0 564 567 0 575 578 0 557 586 0 558 585 0 561 588 0 987 988 0 1010 1011 0
-		 1048 1049 0 580 587 0 587 562 0 583 580 0 569 580 0 573 569 0 553 569 0 571 553 0
-		 818 815 0 886 846 0 820 886 0 886 887 0 887 845 0 826 831 0 827 825 0 871 870 0 263 889 0
-		 889 888 0 888 260 0 889 891 0 891 890 0 890 888 0 891 267 0 266 890 0 263 893 0 893 892 0
-		 892 889 0 892 894 0 894 891 0 894 895 0 895 267 0 895 893 0 246 897 0 897 896 0 896 243 0
-		 897 899 0;
-	setAttr ".ed[1660:1825]" 899 898 0 898 896 0 894 597 0 259 895 0 256 893 0 888 900 0
-		 900 273 0 867 901 0 901 159 0 879 903 0 903 902 0 902 878 0 869 874 0 875 868 0 870 873 0
-		 871 872 0 596 897 0 597 899 0 872 888 0 890 598 0 896 892 0 893 243 0 898 894 0 900 871 0
-		 283 880 0 882 284 0 282 876 0 281 879 0 280 903 0 442 902 0 285 905 0 905 904 0 904 274 0
-		 286 906 0 906 905 0 287 907 0 907 906 0 908 907 0 288 908 0 882 908 0 290 909 0 909 590 0
-		 909 639 0 292 911 0 911 910 0 910 479 0 911 913 0 913 912 0 912 910 0 913 295 0 482 912 0
-		 296 915 0 915 914 0 914 471 0 915 917 0 917 916 0 916 914 0 917 299 0 474 916 0 483 919 0
-		 919 918 0 918 467 0 919 921 0 921 920 0 920 918 0 921 484 0 470 920 0 304 923 0 923 922 0
-		 922 487 0 923 925 0 925 924 0 924 922 0 925 307 0 490 924 0 591 923 0 592 925 0 633 608 0
-		 607 705 0 602 631 0 593 637 0 611 634 0 765 763 0 762 764 0 729 733 0 730 728 0 701 717 0
-		 716 700 0 702 715 0 703 714 0 704 713 0 720 725 0 722 719 0 756 753 0 750 755 0 740 737 0
-		 734 739 0 772 769 0 766 771 0 804 801 0 802 807 0 784 927 0 927 926 0 926 783 0 928 929 0
-		 929 811 0 808 928 0 708 931 0 931 930 0 930 707 0 710 932 0 932 931 0 795 799 0 796 794 0
-		 781 779 0 778 780 0 749 746 0 747 748 0 668 673 0 662 666 0 663 665 0 653 655 0 642 616 0
-		 643 615 0 648 618 0 649 617 0 652 654 0 658 667 0 664 657 0 670 669 0 933 934 0 934 686 0
-		 687 933 0 678 936 0 936 935 0 935 677 0 691 696 0 693 690 0 647 682 0 683 646 0 684 681 0
-		 737 766 0 767 736 0 740 771 0 741 770 0 743 774 0 745 776 0 746 778 0 749 780 0 753 734 0
-		 735 752 0 756 739 0 757 738 0 759 742 0 761 744 0 763 747 0 765 748 0 769 786 0 787 768 0
-		 937 786 0 772 937 0 773 791 0 791 937 0 775 790 0 777 797 0 779 796 0;
-	setAttr ".ed[1826:1991]" 781 794 0 803 782 0 783 802 0 813 785 0 811 939 0 939 938 0
-		 938 810 0 929 940 0 940 939 0 807 926 0 927 806 0 941 944 0 944 943 0 943 942 0 942 941 0
-		 945 946 0 946 941 0 942 945 0 947 948 0 948 946 0 945 947 0 949 950 0 950 948 0 947 949 0
-		 951 952 0 952 950 0 949 951 0 944 952 0 951 943 0 951 668 0 669 943 0 670 942 0 671 945 0
-		 672 947 0 673 949 0 654 954 0 954 953 0 953 653 0 652 955 0 955 954 0 650 956 0 956 955 0
-		 651 957 0 957 956 0 655 958 0 958 957 0 953 958 0 788 931 0 932 795 0 789 930 0 806 929 0
-		 928 805 0 927 940 0 784 939 0 785 938 0 813 810 0 812 809 0 793 709 0 706 792 0 798 711 0
-		 799 710 0 674 948 0 950 684 0 675 946 0 685 697 0 698 688 0 959 676 0 677 960 0 960 959 0
-		 935 961 0 961 960 0 933 692 0 689 934 0 944 680 0 681 952 0 825 887 0 886 844 0 820 962 0
-		 962 844 0 819 962 0 962 815 0 963 884 0 814 963 0 964 965 0 965 882 0 884 964 0 832 965 0
-		 964 829 0 966 838 0 845 827 0 828 966 0 966 963 0 963 821 0 963 962 0 836 844 0 964 966 0
-		 832 908 0 833 907 0 868 906 0 875 905 0 599 904 0 881 834 0 877 835 0 878 867 0 902 901 0
-		 953 665 0 663 958 0 954 664 0 955 657 0 956 656 0 957 660 0 705 718 0 719 704 0 722 713 0
-		 723 712 0 728 716 0 730 700 0 731 699 0 726 885 0 724 751 0 764 729 0 762 733 0 760 732 0
-		 758 727 0 754 721 0 755 720 0 750 725 0 918 915 0 920 917 0 914 967 0 967 475 0 916 968 0
-		 968 967 0 478 968 0 967 911 0 968 913 0 503 970 0 970 969 0 969 491 0 970 972 0 972 971 0
-		 971 969 0 972 504 0 494 971 0 921 973 0 973 303 0 919 974 0 974 973 0 300 974 0 922 974 0
-		 924 973 0 499 976 0 976 975 0 975 495 0 976 978 0 978 977 0 977 975 0 978 500 0 498 977 0
-		 975 909 0 977 639 0 978 979 0 979 508 0 976 980 0 980 979 0 507 980 0;
-	setAttr ".ed[1992:2103]" 972 912 0 970 910 0 979 971 0 980 969 0 946 685 0 686 941 0
-		 934 944 0 689 680 0 690 683 0 693 646 0 694 645 0 697 675 0 691 936 0 678 696 0 692 935 0
-		 933 961 0 687 960 0 688 959 0 698 676 0 695 679 0 791 800 0 801 937 0 804 786 0 805 789 0
-		 928 930 0 808 707 0 809 706 0 812 792 0 981 535 0 536 982 0 541 983 0 542 984 0 566 985 0
-		 577 986 0 585 987 0 558 988 0 559 989 0 579 990 0 568 991 0 545 992 0 10 225 0 225 994 0
-		 993 10 0 225 11 0 11 995 0 11 8 0 8 996 0 8 21 0 21 997 0 21 29 0 29 998 0 29 37 0
-		 37 999 0 233 1000 0 37 233 0 233 36 0 36 1001 0 28 1002 0 36 28 0 20 1003 0 28 20 0
-		 9 1004 0 20 9 0 9 10 0 546 1006 0 1005 547 0 572 1007 0 582 1008 0 563 1009 0 562 1010 0
-		 587 1011 0 580 1012 0 569 1013 0 553 1014 0 552 1015 0 550 1016 0 224 1018 0 1017 0 0
-		 1 1019 0 7 1020 0 22 1021 0 30 1022 0 38 1023 0 234 1024 0 39 1025 0 31 1026 0 23 1027 0
-		 6 1028 0 1029 8 0 11 1030 0 225 1031 0 10 1032 0 9 1033 0 20 1034 0 28 1035 0 36 1036 0
-		 233 1037 0 37 1038 0 29 1039 0 21 1040 0 1041 549 0 548 1042 0 551 1043 0 555 1044 0
-		 554 1045 0 570 1046 0 581 1047 0 588 1048 0 561 1049 0 560 1050 0 584 1051 0 574 1052 0;
-	setAttr -s 4214 ".n";
-	setAttr ".n[0:165]" -type "float3"  -0.48138401 0.64184201 -0.59691602 -0.71905601
-		 0.462695 -0.51852798 -0.76534897 0.55539501 -0.32523501 -0.63213801 0.680673 -0.370251
-		 -0.693214 0.60969299 -0.38435599 -0.71030903 0.58295798 -0.39449 -0.70071298 0.59819603
-		 -0.388798 -0.693214 0.60969299 -0.38435599 -0.98584098 -0.036660999 -0.163629 -0.97964799
-		 0.048834998 -0.194693 -0.95983398 0.15765899 -0.232085 -0.95983303 0.15765899 -0.232085
-		 0.53546798 0.83078903 -0.15187 0.51190698 0.85047603 -0.121004 0.57740802 0.78907198
-		 -0.209683 0.57740802 0.78907198 -0.209683 0.75663298 0.65110999 0.059687998 0.75661999
-		 0.651133 0.059594002 0.75695002 0.650527 0.061981 0.75697798 0.65047598 0.062181
-		 -0.15058701 0.472702 -0.86826098 -0.35088 0.35117501 -0.86807799 -0.356749 0.33762899
-		 -0.87105501 -0.17273 0.454198 -0.87399602 -0.87758499 -0.468245 0.102915 -0.87741703
-		 -0.46838 0.10373 -0.87572998 -0.46969399 0.111732 -0.87625301 -0.469295 0.109283
-		 0.52244103 0.85126501 -0.049027 0.52954203 0.84794402 -0.023987001 0.51190698 0.85047603
-		 -0.121004 0.53546798 0.83078903 -0.15187 -0.31586 0.575755 -0.75414801 -0.58138001
-		 0.372933 -0.723131 -0.71905601 0.462695 -0.51852798 -0.48138401 0.64184201 -0.59691602
-		 -0.99062699 -0.082271002 -0.10904 -0.98805398 -0.074626997 -0.13483401 -0.97964799
-		 0.048834998 -0.194693 -0.98584098 -0.036660999 -0.163629 -0.17596801 0.048469 0.98320198
-		 -0.226446 0.051738001 0.97264898 -0.232438 0.017999999 0.97244501 -0.155705 0.029996
-		 0.98734802 -0.18911999 -0.020412 0.98174202 -0.286457 -0.092889003 0.95358002 -0.317817
-		 -0.106328 0.94217098 -0.207663 -0.031706002 0.977687 -0.155705 0.029996 0.98734802
-		 -0.232438 0.017999999 0.97244501 -0.245664 -0.0022199999 0.96935201 -0.159923 0.026082
-		 0.98678499 0.27987701 -0.59766197 0.751311 0.305994 -0.595819 0.74254102 0.36210999
-		 -0.59022802 0.72146201 0.27987701 -0.59766197 0.751311 0.75843 -0.183392 0.62542099
-		 0.75843 -0.183392 0.62542099 0.75843 -0.183392 0.62542099 0.75843 -0.183392 0.62542099
-		 -0.37818101 -0.570979 0.72867203 -0.37818101 -0.570979 0.72867203 -0.37818101 -0.570979
-		 0.72867203 -0.37818101 -0.570979 0.72867203 0.42091101 0.25342301 0.870983 0.40275499
-		 0.242376 0.88263398 0.296451 0.177728 0.93836498 0.30664599 0.183926 0.93388402 -0.44285801
-		 0.43954799 0.78145599 -0.37908301 0.44689301 0.81029803 -0.37908301 0.44689301 0.81029803
-		 -0.45348701 0.43808201 0.77616602 -0.384666 -0.3935 0.834979 -0.37330899 -0.38458899
-		 0.844235 -0.47488701 -0.463222 0.74826998 -0.485998 -0.471661 0.73575997 0.745269
-		 0.01501 0.66659403 0.73584902 0.011411 0.67704898 0.73343301 0.010497 0.67967999
-		 0.745269 0.01501 0.66659403 -0.475508 -0.53599 0.69757199 -0.470027 -0.53102499 0.70504397
-		 -0.45611501 -0.51837099 0.72336102 -0.45611501 -0.51837099 0.72336102 0.12273 -0.67266601
-		 0.72969699 0.236323 -0.60518801 0.76019597 0.34731299 -0.52521098 0.77687001 0.12273
-		 -0.67266601 0.72969699 0.77225697 -0.25286999 0.58281797 0.77225697 -0.25286999 0.58281797
-		 0.77225697 -0.25286999 0.58281702 0.77225697 -0.25286999 0.58281797 -0.49923801 -0.73325801
-		 0.46162099 -0.49923801 -0.73325801 0.46162099 -0.49923801 -0.73325801 0.46162099
-		 -0.49923801 -0.73325801 0.46162099 0.91532701 0.36641201 0.16709 0.91648799 0.394126
-		 -0.068664998 0.84702897 0.397661 -0.35271499 0.86956298 0.39988399 -0.28974801 -0.35530099
-		 -0.090364002 0.93037403 -0.35530099 -0.090364002 0.93037403 -0.35530099 -0.090364002
-		 0.93037403 -0.35530099 -0.090364002 0.93037403 -0.27284199 -0.126965 0.95364398 -0.159824
-		 -0.025770999 0.98680902 -0.44655001 -0.28884399 0.84685397 -0.50463802 -0.34523001
-		 0.79130101 0.90653002 0.102867 0.40941599 0.90212101 0.100617 0.41958699 0.90486199
-		 0.10201 0.413302 0.90653002 0.102867 0.40941599 -0.62433201 -0.55959803 0.54503202
-		 -0.68432301 -0.59724098 0.418336 -0.72213101 -0.61839902 0.31001499 -0.72213101 -0.61839902
-		 0.31001499 -0.35141501 -0.27282399 0.89558601 -0.360964 -0.26913401 0.892901 -0.41986501
-		 -0.245335 0.87379903 -0.35141501 -0.27282399 0.89558601 -0.81825602 0.162276 0.55147398
-		 -0.81825602 0.162276 0.55147398 -0.81825602 0.162276 0.55147398 -0.81825602 0.162276
-		 0.55147398 -0.058254 -0.29004699 0.95523798 -0.058254 -0.29004699 0.95523798 -0.058254
-		 -0.29004699 0.95523798 -0.058254 -0.29004699 0.95523798 -0.69642401 -0.26747599 0.66592097
-		 -0.66730303 -0.269151 0.69445199 -0.63167298 -0.27054399 0.72649503 -0.64201301 -0.27021
-		 0.71749997 -0.158868 -0.48884401 0.85778302 -0.148736 -0.45750099 0.87668103 -0.148736
-		 -0.45750099 0.87668103 -0.17408 -0.53590602 0.82613599 -0.145163 0.16971201 0.97474402
-		 -0.155054 0.160873 0.97472 -0.108384 0.202069 0.973355 -0.092156 0.216115 0.972009
-		 -0.77597302 -0.15437201 0.61158401 -0.82466203 -0.153611 0.54436803 -0.787058 -0.15429699
-		 0.59727103 -0.77597302 -0.15437201 0.61158401 -0.065172002 -0.054336 0.99639398 -0.071905002
-		 -0.058385 0.99570101 -0.108091 -0.080130003 0.990906 -0.108091 -0.080130003 0.990906
-		 -0.42798701 -0.389559 -0.81551898 -0.43399999 -0.35055101 -0.82991499 -0.44230399
-		 -0.224931 -0.86820102 -0.42798701 -0.389559 -0.81551898 0 4.9999999e-06 -1 0 4.9999999e-06
-		 -1 0 4.9999999e-06 -1 0 4.9999999e-06 -1 -0.64523202 0.761859 0.056970999 -0.64519298
-		 0.76182997 0.057805002 -0.64287198 0.75909901 0.102391 -0.64290899 0.75913203 0.101912
-		 -0.64290899 0.75913203 0.101912 -0.64287198 0.75909901 0.102391 -0.64228898 0.75841397
-		 0.110782 -0.64229101 0.75841302 0.110781 -0.00309 -0.58552003 0.81065202 -0.00309
-		 -0.58551902 0.81065202;
-	setAttr ".n[166:331]" -type "float3"  -0.00309 -0.58551902 0.81065297 -0.00309
-		 -0.58551902 0.81065297 0.010807 -0.92519999 0.379327 -0.055408999 -0.76187497 0.64534998
-		 -0.090196997 -0.92454898 0.37023601 -0.011729 -0.921597 0.38797 -0.54704797 -0.82564503
-		 -0.138016 -0.55562001 -0.82073098 -0.13299499 -0.52743798 -0.78898299 -0.315144 -0.52649599
-		 -0.79856497 -0.29171199 -0.52649599 -0.79856497 -0.29171199 -0.52743798 -0.78898299
-		 -0.315144 -0.51009899 -0.77798003 -0.36680499 -0.50248301 -0.76704001 -0.398949 -0.98931998
-		 -0.100657 -0.105427 -0.98409897 -0.110807 -0.138817 -0.99193299 0.036933001 -0.121267
-		 -0.99633801 0.067854002 -0.052030001 -0.98936802 -0.11629 0.087335996 -0.98931998
-		 -0.100657 -0.105427 -0.99633801 0.067854002 -0.052030001 -0.98078001 0.100367 0.16732401
-		 -0.99633801 0.067854002 -0.052030001 -0.99193299 0.036933001 -0.121267 -0.95815402
-		 0.27258399 -0.087399997 -0.96353698 0.26735801 0.010831 -0.90494502 0.37483799 0.20141999
-		 -0.98078001 0.100367 0.16732401 -0.99633801 0.067854002 -0.052030001 -0.96353698
-		 0.26735801 0.010831 -0.575625 0.81756002 -0.015828 -0.57515502 0.81689399 -0.043384001
-		 -0.59590799 0.80227798 -0.035271998 -0.555861 0.82958299 -0.053022999 -0.92219901
-		 0.357079 -0.148471 -0.92219901 0.357079 -0.148471 -0.95732498 0.276674 0.083550997
-		 -0.91195601 0.40745401 -0.048135001 -0.99269301 0.013512 0.119911 -0.99441099 0.0078389999
-		 0.105287 -0.99304998 0.012396 0.117036 -0.99269301 0.013512 0.119911 -0.57451898
-		 -0.80745697 0.133946 -0.548715 -0.828161 0.11429 -0.53557098 -0.78558999 0.30985901
-		 -0.53188699 -0.793378 0.29605499 -0.555861 0.82958299 -0.053022999 -0.59590799 0.80227798
-		 -0.035271998 -0.67386001 0.67534399 -0.29970601 -0.47177199 0.82823402 -0.302423
-		 -0.91195601 0.40745401 -0.048135001 -0.95732498 0.276674 0.083550997 -0.98749602
-		 0.130641 0.088233002 -0.89298397 0.44832101 0.039841998 -0.95732498 0.276674 0.083550997
-		 -0.95774299 -0.111675 0.26506001 -0.968615 -0.134689 0.208914 -0.98749602 0.130641
-		 0.088233002 -0.53188699 -0.793378 0.29605499 -0.53557098 -0.78558999 0.30985901 -0.52452302
-		 -0.70195001 0.48181099 -0.39141801 -0.755566 0.52527398 -0.89298397 0.44832101 0.039841998
-		 -0.98749602 0.130641 0.088233002 -0.99171901 -0.12253 -0.038476001 -0.933258 0.18854
-		 -0.30574799 -0.47177199 0.82823402 -0.302423 -0.67386001 0.67534399 -0.29970601 -0.69421202
-		 0.50897002 -0.50893903 -0.39656401 0.78314799 -0.478975 -0.39141801 -0.755566 0.52527398
-		 -0.52452302 -0.70195001 0.48181099 -0.55160099 -0.78954101 0.269003 -0.498577 -0.793396
-		 0.349204 -0.98749602 0.130641 0.088233002 -0.968615 -0.134689 0.208914 -0.93969601
-		 -0.33342099 0.076177999 -0.99171901 -0.12253 -0.038476001 -0.498887 -0.85476398 -0.14314599
-		 -0.50087398 -0.856906 -0.12181 -0.42466801 -0.90489298 -0.028742 -0.430103 -0.901236
-		 -0.052777 -0.92789 0.33604199 0.161543 -0.82897502 0.54239702 0.13640299 -0.81340098
-		 0.58057803 -0.03616 -0.81307399 0.58033198 -0.046108998 -0.59936798 0.80045903 0.0048929998
-		 -0.59937602 0.80037397 -0.012216 -0.53794301 0.820925 -0.191572 -0.53282797 0.82476699
-		 -0.18935101 -0.430103 -0.901236 -0.052777 -0.42466801 -0.90489298 -0.028742 -0.32680801
-		 -0.941625 0.080859996 -0.33924201 -0.939004 0.056444999 -0.53282797 0.82476699 -0.18935101
-		 -0.53794301 0.820925 -0.191572 -0.48243201 0.80074298 -0.355064 -0.474617 0.80604899
-		 -0.35358801 -0.81307399 0.58033198 -0.046108998 -0.81340098 0.58057803 -0.03616 -0.79833698
-		 0.56962103 -0.19542199 -0.79833698 0.56962103 -0.19542199 -0.113358 -0.088655002
-		 -0.989591 -0.098848999 -0.081858002 -0.99172997 -0.46285999 -0.054887999 -0.88472998
-		 -0.33051899 -0.080554999 -0.940355 0.075203001 -0.94942898 -0.30484301 0.075203001
-		 -0.94942898 -0.30484301 0 -0.95212501 -0.305709 -0.00090500002 -0.95212501 -0.30570799
-		 -0.58506203 -0.243697 0.77350801 -0.72539002 -0.036214001 0.68738502 -0.76607502
-		 -0.027074 0.64218098 -0.64790303 -0.286432 0.70581698 -0.919074 0.363684 -0.15178099
-		 -0.919074 0.363684 -0.15178099 -0.901353 0.40522599 -0.152826 -0.90910202 0.387687
-		 -0.15242 0.99690199 0.073928997 0.02685 0.99690199 0.073928997 0.02685 0.98807198
-		 0.153981 -0.001632 0.98079997 0.19434699 -0.016143 -0.58506203 -0.243697 0.77350801
-		 -0.64790303 -0.286432 0.70581698 -0.002298 -0.50593197 0.86256999 0.24555101 -0.496663
-		 0.83248502 -0.99304998 0.012396 0.117036 -0.99441099 0.0078389999 0.105287 -0.994434
-		 -0.093029998 0.049454 -0.996584 -0.060755 0.055945002 -0.248044 -0.22108901 -0.943183
-		 -0.46285999 -0.054887999 -0.88472998 -0.098848999 -0.081858002 -0.99172997 0.217264
-		 -0.196022 -0.95622802 0.30595899 0.020321 0.951828 0.008258 -0.033289 0.999412 0.018968999
-		 0.0066399998 0.999798 0.30504599 0.031858999 0.951805 0.98707801 0.15729401 -0.030596999
-		 0.98505598 0.169102 -0.03269 0.999497 0.031385999 -0.004654 0.999901 0.014073 0.00076600001
-		 -0.057627 -0.138226 -0.98872298 -0.109345 -0.204982 -0.97263902 0.32349899 -0.162953
-		 -0.93209201 0.33151901 -0.12977 -0.93448102 -0.987984 -0.150815 0.033812001 -0.98808098
-		 -0.150159 0.033882 -0.98652601 -0.15868101 0.039827999 -0.98740798 -0.153741 0.037280001
-		 -0.98740798 -0.153741 0.037280001 -0.98652601 -0.15868101 0.039827999 -0.996158 -0.083150998
-		 0.027479 -0.99273199 -0.114307 0.037636999 0.30504599 0.031858999 0.951805 0.018968999
-		 0.0066399998 0.999798 -0.0026380001 0.074732997 0.99720001 0.31590599 0.056361001
-		 0.947115 0.999901 0.014073 0.00076600001 0.999497 0.031385999 -0.004654 0.981884
-		 -0.179965 0.059303999 0.98961002 -0.136502 0.045155998 -0.057627 -0.138226 -0.98872298
-		 0.33151901 -0.12977 -0.93448102 0.34081101 -0.090554997 -0.93576002 -0.0023310001
-		 -0.088113002 -0.996108;
-	setAttr ".n[332:497]" -type "float3"  0.969046 -0.24081001 -0.054412998 0.97351903
-		 -0.220808 -0.059200998 0.98118299 -0.18043999 -0.068714999 0.98118299 -0.18043999
-		 -0.068714999 0.39684099 -0.111573 0.91108102 0.00569 -0.14081199 0.99001998 0.0099470001
-		 -0.140488 0.99003202 0.404082 -0.110718 0.90799803 -0.96980798 -0.23555601 -0.063130997
-		 -0.96476501 -0.25663701 -0.058008999 -0.97851801 -0.192663 -0.073370002 -0.97851801
-		 -0.192663 -0.073370002 -0.0017810001 0.32975799 -0.94406402 0.001036 -0.254455 -0.96708399
-		 0.37250599 -0.278449 -0.88527101 0.40922999 0.300542 -0.86151302 0.14558101 0.92763799
-		 0.34393999 0.00012500001 0.93906403 0.343743 0.0056019998 0.93371302 0.357979 0.26607201
-		 0.89759099 0.35147801 -0.98293298 -0.165999 0.079291001 -0.983899 -0.17765 0.019571001
-		 -0.992571 -0.119308 0.023832999 -0.988617 -0.11531 0.096642002 0 -1 0 0 -1 0 1e-06
-		 -1 2e-06 0 -1 2e-06 0.98759198 -0.15413 0.030087 0.98325098 -0.135868 0.121481 0.987342
-		 -0.057425998 0.147847 0.997311 -0.063449003 0.036674999 0.32203099 -0.085702002 -0.94284201
-		 0.051095001 -0.123924 -0.99097502 0.22641601 -0.100373 -0.96884501 0.32203099 -0.085702002
-		 -0.94284201 -0.930372 0.35354099 -0.097038001 -0.933972 0.34226701 -0.102706 -0.93262398
-		 0.358576 -0.040440999 -0.93016601 0.36561599 -0.033410002 -0.93016601 0.36561599
-		 -0.033410002 -0.93262398 0.358576 -0.040440999 -0.92782199 0.37245199 0.02063 -0.92696702
-		 0.374596 0.020279 -0.030963 -0.016620001 0.99938202 -0.168796 -0.029472999 0.98521
-		 -0.41593301 -0.051808 0.90791899 -0.030963 -0.016620001 0.99938202 -0.096244 -0.99223697
-		 -0.078762002 0 -0.99686402 -0.079129003 -0.0071339998 -0.964275 -0.26480699 -0.044479001
-		 -0.96785802 -0.247531 -0.044479001 -0.96785802 -0.247531 -0.0071339998 -0.964275
-		 -0.26480699 -0.0088809999 -0.912862 -0.40817201 0.0072539998 -0.91463101 -0.40422499
-		 -0.99726301 0.073824003 0.004152 -0.99493998 0.070692003 0.071396999 -0.99493998
-		 0.070692003 0.071396999 -0.99723601 0.074183002 -0.0040509999 -0.991804 0.078055002
-		 -0.101158 -0.99726301 0.073824003 0.004152 -0.99723601 0.074183002 -0.0040509999
-		 -0.991804 0.078055002 -0.101158 0.089225002 -0.54891902 0.83109897 -0.076304004 -0.54143697
-		 0.83727098 -0.007067 -0.680709 0.73251998 0.01022 -0.68660003 0.726964 -0.98050499
-		 -0.157113 0.11801 -0.98007101 -0.15784401 0.12061 -0.91619098 -0.37436 0.142996 -0.95590502
-		 -0.254868 0.145907 0.94613999 -0.15459999 0.28446099 0.94867098 -0.151831 0.27743599
-		 0.92093998 -0.201763 0.333408 0.90805399 -0.25524399 0.33209601 -0.97729802 -0.116848
-		 -0.176733 -0.97729701 -0.116848 -0.17673901 -0.95863801 -0.16086701 -0.234809 -0.96279103
-		 -0.139421 -0.231506 -0.007154 -0.24044099 -0.97063702 0.35484999 -0.161173 -0.92092597
-		 0.33299899 0.165831 -0.928231 -0.032492999 0.111264 -0.99326003 0.97717899 0.105042
-		 -0.18463001 0.97740197 0.105108 -0.183404 0.99750799 0.058584999 -0.039305001 0.99941897
-		 0.012274 -0.031798001 -0.96799803 -0.14013401 0.208188 -0.95422202 -0.21754999 0.205264
-		 -0.97666699 -0.102499 0.18871801 -0.97457403 -0.118788 0.18998501 0 -0.428922 0.90334201
-		 0 -0.39219499 0.919882 0 -0.236066 0.97173703 0 -0.241579 0.97038102 0.98265302 -0.069026001
-		 0.17212901 0.97661197 0.127488 0.173136 0.97851598 -0.08557 0.187575 0.97950798 -0.068432003
-		 0.189422 0.98588902 -0.0078199999 -0.167218 0.97383797 0.158751 -0.162598 0.96866399
-		 -0.097268999 -0.22853599 0.96824598 -0.115369 -0.221789 -0.057484001 -0.41332299
-		 -0.908768 0.015115 0.070721 -0.99738199 0.581949 0.219087 -0.783158 0.57288897 -0.30925
-		 -0.75905401 -0.95990199 0.041480001 -0.27724901 -0.95438498 -0.111069 -0.27715299
-		 -0.93533599 -0.156708 -0.317157 -0.935983 -0.142074 -0.32210299 -0.83568001 -0.52997702
-		 0.144097 -0.831828 -0.53450698 0.14954799 -0.86825103 -0.46882299 0.162315 -0.84252203
-		 -0.51600599 0.154576 0 -0.80384099 0.594845 0 -0.80384099 0.594845 0 -0.78192401
-		 0.62337399 0 -0.77044803 0.63750303 0.918495 -0.278532 0.280691 0.90334702 -0.30407199
-		 0.302497 0.931077 -0.241624 0.27333701 0.95304799 -0.145291 0.26568899 0.99521798
-		 -0.069029003 -0.069105998 0.99514598 -0.085297003 -0.049075998 0.99627602 -0.034975
-		 -0.078805 0.99315798 0.073278002 -0.090926997 -0.072052002 0.50440198 -0.86045802
-		 0.34369701 0.53039598 -0.77495301 0.36701599 0.55068702 -0.749695 0.014721 0.59008902
-		 -0.80720401 -0.94571102 -0.208543 -0.249282 -0.94540799 -0.205311 -0.25308499 -0.96138501
-		 -0.085754 -0.261507 -0.94936001 -0.18243501 -0.25579801 -0.98305303 -0.033459999
-		 0.180243 -0.98245603 -0.041638002 0.181785 -0.97387999 0.192247 0.120823 -0.97331899
-		 0.196871 0.117866 0 -0.081006996 0.996714 0 -0.084663004 0.99641001 0.00086600002
-		 0.217777 0.97599798 0.035409998 0.210209 0.97701502 0.98065197 -0.0070259999 0.19563299
-		 0.98051602 0.001284 0.196437 0.96284997 0.20936 0.17055599 0.96193302 0.20911001
-		 0.175946 0.96616 -0.047231 -0.253582 0.96494502 -0.045626 -0.25845701 0.931485 -0.015065
-		 -0.36346701 0.93078899 -0.013976 -0.365289 -0.078589 -0.31382799 -0.94622201 0.582434
-		 -0.24899299 -0.77380502 0.55035198 -0.159917 -0.819475 -0.047251001 -0.164085 -0.98531401
-		 -0.93423897 -0.090719 -0.34491599 -0.93510699 -0.092554003 -0.34206599 -0.92080599
-		 0.002085 -0.39001599 -0.92251402 0.0059369998 -0.38591799 0.381179 -0.0557 0.922822
-		 0.023983 -0.053514998 0.99827898 -0.0078330003 -0.052978002 0.99856502 0.38143799
-		 -0.055698998 0.92271501 -0.99827999 0.050873999 0.029130001 -0.993954 0.073344998
-		 -0.081708997;
-	setAttr ".n[498:663]" -type "float3"  -0.99778402 -0.003859 -0.066418998 -1
-		 1e-06 0 0.995502 0.079781003 -0.051102001 0.997666 0.053624 0.042268999 1 1e-06 1e-06
-		 0.99855697 0.0015829999 -0.053686999 -0.993954 0.073344998 -0.081708997 -0.93490499
-		 -0.033466998 -0.35331699 -0.95397103 -0.073978998 -0.290631 -0.99778402 -0.003859
-		 -0.066418998 -0.071099997 -0.20587499 -0.97599202 0.52357602 -0.19273201 -0.82989299
-		 0.50842601 -0.030956 -0.86054897 -0.065775998 -0.056518 -0.99623299 0.94737798 -0.030533999
-		 -0.31865901 0.995502 0.079781003 -0.051102001 0.99855697 0.0015829999 -0.053686999
-		 0.97114497 -0.037519 -0.23552001 0.375249 0.90712202 0.190571 -0.058843002 0.98209399
-		 0.178968 0.079713002 0.96656603 0.24371099 0.42236501 0.88192499 0.20932101 -1 1e-06
-		 0 -1 1e-06 1e-06 -1 0 -1e-06 -1 0 0 -3.2e-05 -0.98810101 0.153804 0.005132 -0.98809898
-		 0.153733 -0.014906 -0.99851102 -0.052480999 0.000113 -0.99848199 -0.055084001 1 1e-06
-		 0 1 2e-06 0 1 -1e-06 -1e-06 1 -1e-06 -1e-06 -0.933258 0.18854 -0.30574799 -0.99171901
-		 -0.12253 -0.038476001 -0.95058602 -0.27204701 0.14959 -0.991229 -0.038511001 0.126423
-		 -0.99171901 -0.12253 -0.038476001 -0.93969601 -0.33342099 0.076177999 -0.849949 -0.52414501
-		 0.053474002 -0.95058602 -0.27204701 0.14959 -0.498577 -0.793396 0.349204 -0.55160099
-		 -0.78954101 0.269003 -0.38349199 -0.90198201 -0.19839901 -0.51177001 -0.84194499
-		 -0.170938 -0.25565901 0.67500502 0.69210303 -0.38579199 0.60188597 0.69921201 -0.466782
-		 0.32295901 0.82329297 -0.20470101 0.61322302 0.76292598 -0.62714899 0.031810999 0.77824998
-		 -0.83265501 -0.31094199 0.458258 -0.78065699 -0.295555 0.55065602 -0.65118498 -0.029446
-		 0.75834697 -0.53993601 -0.79461801 -0.27758101 -0.015267 -0.996113 -0.086750999 -0.025944
-		 -0.97290897 -0.229729 -0.31398901 -0.88924599 -0.332645 -0.27187201 0.68953401 0.67128903
-		 -0.442904 0.66872698 0.59719402 -0.42003 0.67774397 0.603522 -0.282774 0.705208 0.65017003
-		 -0.93176001 0.070524998 0.35615799 -0.938712 0.179735 0.294135 -0.96532702 0.107378
-		 0.237936 -0.97417903 0.135015 0.180958 -0.94440502 0.249671 0.213926 -0.96532702
-		 0.107378 0.237936 -0.982288 -0.101442 0.157544 -0.98616803 -0.148569 0.073490001
-		 -0.97417903 0.135015 0.180958 -0.32482901 -0.92299402 -0.20632 -0.085456997 -0.96929199
-		 -0.23058601 -0.18717401 -0.95741802 -0.21981201 -0.393924 -0.90539497 -0.15837701
-		 -0.26110101 0.69446999 -0.67047602 -0.45993799 0.39937899 -0.79306602 -0.46759999
-		 0.38428599 -0.79603702 -0.26110101 0.69446999 -0.67047602 -0.77722198 -0.62344801
-		 0.085082002 -0.77722198 -0.62344801 0.085082002 -0.77722198 -0.62344801 0.085082002
-		 -0.77722198 -0.62344801 0.085082002 -0.35281 0.588346 0.72758102 -0.35281 0.588346
-		 0.72758102 -0.35281 0.588346 0.72758102 -0.35281 0.588346 0.72758102 0.813833 0.57859099
-		 0.053936999 0.813833 0.57859099 0.053936999 0.813833 0.57859099 0.053936999 0.813833
-		 0.57859099 0.053936999 -0.20470101 0.61322302 0.76292598 -0.466782 0.32295901 0.82329297
-		 -0.205635 -0.048858002 0.97740799 0.024269 0.175745 0.984137 -0.31398901 -0.88924599
-		 -0.332645 -0.025944 -0.97290897 -0.229729 -0.040309001 -0.95893902 -0.280734 -0.306961
-		 -0.905967 -0.291547 -0.78065699 -0.295555 0.55065602 -0.83265501 -0.31094199 0.458258
-		 -0.72927099 -0.411933 0.54632902 -0.69901401 -0.41434401 0.58283699 -0.63850302 -0.526999
-		 0.56088001 -0.41956699 0.370626 0.828614 -0.50333601 0.204026 0.83965898 -0.63850302
-		 -0.526999 0.56088001 -0.046034001 0.079893999 0.99574 -0.321448 -0.057955999 0.94515198
-		 -0.239427 0.28845799 0.92707402 -0.13454001 0.35987401 0.92325002 -0.306961 -0.905967
-		 -0.291547 -0.040309001 -0.95893902 -0.280734 -0.085456997 -0.96929199 -0.23058601
-		 -0.32482901 -0.92299402 -0.20632 -0.72927099 -0.411933 0.54632902 -0.62522799 -0.43497899
-		 0.64798403 -0.57973701 -0.50726801 0.63763899 -0.69901401 -0.41434401 0.58283699
-		 0.71690297 -0.66960502 -0.194112 0.71690297 -0.66960502 -0.194112 0.71399802 -0.67593902
-		 -0.18252 0.68268901 -0.726448 -0.078791 0.199771 0.91812098 0.34226501 0.199771 0.91812098
-		 0.34226501 0.170247 0.91031599 0.37728 0.14694899 0.90285999 0.40404299 0.023382001
-		 0.968207 0.249056 0.023382001 0.968207 0.249056 0.017104 0.96641898 0.25640199 -0.032658
-		 0.94896299 0.313692 -0.478367 -0.87468398 -0.078059003 -0.47836801 -0.87468398 -0.078059003
-		 -0.470413 -0.87868202 -0.081425004 -0.475977 -0.87589598 -0.079072997 -0.234786 -0.484402
-		 0.84275198 -0.234786 -0.484402 0.84275198 -0.234786 -0.484402 0.84275198 -0.234786
-		 -0.484402 0.84275198 -0.21912099 0.65130901 0.72648698 -0.21912099 0.65130901 0.72648698
-		 -0.50333601 0.204026 0.83965898 -0.41956699 0.370626 0.828614 -0.94514 0.25693399
-		 -0.20173 -0.94514 0.25693399 -0.20173 -0.94514 0.25693399 -0.20173 -0.94514 0.25693399
-		 -0.20173 -0.44956699 -0.89250398 0.036421001 -0.44956699 -0.89250398 0.036421001
-		 -0.44956699 -0.89250398 0.036421001 -0.44956699 -0.89250398 0.036421001 -0.109884
-		 -0.91504198 -0.38810399 -0.0091469996 -0.88555801 -0.46443999 0.651667 -0.222662
-		 -0.725088 0.616494 -0.29584599 -0.72966403 -0.23492999 0.81208003 0.53416598 -0.28437501
-		 0.76343501 0.57991201 -0.317711 0.82467598 0.46794099 -0.30793899 0.82794797 0.468696
-		 0.043325 0.89376199 0.44644499 0.091940001 0.919586 0.38197899 0.292303 0.95377398
-		 0.069816999 0.28954899 0.954175 0.075571999 -0.063487999 -0.98900998 -0.13352001
-		 -0.065073997 -0.89710701 0.43699601 0.012523 -0.90948898 -0.415539;
-	setAttr ".n[664:829]" -type "float3"  0.045593001 -0.892223 -0.44928899 0.69954598
-		 -0.055108 -0.71245903 0.69882703 -0.055429999 -0.713139 0.69792497 -0.055833001 -0.713992
-		 0.69792497 -0.055833001 -0.713992 -0.402859 0.88108599 -0.247774 -0.40123701 0.88048899
-		 -0.25248599 -0.38888699 0.87536401 -0.28723601 -0.38888699 0.87536401 -0.28723601
-		 0.38195199 0.918634 -0.101117 0.384229 0.91716999 -0.105676 0.387705 0.91487199 -0.112672
-		 0.387705 0.91487199 -0.112672 0.95931399 -0.28182101 0.017116999 0.95521301 -0.29588699
-		 0.0043520001 0.96791899 -0.24649 0.048735999 0.96791899 -0.24649 0.048735999 -0.475977
-		 -0.87589598 -0.079072997 -0.470413 -0.87868202 -0.081425004 -0.0091469996 -0.88555801
-		 -0.46443999 -0.109884 -0.91504198 -0.38810399 -0.032658 0.94896299 0.313692 0.017104
-		 0.96641898 0.25640199 -0.28437501 0.76343501 0.57991201 -0.23492999 0.81208003 0.53416598
-		 0.14694899 0.90285999 0.40404299 0.170247 0.91031599 0.37728 0.091940001 0.919586
-		 0.38197899 0.043325 0.89376199 0.44644499 0.68268901 -0.726448 -0.078791 0.71399802
-		 -0.67593902 -0.18252 -0.065073997 -0.89710701 0.43699601 -0.063487999 -0.98900998
-		 -0.13352001 0.616494 -0.29584599 -0.72966403 0.651667 -0.222662 -0.725088 0.69882703
-		 -0.055429999 -0.713139 0.69954598 -0.055108 -0.71245903 -0.30793899 0.82794797 0.468696
-		 -0.317711 0.82467598 0.46794099 -0.40123701 0.88048899 -0.25248599 -0.402859 0.88108599
-		 -0.247774 0.28954899 0.954175 0.075571999 0.292303 0.95377398 0.069816999 0.384229
-		 0.91716999 -0.105676 0.38195199 0.918634 -0.101117 0.045593001 -0.892223 -0.44928899
-		 0.012523 -0.90948898 -0.415539 0.95521301 -0.29588699 0.0043520001 0.95931399 -0.28182101
-		 0.017116999 -0.393924 -0.90539497 -0.15837701 -0.18717401 -0.95741802 -0.21981201
-		 -0.219083 -0.96651101 -0.133641 -0.40661699 -0.90917403 -0.089810997 -0.97417903
-		 0.135015 0.180958 -0.98616803 -0.148569 0.073490001 -0.91019303 -0.399964 0.107595
-		 -0.96049702 -0.015362 0.277868 -0.94440502 0.249671 0.213926 -0.97417903 0.135015
-		 0.180958 -0.96049702 -0.015362 0.277868 -0.93307102 0.13289 0.334243 -0.282774 0.705208
-		 0.65017003 -0.42003 0.67774397 0.603522 -0.40450999 0.65587699 0.63733602 -0.301754
-		 0.731888 0.61097097 -0.04721 -0.16204 0.985654 -0.04721 -0.16204 0.985654 -0.17280801
-		 -0.79586899 0.580284 -0.055408999 -0.76187497 0.64534998 -0.231061 -0.916197 0.32740399
-		 -0.090196997 -0.92454898 0.37023601 -0.055408999 -0.76187497 0.64534998 -0.17280801
-		 -0.79586899 0.580284 -0.557051 -0.82765901 -0.068369001 -0.63954997 -0.76474398 -0.078373998
-		 -0.70236701 -0.71153098 -0.02011 -0.63972598 -0.768067 0.028693 -0.56622899 -0.81375802
-		 -0.131081 -0.59434098 -0.79393703 -0.128152 -0.63954997 -0.76474398 -0.078373998
-		 -0.557051 -0.82765901 -0.068369001 -0.52373803 -0.783728 -0.33386901 -0.54705602
-		 -0.78448302 -0.29208899 -0.59434098 -0.79393703 -0.128152 -0.56622899 -0.81375802
-		 -0.131081 -0.58121502 -0.72522599 -0.36910099 -0.31398901 -0.88924599 -0.332645 -0.306961
-		 -0.905967 -0.291547 -0.54705602 -0.78448302 -0.29208899 -0.52373803 -0.783728 -0.33386901
-		 -0.65792 -0.68395299 -0.315198 -0.53993601 -0.79461801 -0.27758101 -0.31398901 -0.88924599
-		 -0.332645 -0.58121502 -0.72522599 -0.36910099 -0.43880799 -0.78664899 0.43431699
-		 -0.498577 -0.793396 0.349204 -0.51177001 -0.84194499 -0.170938 -0.69840801 -0.70584798
-		 -0.11834 -0.32508299 -0.77633399 0.54002398 -0.39141801 -0.755566 0.52527398 -0.498577
-		 -0.793396 0.349204 -0.43880799 -0.78664899 0.43431699 -0.32100999 -0.80286902 0.50234902
-		 -0.53188699 -0.793378 0.29605499 -0.39141801 -0.755566 0.52527398 -0.32508299 -0.77633399
-		 0.54002398 -0.59338802 -0.79107797 0.148616 -0.57451898 -0.80745697 0.133946 -0.53188699
-		 -0.793378 0.29605499 -0.32100999 -0.80286902 0.50234902 -0.52743798 -0.78898299 -0.315144
-		 -0.55562001 -0.82073098 -0.13299499 -0.56148201 -0.81728798 -0.129528 -0.524737 -0.78004497
-		 -0.34085399 -0.51009899 -0.77798003 -0.36680499 -0.52743798 -0.78898299 -0.315144
-		 -0.524737 -0.78004497 -0.34085399 -0.52104402 -0.79359502 -0.31419599 -0.42466801
-		 -0.90489298 -0.028742 -0.50087398 -0.856906 -0.12181 -0.50228 -0.85831797 -0.104905
-		 -0.42103001 -0.90699399 -0.0097660003 -0.32680801 -0.941625 0.080859996 -0.42466801
-		 -0.90489298 -0.028742 -0.42103001 -0.90699399 -0.0097660003 -0.31549099 -0.94336402
-		 0.102619 -0.44230399 -0.224931 -0.86820102 -0.43399999 -0.35055101 -0.82991499 -0.43783599
-		 -0.322225 -0.83932698 -0.44247499 -0.24510901 -0.862634 -0.38586801 0.35067999 -0.85330498
-		 -0.44230399 -0.224931 -0.86820102 -0.44247499 -0.24510901 -0.862634 -0.38586801 0.35067999
-		 -0.85330498 -0.523148 0.82735503 -0.20445099 -0.53282797 0.82476699 -0.18935101 -0.474617
-		 0.80604899 -0.35358801 -0.47026199 0.80896002 -0.35275599 -0.59717 0.80188298 0.019288
-		 -0.59936798 0.80045903 0.0048929998 -0.53282797 0.82476699 -0.18935101 -0.523148
-		 0.82735503 -0.20445099 -0.64287198 0.75909901 0.102391 -0.64519298 0.76182997 0.057805002
-		 -0.64514601 0.76178998 0.058848001 -0.642811 0.75903302 0.103258 -0.64228898 0.75841397
-		 0.110782 -0.64287198 0.75909901 0.102391 -0.642811 0.75903302 0.103258 -0.64228803
-		 0.75841498 0.110782 -0.59590799 0.80227798 -0.035271998 -0.57515502 0.81689399 -0.043384001
-		 -0.57443702 0.81587702 -0.066083997 -0.61989301 0.78421903 -0.027078001 -0.67386001
-		 0.67534399 -0.29970601 -0.59590799 0.80227798 -0.035271998 -0.61989301 0.78421903
-		 -0.027078001 -0.81001902 0.51158798 -0.28661501 -0.69421202 0.50897002 -0.50893903
-		 -0.67386001 0.67534399 -0.29970601 -0.81001902 0.51158798 -0.28661501 -0.816338 0.30917299
-		 -0.487858 -0.46759999 0.38428599 -0.79603702 -0.45993799 0.39937899 -0.79306602 -0.55753601
-		 0.16871899 -0.81282699 -0.55753601 0.16871899 -0.81282699;
-	setAttr ".n[830:995]" -type "float3"  -0.57172602 0.16361 -0.80396599 -0.356749
-		 0.33762899 -0.87105501 -0.35088 0.35117501 -0.86807799 -0.540757 0.20413999 -0.81603199
-		 -0.71905601 0.462695 -0.51852798 -0.58138001 0.372933 -0.723131 -0.76213503 0.15124699
-		 -0.62950301 -0.830571 0.18052199 -0.52684402 -0.76534897 0.55539501 -0.32523501 -0.71905601
-		 0.462695 -0.51852798 -0.830571 0.18052199 -0.52684402 -0.92309397 0.31005299 -0.22751699
-		 -0.70071298 0.59819603 -0.388798 -0.71030903 0.58295798 -0.39449 -0.73552698 0.53973198
-		 -0.40949899 -0.73552698 0.53973198 -0.40949899 0.36210999 -0.59022802 0.72146201
-		 0.305994 -0.595819 0.74254102 0.443266 -0.57792902 0.685211 0.443266 -0.57792902
-		 0.685211 0.34731299 -0.52521098 0.77687001 0.236323 -0.60518801 0.76019597 0.436607
-		 -0.44926801 0.77944398 0.436607 -0.44926801 0.77944398 -0.41986501 -0.245335 0.87379903
-		 -0.360964 -0.26913401 0.892901 -0.47202399 -0.222664 0.85300303 -0.47202399 -0.222664
-		 0.85300303 -0.232438 0.017999999 0.97244501 -0.226446 0.051738001 0.97264898 -0.407175
-		 0.062583998 0.91120398 -0.40183899 -0.047634002 0.91447097 -0.43776801 -0.064097002
-		 0.89679998 -0.245664 -0.0022199999 0.96935201 -0.232438 0.017999999 0.97244501 -0.40183899
-		 -0.047634002 0.91447097 -0.52191901 -0.24918801 0.815786 -0.317817 -0.106328 0.94217098
-		 -0.286457 -0.092889003 0.95358002 -0.47403201 -0.234312 0.848759 -0.181082 -0.55757397
-		 0.81013602 -0.158868 -0.48884401 0.85778302 -0.17408 -0.53590602 0.82613599 -0.181082
-		 -0.55757397 0.81013602 -0.41867501 0.35525799 0.835765 -0.41867501 0.35525799 0.835765
-		 -0.41867501 0.35525799 0.835765 -0.41867501 0.35525799 0.835765 -0.480223 0.43407199
-		 0.76221198 -0.44285801 0.43954799 0.78145599 -0.45348701 0.43808201 0.77616602 -0.480223
-		 0.43407199 0.76221198 -0.52587599 0.75217199 0.39710301 -0.52587599 0.75217199 0.39710301
-		 -0.525877 0.75217199 0.39710301 -0.52587599 0.75217199 0.39710301 -0.52848101 0.100016
-		 0.84303302 -0.62714899 0.031810999 0.77824998 -0.65118498 -0.029446 0.75834697 -0.61294299
-		 0.019925 0.78987598 -0.640769 -0.19481599 0.74260497 -0.47484899 0.107038 0.87353402
-		 -0.52848101 0.100016 0.84303302 -0.61294299 0.019925 0.78987598 -0.442904 0.66872698
-		 0.59719402 -0.63597798 0.60899699 0.473977 -0.51368397 0.62620503 0.58651203 -0.42003
-		 0.67774397 0.603522 -0.51307303 0.58451903 0.628564 -0.40450999 0.65587699 0.63733602
-		 -0.42003 0.67774397 0.603522 -0.51368397 0.62620503 0.58651203 -0.40406099 -0.12970901
-		 0.90548903 -0.40406099 -0.12970901 0.90548903 -0.40406099 -0.12970901 0.90548903
-		 -0.40406099 -0.12970901 0.90548903 -0.59903699 -0.082684003 0.79644102 -0.59903699
-		 -0.082684003 0.79644102 -0.59903699 -0.082684003 0.79644102 -0.59903699 -0.082684003
-		 0.79644102 -0.18918601 -0.207772 0.95970798 -0.18918601 -0.207772 0.95970798 -0.18918601
-		 -0.207772 0.95970798 -0.18918601 -0.207772 0.95970798 0.042245999 -0.78039998 0.62385201
-		 0.042245999 -0.78039998 0.62385201 0.042245999 -0.78039998 0.62385201 0.042245999
-		 -0.78039998 0.62385201 0.443685 -0.311777 0.84020102 0.443685 -0.311777 0.84020102
-		 0.443685 -0.311777 0.84020102 0.443685 -0.311777 0.84020102 -0.159219 0.120697 0.97983801
-		 -0.159219 0.120697 0.97983801 -0.159219 0.120697 0.97983801 -0.159219 0.120697 0.97983801
-		 -0.34851101 -0.259197 0.90075397 -0.34851101 -0.259197 0.90075397 -0.34851 -0.259197
-		 0.90075397 -0.34851 -0.259197 0.90075397 0.077575997 -0.836743 0.54207301 0.077575997
-		 -0.836743 0.54207301 0.077575997 -0.836743 0.54207301 0.077575997 -0.836743 0.54207301
-		 0.99357003 -0.086025 0.073615998 0.99357003 -0.086025 0.073615998 0.99357003 -0.086025
-		 0.073615998 0.99357003 -0.086025 0.073615998 0.087885998 0.981381 -0.17078701 0.087885998
-		 0.981381 -0.17078701 0.087885998 0.981381 -0.17078701 0.087885998 0.981381 -0.17078701
-		 -0.52945 0.368267 -0.76424003 -0.52945 0.368267 -0.76423901 -0.52945 0.368267 -0.76423901
-		 -0.52945 0.368267 -0.76423901 -0.253867 0.91161197 0.32328799 -0.253867 0.91161197
-		 0.32328799 -0.253867 0.91161197 0.32328799 -0.253867 0.91161197 0.32328799 -0.40661699
-		 -0.90917403 -0.089810997 -0.219083 -0.96651101 -0.133641 -0.138556 -0.95985103 0.243902
-		 -0.36185199 -0.90532899 0.22235601 -0.63972598 -0.768067 0.028693 -0.70236701 -0.71153098
-		 -0.02011 -0.74024701 -0.65647203 0.145184 -0.74028897 -0.65644902 0.14507601 -0.96049702
-		 -0.015362 0.277868 -0.91019303 -0.399964 0.107595 -0.564816 -0.76215702 0.31638601
-		 -0.85693699 -0.25902399 0.44560701 -0.93307102 0.13289 0.334243 -0.96049702 -0.015362
-		 0.277868 -0.85693699 -0.25902399 0.44560701 -0.88786697 -0.057572 0.45648399 -0.733006
-		 0.42735299 0.52921802 -0.40450999 0.65587699 0.63733602 -0.51307303 0.58451903 0.628564
-		 -0.733006 0.42735299 0.52921802 -0.028317999 -0.35795999 0.93330699 -0.028317999
-		 -0.35795999 0.93330699 -0.028317999 -0.35795999 0.93330699 -0.028317999 -0.35795999
-		 0.93330699 -0.96487302 0.18881699 -0.182671 -0.96487302 0.18881699 -0.182671 -0.96487302
-		 0.18881699 -0.182671 -0.96487302 0.18881699 -0.182671 -0.97828698 0.050779 -0.200938
-		 -0.97828698 0.050779 -0.200938 -0.97828698 0.050779 -0.200938 -0.97828698 0.050779
-		 -0.200938 0.056953002 -0.86235303 0.50309497 0.056953002 -0.86235303 0.50309497 0.056953002
-		 -0.86235303 0.50309497 0.056953002 -0.86235303 0.50309497 0.238079 -0.50511599 -0.82956398
-		 0.238079 -0.50511599 -0.82956398 0.238079 -0.50511599 -0.82956398 0.238079 -0.50511599
-		 -0.82956398 0.999551 0.019939 -0.022383999 0.999551 0.019939 -0.022383999 0.999551
-		 0.019939 -0.022383999 0.999551 0.019939 -0.022383999 0.97002101 -0.239657 -0.040290002
-		 0.97002101 -0.239657 -0.040290002;
-	setAttr ".n[996:1161]" -type "float3"  0.97002101 -0.239657 -0.040290002 0.97002101
-		 -0.239657 -0.040290002 -0.45246199 0.40736601 -0.79330403 -0.45246199 0.40736499
-		 -0.79330403 -0.45246199 0.40736499 -0.79330403 -0.45246199 0.40736601 -0.79330403
-		 -0.50030702 0.80483699 -0.31926399 -0.50030702 0.80483699 -0.31926399 -0.50030702
-		 0.80483699 -0.31926399 -0.50030702 0.80483699 -0.31926399 -0.99137998 0.12633599
-		 0.03472 -0.99137998 0.12633599 0.03472 -0.99137998 0.12633599 0.03472 -0.99137998
-		 0.12633599 0.03472 -0.034828998 0.97450101 0.22166499 -0.034828998 0.97450101 0.22166499
-		 -0.034828998 0.97450101 0.22166499 -0.034828998 0.97450101 0.22166499 -0.11269 0.97491902
-		 0.19192199 -0.11269 0.97491902 0.19192199 -0.11269 0.97491902 0.19192199 -0.11269
-		 0.97491902 0.19192199 -0.102692 0.93259698 0.346001 -0.102692 0.93259698 0.346001
-		 -0.102692 0.93259698 0.346001 -0.102692 0.93259698 0.346001 0 0.96355599 0.267506
-		 0 0.96355599 0.267506 0 0.96355599 0.267506 0 0.96355599 0.267506 -0.039611001 -0.71191698
-		 0.70114601 -0.044514 -0.71076202 0.70202202 -0.018371999 -0.71670002 0.69713998 -0.018371999
-		 -0.71670002 0.69713998 0.020500001 -0.95792401 -0.28628999 0.020500001 -0.95792401
-		 -0.28628999 0.020500001 -0.95792401 -0.28628999 0.020500001 -0.95792401 -0.28628999
-		 0 -0.99357098 -0.113211 0 -0.99357098 -0.113211 0 -0.99357098 -0.113211 0 -0.99357098
-		 -0.113211 0.107974 -0.88027298 -0.462019 0.107974 -0.88027298 -0.462019 0.107974
-		 -0.88027298 -0.462019 0.107974 -0.88027298 -0.462019 0.089850999 -0.97349399 -0.210326
-		 0.089850999 -0.97349399 -0.210326 0.089850999 -0.97349399 -0.210326 0.089850999 -0.97349399
-		 -0.210326 0.007183 -0.99280697 -0.11951 0.007183 -0.99280697 -0.11951 0.007183 -0.99280697
-		 -0.11951 0.007183 -0.99280697 -0.11951 -0.067681998 0.36462 -0.928693 -0.067681998
-		 0.36462 -0.928693 -0.067681998 0.36462 -0.928693 -0.067681998 0.36462 -0.928693 -0.067681998
-		 0.36462 -0.928693 -0.42121899 0.48617399 -0.765643 -0.42121899 0.48617399 -0.765643
-		 -0.42121899 0.48617399 -0.765643 -0.30826199 -0.62158298 0.72014499 -0.30919099 -0.621149
-		 0.72012103 -0.35364699 -0.79147297 0.49850199 -0.357099 -0.79989803 0.48233101 -0.81276
-		 0.00041499999 0.58259797 -0.81230903 -0.004586 0.58320999 -0.96002501 0.031778999
-		 0.27810401 -0.979698 0.033257 0.19769999 -0.36066699 0.78318202 0.50650299 -0.36105299
-		 0.78298599 0.50652999 -0.408871 0.90956497 0.074267998 -0.40976 0.91177303 0.027702
-		 -0.36927801 -0.860313 0.351419 -0.36952001 -0.86022002 0.35139099 -0.38347799 -0.91503298
-		 0.12514 -0.38398001 -0.91631001 0.113735 -0.99752003 0.034851 0.061149999 -0.99752003
-		 0.034875002 0.061143 -0.99915701 0.034676999 0.021986 -0.99926198 0.034678999 0.016499
-		 -0.40099299 0.89341402 -0.20252299 -0.40099299 0.89341402 -0.20252299 -0.40848199
-		 0.91011101 -0.069578998 -0.408683 0.91056001 -0.062119 -0.386208 -0.92241198 -7.0000001e-06
-		 -0.386208 -0.92241198 -7.0000001e-06 -0.38620701 -0.92241198 -8e-06 -0.38620701 -0.92241198
-		 -8e-06 -0.99939901 0.034674 1.2e-05 -0.99939901 0.034674 1.2e-05 -0.99939901 0.034673002
-		 1.2e-05 -0.99939901 0.034673002 1.2e-05 -0.40946999 0.912323 4e-06 -0.40946999 0.912323
-		 4e-06 -0.40946901 0.91232401 4e-06 -0.40946901 0.91232401 4e-06 -0.39966801 -0.83961201
-		 -0.367854 -0.40134099 -0.83889198 -0.36767501 -0.41857901 -0.75048101 -0.51143903
-		 -0.41775799 -0.767501 -0.486231 -0.992549 0.032368999 -0.117466 -0.992544 0.032019001
-		 -0.117607 -0.95785898 0.030967001 -0.28556499 -0.97437501 0.031367999 -0.22273199
-		 -0.416206 0.85781002 0.30155301 -0.41866201 0.85680503 0.301011 -0.45124 0.89102501
-		 -0.049555998 -0.45079499 0.89261901 -0.0039840001 -0.41775799 -0.767501 -0.486231
-		 -0.41857901 -0.75048101 -0.51143903 -0.40949199 -0.57580799 -0.70764601 -0.40949199
-		 -0.57580799 -0.70764601 -0.97437501 0.031367999 -0.22273199 -0.95785898 0.030967001
-		 -0.28556499 -0.80536097 0.026729001 -0.59218198 -0.80536097 0.026729001 -0.59218198
-		 -0.45079499 0.89261901 -0.0039840001 -0.45124 0.89102501 -0.049555998 -0.34560001
-		 0.64759898 -0.67909902 -0.34560001 0.64759898 -0.67909998 -0.96267802 -0.195398 0.18727
-		 -0.98936802 -0.11629 0.087335996 -0.98078001 0.100367 0.16732401 -0.92789 0.33604199
-		 0.161543 -0.54955798 -0.83240199 -0.071364999 -0.51009899 -0.77798003 -0.36680499
-		 -0.52104402 -0.79359502 -0.31419599 -0.54957199 -0.83241498 -0.071098998 -0.50248301
-		 -0.76704001 -0.398949 -0.51009899 -0.77798003 -0.36680499 -0.54955798 -0.83240199
-		 -0.071364999 -0.54953498 -0.83238101 -0.071788996 -0.59937602 0.80037397 -0.012216
-		 -0.59936798 0.80045903 0.0048929998 -0.64519298 0.76182997 0.057805002 -0.64523202
-		 0.761859 0.056970999 -0.64514601 0.76178998 0.058848001 -0.64519298 0.76182997 0.057805002
-		 -0.59936798 0.80045903 0.0048929998 -0.59717 0.80188298 0.019288 -0.92789 0.33604199
-		 0.161543 -0.98078001 0.100367 0.16732401 -0.90494502 0.37483799 0.20141999 -0.82897502
-		 0.54239702 0.13640299 -0.53875601 0.36301699 -0.76023698 -0.072052002 0.50440198
-		 -0.86045802 0.014721 0.59008902 -0.80720401 -0.58141202 0.355281 -0.73193902 -0.50341499
-		 -0.29370901 -0.812594 -0.007154 -0.24044099 -0.97063702 -0.032492999 0.111264 -0.99326003
-		 -0.50238103 -0.073209003 -0.86154199 0.22641601 -0.100373 -0.96884501 0.051095001
-		 -0.123924 -0.99097502 -0.61516601 -0.173305 -0.76911402 -0.61516601 -0.173305 -0.76911402
-		 -0.93262398 0.358576 -0.040440999 -0.933972 0.34226701 -0.102706 -0.93923801 0.32466701
-		 -0.111462 -0.93710399 0.34554699 -0.049334999 -0.92782199 0.37245199 0.02063 -0.93262398
-		 0.358576 -0.040440999 -0.93710399 0.34554699 -0.049334999 -0.92979699 0.367448 0.021447999;
-	setAttr ".n[1162:1327]" -type "float3"  -0.41593301 -0.051808 0.90791899 -0.168796
-		 -0.029472999 0.98521 -0.73628098 -0.078901 0.67206103 -0.73628098 -0.078901 0.67206103
-		 -0.007067 -0.680709 0.73251998 -0.076304004 -0.54143697 0.83727098 -0.29786599 -0.50588799
-		 0.80953902 -0.039895002 -0.66117102 0.749174 0 -0.78192401 0.62337399 0 -0.80384099
-		 0.594845 0 -0.80384099 0.594845 0 -0.78352499 0.62136 0 -0.236066 0.97173703 0 -0.39219499
-		 0.919882 0 -0.38744801 0.92189199 0 -0.241447 0.97041398 0.00086600002 0.217777 0.97599798
-		 0 -0.084663004 0.99641001 0 -0.079859003 0.99680603 -0.050760999 0.212952 0.975743
-		 -0.489445 0.84131598 0.229414 0.079713002 0.96656603 0.24371099 -0.058843002 0.98209399
-		 0.178968 -0.45804399 0.87838602 0.136502 -0.0078330003 -0.052978002 0.99856502 0.023983
-		 -0.053514998 0.99827898 -0.48095301 -0.038242001 0.87591201 -0.48326799 -0.038135
-		 0.874641 -0.0070969998 -0.98806202 0.15389299 -3.2e-05 -0.98810101 0.153804 0.000113
-		 -0.99848199 -0.055084001 0.020578001 -0.99844199 -0.051865999 -0.0071339998 -0.964275
-		 -0.26480699 0 -0.99686402 -0.079129003 0.133488 -0.98794299 -0.078420997 0.051314998
-		 -0.96827197 -0.244574 -0.0088809999 -0.912862 -0.40817201 -0.0071339998 -0.964275
-		 -0.26480699 0.051314998 -0.96827197 -0.244574 -0.039992999 -0.90872997 -0.41546401
-		 -0.709705 -0.145693 -0.68926901 -0.071099997 -0.20587499 -0.97599202 -0.065775998
-		 -0.056518 -0.99623299 -0.69397199 -0.042884 -0.71872401 -0.760773 -0.195921 -0.61874002
-		 -0.078589 -0.31382799 -0.94622201 -0.047251001 -0.164085 -0.98531401 -0.73598301
-		 -0.088316001 -0.671215 -0.76545298 0.125798 -0.63107598 0.015115 0.070721 -0.99738199
-		 -0.057484001 -0.41332299 -0.908768 -0.75193501 -0.25048599 -0.60979599 -0.440478
-		 -0.13116001 -0.88813102 -0.057627 -0.138226 -0.98872298 -0.0023310001 -0.088113002
-		 -0.996108 -0.31610101 -0.065723002 -0.946446 -0.480768 -0.215951 -0.84983999 -0.109345
-		 -0.204982 -0.97263902 -0.057627 -0.138226 -0.98872298 -0.440478 -0.13116001 -0.88813102
-		 -0.619712 -0.034005001 -0.78409201 -0.46285999 -0.054887999 -0.88472998 -0.248044
-		 -0.22108901 -0.943183 -0.58447498 -0.23716199 -0.77597898 -0.33051899 -0.080554999
-		 -0.940355 -0.46285999 -0.054887999 -0.88472998 -0.619712 -0.034005001 -0.78409201
-		 -0.61547798 -0.061691001 -0.78573602 -0.90910202 0.387687 -0.15242 -0.901353 0.40522599
-		 -0.152826 -0.86843997 0.471315 -0.153861 -0.86843997 0.471315 -0.153861 -0.64790303
-		 -0.286432 0.70581698 -0.76607502 -0.027074 0.64218098 -0.91596401 0.016566999 0.40091801
-		 -0.73526299 -0.259662 0.62607002 -0.64790303 -0.286432 0.70581698 -0.73526299 -0.259662
-		 0.62607002 -0.30404699 -0.341912 0.88918602 -0.002298 -0.50593197 0.86256999 0.008258
-		 -0.033289 0.999412 -0.27435499 -0.075611003 0.95865101 -0.28105101 -0.020398 0.95947599
-		 0.018968999 0.0066399998 0.999798 -0.0026380001 0.074732997 0.99720001 0.018968999
-		 0.0066399998 0.999798 -0.28105101 -0.020398 0.95947599 -0.29653001 0.087328002 0.95102298
-		 -0.244056 0.90943801 0.336689 0.0056019998 0.93371302 0.357979 0.00012500001 0.93906403
-		 0.343743 -0.132715 0.93272001 0.33529201 0.0099470001 -0.140488 0.99003202 0.00569
-		 -0.14081199 0.99001998 -0.36404699 -0.14776599 0.91958398 -0.37542099 -0.14750101
-		 0.91504198 0 -1 0 0 -1 0 0 -1 2e-06 -1e-06 -1 2e-06 -0.00090500002 -0.95212501 -0.30570799
-		 0 -0.95212501 -0.305709 -0.069610998 -0.94981498 -0.30496699 -0.069610998 -0.94981599
-		 -0.30496699 -0.347734 -0.28323799 -0.89378798 0.001036 -0.254455 -0.96708399 -0.0017810001
-		 0.32975799 -0.94406402 -0.383203 0.30490199 -0.871889 -0.97457403 -0.118788 0.18998501
-		 -0.97666699 -0.102499 0.18871801 -0.98245603 -0.041638002 0.181785 -0.98305303 -0.033459999
-		 0.180243 0 -0.084663004 0.99641001 0 -0.236066 0.97173703 0 -0.241447 0.97041398
-		 0 -0.079859003 0.99680603 0 -0.241579 0.97038102 0 -0.236066 0.97173703 0 -0.084663004
-		 0.99641001 0 -0.081006996 0.996714 0.97950798 -0.068432003 0.189422 0.97851598 -0.08557
-		 0.187575 0.98051602 0.001284 0.196437 0.98065197 -0.0070259999 0.19563299 0.96824598
-		 -0.115369 -0.221789 0.96866399 -0.097268999 -0.22853599 0.96494502 -0.045626 -0.25845701
-		 0.96616 -0.047231 -0.253582 -0.078589 -0.31382799 -0.94622201 -0.057484001 -0.41332299
-		 -0.908768 0.57288897 -0.30925 -0.75905401 0.582434 -0.24899299 -0.77380502 -0.75193501
-		 -0.25048599 -0.60979599 -0.057484001 -0.41332299 -0.908768 -0.078589 -0.31382799
-		 -0.94622201 -0.760773 -0.195921 -0.61874002 -0.935983 -0.142074 -0.32210299 -0.93533599
-		 -0.156708 -0.317157 -0.93510699 -0.092554003 -0.34206599 -0.93423897 -0.090719 -0.34491599
-		 -0.84252203 -0.51600599 0.154576 -0.86825103 -0.46882299 0.162315 -0.95422202 -0.21754999
-		 0.205264 -0.96799803 -0.14013401 0.208188 0 -0.39219499 0.919882 0 -0.78192401 0.62337399
-		 0 -0.78352499 0.62136 0 -0.38744801 0.92189199 0 -0.77044803 0.63750303 0 -0.78192401
-		 0.62337399 0 -0.39219499 0.919882 0 -0.428922 0.90334201 0.95304799 -0.145291 0.26568899
-		 0.931077 -0.241624 0.27333701 0.97661197 0.127488 0.173136 0.98265302 -0.069026001
-		 0.17212901 0.99315798 0.073278002 -0.090926997 0.99627602 -0.034975 -0.078805 0.97383797
-		 0.158751 -0.162598 0.98588902 -0.0078199999 -0.167218 0.014721 0.59008902 -0.80720401
-		 0.36701599 0.55068702 -0.749695 0.581949 0.219087 -0.783158 0.015115 0.070721 -0.99738199
-		 -0.58141202 0.355281 -0.73193902 0.014721 0.59008902 -0.80720401;
-	setAttr ".n[1328:1493]" -type "float3"  0.015115 0.070721 -0.99738199 -0.76545298
-		 0.125798 -0.63107598 -0.94936001 -0.18243501 -0.25579801 -0.96138501 -0.085754 -0.261507
-		 -0.95438498 -0.111069 -0.27715299 -0.95990199 0.041480001 -0.27724901 -0.97331899
-		 0.196871 0.117866 -0.97387999 0.192247 0.120823 -0.993954 0.073344998 -0.081708997
-		 -0.99827999 0.050873999 0.029130001 -0.0022849999 0.17565601 0.98444903 0.00086600002
-		 0.217777 0.97599798 -0.050760999 0.212952 0.975743 -0.056614 0.1769 0.98259902 0.035409998
-		 0.210209 0.97701502 0.00086600002 0.217777 0.97599798 -0.0022849999 0.17565601 0.98444903
-		 0.039434999 0.174348 0.98389399 0.96193302 0.20911001 0.175946 0.96284997 0.20936
-		 0.17055599 0.997666 0.053624 0.042268999 0.995502 0.079781003 -0.051102001 0.93078899
-		 -0.013976 -0.365289 0.931485 -0.015065 -0.36346701 0.995502 0.079781003 -0.051102001
-		 0.94737798 -0.030533999 -0.31865901 -0.047251001 -0.164085 -0.98531401 0.55035198
-		 -0.159917 -0.819475 0.52357602 -0.19273201 -0.82989299 -0.071099997 -0.20587499 -0.97599202
-		 -0.73598301 -0.088316001 -0.671215 -0.047251001 -0.164085 -0.98531401 -0.071099997
-		 -0.20587499 -0.97599202 -0.709705 -0.145693 -0.68926901 -0.92251402 0.0059369998
-		 -0.38591799 -0.92080599 0.002085 -0.39001599 -0.93490499 -0.033466998 -0.35331699
-		 -0.993954 0.073344998 -0.081708997 0.42236501 0.88192499 0.20932101 0.079713002 0.96656603
-		 0.24371099 0.077583 0.96430999 0.25315401 0.42648801 0.87900501 0.21320701 1 -1e-06
-		 -1e-06 1 -1e-06 -1e-06 1 -1e-06 -2e-06 1 -1e-06 -1e-06 0.000113 -0.99848199 -0.055084001
-		 -0.014906 -0.99851102 -0.052480999 -0.016785 -0.99745202 -0.069346003 -0.001069 -0.997594
-		 -0.069316 0.020578001 -0.99844199 -0.051865999 0.000113 -0.99848199 -0.055084001
-		 -0.001069 -0.997594 -0.069316 0.023259001 -0.997329 -0.069237001 -1 0 0 -1 0 -1e-06
-		 -1 0 -1e-06 -1 0 -1e-06 0.077583 0.96430999 0.25315401 0.079713002 0.96656603 0.24371099
-		 -0.489445 0.84131598 0.229414 -0.49448299 0.83349597 0.246516 -0.000199 0.62257898
-		 0.78255701 -0.001385 0.47178 0.881715 -0.28012899 0.45216501 0.846802 -0.25636101
-		 0.60056603 0.75736302 0.30105299 0.444976 0.84342402 -0.001385 0.47178 0.881715 -0.000199
-		 0.62257898 0.78255701 0.27505201 0.59986001 0.751342 0.99324101 0.115757 -0.0085619995
-		 0.99315399 0.116486 -0.0086899996 0.98963398 -0.136051 -0.045991998 0.99903601 -0.015914001
-		 -0.040902 -0.0040449998 -0.127896 -0.99177903 0.33955199 -0.121943 -0.93264902 0.34065899
-		 -0.331119 -0.87994999 0.001084 -0.332407 -0.94313502 -0.31635001 -0.120147 -0.94100398
-		 -0.0040449998 -0.127896 -0.99177903 0.001084 -0.332407 -0.94313502 -0.31775799 -0.33448401
-		 -0.88721502 -0.99155301 0.129053 -0.012956 -0.99163502 0.128433 -0.012859 -0.99875599
-		 -0.025672 -0.042761002 -0.98755902 -0.14955001 -0.048610002 -0.99155301 0.129053
-		 -0.012956 -0.99273199 -0.114307 0.037636999 -0.996158 -0.083150998 0.027479 -0.99163502
-		 0.128433 -0.012859 -0.001385 0.47178 0.881715 -0.0026380001 0.074732997 0.99720001
-		 -0.29653001 0.087328002 0.95102298 -0.28012899 0.45216501 0.846802 0.30105299 0.444976
-		 0.84342402 0.31590599 0.056361001 0.947115 -0.0026380001 0.074732997 0.99720001 -0.001385
-		 0.47178 0.881715 0.99324101 0.115757 -0.0085619995 0.98961002 -0.136502 0.045155998
-		 0.981884 -0.179965 0.059303999 0.99315399 0.116486 -0.0086899996 -0.0023310001 -0.088113002
-		 -0.996108 0.34081101 -0.090554997 -0.93576002 0.33955199 -0.121943 -0.93264902 -0.0040449998
-		 -0.127896 -0.99177903 -0.31635001 -0.120147 -0.94100398 -0.31610101 -0.065723002
-		 -0.946446 -0.0023310001 -0.088113002 -0.996108 -0.0040449998 -0.127896 -0.99177903
-		 -0.996584 -0.060755 0.055945002 -0.994434 -0.093029998 0.049454 -0.98701298 -0.156702
-		 0.035346001 -0.98700702 -0.15668499 0.035595998 -0.002298 -0.50593197 0.86256999
-		 -0.30404699 -0.341912 0.88918602 -0.25278899 -0.229105 0.940005 0.051651999 -0.14987101
-		 0.98735499 0.24555101 -0.496663 0.83248502 -0.002298 -0.50593197 0.86256999 0.051651999
-		 -0.14987101 0.98735499 0.32499099 -0.064266004 0.94353098 0.98079997 0.19434699 -0.016143
-		 0.98807198 0.153981 -0.001632 0.95455498 0.2933 -0.052905001 0.95455402 0.29328999
-		 -0.052988 0.27846599 -0.258773 -0.92492902 -0.15880799 -0.355463 -0.92110097 -0.248044
-		 -0.22108901 -0.943183 0.217264 -0.196022 -0.95622802 -0.58447498 -0.23716199 -0.77597898
-		 -0.248044 -0.22108901 -0.943183 -0.15880799 -0.355463 -0.92110097 -0.53675801 -0.38134301
-		 -0.75264102 -0.99778402 -0.003859 -0.066418998 -0.95397103 -0.073978998 -0.290631
-		 -0.98728198 0.023034001 -0.1573 -0.99865597 0.0075099999 -0.051284999 -1 1e-06 0
-		 -0.99778402 -0.003859 -0.066418998 -0.99865597 0.0075099999 -0.051284999 -1 0 0 -1
-		 0 -1e-06 -1 1e-06 1e-06 -1 2e-06 2e-06 -1 -1e-06 0 -1 0 -1e-06 -1 0 -1e-06 -1 -1e-06
-		 0 -1 -1e-06 0 -0.0089919996 -0.052958 0.99855602 -0.0078330003 -0.052978002 0.99856502
-		 -0.48326799 -0.038135 0.874641 -0.498799 -0.037400998 0.86590999 0.38143799 -0.055698998
-		 0.92271501 -0.0078330003 -0.052978002 0.99856502 -0.0089919996 -0.052958 0.99855602
-		 0.38317499 -0.055691998 0.92199498 1 -1e-06 -1e-06 1 -1e-06 -1e-06 1 -1e-06 -1e-06
-		 1 -1e-06 -1e-06 1 2e-06 2e-06 1 1e-06 0 1 -1e-06 -1e-06 1 -1e-06 -1e-06;
-	setAttr ".n[1494:1659]" -type "float3"  0.99855697 0.0015829999 -0.053686999
-		 1 1e-06 1e-06 1 -1e-06 0 0.999237 0.010858 -0.037528001 0.97114497 -0.037519 -0.23552001
-		 0.99855697 0.0015829999 -0.053686999 0.999237 0.010858 -0.037528001 0.99365002 0.031273
-		 -0.108078 -0.065775998 -0.056518 -0.99623299 0.50842601 -0.030956 -0.86054897 0.481462
-		 0.289612 -0.827236 -0.035525002 0.328255 -0.94392103 -0.69397199 -0.042884 -0.71872401
-		 -0.065775998 -0.056518 -0.99623299 -0.035525002 0.328255 -0.94392103 -0.66859102
-		 0.242091 -0.70311999 0.001036 -0.254455 -0.96708399 0.001084 -0.332407 -0.94313502
-		 0.34065899 -0.331119 -0.87994999 0.37250599 -0.278449 -0.88527101 0.99903601 -0.015914001
-		 -0.040902 0.98963398 -0.136051 -0.045991998 0.97351903 -0.220808 -0.059200998 0.969046
-		 -0.24081001 -0.054412998 0.98442799 -0.069453001 0.161487 0.987342 -0.057425998 0.147847
-		 0.98325098 -0.135868 0.121481 0.98064399 -0.136902 0.139983 0.39430699 -0.111869
-		 0.91214401 -0.015627 -0.14178801 0.98977399 0.00569 -0.14081199 0.99001998 0.39684099
-		 -0.111573 0.91108102 -0.36404699 -0.14776599 0.91958398 0.00569 -0.14081199 0.99001998
-		 -0.015627 -0.14178801 0.98977399 -0.36061299 -0.147842 0.92092401 -0.98175198 -0.166706
-		 0.091498002 -0.98293298 -0.165999 0.079291001 -0.988617 -0.11531 0.096642002 -0.98675102
-		 -0.12311 0.105673 -0.98755902 -0.14955001 -0.048610002 -0.99875599 -0.025672 -0.042761002
-		 -0.96476501 -0.25663701 -0.058008999 -0.96980798 -0.23555601 -0.063130997 -0.31775799
-		 -0.33448401 -0.88721502 0.001084 -0.332407 -0.94313502 0.001036 -0.254455 -0.96708399
-		 -0.347734 -0.28323799 -0.89378798 -0.239427 0.28845799 0.92707402 -0.321448 -0.057955999
-		 0.94515198 -0.52848101 0.100016 0.84303302 -0.47484899 0.107038 0.87353402 -0.321448
-		 -0.057955999 0.94515198 -0.63149798 0.189365 0.75189799 -0.62714899 0.031810999 0.77824998
-		 -0.52848101 0.100016 0.84303302 -0.466782 0.32295901 0.82329297 -0.38579199 0.60188597
-		 0.69921201 -0.63072699 0.40391099 0.66260099 -0.63149798 0.189365 0.75189799 -0.85548699
-		 -0.39418799 0.335796 -0.95058602 -0.27204701 0.14959 -0.849949 -0.52414501 0.053474002
-		 -0.89570701 -0.430599 0.110876 -0.89881498 -0.247107 0.36203599 -0.89570701 -0.430599
-		 0.110876 -0.988249 -0.14667299 0.043033 -0.97930402 -0.157267 0.12740301 -0.96532702
-		 0.107378 0.237936 -0.89881498 -0.247107 0.36203599 -0.97930402 -0.157267 0.12740301
-		 -0.982288 -0.101442 0.157544 -0.849935 -0.26154399 0.457389 -0.938712 0.179735 0.294135
-		 -0.93176001 0.070524998 0.35615799 -0.62522799 -0.43497899 0.64798403 -0.72927099
-		 -0.411933 0.54632902 -0.83265501 -0.31094199 0.458258 -0.85548699 -0.39418799 0.335796
-		 -0.849935 -0.26154399 0.457389 -0.72927099 -0.411933 0.54632902 -0.83265501 -0.31094199
-		 0.458258 -0.62714899 0.031810999 0.77824998 -0.76451802 -0.215464 0.607526 -0.85548699
-		 -0.39418799 0.335796 -0.239427 0.28845799 0.92707402 -0.47484899 0.107038 0.87353402
-		 -0.640769 -0.19481599 0.74260497 -0.701635 -0.24140701 0.67039597 -0.321448 -0.057955999
-		 0.94515198 -0.205635 -0.048858002 0.97740799 -0.466782 0.32295901 0.82329297 -0.63149798
-		 0.189365 0.75189799 -0.96532702 0.107378 0.237936 -0.938712 0.179735 0.294135 -0.849935
-		 -0.26154399 0.457389 -0.89881498 -0.247107 0.36203599 -0.849935 -0.26154399 0.457389
-		 -0.85548699 -0.39418799 0.335796 -0.89570701 -0.430599 0.110876 -0.89881498 -0.247107
-		 0.36203599 -0.982288 -0.101442 0.157544 -0.97930402 -0.157267 0.12740301 -0.988249
-		 -0.14667299 0.043033 -0.891092 -0.44804999 0.072153002 -0.98616803 -0.148569 0.073490001
-		 -0.982288 -0.101442 0.157544 -0.891092 -0.44804999 0.072153002 -0.90459198 -0.42585799
-		 0.018941 -0.91019303 -0.399964 0.107595 -0.98616803 -0.148569 0.073490001 -0.90459198
-		 -0.42585799 0.018941 -0.71899903 -0.69500399 0.0033090001 -0.564816 -0.76215702 0.31638601
-		 -0.91019303 -0.399964 0.107595 -0.71899903 -0.69500399 0.0033090001 -0.368678 -0.88023698
-		 0.29876399 -0.16351099 -0.90984201 0.38138101 -0.090196997 -0.92454898 0.37023601
-		 -0.231061 -0.916197 0.32740399 -0.32373899 -0.89025199 0.32038301 -0.011729 -0.921597
-		 0.38797 -0.090196997 -0.92454898 0.37023601 -0.16351099 -0.90984201 0.38138101 -0.072810002
-		 -0.90906298 0.41024801 -0.59434098 -0.79393703 -0.128152 -0.54705602 -0.78448302
-		 -0.29208899 -0.306961 -0.905967 -0.291547 -0.32482901 -0.92299402 -0.20632 -0.63954997
-		 -0.76474398 -0.078373998 -0.59434098 -0.79393703 -0.128152 -0.32482901 -0.92299402
-		 -0.20632 -0.393924 -0.90539497 -0.15837701 -0.70236701 -0.71153098 -0.02011 -0.63954997
-		 -0.76474398 -0.078373998 -0.393924 -0.90539497 -0.15837701 -0.40661699 -0.90917403
-		 -0.089810997 -0.74024701 -0.65647203 0.145184 -0.70236701 -0.71153098 -0.02011 -0.40661699
-		 -0.90917403 -0.089810997 -0.36185199 -0.90532899 0.22235601 -0.068558 -0.70482802
-		 0.70605701 -0.044514 -0.71076202 0.70202202 -0.039611001 -0.71191698 0.70114601 -0.068558
-		 -0.70482802 0.70605701 -0.85548699 -0.39418799 0.335796 -0.76451802 -0.215464 0.607526
-		 -0.991229 -0.038511001 0.126423 -0.95058602 -0.27204701 0.14959 0.024269 0.175745
-		 0.984137 -0.205635 -0.048858002 0.97740799 -0.321448 -0.057955999 0.94515198 -0.046034001
-		 0.079893999 0.99574 -0.53675801 -0.38134301 -0.75264102 -0.15880799 -0.355463 -0.92110097
-		 -0.109345 -0.204982 -0.97263902 -0.480768 -0.215951 -0.84983999 -0.98700702 -0.15668499
-		 0.035595998 -0.98701298 -0.156702 0.035346001 -0.98808098 -0.150159 0.033882 -0.987984
-		 -0.150815 0.033812001 0.051651999 -0.14987101 0.98735499 -0.25278899 -0.229105 0.940005
-		 -0.27435499 -0.075611003 0.95865101 0.008258 -0.033289 0.999412 0.32499099 -0.064266004
-		 0.94353098;
-	setAttr ".n[1660:1825]" -type "float3"  0.051651999 -0.14987101 0.98735499 0.008258
-		 -0.033289 0.999412 0.30595899 0.020321 0.951828 0.95455402 0.29328999 -0.052988 0.95455498
-		 0.2933 -0.052905001 0.98505598 0.169102 -0.03269 0.98707801 0.15729401 -0.030596999
-		 -0.109345 -0.204982 -0.97263902 -0.15880799 -0.355463 -0.92110097 0.27846599 -0.258773
-		 -0.92492902 0.32349899 -0.162953 -0.93209201 0.102747 -0.54817402 0.83002901 -0.01145
-		 -0.54687703 0.837134 -0.076304004 -0.54143697 0.83727098 0.089225002 -0.54891902
-		 0.83109897 -0.29786599 -0.50588799 0.80953902 -0.076304004 -0.54143697 0.83727098
-		 -0.01145 -0.54687703 0.837134 -0.34568799 -0.50092 0.79346001 -0.98118699 -0.15593401
-		 0.113827 -0.98118699 -0.15593401 0.113827 -0.98007101 -0.15784401 0.12061 -0.98050499
-		 -0.157113 0.11801 -0.97867298 -0.116718 -0.169045 -0.97867298 -0.116718 -0.169045
-		 -0.97729701 -0.116848 -0.17673901 -0.97729802 -0.116848 -0.176733 -0.51042998 -0.29359299
-		 -0.80824798 -0.077466004 -0.25168601 -0.96470398 -0.007154 -0.24044099 -0.97063702
-		 -0.50341499 -0.29370901 -0.812594 -0.077466004 -0.25168601 -0.96470398 0.365215 -0.15786301
-		 -0.91744101 0.35484999 -0.161173 -0.92092597 -0.007154 -0.24044099 -0.97063702 0.97354198
-		 0.104007 -0.203466 0.97354198 0.104007 -0.203466 0.97740197 0.105108 -0.183404 0.97717899
-		 0.105042 -0.18463001 0.95077401 -0.149471 0.27145299 0.95077401 -0.149471 0.27145299
-		 0.94867098 -0.151831 0.27743599 0.94613999 -0.15459999 0.28446099 -0.96279103 -0.139421
-		 -0.231506 -0.95863801 -0.16086701 -0.234809 -0.94540799 -0.205311 -0.25308499 -0.94571102
-		 -0.208543 -0.249282 -0.50238103 -0.073209003 -0.86154199 -0.032492999 0.111264 -0.99326003
-		 -0.072052002 0.50440198 -0.86045802 -0.53875601 0.36301699 -0.76023698 -0.032492999
-		 0.111264 -0.99326003 0.33299899 0.165831 -0.928231 0.34369701 0.53039598 -0.77495301
-		 -0.072052002 0.50440198 -0.86045802 0.99941897 0.012274 -0.031798001 0.99750799 0.058584999
-		 -0.039305001 0.99514598 -0.085297003 -0.049075998 0.99521798 -0.069029003 -0.069105998
-		 0.90805399 -0.25524399 0.33209601 0.92093998 -0.201763 0.333408 0.90334702 -0.30407199
-		 0.302497 0.918495 -0.278532 0.280691 0.01022 -0.68660003 0.726964 -0.007067 -0.680709
-		 0.73251998 0 -0.80384099 0.594845 0 -0.80384099 0.594845 0 -0.80384099 0.594845 0
-		 -0.80384099 0.594845 -0.007067 -0.680709 0.73251998 -0.039895002 -0.66117102 0.749174
-		 -0.95590502 -0.254868 0.145907 -0.91619098 -0.37436 0.142996 -0.831828 -0.53450698
-		 0.14954799 -0.83568001 -0.52997702 0.144097 -0.38398001 -0.91631001 0.113735 -0.38347799
-		 -0.91503298 0.12514 -0.386208 -0.92241198 -7.0000001e-06 -0.386208 -0.92241198 -7.0000001e-06
-		 -0.99926198 0.034678999 0.016499 -0.99915701 0.034676999 0.021986 -0.99939901 0.034674
-		 1.2e-05 -0.99939901 0.034674 1.2e-05 -0.408683 0.91056001 -0.062119 -0.40848199 0.91011101
-		 -0.069578998 -0.40946999 0.912323 4e-06 -0.40946999 0.912323 4e-06 -0.37170199 -0.85938102
-		 0.351143 -0.37207299 -0.85923803 0.35110101 -0.36952001 -0.86022002 0.35139099 -0.36927801
-		 -0.860313 0.351419 -0.99751902 0.034931 0.061124999 -0.997518 0.034963001 0.061113998
-		 -0.99752003 0.034875002 0.061143 -0.99752003 0.034851 0.061149999 -0.400994 0.89341402
-		 -0.20252199 -0.40099499 0.89341402 -0.20252199 -0.40099299 0.89341402 -0.20252299
-		 -0.40099299 0.89341402 -0.20252299 -0.357099 -0.79989803 0.48233101 -0.35364699 -0.79147297
-		 0.49850199 -0.37207299 -0.85923803 0.35110101 -0.37170199 -0.85938102 0.351143 -0.979698
-		 0.033257 0.19769999 -0.96002501 0.031778999 0.27810401 -0.997518 0.034963001 0.061113998
-		 -0.99751902 0.034931 0.061124999 -0.40976 0.91177303 0.027702 -0.408871 0.90956497
-		 0.074267998 -0.40099499 0.89341402 -0.20252199 -0.400994 0.89341402 -0.20252199 -0.38244799
-		 -0.58430499 0.71576601 -0.38584101 -0.58246899 0.71544099 -0.32363999 -0.61429298
-		 0.71965301 -0.32133099 -0.61540198 0.71974099 -0.83066499 -0.123347 0.54293799 -0.88863897
-		 -0.116715 0.443508 -0.81024599 -0.025025001 0.58555502 -0.81064397 -0.021335 0.58515
-		 -0.446805 0.88203698 0.149584 -0.44980201 0.88656199 0.108103 -0.36513001 0.78091103
-		 0.50681102 -0.36500099 0.78097701 0.50680298 -0.40946901 0.91232401 4e-06 -0.40946901
-		 0.91232401 4e-06 -0.40527099 0.89534199 0.184708 -0.40643099 0.89876699 0.164414
-		 -0.99939901 0.034673002 1.2e-05 -0.99939901 0.034673002 1.2e-05 -0.99679899 0.034327999
-		 -0.072199002 -0.997742 0.034412 -0.057684001 -0.38620701 -0.92241198 -8e-06 -0.38620701
-		 -0.92241198 -8e-06 -0.38095999 -0.89766598 -0.221506 -0.38166299 -0.89993298 -0.21084
-		 -0.38166299 -0.89993298 -0.21084 -0.38095999 -0.89766598 -0.221506 -0.40134099 -0.83889198
-		 -0.36767501 -0.39966801 -0.83961201 -0.367854 -0.997742 0.034412 -0.057684001 -0.99679899
-		 0.034327999 -0.072199002 -0.992544 0.032019001 -0.117607 -0.992549 0.032368999 -0.117466
-		 -0.40643099 0.89876699 0.164414 -0.40527099 0.89534199 0.184708 -0.41866201 0.85680503
-		 0.301011 -0.416206 0.85781002 0.30155301 -0.463819 -0.53687602 0.70472401 -0.47384501
-		 -0.53050798 0.702874 -0.431375 -0.55666202 0.70995897 -0.42576599 -0.55996102 0.710751
-		 -0.68516898 -0.59426498 0.42118001 -0.62791198 -0.645895 0.43421999 -0.81002498 -0.44899401
-		 0.37717801 -0.86518401 -0.36208701 0.34691501 -0.47802401 0.81821799 -0.31939301
-		 -0.47880501 0.81780398 -0.31928301 -0.45906901 0.82801402 -0.32194501 -0.458042 0.82853103
-		 -0.32207701 -0.481803 -0.52536601 0.70132399 -0.481803 -0.52536601 0.70132399 -0.47384501
-		 -0.53050798 0.702874 -0.463819 -0.53687602 0.70472401 -0.613271 -0.65796399 0.437015
-		 -0.613271 -0.65796399 0.437015 -0.62791198 -0.645895 0.43421999;
-	setAttr ".n[1826:1991]" -type "float3"  -0.68516898 -0.59426498 0.42118001 -0.48185799
-		 0.81617802 -0.31885099 -0.48185799 0.81617802 -0.31885099 -0.47880501 0.81780398
-		 -0.31928301 -0.47802401 0.81821799 -0.31939301 -0.458042 0.82853103 -0.32207701 -0.45906901
-		 0.82801402 -0.32194501 -0.44827101 0.83337998 -0.32331201 -0.44699901 0.83400202
-		 -0.32347 -0.86518401 -0.36208701 0.34691501 -0.81002498 -0.44899401 0.37717801 -0.898076
-		 -0.29834101 0.32319099 -0.94105101 -0.189652 0.280099 -0.42576599 -0.55996102 0.710751
-		 -0.431375 -0.55666202 0.70995897 -0.41395301 -0.56679797 0.71230799 -0.40730101 -0.57058197
-		 0.713121 -0.36500099 0.78097701 0.50680298 -0.36513001 0.78091103 0.50681102 -0.36105299
-		 0.78298599 0.50652999 -0.36066699 0.78318202 0.50650299 -0.81064397 -0.021335 0.58515
-		 -0.81024599 -0.025025001 0.58555502 -0.81230903 -0.004586 0.58320999 -0.81276 0.00041499999
-		 0.58259797 -0.32133099 -0.61540198 0.71974099 -0.32363999 -0.61429298 0.71965301
-		 -0.30919099 -0.621149 0.72012103 -0.30826199 -0.62158298 0.72014499 -0.44699901 0.83400202
-		 -0.32347 -0.44827101 0.83337998 -0.32331201 -0.44980201 0.88656199 0.108103 -0.446805
-		 0.88203698 0.149584 -0.94105101 -0.189652 0.280099 -0.898076 -0.29834101 0.32319099
-		 -0.88863897 -0.116715 0.443508 -0.83066499 -0.123347 0.54293799 -0.40730101 -0.57058197
-		 0.713121 -0.41395301 -0.56679797 0.71230799 -0.38584101 -0.58246899 0.71544099 -0.38244799
-		 -0.58430499 0.71576601 0.134102 0.92973101 0.34295401 0.003116 0.93982601 0.34164
-		 0.00012500001 0.93906403 0.343743 0.14558101 0.92763799 0.34393999 -0.132715 0.93272001
-		 0.33529201 0.00012500001 0.93906403 0.343743 0.003116 0.93982601 0.34164 -0.121571
-		 0.93437201 0.334916 -0.98124403 -0.170305 0.090314001 -0.98166299 -0.172197 0.081773996
-		 -0.98293298 -0.165999 0.079291001 -0.98175198 -0.166706 0.091498002 -0.98166299 -0.172197
-		 0.081773996 -0.98243099 -0.185662 0.018975001 -0.983899 -0.17765 0.019571001 -0.98293298
-		 -0.165999 0.079291001 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0.98560297
-		 -0.16654401 0.029158 0.98140699 -0.145431 0.125259 0.98325098 -0.135868 0.121481
-		 0.98759198 -0.15413 0.030087 0.98064399 -0.136902 0.139983 0.98325098 -0.135868 0.121481
-		 0.98140699 -0.145431 0.125259 0.98010898 -0.14246701 0.13816699 -1e-06 -1 2e-06 0
-		 -1 2e-06 0 -1 3.0000001e-06 -1e-06 -1 3.0000001e-06 -0.988617 -0.11531 0.096642002
-		 -0.992571 -0.119308 0.023832999 -0.99365997 -0.109717 0.024522001 -0.98948801 -0.107635
-		 0.096582003 -0.98675102 -0.12311 0.105673 -0.988617 -0.11531 0.096642002 -0.98948801
-		 -0.107635 0.096582003 -0.988051 -0.107156 0.110782 -0.010217 0.93319702 0.35921901
-		 0.0056019998 0.93371302 0.357979 -0.244056 0.90943801 0.336689 -0.27650499 0.900262
-		 0.336265 0.26607201 0.89759099 0.35147801 0.0056019998 0.93371302 0.357979 -0.010217
-		 0.93319702 0.35921901 0.30393201 0.884983 0.35274699 0.987957 -0.045575999 0.147866
-		 0.987342 -0.057425998 0.147847 0.98442799 -0.069453001 0.161487 0.98457801 -0.044932
-		 0.16907699 0.997311 -0.063449003 0.036674999 0.987342 -0.057425998 0.147847 0.987957
-		 -0.045575999 0.147866 0.99810803 -0.048554 0.037723999 0 -1 2e-06 1e-06 -1 2e-06
-		 1e-06 -1 3.0000001e-06 0 -1 3.0000001e-06 0.360145 0.91292399 0.192004 -0.065403998
-		 0.98162401 0.17927 -0.058843002 0.98209399 0.178968 0.375249 0.90712202 0.190571
-		 -0.45804399 0.87838602 0.136502 -0.058843002 0.98209399 0.178968 -0.065403998 0.98162401
-		 0.17927 -0.45713401 0.878851 0.136564 -1 1e-06 0 -1 1e-06 0 -1 1e-06 1e-06 -1 1e-06
-		 0 -1 2e-06 2e-06 -1 1e-06 1e-06 -1 1e-06 0 -1 0 0 -0.004286 -0.98808497 0.153853
-		 -4.7000001e-05 -0.98810202 0.153798 -3.2e-05 -0.98810101 0.153804 -0.0070969998 -0.98806202
-		 0.15389299 -4.7000001e-05 -0.98810202 0.153798 0.003082 -0.98810399 0.15375599 0.005132
-		 -0.98809898 0.153733 -3.2e-05 -0.98810101 0.153804 1 1e-06 2e-06 1 2e-06 0 1 1e-06
-		 0 1 2e-06 2e-06 1 2e-06 0 1 2e-06 0 1 2e-06 0 1 1e-06 0 0.498963 0.64730501 -0.57622302
-		 0.63213801 0.68067199 -0.37025201 0.76534897 0.55539501 -0.32523501 0.73545402 0.46507999
-		 -0.492755 0.693214 0.60969198 -0.38435599 0.693214 0.60969198 -0.38435599 0.70071298
-		 0.59819603 -0.38879699 0.71030802 0.58295798 -0.39449 0.98474401 -0.029169001 -0.17155001
-		 0.95983303 0.15765999 -0.232085 0.95983303 0.15765999 -0.232085 0.97762197 0.060483001
-		 -0.20149 -0.53594202 0.82786 -0.165572 -0.57740802 0.78907102 -0.209683 -0.57740802
-		 0.78907102 -0.209683 -0.50858802 0.84995401 -0.137537 -0.75661999 0.651133 0.059594002
-		 -0.75663298 0.65110999 0.059687998 -0.75697798 0.65047598 0.062180001 -0.75695002
-		 0.650527 0.061981 0.350878 0.351174 -0.86807901 0.15058599 0.47270101 -0.86826098
-		 0.17273 0.454198 -0.87399602 0.35674801 0.33762899 -0.87105501 0.87741601 -0.46838099
-		 0.10373 0.87758398 -0.46824601 0.102915 0.87625301 -0.46929601 0.109283 0.87572998
-		 -0.469695 0.111731 -0.69722301 0.71505702 0.050726999;
-	setAttr ".n[1992:2157]" -type "float3"  -0.52221799 0.85135698 -0.049789999 -0.529365
-		 0.848037 -0.024627 -0.71968901 0.69210303 0.055148002 0.211808 0.483192 -0.84950799
-		 0.315916 0.57569599 -0.75416899 0.57381701 0.380245 -0.72536099 0.47402301 0.343247
-		 -0.810853 0.92512703 -0.37498799 0.059361 0.99052697 -0.081928 -0.110203 0.98795497
-		 -0.074371003 -0.135695 0.978432 -0.203978 -0.032612 0.175969 0.048469 0.98320198
-		 0.1549 0.030785 0.98745 0.232145 0.020362999 0.97246802 0.226448 0.051738001 0.97264802
-		 0.286457 -0.092889003 0.95358002 0.189119 -0.020412 0.98174202 0.207662 -0.031707
-		 0.977687 0.31781799 -0.106329 0.94217098 0.242882 -0.001333 0.97005498 0.15990201
-		 0.026085 0.98678797 0.177358 -0.0055450001 0.98413098 0.27926099 -0.057053 0.95851898
-		 -0.27987701 -0.59766197 0.75131202 -0.27987701 -0.59766197 0.75131202 -0.36210999
-		 -0.59022802 0.72146201 -0.305994 -0.595819 0.74254102 -0.75842798 -0.183393 0.62542301
-		 -0.75842798 -0.183393 0.62542301 -0.75842798 -0.183393 0.62542301 -0.75842798 -0.183393
-		 0.62542301 0.37818101 -0.57097799 0.72867203 0.37818101 -0.57097799 0.72867203 0.37818101
-		 -0.57097799 0.72867203 0.37818101 -0.57097799 0.72867203 -0.40275499 0.242374 0.88263398
-		 -0.42091 0.25342101 0.870983 -0.30665001 0.183925 0.93388301 -0.296455 0.177728 0.93836403
-		 0.44285801 0.439547 0.78145701 0.45348701 0.438081 0.77616602 0.37908199 0.44689101
-		 0.81029898 0.37908199 0.44689101 0.81029898 0.373308 -0.384588 0.844235 0.38466701
-		 -0.39349899 0.834979 0.48599699 -0.47165999 0.73576099 0.47488701 -0.46322101 0.74826998
-		 -0.73655802 0.011681 0.676274 -0.73276198 0.010246 0.680408 -0.72031701 0.0056019998
-		 0.69362199 -0.72031701 0.0056019998 0.69362199 0.49511501 -0.553657 0.66957098 0.49511501
-		 -0.553657 0.66957098 0.47649801 -0.53688699 0.69620597 0.46884501 -0.52995199 0.70663601
-		 -0.122727 -0.67266601 0.72969699 -0.122727 -0.67266601 0.72969699 -0.34731099 -0.52521098
-		 0.77687103 -0.236321 -0.60518801 0.76019698 -0.77225602 -0.25286901 0.58281898 -0.77225602
-		 -0.25286901 0.58281898 -0.77225602 -0.25286901 0.58281898 -0.77225602 -0.25286901
-		 0.58281898 0.49923801 -0.73325801 0.46162099 0.49923801 -0.73325801 0.46162099 0.49923801
-		 -0.73325801 0.46162099 0.49923801 -0.73325801 0.46162099 -0.91648799 0.39412501 -0.068668999
-		 -0.91532701 0.36641201 0.167088 -0.86956197 0.399883 -0.28975001 -0.84702802 0.39766201
-		 -0.35271499 0.35530001 -0.090364002 0.93037403 0.35530001 -0.090364002 0.93037403
-		 0.35530001 -0.090364002 0.93037403 0.35530001 -0.090364002 0.93037498 0.159825 -0.025770999
-		 0.98680902 0.272843 -0.126964 0.95364398 0.50464201 -0.34523001 0.79129797 0.44655201
-		 -0.28884301 0.84685302 -0.902439 0.100777 0.41886401 -0.90476501 0.10196 0.41352701
-		 -0.89954603 0.099321 0.42538401 -0.89954603 0.099321 0.42538401 0.58080101 -0.53052199
-		 0.617428 0.58080101 -0.53052199 0.617428 0.62649602 -0.56101298 0.54108 0.68735898
-		 -0.59904301 0.41071299 0.35141599 -0.272825 0.895585 0.35141599 -0.272825 0.895585
-		 0.41986299 -0.245335 0.87379998 0.360966 -0.269135 0.89289999 0.81825602 0.162275
-		 0.55147499 0.81825602 0.162275 0.55147499 0.81825602 0.162274 0.55147499 0.81825602
-		 0.162275 0.55147499 0.058256999 -0.29004699 0.95523798 0.058256999 -0.29004699 0.95523798
-		 0.058256999 -0.29004699 0.95523798 0.058256999 -0.29004699 0.95523798 0.66730398
-		 -0.269153 0.69445097 0.69642299 -0.26747599 0.66592097 0.64201498 -0.27021199 0.71749699
-		 0.63167799 -0.27054501 0.72649097 0.15887 -0.48884499 0.85778302 0.174081 -0.53590697
-		 0.82613498 0.148738 -0.45750201 0.87668103 0.148738 -0.45750201 0.87668103 0.155053
-		 0.160872 0.97472 0.145163 0.169714 0.97474402 0.092156 0.216115 0.972009 0.108384
-		 0.20207 0.973355 0.82248098 -0.15367199 0.54764098 0.78498501 -0.15431499 0.59998798
-		 0.83906299 -0.153144 0.522035 0.83906299 -0.153144 0.522035 0.016868001 -0.025265001
-		 0.999538 0.016868001 -0.025265001 0.99953902 0.062373001 -0.052654002 0.99666297
-		 0.074987002 -0.060238 0.995363 0.42798701 -0.389559 -0.81551898 0.42798701 -0.389559
-		 -0.81551898 0.44230399 -0.224931 -0.86820102 0.43399999 -0.35055101 -0.82991397 2e-06
-		 4.9999999e-06 -1 2e-06 4.9999999e-06 -1 2e-06 4.9999999e-06 -1 2e-06 4.9999999e-06
-		 -1 0.64523202 0.761859 0.056970999 0.64290899 0.75913298 0.101912 0.64287198 0.75909901
-		 0.102391 0.64519298 0.76182997 0.057805002 0.64290899 0.75913298 0.101912 0.64229101
-		 0.75841302 0.110782 0.64228898 0.75841397 0.110782 0.64287198 0.75909901 0.102391
-		 0.003089 -0.585518 0.81065398 0.003089 -0.585518 0.81065398 0.003089 -0.585518 0.81065398
-		 0.003089 -0.585518 0.81065398 -0.010807 -0.92519999 0.379327 0.011728 -0.921597 0.38797
-		 0.090195999 -0.92454898 0.37023601 0.055408999 -0.76187497 0.64534998 0.54704797
-		 -0.82564503 -0.138016 0.52649599 -0.79856497 -0.29171199 0.52743798 -0.78898299 -0.31514499
-		 0.55562001 -0.82073098 -0.13299499 0.52649599 -0.79856497 -0.29171199 0.50248301
-		 -0.76704001 -0.398949 0.51009798 -0.77798003 -0.36680499 0.52743798 -0.78898299 -0.31514499
-		 0.98931998 -0.100657 -0.105427 0.99633801 0.067854002 -0.052030001 0.99193299 0.036933001
-		 -0.121267 0.98409897 -0.110807 -0.138817 0.98936802 -0.11629 0.087335996 0.98078001
-		 0.100367 0.16732401 0.99633801 0.067854002 -0.052030001 0.98931998 -0.100657 -0.105427
-		 0.99633801 0.067854002 -0.052030001 0.96353698 0.26735801 0.010831 0.95815402 0.27258399
-		 -0.087401003 0.99193299 0.036933001 -0.121267 0.90494502 0.37483799 0.20141999 0.96353698
-		 0.26735801 0.010831 0.99633801 0.067854002 -0.052030001;
-	setAttr ".n[2158:2323]" -type "float3"  0.98078001 0.100367 0.16732401 0.575625
-		 0.81756002 -0.015829001 0.555861 0.82958299 -0.053022999 0.59590799 0.80227798 -0.035273001
-		 0.57515502 0.81689399 -0.043384999 0.92219901 0.357079 -0.148471 0.91195601 0.40745401
-		 -0.048135001 0.95732498 0.276674 0.083550997 0.92219901 0.357079 -0.148471 0.99269301
-		 0.013512 0.119911 0.99269301 0.013512 0.119911 0.99304998 0.012396 0.117036 0.99441099
-		 0.0078389999 0.105287 0.57451898 -0.80745697 0.133946 0.53188699 -0.79337698 0.29605499
-		 0.53557098 -0.78558999 0.30985901 0.548715 -0.828161 0.11429 0.555861 0.82958299
-		 -0.053022999 0.47177199 0.82823402 -0.30242199 0.67508799 0.67458999 -0.298639 0.59590799
-		 0.80227798 -0.035273001 0.91195601 0.40745401 -0.048135001 0.89211601 0.44999099
-		 0.040470999 0.98726898 0.13199501 0.088753998 0.95732498 0.276674 0.083550997 0.95732498
-		 0.276674 0.083550997 0.98726898 0.13199501 0.088753998 0.968615 -0.134689 0.208914
-		 0.95774299 -0.111675 0.26506001 0.53188699 -0.79337698 0.29605499 0.39141801 -0.755566
-		 0.52527398 0.52452302 -0.70195001 0.48181099 0.53557098 -0.78558999 0.30985901 0.89211601
-		 0.44999099 0.040470999 0.93214101 0.19610099 -0.304398 0.9921 -0.119097 -0.039407
-		 0.98726898 0.13199501 0.088753998 0.47177199 0.82823402 -0.30242199 0.39656401 0.78314799
-		 -0.47897401 0.69642103 0.50723499 -0.507653 0.67508799 0.67458999 -0.298639 0.39141801
-		 -0.755566 0.52527398 0.498577 -0.793396 0.349204 0.55160099 -0.78954101 0.26900199
-		 0.52452302 -0.70195001 0.48181099 0.98726898 0.13199501 0.088753998 0.9921 -0.119097
-		 -0.039407 0.93969601 -0.33342001 0.076177999 0.968615 -0.134689 0.208914 0.498887
-		 -0.85476398 -0.14314599 0.430103 -0.901236 -0.052777 0.42466801 -0.90489298 -0.028742
-		 0.50087398 -0.856906 -0.12181 0.92789 0.33604199 0.161543 0.81307399 0.58033198 -0.046108998
-		 0.81340098 0.58057803 -0.03616 0.82897502 0.54239702 0.13640299 0.59936798 0.80045903
-		 0.0048929998 0.53282797 0.82476699 -0.18935101 0.53794301 0.820925 -0.191572 0.59937602
-		 0.80037397 -0.012216 0.430103 -0.901236 -0.052777 0.33924201 -0.939004 0.056444999
-		 0.32680801 -0.941625 0.080859996 0.42466801 -0.90489298 -0.028742 0.53282797 0.82476699
-		 -0.18935101 0.474617 0.80604899 -0.35358801 0.48243201 0.80074298 -0.355064 0.53794301
-		 0.820925 -0.191572 0.81307399 0.58033198 -0.046108998 0.79833698 0.56962103 -0.19542199
-		 0.79833698 0.56962103 -0.19542199 0.81340098 0.58057803 -0.03616 0.113359 -0.088655002
-		 -0.989591 0.33051899 -0.080554999 -0.940355 0.46285999 -0.054887999 -0.88472998 0.098848999
-		 -0.081858002 -0.99172997 -0.075203001 -0.94942898 -0.30484301 0.00090500002 -0.95212501
-		 -0.30570799 0 -0.95212501 -0.305709 -0.075203001 -0.94942898 -0.30484301 0.58506203
-		 -0.243697 0.77350801 0.64790398 -0.286432 0.70581698 0.76607502 -0.027074 0.64218003
-		 0.72539002 -0.036214001 0.68738502 0.919074 0.363684 -0.15178099 0.90910202 0.387687
-		 -0.15242 0.901353 0.40522599 -0.152826 0.919074 0.363684 -0.15178099 -0.99690199
-		 0.073928997 0.02685 -0.98079997 0.19434801 -0.016143 -0.98807198 0.153981 -0.001632
-		 -0.99690199 0.073928997 0.02685 0.58506203 -0.243697 0.77350801 -0.24555001 -0.496663
-		 0.83248502 0.002298 -0.50593197 0.86256999 0.64790398 -0.286432 0.70581698 0.99304998
-		 0.012396 0.117036 0.996584 -0.060755 0.055945002 0.994434 -0.093029998 0.049454 0.99441099
-		 0.0078389999 0.105287 0.248044 -0.22108901 -0.943183 -0.217264 -0.196022 -0.95622802
-		 0.098848999 -0.081858002 -0.99172997 0.46285999 -0.054887999 -0.88472998 -0.30595899
-		 0.020321 0.951828 -0.30504599 0.031858999 0.951805 -0.018968999 0.0066399998 0.999798
-		 -0.008258 -0.033289 0.999412 -0.98707801 0.157295 -0.030596999 -0.999901 0.014073
-		 0.00076600001 -0.999497 0.031385999 -0.004654 -0.98505598 0.169102 -0.03269 0.057627
-		 -0.138227 -0.98872298 -0.33151901 -0.12977 -0.93448102 -0.32349899 -0.162953 -0.932091
-		 0.109345 -0.204982 -0.97263902 0.987984 -0.15081599 0.033813 0.98740798 -0.153741
-		 0.037280001 0.98652601 -0.15868101 0.039827999 0.98808098 -0.15016 0.033882 0.98740798
-		 -0.153741 0.037280001 0.99273199 -0.114307 0.037636999 0.996158 -0.083150998 0.027479
-		 0.98652601 -0.15868101 0.039827999 -0.30504599 0.031858999 0.951805 -0.31590599 0.056361001
-		 0.947115 0.0026380001 0.074732997 0.99720001 -0.018968999 0.0066399998 0.999798 -0.999901
-		 0.014073 0.00076600001 -0.98961002 -0.136502 0.045155998 -0.981884 -0.179965 0.059303999
-		 -0.999497 0.031385999 -0.004654 0.057627 -0.138227 -0.98872298 0.0023310001 -0.088113002
-		 -0.996108 -0.34081101 -0.090554997 -0.93576002 -0.33151901 -0.12977 -0.93448102 -0.969046
-		 -0.24081001 -0.054412998 -0.98118299 -0.18043999 -0.068714999 -0.98118299 -0.18043999
-		 -0.068714999 -0.97351903 -0.220808 -0.059200998 -0.39684099 -0.111573 0.91108102
-		 -0.40408099 -0.110717 0.90799803 -0.0099459998 -0.140488 0.99003202 -0.00569 -0.14081199
-		 0.99001998 0.96980798 -0.23555601 -0.063130997 0.97851801 -0.192662 -0.073370002
-		 0.97851801 -0.192662 -0.073370002 0.96476501 -0.25663701 -0.058008999 0.0017810001
-		 0.32975799 -0.94406402 -0.40922999 0.300542 -0.86151397 -0.37250599 -0.278449 -0.88527101
-		 -0.001036 -0.254455 -0.96708399 -0.14558101 0.92763799 0.34393999 -0.26607201 0.89759099
-		 0.35147801 -0.0056019998 0.93371302 0.357979 -0.00012500001 0.93906403 0.343743 0.98293298
-		 -0.165999 0.079291001 0.988617 -0.11531 0.096642002 0.992571 -0.119308 0.023832999
-		 0.983899 -0.17765 0.019571001 0 -1 0 0 -1 2e-06 -1e-06 -1 2e-06 0 -1 0 -0.98759198
-		 -0.15413 0.030087;
-	setAttr ".n[2324:2489]" -type "float3"  -0.997311 -0.063449003 0.036674999 -0.987342
-		 -0.057425998 0.147847 -0.98325098 -0.135868 0.121481 -0.32203099 -0.085702002 -0.94284201
-		 -0.32203099 -0.085702002 -0.94284201 -0.22641601 -0.100373 -0.96884501 -0.051095001
-		 -0.123924 -0.99097502 0.930372 0.35354099 -0.097038001 0.93016601 0.36561599 -0.033410002
-		 0.93262398 0.358576 -0.040440999 0.933972 0.34226701 -0.102706 0.93016601 0.36561599
-		 -0.033410002 0.92696601 0.374596 0.020279 0.92782199 0.37245199 0.02063 0.93262398
-		 0.358576 -0.040440999 0.030963 -0.016620001 0.99938202 0.030963 -0.016620001 0.99938202
-		 0.415932 -0.051808 0.90791899 0.168796 -0.029472999 0.98521 0.096244998 -0.99223697
-		 -0.078762002 0.044479001 -0.96785802 -0.247531 0.0071339998 -0.964275 -0.26480699
-		 0 -0.99686402 -0.079129003 0.044479001 -0.96785802 -0.247531 -0.0072539998 -0.91463101
-		 -0.40422499 0.0088809999 -0.912862 -0.40817201 0.0071339998 -0.964275 -0.26480699
-		 0.99726301 0.073824003 0.004152 0.99723601 0.074183002 -0.0040509999 0.99493998 0.070692003
-		 0.071396999 0.99493998 0.070692003 0.071396999 0.991804 0.078055002 -0.101158 0.991804
-		 0.078055002 -0.101158 0.99723601 0.074183002 -0.0040509999 0.99726301 0.073824003
-		 0.004152 -0.089225002 -0.54891902 0.83109999 -0.01022 -0.68660003 0.726964 0.007067
-		 -0.680709 0.73251998 0.076304004 -0.54143697 0.83727199 0.98050499 -0.157113 0.11801
-		 0.95590502 -0.254868 0.145907 0.91619098 -0.37436101 0.142996 0.98007101 -0.15784401
-		 0.12061 -0.94613999 -0.15459999 0.28446099 -0.90805399 -0.25524399 0.33209601 -0.92093998
-		 -0.201763 0.333408 -0.94867098 -0.151831 0.277435 0.97729802 -0.116848 -0.176732
-		 0.96279103 -0.139422 -0.231506 0.95863801 -0.16086701 -0.234809 0.97729701 -0.116848
-		 -0.17673901 0.007154 -0.24044099 -0.97063702 0.032492001 0.111264 -0.99326003 -0.33299899
-		 0.165831 -0.92822999 -0.35484999 -0.161173 -0.92092597 -0.97717899 0.105042 -0.18463001
-		 -0.99941897 0.012273 -0.031798001 -0.99750799 0.058584999 -0.039305001 -0.97740197
-		 0.105108 -0.183404 0.96799803 -0.14013299 0.208188 0.97457403 -0.118788 0.18998501
-		 0.976668 -0.102499 0.18871801 0.95422202 -0.217549 0.205264 0 -0.428922 0.90334201
-		 0 -0.241579 0.97038102 0 -0.236066 0.97173703 0 -0.39219499 0.919882 -0.98265302
-		 -0.069026001 0.17212901 -0.97950798 -0.068432003 0.189422 -0.97851598 -0.08557 0.187575
-		 -0.97661197 0.127488 0.173136 -0.98588902 -0.0078199999 -0.167218 -0.96824598 -0.115369
-		 -0.221789 -0.96866399 -0.097268999 -0.22853599 -0.97383797 0.15875 -0.162598 0.057484001
-		 -0.41332299 -0.908768 -0.57288897 -0.30924901 -0.75905401 -0.581949 0.219087 -0.783158
-		 -0.015115 0.070721 -0.99738199 0.95990199 0.041478999 -0.27724901 0.935983 -0.14207301
-		 -0.32210299 0.93533599 -0.156708 -0.317157 0.95438498 -0.111069 -0.27715299 0.83568001
-		 -0.52997702 0.144097 0.84252298 -0.51600599 0.154576 0.86825103 -0.468822 0.162315
-		 0.831828 -0.53450602 0.14954799 0 -0.80384099 0.594845 0 -0.77044803 0.63750303 0
-		 -0.78192401 0.62337399 0 -0.80383998 0.594845 -0.918495 -0.278532 0.280691 -0.95304799
-		 -0.145291 0.26568899 -0.931077 -0.241624 0.27333701 -0.90334702 -0.30407199 0.302497
-		 -0.99521798 -0.069029003 -0.069105998 -0.99315798 0.073278002 -0.090926997 -0.99627602
-		 -0.034975 -0.078805 -0.99514598 -0.085297003 -0.049075998 0.072052002 0.50440198
-		 -0.86045802 -0.014721 0.59008902 -0.80720401 -0.36701599 0.55068702 -0.749695 -0.34369701
-		 0.53039598 -0.77495301 0.94571102 -0.208542 -0.249282 0.94936001 -0.18243501 -0.25579801
-		 0.96138501 -0.085754 -0.26150599 0.94540799 -0.205311 -0.25308499 0.98305303 -0.033459999
-		 0.180243 0.97331899 0.196871 0.117866 0.97387999 0.192247 0.120823 0.98245603 -0.041638002
-		 0.181785 0 -0.081006996 0.996714 -0.035409998 0.210209 0.97701502 -0.00086600002
-		 0.217777 0.97599798 0 -0.084663004 0.99641001 -0.98065197 -0.0070259999 0.19563299
-		 -0.96193302 0.20911001 0.175946 -0.96284997 0.20936 0.17055599 -0.98051602 0.001284
-		 0.196437 -0.96616 -0.047231 -0.253582 -0.93078899 -0.013976 -0.36528999 -0.931485
-		 -0.015065 -0.36346701 -0.96494502 -0.045626 -0.25845701 0.078589 -0.31382799 -0.94622201
-		 0.047251001 -0.164085 -0.98531401 -0.55035198 -0.159917 -0.819475 -0.582434 -0.24899299
-		 -0.77380502 0.93423897 -0.090719 -0.34491599 0.92251402 0.0059369998 -0.38591799
-		 0.92080599 0.002085 -0.39001599 0.93510699 -0.092554003 -0.34206599 -0.38117799 -0.0557
-		 0.922822 -0.38143799 -0.055698998 0.92271501 0.0078330003 -0.052978002 0.99856502
-		 -0.023983 -0.053514 0.99827898 0.99827999 0.050873999 0.029130001 1 1e-06 0 0.99778402
-		 -0.003859 -0.066418998 0.993954 0.073344998 -0.081710003 -0.995502 0.079781003 -0.051102001
-		 -0.99855697 0.001584 -0.053686999 -1 1e-06 1e-06 -0.997666 0.053622998 0.042268999
-		 0.993954 0.073344998 -0.081710003 0.99778402 -0.003859 -0.066418998 0.95397103 -0.073978998
-		 -0.29063201 0.93490499 -0.033466998 -0.35331699 0.071099997 -0.20587499 -0.97599202
-		 0.065775998 -0.056518 -0.99623299 -0.50842702 -0.030956 -0.86054897 -0.52357602 -0.19273201
-		 -0.82989401 -0.94737798 -0.030533999 -0.31865901 -0.97114497 -0.037519 -0.23552001
-		 -0.99855697 0.001584 -0.053686999 -0.995502 0.079781003 -0.051102001 -0.375249 0.90712202
-		 0.190571 -0.42236501 0.88192499 0.20932201 -0.079713002 0.96656698 0.24371099 0.058843002
-		 0.98209399 0.178968 1 1e-06 0 1 1e-06 0 1 0 0 1 2e-06 1e-06 3.2e-05 -0.98810101 0.153804
-		 -0.000113 -0.99848199 -0.055084001 0.014906 -0.99851102 -0.052480999;
-	setAttr ".n[2490:2655]" -type "float3"  -0.005132 -0.98809898 0.153733 -1 1e-06
-		 0 -1 -1e-06 -2e-06 -1 -1e-06 -2e-06 -1 3.0000001e-06 1e-06 0.93214101 0.19610099
-		 -0.304398 0.99188 -0.033008002 0.122819 0.95158398 -0.26949501 0.14785101 0.9921
-		 -0.119097 -0.039407 0.9921 -0.119097 -0.039407 0.95158398 -0.26949501 0.14785101
-		 0.849949 -0.52414501 0.053474002 0.93969601 -0.33342001 0.076177999 0.498577 -0.793396
-		 0.349204 0.51177001 -0.84194499 -0.170938 0.38349199 -0.90198201 -0.19839901 0.55160099
-		 -0.78954101 0.26900199 0.25565901 0.67500502 0.69210303 0.20470101 0.61322302 0.76292598
-		 0.466782 0.32295901 0.82329398 0.38579199 0.60188699 0.69921201 0.62714797 0.031810999
-		 0.77824998 0.65118402 -0.029445 0.75834799 0.78065598 -0.29555401 0.55065799 0.832654
-		 -0.31094301 0.45825899 0.53993702 -0.79461801 -0.27757999 0.31398901 -0.88924599
-		 -0.332645 0.025944 -0.97290897 -0.229727 0.015267 -0.996113 -0.086747997 0.271871
-		 0.68953401 0.67128903 0.28277299 0.705208 0.65017003 0.42003 0.67774397 0.603522
-		 0.44290301 0.66872698 0.59719402 0.93176001 0.070524 0.35616001 0.94440502 0.249671
-		 0.213926 0.97417903 0.135014 0.180958 0.96532702 0.107378 0.237936 0.938712 0.17973401
-		 0.294135 0.96532702 0.107378 0.237936 0.97417903 0.135014 0.180958 0.98616803 -0.148569
-		 0.073491 0.982288 -0.101442 0.157544 0.32482901 -0.92299402 -0.20632 0.393924 -0.90539497
-		 -0.15837701 0.18717299 -0.95741802 -0.219813 0.085456997 -0.96929199 -0.23058701
-		 0.26110101 0.69446898 -0.67047697 0.26110101 0.69446898 -0.67047697 0.46636 0.380238
-		 -0.79870301 0.45899099 0.39509201 -0.795757 0.767703 -0.63528597 0.083926998 0.767703
-		 -0.63528597 0.083926998 0.767703 -0.63528597 0.083926998 0.767703 -0.63528597 0.083926998
-		 0.35281 0.588346 0.72758102 0.35281 0.588346 0.72758102 0.35281 0.588346 0.72758102
-		 0.35281 0.588346 0.72758102 -0.813833 0.57859099 0.053936999 -0.813833 0.57859099
-		 0.053936999 -0.813833 0.57859099 0.053936999 -0.813833 0.57859099 0.053936999 0.20470101
-		 0.61322302 0.76292598 -0.024269 0.175745 0.984137 0.205634 -0.048858002 0.97740901
-		 0.466782 0.32295901 0.82329398 0.31398901 -0.88924599 -0.332645 0.306961 -0.905967
-		 -0.291547 0.040309999 -0.95893902 -0.280734 0.025944 -0.97290897 -0.229727 0.78065598
-		 -0.29555401 0.55065799 0.69901198 -0.41434199 0.58284098 0.72926998 -0.41193199 0.54633099
-		 0.832654 -0.31094301 0.45825899 0.638502 -0.52700001 0.56088001 0.638502 -0.52700001
-		 0.56088001 0.503335 0.204026 0.83965898 0.41956601 0.370626 0.828614 0.046034999
-		 0.079893999 0.99574 0.13453899 0.35987401 0.92325002 0.239427 0.28845799 0.92707402
-		 0.32144701 -0.057955999 0.94515198 0.306961 -0.905967 -0.291547 0.32482901 -0.92299402
-		 -0.20632 0.085456997 -0.96929199 -0.23058701 0.040309999 -0.95893902 -0.280734 0.72926998
-		 -0.41193199 0.54633099 0.69901198 -0.41434199 0.58284098 0.57973498 -0.50726599 0.63764298
-		 0.62522697 -0.43497801 0.64798599 -0.71690297 -0.669604 -0.194115 -0.68269002 -0.72644699
-		 -0.078791998 -0.71399802 -0.67593801 -0.182522 -0.71690297 -0.669604 -0.194115 -0.199771
-		 0.91812199 0.342264 -0.14694899 0.90285999 0.40404299 -0.170247 0.910317 0.37727901
-		 -0.199771 0.91812098 0.342264 -0.023382001 0.968207 0.249053 0.032658 0.948964 0.31369001
-		 -0.017104 0.96641999 0.25639999 -0.023382001 0.96820801 0.249053 0.47836801 -0.87468398
-		 -0.078059003 0.475977 -0.87589598 -0.079072997 0.470413 -0.87868202 -0.081425004
-		 0.47836801 -0.87468302 -0.078059003 0.234786 -0.484402 0.84275198 0.234786 -0.484402
-		 0.84275198 0.234786 -0.484402 0.84275198 0.234786 -0.484402 0.84275198 0.21912 0.65130901
-		 0.72648698 0.41956601 0.370626 0.828614 0.503335 0.204026 0.83965898 0.21912 0.65130901
-		 0.72648698 0.94514 0.25693399 -0.201729 0.94514 0.25693399 -0.201729 0.94514 0.25693399
-		 -0.201729 0.94514 0.25693399 -0.201729 0.449568 -0.89250302 0.036421999 0.449568
-		 -0.89250302 0.036421999 0.449568 -0.89250302 0.036421999 0.449568 -0.89250302 0.036421999
-		 0.10988 -0.91504103 -0.38810501 -0.616494 -0.29584599 -0.72966403 -0.65166497 -0.222663
-		 -0.72508901 0.0091429995 -0.885557 -0.464441 0.23492999 0.81208098 0.53416598 0.30793899
-		 0.82794899 0.468694 0.31771001 0.82467699 0.46794 0.28437501 0.76343501 0.57991201
-		 -0.043326002 0.89376098 0.446446 -0.28955001 0.954175 0.075574003 -0.29230401 0.95377398
-		 0.069819003 -0.091940999 0.919586 0.38198099 0.063487999 -0.98900801 -0.133535 -0.045593001
-		 -0.89221501 -0.449303 -0.012523 -0.909482 -0.41555399 0.065073997 -0.89710599 0.43699801
-		 -0.69954598 -0.055109002 -0.71245903 -0.69792497 -0.055833001 -0.713992 -0.69792497
-		 -0.055833001 -0.713992 -0.69882703 -0.055429999 -0.71314001 0.40285799 0.88108701
-		 -0.247774 0.38888699 0.87536502 -0.28723499 0.38888699 0.87536502 -0.28723499 0.401236
-		 0.88048899 -0.25248501 -0.38195199 0.918634 -0.101117 -0.387705 0.91487199 -0.112672
-		 -0.387705 0.91487199 -0.112672 -0.384229 0.91716999 -0.105676 -0.95931399 -0.28182101
-		 0.017116999 -0.96791899 -0.246491 0.048735999 -0.96791899 -0.246491 0.048735999 -0.95521301
-		 -0.29588699 0.0043520001 0.475977 -0.87589598 -0.079072997 0.10988 -0.91504103 -0.38810501
-		 0.0091429995 -0.885557 -0.464441 0.470413 -0.87868202 -0.081425004 0.032658 0.948964
-		 0.31369001 0.23492999 0.81208098 0.53416598 0.28437501 0.76343501 0.57991201 -0.017104
-		 0.96641999 0.25639999 -0.14694899 0.90285999 0.40404299 -0.043326002 0.89376098 0.446446
-		 -0.091940999 0.919586 0.38198099 -0.170247 0.910317 0.37727901;
-	setAttr ".n[2656:2821]" -type "float3"  -0.68269002 -0.72644699 -0.078791998
-		 0.063487999 -0.98900801 -0.133535 0.065073997 -0.89710599 0.43699801 -0.71399802
-		 -0.67593801 -0.182522 -0.616494 -0.29584599 -0.72966403 -0.69954598 -0.055109002
-		 -0.71245903 -0.69882703 -0.055429999 -0.71314001 -0.65166497 -0.222663 -0.72508901
-		 0.30793899 0.82794899 0.468694 0.40285799 0.88108701 -0.247774 0.401236 0.88048899
-		 -0.25248501 0.31771001 0.82467699 0.46794 -0.28955001 0.954175 0.075574003 -0.38195199
-		 0.918634 -0.101117 -0.384229 0.91716999 -0.105676 -0.29230401 0.95377398 0.069819003
-		 -0.045593001 -0.89221501 -0.449303 -0.95931399 -0.28182101 0.017116999 -0.95521301
-		 -0.29588699 0.0043520001 -0.012523 -0.909482 -0.41555399 0.393924 -0.90539497 -0.15837701
-		 0.40661699 -0.90917403 -0.089810997 0.219083 -0.96651101 -0.133641 0.18717299 -0.95741802
-		 -0.219813 0.97417903 0.135014 0.180958 0.96049702 -0.015362 0.27786699 0.91019303
-		 -0.399964 0.107595 0.98616803 -0.148569 0.073491 0.94440502 0.249671 0.213926 0.93307102
-		 0.13289 0.334243 0.96049702 -0.015362 0.27786699 0.97417903 0.135014 0.180958 0.28277299
-		 0.705208 0.65017003 0.30175301 0.731888 0.61097097 0.40450901 0.65587699 0.63733602
-		 0.42003 0.67774397 0.603522 0.04721 -0.16204 0.985654 0.055408999 -0.76187497 0.64534998
-		 0.17280699 -0.79587001 0.580284 0.04721 -0.16204 0.985654 0.23106 -0.91619802 0.32740399
-		 0.17280699 -0.79587001 0.580284 0.055408999 -0.76187497 0.64534998 0.090195999 -0.92454898
-		 0.37023601 0.557051 -0.82765901 -0.068368003 0.639727 -0.768067 0.028694 0.70236701
-		 -0.71153098 -0.020109 0.63954997 -0.76474398 -0.078373 0.56623 -0.81375802 -0.13108
-		 0.557051 -0.82765901 -0.068368003 0.63954997 -0.76474398 -0.078373 0.59434098 -0.79393703
-		 -0.128152 0.52373803 -0.783728 -0.33386999 0.56623 -0.81375802 -0.13108 0.59434098
-		 -0.79393703 -0.128152 0.54705697 -0.78448302 -0.29208699 0.58121598 -0.72522599 -0.36910099
-		 0.52373803 -0.783728 -0.33386999 0.54705697 -0.78448302 -0.29208699 0.306961 -0.905967
-		 -0.291547 0.31398901 -0.88924599 -0.332645 0.65792102 -0.68395299 -0.31519601 0.58121598
-		 -0.72522599 -0.36910099 0.31398901 -0.88924599 -0.332645 0.53993702 -0.79461801 -0.27757999
-		 0.43880799 -0.78664798 0.43431699 0.69840801 -0.70584798 -0.11834 0.51177001 -0.84194499
-		 -0.170938 0.498577 -0.793396 0.349204 0.32508299 -0.77633399 0.54002398 0.43880799
-		 -0.78664798 0.43431699 0.498577 -0.793396 0.349204 0.39141801 -0.755566 0.52527398
-		 0.32100999 -0.80286902 0.50234902 0.32508299 -0.77633399 0.54002398 0.39141801 -0.755566
-		 0.52527398 0.53188699 -0.79337698 0.29605499 0.59338802 -0.79107797 0.148616 0.32100999
-		 -0.80286902 0.50234902 0.53188699 -0.79337698 0.29605499 0.57451898 -0.80745697 0.133946
-		 0.52743798 -0.78898299 -0.31514499 0.524737 -0.78004402 -0.34085399 0.56148201 -0.81728798
-		 -0.129528 0.55562001 -0.82073098 -0.13299499 0.51009798 -0.77798003 -0.36680499 0.52104402
-		 -0.79359502 -0.31419599 0.524737 -0.78004402 -0.34085399 0.52743798 -0.78898299 -0.31514499
-		 0.42466801 -0.90489298 -0.028742 0.42103001 -0.90699399 -0.0097660003 0.50228 -0.85831797
-		 -0.104905 0.50087398 -0.856906 -0.12181 0.32680801 -0.941625 0.080859996 0.31549099
-		 -0.94336301 0.102619 0.42103001 -0.90699399 -0.0097660003 0.42466801 -0.90489298
-		 -0.028742 0.44230399 -0.224931 -0.86820102 0.44247499 -0.24510901 -0.862634 0.43783599
-		 -0.322225 -0.83932698 0.43399999 -0.35055101 -0.82991397 0.385869 0.35067999 -0.85330498
-		 0.385869 0.35067999 -0.85330498 0.44247499 -0.24510901 -0.862634 0.44230399 -0.224931
-		 -0.86820102 0.523148 0.82735503 -0.20445099 0.47026199 0.80896002 -0.35275599 0.474617
-		 0.80604899 -0.35358801 0.53282797 0.82476699 -0.18935101 0.59717 0.80188298 0.019288
-		 0.523148 0.82735503 -0.20445099 0.53282797 0.82476699 -0.18935101 0.59936798 0.80045903
-		 0.0048929998 0.64287198 0.75909901 0.102391 0.642811 0.75903302 0.103258 0.64514601
-		 0.76178998 0.058848001 0.64519298 0.76182997 0.057805002 0.64228898 0.75841397 0.110782
-		 0.64228803 0.75841498 0.110782 0.642811 0.75903302 0.103258 0.64287198 0.75909901
-		 0.102391 0.59590799 0.80227798 -0.035273001 0.61989301 0.78421903 -0.027078001 0.57443702
-		 0.81587702 -0.066083997 0.57515502 0.81689399 -0.043384999 0.67508799 0.67458999
-		 -0.298639 0.81212801 0.50946802 -0.28441301 0.61989301 0.78421903 -0.027078001 0.59590799
-		 0.80227798 -0.035273001 0.69642103 0.50723499 -0.507653 0.81960601 0.304712 -0.485176
-		 0.81212801 0.50946802 -0.28441301 0.67508799 0.67458999 -0.298639 0.46636 0.380238
-		 -0.79870301 0.55465603 0.16322599 -0.81591302 0.55465603 0.16322599 -0.81591302 0.45899099
-		 0.39509201 -0.795757 0.35674801 0.33762899 -0.87105501 0.571724 0.16361 -0.803967
-		 0.54075599 0.20413899 -0.81603301 0.350878 0.351174 -0.86807901 0.57381701 0.380245
-		 -0.72536099 0.76283598 0.15067901 -0.62879002 0.60769898 0.151935 -0.77949899 0.47402301
-		 0.343247 -0.810853 0.76534897 0.55539501 -0.32523501 0.92309397 0.31005299 -0.22751699
-		 0.84139299 0.186819 -0.50710601 0.73545402 0.46507999 -0.492755 0.70071298 0.59819603
-		 -0.38879699 0.73552603 0.53973299 -0.40949899 0.73552603 0.53973299 -0.40949899 0.71030802
-		 0.58295798 -0.39449 -0.36210999 -0.59022802 0.72146201 -0.44326699 -0.57792997 0.68520898
-		 -0.44326699 -0.57792997 0.68520898 -0.305994 -0.595819 0.74254102 -0.34731099 -0.52521098
-		 0.77687103 -0.43660501 -0.44926801 0.77944499 -0.43660501 -0.44926801 0.77944499
-		 -0.236321 -0.60518801 0.76019698 0.41986299 -0.245335 0.87379998 0.47202101 -0.222664
-		 0.85300499 0.47202101 -0.222664 0.85300499 0.360966 -0.269135 0.89289999 0.232145
-		 0.020362999 0.97246802;
-	setAttr ".n[2822:2987]" -type "float3"  0.39556199 -0.044562001 0.91735703 0.40717599
-		 0.062582999 0.91120303 0.226448 0.051738001 0.97264802 0.27926099 -0.057053 0.95851898
-		 0.45954499 -0.18886501 0.86784101 0.437538 -0.064081997 0.89691401 0.242882 -0.001333
-		 0.97005498 0.31781799 -0.106329 0.94217098 0.521918 -0.249189 0.815786 0.47403401
-		 -0.234313 0.84875798 0.286457 -0.092889003 0.95358002 0.18108299 -0.55757397 0.81013602
-		 0.18108299 -0.55757397 0.81013602 0.174081 -0.53590697 0.82613498 0.15887 -0.48884499
-		 0.85778302 0.41867501 0.35525799 0.835765 0.41867501 0.35525799 0.835765 0.41867501
-		 0.35525799 0.835765 0.41867501 0.35525799 0.835765 0.48022401 0.43407199 0.76221198
-		 0.480223 0.43407199 0.76221198 0.45348701 0.438081 0.77616602 0.44285801 0.439547
-		 0.78145701 0.52587599 0.75217301 0.397102 0.52587599 0.75217301 0.397102 0.52587599
-		 0.75217301 0.397102 0.52587599 0.75217301 0.397102 0.52848101 0.100016 0.84303302
-		 0.61294198 0.019925 0.789877 0.65118402 -0.029445 0.75834799 0.62714797 0.031810999
-		 0.77824998 0.640769 -0.19481499 0.74260497 0.61294198 0.019925 0.789877 0.52848101
-		 0.100016 0.84303302 0.47485399 0.107037 0.87353098 0.44290301 0.66872698 0.59719402
-		 0.42003 0.67774397 0.603522 0.51368302 0.62620503 0.58651203 0.63597798 0.608998
-		 0.473977 0.51307201 0.58451998 0.628564 0.51368302 0.62620503 0.58651203 0.42003
-		 0.67774397 0.603522 0.40450901 0.65587699 0.63733602 0.40405899 -0.12970801 0.90548998
-		 0.40405899 -0.12970801 0.90548998 0.40405899 -0.12970801 0.90548998 0.40405899 -0.12970801
-		 0.90548998 0.59903002 -0.082684003 0.79644603 0.59903002 -0.082684003 0.79644603
-		 0.59903002 -0.082684003 0.79644603 0.59903002 -0.082684003 0.79644603 0.18918499
-		 -0.207772 0.95970798 0.18918499 -0.207772 0.95970798 0.18918499 -0.207772 0.95970798
-		 0.18918499 -0.207772 0.95970798 -0.042247001 -0.780406 0.62384403 -0.042247001 -0.780406
-		 0.62384403 -0.042247001 -0.780406 0.62384403 -0.042247001 -0.780406 0.62384403 -0.443692
-		 -0.31177601 0.84019899 -0.443692 -0.31177601 0.84019798 -0.443692 -0.31177601 0.84019899
-		 -0.443692 -0.31177601 0.84019899 0.159216 0.120696 0.97983801 0.159216 0.120696 0.97983801
-		 0.159216 0.120696 0.97983801 0.159216 0.120696 0.97983801 0.34851 -0.25919601 0.90075397
-		 0.34851 -0.25919601 0.90075397 0.34851 -0.25919601 0.90075397 0.34851 -0.25919601
-		 0.90075397 -0.077596001 -0.83675402 0.542054 -0.077596001 -0.83675402 0.542054 -0.077596001
-		 -0.83675402 0.542054 -0.077596001 -0.83675402 0.542054 -0.99356902 -0.086025 0.073615998
-		 -0.99356902 -0.086025 0.073615998 -0.99356902 -0.086025 0.073615998 -0.99356902 -0.086025
-		 0.073615998 -0.087886997 0.98138201 -0.170779 -0.087886997 0.98138201 -0.170779 -0.087886997
-		 0.98138201 -0.170779 -0.087886997 0.98138201 -0.170779 0.52944702 0.36826599 -0.76424199
-		 0.52944601 0.36826599 -0.76424199 0.52944601 0.36826599 -0.76424199 0.52944702 0.36826599
-		 -0.76424199 0.25386801 0.91161197 0.323286 0.25386801 0.91161197 0.323286 0.25386801
-		 0.91161197 0.323286 0.25386801 0.91161197 0.323286 0.40661699 -0.90917403 -0.089810997
-		 0.36185101 -0.90533 0.22235399 0.13855501 -0.95985103 0.243901 0.219083 -0.96651101
-		 -0.133641 0.639727 -0.768067 0.028694 0.74028999 -0.65644699 0.14507601 0.74024802
-		 -0.65647203 0.145183 0.70236701 -0.71153098 -0.020109 0.96049702 -0.015362 0.27786699
-		 0.85693699 -0.25902399 0.44560701 0.56481701 -0.76215601 0.316385 0.91019303 -0.399964
-		 0.107595 0.93307102 0.13289 0.334243 0.88786697 -0.057573002 0.45648399 0.85693699
-		 -0.25902399 0.44560701 0.96049702 -0.015362 0.27786699 0.73300302 0.42735699 0.52921897
-		 0.73300302 0.42735699 0.52921897 0.51307201 0.58451998 0.628564 0.40450901 0.65587699
-		 0.63733602 0.028318999 -0.357961 0.93330699 0.028318999 -0.35795999 0.93330699 0.028318999
-		 -0.35795999 0.93330699 0.028318999 -0.35795999 0.93330699 0.96487302 0.188815 -0.18267
-		 0.96487403 0.188815 -0.18267 0.96487403 0.188815 -0.18267 0.96487302 0.188815 -0.18267
-		 0.97828698 0.050779 -0.200939 0.97828698 0.050779 -0.200939 0.97828698 0.050779 -0.200939
-		 0.97828698 0.050779 -0.200939 -0.056953002 -0.86235303 0.50309497 -0.056953002 -0.86235303
-		 0.50309497 -0.056953002 -0.86235303 0.50309497 -0.056953002 -0.86235303 0.50309497
-		 -0.23808099 -0.50510699 -0.82956898 -0.23808099 -0.50510699 -0.82956898 -0.23808099
-		 -0.50510699 -0.82956898 -0.23808099 -0.50510699 -0.82956898 -0.999551 0.019939 -0.022383999
-		 -0.999551 0.019939 -0.022383999 -0.999551 0.019939 -0.022383999 -0.999551 0.019939
-		 -0.022383999 -0.97002101 -0.239659 -0.040291 -0.97002101 -0.239659 -0.040291 -0.97002101
-		 -0.239659 -0.040291 -0.97002101 -0.239659 -0.040291 0.45247099 0.407368 -0.79329801
-		 0.45247099 0.407368 -0.79329801 0.45247099 0.407368 -0.79329801 0.45247099 0.407368
-		 -0.79329801 0.50030398 0.804842 -0.319258 0.50030398 0.804842 -0.319258 0.50030398
-		 0.804842 -0.319258 0.50030398 0.804842 -0.319258 0.99137998 0.126335 0.034719002
-		 0.99137998 0.126335 0.034719002 0.99137998 0.126335 0.034719002 0.99137998 0.126335
-		 0.034719002 0.034828998 0.97450101 0.221664 0.034828998 0.97450101 0.221664 0.034828998
-		 0.97450101 0.221664 0.034828998 0.97450101 0.221664 0.11269 0.97491902 0.19192301
-		 0.11269 0.97491902 0.19192301 0.11269 0.97491902 0.19192301 0.11269 0.97491902 0.19192301
-		 0.102693 0.93259698 0.34600201 0.102693 0.93259698 0.34600201 0.102693 0.93259698
-		 0.34600201 0.102693 0.93259698 0.34600201 0 0.963557 0.26750201 0 0.963557 0.26750201
-		 0 0.963557 0.26750201;
-	setAttr ".n[2988:3153]" -type "float3"  0 0.963557 0.26750201 0.039611001 -0.71191603
-		 0.70114702 0.018373 -0.71669799 0.69714099 0.018373 -0.71669799 0.69714099 0.044514999
-		 -0.71076202 0.70202303 -0.020500001 -0.95792401 -0.28628999 -0.020500001 -0.95792401
-		 -0.28628999 -0.020500001 -0.95792401 -0.28628999 -0.020500001 -0.95792401 -0.28628999
-		 0 -0.993572 -0.113202 0 -0.993572 -0.113202 0 -0.993572 -0.113202 0 -0.993572 -0.113202
-		 -0.107973 -0.88027298 -0.462019 -0.107973 -0.88027298 -0.462019 -0.107973 -0.88027298
-		 -0.462019 -0.107973 -0.88027298 -0.462019 -0.089850999 -0.97349298 -0.210327 -0.089850999
-		 -0.97349298 -0.210327 -0.089850999 -0.97349298 -0.210327 -0.089850999 -0.97349298
-		 -0.210327 -0.007183 -0.99280697 -0.119509 -0.007183 -0.99280697 -0.119509 -0.007183
-		 -0.99280697 -0.119509 -0.007183 -0.99280697 -0.119509 0.067681 0.36462101 -0.928693
-		 0.067681 0.36462101 -0.928693 0.067681 0.36462101 -0.928693 0.067681 0.36462101 -0.928693
-		 0.067681 0.36462101 -0.928693 0.42121699 0.486173 -0.76564503 0.42121699 0.486173
-		 -0.76564503 0.42121699 0.486173 -0.76564503 0.30826101 -0.62158298 0.72014499 0.357099
-		 -0.79989803 0.48233199 0.35364601 -0.79147297 0.498503 0.30919099 -0.621149 0.72012198
-		 0.81276 0.00041499999 0.58259797 0.979698 0.033257 0.19769999 0.96002501 0.031778999
-		 0.27810401 0.81230903 -0.004586 0.58320999 0.36066699 0.78318202 0.50650299 0.40976
-		 0.91177303 0.027702 0.408871 0.90956497 0.074267998 0.36105299 0.78298599 0.506531
-		 0.36927801 -0.860313 0.351419 0.38398001 -0.91631001 0.113735 0.383477 -0.91503298
-		 0.12514 0.36952001 -0.86022002 0.35139099 0.99752003 0.034851 0.061149999 0.99926198
-		 0.034678999 0.0165 0.99915701 0.034678001 0.021986 0.99752003 0.034875002 0.061143
-		 0.40099299 0.89341402 -0.20252299 0.408683 0.91056001 -0.062119 0.40848199 0.91011101
-		 -0.069578998 0.40099299 0.89341402 -0.20252299 0.386208 -0.92241198 -7.0000001e-06
-		 0.386208 -0.92241198 -8e-06 0.386208 -0.92241198 -8e-06 0.386208 -0.92241198 -7.0000001e-06
-		 0.99939901 0.034674 1.2e-05 0.99939901 0.034673002 1.2e-05 0.99939901 0.034673002
-		 1.2e-05 0.99939901 0.034674 1.2e-05 0.40946999 0.91232401 3.0000001e-06 0.40946901
-		 0.91232401 4e-06 0.40946901 0.91232401 4e-06 0.40946999 0.912323 3.0000001e-06 0.39966801
-		 -0.83961302 -0.367854 0.41775799 -0.767501 -0.486231 0.41857901 -0.75048101 -0.51143903
-		 0.40134099 -0.838893 -0.36767501 0.992549 0.032368999 -0.117466 0.97437501 0.031367999
-		 -0.22273199 0.95785898 0.030967001 -0.28556499 0.992544 0.032019001 -0.117607 0.416206
-		 0.85781002 0.30155301 0.45079499 0.89261901 -0.0039840001 0.45124099 0.89102501 -0.049557
-		 0.41866201 0.85680503 0.301011 0.41775799 -0.767501 -0.486231 0.40949199 -0.57580799
-		 -0.707645 0.40949199 -0.57580799 -0.707645 0.41857901 -0.75048101 -0.51143903 0.97437501
-		 0.031367999 -0.22273199 0.80536097 0.026729001 -0.59218198 0.80536097 0.026729001
-		 -0.59218198 0.95785898 0.030967001 -0.28556499 0.45079499 0.89261901 -0.0039840001
-		 0.34560001 0.64759898 -0.67909902 0.34560001 0.64759898 -0.67909902 0.45124099 0.89102501
-		 -0.049557 0.96267802 -0.195398 0.18727 0.92789 0.33604199 0.161543 0.98078001 0.100367
-		 0.16732401 0.98936802 -0.11629 0.087335996 0.54955798 -0.83240199 -0.071364999 0.54957199
-		 -0.83241498 -0.071098998 0.52104402 -0.79359502 -0.31419599 0.51009798 -0.77798003
-		 -0.36680499 0.50248301 -0.76704001 -0.398949 0.54953498 -0.83238101 -0.071788996
-		 0.54955798 -0.83240199 -0.071364999 0.51009798 -0.77798003 -0.36680499 0.59937602
-		 0.80037397 -0.012216 0.64523202 0.761859 0.056970999 0.64519298 0.76182997 0.057805002
-		 0.59936798 0.80045903 0.0048929998 0.64514601 0.76178998 0.058848001 0.59717 0.80188298
-		 0.019288 0.59936798 0.80045903 0.0048929998 0.64519298 0.76182997 0.057805002 0.92789
-		 0.33604199 0.161543 0.82897502 0.54239702 0.13640299 0.90494502 0.37483799 0.20141999
-		 0.98078001 0.100367 0.16732401 0.53875601 0.36301699 -0.76023698 0.58141202 0.355281
-		 -0.73193997 -0.014721 0.59008902 -0.80720401 0.072052002 0.50440198 -0.86045802 0.50341499
-		 -0.29370901 -0.812594 0.50238103 -0.073209003 -0.86154199 0.032492001 0.111264 -0.99326003
-		 0.007154 -0.24044099 -0.97063702 -0.22641601 -0.100373 -0.96884501 0.61516601 -0.173305
-		 -0.76911402 0.61516601 -0.173305 -0.76911402 -0.051095001 -0.123924 -0.99097502 0.93262398
-		 0.358576 -0.040440999 0.93710399 0.34554699 -0.049334999 0.93923801 0.32466701 -0.111462
-		 0.933972 0.34226701 -0.102706 0.92782199 0.37245199 0.02063 0.92979699 0.367448 0.021447999
-		 0.93710399 0.34554699 -0.049334999 0.93262398 0.358576 -0.040440999 0.415932 -0.051808
-		 0.90791899 0.73628098 -0.078901 0.67206103 0.73628098 -0.078901 0.67206103 0.168796
-		 -0.029472999 0.98521 0.007067 -0.680709 0.73251998 0.039895002 -0.66117102 0.749174
-		 0.29786599 -0.50588799 0.80953902 0.076304004 -0.54143697 0.83727199 0 -0.78192401
-		 0.62337399 0 -0.78352499 0.62136102 0 -0.80383998 0.594845 0 -0.80383998 0.594845
-		 0 -0.236066 0.97173703 0 -0.241446 0.97041398 0 -0.38744801 0.92189199 0 -0.39219499
-		 0.919882 -0.00086600002 0.217777 0.97599798 0.050760999 0.212952 0.975743 0 -0.079859003
-		 0.99680603 0 -0.084663004 0.99641001 0.489445 0.84131598 0.229414 0.45804399 0.87838697
-		 0.136502 0.058843002 0.98209399 0.178968 -0.079713002 0.96656698 0.24371099 0.0078330003
-		 -0.052978002 0.99856502 0.48326799 -0.038135 0.874641 0.48095301 -0.038242001 0.87591201
-		 -0.023983 -0.053514 0.99827898 0.0070969998 -0.98806202 0.15389299;
-	setAttr ".n[3154:3319]" -type "float3"  -0.020578001 -0.99844199 -0.051865999
-		 -0.000113 -0.99848199 -0.055084001 3.2e-05 -0.98810101 0.153804 0.0071339998 -0.964275
-		 -0.26480699 -0.051314998 -0.96827197 -0.244574 -0.133488 -0.98794299 -0.078420997
-		 0 -0.99686402 -0.079129003 0.0088809999 -0.912862 -0.40817201 0.039992999 -0.90872997
-		 -0.41546401 -0.051314998 -0.96827197 -0.244574 0.0071339998 -0.964275 -0.26480699
-		 0.709705 -0.145693 -0.68926901 0.69397199 -0.042884 -0.71872401 0.065775998 -0.056518
-		 -0.99623299 0.071099997 -0.20587499 -0.97599202 0.760773 -0.195921 -0.61874002 0.73598301
-		 -0.088316001 -0.671215 0.047251001 -0.164085 -0.98531401 0.078589 -0.31382799 -0.94622201
-		 0.76545298 0.125797 -0.63107699 0.75193501 -0.25048599 -0.60979599 0.057484001 -0.41332299
-		 -0.908768 -0.015115 0.070721 -0.99738199 0.440478 -0.13116001 -0.88813102 0.31610101
-		 -0.065723002 -0.946446 0.0023310001 -0.088113002 -0.996108 0.057627 -0.138227 -0.98872298
-		 0.480768 -0.215951 -0.84983999 0.440478 -0.13116001 -0.88813102 0.057627 -0.138227
-		 -0.98872298 0.109345 -0.204982 -0.97263902 0.619712 -0.034005001 -0.78409201 0.58447498
-		 -0.23716199 -0.77597898 0.248044 -0.22108901 -0.943183 0.46285999 -0.054887999 -0.88472998
-		 0.33051899 -0.080554999 -0.940355 0.61547798 -0.061691001 -0.78573602 0.619712 -0.034005001
-		 -0.78409201 0.46285999 -0.054887999 -0.88472998 0.90910202 0.387687 -0.15242 0.86843997
-		 0.47131601 -0.153861 0.86843997 0.47131601 -0.153861 0.901353 0.40522599 -0.152826
-		 0.64790398 -0.286432 0.70581698 0.73526299 -0.259662 0.62607002 0.91596401 0.016566999
-		 0.40091801 0.76607502 -0.027074 0.64218003 0.64790398 -0.286432 0.70581698 0.002298
-		 -0.50593197 0.86256999 0.30404699 -0.341912 0.88918602 0.73526299 -0.259662 0.62607002
-		 -0.008258 -0.033289 0.999412 -0.018968999 0.0066399998 0.999798 0.28105199 -0.020398
-		 0.95947599 0.27435499 -0.075611003 0.95865101 0.0026380001 0.074732997 0.99720001
-		 0.29653001 0.087328002 0.95102298 0.28105199 -0.020398 0.95947599 -0.018968999 0.0066399998
-		 0.999798 0.244056 0.90943801 0.336689 0.132715 0.93272001 0.335291 -0.00012500001
-		 0.93906403 0.343743 -0.0056019998 0.93371302 0.357979 -0.0099459998 -0.140488 0.99003202
-		 0.37542099 -0.14750201 0.91504198 0.364048 -0.14776599 0.91958398 -0.00569 -0.14081199
-		 0.99001998 0 -1 0 1e-06 -1 2e-06 0 -1 2e-06 0 -1 0 0.00090500002 -0.95212501 -0.30570799
-		 0.069610998 -0.94981599 -0.30496699 0.069610998 -0.94981599 -0.30496699 0 -0.95212501
-		 -0.305709 0.347734 -0.28323799 -0.89378798 0.383203 0.30490199 -0.871889 0.0017810001
-		 0.32975799 -0.94406402 -0.001036 -0.254455 -0.96708399 0.97457403 -0.118788 0.18998501
-		 0.98305303 -0.033459999 0.180243 0.98245603 -0.041638002 0.181785 0.976668 -0.102499
-		 0.18871801 0 -0.084663004 0.99641001 0 -0.079859003 0.99680603 0 -0.241446 0.97041398
-		 0 -0.236066 0.97173703 0 -0.241579 0.97038102 0 -0.081006996 0.996714 0 -0.084663004
-		 0.99641001 0 -0.236066 0.97173703 -0.97950798 -0.068432003 0.189422 -0.98065197 -0.0070259999
-		 0.19563299 -0.98051602 0.001284 0.196437 -0.97851598 -0.08557 0.187575 -0.96824598
-		 -0.115369 -0.221789 -0.96616 -0.047231 -0.253582 -0.96494502 -0.045626 -0.25845701
-		 -0.96866399 -0.097268999 -0.22853599 0.078589 -0.31382799 -0.94622201 -0.582434 -0.24899299
-		 -0.77380502 -0.57288897 -0.30924901 -0.75905401 0.057484001 -0.41332299 -0.908768
-		 0.75193501 -0.25048599 -0.60979599 0.760773 -0.195921 -0.61874002 0.078589 -0.31382799
-		 -0.94622201 0.057484001 -0.41332299 -0.908768 0.935983 -0.14207301 -0.32210299 0.93423897
-		 -0.090719 -0.34491599 0.93510699 -0.092554003 -0.34206599 0.93533599 -0.156708 -0.317157
-		 0.84252298 -0.51600599 0.154576 0.96799803 -0.14013299 0.208188 0.95422202 -0.217549
-		 0.205264 0.86825103 -0.468822 0.162315 0 -0.39219499 0.919882 0 -0.38744801 0.92189199
-		 0 -0.78352499 0.62136102 0 -0.78192401 0.62337399 0 -0.77044803 0.63750303 0 -0.428922
-		 0.90334201 0 -0.39219499 0.919882 0 -0.78192401 0.62337399 -0.95304799 -0.145291
-		 0.26568899 -0.98265302 -0.069026001 0.17212901 -0.97661197 0.127488 0.173136 -0.931077
-		 -0.241624 0.27333701 -0.99315798 0.073278002 -0.090926997 -0.98588902 -0.0078199999
-		 -0.167218 -0.97383797 0.15875 -0.162598 -0.99627602 -0.034975 -0.078805 -0.014721
-		 0.59008902 -0.80720401 -0.015115 0.070721 -0.99738199 -0.581949 0.219087 -0.783158
-		 -0.36701599 0.55068702 -0.749695 0.58141202 0.355281 -0.73193997 0.76545298 0.125797
-		 -0.63107699 -0.015115 0.070721 -0.99738199 -0.014721 0.59008902 -0.80720401 0.94936001
-		 -0.18243501 -0.25579801 0.95990199 0.041478999 -0.27724901 0.95438498 -0.111069 -0.27715299
-		 0.96138501 -0.085754 -0.26150599 0.97331899 0.196871 0.117866 0.99827999 0.050873999
-		 0.029130001 0.993954 0.073344998 -0.081710003 0.97387999 0.192247 0.120823 0.0022849999
-		 0.17565601 0.98444903 0.056614 0.1769 0.98259902 0.050760999 0.212952 0.975743 -0.00086600002
-		 0.217777 0.97599798 -0.035409998 0.210209 0.97701502 -0.039434999 0.174348 0.98389399
-		 0.0022849999 0.17565601 0.98444903 -0.00086600002 0.217777 0.97599798 -0.96193302
-		 0.20911001 0.175946 -0.995502 0.079781003 -0.051102001 -0.997666 0.053622998 0.042268999
-		 -0.96284997 0.20936 0.17055599 -0.93078899 -0.013976 -0.36528999 -0.94737798 -0.030533999
-		 -0.31865901 -0.995502 0.079781003 -0.051102001 -0.931485 -0.015065 -0.36346701 0.047251001
-		 -0.164085 -0.98531401 0.071099997 -0.20587499 -0.97599202 -0.52357602 -0.19273201
-		 -0.82989401;
-	setAttr ".n[3320:3485]" -type "float3"  -0.55035198 -0.159917 -0.819475 0.73598301
-		 -0.088316001 -0.671215 0.709705 -0.145693 -0.68926901 0.071099997 -0.20587499 -0.97599202
-		 0.047251001 -0.164085 -0.98531401 0.92251402 0.0059369998 -0.38591799 0.993954 0.073344998
-		 -0.081710003 0.93490499 -0.033466998 -0.35331699 0.92080599 0.002085 -0.39001599
-		 -0.42236501 0.88192499 0.20932201 -0.42648801 0.87900501 0.21320701 -0.077583 0.96430999
-		 0.25315401 -0.079713002 0.96656698 0.24371099 -1 -1e-06 -2e-06 -1 -1e-06 -2e-06 -1
-		 -1e-06 -2e-06 -1 -1e-06 -2e-06 -0.000113 -0.99848199 -0.055084001 0.001069 -0.997594
-		 -0.069316 0.016785 -0.99745101 -0.069346003 0.014906 -0.99851102 -0.052480999 -0.020578001
-		 -0.99844199 -0.051865999 -0.023259001 -0.997329 -0.069237001 0.001069 -0.997594 -0.069316
-		 -0.000113 -0.99848199 -0.055084001 1 1e-06 0 1 0 -1e-06 1 0 -1e-06 1 0 0 -0.077583
-		 0.96430999 0.25315401 0.49448401 0.83349597 0.246516 0.489445 0.84131598 0.229414
-		 -0.079713002 0.96656698 0.24371099 0.000199 0.62257898 0.78255701 0.25636101 0.60056603
-		 0.75736302 0.28012899 0.45216501 0.84680301 0.001385 0.47178 0.881715 -0.30105299
-		 0.444976 0.84342402 -0.27505201 0.59986001 0.751342 0.000199 0.62257898 0.78255701
-		 0.001385 0.47178 0.881715 -0.99324101 0.115757 -0.0085619995 -0.99903601 -0.015914001
-		 -0.040902 -0.98963398 -0.136051 -0.045991998 -0.99315399 0.116486 -0.0086899996 0.0040449998
-		 -0.127896 -0.99177903 -0.001084 -0.332407 -0.94313502 -0.34065899 -0.331119 -0.87994999
-		 -0.33955199 -0.121943 -0.93264902 0.31635001 -0.120147 -0.94100302 0.31775799 -0.334483
-		 -0.88721502 -0.001084 -0.332407 -0.94313502 0.0040449998 -0.127896 -0.99177903 0.99155301
-		 0.129054 -0.012956 0.98755902 -0.14955001 -0.048610002 0.99875599 -0.025672 -0.042761002
-		 0.99163502 0.128433 -0.012859 0.99155301 0.129054 -0.012956 0.99163502 0.128433 -0.012859
-		 0.996158 -0.083150998 0.027479 0.99273199 -0.114307 0.037636999 0.001385 0.47178
-		 0.881715 0.28012899 0.45216501 0.84680301 0.29653001 0.087328002 0.95102298 0.0026380001
-		 0.074732997 0.99720001 -0.30105299 0.444976 0.84342402 0.001385 0.47178 0.881715
-		 0.0026380001 0.074732997 0.99720001 -0.31590599 0.056361001 0.947115 -0.99324101
-		 0.115757 -0.0085619995 -0.99315399 0.116486 -0.0086899996 -0.981884 -0.179965 0.059303999
-		 -0.98961002 -0.136502 0.045155998 0.0023310001 -0.088113002 -0.996108 0.0040449998
-		 -0.127896 -0.99177903 -0.33955199 -0.121943 -0.93264902 -0.34081101 -0.090554997
-		 -0.93576002 0.31635001 -0.120147 -0.94100302 0.0040449998 -0.127896 -0.99177903 0.0023310001
-		 -0.088113002 -0.996108 0.31610101 -0.065723002 -0.946446 0.996584 -0.060755 0.055945002
-		 0.98700702 -0.15668499 0.035595998 0.98701298 -0.156702 0.035346001 0.994434 -0.093029998
-		 0.049454 0.002298 -0.50593197 0.86256999 -0.051651999 -0.14987101 0.98735499 0.25278899
-		 -0.229105 0.940005 0.30404699 -0.341912 0.88918602 -0.24555001 -0.496663 0.83248502
-		 -0.32499099 -0.064266004 0.94353098 -0.051651999 -0.14987101 0.98735499 0.002298
-		 -0.50593197 0.86256999 -0.98079997 0.19434801 -0.016143 -0.95455402 0.29328999 -0.052988
-		 -0.95455498 0.2933 -0.052905001 -0.98807198 0.153981 -0.001632 -0.278467 -0.258773
-		 -0.92492902 -0.217264 -0.196022 -0.95622802 0.248044 -0.22108901 -0.943183 0.15880799
-		 -0.355463 -0.92110097 0.58447498 -0.23716199 -0.77597898 0.53675801 -0.38134301 -0.75264102
-		 0.15880799 -0.355463 -0.92110097 0.248044 -0.22108901 -0.943183 0.99778402 -0.003859
-		 -0.066418998 0.99865597 0.0075099999 -0.051284999 0.98728198 0.023034999 -0.1573
-		 0.95397103 -0.073978998 -0.29063201 1 1e-06 0 1 0 0 0.99865597 0.0075099999 -0.051284999
-		 0.99778402 -0.003859 -0.066418998 1 0 0 1 -1e-06 0 1 3.0000001e-06 4.9999999e-06
-		 1 2e-06 1e-06 1 0 -1e-06 1 -2e-06 -1e-06 1 -1e-06 0 1 0 0 0.0089919996 -0.052958
-		 0.99855602 0.498799 -0.037402 0.86590999 0.48326799 -0.038135 0.874641 0.0078330003
-		 -0.052978002 0.99856502 -0.38143799 -0.055698998 0.92271501 -0.38317499 -0.055691998
-		 0.92199498 0.0089919996 -0.052958 0.99855602 0.0078330003 -0.052978002 0.99856502
-		 -1 0 -1e-06 -1 0 -1e-06 -1 -1e-06 -2e-06 -1 -1e-06 -2e-06 -1 4e-06 3.0000001e-06
-		 -1 0 -1e-06 -1 -1e-06 -2e-06 -1 1e-06 0 -0.99855697 0.001584 -0.053686999 -0.999237
-		 0.01086 -0.037526999 -1 1e-06 0 -1 1e-06 1e-06 -0.97114497 -0.037519 -0.23552001
-		 -0.99365002 0.031273998 -0.108078 -0.999237 0.01086 -0.037526999 -0.99855697 0.001584
-		 -0.053686999 0.065775998 -0.056518 -0.99623299 0.035526 0.328255 -0.94392103 -0.481462
-		 0.289612 -0.827236 -0.50842702 -0.030956 -0.86054897 0.69397199 -0.042884 -0.71872401
-		 0.66859102 0.242091 -0.70311999 0.035526 0.328255 -0.94392103 0.065775998 -0.056518
-		 -0.99623299 -0.001036 -0.254455 -0.96708399 -0.37250599 -0.278449 -0.88527101 -0.34065899
-		 -0.331119 -0.87994999 -0.001084 -0.332407 -0.94313502 -0.99903601 -0.015914001 -0.040902
-		 -0.969046 -0.24081001 -0.054412998 -0.97351903 -0.220808 -0.059200998 -0.98963398
-		 -0.136051 -0.045991998 -0.98442799 -0.069452003 0.161488 -0.98064399 -0.136902 0.139982
-		 -0.98325098 -0.135868 0.121481 -0.987342 -0.057425998 0.147847 -0.39430699 -0.111869
-		 0.91214401;
-	setAttr ".n[3486:3651]" -type "float3"  -0.39684099 -0.111573 0.91108102 -0.00569
-		 -0.14081199 0.99001998 0.015628001 -0.14178801 0.98977399 0.364048 -0.14776599 0.91958398
-		 0.360614 -0.147842 0.92092401 0.015628001 -0.14178801 0.98977399 -0.00569 -0.14081199
-		 0.99001998 0.98175198 -0.166705 0.091499999 0.98675102 -0.12311 0.105672 0.988617
-		 -0.11531 0.096642002 0.98293298 -0.165999 0.079291001 0.98755902 -0.14955001 -0.048610002
-		 0.96980798 -0.23555601 -0.063130997 0.96476501 -0.25663701 -0.058008999 0.99875599
-		 -0.025672 -0.042761002 0.31775799 -0.334483 -0.88721502 0.347734 -0.28323799 -0.89378798
-		 -0.001036 -0.254455 -0.96708399 -0.001084 -0.332407 -0.94313502 0.239427 0.28845799
-		 0.92707402 0.47485399 0.107037 0.87353098 0.52848101 0.100016 0.84303302 0.32144701
-		 -0.057955999 0.94515198 0.32144701 -0.057955999 0.94515198 0.52848101 0.100016 0.84303302
-		 0.62714797 0.031810999 0.77824998 0.63149798 0.189365 0.75189799 0.466782 0.32295901
-		 0.82329398 0.63149798 0.189365 0.75189799 0.63072699 0.40391099 0.66259998 0.38579199
-		 0.60188699 0.69921201 0.85548598 -0.39418799 0.335796 0.89570701 -0.43059999 0.110877
-		 0.849949 -0.52414501 0.053474002 0.95158398 -0.26949501 0.14785101 0.89881498 -0.247107
-		 0.36203599 0.97930402 -0.157267 0.12740301 0.988249 -0.14667299 0.043033 0.89570701
-		 -0.43059999 0.110877 0.96532702 0.107378 0.237936 0.982288 -0.101442 0.157544 0.97930402
-		 -0.157267 0.12740301 0.89881498 -0.247107 0.36203599 0.849935 -0.26154399 0.457389
-		 0.72926998 -0.41193199 0.54633099 0.62522697 -0.43497801 0.64798599 0.93176001 0.070524
-		 0.35616001 0.938712 0.17973401 0.294135 0.832654 -0.31094301 0.45825899 0.72926998
-		 -0.41193199 0.54633099 0.849935 -0.26154399 0.457389 0.85548598 -0.39418799 0.335796
-		 0.832654 -0.31094301 0.45825899 0.85548598 -0.39418799 0.335796 0.76451802 -0.215464
-		 0.607526 0.62714797 0.031810999 0.77824998 0.239427 0.28845799 0.92707402 0.70163399
-		 -0.24140599 0.670398 0.640769 -0.19481499 0.74260497 0.47485399 0.107037 0.87353098
-		 0.32144701 -0.057955999 0.94515198 0.63149798 0.189365 0.75189799 0.466782 0.32295901
-		 0.82329398 0.205634 -0.048858002 0.97740901 0.96532702 0.107378 0.237936 0.89881498
-		 -0.247107 0.36203599 0.849935 -0.26154399 0.457389 0.938712 0.17973401 0.294135 0.849935
-		 -0.26154399 0.457389 0.89881498 -0.247107 0.36203599 0.89570701 -0.43059999 0.110877
-		 0.85548598 -0.39418799 0.335796 0.982288 -0.101442 0.157544 0.89109302 -0.448048
-		 0.072154 0.988249 -0.14667299 0.043033 0.97930402 -0.157267 0.12740301 0.98616803
-		 -0.148569 0.073491 0.90459198 -0.42585701 0.018941 0.89109302 -0.448048 0.072154
-		 0.982288 -0.101442 0.157544 0.91019303 -0.399964 0.107595 0.71899801 -0.69500399
-		 0.0033090001 0.90459198 -0.42585701 0.018941 0.98616803 -0.148569 0.073491 0.56481701
-		 -0.76215601 0.316385 0.36867699 -0.88023698 0.29876399 0.71899801 -0.69500399 0.0033090001
-		 0.91019303 -0.399964 0.107595 0.16350999 -0.90984201 0.38138101 0.32373899 -0.89025199
-		 0.320382 0.23106 -0.91619802 0.32740399 0.090195999 -0.92454898 0.37023601 0.011728
-		 -0.921597 0.38797 0.072809003 -0.90906298 0.41024801 0.16350999 -0.90984201 0.38138101
-		 0.090195999 -0.92454898 0.37023601 0.59434098 -0.79393703 -0.128152 0.32482901 -0.92299402
-		 -0.20632 0.306961 -0.905967 -0.291547 0.54705697 -0.78448302 -0.29208699 0.63954997
-		 -0.76474398 -0.078373 0.393924 -0.90539497 -0.15837701 0.32482901 -0.92299402 -0.20632
-		 0.59434098 -0.79393703 -0.128152 0.70236701 -0.71153098 -0.020109 0.40661699 -0.90917403
-		 -0.089810997 0.393924 -0.90539497 -0.15837701 0.63954997 -0.76474398 -0.078373 0.74024802
-		 -0.65647203 0.145183 0.36185101 -0.90533 0.22235399 0.40661699 -0.90917403 -0.089810997
-		 0.70236701 -0.71153098 -0.020109 0.068558 -0.70482802 0.70605701 0.068558 -0.70482802
-		 0.70605701 0.039611001 -0.71191603 0.70114702 0.044514999 -0.71076202 0.70202303
-		 0.85548598 -0.39418799 0.335796 0.95158398 -0.26949501 0.14785101 0.99188 -0.033008002
-		 0.122819 0.76451802 -0.215464 0.607526 -0.024269 0.175745 0.984137 0.046034999 0.079893999
-		 0.99574 0.32144701 -0.057955999 0.94515198 0.205634 -0.048858002 0.97740901 0.53675801
-		 -0.38134301 -0.75264102 0.480768 -0.215951 -0.84983999 0.109345 -0.204982 -0.97263902
-		 0.15880799 -0.355463 -0.92110097 0.98700702 -0.15668499 0.035595998 0.987984 -0.15081599
-		 0.033813 0.98808098 -0.15016 0.033882 0.98701298 -0.156702 0.035346001 -0.051651999
-		 -0.14987101 0.98735499 -0.008258 -0.033289 0.999412 0.27435499 -0.075611003 0.95865101
-		 0.25278899 -0.229105 0.940005 -0.32499099 -0.064266004 0.94353098 -0.30595899 0.020321
-		 0.951828 -0.008258 -0.033289 0.999412 -0.051651999 -0.14987101 0.98735499 -0.95455402
-		 0.29328999 -0.052988 -0.98707801 0.157295 -0.030596999 -0.98505598 0.169102 -0.03269
-		 -0.95455498 0.2933 -0.052905001 0.109345 -0.204982 -0.97263902 -0.32349899 -0.162953
-		 -0.932091 -0.278467 -0.258773 -0.92492902 0.15880799 -0.355463 -0.92110097 -0.102747
-		 -0.54817402 0.83002901 -0.089225002 -0.54891902 0.83109999 0.076304004 -0.54143697
-		 0.83727199 0.01145 -0.54687703 0.83713502 0.29786599 -0.50588799 0.80953902 0.34568799
-		 -0.50092 0.79346001 0.01145 -0.54687703 0.83713502 0.076304004 -0.54143697 0.83727199
-		 0.98118699 -0.15593299 0.113827 0.98050499 -0.157113 0.11801 0.98007101 -0.15784401
-		 0.12061 0.98118699 -0.15593299 0.113827 0.97867298 -0.116718 -0.169045 0.97729802
-		 -0.116848 -0.176732 0.97729701 -0.116848 -0.17673901 0.97867298 -0.116718 -0.169045
-		 0.51043099 -0.29359299 -0.80824703 0.50341499 -0.29370901 -0.812594;
-	setAttr ".n[3652:3817]" -type "float3"  0.007154 -0.24044099 -0.97063702 0.077466004
-		 -0.25168601 -0.96470398 0.077466004 -0.25168601 -0.96470398 0.007154 -0.24044099
-		 -0.97063702 -0.35484999 -0.161173 -0.92092597 -0.365215 -0.15786301 -0.91744101 -0.97354198
-		 0.104007 -0.203466 -0.97717899 0.105042 -0.18463001 -0.97740197 0.105108 -0.183404
-		 -0.97354198 0.104007 -0.203466 -0.95077401 -0.149471 0.27145299 -0.94613999 -0.15459999
-		 0.28446099 -0.94867098 -0.151831 0.277435 -0.95077401 -0.149471 0.27145299 0.96279103
-		 -0.139422 -0.231506 0.94571102 -0.208542 -0.249282 0.94540799 -0.205311 -0.25308499
-		 0.95863801 -0.16086701 -0.234809 0.50238103 -0.073209003 -0.86154199 0.53875601 0.36301699
-		 -0.76023698 0.072052002 0.50440198 -0.86045802 0.032492001 0.111264 -0.99326003 0.032492001
-		 0.111264 -0.99326003 0.072052002 0.50440198 -0.86045802 -0.34369701 0.53039598 -0.77495301
-		 -0.33299899 0.165831 -0.92822999 -0.99941897 0.012273 -0.031798001 -0.99521798 -0.069029003
-		 -0.069105998 -0.99514598 -0.085297003 -0.049075998 -0.99750799 0.058584999 -0.039305001
-		 -0.90805399 -0.25524399 0.33209601 -0.918495 -0.278532 0.280691 -0.90334702 -0.30407199
-		 0.302497 -0.92093998 -0.201763 0.333408 -0.01022 -0.68660003 0.726964 0 -0.80384099
-		 0.594845 0 -0.80383998 0.594845 0.007067 -0.680709 0.73251998 0 -0.80383998 0.594845
-		 0.039895002 -0.66117102 0.749174 0.007067 -0.680709 0.73251998 0 -0.80383998 0.594845
-		 0.95590502 -0.254868 0.145907 0.83568001 -0.52997702 0.144097 0.831828 -0.53450602
-		 0.14954799 0.91619098 -0.37436101 0.142996 0.38398001 -0.91631001 0.113735 0.386208
-		 -0.92241198 -7.0000001e-06 0.386208 -0.92241198 -7.0000001e-06 0.383477 -0.91503298
-		 0.12514 0.99926198 0.034678999 0.0165 0.99939901 0.034674 1.2e-05 0.99939901 0.034674
-		 1.2e-05 0.99915701 0.034678001 0.021986 0.408683 0.91056001 -0.062119 0.40946999
-		 0.91232401 3.0000001e-06 0.40946999 0.912323 3.0000001e-06 0.40848199 0.91011101
-		 -0.069578998 0.37170199 -0.85938102 0.351143 0.36927801 -0.860313 0.351419 0.36952001
-		 -0.86022002 0.35139099 0.37207299 -0.85923803 0.35110101 0.99751902 0.034931 0.061124999
-		 0.99752003 0.034851 0.061149999 0.99752003 0.034875002 0.061143 0.997518 0.034963001
-		 0.061113998 0.400994 0.89341402 -0.20252299 0.40099299 0.89341402 -0.20252299 0.40099299
-		 0.89341402 -0.20252299 0.40099499 0.89341402 -0.20252199 0.357099 -0.79989803 0.48233199
-		 0.37170199 -0.85938102 0.351143 0.37207299 -0.85923803 0.35110101 0.35364601 -0.79147297
-		 0.498503 0.979698 0.033257 0.19769999 0.99751902 0.034931 0.061124999 0.997518 0.034963001
-		 0.061113998 0.96002501 0.031778999 0.27810401 0.40976 0.91177303 0.027702 0.400994
-		 0.89341402 -0.20252299 0.40099499 0.89341402 -0.20252199 0.408871 0.90956497 0.074267998
-		 0.38244799 -0.58430499 0.71576601 0.32133099 -0.61540198 0.71974099 0.323641 -0.61429298
-		 0.71965301 0.38584101 -0.58246899 0.71544099 0.83066499 -0.123348 0.54293799 0.81064397
-		 -0.021335 0.58515 0.81024599 -0.025025999 0.58555502 0.88863897 -0.116714 0.44350699
-		 0.446805 0.88203698 0.149583 0.36500099 0.78097701 0.50680298 0.36512899 0.78091198
-		 0.50681102 0.44980201 0.88656199 0.108102 0.40946901 0.91232401 4e-06 0.406432 0.89876699
-		 0.164414 0.40527201 0.89534199 0.184708 0.40946901 0.91232401 4e-06 0.99939901 0.034673002
-		 1.2e-05 0.997742 0.034412 -0.057684001 0.99679899 0.034327999 -0.072199002 0.99939901
-		 0.034673002 1.2e-05 0.386208 -0.92241198 -8e-06 0.38166299 -0.89993298 -0.21084 0.38095999
-		 -0.89766598 -0.221506 0.386208 -0.92241198 -8e-06 0.38166299 -0.89993298 -0.21084
-		 0.39966801 -0.83961302 -0.367854 0.40134099 -0.838893 -0.36767501 0.38095999 -0.89766598
-		 -0.221506 0.997742 0.034412 -0.057684001 0.992549 0.032368999 -0.117466 0.992544
-		 0.032019001 -0.117607 0.99679899 0.034327999 -0.072199002 0.406432 0.89876699 0.164414
-		 0.416206 0.85781002 0.30155301 0.41866201 0.85680503 0.301011 0.40527201 0.89534199
-		 0.184708 0.46382001 -0.53687602 0.704723 0.42576501 -0.55996197 0.71074998 0.431375
-		 -0.55666399 0.70995897 0.47384599 -0.53050798 0.702874 0.68516898 -0.59426397 0.42118099
-		 0.865183 -0.36208799 0.34691501 0.81002498 -0.44899401 0.37717801 0.62791097 -0.64589399
-		 0.434223 0.47802401 0.81821799 -0.31939399 0.458042 0.82853103 -0.32207701 0.45906901
-		 0.82801402 -0.32194501 0.47880501 0.81780398 -0.31928399 0.481803 -0.52536601 0.70132399
-		 0.46382001 -0.53687602 0.704723 0.47384599 -0.53050798 0.702874 0.481803 -0.52536601
-		 0.70132399 0.61326998 -0.65796298 0.43701801 0.68516898 -0.59426397 0.42118099 0.62791097
-		 -0.64589399 0.434223 0.61326998 -0.65796298 0.43701801 0.48185799 0.81617802 -0.31885201
-		 0.47802401 0.81821799 -0.31939399 0.47880501 0.81780398 -0.31928399 0.48185799 0.81617802
-		 -0.31885201 0.458042 0.82853103 -0.32207701 0.44699901 0.83400202 -0.32347 0.44827101
-		 0.83337998 -0.32331201 0.45906901 0.82801402 -0.32194501 0.865183 -0.36208799 0.34691501
-		 0.94105101 -0.189652 0.28009799 0.89807498 -0.29834199 0.323192 0.81002498 -0.44899401
-		 0.37717801 0.42576501 -0.55996197 0.71074998 0.4073 -0.57058299 0.713121 0.41395199
-		 -0.5668 0.71230799 0.431375 -0.55666399 0.70995897 0.36500099 0.78097701 0.50680298
-		 0.36066699 0.78318202 0.50650299 0.36105299 0.78298599 0.506531 0.36512899 0.78091198
-		 0.50681102 0.81064397 -0.021335 0.58515 0.81276 0.00041499999 0.58259797 0.81230903
-		 -0.004586 0.58320999 0.81024599 -0.025025999 0.58555502 0.32133099 -0.61540198 0.71974099
-		 0.30826101 -0.62158298 0.72014499 0.30919099 -0.621149 0.72012198 0.323641 -0.61429298
-		 0.71965301;
-	setAttr ".n[3818:3983]" -type "float3"  0.44699901 0.83400202 -0.32347 0.446805
-		 0.88203698 0.149583 0.44980201 0.88656199 0.108102 0.44827101 0.83337998 -0.32331201
-		 0.94105101 -0.189652 0.28009799 0.83066499 -0.123348 0.54293799 0.88863897 -0.116714
-		 0.44350699 0.89807498 -0.29834199 0.323192 0.4073 -0.57058299 0.713121 0.38244799
-		 -0.58430499 0.71576601 0.38584101 -0.58246899 0.71544099 0.41395199 -0.5668 0.71230799
-		 -0.134102 0.92973101 0.34295401 -0.14558101 0.92763799 0.34393999 -0.00012500001
-		 0.93906403 0.343743 -0.003116 0.93982601 0.34164 0.132715 0.93272001 0.335291 0.121571
-		 0.93437302 0.334916 -0.003116 0.93982601 0.34164 -0.00012500001 0.93906403 0.343743
-		 0.98124403 -0.170304 0.090317003 0.98175198 -0.166705 0.091499999 0.98293298 -0.165999
-		 0.079291001 0.98166198 -0.172196 0.081776999 0.98166198 -0.172196 0.081776999 0.98293298
-		 -0.165999 0.079291001 0.983899 -0.17765 0.019571001 0.98242998 -0.185662 0.018976999
-		 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -0.98560297 -0.16654401 0.029157
-		 -0.98759198 -0.15413 0.030087 -0.98325098 -0.135868 0.121481 -0.98140699 -0.145431
-		 0.125258 -0.98064399 -0.136902 0.139982 -0.98010898 -0.14246599 0.138166 -0.98140699
-		 -0.145431 0.125258 -0.98325098 -0.135868 0.121481 1e-06 -1 2e-06 1e-06 -1 3.0000001e-06
-		 0 -1 3.0000001e-06 0 -1 2e-06 0.988617 -0.11531 0.096642002 0.98948801 -0.107635
-		 0.096582003 0.99365997 -0.109717 0.024522001 0.992571 -0.119308 0.023832999 0.98675102
-		 -0.12311 0.105672 0.988051 -0.107156 0.110782 0.98948801 -0.107635 0.096582003 0.988617
-		 -0.11531 0.096642002 0.010217 0.93319702 0.35921901 0.27650499 0.900262 0.336265
-		 0.244056 0.90943801 0.336689 -0.0056019998 0.93371302 0.357979 -0.26607201 0.89759099
-		 0.35147801 -0.30393201 0.884983 0.35274601 0.010217 0.93319702 0.35921901 -0.0056019998
-		 0.93371302 0.357979 -0.987957 -0.045575999 0.147866 -0.98457801 -0.044932 0.16907699
-		 -0.98442799 -0.069452003 0.161488 -0.987342 -0.057425998 0.147847 -0.997311 -0.063449003
-		 0.036674999 -0.99810803 -0.048554 0.037723999 -0.987957 -0.045575999 0.147866 -0.987342
-		 -0.057425998 0.147847 0 -1 2e-06 0 -1 3.0000001e-06 -1e-06 -1 3.0000001e-06 -1e-06
-		 -1 2e-06 -0.360145 0.91292399 0.192004 -0.375249 0.90712202 0.190571 0.058843002
-		 0.98209399 0.178968 0.065403998 0.98162401 0.17927 0.45804399 0.87838697 0.136502
-		 0.45713401 0.878851 0.136565 0.065403998 0.98162401 0.17927 0.058843002 0.98209399
-		 0.178968 1 1e-06 0 1 1e-06 0 1 2e-06 1e-06 1 1e-06 0 1 3.0000001e-06 4.9999999e-06
-		 1 0 0 1 1e-06 0 1 2e-06 1e-06 0.004286 -0.98808497 0.153852 0.0070969998 -0.98806202
-		 0.15389299 3.2e-05 -0.98810101 0.153804 4.7000001e-05 -0.98810202 0.153798 4.7000001e-05
-		 -0.98810202 0.153798 3.2e-05 -0.98810101 0.153804 -0.005132 -0.98809898 0.153733
-		 -0.003082 -0.98810399 0.15375599 -1 6.0000002e-06 4.9999999e-06 -1 4e-06 3.0000001e-06
-		 -1 1e-06 0 -1 4e-06 2e-06 -1 4e-06 2e-06 -1 1e-06 0 -1 3.0000001e-06 1e-06 -1 3.0000001e-06
-		 2e-06 0.57381701 0.380245 -0.72536099 0.315916 0.57569599 -0.75416899 0.498963 0.64730501
-		 -0.57622302 0.73545402 0.46507999 -0.492755 0.73545402 0.46507999 -0.492755 0.84139299
-		 0.186819 -0.50710601 0.76283598 0.15067901 -0.62879002 0.57381701 0.380245 -0.72536099
-		 0.98795497 -0.074371003 -0.135695 0.99052697 -0.081928 -0.110203 0.98474401 -0.029169001
-		 -0.17155001 0.97762197 0.060483001 -0.20149 -0.74785 0.016005 0.66367501 -0.74785
-		 0.016005 0.66367501 -0.73276198 0.010246 0.680408 -0.73655802 0.011681 0.676274 -0.90724403
-		 0.103236 0.40773901 -0.90724403 0.103236 0.40773901 -0.90476501 0.10196 0.41352701
-		 -0.902439 0.100777 0.41886401 0.76879603 -0.154393 0.62057698 0.76879603 -0.154393
-		 0.62057698 0.78498501 -0.15431499 0.59998798 0.82248098 -0.15367199 0.54764098 0.242882
-		 -0.001333 0.97005498 0.437538 -0.064081997 0.89691401 0.39556199 -0.044562001 0.91735703
-		 0.232145 0.020362999 0.97246802 0.1549 0.030785 0.98745 0.15990201 0.026085 0.98678797
-		 0.242882 -0.001333 0.97005498 0.232145 0.020362999 0.97246802 0.074987002 -0.060238
-		 0.995363 0.062373001 -0.052654002 0.99666297 0.11793 -0.086034 0.98928797 0.11793
-		 -0.086034 0.98928797 0.68735898 -0.59904301 0.41071299 0.62649602 -0.56101298 0.54108
-		 0.73503202 -0.62476403 0.26343501 0.73503202 -0.62476403 0.26343501 0.46884501 -0.52995199
-		 0.70663601 0.47649801 -0.53688699 0.69620597 0.451951 -0.51456702 0.72867101 0.451951
-		 -0.51456702 0.72867101 -0.529365 0.848037 -0.024627 -0.52221799 0.85135698 -0.049789999
-		 -0.53594202 0.82786 -0.165572 -0.50858802 0.84995401 -0.137537 -0.206808 0.478596
-		 -0.853333 -0.46191201 0.34265399 -0.81806201 -0.58138001 0.372933 -0.723131 -0.31586
-		 0.575755 -0.75414801 -0.76213503 0.15124699 -0.62950301 -0.58138001 0.372933 -0.723131
-		 -0.46191201 0.34265399 -0.81806201 -0.60345203 0.15197 -0.78278399 -0.91816598 -0.39013401
-		 0.069038004 -0.97446299 -0.22376899 -0.018699;
-	setAttr ".n[3984:4149]" -type "float3"  -0.98805398 -0.074626997 -0.13483401
-		 -0.99062699 -0.082271002 -0.10904 0.73343301 0.010497 0.67967999 0.73584902 0.011411
-		 0.67704898 0.71734899 0.0045030001 0.69669998 0.71734899 0.0045030001 0.69669998
-		 0.90486199 0.10201 0.413302 0.90212101 0.100617 0.41958699 0.89870101 0.098901004
-		 0.42726499 0.89870101 0.098901004 0.42726499 -0.787058 -0.15429699 0.59727103 -0.82466203
-		 -0.153611 0.54436803 -0.845801 -0.152879 0.51112503 -0.845801 -0.15288 0.51112503
-		 -0.28077301 -0.061420999 0.957807 -0.245664 -0.0022199999 0.96935201 -0.43776801
-		 -0.064097002 0.89679998 -0.460576 -0.195041 0.86592603 -0.159923 0.026082 0.98678499
-		 -0.245664 -0.0022199999 0.96935201 -0.28077301 -0.061420999 0.957807 -0.17825601
-		 -0.0071569998 0.98395801 -0.006515 -0.019021999 0.999798 -0.071905002 -0.058385 0.99570101
-		 -0.065172002 -0.054336 0.99639398 -0.006515 -0.019021999 0.999798 -0.56526899 -0.519898
-		 0.64045101 -0.68432301 -0.59724098 0.418336 -0.62433201 -0.55959803 0.54503202 -0.56526899
-		 -0.519898 0.64045101 -0.49960101 -0.55767202 0.66287303 -0.470027 -0.53102499 0.70504397
-		 -0.475508 -0.53599 0.69757199 -0.49960101 -0.55767202 0.66287303 0.706577 0.70542902
-		 0.055845998 0.72614598 0.68504798 0.058483001 0.52954203 0.84794402 -0.023987001
-		 0.52244103 0.85126501 -0.049027 -0.75657499 0.65121502 0.059266999 -0.75663298 0.65110999
-		 0.059687998 -0.75661999 0.651133 0.059594002 -0.75657499 0.65121502 0.059266999 0.35708901
-		 -0.37181801 0.85687703 0.35708901 -0.37181801 0.85687703 0.38466701 -0.39349899 0.834979
-		 0.373308 -0.384588 0.844235 0.130395 0.000128 0.99146199 0.130395 0.000128 0.99146199
-		 0.272843 -0.126964 0.95364398 0.159825 -0.025770999 0.98680902 0.1595 0.15687799
-		 0.97465301 0.1595 0.15687799 0.97465301 0.145163 0.169714 0.97474402 0.155053 0.160872
-		 0.97472 0.31781799 -0.106329 0.94217098 0.207662 -0.031707 0.977687 0.209895 -0.033078
-		 0.97716397 0.32827201 -0.11191 0.937931 0.32827201 -0.11191 0.937931 0.527942 -0.251039
-		 0.81133002 0.521918 -0.249189 0.815786 0.31781799 -0.106329 0.94217098 0.63167799
-		 -0.27054501 0.72649097 0.64201498 -0.27021199 0.71749699 0.629502 -0.27060801 0.72835398
-		 0.629502 -0.27060801 0.72835398 -0.84702802 0.39766201 -0.35271499 -0.86956197 0.399883
-		 -0.28975001 -0.84125102 0.39689201 -0.36711499 -0.84125102 0.39689201 -0.36711499
-		 -0.296455 0.177728 0.93836403 -0.30665001 0.183925 0.93388301 -0.28424799 0.17030799
-		 0.94350302 -0.28424799 0.17030799 0.94350302 0.87770599 -0.46814799 0.102326 0.87758398
-		 -0.46824601 0.102915 0.87741601 -0.46838099 0.10373 0.87770599 -0.46814799 0.102326
-		 0.350878 0.351174 -0.86807901 0.54075599 0.20413899 -0.81603301 0.53608602 0.210043
-		 -0.81761497 0.31340301 0.37827399 -0.87102598 0.147117 0.47555101 -0.86729902 0.15058599
-		 0.47270101 -0.86826098 0.350878 0.351174 -0.86807901 0.31340301 0.37827399 -0.87102598
-		 -0.147118 0.47555399 -0.86729801 -0.31340399 0.37827599 -0.87102598 -0.35088 0.35117501
-		 -0.86807799 -0.15058701 0.472702 -0.86826098 -0.540757 0.20413999 -0.81603199 -0.35088
-		 0.35117501 -0.86807799 -0.31340399 0.37827599 -0.87102598 -0.536084 0.210043 -0.81761599
-		 -0.87770599 -0.46814701 0.102326 -0.87770599 -0.46814701 0.102326 -0.87741703 -0.46838
-		 0.10373 -0.87758499 -0.468245 0.102915 0.30664599 0.183926 0.93388402 0.296451 0.177728
-		 0.93836498 0.28424501 0.17030799 0.94350398 0.28424501 0.17030799 0.94350398 0.86956298
-		 0.39988399 -0.28974801 0.84702897 0.397661 -0.35271499 0.84125203 0.39689001 -0.36711499
-		 0.84125203 0.39689001 -0.367116 -0.64201301 -0.27021 0.71749997 -0.63167298 -0.27054399
-		 0.72649503 -0.62949699 -0.27060801 0.72835797 -0.62949699 -0.27060801 0.72835797
-		 -0.32827401 -0.111911 0.93792999 -0.317817 -0.106328 0.94217098 -0.52191901 -0.24918801
-		 0.815786 -0.52794302 -0.25103801 0.81133002 -0.207663 -0.031706002 0.977687 -0.317817
-		 -0.106328 0.94217098 -0.32827401 -0.111911 0.93792999 -0.209896 -0.033078 0.97716397
-		 -0.159502 0.15688001 0.97465301 -0.155054 0.160873 0.97472 -0.145163 0.16971201 0.97474402
-		 -0.159502 0.15688001 0.97465301 -0.130394 0.00012700001 0.99146199 -0.159824 -0.025770999
-		 0.98680902 -0.27284199 -0.126965 0.95364398 -0.130394 0.00012700001 0.99146199 -0.35709199
-		 -0.37181801 0.85687602 -0.37330899 -0.38458899 0.844235 -0.384666 -0.3935 0.834979
-		 -0.35709199 -0.37181801 0.85687602 0.75657499 0.65121502 0.059266999 0.75657499 0.65121502
-		 0.059266999 0.75661999 0.651133 0.059594002 0.75663298 0.65110999 0.059687998 -0.87625301
-		 -0.469295 0.109283 -0.87572998 -0.46969399 0.111732 -0.97446299 -0.22376899 -0.018699
-		 -0.91816598 -0.39013401 0.069038004 -0.46191201 0.34265399 -0.81806201 -0.356749
-		 0.33762899 -0.87105501 -0.57172602 0.16361 -0.80396599 -0.60345203 0.15197 -0.78278399
-		 -0.17273 0.454198 -0.87399602 -0.356749 0.33762899 -0.87105501 -0.46191201 0.34265399
-		 -0.81806201 -0.206808 0.478596 -0.853333 0.75697798 0.65047598 0.062181 0.75695002
-		 0.650527 0.061981 0.72614598 0.68504798 0.058483001 0.706577 0.70542902 0.055845998
-		 -0.485998 -0.471661 0.73575997 -0.47488701 -0.463222 0.74826998 -0.49802101 -0.48075199
-		 0.72170103 -0.49802101 -0.48075199 0.72170103 -0.50463802 -0.34523001 0.79130101
-		 -0.44655001 -0.28884399 0.84685397 -0.51308399 -0.35354999 0.782143 -0.51308399 -0.35354999
-		 0.782143 -0.092156 0.216115 0.972009 -0.108384 0.202069 0.973355 -0.087141 0.220428
-		 0.97150302 -0.087141 0.220428 0.97150302 -0.17825601 -0.0071569998 0.98395801 -0.28077301
-		 -0.061420999 0.957807 -0.286457 -0.092889003 0.95358002 -0.18911999 -0.020412 0.98174202;
-	setAttr ".n[4150:4213]" -type "float3"  -0.47403201 -0.234312 0.848759 -0.286457
-		 -0.092889003 0.95358002 -0.28077301 -0.061420999 0.957807 -0.460576 -0.195041 0.86592603
-		 -0.70119202 -0.26715201 0.66102898 -0.66730303 -0.269151 0.69445199 -0.69642401 -0.26747599
-		 0.66592097 -0.70119298 -0.26715201 0.66102898 0.90778601 0.35712901 0.219964 0.91648799
-		 0.394126 -0.068664998 0.91532701 0.36641201 0.16709 0.90778601 0.35712901 0.219964
-		 0.43968001 0.264844 0.85821801 0.40275499 0.242376 0.88263398 0.42091101 0.25342301
-		 0.870983 0.43968001 0.264844 0.85821801 -0.75695002 0.650527 0.061981 -0.75697798
-		 0.65047598 0.062180001 -0.69722301 0.71505702 0.050726999 -0.71968901 0.69210303
-		 0.055148002 0.35674801 0.33762899 -0.87105501 0.17273 0.454198 -0.87399602 0.211808
-		 0.483192 -0.84950799 0.47402301 0.343247 -0.810853 0.47402301 0.343247 -0.810853
-		 0.60769898 0.151935 -0.77949899 0.571724 0.16361 -0.803967 0.35674801 0.33762899
-		 -0.87105501 0.87572998 -0.469695 0.111731 0.87625301 -0.46929601 0.109283 0.92512703
-		 -0.37498799 0.059361 0.978432 -0.203978 -0.032612 -0.439679 0.264842 0.85821998 -0.439679
-		 0.264842 0.85821998 -0.42091 0.25342101 0.870983 -0.40275499 0.242374 0.88263398
-		 -0.90778601 0.35712901 0.219962 -0.90778601 0.35712901 0.219962 -0.91532701 0.36641201
-		 0.167088 -0.91648799 0.39412501 -0.068668999 0.70119202 -0.26715201 0.66102898 0.70119202
-		 -0.26715201 0.66102898 0.69642299 -0.26747599 0.66592097 0.66730398 -0.269153 0.69445097
-		 0.286457 -0.092889003 0.95358002 0.47403401 -0.234313 0.84875798 0.45954499 -0.18886501
-		 0.86784101 0.27926099 -0.057053 0.95851898 0.177358 -0.0055450001 0.98413098 0.189119
-		 -0.020412 0.98174202 0.286457 -0.092889003 0.95358002 0.27926099 -0.057053 0.95851898
-		 0.108384 0.20207 0.973355 0.092156 0.216115 0.972009 0.087140001 0.22042701 0.97150302
-		 0.087140001 0.22042701 0.97150302 0.44655201 -0.28884301 0.84685302 0.50464201 -0.34523001
-		 0.79129797 0.51308799 -0.353551 0.78214002 0.51308799 -0.353551 0.78214002 0.47488701
-		 -0.46322101 0.74826998 0.48599699 -0.47165999 0.73576099 0.49801999 -0.48075101 0.72170299
-		 0.49801999 -0.48075101 0.72170299;
-	setAttr -s 1052 -ch 4214 ".fc";
-	setAttr ".fc[0:499]" -type "polyFaces" 
-		f 4 0 1 2 3
-		mu 0 4 0 1 2 3
-		f 4 -3 4 5 6
-		mu 0 4 3 2 4 5
-		f 4 7 8 9 10
-		mu 0 4 6 7 8 9
-		f 4 11 -4 -7 12
-		mu 0 4 10 0 3 11
-		f 4 13 14 15 16
-		mu 0 4 12 13 14 15
-		f 4 17 18 19 -15
-		mu 0 4 13 16 17 14
-		f 4 20 21 22 23
-		mu 0 4 18 19 20 21
-		f 4 24 25 -12 26
-		mu 0 4 22 23 0 10
-		f 4 27 28 -1 -26
-		mu 0 4 23 24 1 0
-		f 4 29 30 -8 31
-		mu 0 4 25 26 7 6
-		f 4 32 33 34 35
-		mu 0 4 27 28 29 30
-		f 4 36 37 38 39
-		mu 0 4 31 32 33 34
-		f 4 -35 40 41 42
-		mu 0 4 30 29 35 36
-		f 4 -6 43 44 45
-		mu 0 4 37 38 39 40
-		f 4 -9 46 47 48
-		mu 0 4 41 42 43 44
-		f 4 -13 -46 49 50
-		mu 0 4 45 37 40 46
-		f 4 51 -22 52 53
-		mu 0 4 47 48 49 50
-		f 4 54 55 56 57
-		mu 0 4 51 52 53 54
-		f 4 58 -17 59 60
-		mu 0 4 55 56 57 58
-		f 4 -31 61 62 -47
-		mu 0 4 42 59 60 43
-		f 4 63 -27 -51 64
-		mu 0 4 61 62 45 46
-		f 4 -45 65 66 67
-		mu 0 4 40 39 63 64
-		f 4 -48 68 69 70
-		mu 0 4 44 43 65 66
-		f 4 -50 -68 71 72
-		mu 0 4 46 40 64 67
-		f 4 73 -54 74 75
-		mu 0 4 68 47 50 69
-		f 4 -57 76 77 78
-		mu 0 4 54 53 70 71
-		f 4 79 -61 80 81
-		mu 0 4 72 55 58 73
-		f 4 -63 82 83 -69
-		mu 0 4 43 60 74 65
-		f 4 84 -65 -73 85
-		mu 0 4 75 61 46 67
-		f 4 -67 86 -33 87
-		mu 0 4 64 63 28 27
-		f 4 -70 88 89 90
-		mu 0 4 66 65 76 77
-		f 4 -72 -88 -36 91
-		mu 0 4 67 64 27 30
-		f 4 92 -76 93 94
-		mu 0 4 78 68 69 79
-		f 4 -78 95 96 97
-		mu 0 4 71 70 80 81
-		f 4 98 -82 99 -40
-		mu 0 4 34 72 73 31
-		f 4 -84 100 101 -89
-		mu 0 4 65 74 82 76
-		f 4 102 -86 -92 -43
-		mu 0 4 36 75 67 30
-		f 4 103 104 105 106
-		mu 0 4 83 84 85 86
-		f 4 107 108 109 110
-		mu 0 4 87 88 89 90
-		f 4 111 112 113 114
-		mu 0 4 91 92 93 94
-		f 4 -114 115 116 117
-		mu 0 4 94 93 95 96
-		f 4 118 119 120 121
-		mu 0 4 97 98 99 100
-		f 4 122 123 124 125
-		mu 0 4 101 102 103 104
-		f 4 126 127 128 129
-		mu 0 4 105 106 107 108
-		f 4 -129 130 131 132
-		mu 0 4 108 107 109 110
-		f 4 133 134 135 136
-		mu 0 4 111 112 113 114
-		f 4 137 -137 138 139
-		mu 0 4 115 111 114 116
-		f 4 -136 140 141 142
-		mu 0 4 114 113 117 118
-		f 4 143 -139 -143 144
-		mu 0 4 119 116 114 118
-		f 4 -117 145 146 147
-		mu 0 4 96 95 120 121
-		f 4 -141 148 149 150
-		mu 0 4 122 123 124 125
-		f 4 151 152 153 154
-		mu 0 4 126 127 128 129
-		f 4 -127 155 156 157
-		mu 0 4 106 105 130 131
-		f 4 -147 158 159 160
-		mu 0 4 121 120 132 133
-		f 4 -150 161 162 163
-		mu 0 4 125 124 134 135
-		f 4 164 165 166 -162
-		mu 0 4 124 136 137 134
-		f 4 -157 167 168 169
-		mu 0 4 131 130 138 139
-		f 4 -163 170 171 172
-		mu 0 4 135 134 140 141
-		f 4 -160 173 174 175
-		mu 0 4 133 132 142 143
-		f 4 -169 176 177 178
-		mu 0 4 139 138 144 145
-		f 4 -167 179 180 -171
-		mu 0 4 134 137 146 140
-		f 4 181 182 183 184
-		mu 0 4 147 148 149 150
-		f 4 185 186 187 188
-		mu 0 4 151 152 153 154
-		f 4 189 190 191 192
-		mu 0 4 155 156 157 158
-		f 4 -184 193 -104 194
-		mu 0 4 150 149 84 83
-		f 4 -192 195 196 197
-		mu 0 4 158 157 159 160
-		f 4 -188 198 199 200
-		mu 0 4 154 153 161 162
-		f 4 -135 201 202 203
-		mu 0 4 123 163 164 165
-		f 4 204 205 206 207
-		mu 0 4 166 167 168 169
-		f 4 -165 208 209 210
-		mu 0 4 136 124 170 171
-		f 4 -149 -204 211 -209
-		mu 0 4 124 123 165 170
-		f 4 212 213 214 215
-		mu 0 4 163 136 172 173
-		f 4 -211 216 217 -214
-		mu 0 4 136 171 174 172
-		f 4 -153 218 219 220
-		mu 0 4 128 127 175 176
-		f 4 221 -202 -216 222
-		mu 0 4 177 164 163 173
-		f 4 223 224 225 226
-		mu 0 4 178 179 180 181
-		f 4 227 -227 228 229
-		mu 0 4 182 178 181 183
-		f 4 230 231 -230 232
-		mu 0 4 184 185 182 183
-		f 4 233 234 235 236
-		mu 0 4 186 187 188 189
-		f 4 -236 237 238 239
-		mu 0 4 189 188 190 191
-		f 4 -226 240 241 242
-		mu 0 4 181 180 192 193
-		f 4 -229 -243 243 244
-		mu 0 4 183 181 193 194
-		f 4 -233 -245 245 246
-		mu 0 4 184 183 194 195
-		f 4 247 248 -205 249
-		mu 0 4 196 197 167 166
-		f 4 250 251 252 253
-		mu 0 4 198 199 200 201
-		f 4 254 255 256 257
-		mu 0 4 202 203 204 205
-		f 4 258 259 -250 -208
-		mu 0 4 169 206 196 166
-		f 4 260 261 262 263
-		mu 0 4 207 208 209 210
-		f 4 264 265 266 267
-		mu 0 4 211 212 213 214
-		f 4 268 269 270 271
-		mu 0 4 215 216 217 218
-		f 4 272 273 274 -270
-		mu 0 4 216 219 220 217
-		f 4 275 276 277 278
-		mu 0 4 221 222 223 224
-		f 4 -278 279 280 -201
-		mu 0 4 224 223 225 226
-		f 4 -281 281 282 -189
-		mu 0 4 226 225 227 228
-		f 4 -283 283 284 285
-		mu 0 4 228 227 229 230
-		f 4 286 287 288 289
-		mu 0 4 231 232 233 234
-		f 4 -289 290 291 292
-		mu 0 4 234 233 235 236
-		f 4 293 294 295 296
-		mu 0 4 237 238 239 240
-		f 4 297 -297 298 299
-		mu 0 4 241 237 240 242
-		f 4 300 301 302 303
-		mu 0 4 243 244 245 246
-		f 4 304 305 306 307
-		mu 0 4 247 248 249 250
-		f 4 308 -304 309 310
-		mu 0 4 251 243 246 252
-		f 4 311 312 313 -306
-		mu 0 4 248 253 254 249
-		f 4 314 315 316 317
-		mu 0 4 255 256 257 258
-		f 4 318 -311 319 -316
-		mu 0 4 256 251 252 257
-		f 4 320 321 322 323
-		mu 0 4 259 260 261 262
-		f 4 324 325 326 327
-		mu 0 4 263 264 265 266
-		f 4 328 -328 329 330
-		mu 0 4 267 263 266 268
-		f 4 331 -331 332 333
-		mu 0 4 269 267 268 270
-		f 4 334 335 -334 336
-		mu 0 4 271 272 269 270
-		f 4 337 338 339 -322
-		mu 0 4 260 273 274 261
-		f 4 340 341 342 343
-		mu 0 4 275 276 277 278
-		f 4 344 345 346 347
-		mu 0 4 279 280 281 282
-		f 4 348 -348 349 350
-		mu 0 4 283 279 282 284
-		f 4 351 -351 352 353
-		mu 0 4 285 283 284 286
-		f 4 354 -354 355 356
-		mu 0 4 287 285 286 288
-		f 4 357 358 359 -342
-		mu 0 4 276 289 290 277
-		f 4 360 361 362 363
-		mu 0 4 291 292 293 294
-		f 4 364 365 366 367
-		mu 0 4 295 296 297 298
-		f 4 368 -368 369 370
-		mu 0 4 299 295 298 300
-		f 4 371 -371 372 373
-		mu 0 4 301 299 300 302
-		f 4 374 -374 375 376
-		mu 0 4 303 301 302 304
-		f 4 377 378 379 -362
-		mu 0 4 292 305 306 293
-		f 4 380 381 382 383
-		mu 0 4 307 308 309 310
-		f 4 384 385 386 387
-		mu 0 4 311 312 313 314
-		f 4 388 389 390 391
-		mu 0 4 315 316 317 318
-		f 4 392 393 394 -386
-		mu 0 4 312 319 320 313
-		f 4 395 396 397 398
-		mu 0 4 321 322 323 324
-		f 4 399 -392 400 -397
-		mu 0 4 322 315 318 323
-		f 4 401 402 403 404
-		mu 0 4 325 326 327 328
-		f 4 405 406 407 408
-		mu 0 4 329 330 331 332
-		f 4 409 410 411 412
-		mu 0 4 333 334 335 336
-		f 4 413 -405 414 415
-		mu 0 4 337 325 328 338
-		f 4 -172 416 417 418
-		mu 0 4 141 140 339 340
-		f 4 -181 419 420 -417
-		mu 0 4 140 146 341 339
-		f 4 -178 421 422 423
-		mu 0 4 145 144 342 343
-		f 4 424 425 426 427
-		mu 0 4 344 345 346 347
-		f 4 428 429 430 431
-		mu 0 4 348 349 350 351
-		f 4 -423 432 433 434
-		mu 0 4 343 342 352 353
-		f 4 435 436 437 438
-		mu 0 4 354 355 356 357
-		f 5 439 440 441 442 443
-		mu 0 5 358 359 360 361 362
-		f 4 444 445 446 -442
-		mu 0 4 360 363 364 361
-		f 4 447 448 449 450
-		mu 0 4 365 366 367 368
-		f 4 -175 451 452 453
-		mu 0 4 143 142 369 370
-		f 4 -419 454 455 456
-		mu 0 4 141 340 371 372
-		f 4 -425 457 -55 458
-		mu 0 4 345 344 373 374
-		f 4 459 -454 460 -458
-		mu 0 4 344 143 370 373
-		f 4 -427 461 462 463
-		mu 0 4 347 346 375 376
-		f 4 -434 464 465 466
-		mu 0 4 353 352 377 378
-		f 4 -430 467 468 469
-		mu 0 4 350 349 379 380
-		f 4 470 471 472 473
-		mu 0 4 381 382 383 384
-		f 4 474 475 -436 476
-		mu 0 4 385 386 355 354
-		f 4 -466 477 -448 478
-		mu 0 4 378 377 366 365
-		f 4 479 480 481 -469
-		mu 0 4 379 387 388 380
-		f 4 -431 482 483 484
-		mu 0 4 351 350 389 390
-		f 4 -470 485 486 -483
-		mu 0 4 350 380 391 389
-		f 4 -482 487 488 -486
-		mu 0 4 380 388 392 391
-		f 4 489 -485 490 -488
-		mu 0 4 388 351 390 392
-		f 4 491 492 -471 493
-		mu 0 4 393 394 382 381
-		f 4 494 495 -472 -493
-		mu 0 4 394 395 383 382
-		f 4 496 497 -473 -496
-		mu 0 4 395 396 384 383
-		f 4 498 -494 -474 -498
-		mu 0 4 396 393 381 384
-		f 4 499 500 501 502
-		mu 0 4 397 398 399 400
-		f 4 503 -503 504 505
-		mu 0 4 401 397 400 402
-		f 4 506 -506 507 508
-		mu 0 4 403 401 402 404
-		f 4 509 -509 510 -501
-		mu 0 4 398 403 404 399
-		f 4 511 512 -499 513
-		mu 0 4 405 406 393 396
-		f 4 514 -514 -497 515
-		mu 0 4 407 405 396 395
-		f 4 516 -516 -495 517
-		mu 0 4 408 407 395 394
-		f 4 518 -518 -492 -513
-		mu 0 4 406 408 394 393
-		f 4 -491 519 -500 520
-		mu 0 4 392 390 398 397
-		f 4 -489 -521 -504 521
-		mu 0 4 391 392 397 401
-		f 4 -487 -522 -507 522
-		mu 0 4 389 391 401 403
-		f 4 -484 -523 -510 -520
-		mu 0 4 390 389 403 398
-		f 4 -502 523 -512 524
-		mu 0 4 400 399 406 405
-		f 4 -505 -525 -515 525
-		mu 0 4 402 400 405 407
-		f 4 -508 -526 -517 526
-		mu 0 4 404 402 407 408
-		f 4 -511 -527 -519 -524
-		mu 0 4 399 404 408 406
-		f 4 -450 527 528 529
-		mu 0 4 368 367 409 410
-		f 4 -447 530 531 532
-		mu 0 4 361 364 411 412
-		f 4 -443 -533 533 534
-		mu 0 4 362 361 412 413
-		f 4 -438 535 536 537
-		mu 0 4 357 356 414 415
-		f 4 538 539 540 541
-		mu 0 4 416 417 418 102
-		f 4 542 -124 -541 543
-		mu 0 4 419 103 102 418
-		f 4 544 545 546 547
-		mu 0 4 420 421 422 423
-		f 4 548 549 -545 550
-		mu 0 4 424 425 426 427
-		f 4 551 552 -549 553
-		mu 0 4 428 429 430 431
-		f 5 554 -467 555 -552 556
-		mu 0 5 432 353 378 429 428
-		f 4 557 -435 -555 558
-		mu 0 4 341 343 353 432
-		f 4 559 -424 -558 -420
-		mu 0 4 146 145 343 341
-		f 4 560 -179 -560 -180
-		mu 0 4 137 139 145 146
-		f 4 561 -170 -561 -166
-		mu 0 4 136 131 139 137
-		f 4 562 -158 -562 -213
-		mu 0 4 163 106 131 136
-		f 4 -128 -563 -134 563
-		mu 0 4 107 106 163 433
-		f 4 -131 -564 -138 564
-		mu 0 4 109 107 433 434
-		f 4 -183 565 566 567
-		mu 0 4 149 148 435 436
-		f 4 -194 -568 568 569
-		mu 0 4 84 149 436 437
-		f 4 -105 -570 -279 570
-		mu 0 4 85 84 437 162
-		f 4 571 -571 -200 572
-		mu 0 4 160 85 162 161
-		f 4 573 -198 -573 -199
-		mu 0 4 153 158 160 161
-		f 4 574 -193 -574 -187
-		mu 0 4 152 155 158 153
-		f 4 -113 575 -145 576
-		mu 0 4 93 92 438 439
-		f 4 -116 -577 -142 577
-		mu 0 4 95 93 439 122
-		f 4 -146 -578 -151 578
-		mu 0 4 120 95 122 125
-		f 4 -159 -579 -164 579
-		mu 0 4 132 120 125 135
-		f 4 -174 -580 -173 580
-		mu 0 4 142 132 135 141
-		f 4 -452 -581 -457 581
-		mu 0 4 369 142 141 372
-		f 4 582 -19 583 -24
-		mu 0 4 21 17 16 18
-		f 4 -29 584 -32 585
-		mu 0 4 1 24 25 6
-		f 4 -2 -586 -11 586
-		mu 0 4 2 1 6 9
-		f 4 -5 -587 -10 587
-		mu 0 4 4 2 9 440
-		f 4 -44 -588 -49 588
-		mu 0 4 39 38 41 44
-		f 4 -66 -589 -71 589
-		mu 0 4 63 39 44 66
-		f 4 -87 -590 -91 590
-		mu 0 4 28 63 66 77
-		f 4 -34 -591 -90 591
-		mu 0 4 29 28 77 76
-		f 4 592 -41 -592 -102
-		mu 0 4 82 35 29 76
-		f 4 593 -38 594 -95
-		mu 0 4 79 33 32 78
-		f 4 595 -98 596 597
-		mu 0 4 441 71 81 442
-		f 4 598 -79 -596 599
-		mu 0 4 443 54 71 441
-		f 4 600 -58 -599 601
-		mu 0 4 444 51 54 443
-		f 4 602 -459 -601 -455
-		mu 0 4 340 345 374 371
-		f 4 603 -432 -490 604
-		mu 0 4 445 348 351 388
-		f 4 605 606 -605 -481
-		mu 0 4 387 446 445 388
-		f 4 607 -444 608 -437
-		mu 0 4 355 358 362 356
-		f 4 609 -536 -609 -535
-		mu 0 4 413 414 356 362
-		f 4 610 611 612 613
-		mu 0 4 447 448 449 450
-		f 4 614 615 616 -612
-		mu 0 4 451 452 453 449
-		f 4 617 618 619 -616
-		mu 0 4 452 454 455 453
-		f 4 -613 620 621 622
-		mu 0 4 450 449 456 457
-		f 4 -617 623 624 -621
-		mu 0 4 449 453 458 456
-		f 4 -620 625 626 -624
-		mu 0 4 453 455 459 458
-		f 4 627 -623 628 -626
-		mu 0 4 455 450 457 459
-		f 4 629 630 631 632
-		mu 0 4 460 461 462 463
-		f 4 633 634 635 -631
-		mu 0 4 461 464 465 462
-		f 4 -627 636 -121 637
-		mu 0 4 458 459 100 99
-		f 4 -629 638 -122 -637
-		mu 0 4 459 457 97 100
-		f 4 639 640 -611 641
-		mu 0 4 466 467 451 447
-		f 4 -529 642 643 644
-		mu 0 4 410 409 468 469
-		f 4 -547 645 646 647
-		mu 0 4 470 471 472 473
-		f 4 -532 648 -544 649
-		mu 0 4 412 411 419 418
-		f 4 -534 -650 -540 650
-		mu 0 4 413 412 418 417
-		f 4 651 -610 -651 -539
-		mu 0 4 416 414 413 417
-		f 4 -632 652 -119 653
-		mu 0 4 463 462 98 97
-		f 4 -636 654 -120 -653
-		mu 0 4 462 465 99 98
-		f 4 -542 655 -615 656
-		mu 0 4 416 102 452 451
-		f 4 -123 657 -618 -656
-		mu 0 4 102 101 454 452
-		f 4 -630 658 -622 659
-		mu 0 4 461 460 457 456
-		f 4 -634 -660 -625 660
-		mu 0 4 464 461 456 458
-		f 4 -635 -661 -638 -655
-		mu 0 4 465 464 458 99
-		f 4 -633 -654 -639 -659
-		mu 0 4 460 463 97 457
-		f 4 -537 661 -640 662
-		mu 0 4 415 414 467 466
-		f 4 -652 -657 -641 -662
-		mu 0 4 414 416 451 467
-		f 4 663 664 -554 665
-		mu 0 4 474 475 476 477
-		f 4 666 -666 -551 667
-		mu 0 4 478 479 480 481
-		f 4 668 -668 -548 669
-		mu 0 4 482 483 484 485
-		f 4 670 -670 -648 671
-		mu 0 4 486 487 488 489
-		f 4 672 673 -672 -647
-		mu 0 4 490 491 492 493
-		f 4 674 675 676 677
-		mu 0 4 494 495 496 497
-		f 4 678 -678 679 680
-		mu 0 4 498 499 500 501
-		f 4 681 -681 682 683
-		mu 0 4 502 503 504 505
-		f 4 684 685 -684 686
-		mu 0 4 506 507 508 509
-		f 4 687 -685 688 -665
-		mu 0 4 510 511 512 513
-		f 5 689 690 691 692 -106
-		mu 0 5 85 514 515 516 86
-		f 3 693 -690 -572
-		mu 0 3 160 514 85
-		f 4 694 695 696 697
-		mu 0 4 517 518 519 520
-		f 4 698 699 700 -696
-		mu 0 4 518 521 522 519
-		f 4 701 702 703 -700
-		mu 0 4 521 523 524 522
-		f 4 704 705 706 707
-		mu 0 4 525 526 527 528
-		f 4 708 709 710 -706
-		mu 0 4 526 529 530 527
-		f 4 711 712 713 -710
-		mu 0 4 529 531 532 530
-		f 4 714 715 716 717
-		mu 0 4 533 534 535 536
-		f 4 718 719 720 -716
-		mu 0 4 534 537 538 535
-		f 4 721 722 723 -720
-		mu 0 4 537 539 540 538
-		f 4 724 725 726 727
-		mu 0 4 541 542 543 544
-		f 4 728 729 730 -726
-		mu 0 4 542 545 546 543
-		f 4 731 732 733 -730
-		mu 0 4 545 547 548 546
-		f 4 -727 734 -108 735
-		mu 0 4 544 543 88 87
-		f 4 -731 736 -109 -735
-		mu 0 4 543 546 89 88
-		f 4 -734 737 -110 -737
-		mu 0 4 546 548 90 89
-		f 4 738 -140 739 -286
-		mu 0 4 435 115 116 151
-		f 4 740 -565 -739 -566
-		mu 0 4 549 109 434 550
-		f 4 -132 -741 -182 741
-		mu 0 4 110 109 549 551
-		f 4 -190 742 -112 743
-		mu 0 4 156 155 92 91
-		f 4 -576 -743 -575 744
-		mu 0 4 438 92 155 152
-		f 4 -740 -144 -745 -186
-		mu 0 4 151 116 119 152
-		f 4 745 -357 746 -359
-		mu 0 4 289 287 288 290
-		f 4 747 -318 748 -313
-		mu 0 4 253 255 258 254
-		f 4 -277 749 -300 750
-		mu 0 4 223 222 241 242
-		f 4 -280 -751 -299 751
-		mu 0 4 225 223 242 552
-		f 4 -282 -752 -296 752
-		mu 0 4 227 225 552 553
-		f 4 -284 -753 -295 753
-		mu 0 4 229 227 553 554
-		f 4 -302 754 -308 755
-		mu 0 4 245 244 247 250
-		f 4 -346 756 -344 757
-		mu 0 4 281 280 275 278
-		f 4 -326 758 -324 759
-		mu 0 4 265 264 259 262
-		f 4 -366 760 -364 761
-		mu 0 4 297 296 291 294
-		f 4 762 -403 763 -409
-		mu 0 4 332 327 326 329
-		f 4 -382 764 765 766
-		mu 0 4 309 308 555 556
-		f 4 767 -413 768 769
-		mu 0 4 557 333 336 558
-		f 4 -288 770 771 772
-		mu 0 4 233 232 559 560
-		f 4 -291 -773 773 774
-		mu 0 4 235 233 560 561
-		f 4 775 -399 776 -394
-		mu 0 4 319 321 324 320
-		f 4 777 -377 778 -379
-		mu 0 4 305 303 304 306
-		f 4 779 -335 780 -339
-		mu 0 4 273 272 271 274
-		f 4 781 -247 782 -238
-		mu 0 4 188 184 195 190
-		f 4 783 -231 -782 -235
-		mu 0 4 187 185 184 188
-		f 4 784 -222 785 -219
-		mu 0 4 127 164 177 175
-		f 4 -203 -785 -152 786
-		mu 0 4 165 164 127 126
-		f 4 -212 -787 -155 787
-		mu 0 4 170 165 126 129
-		f 4 -210 -788 -154 788
-		mu 0 4 171 170 129 128
-		f 4 -789 -221 789 -217
-		mu 0 4 171 128 176 174
-		f 4 790 -237 791 -225
-		mu 0 4 179 186 189 180
-		f 4 -241 -792 -240 792
-		mu 0 4 192 180 189 191
-		f 4 793 -262 794 795
-		mu 0 4 562 209 208 563
-		f 4 -252 796 797 798
-		mu 0 4 200 199 564 565
-		f 4 799 -272 800 -266
-		mu 0 4 212 215 218 213
-		f 4 -207 801 -257 802
-		mu 0 4 169 168 205 204
-		f 4 803 -259 -803 -256
-		mu 0 4 203 206 169 204
-		f 4 -323 804 -361 805
-		mu 0 4 262 261 292 291
-		f 4 806 -760 -806 -761
-		mu 0 4 296 265 262 291
-		f 4 -327 -807 -365 807
-		mu 0 4 266 265 296 295
-		f 4 -330 -808 -369 808
-		mu 0 4 268 266 295 299
-		f 4 -333 -809 -372 809
-		mu 0 4 270 268 299 301
-		f 4 810 -337 -810 -375
-		mu 0 4 303 271 270 301
-		f 4 -781 -811 -778 811
-		mu 0 4 274 271 303 305
-		f 4 -340 -812 -378 -805
-		mu 0 4 261 274 305 292
-		f 4 -343 812 -321 813
-		mu 0 4 278 277 260 259
-		f 4 814 -758 -814 -759
-		mu 0 4 264 281 278 259
-		f 4 -347 -815 -325 815
-		mu 0 4 282 281 264 263
-		f 4 -350 -816 -329 816
-		mu 0 4 284 282 263 267
-		f 4 -353 -817 -332 817
-		mu 0 4 286 284 267 269
-		f 4 -356 -818 -336 818
-		mu 0 4 288 286 269 272
-		f 4 -747 -819 -780 819
-		mu 0 4 290 288 272 273
-		f 4 -360 -820 -338 -813
-		mu 0 4 277 290 273 260
-		f 4 -363 820 -385 821
-		mu 0 4 294 293 312 311
-		f 4 822 -762 -822 823
-		mu 0 4 566 297 294 311
-		f 4 -367 -823 824 825
-		mu 0 4 298 297 566 316
-		f 4 -370 -826 -389 826
-		mu 0 4 300 298 316 315
-		f 4 -373 -827 -400 827
-		mu 0 4 302 300 315 322
-		f 4 -376 -828 -396 828
-		mu 0 4 304 302 322 321
-		f 4 -779 -829 -776 829
-		mu 0 4 306 304 321 319
-		f 4 -380 -830 -393 -821
-		mu 0 4 293 306 319 312
-		f 4 -404 830 -381 831
-		mu 0 4 328 327 308 307
-		f 4 -415 -832 -384 832
-		mu 0 4 338 328 307 310
-		f 4 -412 833 834 835
-		mu 0 4 336 335 567 568
-		f 4 -769 -836 836 837
-		mu 0 4 558 336 568 569
-		f 4 -408 838 -766 839
-		mu 0 4 332 331 556 555
-		f 4 -831 -763 -840 -765
-		mu 0 4 308 327 332 555
-		f 4 840 841 842 843
-		mu 0 4 570 571 572 573
-		f 4 844 -841 845 846
-		mu 0 4 574 571 570 575
-		f 4 847 -847 848 849
-		mu 0 4 576 574 575 577
-		f 4 850 -850 851 852
-		mu 0 4 578 576 577 579
-		f 4 853 -853 854 855
-		mu 0 4 580 578 579 581
-		f 4 856 -856 857 -843
-		mu 0 4 572 580 581 573
-		f 4 858 -239 859 -857
-		mu 0 4 572 191 190 580
-		f 4 860 -793 -859 -842
-		mu 0 4 571 192 191 572
-		f 4 861 -242 -861 -845
-		mu 0 4 574 193 192 571
-		f 4 862 -244 -862 -848
-		mu 0 4 576 194 193 574
-		f 4 -246 -863 -851 863
-		mu 0 4 195 194 576 578
-		f 4 -860 -783 -864 -854
-		mu 0 4 580 190 195 578
-		f 4 -220 864 865 866
-		mu 0 4 176 175 582 583
-		f 4 -790 -867 867 868
-		mu 0 4 174 176 583 584
-		f 4 -218 -869 869 870
-		mu 0 4 172 174 584 585
-		f 4 -215 -871 871 872
-		mu 0 4 173 172 585 586
-		f 4 873 874 -223 -873
-		mu 0 4 586 587 177 173
-		f 4 -786 -875 875 -865
-		mu 0 4 175 177 587 582
-		f 4 -395 876 -774 877
-		mu 0 4 313 320 561 560
-		f 4 -387 -878 -772 878
-		mu 0 4 314 313 560 559
-		f 4 -407 879 -770 880
-		mu 0 4 331 330 557 558
-		f 4 -839 -881 -838 881
-		mu 0 4 556 331 558 569
-		f 4 882 -767 -882 -837
-		mu 0 4 568 309 556 569
-		f 4 -383 -883 -835 883
-		mu 0 4 310 309 568 567
-		f 4 884 -833 -884 -834
-		mu 0 4 335 338 310 567
-		f 4 885 -416 -885 -411
-		mu 0 4 334 337 338 335
-		f 4 -391 886 -290 887
-		mu 0 4 318 317 231 234
-		f 4 -401 -888 -293 888
-		mu 0 4 323 318 234 236
-		f 4 -398 -889 -292 889
-		mu 0 4 324 323 236 235
-		f 4 -777 -890 -775 -877
-		mu 0 4 320 324 235 561
-		f 4 890 -852 891 -260
-		mu 0 4 206 579 577 196
-		f 4 -849 892 -248 -892
-		mu 0 4 577 575 197 196
-		f 4 893 -274 894 -264
-		mu 0 4 210 220 219 207
-		f 4 895 896 -251 897
-		mu 0 4 588 589 199 198
-		f 4 -797 -897 898 899
-		mu 0 4 564 199 589 590
-		f 4 900 -268 901 -796
-		mu 0 4 563 211 214 562
-		f 4 -858 902 -255 903
-		mu 0 4 573 581 203 202
-		f 4 -855 -891 -804 -903
-		mu 0 4 581 579 206 203
-		f 4 -476 904 -607 905
-		mu 0 4 355 386 445 446
-		f 4 906 907 -604 -905
-		mu 0 4 386 591 348 445
-		f 4 -426 -603 908 909
-		mu 0 4 346 345 340 591
-		f 4 910 -421 -559 911
-		mu 0 4 592 339 341 432
-		f 4 912 -557 913 914
-		mu 0 4 593 432 428 594
-		f 4 915 -915 916 -445
-		mu 0 4 360 593 594 363
-		f 5 917 -440 918 -480 919
-		mu 0 5 595 359 358 387 379
-		f 4 920 921 -920 -468
-		mu 0 4 349 592 595 379
-		f 4 -429 -908 922 -921
-		mu 0 4 349 348 591 592
-		f 4 -906 -606 -919 -608
-		mu 0 4 355 446 387 358
-		f 4 923 -462 -910 -907
-		mu 0 4 386 375 346 591
-		f 4 -441 -918 924 -916
-		mu 0 4 360 359 595 593
-		f 4 -922 -912 -913 -925
-		mu 0 4 595 592 432 593
-		f 4 -917 -914 -689 925
-		mu 0 4 363 594 428 596
-		f 4 -446 -926 -687 926
-		mu 0 4 364 363 596 597
-		f 4 -531 -927 -683 927
-		mu 0 4 411 364 597 598
-		f 4 -649 -928 -680 928
-		mu 0 4 419 411 598 599
-		f 4 929 -543 -929 -677
-		mu 0 4 600 103 419 599
-		f 4 -125 -930 -676 930
-		mu 0 4 104 103 600 601
-		f 4 -553 -556 -479 931
-		mu 0 4 430 429 378 365
-		f 4 -550 -932 -451 932
-		mu 0 4 426 425 365 368
-		f 4 -546 -933 -530 933
-		mu 0 4 422 421 368 410
-		f 4 -646 -934 -645 934
-		mu 0 4 472 471 410 602
-		f 4 935 -673 -935 -644
-		mu 0 4 603 491 490 604
-		f 4 -923 -909 -418 -911
-		mu 0 4 592 591 340 339
-		f 4 -463 -924 -475 936
-		mu 0 4 376 375 386 385
-		f 4 -876 937 -784 938
-		mu 0 4 582 587 185 187
-		f 4 -866 -939 -234 939
-		mu 0 4 583 582 187 186
-		f 4 -868 -940 -791 940
-		mu 0 4 584 583 186 179
-		f 4 -870 -941 -224 941
-		mu 0 4 585 584 179 178
-		f 4 -872 -942 -228 942
-		mu 0 4 586 585 178 182
-		f 4 -938 -874 -943 -232
-		mu 0 4 185 587 586 182
-		f 4 -285 943 -301 944
-		mu 0 4 230 229 244 243
-		f 4 -755 -944 -754 945
-		mu 0 4 247 244 229 554
-		f 4 -294 946 -305 -946
-		mu 0 4 554 605 248 247
-		f 4 -298 947 -312 -947
-		mu 0 4 605 606 253 248
-		f 4 -750 948 -748 -948
-		mu 0 4 606 607 255 253
-		f 4 -276 949 -315 -949
-		mu 0 4 607 608 256 255
-		f 4 -569 950 -319 -950
-		mu 0 4 608 609 251 256
-		f 4 -567 -945 -309 -951
-		mu 0 4 609 230 243 251
-		f 4 -314 951 -358 952
-		mu 0 4 249 254 289 276
-		f 4 -749 953 -746 -952
-		mu 0 4 254 258 287 289
-		f 4 -317 954 -355 -954
-		mu 0 4 258 257 285 287
-		f 4 -320 955 -352 -955
-		mu 0 4 257 252 283 285
-		f 4 -310 956 -349 -956
-		mu 0 4 252 246 279 283
-		f 4 -303 957 -345 -957
-		mu 0 4 246 245 280 279
-		f 4 -757 -958 -756 958
-		mu 0 4 275 280 245 250
-		f 4 -307 -953 -341 -959
-		mu 0 4 250 249 276 275
-		f 4 -707 959 -715 960
-		mu 0 4 528 527 534 533
-		f 4 -711 961 -719 -960
-		mu 0 4 527 530 537 534
-		f 4 -714 962 -722 -962
-		mu 0 4 530 532 539 537
-		f 4 963 964 -705 965
-		mu 0 4 610 611 526 525
-		f 4 966 967 -709 -965
-		mu 0 4 611 612 529 526
-		f 4 968 969 -712 -968
-		mu 0 4 612 613 531 529
-		f 4 -697 970 -964 971
-		mu 0 4 520 519 611 610
-		f 4 -701 972 -967 -971
-		mu 0 4 519 522 612 611
-		f 4 -704 973 -969 -973
-		mu 0 4 522 524 613 612
-		f 4 974 975 976 977
-		mu 0 4 614 615 616 617
-		f 4 978 979 980 -976
-		mu 0 4 615 618 619 616
-		f 4 981 982 983 -980
-		mu 0 4 618 620 621 619
-		f 4 -724 984 985 986
-		mu 0 4 538 540 622 623
-		f 4 -721 -987 987 988
-		mu 0 4 535 538 623 624
-		f 4 -717 -989 989 990
-		mu 0 4 536 535 624 625
-		f 4 -990 991 -725 992
-		mu 0 4 625 624 542 541
-		f 4 -988 993 -729 -992
-		mu 0 4 624 623 545 542
-		f 4 -986 994 -732 -994
-		mu 0 4 623 622 547 545
-		f 4 995 996 997 998
-		mu 0 4 626 627 628 629
-		f 4 999 1000 1001 -997
-		mu 0 4 627 630 631 628
-		f 4 1002 1003 1004 -1001
-		mu 0 4 630 632 633 631
-		f 4 -691 1005 -996 1006
-		mu 0 4 515 514 627 626
-		f 4 -694 1007 -1000 -1006
-		mu 0 4 514 160 630 627
-		f 4 -197 1008 -1003 -1008
-		mu 0 4 160 159 632 630
-		f 4 -1005 1009 1010 1011
-		mu 0 4 631 633 634 635
-		f 4 -1002 -1012 1012 1013
-		mu 0 4 628 631 635 636
-		f 4 -998 -1014 1014 1015
-		mu 0 4 629 628 636 637
-		f 4 -984 1016 -702 1017
-		mu 0 4 619 621 523 521
-		f 4 -981 -1018 -699 1018
-		mu 0 4 616 619 521 518
-		f 4 -977 -1019 -695 1019
-		mu 0 4 617 616 518 517
-		f 4 -1011 1020 -982 1021
-		mu 0 4 635 634 620 618
-		f 4 -1013 -1022 -979 1022
-		mu 0 4 636 635 618 615
-		f 4 -1015 -1023 -975 1023
-		mu 0 4 637 636 615 614
-		f 4 -846 1024 -261 1025
-		mu 0 4 575 570 208 207
-		f 4 -795 -1025 -844 1026
-		mu 0 4 563 208 570 573
-		f 4 -904 1027 -901 -1027
-		mu 0 4 573 202 211 563
-		f 4 -258 1028 -265 -1028
-		mu 0 4 202 205 212 211
-		f 4 -802 1029 -800 -1029
-		mu 0 4 205 168 215 212
-		f 4 -206 1030 -269 -1030
-		mu 0 4 168 167 216 215
-		f 4 -249 1031 -273 -1031
-		mu 0 4 167 197 219 216
-		f 4 -895 -1032 -893 -1026
-		mu 0 4 207 219 197 575
-		f 4 -801 1032 -799 1033
-		mu 0 4 213 218 200 565
-		f 4 -267 -1034 -798 1034
-		mu 0 4 214 213 565 564
-		f 4 -902 -1035 -900 1035
-		mu 0 4 562 214 564 590
-		f 4 1036 -794 -1036 -899
-		mu 0 4 589 209 562 590
-		f 4 -263 -1037 -896 1037
-		mu 0 4 210 209 589 588
-		f 4 1038 -894 -1038 -898
-		mu 0 4 198 220 210 588
-		f 4 -275 -1039 -254 1039
-		mu 0 4 217 220 198 201
-		f 4 -271 -1040 -253 -1033
-		mu 0 4 218 217 201 200
-		f 4 -825 1040 -402 1041
-		mu 0 4 316 566 326 325
-		f 4 -764 -1041 -824 1042
-		mu 0 4 329 326 566 311
-		f 4 -388 1043 -406 -1043
-		mu 0 4 311 314 330 329
-		f 4 -880 -1044 -879 1044
-		mu 0 4 557 330 314 559
-		f 4 -771 1045 -768 -1045
-		mu 0 4 559 232 333 557
-		f 4 -287 1046 -410 -1046
-		mu 0 4 232 231 334 333
-		f 4 -887 1047 -886 -1047
-		mu 0 4 231 317 337 334
-		f 4 -390 -1042 -414 -1048
-		mu 0 4 317 316 325 337
-		f 4 1048 1049 1050 1051
-		mu 0 4 638 639 640 641
-		f 4 1052 1053 1054 -1050
-		mu 0 4 639 642 643 640
-		f 4 1055 1056 1057 1058
-		mu 0 4 644 645 646 647
-		f 4 1059 -1053 -1049 1060
-		mu 0 4 648 649 639 638
-		f 4 1061 1062 1063 1064
-		mu 0 4 650 651 652 653
-		f 4 1065 -1065 1066 1067
-		mu 0 4 654 650 653 655
-		f 4 1068 1069 1070 1071
-		mu 0 4 656 657 658 659
-		f 4 1072 1073 1074 1075
-		mu 0 4 660 661 662 663
-		f 4 -1075 1076 1077 1078
-		mu 0 4 663 662 664 665
-		f 4 1079 1080 1081 1082
-		mu 0 4 666 667 668 669;
-	setAttr ".fc[500:999]"
-		f 4 1083 1084 1085 1086
-		mu 0 4 670 671 672 673
-		f 4 1087 1088 1089 1090
-		mu 0 4 674 675 676 677
-		f 4 1091 1092 1093 1094
-		mu 0 4 678 679 680 681
-		f 4 1095 1096 1097 -1054
-		mu 0 4 682 683 684 685
-		f 4 1098 1099 1100 -1058
-		mu 0 4 686 687 688 689
-		f 4 1101 1102 -1096 -1060
-		mu 0 4 690 691 683 682
-		f 4 1103 1104 1105 -1072
-		mu 0 4 692 693 694 695
-		f 4 1106 1107 1108 1109
-		mu 0 4 696 697 698 699
-		f 4 1110 1111 1112 -1063
-		mu 0 4 700 701 702 703
-		f 4 1113 1114 1115 -1082
-		mu 0 4 704 705 706 707
-		f 4 1116 1117 1118 -1073
-		mu 0 4 708 709 710 711
-		f 4 1119 1120 1121 -1097
-		mu 0 4 683 712 713 684
-		f 4 1122 1123 1124 -1100
-		mu 0 4 687 714 715 688
-		f 4 1125 1126 -1120 -1103
-		mu 0 4 691 716 712 683
-		f 4 1127 1128 1129 -1105
-		mu 0 4 693 717 718 694
-		f 4 1130 1131 1132 -1108
-		mu 0 4 697 719 720 698
-		f 4 1133 1134 1135 -1112
-		mu 0 4 701 721 722 702
-		f 4 1136 1137 1138 -1115
-		mu 0 4 705 723 724 706
-		f 4 1139 1140 1141 -1118
-		mu 0 4 709 725 726 710
-		f 4 1142 -1087 1143 -1121
-		mu 0 4 712 670 673 713
-		f 4 1144 1145 1146 -1124
-		mu 0 4 714 727 728 715
-		f 4 1147 -1084 -1143 -1127
-		mu 0 4 716 671 670 712
-		f 4 1148 1149 1150 -1129
-		mu 0 4 717 729 730 718
-		f 4 1151 1152 1153 -1132
-		mu 0 4 719 731 732 720
-		f 4 1154 -1089 1155 -1135
-		mu 0 4 721 676 675 722
-		f 4 1156 1157 1158 -1138
-		mu 0 4 723 733 734 724
-		f 4 1159 -1093 1160 -1141
-		mu 0 4 725 680 679 726
-		f 4 -107 1161 1162 1163
-		mu 0 4 735 736 737 738
-		f 4 -111 1164 1165 1166
-		mu 0 4 739 740 741 742
-		f 4 -115 1167 1168 1169
-		mu 0 4 743 744 745 746
-		f 4 -118 1170 1171 -1168
-		mu 0 4 744 747 748 745
-		f 4 -122 1172 1173 1174
-		mu 0 4 749 750 751 752
-		f 4 -126 1175 1176 1177
-		mu 0 4 753 754 755 756
-		f 4 -130 1178 1179 1180
-		mu 0 4 757 758 759 760
-		f 4 -133 1181 1182 -1179
-		mu 0 4 758 761 762 759
-		f 4 1183 1184 1185 1186
-		mu 0 4 763 764 765 766
-		f 4 1187 1188 -1184 1189
-		mu 0 4 767 768 764 763
-		f 4 1190 1191 1192 -1185
-		mu 0 4 764 769 770 765
-		f 4 1193 -1191 -1189 1194
-		mu 0 4 771 769 764 768
-		f 4 -148 1195 1196 -1171
-		mu 0 4 747 772 773 748
-		f 4 1197 1198 1199 -1193
-		mu 0 4 774 775 776 777
-		f 4 1200 1201 1202 1203
-		mu 0 4 778 779 780 781
-		f 4 1204 1205 -156 -1181
-		mu 0 4 760 782 783 757
-		f 4 -161 1206 1207 -1196
-		mu 0 4 772 784 785 773
-		f 4 1208 1209 1210 -1199
-		mu 0 4 775 786 787 776
-		f 4 -1211 1211 1212 1213
-		mu 0 4 776 787 788 789
-		f 4 1214 1215 -168 -1206
-		mu 0 4 782 790 791 783
-		f 4 1216 1217 1218 -1210
-		mu 0 4 786 792 793 787
-		f 4 -176 1219 1220 -1207
-		mu 0 4 784 794 795 785
-		f 4 1221 1222 -177 -1216
-		mu 0 4 790 796 797 791
-		f 4 -1219 1223 1224 -1212
-		mu 0 4 787 793 798 788
-		f 4 -185 1225 1226 1227
-		mu 0 4 799 800 801 802
-		f 4 1228 1229 1230 1231
-		mu 0 4 803 804 805 806
-		f 4 1232 1233 -191 1234
-		mu 0 4 807 808 809 810
-		f 4 -195 -1164 1235 -1226
-		mu 0 4 800 735 738 801
-		f 4 1236 1237 -196 -1234
-		mu 0 4 808 811 812 809
-		f 4 1238 1239 1240 -1230
-		mu 0 4 804 813 814 805
-		f 4 1241 1242 1243 -1186
-		mu 0 4 777 815 816 817
-		f 4 1244 1245 1246 1247
-		mu 0 4 818 819 820 821
-		f 4 1248 1249 1250 -1214
-		mu 0 4 789 822 823 776
-		f 4 -1251 1251 -1242 -1200
-		mu 0 4 776 823 815 777
-		f 4 1252 1253 1254 1255
-		mu 0 4 817 824 825 789
-		f 4 -1255 1256 1257 -1249
-		mu 0 4 789 825 826 822
-		f 4 1258 1259 1260 -1203
-		mu 0 4 780 827 828 781
-		f 4 1261 -1253 -1244 1262
-		mu 0 4 829 824 817 816
-		f 4 1263 1264 1265 1266
-		mu 0 4 830 831 832 833
-		f 4 1267 1268 -1264 1269
-		mu 0 4 834 835 831 830
-		f 4 1270 -1268 1271 1272
-		mu 0 4 836 835 834 837
-		f 4 1273 1274 1275 1276
-		mu 0 4 838 839 840 841
-		f 4 1277 1278 1279 -1275
-		mu 0 4 839 842 843 840
-		f 4 1280 1281 1282 -1265
-		mu 0 4 831 844 845 832
-		f 4 1283 1284 -1281 -1269
-		mu 0 4 835 846 844 831
-		f 4 1285 1286 -1284 -1271
-		mu 0 4 836 847 846 835
-		f 4 1287 -1248 1288 1289
-		mu 0 4 848 818 821 849
-		f 4 1290 1291 1292 1293
-		mu 0 4 850 851 852 853
-		f 4 1294 1295 1296 1297
-		mu 0 4 854 855 856 857
-		f 4 -1245 -1288 1298 1299
-		mu 0 4 819 818 848 858
-		f 4 1300 1301 1302 1303
-		mu 0 4 859 860 861 862
-		f 4 1304 1305 1306 1307
-		mu 0 4 863 864 865 866
-		f 4 1308 1309 1310 1311
-		mu 0 4 867 868 869 870
-		f 4 -1311 1312 1313 1314
-		mu 0 4 870 869 871 872
-		f 4 1315 1316 1317 1318
-		mu 0 4 873 874 875 876
-		f 4 -1239 1319 1320 -1317
-		mu 0 4 874 877 878 875
-		f 4 -1229 1321 1322 -1320
-		mu 0 4 877 879 880 878
-		f 4 1323 1324 1325 -1322
-		mu 0 4 879 881 882 880
-		f 4 1326 1327 1328 1329
-		mu 0 4 883 884 885 886
-		f 4 1330 1331 1332 -1328
-		mu 0 4 884 887 888 885
-		f 4 1333 1334 1335 1336
-		mu 0 4 889 890 891 892
-		f 4 1337 1338 -1334 1339
-		mu 0 4 893 894 890 889
-		f 4 1340 1341 1342 1343
-		mu 0 4 895 896 897 898
-		f 4 1344 1345 1346 1347
-		mu 0 4 899 900 901 902
-		f 4 1348 1349 -1341 1350
-		mu 0 4 903 904 896 895
-		f 4 -1347 1351 1352 1353
-		mu 0 4 902 901 905 906
-		f 4 1354 1355 1356 1357
-		mu 0 4 907 908 909 910
-		f 4 -1357 1358 -1349 1359
-		mu 0 4 910 909 904 903
-		f 4 1360 1361 1362 1363
-		mu 0 4 911 912 913 914
-		f 4 1364 1365 1366 1367
-		mu 0 4 915 916 917 918
-		f 4 1368 1369 -1365 1370
-		mu 0 4 919 920 916 915
-		f 4 1371 1372 -1369 1373
-		mu 0 4 921 922 920 919
-		f 4 1374 -1372 1375 1376
-		mu 0 4 923 922 921 924
-		f 4 -1363 1377 1378 1379
-		mu 0 4 914 913 925 926
-		f 4 1380 1381 1382 1383
-		mu 0 4 927 928 929 930
-		f 4 1384 1385 1386 1387
-		mu 0 4 931 932 933 934
-		f 4 1388 1389 -1385 1390
-		mu 0 4 935 936 932 931
-		f 4 1391 1392 -1389 1393
-		mu 0 4 937 938 936 935
-		f 4 1394 1395 -1392 1396
-		mu 0 4 939 940 938 937
-		f 4 -1383 1397 1398 1399
-		mu 0 4 930 929 941 942
-		f 4 1400 1401 1402 1403
-		mu 0 4 943 944 945 946
-		f 4 1404 1405 1406 1407
-		mu 0 4 947 948 949 950
-		f 4 1408 1409 -1405 1410
-		mu 0 4 951 952 948 947
-		f 4 1411 1412 -1409 1413
-		mu 0 4 953 954 952 951
-		f 4 1414 1415 -1412 1416
-		mu 0 4 955 956 954 953
-		f 4 -1403 1417 1418 1419
-		mu 0 4 946 945 957 958
-		f 4 1420 1421 1422 1423
-		mu 0 4 959 960 961 962
-		f 4 1424 1425 1426 1427
-		mu 0 4 963 964 965 966
-		f 4 1428 1429 1430 1431
-		mu 0 4 967 968 969 970
-		f 4 -1427 1432 1433 1434
-		mu 0 4 966 965 971 972
-		f 4 1435 1436 1437 1438
-		mu 0 4 973 974 975 976
-		f 4 -1438 1439 -1429 1440
-		mu 0 4 976 975 968 967
-		f 4 1441 1442 1443 1444
-		mu 0 4 977 978 979 980
-		f 4 1445 1446 1447 1448
-		mu 0 4 981 982 983 984
-		f 4 1449 1450 1451 1452
-		mu 0 4 985 986 987 988
-		f 4 1453 1454 -1442 1455
-		mu 0 4 989 990 978 977
-		f 4 1456 1457 1458 -1218
-		mu 0 4 792 991 992 793
-		f 4 -1459 1459 1460 -1224
-		mu 0 4 793 992 993 798
-		f 4 1461 1462 -422 -1223
-		mu 0 4 796 994 995 797
-		f 4 -428 1463 1464 1465
-		mu 0 4 996 997 998 999
-		f 4 1466 1467 1468 1469
-		mu 0 4 1000 1001 1002 1003
-		f 4 1470 1471 -433 -1463
-		mu 0 4 994 1004 1005 995
-		f 4 -439 1472 1473 1474
-		mu 0 4 1006 1007 1008 1009
-		f 5 1475 1476 1477 1478 1479
-		mu 0 5 1010 1011 1012 1013 1014
-		f 4 -1478 1480 1481 1482
-		mu 0 4 1013 1012 1015 1016
-		f 4 1483 1484 -449 1485
-		mu 0 4 1017 1018 1019 1020
-		f 4 1486 1487 1488 -1220
-		mu 0 4 794 1021 1022 795
-		f 4 1489 1490 1491 -1457
-		mu 0 4 792 1023 1024 991
-		f 4 1492 -1110 1493 -1466
-		mu 0 4 999 1025 1026 996
-		f 4 -1494 1494 -1487 -460
-		mu 0 4 996 1026 1021 794
-		f 4 -464 1495 1496 -1464
-		mu 0 4 997 1027 1028 998
-		f 4 1497 1498 -465 -1472
-		mu 0 4 1004 1029 1030 1005
-		f 4 1499 1500 1501 -1469
-		mu 0 4 1002 1031 1032 1003
-		f 4 1502 1503 1504 1505
-		mu 0 4 1033 1034 1035 1036
-		f 4 -477 -1475 1506 1507
-		mu 0 4 1037 1006 1009 1038
-		f 4 1508 -1486 -478 -1499
-		mu 0 4 1029 1017 1020 1030
-		f 4 -1501 1509 1510 1511
-		mu 0 4 1032 1031 1039 1040
-		f 4 1512 1513 1514 -1468
-		mu 0 4 1001 1041 1042 1002
-		f 4 -1515 1515 1516 -1500
-		mu 0 4 1002 1042 1043 1031
-		f 4 -1517 1517 1518 -1510
-		mu 0 4 1031 1043 1044 1039
-		f 4 -1519 1519 -1513 1520
-		mu 0 4 1039 1044 1041 1001
-		f 4 1521 -1506 1522 1523
-		mu 0 4 1045 1033 1036 1046
-		f 4 -1523 -1505 1524 1525
-		mu 0 4 1046 1036 1035 1047
-		f 4 -1525 -1504 1526 1527
-		mu 0 4 1047 1035 1034 1048
-		f 4 -1527 -1503 -1522 1528
-		mu 0 4 1048 1034 1033 1045
-		f 4 1529 1530 1531 1532
-		mu 0 4 1049 1050 1051 1052
-		f 4 1533 1534 -1530 1535
-		mu 0 4 1053 1054 1050 1049
-		f 4 1536 1537 -1534 1538
-		mu 0 4 1055 1056 1054 1053
-		f 4 -1532 1539 -1537 1540
-		mu 0 4 1052 1051 1056 1055
-		f 4 1541 -1529 1542 1543
-		mu 0 4 1057 1048 1045 1058
-		f 4 1544 -1528 -1542 1545
-		mu 0 4 1059 1047 1048 1057
-		f 4 1546 -1526 -1545 1547
-		mu 0 4 1060 1046 1047 1059
-		f 4 -1543 -1524 -1547 1548
-		mu 0 4 1058 1045 1046 1060
-		f 4 1549 -1533 1550 -1520
-		mu 0 4 1044 1049 1052 1041
-		f 4 1551 -1536 -1550 -1518
-		mu 0 4 1043 1053 1049 1044
-		f 4 1552 -1539 -1552 -1516
-		mu 0 4 1042 1055 1053 1043
-		f 4 -1551 -1541 -1553 -1514
-		mu 0 4 1041 1052 1055 1042
-		f 4 1553 -1544 1554 -1531
-		mu 0 4 1050 1057 1058 1051
-		f 4 1555 -1546 -1554 -1535
-		mu 0 4 1054 1059 1057 1050
-		f 4 1556 -1548 -1556 -1538
-		mu 0 4 1056 1060 1059 1054
-		f 4 -1555 -1549 -1557 -1540
-		mu 0 4 1051 1058 1060 1056
-		f 4 1557 1558 -528 -1485
-		mu 0 4 1018 1061 1062 1019
-		f 4 1559 1560 1561 -1481
-		mu 0 4 1012 1063 1064 1015
-		f 4 1562 1563 -1560 -1477
-		mu 0 4 1011 1065 1063 1012
-		f 4 -538 1564 1565 -1473
-		mu 0 4 1007 1066 1067 1008
-		f 4 1566 1567 1568 1569
-		mu 0 4 1068 756 1069 1070
-		f 4 1570 -1568 -1177 1571
-		mu 0 4 1071 1069 756 755
-		f 4 1572 1573 1574 1575
-		mu 0 4 1072 1073 1074 1075
-		f 4 1576 -1576 1577 1578
-		mu 0 4 1076 1077 1078 1079
-		f 4 1579 -1579 1580 1581
-		mu 0 4 1080 1081 1082 1083
-		f 5 1582 -1582 1583 -1498 1584
-		mu 0 5 1084 1080 1083 1029 1004
-		f 4 1585 -1585 -1471 1586
-		mu 0 4 993 1084 1004 994
-		f 4 -1461 -1587 -1462 1587
-		mu 0 4 798 993 994 796
-		f 4 -1225 -1588 -1222 1588
-		mu 0 4 788 798 796 790
-		f 4 -1213 -1589 -1215 1589
-		mu 0 4 789 788 790 782
-		f 4 -1256 -1590 -1205 1590
-		mu 0 4 817 789 782 760
-		f 4 1591 -1187 -1591 -1180
-		mu 0 4 759 1085 817 760
-		f 4 1592 -1190 -1592 -1183
-		mu 0 4 762 1086 1085 759
-		f 4 1593 1594 1595 -1227
-		mu 0 4 801 1087 1088 802
-		f 4 1596 1597 -1594 -1236
-		mu 0 4 738 1089 1087 801
-		f 4 1598 -1316 -1597 -1163
-		mu 0 4 737 813 1089 738
-		f 4 1599 -1240 -1599 1600
-		mu 0 4 811 814 813 737
-		f 4 -1241 -1600 -1237 1601
-		mu 0 4 805 814 811 808
-		f 4 -1231 -1602 -1233 1602
-		mu 0 4 806 805 808 807
-		f 4 1603 -1194 1604 -1169
-		mu 0 4 745 1090 1091 746
-		f 4 1605 -1192 -1604 -1172
-		mu 0 4 748 774 1090 745
-		f 4 1606 -1198 -1606 -1197
-		mu 0 4 773 775 774 748
-		f 4 1607 -1209 -1607 -1208
-		mu 0 4 785 786 775 773
-		f 4 1608 -1217 -1608 -1221
-		mu 0 4 795 792 786 785
-		f 4 1609 -1490 -1609 -1489
-		mu 0 4 1022 1023 792 795
-		f 4 1610 -1070 1611 -1068
-		mu 0 4 655 658 657 654
-		f 4 1612 -1080 1613 -1078
-		mu 0 4 664 667 666 665
-		f 4 1614 -1056 1615 -1051
-		mu 0 4 640 645 644 641
-		f 4 1616 -1057 -1615 -1055
-		mu 0 4 643 1092 645 640
-		f 4 1617 -1099 -1617 -1098
-		mu 0 4 684 687 686 685
-		f 4 1618 -1123 -1618 -1122
-		mu 0 4 713 714 687 684
-		f 4 1619 -1145 -1619 -1144
-		mu 0 4 673 727 714 713
-		f 4 1620 -1146 -1620 -1086
-		mu 0 4 672 728 727 673
-		f 4 1621 -1158 1622 -1095
-		mu 0 4 681 734 733 678
-		f 4 1623 -1150 1624 -1091
-		mu 0 4 677 730 729 674
-		f 4 1625 1626 -1152 1627
-		mu 0 4 1093 1094 731 719
-		f 4 1628 -1628 -1131 1629
-		mu 0 4 1095 1093 719 697
-		f 4 1630 -1630 -1107 1631
-		mu 0 4 1096 1095 697 696
-		f 4 -1492 -1632 -1493 1632
-		mu 0 4 991 1024 1025 999
-		f 4 1633 -1521 -1467 1634
-		mu 0 4 1097 1039 1001 1000
-		f 4 -1511 -1634 1635 1636
-		mu 0 4 1040 1039 1097 1098
-		f 4 -1474 1637 -1476 1638
-		mu 0 4 1009 1008 1011 1010
-		f 4 -1563 -1638 -1566 1639
-		mu 0 4 1065 1011 1008 1067
-		f 4 -614 1640 1641 1642
-		mu 0 4 1099 1100 1101 1102
-		f 4 -1642 1643 1644 1645
-		mu 0 4 1103 1101 1104 1105
-		f 4 -1645 1646 -619 1647
-		mu 0 4 1105 1104 1106 1107
-		f 4 1648 1649 1650 -1641
-		mu 0 4 1100 1108 1109 1101
-		f 4 -1651 1651 1652 -1644
-		mu 0 4 1101 1109 1110 1104
-		f 4 -1653 1653 1654 -1647
-		mu 0 4 1104 1110 1111 1106
-		f 4 -1655 1655 -1649 -628
-		mu 0 4 1106 1111 1108 1100
-		f 4 -633 1656 1657 1658
-		mu 0 4 1112 1113 1114 1115
-		f 4 -1658 1659 1660 1661
-		mu 0 4 1115 1114 1116 1117
-		f 4 1662 -1173 1663 -1654
-		mu 0 4 1110 751 750 1111
-		f 4 -1664 121 1664 -1656
-		mu 0 4 1111 750 749 1108
-		f 4 -642 -1643 1665 1666
-		mu 0 4 1118 1099 1103 1119
-		f 4 1667 1668 -643 -1559
-		mu 0 4 1061 1120 1121 1062
-		f 4 1669 1670 1671 -1574
-		mu 0 4 1122 1123 1124 1125
-		f 4 1672 -1571 1673 -1561
-		mu 0 4 1063 1069 1071 1064
-		f 4 1674 -1569 -1673 -1564
-		mu 0 4 1065 1070 1069 1063
-		f 4 -1570 -1675 -1640 1675
-		mu 0 4 1068 1070 1065 1067
-		f 4 -654 -1175 1676 -1657
-		mu 0 4 1113 749 752 1114
-		f 4 -1677 -1174 1677 -1660
-		mu 0 4 1114 752 751 1116
-		f 4 1678 -1646 1679 -1567
-		mu 0 4 1068 1103 1105 756
-		f 4 -1680 -1648 -658 -1178
-		mu 0 4 756 1105 1107 753
-		f 4 1680 -1650 1681 -1659
-		mu 0 4 1115 1109 1108 1112
-		f 4 1682 -1652 -1681 -1662
-		mu 0 4 1117 1110 1109 1115
-		f 4 -1678 -1663 -1683 -1661
-		mu 0 4 1116 751 1110 1117
-		f 4 -1682 -1665 653 632
-		mu 0 4 1112 1108 749 1113
-		f 4 -663 -1667 1683 -1565
-		mu 0 4 1066 1118 1119 1067
-		f 4 -1684 -1666 -1679 -1676
-		mu 0 4 1067 1119 1103 1068
-		f 4 1684 -1580 1685 -664
-		mu 0 4 1126 1127 1128 1129
-		f 4 1686 -1577 -1685 -667
-		mu 0 4 1130 1131 1132 1133
-		f 4 1687 -1573 -1687 -669
-		mu 0 4 1134 1135 1136 1137
-		f 4 1688 -1670 -1688 -671
-		mu 0 4 1138 1139 1140 1141
-		f 4 -1671 -1689 -674 1689
-		mu 0 4 1142 1143 1144 1145
-		f 4 1690 1691 1692 -675
-		mu 0 4 1146 1147 1148 1149
-		f 4 1693 1694 -1691 -679
-		mu 0 4 1150 1151 1152 1153
-		f 4 1695 1696 -1694 -682
-		mu 0 4 1154 1155 1156 1157
-		f 4 1697 -1696 -686 1698
-		mu 0 4 1158 1159 1160 1161
-		f 4 -1686 1699 -1699 -688
-		mu 0 4 1162 1163 1164 1165
-		f 5 -1162 -693 -692 1700 1701
-		mu 0 5 737 736 1166 1167 1168
-		f 3 -1601 -1702 1702
-		mu 0 3 811 737 1168
-		f 4 -698 1703 1704 1705
-		mu 0 4 1169 1170 1171 1172
-		f 4 -1705 1706 1707 1708
-		mu 0 4 1172 1171 1173 1174
-		f 4 -1708 1709 -703 1710
-		mu 0 4 1174 1173 1175 1176
-		f 4 -708 1711 1712 1713
-		mu 0 4 1177 1178 1179 1180
-		f 4 -1713 1714 1715 1716
-		mu 0 4 1180 1179 1181 1182
-		f 4 -1716 1717 -713 1718
-		mu 0 4 1182 1181 1183 1184
-		f 4 -718 1719 1720 1721
-		mu 0 4 1185 1186 1187 1188
-		f 4 -1721 1722 1723 1724
-		mu 0 4 1188 1187 1189 1190
-		f 4 -1724 1725 -723 1726
-		mu 0 4 1190 1189 1191 1192
-		f 4 -728 1727 1728 1729
-		mu 0 4 1193 1194 1195 1196
-		f 4 -1729 1730 1731 1732
-		mu 0 4 1196 1195 1197 1198
-		f 4 -1732 1733 -733 1734
-		mu 0 4 1198 1197 1199 1200
-		f 4 -736 -1167 1735 -1728
-		mu 0 4 1194 739 742 1195
-		f 4 -1736 -1166 1736 -1731
-		mu 0 4 1195 742 741 1197
-		f 4 -1737 -1165 -738 -1734
-		mu 0 4 1197 741 740 1199
-		f 4 -1324 1737 -1188 1738
-		mu 0 4 1088 803 768 767
-		f 4 -1596 -1739 -1593 1739
-		mu 0 4 1201 1202 1086 762
-		f 4 -742 -1228 -1740 -1182
-		mu 0 4 761 1203 1201 762
-		f 4 -744 -1170 1740 -1235
-		mu 0 4 810 743 746 807
-		f 4 1741 -1603 -1741 -1605
-		mu 0 4 1091 806 807 746
-		f 4 -1232 -1742 -1195 -1738
-		mu 0 4 803 806 771 768
-		f 4 -1399 1742 -1395 1743
-		mu 0 4 942 941 940 939
-		f 4 -1353 1744 -1355 1745
-		mu 0 4 906 905 908 907
-		f 4 1746 -1338 1747 -1318
-		mu 0 4 875 894 893 876
-		f 4 1748 -1339 -1747 -1321
-		mu 0 4 878 1204 894 875
-		f 4 1749 -1335 -1749 -1323
-		mu 0 4 880 1205 1204 878
-		f 4 1750 -1336 -1750 -1326
-		mu 0 4 882 1206 1205 880
-		f 4 1751 -1345 1752 -1343
-		mu 0 4 897 900 899 898
-		f 4 1753 -1381 1754 -1387
-		mu 0 4 933 928 927 934
-		f 4 1755 -1361 1756 -1367
-		mu 0 4 917 912 911 918
-		f 4 1757 -1401 1758 -1407
-		mu 0 4 949 944 943 950
-		f 4 -1446 1759 -1444 1760
-		mu 0 4 982 981 980 979
-		f 4 1761 1762 1763 -1423
-		mu 0 4 961 1207 1208 962
-		f 4 1764 1765 -1450 1766
-		mu 0 4 1209 1210 986 985
-		f 4 1767 1768 1769 -1329
-		mu 0 4 885 1211 1212 886
-		f 4 1770 1771 -1768 -1333
-		mu 0 4 888 1213 1211 885
-		f 4 -1434 1772 -1436 1773
-		mu 0 4 972 971 974 973
-		f 4 -1419 1774 -1415 1775
-		mu 0 4 958 957 956 955
-		f 4 -1379 1776 -1377 1777
-		mu 0 4 926 925 923 924
-		f 4 -1280 1778 -1286 1779
-		mu 0 4 840 843 847 836
-		f 4 -1276 -1780 -1273 1780
-		mu 0 4 841 840 836 837
-		f 4 -1261 1781 -1263 1782
-		mu 0 4 781 828 829 816
-		f 4 1783 -1204 -1783 -1243
-		mu 0 4 815 778 781 816
-		f 4 1784 -1201 -1784 -1252
-		mu 0 4 823 779 778 815
-		f 4 1785 -1202 -1785 -1250
-		mu 0 4 822 780 779 823
-		f 4 -1258 1786 -1259 -1786
-		mu 0 4 822 826 827 780
-		f 4 -1266 1787 -1274 1788
-		mu 0 4 833 832 839 838
-		f 4 1789 -1278 -1788 -1283
-		mu 0 4 845 842 839 832
-		f 4 1790 1791 -1303 1792
-		mu 0 4 1214 1215 862 861
-		f 4 1793 1794 1795 -1293
-		mu 0 4 852 1216 1217 853
-		f 4 -1307 1796 -1309 1797
-		mu 0 4 866 865 868 867
-		f 4 1798 -1296 1799 -1246
-		mu 0 4 819 856 855 820
-		f 4 -1297 -1799 -1300 1800
-		mu 0 4 857 856 819 858
-		f 4 1801 -1404 1802 -1362
-		mu 0 4 912 943 946 913
-		f 4 -1759 -1802 -1756 1803
-		mu 0 4 950 943 912 917
-		f 4 1804 -1408 -1804 -1366
-		mu 0 4 916 947 950 917
-		f 4 1805 -1411 -1805 -1370
-		mu 0 4 920 951 947 916
-		f 4 1806 -1414 -1806 -1373
-		mu 0 4 922 953 951 920
-		f 4 -1417 -1807 -1375 1807
-		mu 0 4 955 953 922 923
-		f 4 1808 -1776 -1808 -1777
-		mu 0 4 925 958 955 923
-		f 4 -1803 -1420 -1809 -1378
-		mu 0 4 913 946 958 925
-		f 4 1809 -1364 1810 -1382
-		mu 0 4 928 911 914 929
-		f 4 -1757 -1810 -1754 1811
-		mu 0 4 918 911 928 933
-		f 4 1812 -1368 -1812 -1386
-		mu 0 4 932 915 918 933
-		f 4 1813 -1371 -1813 -1390
-		mu 0 4 936 919 915 932
-		f 4 1814 -1374 -1814 -1393
-		mu 0 4 938 921 919 936
-		f 4 1815 -1376 -1815 -1396
-		mu 0 4 940 924 921 938
-		f 4 1816 -1778 -1816 -1743
-		mu 0 4 941 926 924 940
-		f 4 -1811 -1380 -1817 -1398
-		mu 0 4 929 914 926 941
-		f 4 1817 -1428 1818 -1402
-		mu 0 4 944 963 966 945
-		f 4 1819 -1818 -1758 1820
-		mu 0 4 1218 963 944 949
-		f 4 1821 1822 -1821 -1406
-		mu 0 4 948 970 1218 949
-		f 4 1823 -1432 -1822 -1410
-		mu 0 4 952 967 970 948
-		f 4 1824 -1441 -1824 -1413
-		mu 0 4 954 976 967 952
-		f 4 1825 -1439 -1825 -1416
-		mu 0 4 956 973 976 954
-		f 4 1826 -1774 -1826 -1775
-		mu 0 4 957 972 973 956
-		f 4 -1819 -1435 -1827 -1418
-		mu 0 4 945 966 972 957
-		f 4 1827 -1424 1828 -1443
-		mu 0 4 978 959 962 979
-		f 4 1829 -1421 -1828 -1455
-		mu 0 4 990 960 959 978
-		f 4 1830 1831 1832 -1451
-		mu 0 4 986 1219 1220 987
-		f 4 1833 1834 -1831 -1766
-		mu 0 4 1210 1221 1219 986
-		f 4 1835 -1763 1836 -1447
-		mu 0 4 982 1208 1207 983
-		f 4 -1764 -1836 -1761 -1829
-		mu 0 4 962 1208 982 979
-		f 4 1837 1838 1839 1840
-		mu 0 4 1222 1223 1224 1225
-		f 4 1841 1842 -1841 1843
-		mu 0 4 1226 1227 1222 1225
-		f 4 1844 1845 -1842 1846
-		mu 0 4 1228 1229 1227 1226
-		f 4 1847 1848 -1845 1849
-		mu 0 4 1230 1231 1229 1228
-		f 4 1850 1851 -1848 1852
-		mu 0 4 1232 1233 1231 1230
-		f 4 -1839 1853 -1851 1854
-		mu 0 4 1224 1223 1233 1232
-		f 4 -1855 1855 -1279 1856
-		mu 0 4 1224 1232 843 842
-		f 4 -1840 -1857 -1790 1857
-		mu 0 4 1225 1224 842 845
-		f 4 -1844 -1858 -1282 1858
-		mu 0 4 1226 1225 845 844
-		f 4 -1847 -1859 -1285 1859
-		mu 0 4 1228 1226 844 846
-		f 4 1860 -1850 -1860 -1287
-		mu 0 4 847 1230 1228 846
-		f 4 -1853 -1861 -1779 -1856
-		mu 0 4 1232 1230 847 843
-		f 4 1861 1862 1863 -1260
-		mu 0 4 827 1234 1235 828
-		f 4 1864 1865 -1862 -1787
-		mu 0 4 826 1236 1234 827
-		f 4 1866 1867 -1865 -1257
-		mu 0 4 825 1237 1236 826
-		f 4 1868 1869 -1867 -1254
-		mu 0 4 824 1238 1237 825
-		f 4 -1869 -1262 1870 1871
-		mu 0 4 1238 824 829 1239
-		f 4 -1864 1872 -1871 -1782
-		mu 0 4 828 1235 1239 829
-		f 4 1873 -1772 1874 -1433
-		mu 0 4 965 1211 1213 971
-		f 4 1875 -1769 -1874 -1426
-		mu 0 4 964 1212 1211 965
-		f 4 1876 -1765 1877 -1448
-		mu 0 4 983 1210 1209 984
-		f 4 1878 -1834 -1877 -1837
-		mu 0 4 1207 1221 1210 983
-		f 4 -1835 -1879 -1762 1879
-		mu 0 4 1219 1221 1207 961
-		f 4 1880 -1832 -1880 -1422
-		mu 0 4 960 1220 1219 961
-		f 4 -1833 -1881 -1830 1881
-		mu 0 4 987 1220 960 990
-		f 4 -1452 -1882 -1454 1882
-		mu 0 4 988 987 990 989
-		f 4 1883 -1327 1884 -1430
-		mu 0 4 968 884 883 969
-		f 4 1885 -1331 -1884 -1440
-		mu 0 4 975 887 884 968
-		f 4 1886 -1332 -1886 -1437
-		mu 0 4 974 888 887 975
-		f 4 -1875 -1771 -1887 -1773
-		mu 0 4 971 1213 888 974
-		f 4 -1299 1887 -1849 1888
-		mu 0 4 858 848 1229 1231
-		f 4 -1888 -1290 1889 -1846
-		mu 0 4 1229 848 849 1227
-		f 4 -1301 1890 -1314 1891
-		mu 0 4 860 859 872 871
-		f 4 1892 -1294 1893 1894
-		mu 0 4 1240 850 853 1241
-		f 4 1895 1896 -1894 -1796
-		mu 0 4 1217 1242 1241 853
-		f 4 -1791 1897 -1305 1898
-		mu 0 4 1215 1214 864 863
-		f 4 1899 -1298 1900 -1854
-		mu 0 4 1223 854 857 1233
-		f 4 -1901 -1801 -1889 -1852
-		mu 0 4 1233 857 858 1231
-		f 4 1901 -1636 1902 -1507
-		mu 0 4 1009 1098 1097 1038
-		f 4 -1903 -1635 1903 1904
-		mu 0 4 1038 1097 1000 1243
-		f 4 1905 1906 -1633 -1465
-		mu 0 4 998 1243 991 999
-		f 4 1907 -1586 -1460 1908
-		mu 0 4 1244 1084 993 992
-		f 4 1909 1910 -1583 1911
-		mu 0 4 1245 1246 1080 1084
-		f 4 -1483 1912 -1910 1913
-		mu 0 4 1013 1016 1246 1245
-		f 5 1914 -1512 1915 -1480 1916
-		mu 0 5 1247 1032 1040 1010 1014
-		f 4 -1502 -1915 1917 1918
-		mu 0 4 1003 1032 1247 1244
-		f 4 -1919 1919 -1904 -1470
-		mu 0 4 1003 1244 1243 1000
-		f 4 -1639 -1916 -1637 -1902
-		mu 0 4 1009 1010 1040 1098
-		f 4 -1905 -1906 -1497 1920
-		mu 0 4 1038 1243 998 1028
-		f 4 -1914 1921 -1917 -1479
-		mu 0 4 1013 1245 1247 1014
-		f 4 -1922 -1912 -1908 -1918
-		mu 0 4 1247 1245 1084 1244
-		f 4 1922 -1700 -1911 -1913
-		mu 0 4 1016 1248 1080 1246
-		f 4 1923 -1698 -1923 -1482
-		mu 0 4 1015 1249 1248 1016
-		f 4 1924 -1697 -1924 -1562
-		mu 0 4 1064 1250 1249 1015
-		f 4 1925 -1695 -1925 -1674
-		mu 0 4 1071 1251 1250 1064
-		f 4 -1692 -1926 -1572 1926
-		mu 0 4 1252 1251 1071 755
-		f 4 -931 -1693 -1927 -1176
-		mu 0 4 754 1253 1252 755
-		f 4 1927 -1509 -1584 -1581
-		mu 0 4 1082 1017 1029 1083
-		f 4 1928 -1484 -1928 -1578
-		mu 0 4 1078 1018 1017 1079
-		f 4 1929 -1558 -1929 -1575
-		mu 0 4 1074 1061 1018 1075
-		f 4 1930 -1668 -1930 -1672
-		mu 0 4 1124 1254 1061 1125
-		f 4 -1669 -1931 -1690 -936
-		mu 0 4 1255 1256 1142 1145
-		f 4 -1909 -1458 -1907 -1920
-		mu 0 4 1244 992 991 1243
-		f 4 -937 -1508 -1921 -1496
-		mu 0 4 1027 1037 1038 1028
-		f 4 1931 -1781 1932 -1873
-		mu 0 4 1235 841 837 1239
-		f 4 1933 -1277 -1932 -1863
-		mu 0 4 1234 838 841 1235
-		f 4 1934 -1789 -1934 -1866
-		mu 0 4 1236 833 838 1234
-		f 4 1935 -1267 -1935 -1868
-		mu 0 4 1237 830 833 1236
-		f 4 1936 -1270 -1936 -1870
-		mu 0 4 1238 834 830 1237
-		f 4 -1272 -1937 -1872 -1933
-		mu 0 4 837 834 1238 1239
-		f 4 1937 -1344 1938 -1325
-		mu 0 4 881 895 898 882
-		f 4 1939 -1751 -1939 -1753
-		mu 0 4 899 1206 882 898
-		f 4 -1940 -1348 1940 -1337
-		mu 0 4 1206 899 902 1257
-		f 4 -1941 -1354 1941 -1340
-		mu 0 4 1257 902 906 1258
-		f 4 -1942 -1746 1942 -1748
-		mu 0 4 1258 906 907 1259
-		f 4 -1943 -1358 1943 -1319
-		mu 0 4 1259 907 910 1260
-		f 4 -1944 -1360 1944 -1598
-		mu 0 4 1260 910 903 1261
-		f 4 -1945 -1351 -1938 -1595
-		mu 0 4 1261 903 895 881
-		f 4 1945 -1400 1946 -1352
-		mu 0 4 901 930 942 905
-		f 4 -1947 -1744 1947 -1745
-		mu 0 4 905 942 939 908
-		f 4 -1948 -1397 1948 -1356
-		mu 0 4 908 939 937 909
-		f 4 -1949 -1394 1949 -1359
-		mu 0 4 909 937 935 904
-		f 4 -1950 -1391 1950 -1350
-		mu 0 4 904 935 931 896
-		f 4 -1951 -1388 1951 -1342
-		mu 0 4 896 931 934 897
-		f 4 1952 -1752 -1952 -1755
-		mu 0 4 927 900 897 934
-		f 4 -1953 -1384 -1946 -1346
-		mu 0 4 900 927 930 901
-		f 4 -961 -1722 1953 -1712
-		mu 0 4 1178 1185 1188 1179
-		f 4 -1954 -1725 1954 -1715
-		mu 0 4 1179 1188 1190 1181
-		f 4 -1955 -1727 -963 -1718
-		mu 0 4 1181 1190 1192 1183
-		f 4 -966 -1714 1955 1956
-		mu 0 4 1262 1177 1180 1263
-		f 4 -1956 -1717 1957 1958
-		mu 0 4 1263 1180 1182 1264
-		f 4 -1958 -1719 -970 1959
-		mu 0 4 1264 1182 1184 1265
-		f 4 -972 -1957 1960 -1704
-		mu 0 4 1170 1262 1263 1171
-		f 4 -1961 -1959 1961 -1707
-		mu 0 4 1171 1263 1264 1173
-		f 4 -1962 -1960 -974 -1710
-		mu 0 4 1173 1264 1265 1175
-		f 4 -978 1962 1963 1964
-		mu 0 4 1266 1267 1268 1269
-		f 4 -1964 1965 1966 1967
-		mu 0 4 1269 1268 1270 1271
-		f 4 -1967 1968 -983 1969
-		mu 0 4 1271 1270 1272 1273
-		f 4 1970 1971 -985 -1726
-		mu 0 4 1189 1274 1275 1191
-		f 4 1972 1973 -1971 -1723
-		mu 0 4 1187 1276 1274 1189
-		f 4 -991 1974 -1973 -1720
-		mu 0 4 1186 1277 1276 1187
-		f 4 -993 -1730 1975 -1975
-		mu 0 4 1277 1193 1196 1276
-		f 4 -1976 -1733 1976 -1974
-		mu 0 4 1276 1196 1198 1274
-		f 4 -1977 -1735 -995 -1972
-		mu 0 4 1274 1198 1200 1275
-		f 4 -999 1977 1978 1979
-		mu 0 4 1278 1279 1280 1281
-		f 4 -1979 1980 1981 1982
-		mu 0 4 1281 1280 1282 1283
-		f 4 -1982 1983 -1004 1984
-		mu 0 4 1283 1282 1284 1285
-		f 4 -1007 -1980 1985 -1701
-		mu 0 4 1167 1278 1281 1168
-		f 4 -1986 -1983 1986 -1703
-		mu 0 4 1168 1281 1283 811
-		f 4 -1987 -1985 -1009 -1238
-		mu 0 4 811 1283 1285 812
-		f 4 1987 1988 -1010 -1984
-		mu 0 4 1282 1286 1287 1284
-		f 4 1989 1990 -1988 -1981
-		mu 0 4 1280 1288 1286 1282
-		f 4 -1016 1991 -1990 -1978
-		mu 0 4 1279 1289 1288 1280
-		f 4 1992 -1711 -1017 -1969
-		mu 0 4 1270 1174 1176 1272
-		f 4 1993 -1709 -1993 -1966
-		mu 0 4 1268 1172 1174 1270
-		f 4 -1020 -1706 -1994 -1963
-		mu 0 4 1267 1169 1172 1268
-		f 4 1994 -1970 -1021 -1989
-		mu 0 4 1286 1271 1273 1287
-		f 4 1995 -1968 -1995 -1991
-		mu 0 4 1288 1269 1271 1286
-		f 4 -1024 -1965 -1996 -1992
-		mu 0 4 1289 1266 1269 1288
-		f 4 1996 -1304 1997 -1843
-		mu 0 4 1227 859 862 1222
-		f 4 1998 -1838 -1998 -1792
-		mu 0 4 1215 1223 1222 862
-		f 4 -1999 -1899 1999 -1900
-		mu 0 4 1223 1215 863 854
-		f 4 -2000 -1308 2000 -1295
-		mu 0 4 854 863 866 855
-		f 4 -2001 -1798 2001 -1800
-		mu 0 4 855 866 867 820
-		f 4 -2002 -1312 2002 -1247
-		mu 0 4 820 867 870 821
-		f 4 -2003 -1315 2003 -1289
-		mu 0 4 821 870 872 849
-		f 4 -1997 -1890 -2004 -1891
-		mu 0 4 859 1227 849 872
-		f 4 2004 -1794 2005 -1797
-		mu 0 4 865 1216 852 868
-		f 4 2006 -1795 -2005 -1306
-		mu 0 4 864 1217 1216 865
-		f 4 2007 -1896 -2007 -1898
-		mu 0 4 1214 1242 1217 864
-		f 4 -1897 -2008 -1793 2008
-		mu 0 4 1241 1242 1214 861
-		f 4 2009 -1895 -2009 -1302
-		mu 0 4 860 1240 1241 861
-		f 4 -1893 -2010 -1892 2010
-		mu 0 4 850 1240 860 871
-		f 4 2011 -1291 -2011 -1313
-		mu 0 4 869 851 850 871
-		f 4 -2006 -1292 -2012 -1310
-		mu 0 4 868 852 851 869
-		f 4 2012 -1445 2013 -1823
-		mu 0 4 970 977 980 1218
-		f 4 2014 -1820 -2014 -1760
-		mu 0 4 981 963 1218 980
-		f 4 -2015 -1449 2015 -1425
-		mu 0 4 963 981 984 964
-		f 4 2016 -1876 -2016 -1878
-		mu 0 4 1209 1212 964 984
-		f 4 -2017 -1767 2017 -1770
-		mu 0 4 1212 1209 985 886
-		f 4 -2018 -1453 2018 -1330
-		mu 0 4 886 985 988 883
-		f 4 -2019 -1883 2019 -1885
-		mu 0 4 883 988 989 969
-		f 4 -2020 -1456 -2013 -1431
-		mu 0 4 969 989 977 970
-		f 4 -1077 2020 -1052 2021
-		mu 0 4 664 662 638 641
-		f 4 -1616 2022 -1613 -2022
-		mu 0 4 641 644 667 664
-		f 4 -1081 -2023 -1059 2023
-		mu 0 4 668 667 644 647
-		f 4 -1101 2024 -1114 -2024
-		mu 0 4 689 688 705 704
-		f 4 -1125 2025 -1137 -2025
-		mu 0 4 688 715 723 705
-		f 4 -1147 2026 -1157 -2026
-		mu 0 4 715 728 733 723
-		f 4 -1623 -2027 -1621 2027
-		mu 0 4 678 733 728 672
-		f 4 2028 -1092 -2028 -1085
-		mu 0 4 671 679 678 672
-		f 4 -1161 -2029 -1148 2029
-		mu 0 4 726 679 671 716
-		f 4 -1142 -2030 -1126 2030
-		mu 0 4 710 726 716 691
-		f 4 -1119 -2031 -1102 2031
-		mu 0 4 711 710 691 690
-		f 4 -1074 -2032 -1061 -2021
-		mu 0 4 662 661 648 638
-		f 4 2032 2033 -28 2034
-		mu 0 4 1290 1291 24 23
-		f 4 -585 -2034 2035 2036
-		mu 0 4 25 24 1291 1292
-		f 4 2037 2038 -30 -2037
-		mu 0 4 1292 1293 26 25
-		f 4 -62 -2039 2039 2040
-		mu 0 4 60 59 1294 1295
-		f 4 -83 -2041 2041 2042
-		mu 0 4 74 60 1295 1296
-		f 4 -101 -2043 2043 2044
-		mu 0 4 82 74 1296 1297
-		f 4 2045 -593 -2045 2046
-		mu 0 4 1298 35 82 1297
-		f 4 -42 -2046 2047 2048
-		mu 0 4 36 35 1298 1299;
-	setAttr ".fc[1000:1051]"
-		f 4 2049 -103 -2049 2050
-		mu 0 4 1300 75 36 1299
-		f 4 2051 -85 -2050 2052
-		mu 0 4 1301 61 75 1300
-		f 4 2053 -64 -2052 2054
-		mu 0 4 1302 62 61 1301
-		f 4 2055 -2035 -25 -2054
-		mu 0 4 1303 1290 23 22
-		f 4 2056 -1062 2057 -1495
-		mu 0 4 1304 651 650 1305
-		f 4 -1109 2058 -1111 -2057
-		mu 0 4 699 698 701 700
-		f 4 -1133 2059 -1134 -2059
-		mu 0 4 698 720 721 701
-		f 4 -1154 2060 -1155 -2060
-		mu 0 4 720 732 676 721
-		f 4 -1090 -2061 -1153 2061
-		mu 0 4 677 676 732 731
-		f 4 -1627 2062 -1624 -2062
-		mu 0 4 731 1094 730 677
-		f 4 -1151 -2063 -1626 2063
-		mu 0 4 718 730 1094 1093
-		f 4 -1130 -2064 -1629 2064
-		mu 0 4 694 718 1093 1095
-		f 4 -1106 -2065 -1631 2065
-		mu 0 4 695 694 1095 1096
-		f 4 2066 -1069 -2066 -1491
-		mu 0 4 1306 657 656 1307
-		f 4 -1612 -2067 -1610 2067
-		mu 0 4 654 657 1306 1308
-		f 4 -2058 -1066 -2068 -1488
-		mu 0 4 1305 650 654 1308
-		f 4 -453 2068 -18 2069
-		mu 0 4 1309 1310 16 13
-		f 4 -584 -2069 -582 2070
-		mu 0 4 18 16 1310 1311
-		f 4 -456 2071 -21 -2071
-		mu 0 4 1311 1312 19 18
-		f 4 -53 -2072 -602 2072
-		mu 0 4 50 49 444 443
-		f 4 -75 -2073 -600 2073
-		mu 0 4 69 50 443 441
-		f 4 -94 -2074 -598 2074
-		mu 0 4 79 69 441 442
-		f 4 2075 -594 -2075 -597
-		mu 0 4 81 33 79 442
-		f 4 -39 -2076 -97 2076
-		mu 0 4 34 33 81 80
-		f 4 2077 -99 -2077 -96
-		mu 0 4 70 72 34 80
-		f 4 2078 -80 -2078 -77
-		mu 0 4 53 55 72 70
-		f 4 2079 -59 -2079 -56
-		mu 0 4 52 56 55 53
-		f 4 -461 -2070 -14 -2080
-		mu 0 4 1313 1309 13 12
-		f 4 -23 2080 -2038 2081
-		mu 0 4 21 20 1293 1292
-		f 4 2082 -583 -2082 -2036
-		mu 0 4 1291 17 21 1292
-		f 4 -20 -2083 -2033 2083
-		mu 0 4 14 17 1291 1290
-		f 4 -16 -2084 -2056 2084
-		mu 0 4 15 14 1290 1303
-		f 4 -60 -2085 -2055 2085
-		mu 0 4 58 57 1302 1301
-		f 4 -81 -2086 -2053 2086
-		mu 0 4 73 58 1301 1300
-		f 4 -100 -2087 -2051 2087
-		mu 0 4 31 73 1300 1299
-		f 4 -2048 2088 -37 -2088
-		mu 0 4 1299 1298 32 31
-		f 4 -595 -2089 -2047 2089
-		mu 0 4 78 32 1298 1297
-		f 4 2090 -93 -2090 -2044
-		mu 0 4 1296 68 78 1297
-		f 4 2091 -74 -2091 -2042
-		mu 0 4 1295 47 68 1296
-		f 4 -2081 -52 -2092 -2040
-		mu 0 4 1294 48 47 1295
-		f 4 -1064 2092 -1076 2093
-		mu 0 4 653 652 660 663
-		f 4 -1067 -2094 -1079 2094
-		mu 0 4 655 653 663 665
-		f 4 -1614 2095 -1611 -2095
-		mu 0 4 665 666 658 655
-		f 4 -1071 -2096 -1083 2096
-		mu 0 4 659 658 666 669
-		f 4 -1116 2097 -1104 -2097
-		mu 0 4 707 706 693 692
-		f 4 -1139 2098 -1128 -2098
-		mu 0 4 706 724 717 693
-		f 4 -1159 2099 -1149 -2099
-		mu 0 4 724 734 729 717
-		f 4 -1625 -2100 -1622 2100
-		mu 0 4 674 729 734 681
-		f 4 2101 -1088 -2101 -1094
-		mu 0 4 680 675 674 681
-		f 4 -1156 -2102 -1160 2102
-		mu 0 4 722 675 680 725
-		f 4 -1136 -2103 -1140 2103
-		mu 0 4 702 722 725 709
-		f 4 -1113 -2104 -1117 -2093
-		mu 0 4 703 702 709 708;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".dr" 3;
-	setAttr ".dsm" 2;
 createNode transform -n "bedroom_SET_latest1:SMALL_CABINET";
 	rename -uid "80E26A89-044C-EAC5-CA5A-71BBB34F556B";
 	setAttr ".t" -type "double3" 4.1907034516597097 -0.012819635634732318 -4.9407199489681188 ;
@@ -25904,6 +21473,7 @@ createNode mesh -n "bedroom_SET_latest1:console:ButtonsShape" -p "|bedroom_SET_l
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "bedroom_SET_latest1:desklamp";
 	rename -uid "1741B8A2-BB46-DFFA-2560-2CA412CD6C3F";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -5.6018856762436053 2.4612423312342901 -1.6494542678075064 ;
 	setAttr ".r" -type "double3" 0 -149.70478524854173 0 ;
 	setAttr ".s" -type "double3" 0.42386005097123697 0.42386005097123697 0.42386005097123697 ;
@@ -26042,6 +21612,7 @@ createNode PxrSphereLight -n "bedroom_SET_latest1:desklampShape" -p "bedroom_SET
 	setAttr ".rman_coneAngleOpacity" 0.5;
 createNode transform -n "bedroom_SET_latest1:overhead_2";
 	rename -uid "A19335E9-7F4D-9246-02CD-099FBB146DF7";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -5.6018856762436053 4.2661966315052871 -2.6936695530378341 ;
 	setAttr ".s" -type "double3" 3.0305384622595275 3.0305384622595275 3.0305384622595275 ;
 createNode PxrSphereLight -n "bedroom_SET_latest1:overhead_2Shape" -p "bedroom_SET_latest1:overhead_2";
@@ -26179,6 +21750,7 @@ createNode PxrSphereLight -n "bedroom_SET_latest1:overhead_2Shape" -p "bedroom_S
 	setAttr ".rman_coneAngleOpacity" 0.5;
 createNode transform -n "bedroom_SET_latest1:window1";
 	rename -uid "F5E95C30-4242-19C4-8145-04B13CE59F7B";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 1.5067858575703901 2.29635482846935 10.191432806536906 ;
 	setAttr ".s" -type "double3" 7.390653608401057 7.390653608401057 7.390653608401057 ;
 createNode PxrRectLight -n "bedroom_SET_latest1:window1Shape" -p "bedroom_SET_latest1:window1";
@@ -26319,6 +21891,7 @@ createNode PxrRectLight -n "bedroom_SET_latest1:window1Shape" -p "bedroom_SET_la
 	setAttr ".rman_coneAngleOpacity" 0.5;
 createNode transform -n "bedroom_SET_latest1:overhead_1";
 	rename -uid "88A3228E-D847-4D53-750F-2BBBF391E630";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -2.7028885029271499 4.8509773871110076 -0.77835687694811972 ;
 	setAttr ".r" -type "double3" -87.808530963641999 0 0 ;
 	setAttr ".s" -type "double3" 1.8812813145224641 1.8812813145224641 1.8812813145224641 ;
@@ -26457,6 +22030,7 @@ createNode PxrSphereLight -n "bedroom_SET_latest1:overhead_1Shape" -p "bedroom_S
 	setAttr ".rman_coneAngleOpacity" 0.5;
 createNode transform -n "bedroom_SET_latest1:render";
 	rename -uid "657624B8-664D-F5BE-3EAA-7399048D32F2";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -12.16124019840777 2.368712556043977 -0.54476401364638205 ;
 	setAttr -l on ".tx";
 	setAttr -l on ".ty";
@@ -26478,6 +22052,7 @@ createNode camera -n "bedroom_SET_latest1:renderShape" -p "bedroom_SET_latest1:r
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -n "bedroom_SET_latest1:PxrSphereLight";
 	rename -uid "D63A99CB-684A-75E9-DB57-9EBD99C54F27";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -5.3565811733606887 1.978824350046112 -0.39134874799117325 ;
 	setAttr ".r" -type "double3" 4.5434474275283037e-15 -69.511732556954826 22.071154832057523 ;
 	setAttr ".s" -type "double3" 0.34289188502466234 0.34289188502466234 0.34289188502466234 ;
@@ -26616,6 +22191,7 @@ createNode PxrSphereLight -n "bedroom_SET_latest1:PxrSphereLightShape" -p "bedro
 	setAttr ".rman_coneAngleOpacity" 0.5;
 createNode transform -n "bedroom_SET_latest1:rim_light";
 	rename -uid "88B7999B-0848-4929-66B2-399A2E50FA6F";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.99202476456732303 2.0776361598215756 -3.528347770331385 ;
 	setAttr ".r" -type "double3" 0 -222.37259221363146 0 ;
 	setAttr ".s" -type "double3" 3.4382565894829673 3.4382565894829673 3.4382565894829673 ;
@@ -26757,6 +22333,7 @@ createNode PxrRectLight -n "bedroom_SET_latest1:rim_lightShape" -p "bedroom_SET_
 	setAttr ".rman_coneAngleOpacity" 0.5;
 createNode transform -n "bedroom_SET_latest1:moon_decor_light";
 	rename -uid "7C3AB637-1643-3166-BAD3-5EB8B65C093A";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 2.5230754251288623 3.5083298467314483 2.3317565942328002 ;
 	setAttr ".s" -type "double3" 0.5312078832242727 0.53120788322427248 0.53120788322427182 ;
 createNode PxrSphereLight -n "bedroom_SET_latest1:moon_decor_lightShape" -p "bedroom_SET_latest1:moon_decor_light";
@@ -26894,6 +22471,7 @@ createNode PxrSphereLight -n "bedroom_SET_latest1:moon_decor_lightShape" -p "bed
 	setAttr ".rman_coneAngleOpacity" 0.5;
 createNode transform -n "bedroom_SET_latest1:mac_light";
 	rename -uid "C31EBB58-414C-F3DD-B5FF-CD861066BA4D";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -5.716548057063509 1.86806256273222 -0.3406566321221759 ;
 	setAttr ".s" -type "double3" 0.15283948494265454 0.15283948494265448 0.15283948494265454 ;
 createNode PxrSphereLight -n "bedroom_SET_latest1:mac_lightShape" -p "bedroom_SET_latest1:mac_light";
@@ -27031,6 +22609,7 @@ createNode PxrSphereLight -n "bedroom_SET_latest1:mac_lightShape" -p "bedroom_SE
 	setAttr ".rman_coneAngleOpacity" 0.5;
 createNode transform -n "bedroom_SET_latest1:face_light";
 	rename -uid "C79C17B4-1344-28F8-E097-A29247B3A66E";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -5.3565811733606887 2.4584545494605115 -0.85881588759332916 ;
 	setAttr ".r" -type "double3" -111.14012655405276 -79.887270748999583 131.49244392800117 ;
 	setAttr ".s" -type "double3" 0.34289188502466234 0.34289188502466234 0.34289188502466234 ;
@@ -27189,7 +22768,7 @@ createNode camera -n "perspShape2" -p "persp1";
 	setAttr ".tp" -type "double3" -4.5112144712089854 1.7452814061887933 -1.173834365303585 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode fosterParent -n "bedroom_SET_latest1:teacupRNfosterParent1";
-	rename -uid "8891017B-9944-7013-FA71-D99C074AAC19";
+	rename -uid "A3B2E0BB-EE49-A4EE-26F3-34843D1F4B06";
 createNode parentConstraint -n "teacup_parentConstraint1" -p "bedroom_SET_latest1:teacupRNfosterParent1";
 	rename -uid "FB068645-EC43-086B-EBD6-B8B1B977242C";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "r_wrist_ctrlW0" -dv 1 -min 0 -at "double";
@@ -27207,12 +22786,12 @@ createNode parentConstraint -n "teacup_parentConstraint1" -p "bedroom_SET_latest
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.24573785624334032 -0.89715398647863509 0.12017610592686268 ;
 	setAttr ".tg[0].tor" -type "double3" 87.187326370052588 -9.700567077960212 -30.759121264849725 ;
-	setAttr ".lr" -type "double3" -12.05043259823919 -50.446944415863975 12.393691198599763 ;
+	setAttr ".lr" -type "double3" -42.534593907218998 -81.310944624636747 43.561702889128881 ;
 	setAttr ".rst" -type "double3" -5.5113167087671702 1.7763628198643886 -0.99618252557130482 ;
 	setAttr ".rsrr" -type "double3" 0 -106.18222372836755 0 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "comfy_mc_latest_realRNfosterParent1";
-	rename -uid "0B29E991-A44D-846B-9480-F1B01788CAD9";
+	rename -uid "A203F1E0-0546-3F0F-65A8-AB9573B169BC";
 createNode transform -n "neck_ctrl" -p "comfy_mc_latest_realRNfosterParent1";
 	rename -uid "272D52C0-CA4A-5A7D-0E36-81A201E16DD0";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -27392,35 +22971,36 @@ createNode nurbsCurve -n "curveShape8" -p "nurbsCircle13";
 		-0.080384713606593161 0.99535430113377288 3.1078776086888569
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "E9B056D6-FE4C-0FD1-76D0-18939F06F043";
-	setAttr -s 205 ".lnk";
-	setAttr -s 100 ".ign";
-	setAttr -s 205 ".slnk";
+	rename -uid "34A6777C-9C49-2AF9-4E6E-1DBF427B4166";
+	setAttr -s 420 ".lnk";
+	setAttr -s 200 ".ign";
+	setAttr -s 420 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "4BD195BC-D24D-AC53-8749-80B0C00E5108";
-	setAttr -s 4 ".dli[1:3]"  1 2 3;
-	setAttr -s 4 ".dli";
+	rename -uid "BEDA7B79-7F4F-9322-DE8F-F695FCE7C492";
+	setAttr ".cdl" 5;
+	setAttr -s 7 ".dli[1:6]"  1 2 3 0 4 5;
+	setAttr -s 6 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5B357CEE-6847-BF47-8C71-B6AC63E6A039";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1E11AF56-EA4E-28F9-7EA4-39A7747D0A75";
+	rename -uid "3E8A695D-A84D-0AC7-6350-B89D7EEDA55C";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "397B167C-7542-5658-7059-7FB1637BA251";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F483586E-AE48-C9C3-28A4-FAA400D217C2";
+	rename -uid "7CC3DB3F-0841-44FC-73A7-BA90AD9CC49C";
 	setAttr -s 3 ".bsdt";
-	setAttr ".bsdt[0].bscd" -type "Int32Array" 9 0 -1 1 2 3
-		 4 5 6 7 ;
+	setAttr ".bsdt[0].bscd" -type "Int32Array" 10 -1 3 4 5 6
+		 7 1 2 0 8 ;
 	setAttr ".bsdt[1].bscd" -type "Int32Array" 3 2 1 -2 ;
 	setAttr ".bsdt[1].bsdn" -type "string" "bedroom_SET_latest1";
 	setAttr ".bsdt[2].bscd" -type "Int32Array" 0 ;
 	setAttr ".bsdt[2].bspi" 1;
 	setAttr ".bsdt[2].bsdn" -type "string" "karen_latest";
-	setAttr -s 8 ".bspr";
-	setAttr -s 8 ".obsv";
+	setAttr -s 9 ".bspr";
+	setAttr -s 9 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6B35FE82-BF45-4E84-3AC7-56BAD4ECC9B5";
+	rename -uid "2297D6A5-7147-DBD3-754A-8BB34E043F7F";
 createNode rmanGlobals -s -n "rmanGlobals";
 	rename -uid "DA69D32F-8644-71F5-C8DB-85A21A29F371";
 	setAttr ".cch" no;
@@ -27428,7 +23008,7 @@ createNode rmanGlobals -s -n "rmanGlobals";
 	setAttr ".ihi" 2;
 	setAttr ".nds" 0;
 	setAttr ".hider_minSamples" 0;
-	setAttr ".hider_maxSamples" 32;
+	setAttr ".hider_maxSamples" 128;
 	setAttr ".ri_pixelVariance" 0.0099999997764825821;
 	setAttr ".hider_incremental" yes;
 	setAttr ".ipr_hider_maxSamples" 32;
@@ -27508,8 +23088,8 @@ createNode rmanGlobals -s -n "rmanGlobals";
 	setAttr ".ribFileFormat" -type "string" "<camera><layer>.<f4>.rib";
 	setAttr ".version" 1;
 	setAttr ".take" 1;
-	setAttr ".imageOutputDir" -type "string" "<ws>/images/<scene>_v<version>_t<take>";
-	setAttr ".ribOutputDir" -type "string" "<ws>/renderman/rib/<scene>/v<version>_t<take>";
+	setAttr ".imageOutputDir" -type "string" "/Users/abbycohn/Desktop/background_happyStudy";
+	setAttr ".ribOutputDir" -type "string" "/Users/abbycohn/Desktop/background_happyStudy";
 	setAttr -s 10 ".UserTokens";
 	setAttr ".UserTokens[0].userTokenKeys" -type "string" "";
 	setAttr ".UserTokens[0].userTokenValues" -type "string" "";
@@ -27540,7 +23120,7 @@ createNode rmanDisplay -s -n "rmanDefaultDisplay";
 	setAttr ".ihi" 2;
 	setAttr ".nds" 0;
 	setAttr ".enable" yes;
-	setAttr ".denoise" yes;
+	setAttr ".denoise" no;
 	setAttr ".frameMode" 0;
 	setAttr ".remapBreakPoint" 0;
 	setAttr ".remapMaxValue" 0;
@@ -27827,20 +23407,20 @@ createNode renderLayer -n "bedroom_SET_latest1:defaultRenderLayer";
 createNode script -n "bedroom_SET_latest1:uiConfigurationScriptNode";
 	rename -uid "04AEE26A-1D44-3670-7D54-8B9A606AC91F";
 	setAttr ".b" -type "string" (
-		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"comfy_mc_latest_real:mc_rig_only:faceRig_cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
-		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
-		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 360\n            -height 499\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n"
+		+ "            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
+		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n"
+		+ "            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 0\n            -nurbsCurves 1\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n"
-		+ "            -hulls 0\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 360\n            -height 227\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 0\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 360\n            -height 227\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
-		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n"
-		+ "            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 727\n            -height 499\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
+		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 727\n            -height 499\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n"
@@ -27869,8 +23449,8 @@ createNode script -n "bedroom_SET_latest1:uiConfigurationScriptNode";
 		+ "            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n"
 		+ "            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n"
 		+ "\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 727\\n    -height 499\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 727\\n    -height 499\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 727\\n    -height 499\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 727\\n    -height 499\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "bedroom_SET_latest1:sceneConfigurationScriptNode";
@@ -31024,11 +26604,10 @@ createNode reference -n "bedroom_SET_latest1:bed_NEWRN";
 	setAttr ".fn[0]" -type "string" "/Users/abbycohn/Documents/GitHub/poweredup//assets/bedroomAssets/bed_NEW.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:bed_NEWRN"
-		"bed_NEWRN" 2
+		"bed_NEWRN" 15
 		2 "|bed_NEW:defaultLight" "visibility" " 0"
 		2 "|bed_NEW:bed|bed_NEW:bed_frame|bed_NEW:bed_frameShape" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
-		"bed_NEWRN" 13
 		2 "|bed_NEW:bed" "translate" " -type \"double3\" 1.66349489363332737 0.84825195245121132 4.43306141156903166"
 		
 		2 "|bed_NEW:bed" "rotate" " -type \"double3\" -0.58966568847342715 270 0"
@@ -31071,7 +26650,7 @@ createNode reference -n "bedroom_SET_latest1:windowRN";
 	rename -uid "EA42B2DC-9342-0E50-BB24-FF8CBAC86EAE";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:windowRN"
-		"windowRN" 24
+		"windowRN" 35
 		2 "|window:window|window:BACK_topLeft" "visibility" " 0"
 		2 "|window:window|window:BACK_topLeft|window:BACK_topLeftShape" "pt[0:11]" 
 		" -s 12 -type \"float3\" 1.1265771 6.40346339999999969 -0.34835133000000001 0.55352950000000001 6.40346339999999969 -0.23223419000000001 2.38561420000000002 5.01425840000000012 -0.53201133 1.47923709999999997 5.01425840000000012 -0.34835133000000001 2.0329537000000002 6.40346339999999969 -0.53201133 0.78298199000000002 7.75696039999999964 -0.34835133000000001 1.6893589 7.75696039999999964 -0.53201133 0.90618902000000001 5.01425840000000012 -0.23223419000000001 0.20993479000000001 7.75696039999999964 -0.23223419000000001 -0.029647432000000001 5.01425840000000012 -0.042604782000000001 -0.38230723 6.40346339999999969 -0.042604782000000001 -0.72590160000000004 7.75696039999999964 -0.042604782000000001"
@@ -31120,7 +26699,6 @@ createNode reference -n "bedroom_SET_latest1:windowRN";
 		
 		2 "|window:window|window:bottomLeft_GLASS|window:bottomLeft_GLASSShape" "aiTranslator" 
 		" -type \"string\" \"polymesh\""
-		"windowRN" 11
 		2 "|window:window" "visibility" " 1"
 		2 "|window:window" "translate" " -type \"double3\" 1.5807737213649371 -1.82942888153279837 6.06794848965704325"
 		
@@ -31455,7 +27033,6 @@ createNode reference -n "bedroom_SET_latest1:doorRN1";
 	rename -uid "42E1A01D-0F4F-D3C0-ED22-558A15E9E2FD";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:doorRN1"
-		"doorRN1" 0
 		"doorRN1" 85
 		2 "|door1:Door" "translate" " -type \"double3\" -3.40904978571199813 0.58373752966851344 -7.87027083657141002"
 		
@@ -31886,10 +27463,9 @@ createNode reference -n "bedroom_SET_latest1:rugRN";
 	rename -uid "4844E3B0-F04C-C1C6-AC01-FDBFD23D9F8F";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:rugRN"
-		"rugRN" 1
+		"rugRN" 8
 		2 "|rug:Rug|rug:RugShape" "aiTranslator" " -type \"string\" \"polymesh\""
 		
-		"rugRN" 7
 		2 "|rug:Rug" "translate" " -type \"double3\" -0.94043994503903883 -0.66895727491795787 -2.22682057833557989"
 		
 		2 "|rug:Rug" "rotate" " -type \"double3\" 0 -91.64259164118833212 0"
@@ -31910,7 +27486,6 @@ createNode reference -n "bedroom_SET_latest1:treeShelfRN";
 	rename -uid "3F295696-3E41-64B7-0DD5-D7A7709FF064";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:treeShelfRN"
-		"treeShelfRN" 0
 		"treeShelfRN" 4
 		0 "|treeShelf:treeShelf" "|TREE_SHELF" "-s -r "
 		2 "|TREE_SHELF|treeShelf:treeShelf" "translate" " -type \"double3\" 1.47846841498339154 2.54706527011831341 -6.83489556781993013"
@@ -31922,19 +27497,8 @@ lockNode -l 1 ;
 createNode reference -n "bedroom_SET_latest1:officeChairRN";
 	rename -uid "F0846EF2-FB4E-2258-EDCD-1EA3C995AD31";
 	setAttr -s 10 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:officeChairRN"
-		"officeChairRN" 0
 		"officeChairRN" 13
 		2 "|officeChair:officeChair" "translate" " -type \"double3\" -4.1840778314702094 -0.6220756114530448 -2.20366645002252248"
 		
@@ -31970,10 +27534,10 @@ createNode reference -n "bedroom_SET_latest1:nightstandRN";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
+	setAttr ".phl[4]" -type "TdataCompound" ;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:nightstandRN"
-		"nightstandRN" 31
+		"nightstandRN" 36
 		2 "nightstand:groupParts1" "inputComponents" " -type \"componentList\" 1 \"f[100:299]\""
 		
 		2 "nightstand:groupParts1" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:99]\""
@@ -31989,6 +27553,14 @@ createNode reference -n "bedroom_SET_latest1:nightstandRN";
 		2 "nightstand:groupParts3" "inputRemoveComponent" " -type \"componentList\" 1 \"f[0:99]\""
 		
 		2 "nightstand:groupParts3" "groupId" " 24"
+		2 "|nightstand:nightstand" "translate" " -type \"double3\" 2.97238178116652074 0.64952075884846949 -6.90892680511718638"
+		
+		2 "|nightstand:nightstand" "rotate" " -type \"double3\" 0 -270.00000000000022737 0"
+		
+		2 "|nightstand:nightstand" "scale" " -type \"double3\" 0.90210263361146825 1.05180913215869776 0.89626201130510286"
+		
+		2 "|nightstand:nightstand|nightstand:nightstand" "translate" " -type \"double3\" 0 0 0"
+		
 		3 "nightstand:groupId28.groupId" "nightstand:groupParts2.groupId" ""
 		3 "nightstand:groupId27.groupId" "|nightstand:nightstand|nightstand:handles|nightstand:polySurface1|nightstand:polySurfaceShape1.instObjGroups.objectGroups[0].objectGroupId" 
 		""
@@ -32030,15 +27602,6 @@ createNode reference -n "bedroom_SET_latest1:nightstandRN";
 		"bedroom_SET_latest1:nightstandRN.placeHolderList[2]" ""
 		5 3 "bedroom_SET_latest1:nightstandRN" "|nightstand:nightstand|nightstand:handles|nightstand:polySurface3|nightstand:polySurfaceShape3.instObjGroups" 
 		"bedroom_SET_latest1:nightstandRN.placeHolderList[3]" ""
-		"nightstandRN" 5
-		2 "|nightstand:nightstand" "translate" " -type \"double3\" 2.97238178116652074 0.64952075884846949 -6.90892680511718638"
-		
-		2 "|nightstand:nightstand" "rotate" " -type \"double3\" 0 -270.00000000000022737 0"
-		
-		2 "|nightstand:nightstand" "scale" " -type \"double3\" 0.90210263361146825 1.05180913215869776 0.89626201130510286"
-		
-		2 "|nightstand:nightstand|nightstand:nightstand" "translate" " -type \"double3\" 0 0 0"
-		
 		5 3 "bedroom_SET_latest1:nightstandRN" "|nightstand:nightstand|nightstand:nightstand|nightstand:nightstandShape.instObjGroups" 
 		"bedroom_SET_latest1:nightstandRN.placeHolderList[4]" "";
 	setAttr ".ptag" -type "string" "";
@@ -32047,7 +27610,6 @@ createNode reference -n "bedroom_SET_latest1:bookshelfRN";
 	rename -uid "40A3A086-D148-4078-2CD3-04891DF92C09";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:bookshelfRN"
-		"bookshelfRN" 0
 		"bookshelfRN" 3
 		0 "|bookshelf:bookshelf" "|BOOK_CABINET" "-s -r "
 		2 "|BOOK_CABINET|bookshelf:bookshelf" "translate" " -type \"double3\" -0.85040343446262368 -0.81862584060684185 -7.39332341763357981"
@@ -32319,7 +27881,7 @@ createNode reference -n "bedroom_SET_latest1:clockRN";
 	rename -uid "495175E7-9748-6773-0520-BA8A4A4CA18C";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:clockRN"
-		"clockRN" 23
+		"clockRN" 26
 		0 "|clock:group18" "|clock1" "-s -r "
 		0 "|clock:group17" "|clock1" "-s -r "
 		0 "|clock:group16" "|clock1" "-s -r "
@@ -32343,7 +27905,6 @@ createNode reference -n "bedroom_SET_latest1:clockRN";
 		0 "|clock:pCube1" "|clock1" "-s -r "
 		0 "|clock:pSphere1" "|clock1" "-s -r "
 		0 "|clock:pCylinder1" "|clock1" "-s -r "
-		"clockRN" 3
 		2 "|clock:clock" "translate" " -type \"double3\" 3.50709532039841321 4.17121322154358865 -2.4903835175101614"
 		
 		2 "|clock:clock" "rotate" " -type \"double3\" 0 -89.99999999999997158 0"
@@ -32352,10 +27913,9 @@ createNode reference -n "bedroom_SET_latest1:clockRN";
 lockNode -l 1 ;
 createNode reference -n "bedroom_SET_latest1:scarfRN";
 	rename -uid "826493A7-9749-D2ED-5AA5-2CBDEDB3C32C";
-	setAttr ".phl[1]" 0;
+	setAttr ".phl[1]" -type "TdataCompound" ;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:scarfRN"
-		"scarfRN" 0
 		"scarfRN" 7
 		2 "|scarf:scarf" "translate" " -type \"double3\" 2.03601755343053137 1.09957817199609398 2.73824704305344424"
 		
@@ -32463,7 +28023,6 @@ createNode reference -n "bedroom_SET_latest1:curtainsRN1";
 	rename -uid "B12C4A97-814E-D1FD-960E-0990440F4DC0";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:curtainsRN1"
-		"curtainsRN1" 0
 		"curtainsRN1" 9
 		2 "|curtains1:Curtains" "translate" " -type \"double3\" 0.94801846605734175 -1.20279806676425682 5.1298248479775399"
 		
@@ -32755,9 +28314,6 @@ createNode reference -n "bedroom_SET_latest1:boardgameRN";
 		2 "|boardgame:Board_Game" "scale" " -type \"double3\" 0.54053879767902036 0.52601307740809822 0.52601307740809822";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
-createNode polyCube -n "bedroom_SET_latest1:polyCube1";
-	rename -uid "FBFD587D-D942-3E79-E05A-BAB43D03F7FD";
-	setAttr ".cuv" 4;
 createNode reference -n "bedroom_SET_latest1:toyTrainRN";
 	rename -uid "7DB94424-0E45-1C3E-B10A-978AAC9E40D9";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -32883,9 +28439,6 @@ createNode shadingEngine -n "bedroom_SET_latest1:fox:initialShadingGroup";
 	setAttr ".ro" yes;
 createNode materialInfo -n "bedroom_SET_latest1:fox:materialInfo1";
 	rename -uid "B5735084-6949-7406-3464-B1A74A0A795A";
-createNode groupId -n "bedroom_SET_latest1:fox:groupId1";
-	rename -uid "C576D29D-F94B-361C-B37A-34AD377C7248";
-	setAttr ".ihi" 0;
 createNode lambert -n "bedroom_SET_latest1:fox:initialShadingGroup1";
 	rename -uid "E0C83875-404B-E67E-3ED8-9E81EB0FDC16";
 createNode shadingEngine -n "bedroom_SET_latest1:fatVase:initialShadingGroup";
@@ -32940,7 +28493,6 @@ createNode reference -n "bedroom_SET_latest1:moonDecorationRN";
 	rename -uid "0A87024F-9449-06A1-69C2-29BB134C2D15";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:moonDecorationRN"
-		"moonDecorationRN" 0
 		"moonDecorationRN" 3
 		2 "|moonDecoration:moon" "translate" " -type \"double3\" 3.54196143439377487 1.92538115288431921 1.4873438495878375"
 		
@@ -32952,7 +28504,6 @@ createNode reference -n "bedroom_SET_latest1:smallTrashCanRN";
 	rename -uid "37AAE4D5-FE4D-CFA8-7EDC-1F9567ACF8E3";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:smallTrashCanRN"
-		"smallTrashCanRN" 0
 		"smallTrashCanRN" 4
 		2 "|smallTrashCan:smallTrashCan" "translate" " -type \"double3\" -5.44486012921322438 -0.36841217567062956 1.97053706377940552"
 		
@@ -33005,7 +28556,6 @@ createNode reference -n "bedroom_SET_latest1:bookRN1";
 	rename -uid "9E759512-C249-E9D1-04D4-A6922D868DD0";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:bookRN1"
-		"bookRN1" 0
 		"bookRN1" 7
 		2 "|book27:book" "visibility" " 0"
 		2 "|book27:book" "translate" " -type \"double3\" 2.77212725917920144 1.36733022047444153 1.83142494400367051"
@@ -36042,28 +31592,27 @@ createNode reference -n "bedroom_SET_latest1:floor_walls_latestRN";
 	rename -uid "B3540287-8F4D-CF09-B328-A8A5CF8F415D";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:floor_walls_latestRN"
-		"floor_walls_latestRN" 0
 		"floor_walls_latestRN" 16
 		2 "|floor_walls_latest:Wall" "visibility" " -av 0"
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|rim_light|rim_lightShape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|moon_decor_light|moon_decor_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "floor_walls_latest:PxrSurface1SG.message" "|rim_light|rim_lightShape.message" 
 		0
@@ -36081,7 +31630,6 @@ createNode reference -n "bedroom_SET_latest1:deskLamp_latestRN";
 	rename -uid "FEA0A060-5040-4AC9-E267-B28C88548A7F";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:deskLamp_latestRN"
-		"deskLamp_latestRN" 0
 		"deskLamp_latestRN" 2
 		2 "|deskLamp_latest:Lamp" "translate" " -type \"double3\" -5.69964556597268857 1.6348163549663064 -1.70530726242772479"
 		
@@ -36093,8 +31641,6 @@ createNode reference -n "bedroom_SET_latest1:desk_latestRN";
 	setAttr ".fn[0]" -type "string" "/Users/abbycohn/Documents/GitHub/poweredup//assets/bedroomAssets/desk_latest.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:desk_latestRN"
-		"desk_latest:book_stackRN" 0
-		"desk_latestRN" 0
 		"desk_latest:book_stackRN" 1
 		2 "|desk_latest:Desk|desk_latest:book_stack:book_stack" "translate" " -type \"double3\" -5.29335630219552744 1.64513890040161148 0.67751552576161655"
 		
@@ -36114,7 +31660,6 @@ createNode reference -n "bedroom_SET_latest1:bookshelfRN1";
 	rename -uid "3E96E069-1449-23C9-92A8-42BE0F831737";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:bookshelfRN1"
-		"bookshelfRN1" 0
 		"bookshelfRN1" 5
 		0 "|bookshelf2:bookshelf" "|SMALL_CABINET" "-s -r "
 		2 "|SMALL_CABINET|bookshelf2:bookshelf" "translate" " -type \"double3\" -1.16923229198511125 -0.90746671271547186 4.84077669023019652"
@@ -36130,7 +31675,6 @@ createNode reference -n "bedroom_SET_latest1:boardGames_latestRN";
 	rename -uid "ABC4E772-BA4D-F4A8-91F3-04A03565E9A3";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:boardGames_latestRN"
-		"boardGames_latestRN" 0
 		"boardGames_latestRN" 1
 		0 "|boardGames_latest:BoardGames" "|BOOK_CABINET" "-s -r ";
 	setAttr ".ptag" -type "string" "";
@@ -36139,7 +31683,6 @@ createNode reference -n "bedroom_SET_latest1:houseSlippers_latestRN";
 	rename -uid "54003D24-1A4A-AC0B-F69C-F39C53FEC8B9";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:houseSlippers_latestRN"
-		"houseSlippers_latestRN" 0
 		"houseSlippers_latestRN" 1
 		0 "|houseSlippers_latest:slippers" "|SMALL_CABINET" "-s -r ";
 	setAttr ".ptag" -type "string" "";
@@ -36148,7 +31691,6 @@ createNode reference -n "bedroom_SET_latest1:bookStack_TREESHELFRN";
 	rename -uid "64EE0FB7-3542-C1E2-CB78-AF936BAFD600";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:bookStack_TREESHELFRN"
-		"bookStack_TREESHELFRN" 0
 		"bookStack_TREESHELFRN" 5
 		0 "|bookStack_TREESHELF:bookStack_TREE_SHELF" "|TREE_SHELF" "-s -r "
 		2 "|TREE_SHELF|bookStack_TREESHELF:bookStack_TREE_SHELF" "translate" " -type \"double3\" 0 0 0"
@@ -36164,18 +31706,16 @@ createNode reference -n "bedroom_SET_latest1:bookStack_LEFT_SHELFRN";
 	rename -uid "AA98417F-7B43-A305-05FB-F4961B6EA412";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:bookStack_LEFT_SHELFRN"
-		"bookStack_LEFT_SHELFRN" 2
+		"bookStack_LEFT_SHELFRN" 3
+		0 "|bookStack_LEFT_SHELF:bookStack_LEFT_SHELF" "|BOOK_CABINET" "-s -r "
 		2 "|bookStack_LEFT_SHELF:book_stack1" "visibility" " 1"
-		2 "|bookStack_LEFT_SHELF:book_stack:book_stack" "visibility" " 1"
-		"bookStack_LEFT_SHELFRN" 1
-		0 "|bookStack_LEFT_SHELF:bookStack_LEFT_SHELF" "|BOOK_CABINET" "-s -r ";
+		2 "|bookStack_LEFT_SHELF:book_stack:book_stack" "visibility" " 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "bedroom_SET_latest1:bookStack_RIGHT_SHELFRN";
 	rename -uid "CFC3A989-9C43-3979-27A4-2FB561F8710C";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:bookStack_RIGHT_SHELFRN"
-		"bookStack_RIGHT_SHELFRN" 0
 		"bookStack_RIGHT_SHELFRN" 1
 		0 "|bookStack_RIGHT_SHELF:bookstack_RIGHT_SHELF" "|SMALL_CABINET" "-s -r ";
 	setAttr ".ptag" -type "string" "";
@@ -36183,7 +31723,7 @@ lockNode -l 1 ;
 createNode reference -n "bedroom_SET_latest1:teacupRN";
 	rename -uid "41E48003-CB47-FBC1-1613-58AC1E214E09";
 	setAttr ".fn[0]" -type "string" "/Users/abbycohn/Documents/GitHub/poweredup//assets/teacup.ma";
-	setAttr -s 16 ".phl";
+	setAttr -s 17 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -36200,20 +31740,21 @@ createNode reference -n "bedroom_SET_latest1:teacupRN";
 	setAttr ".phl[14]" 0;
 	setAttr ".phl[15]" 0;
 	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:teacupRN"
 		"teacupRN" 0
-		"teacupRN" 35
+		"teacupRN" 36
 		0 "|teacupRNfosterParent1|..:teacup_parentConstraint1" "|teacup:teacup" "-s -r "
 		
 		1 |teacup:teacup "blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		
-		2 "|teacup:teacup" "translate" " -type \"double3\" -4.83499442579107974 2.22352280052294127 -0.62406791634521475"
+		2 "|teacup:teacup" "translate" " -type \"double3\" -5.32941334745013773 1.88630535994675741 -0.8308767445931835"
 		
 		2 "|teacup:teacup" "translateX" " -av"
 		2 "|teacup:teacup" "translateY" " -av"
 		2 "|teacup:teacup" "translateZ" " -av"
-		2 "|teacup:teacup" "rotate" " -type \"double3\" -12.05043259823919044 -50.4469444158639746 12.39369119859976287"
+		2 "|teacup:teacup" "rotate" " -type \"double3\" -42.5345939072189978 -81.31094462463674688 43.56170288912888111"
 		
 		2 "|teacup:teacup" "rotateX" " -av"
 		2 "|teacup:teacup" "rotateY" " -av"
@@ -36261,14 +31802,15 @@ createNode reference -n "bedroom_SET_latest1:teacupRN";
 		5 3 "bedroom_SET_latest1:teacupRN" "|teacup:teacup.rotatePivot" "bedroom_SET_latest1:teacupRN.placeHolderList[15]" 
 		""
 		5 3 "bedroom_SET_latest1:teacupRN" "|teacup:teacup.rotatePivotTranslate" 
-		"bedroom_SET_latest1:teacupRN.placeHolderList[16]" "";
+		"bedroom_SET_latest1:teacupRN.placeHolderList[16]" ""
+		5 4 "bedroom_SET_latest1:teacupRN" "|teacup:teacup.drawOverride" "bedroom_SET_latest1:teacupRN.placeHolderList[17]" 
+		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "bedroom_SET_latest1:backpackRN";
 	rename -uid "0ACE66E0-074E-0A9D-993D-2091AD7E3EF4";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:backpackRN"
-		"backpackRN" 0
 		"backpackRN" 3
 		2 "|backpack:backpack" "translate" " -type \"double3\" -0.015270399132350843 0 2.2321229159685001"
 		
@@ -36281,7 +31823,6 @@ createNode reference -n "bedroom_SET_latest1:CoffeeCupLatestRN";
 	rename -uid "6B3AE795-2648-7708-EA63-6581A29FF8A4";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:CoffeeCupLatestRN"
-		"CoffeeCupLatestRN" 0
 		"CoffeeCupLatestRN" 3
 		2 "|CoffeeCupLatest:CoffeCup" "translate" " -type \"double3\" -5.50241939188428564 -3.92319012484954044 1.94559439555074443"
 		
@@ -36294,7 +31835,6 @@ createNode reference -n "bedroom_SET_latest1:gameboyRN";
 	rename -uid "9DA19BFB-414D-03B1-2DE4-F1A66498D71F";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:gameboyRN"
-		"gameboyRN" 0
 		"gameboyRN" 4
 		0 "|gameboy:body" "|FLOOR_STUFF" "-s -r "
 		2 "|FLOOR_STUFF|gameboy:body" "translate" " -type \"double3\" 2.00552405267708878 0.21621952147228218 -7.80375514322867758"
@@ -36308,7 +31848,6 @@ createNode reference -n "bedroom_SET_latest1:golem_plushieRN";
 	rename -uid "5D39A04D-6B41-41C7-2E0F-24BC65E29AA8";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:golem_plushieRN"
-		"golem_plushieRN" 0
 		"golem_plushieRN" 3
 		2 "|golem_plushie:plushie" "translate" " -type \"double3\" 1.72639321751956398 1.51630942597518592 5.02098302005963415"
 		
@@ -36321,9 +31860,8 @@ createNode reference -n "bedroom_SET_latest1:macRN";
 	rename -uid "11924155-1948-EDC9-6C0C-1B844B6F7D54";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:macRN"
-		"macRN" 1
+		"macRN" 88
 		2 "|mac:PxrDomeLight" "visibility" " 0"
-		"macRN" 87
 		2 "|mac:base" "translate" " -type \"double3\" -5.17430333614271376 1.69652125937362919 -0.33089714399545528"
 		
 		2 "|mac:base" "rotate" " -type \"double3\" 0 89.99999999999992895 0"
@@ -36503,7 +32041,6 @@ createNode reference -n "bedroom_SET_latest1:musicboxRN";
 	rename -uid "63CCB2DA-4240-EC96-F613-D6803D49B5F2";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:musicboxRN"
-		"musicboxRN" 0
 		"musicboxRN" 8
 		0 "|musicbox:musicBox" "|BOOK_CABINET" "-s -r "
 		2 "|BOOK_CABINET|musicbox:musicBox" "translate" " -type \"double3\" -0.3725119779906616 2.0481761017033322 -7.39102423765988981"
@@ -36525,7 +32062,6 @@ createNode reference -n "bedroom_SET_latest1:phoneRN1";
 	rename -uid "96BFC9F7-964F-A7EB-71C6-B4B3E998F0EE";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:phoneRN1"
-		"phoneRN1" 0
 		"phoneRN1" 4
 		2 "|phone1:phone" "visibility" " 0"
 		2 "|phone1:phone" "translate" " -type \"double3\" -5.28356236359145726 1.7001514806292406 0.50919890695918901"
@@ -36539,7 +32075,6 @@ createNode reference -n "bedroom_SET_latest1:scarfRN1";
 	rename -uid "67378354-E04B-9912-61C2-0ABCCD2F17F0";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:scarfRN1"
-		"scarfRN1" 0
 		"scarfRN1" 4
 		0 "|scarf1:scarf" "|FLOOR_STUFF" "-s -r "
 		2 "|FLOOR_STUFF|scarf1:scarf" "translate" " -type \"double3\" -1.05877490113210859 -1.02205791843275406 -7.12450227372943523"
@@ -36553,7 +32088,6 @@ createNode reference -n "bedroom_SET_latest1:strewn_pantsRN";
 	rename -uid "F27D2620-7749-6181-FE7F-52AE10E50CB9";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:strewn_pantsRN"
-		"strewn_pantsRN" 0
 		"strewn_pantsRN" 4
 		0 "|strewn_pants:ZBrush_defualt_group" "|FLOOR_STUFF" "-s -r "
 		2 "|FLOOR_STUFF|strewn_pants:ZBrush_defualt_group" "translate" " -type \"double3\" 1.38115301637323062 9.92407889124343789 -6.73227580573508622"
@@ -36579,7 +32113,6 @@ createNode reference -n "bedroom_SET_latest1:toyTrainRN1";
 	rename -uid "BBF485EF-D74B-EF47-A65C-C283ED68FC3A";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:toyTrainRN1"
-		"toyTrainRN1" 0
 		"toyTrainRN1" 4
 		0 "|toyTrain:ToyTrain" "|SMALL_CABINET" "-s -r "
 		2 "|SMALL_CABINET|toyTrain:ToyTrain" "translate" " -type \"double3\" -1.14185946700210694 0.023811100893170511 3.01927226072240629"
@@ -36607,7 +32140,6 @@ createNode reference -n "bedroom_SET_latest1:beanbagRN";
 	rename -uid "886D54F1-A94D-A23D-D8E1-F7BCD390718E";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:beanbagRN"
-		"beanbagRN" 0
 		"beanbagRN" 1
 		0 "|beanbag1:beanbag" "|FLOOR_STUFF" "-s -r ";
 	setAttr ".ptag" -type "string" "";
@@ -36639,7 +32171,6 @@ createNode reference -n "bedroom_SET_latest1:poster1RN";
 	rename -uid "4B0E84A8-4246-2406-2D84-BEACB09425BE";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:poster1RN"
-		"poster1RN" 0
 		"poster1RN" 3
 		2 "|poster1:pPlane1" "translate" " -type \"double3\" 3.53752895248350674 3.28161135793211711 0.77867618299347185"
 		
@@ -36652,7 +32183,6 @@ createNode reference -n "bedroom_SET_latest1:poster2RN";
 	rename -uid "EA68EE6E-BC44-C2F3-A0D1-8D978D660BCE";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:poster2RN"
-		"poster2RN" 0
 		"poster2RN" 3
 		2 "|poster2:pPlane1" "translate" " -type \"double3\" 3.51615128267467858 3.30578451746943358 -0.34212544362855857"
 		
@@ -36665,7 +32195,7 @@ createNode reference -n "bedroom_SET_latest1:bedroom_light_rig:macRN";
 	rename -uid "7279E650-1E48-07BD-181D-BAAF53FDA548";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"bedroom_SET_latest1:bedroom_light_rig:macRN"
-		"macRN" 91
+		"macRN" 94
 		2 "|mac:PxrDomeLight" "visibility" " 1"
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "intensity" " 0.15000000596046448"
 		
@@ -36676,6 +32206,11 @@ createNode reference -n "bedroom_SET_latest1:bedroom_light_rig:macRN";
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "enableTemperature" " 1"
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "temperature" " 4500"
 		2 "|mac:PxrDomeLight|mac:PxrDomeLightShape" "color" " -type \"float3\" 0.53100002000000002 0.56334530999999999 1"
+		
+		2 "|mac:base" "translate" " -type \"double3\" -5.17430333614271376 1.69652125937362919 -0.33089714399545528"
+		
+		2 "|mac:base" "rotate" " -type \"double3\" 0 89.99999999999992895 0"
+		2 "|mac:base" "scale" " -type \"double3\" 0.829416218558509 0.14554945180466017 0.14554945180466017"
 		
 		7 "ignore" ":lightLinker1" 2 "|mac:base|mac:baseShape.message" "|:mac_light|:mac_lightShape.message" 
 		0
@@ -36844,12 +32379,7 @@ createNode reference -n "bedroom_SET_latest1:bedroom_light_rig:macRN";
 		7 "ignore" ":lightLinker1" 2 "|mac:base|mac:trackpad|mac:trackpadShape.message" "|:mac_light|:mac_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "mac:PxrSurface1SG.message" "|:mac_light|:mac_lightShape.message" 
-		0
-		"macRN" 3
-		2 "|mac:base" "translate" " -type \"double3\" -5.17430333614271376 1.69652125937362919 -0.33089714399545528"
-		
-		2 "|mac:base" "rotate" " -type \"double3\" 0 89.99999999999992895 0"
-		2 "|mac:base" "scale" " -type \"double3\" 0.829416218558509 0.14554945180466017 0.14554945180466017";
+		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode d_openexr -n "bedroom_SET_latest1:karen_latest:d_openexr";
@@ -57644,10 +53174,11 @@ createNode RenderMan -s -n "renderManGlobals";
 	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
 	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
 	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr -s 2 ".p";
 	setAttr ".nt" -type "string" "settings:job";
 createNode reference -n "comfy_mc_latest_realRN";
 	rename -uid "9838F5F2-4A4F-D46E-CE37-F0BA0EC974A4";
-	setAttr -s 387 ".phl";
+	setAttr -s 390 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -58035,10 +53566,13 @@ createNode reference -n "comfy_mc_latest_realRN";
 	setAttr ".phl[385]" 0;
 	setAttr ".phl[386]" 0;
 	setAttr ".phl[387]" 0;
+	setAttr ".phl[388]" 0;
+	setAttr ".phl[389]" 0;
+	setAttr ".phl[390]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"comfy_mc_latest_realRN"
 		"comfy_mc_latest_realRN" 0
-		"comfy_mc_latest_real:mc_rig_onlyRN" 8
+		"comfy_mc_latest_real:mc_rig_onlyRN" 12
 		2 "comfy_mc_latest_real:mc_rig_only:faceRig:L_eyeBlink" "w[0:1]" " -s 2 0 0"
 		
 		2 "comfy_mc_latest_real:mc_rig_only:faceRig:R_eyeBlink" "w[0:1]" " -s 2 0 0"
@@ -58055,7 +53589,15 @@ createNode reference -n "comfy_mc_latest_realRN";
 		
 		2 "comfy_mc_latest_real:mc_rig_only:faceRig:R_eyeBlink" "w[0:1]" " -s 2 1 0"
 		
-		"comfy_mc_latest_realRN" 60
+		2 "comfy_mc_latest_real:mc_rig_only:faceRig:L_eyeBlink" "w[0:1]" " -s 2 1 0"
+		
+		2 "comfy_mc_latest_real:mc_rig_only:faceRig:R_eyeBlink" "w[0:1]" " -s 2 1 0"
+		
+		2 "comfy_mc_latest_real:mc_rig_only:faceRig:L_eyeBlink" "w[0:1]" " -s 2 1 0"
+		
+		2 "comfy_mc_latest_real:mc_rig_only:faceRig:R_eyeBlink" "w[0:1]" " -s 2 1 0"
+		
+		"comfy_mc_latest_realRN" 61
 		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape" 
 		"instObjGroups.objectGroups" " -s 14"
 		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape" 
@@ -58115,75 +53657,78 @@ createNode reference -n "comfy_mc_latest_realRN";
 		""
 		3 "comfy_mc_latest_real:tweak1.vlist[0].vertex[0]" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.tweakLocation" 
 		""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[357]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[358]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1.drawOverride" 
 		"comfy_mc_latest_realRN.placeHolderList[359]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[360]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[361]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[362]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[363]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[364]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[365]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[366]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[29]" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[367]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[29].objectGroupId" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[368]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[29].objectGrpColor" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[369]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[30]" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[29]" 
 		"comfy_mc_latest_realRN.placeHolderList[370]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[30].objectGroupId" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[29].objectGroupId" 
 		"comfy_mc_latest_realRN.placeHolderList[371]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[30].objectGrpColor" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[29].objectGrpColor" 
 		"comfy_mc_latest_realRN.placeHolderList[372]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[31]" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[30]" 
 		"comfy_mc_latest_realRN.placeHolderList[373]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[31].objectGroupId" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[30].objectGroupId" 
 		"comfy_mc_latest_realRN.placeHolderList[374]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[31].objectGrpColor" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[30].objectGrpColor" 
 		"comfy_mc_latest_realRN.placeHolderList[375]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.inMesh" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[31]" 
 		"comfy_mc_latest_realRN.placeHolderList[376]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[31].objectGroupId" 
+		"comfy_mc_latest_realRN.placeHolderList[377]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[31].objectGrpColor" 
+		"comfy_mc_latest_realRN.placeHolderList[378]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.inMesh" 
+		"comfy_mc_latest_realRN.placeHolderList[379]" ""
 		5 0 "comfy_mc_latest_realRN" "comfy_mc_latest_real:tweak2.vlist[0].vertex[0]" 
 		"|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.tweakLocation" 
-		"comfy_mc_latest_realRN.placeHolderList[377]" "comfy_mc_latest_realRN.placeHolderList[378]" 
+		"comfy_mc_latest_realRN.placeHolderList[380]" "comfy_mc_latest_realRN.placeHolderList[381]" 
 		"comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.twl"
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[8]" 
-		"comfy_mc_latest_realRN.placeHolderList[379]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[8].objectGroupId" 
-		"comfy_mc_latest_realRN.placeHolderList[380]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[8].objectGrpColor" 
-		"comfy_mc_latest_realRN.placeHolderList[381]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[9]" 
 		"comfy_mc_latest_realRN.placeHolderList[382]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[9].objectGroupId" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[8].objectGroupId" 
 		"comfy_mc_latest_realRN.placeHolderList[383]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[9].objectGrpColor" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[8].objectGrpColor" 
 		"comfy_mc_latest_realRN.placeHolderList[384]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.inMesh" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[9]" 
 		"comfy_mc_latest_realRN.placeHolderList[385]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[9].objectGroupId" 
+		"comfy_mc_latest_realRN.placeHolderList[386]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[9].objectGrpColor" 
+		"comfy_mc_latest_realRN.placeHolderList[387]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.inMesh" 
+		"comfy_mc_latest_realRN.placeHolderList[388]" ""
 		5 3 "comfy_mc_latest_realRN" "comfy_mc_latest_real:skinCluster1.outputGeometry[0]" 
-		"comfy_mc_latest_realRN.placeHolderList[386]" "comfy_mc_latest_real:comfy_mc_latest3:bodyShape.i"
+		"comfy_mc_latest_realRN.placeHolderList[389]" "comfy_mc_latest_real:comfy_mc_latest3:bodyShape.i"
 		
 		5 3 "comfy_mc_latest_realRN" "comfy_mc_latest_real:wrap7.outputGeometry[0]" 
-		"comfy_mc_latest_realRN.placeHolderList[387]" "comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.i"
+		"comfy_mc_latest_realRN.placeHolderList[390]" "comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.i"
 		
-		"comfy_mc_latest_real:mc_rig_onlyRN" 661
+		"comfy_mc_latest_real:mc_rig_onlyRN" 666
 		0 "|comfy_mc_latest_realRNfosterParent1|neck_ctrl" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42" 
 		"-s -r "
 		1 |comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl 
 		"blendPoint1" "blendPoint1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		2 "|comfy_mc_latest_real:mc_rig_only:main_chara" "visibility" " 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control" 
@@ -58198,9 +53743,9 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control" 
 		"rotate" " -type \"double3\" 0 -89.75135480513860387 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control" 
-		"rotateY" " -av"
-		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control" 
 		"rotateX" " -av"
+		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control" 
+		"rotateY" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control" 
@@ -58219,7 +53764,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:spine_ikfk_switch" 
 		"ik" " -k 1 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector" 
-		"translate" " -type \"double3\" -0.92760917296169465 0.70011482026658889 -0.0040255497601701514"
+		"translate" " -type \"double3\" -0.92760917296169421 0.34087062180256616 -0.0040255497601701488"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector" 
 		"translateX" " -av"
@@ -58228,8 +53773,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector" 
 		"translateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:l_arm_pole_vector" 
-		"translate" " -type \"double3\" 1.66529037656510082 0.73745361709002288 0.0072268682451613791"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:l_arm_pole_vector" 
 		"translateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:l_arm_pole_vector" 
@@ -58247,7 +53791,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl" 
 		"translateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl" 
-		"rotate" " -type \"double3\" 8.91242017283361498 -0.16329180946064506 -0.025672813362488112"
+		"rotate" " -type \"double3\" 8.95107037455908561 -4.32654103626022568 -0.68022077099846379"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl" 
 		"rotateX" " -av"
@@ -58264,7 +53808,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl" 
 		"scaleZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL" 
-		"translate" " -type \"double3\" -0.01885677007881692 -0.27056925082671612 0.0033166432507710075"
+		"translate" " -type \"double3\" -0.073422031534811166 -0.44021957932704037 0.013548483902580321"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL" 
 		"translateX" " -av"
@@ -58275,12 +53819,16 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL|comfy_mc_latest_real:mc_rig_only:nurbsCircle15" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL|comfy_mc_latest_real:mc_rig_only:nurbsCircle13" 
-		"rotate" " -type \"double3\" -1.07311963920752262 0.16726003428465569 0.50274114847338036"
+		"rotate" " -type \"double3\" -1.07311963920752262 0.16726003428465569 0.50274114847338047"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null3|comfy_mc_latest_real:mc_rig_only:teeth_v1_latest:Teeth|comfy_mc_latest_real:mc_rig_only:topTeeth_rotateBuffer|comfy_mc_latest_real:mc_rig_only:teeth_v1_latest:TopCont1" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null3|comfy_mc_latest_real:mc_rig_only:teeth_v1_latest:Teeth|comfy_mc_latest_real:mc_rig_only:bottomTeeth_rotateBuffer|comfy_mc_latest_real:mc_rig_only:teeth_v1_latest:BottomCont1" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null1|comfy_mc_latest_real:mc_rig_only:l_eyeball" 
+		"visibility" " 1"
+		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball" 
+		"visibility" " 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1" 
@@ -58294,7 +53842,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1" 
 		"rotateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1" 
-		"translate" " -type \"double3\" -0.13649948100904835 -0.011680159986249786 -0.00059057990373628105"
+		"translate" " -type \"double3\" -0.13689563863090207 -0.022913964016828908 -0.00059057990373612525"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1" 
 		"translateY" " -av"
@@ -58417,7 +53965,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1" 
-		"rotate" " -type \"double3\" 0 0 0.30313226456786269"
+		"rotate" " -type \"double3\" 0 0 0.91667196805321738"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog|comfy_mc_latest_real:mc_rig_only:spine1|comfy_mc_latest_real:mc_rig_only:spine2|comfy_mc_latest_real:mc_rig_only:spine3|comfy_mc_latest_real:mc_rig_only:chest|comfy_mc_latest_real:mc_rig_only:r_shoulder|comfy_mc_latest_real:mc_rig_only:r_arm|comfy_mc_latest_real:mc_rig_only:r_elbow|comfy_mc_latest_real:mc_rig_only:r_wrist|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky2|comfy_mc_latest_real:mc_rig_only:r_pinky3" 
@@ -58438,7 +53986,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
-		"translate" " -type \"double3\" 0.56829217134244769 1.42761078763642169 0.29867683372997267"
+		"translate" " -type \"double3\" 0.15107968399945285 0.41961515737188804 -0.27789731467955359"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"translateX" " -av"
@@ -58447,7 +53995,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"translateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
-		"rotate" " -type \"double3\" -1.80219385619321693 15.83524366716067 68.71445146975756302"
+		"rotate" " -type \"double3\" -5.12130594491946667 12.45562372761798287 35.77578828922440835"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"rotateX" " -av"
@@ -58543,13 +54091,13 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2" 
-		"rotate" " -type \"double3\" 0 0 7.78713482509736377"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl" 
-		"translate" " -type \"double3\" -0.69828733833944223 2.23296626587524649 1.21755496655628104"
+		"translate" " -type \"double3\" -0.0059218281295360404 1.6037891652299332 1.36456941807283094"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"translateX" " -av"
@@ -58558,7 +54106,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"translateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl" 
-		"rotate" " -type \"double3\" -321.40705837480300033 -113.51657769965774492 220.31364842374236446"
+		"rotate" " -type \"double3\" -87.33320813225785173 -16.37048382242526756 66.56237445406679853"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"rotateX" " -av"
@@ -58595,7 +54143,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2" 
 		"rotateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:spine_ik_handle" 
-		"translate" " -type \"double3\" -0.010181269347195876 7.54994477127981423 -0.15714153100119965"
+		"translate" " -type \"double3\" -0.010012252138418276 7.51120830493807734 -0.15714153100120165"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:spine_ik_handle" 
 		"rotate" " -type \"double3\" 180 0 91.10410120844767334"
@@ -58609,7 +54157,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl" 
 		"translateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl" 
-		"scale" " -type \"double3\" 1.00001014752283113 1.00001014752283113 1.00001014752283113"
+		"scale" " -type \"double3\" 1.00033251402812762 1.00033251402812762 1.00033251402812762"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl" 
 		"scaleX" " -av"
@@ -58622,7 +54170,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 -0.082417376514641455 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1" 
@@ -58650,7 +54198,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2" 
-		"translate" " -type \"double3\" 0 -0.082417376514641455 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2" 
 		"translateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2" 
@@ -58692,7 +54240,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7" 
-		"translate" " -type \"double3\" -0.027785338940611418 -0.12004057115663434 0"
+		"translate" " -type \"double3\" 0 -0.0053206192300869759 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7" 
 		"translateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7" 
@@ -58756,23 +54304,23 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle11" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12" 
-		"translate" " -type \"double3\" 0 -0.087737995744730207 0"
+		"translate" " -type \"double3\" 0 -0.0053206192300869759 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12" 
 		"translateY" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4" 
-		"translate" " -type \"double3\" 0 -0.021800457809473716 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4" 
 		"translateY" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5" 
-		"translate" " -type \"double3\" 0 -0.01308027468568441 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5" 
 		"translateY" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7" 
-		"translate" " -type \"double3\" 0 -0.01308027468568441 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7" 
 		"translateY" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6" 
-		"translate" " -type \"double3\" 0 -0.020347093955509276 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6" 
 		"translateY" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:mouth3" 
@@ -58817,19 +54365,19 @@ createNode reference -n "comfy_mc_latest_realRN";
 		"comfy_mc_latest_realRN.placeHolderList[2]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[3]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[4]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[5]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[6]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[7]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[8]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[9]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[10]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[11]" ""
@@ -58911,621 +54459,625 @@ createNode reference -n "comfy_mc_latest_realRN";
 		"comfy_mc_latest_realRN.placeHolderList[49]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[50]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null1|comfy_mc_latest_real:mc_rig_only:l_eyeball.drawOverride" 
 		"comfy_mc_latest_realRN.placeHolderList[51]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball.drawOverride" 
 		"comfy_mc_latest_realRN.placeHolderList[52]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[53]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[54]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[55]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[56]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[57]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[58]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[59]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[60]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[61]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[62]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[63]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[64]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[65]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[66]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[67]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[68]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[69]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[70]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[71]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[72]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[73]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[74]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[75]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[76]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[77]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[78]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[79]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[80]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[81]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[82]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[83]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[84]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[85]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[86]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[87]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[88]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[89]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[90]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[91]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[92]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[93]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[94]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[95]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[96]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[97]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[98]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[99]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[100]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[101]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[102]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[103]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[104]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[105]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[106]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[107]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[108]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[109]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[110]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[111]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[112]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[113]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotate" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[114]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_1.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[115]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateY" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotate" 
 		"comfy_mc_latest_realRN.placeHolderList[116]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[117]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateOrder" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[118]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.parentMatrix" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[119]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.visibility" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateOrder" 
 		"comfy_mc_latest_realRN.placeHolderList[120]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translate" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.parentMatrix" 
 		"comfy_mc_latest_realRN.placeHolderList[121]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[122]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translateY" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translate" 
 		"comfy_mc_latest_realRN.placeHolderList[123]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[124]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scale" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[125]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[126]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scaleY" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scale" 
 		"comfy_mc_latest_realRN.placeHolderList[127]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[128]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotatePivot" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[129]" ""
-		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotatePivotTranslate" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[130]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.rotateX" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotatePivot" 
 		"comfy_mc_latest_realRN.placeHolderList[131]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.rotateY" 
+		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotatePivotTranslate" 
 		"comfy_mc_latest_realRN.placeHolderList[132]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[133]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[134]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[135]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[136]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[137]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[138]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[139]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[140]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[141]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[142]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[143]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[144]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[145]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[146]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[147]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[148]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[149]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[150]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[151]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[152]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[153]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[154]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[155]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[156]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[157]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[158]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[159]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[160]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[161]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[162]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[163]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[164]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[165]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[166]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[167]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[168]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[169]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[170]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[171]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_index|comfy_mc_latest_real:mc_rig_only:r_index_2|comfy_mc_latest_real:mc_rig_only:r_index_3.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[172]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[173]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[174]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[175]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[176]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[177]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[178]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[179]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[180]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[181]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[182]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[183]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[184]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[185]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[186]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[187]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[188]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[189]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[190]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[191]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[192]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[193]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[194]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[195]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[196]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[197]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[198]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[199]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[200]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[201]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_middle|comfy_mc_latest_real:mc_rig_only:r_middle_2|comfy_mc_latest_real:mc_rig_only:r_middle_3.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[202]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[203]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[204]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[205]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[206]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[207]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[208]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[209]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[210]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[211]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[212]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[213]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[214]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[215]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[216]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[217]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[218]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[219]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[220]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[221]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[222]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[223]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[224]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[225]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[226]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[227]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[228]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[229]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[230]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[231]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[232]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[233]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[234]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[235]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[236]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[237]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[238]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_index|comfy_mc_latest_real:mc_rig_only:l_index_2.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[239]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[240]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[241]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[242]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[243]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[244]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[245]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_middle|comfy_mc_latest_real:mc_rig_only:l_middle_2.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[246]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[247]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[248]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[249]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[250]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[251]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[252]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_ring|comfy_mc_latest_real:mc_rig_only:l_ring_2.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[253]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[254]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[255]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[256]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[257]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[258]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[259]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:l_pinky|comfy_mc_latest_real:mc_rig_only:l_pinky_2.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[260]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[261]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[262]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[263]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[264]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[265]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[266]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[267]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[268]" ""
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.blendPoint1" 
-		"comfy_mc_latest_realRN.placeHolderList[269]" ""
+		"comfy_mc_latest_realRN.placeHolderList[267]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.blendPoint1" 
+		"comfy_mc_latest_realRN.placeHolderList[268]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.rotateX" 
+		"comfy_mc_latest_realRN.placeHolderList[269]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[270]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.rotateZ" 
+		"comfy_mc_latest_realRN.placeHolderList[271]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.visibility" 
+		"comfy_mc_latest_realRN.placeHolderList[272]" ""
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateX" 
-		"comfy_mc_latest_realRN.placeHolderList[271]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.tx"
+		"comfy_mc_latest_realRN.placeHolderList[273]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.tx"
 		
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateY" 
-		"comfy_mc_latest_realRN.placeHolderList[272]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.ty"
+		"comfy_mc_latest_realRN.placeHolderList[274]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.ty"
 		
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[273]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.tz"
+		"comfy_mc_latest_realRN.placeHolderList[275]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.tz"
 		
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.Blink" 
-		"comfy_mc_latest_realRN.placeHolderList[274]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[275]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[276]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[277]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[278]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[279]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[280]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[281]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[282]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[283]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[284]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[285]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[286]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[287]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[288]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[289]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[290]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[291]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[292]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[293]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[294]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.Blink" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[295]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[296]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.Blink" 
 		"comfy_mc_latest_realRN.placeHolderList[297]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[298]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[299]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[300]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[301]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[302]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[303]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[304]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[305]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[306]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[307]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[308]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[309]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[310]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[311]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[312]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[313]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[314]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[315]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[316]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[317]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[318]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[319]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[320]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[321]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[322]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[323]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[324]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[325]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[326]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[327]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[328]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[329]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[330]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[331]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[332]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[333]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[334]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[335]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[336]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[337]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[338]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[339]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[340]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[341]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[342]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[343]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[344]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[345]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.translateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.scaleZ" 
 		"comfy_mc_latest_realRN.placeHolderList[346]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.translateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.visibility" 
 		"comfy_mc_latest_realRN.placeHolderList[347]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.translateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.translateX" 
 		"comfy_mc_latest_realRN.placeHolderList[348]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.rotateX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.translateY" 
 		"comfy_mc_latest_realRN.placeHolderList[349]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.rotateY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.translateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[350]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.rotateZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.rotateX" 
 		"comfy_mc_latest_realRN.placeHolderList[351]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.scaleX" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.rotateY" 
 		"comfy_mc_latest_realRN.placeHolderList[352]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.scaleY" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.rotateZ" 
 		"comfy_mc_latest_realRN.placeHolderList[353]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.scaleZ" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.scaleX" 
 		"comfy_mc_latest_realRN.placeHolderList[354]" ""
-		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.visibility" 
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.scaleY" 
 		"comfy_mc_latest_realRN.placeHolderList[355]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.scaleZ" 
+		"comfy_mc_latest_realRN.placeHolderList[356]" ""
+		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.visibility" 
+		"comfy_mc_latest_realRN.placeHolderList[357]" ""
 		5 4 "comfy_mc_latest_realRN" "comfy_mc_latest_real:mc_rig_only:faceRig:blendShape4.envelope" 
-		"comfy_mc_latest_realRN.placeHolderList[356]" "";
+		"comfy_mc_latest_realRN.placeHolderList[358]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTA -n "l_knee_fk_ctrl_rotateX";
@@ -59694,7 +55246,7 @@ createNode animCurveTA -n "r_leg_fk_ctrl_rotateY";
 	rename -uid "F6D41187-A447-1BF2-CDD1-B695DB5EFAC3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -50 0 -35 -0.8654204069127529 -20 0 1 0;
+	setAttr -s 4 ".ktv[0:3]"  -50 0 -35 -0.86542040691275302 -20 0 1 0;
 	setAttr -s 4 ".kit[2:3]"  1 18;
 	setAttr -s 4 ".kot[2:3]"  1 18;
 	setAttr -s 4 ".kix[2:3]"  1 1;
@@ -59749,7 +55301,7 @@ createNode animCurveTA -n "l_leg_fk_ctrl_rotateX";
 	rename -uid "DA41307D-E645-56C0-3FE7-0D8014287CD2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  -50 -11.271317865252819 -35 16.969341926394414
+	setAttr -s 4 ".ktv[0:3]"  -50 -11.27131786525282 -35 16.969341926394414
 		 -17 -27.466827584346877 1 -81.362626422364073;
 	setAttr -s 4 ".kit[2:3]"  1 18;
 	setAttr -s 4 ".kot[2:3]"  1 18;
@@ -59868,60 +55420,59 @@ createNode blendShape -n "sweater_correct";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".w[0]"  1;
 	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 891 0 0 0 1 0 0 0 1 0
-		 0 0 1 0 0 0 1 0 0 -0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 -0 0 1 0
-		 0 0 1 0 -0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 -0 0 1 0 -0 0 1 -7.5741479910877714e-06
-		 -1.7503789885498729e-05 -5.8965280363797501e-06 1 -4.8151561922714685e-06 -1.1099630478590561e-05
-		 -1.2317861528547556e-05 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 -0 0 1 0 0 0
-		 1 0 0 0 1 -0.00092347537676524985 -0.00031211964411250744 0.00025486977508686856
-		 1 0 0 0 1 -0.14615389439308335 0.010055941070337471 0.056255758516770463 1 -0.062557128784736959
-		 0.013562414526877413 -0.01883928402371747 1 -0.081441343750119854 0.01683739999418131
-		 0.017829619211951399 1 -0 0 0 1 -0 0 0 1 0 0 0 1 0 -0 0 1 0 -0 0 1 0 0 0 1 -0.092564856246971902
-		 0.027829357237346381 -0.021637778029003133 1 -0.15578069677048736 0.00522963932597224
-		 0.034774609884432567 1 -0.016034947927905902 -0.0019202824911865209 0.071415717696136902
-		 1 -0.041224675700389804 0.058158835167335596 0.025082431883769983 1 -0.032299960475744398
-		 0.065198961021587329 -0.0041080695304459951 1 0.011916361335278911 0.021974430516227821
-		 -0.005429356737126508 1 -0.025432689262334589 0.04535510816232969 -0.0054582773433837963
-		 1 -0.018075399811321162 0.043408689734869263 -0.010453211499538291 1 -0.032354261844673868
-		 0.038384311264104069 0.0083263200638525707 1 1.0057065734445311e-06 3.961629202913017e-06
-		 9.0561532097167209e-07 1 -0 0 0 1 0 0 0 1 0 0 0 1 0.003391052139032659 0.047429796295613953
-		 -0.020205893502528556 1 -0.024906801958246592 -0.074126750782228787 0.045193607580689792
-		 1 -0.066295271982136847 0.05064964979037425 -0.0083582845315232808 1 -0.064277747547473188
-		 0.00069494427924536193 0.03463809599740017 1 -0.090096006969252768 0.013450157297037402
-		 0.035890175214418646 1 0.01270790433466097 0.00075647146241270479 -0.019695748509371558
-		 1 -0.026471637115111146 0.0041059592607483476 -0.00096955994311759101 1 -0.092612289662561534
-		 0.010982705846373498 -0.0050672069843571699 1 -0.0068275178747992712 0.0021132797849326107
-		 -0.0039567852429143596 1 -0.082211754024455769 0.037101210552132322 0.0014208085513922539
-		 1 -0 0 0 1 -0 0 0 1 0 0 0 1 0 -0 0 1 0 -0 0 1 -0.048123503563264711 0.0030183611916649571
-		 -0.02573850316087458 1 -0.020998622442072942 0.0092242530593001984 0.0756406899953736
-		 1 -0.062808513728500701 0.03728811361552524 -0.0029740377564993099 1 0.00011764732983460431
-		 -0.0077488460613748342 0.021643071399493015 1 -0.010567234960153302 0.045409450825777103
-		 0.00014617249088574782 1 -0.00012681117616973091 5.7858934548620118e-05 3.9462664063108182e-05
-		 1 -0.0037767742021606555 0.0012320500965069048 0.00012070166318438151 1 -0.015900897441971769
-		 0.039268366394729914 -0.0064898673046180425 1 -0 0 0 1 -0.0068789269027082628 0.020243959664486819
-		 0.012860423170380365 1 -6.2761321752324034e-05 8.1128882338363204e-06 -3.8111455242174708e-06
-		 1 0 0 0 1 0 0 0 1 0 0 0 1 -0 0 0 1 -0.023862143732158232 0.013051203761659465 -0.012102892634910972
-		 1 -0.029282285019616369 0.0088210932188397331 0.0086760183219367192 1 -0.0088173266419165827
-		 0.0025929084255153605 0.017635908654753434 1 0.022886104157586552 0.01726801732818423
-		 0.051299863519322197 1 0.024824279592036945 -0.00076522773633310587 0.055774170732756305
-		 1 0.015729051936473448 0.014068886747143371 0.075397050307464186 1 0.02144335886933537
-		 0.011419030616573881 0.048510377280337171 1 0.020410684370203346 -0.014141803803524448
-		 0.037966812302915993 1 0.0026971106305866844 -2.0317523526813645e-05 0.020734512677472252
-		 1 0.020633432225363811 0.016830739340316481 0.03586310842663934 1 0.00014589229581943769
-		 0.00012834729119198267 0.00025565985301065515 1 0 0 0 1 0 0 -0 1 0.0027474746683000106
-		 -0.022873517306321964 0.045068021597388777 1 0.0043534054842677139 0.050506191769162295
-		 0.03602715210789427 1 0.028287128233005741 0.031220241692114976 0.045688960276741242
-		 1 -0.007792518872654166 0.0045952544718435902 0.037200716089679453 1 -0.00765761892700032
-		 -0.011488365576479309 -0.0057592664509971961 1 0.031981897443354189 -0.024252528539652537
-		 0.041722065459128259 1 -0.0041570167844846347 -0.06677813593918705 -0.016626207804170887
-		 1 -0.0037525569066928135 0.056248224017796215 0.0057359716969208538 1 -0.05082448155003793
-		 0.0049140360350139823 0.0022210943048692291 1 -0.019930988753710396 0.015736517582736306
-		 0.013155542677534014 1 0.0099880777245010214 0.0026395565492414821 0.051820812868378578
-		 1 -8.3814921530057267e-05 4.8299128152849721e-05 -6.9772567660963302e-05 1 0 -0 0
-		 1 -0 0 0 1 0 0 0 1 -4.020919869467691e-05 -3.7279530951222367e-05 8.1060144677941732e-05
-		 1 -4.2677712952125002e-05 1.5733443117757399e-05 0.0001004662971958784 1 0 0 0 1 0
-		 -0 0 1 0 0 0 1 0.00020572583221337897 -0.001252560343575504 0.0010171271311924424
+		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0
+		 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -7.5741479910877714e-06 -1.7503789885498729e-05
+		 -5.8965280363797501e-06 1 -4.8151561922714685e-06 -1.1099630478590561e-05 -1.2317861528547556e-05
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.00092347537676524985
+		 -0.00031211964411250744 0.00025486977508686856 1 0 0 0 1 -0.14615389439308335 0.010055941070337471
+		 0.056255758516770463 1 -0.062557128784736959 0.013562414526877413 -0.01883928402371747
+		 1 -0.081441343750119854 0.01683739999418131 0.017829619211951399 1 0 0 0 1 0 0 0
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.092564856246971902 0.027829357237346381 -0.021637778029003133
+		 1 -0.15578069677048736 0.00522963932597224 0.034774609884432567 1 -0.016034947927905902
+		 -0.0019202824911865209 0.071415717696136902 1 -0.041224675700389804 0.058158835167335596
+		 0.025082431883769983 1 -0.032299960475744398 0.065198961021587329 -0.0041080695304459951
+		 1 0.011916361335278911 0.021974430516227821 -0.005429356737126508 1 -0.025432689262334589
+		 0.04535510816232969 -0.0054582773433837963 1 -0.018075399811321162 0.043408689734869263
+		 -0.010453211499538291 1 -0.032354261844673868 0.038384311264104069 0.0083263200638525707
+		 1 1.0057065734445311e-06 3.961629202913017e-06 9.0561532097167209e-07 1 0 0 0 1 0
+		 0 0 1 0 0 0 1 0.003391052139032659 0.047429796295613953 -0.020205893502528556 1 -0.024906801958246592
+		 -0.074126750782228787 0.045193607580689792 1 -0.066295271982136847 0.05064964979037425
+		 -0.0083582845315232808 1 -0.064277747547473188 0.00069494427924536193 0.03463809599740017
+		 1 -0.090096006969252768 0.013450157297037402 0.035890175214418646 1 0.01270790433466097
+		 0.00075647146241270479 -0.019695748509371558 1 -0.026471637115111146 0.0041059592607483476
+		 -0.00096955994311759101 1 -0.092612289662561534 0.010982705846373498 -0.0050672069843571699
+		 1 -0.0068275178747992712 0.0021132797849326107 -0.0039567852429143596 1 -0.082211754024455769
+		 0.037101210552132322 0.0014208085513922539 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0
+		 0 1 -0.048123503563264711 0.0030183611916649571 -0.02573850316087458 1 -0.020998622442072942
+		 0.0092242530593001984 0.0756406899953736 1 -0.062808513728500701 0.03728811361552524
+		 -0.0029740377564993099 1 0.00011764732983460431 -0.0077488460613748342 0.021643071399493015
+		 1 -0.010567234960153302 0.045409450825777103 0.00014617249088574782 1 -0.00012681117616973091
+		 5.7858934548620118e-05 3.9462664063108182e-05 1 -0.0037767742021606555 0.0012320500965069048
+		 0.00012070166318438151 1 -0.015900897441971769 0.039268366394729914 -0.0064898673046180425
+		 1 0 0 0 1 -0.0068789269027082628 0.020243959664486819 0.012860423170380365 1 -6.2761321752324034e-05
+		 8.1128882338363204e-06 -3.8111455242174708e-06 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.023862143732158232
+		 0.013051203761659465 -0.012102892634910972 1 -0.029282285019616369 0.0088210932188397331
+		 0.0086760183219367192 1 -0.0088173266419165827 0.0025929084255153605 0.017635908654753434
+		 1 0.022886104157586552 0.01726801732818423 0.051299863519322197 1 0.024824279592036945
+		 -0.00076522773633310587 0.055774170732756305 1 0.015729051936473448 0.014068886747143371
+		 0.075397050307464186 1 0.02144335886933537 0.011419030616573881 0.048510377280337171
+		 1 0.020410684370203346 -0.014141803803524448 0.037966812302915993 1 0.0026971106305866844
+		 -2.0317523526813645e-05 0.020734512677472252 1 0.020633432225363811 0.016830739340316481
+		 0.03586310842663934 1 0.00014589229581943769 0.00012834729119198267 0.00025565985301065515
+		 1 0 0 0 1 0 0 0 1 0.0027474746683000106 -0.022873517306321964 0.045068021597388777
+		 1 0.0043534054842677139 0.050506191769162295 0.03602715210789427 1 0.028287128233005741
+		 0.031220241692114976 0.045688960276741242 1 -0.007792518872654166 0.0045952544718435902
+		 0.037200716089679453 1 -0.00765761892700032 -0.011488365576479309 -0.0057592664509971961
+		 1 0.031981897443354189 -0.024252528539652537 0.041722065459128259 1 -0.0041570167844846347
+		 -0.06677813593918705 -0.016626207804170887 1 -0.0037525569066928135 0.056248224017796215
+		 0.0057359716969208538 1 -0.05082448155003793 0.0049140360350139823 0.0022210943048692291
+		 1 -0.019930988753710396 0.015736517582736306 0.013155542677534014 1 0.0099880777245010214
+		 0.0026395565492414821 0.051820812868378578 1 -8.3814921530057267e-05 4.8299128152849721e-05
+		 -6.9772567660963302e-05 1 0 0 0 1 0 0 0 1 0 0 0 1 -4.020919869467691e-05 -3.7279530951222367e-05
+		 8.1060144677941732e-05 1 -4.2677712952125002e-05 1.5733443117757399e-05 0.0001004662971958784
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 0.00020572583221337897 -0.001252560343575504 0.0010171271311924424
 		 1 0.0011700850568487119 0.0011963040333098963 0.0012059959061059703 1 0 0 0 1 0 0
-		 0 1 0 0 -0 1 -0.0032590225839585129 0.010709988982828614 -0.016558718711010331 1 -0.014256072530193308
+		 0 1 0 0 0 1 -0.0032590225839585129 0.010709988982828614 -0.016558718711010331 1 -0.014256072530193308
 		 -0.011368543095355932 -0.034881950028661374 1 -0.034237762544641656 -0.033139344660526461
 		 -0.0088662642124060081 1 -0.033740104243932693 -0.021932334353383119 0.011072582151700334
 		 1 -0.0094459911706389309 0.0038313388274244069 0.0012436992353313981 1 -0.040274675671420498
@@ -59945,7 +55496,7 @@ createNode blendShape -n "sweater_correct";
 		 0.06158112840588692 0.0047633725175396267 1 0.0084545258226296233 0.0018960362064021075
 		 -0.0032664934779815112 1 0.060816000829772988 0.052831275510137735 -0.012391728656060873
 		 1 -0.011260577625703629 0.068147182617220678 0.050534857415599731 1 0.0045003660406422496
-		 -0.00081197334460770924 -0.0040403575865997788 1 0 0 0 1 0 0 0 1 0 -0 0 1 0.0017382813689799442
+		 -0.00081197334460770924 -0.0040403575865997788 1 0 0 0 1 0 0 0 1 0 0 0 1 0.0017382813689799442
 		 0.0022057026769670635 -0.00069022249911721088 1 0 0 0 1 -0.012779534691461984 -0.0044809033597670708
 		 0.0032986282419475866 1 0 0 0 1 -0.13775545784046628 0.080063983423673629 0.010207662623194995
 		 1 -0.17265019028736545 -0.0076405990552050468 -0.089959665730537 1 -0.21313578841989261
@@ -59998,8 +55549,8 @@ createNode blendShape -n "sweater_correct";
 		 1 -0.0010173928068968185 0.00038834320750039678 -0.00066279253789057317 1 0 0 0 1 0
 		 0 0 1 0 0 0 1 0 0 0 1 -0.00044251974247920062 0.0001140512623420379 0.00059906771525267306
 		 1 -4.4994412918750573e-05 2.2535062992801046e-05 1.6941693459645398e-05 1 0 0 0 1 0
-		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 -0 0 1 0 0 0 1 0
-		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 -0 1 0 0 0 1 0 0 0 1 -0.0031154976440384012
+		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0
+		 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.0031154976440384012
 		 0.0012121283904683352 -0.00075070197388651721 1 0.0003001809669070266 0.0013886463519819296
 		 -0.00011732823013895646 1 -0.0014561668328423433 0.0015466319620889859 0.0010165155845722228
 		 1 -9.3974627898638057e-06 -8.0391852519655845e-06 -3.2150170394939619e-06 1 -0.00055807021575896747
@@ -60061,11 +55612,11 @@ createNode blendShape -n "sweater_correct";
 		 0.010589869700703461 1 -0.0060377268744152123 -0.00072476979274413227 0.0006082431826362842
 		 1 -0.0084034627028305685 0.0011255570654222155 -0.0040061235708651072 1 0 0 0 1 0
 		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0
-		 0 1 0 0 0 1 0 -0 0 1 0 0 0 1 0 0 0 1 0 -0 0 1 0 0 0 1 -6.5551325592060145e-05 -7.3644875654551217e-05
-		 -0.00012703809738149507 1 0 0 0 1 0 0 -0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -1.8662082302964837e-05
+		 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -6.5551325592060145e-05 -7.3644875654551217e-05
+		 -0.00012703809738149507 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -1.8662082302964837e-05
 		 -1.2208521242875181e-05 -1.1875321558980961e-05 1 0 0 0 1 1.670426119946919e-06 9.5223582690841534e-06
 		 -8.7307332460956629e-06 1 -0.00050236811537847804 -0.0005346993608884447 -0.001207755056765172
-		 1 0 0 0 1 0 0 -0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.00062396393833078227
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.00062396393833078227
 		 -0.00029181363566102971 -0.0003867100264706839 1 0 0 0 1 1.5578541315400957e-05 9.2369441199042493e-05
 		 -7.280011591941863e-05 1 -0.00054103316959727265 -0.00084423956539283335 -0.0018166048420496439
 		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.0010835799254945882
@@ -60073,7 +55624,7 @@ createNode blendShape -n "sweater_correct";
 		 7.198350595493682e-05 -6.4666199222511393e-05 1 -0.00014611614541082613 -0.0014158774458296274
 		 -0.002454141057352048 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0
 		 0 0 1 -0.002153747417069707 -0.0015592237440086095 -0.0032917335979155311 1 -2.7378519760759637e-05
-		 -1.029583829096664e-05 1.884669008978597e-05 1 1.5189798799492916e-06 -1.4172268951776275e-06
+		 -1.0295838290966639e-05 1.884669008978597e-05 1 1.5189798799492916e-06 -1.4172268951776275e-06
 		 -3.6103402887924641e-06 1 0.0011520187603048034 -0.0027617162707763432 -0.0044314736565313857
 		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.0029027191803092365
 		 -0.0042116542707048496 -0.0080439721421599018 1 -0.00036319829865443285 -0.00024606991140718423
@@ -60227,8 +55778,8 @@ createNode blendShape -n "sweater_correct";
 		 2.7220233966796848e-08 6.5466397928527922e-09 1 0 0 0 1 0 0 0 1 6.5976803464265124e-06
 		 -0.00023723537980326385 0.00017530521486336996 1 0.00021705921783966349 6.6305341848645158e-05
 		 -0.00036044723580576382 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0
-		 0 0 1 0 0 0 1 0 -0 0 1 0 -0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0
-		 0 0 1 0 0 0 1 -0.090665371658364927 -0.087943567372937445 0.06295624784591336 1 -0.1686173757731648
+		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0
+		 0 1 0 0 0 1 -0.090665371658364927 -0.087943567372937445 0.06295624784591336 1 -0.1686173757731648
 		 0.066440076851936244 -0.062730146136667622 1 -0.10378683678405989 0.0782303093118491
 		 -0.030105824168909449 1 -0.11865135894335657 0.019242660405316685 -0.031425967188015658
 		 1 -0.12556701392279368 -0.024799412134302562 -0.040047996235940242 1 -0.18580495649361584
@@ -61300,7 +56851,7 @@ createNode animCurveTA -n "r_wrist_ctrl_rotateZ";
 	rename -uid "1F34D218-A243-B787-9C17-F298C7FF3E84";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  -50 40.62830333491123 -29 3.3528210501928659
+	setAttr -s 12 ".ktv[0:11]"  -50 40.62830333491123 -29 3.3528210501928664
 		 -10 29.382597038692083 1 115.0453687588617 14 3.7202270270106235 26 -0.64548287999625054
 		 33 12.431750288418071 50 68.714451469757563 60 67.735033212767604 72 67.735033212767604
 		 87 67.735033212767604 101 67.821319282319749;
@@ -61871,7 +57422,7 @@ createNode animCurveTA -n "neck_ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  -50 8.8977931388735403 -30 24.738693896922047
-		 -15 37.020439404080932 10 10.123441512170441 25 8.9541882102741397 31 8.9541882102741397
+		 -15 37.020439404080932 10 10.123441512170443 25 8.9541882102741397 31 8.9541882102741397
 		 52 8.8977931388735403 60 -2.9523483150684777 73 -2.9523483150684777 83 7.0346321907150857
 		 90 10.755065713295632 103 -2.8678594115112688;
 	setAttr -s 12 ".kit[1:11]"  1 1 18 18 1 18 18 1 
@@ -62990,9 +58541,9 @@ createNode blendShape -n "tea_drink_sweater";
 	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 146 0 0 0 1 0 0 0 1 0
 		 0 0 1 -0.00041713483792097327 0.00049613532041896879 0.00052858582193862787 1 -0.0077227753604756783
 		 0.018523768197026391 -0.0057571345586602349 1 -0.00036772604390728202 -3.691621839479194e-05
-		 -0.001683944944430185 1 0 0 0 1 0 -0 0 1 0 0 0 1 -0 0 0 1 0 0 0 1 0 0 -0 1 -0.016672072928270533
+		 -0.001683944944430185 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.016672072928270533
 		 0.02075412485401168 0.001844459198233113 1 -0.004410294656049675 0.00043338271861282507
-		 -0.014965664363944253 1 0 -0 0 1 -0.0028963006706363981 0.021420365800759615 0.0078041275465027884
+		 -0.014965664363944253 1 0 0 0 1 -0.0028963006706363981 0.021420365800759615 0.0078041275465027884
 		 1 0.0054621430107327359 -0.0029359695393197209 0.0010483952668415137 1 0.10047494023392795
 		 0.06357038975129993 -0.033060021046378556 1 0.13510836048579636 0.0076776935707283007
 		 0.048134448033750346 1 -0.011907394461996221 -0.018910316845975689 0.031500374061675232
@@ -63007,29 +58558,29 @@ createNode blendShape -n "tea_drink_sweater";
 		 -0.010856296527863166 1 -0.0023401954250528759 0.0015142312320536319 -0.011483519608718143
 		 1 -0.011839418058884608 0.0027130118252182409 0.0064265979388516102 1 -0.01388552903832321
 		 0.0065603048352226665 -0.0021446112273291245 1 -0.003379661087590002 -0.0053167646014117189
-		 0.00162828107204425 1 0 0 -0 1 0 -0 0 1 -0.0005813629862379203 0.0003364893878262102
-		 0.00018628768975237144 1 0 0 -0 1 0 0 0 1 0 0 0 1 -0.0097639899410451991 -0.0028562328464133493
+		 0.00162828107204425 1 0 0 0 1 0 0 0 1 -0.0005813629862379203 0.0003364893878262102
+		 0.00018628768975237144 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.0097639899410451991 -0.0028562328464133493
 		 -0.0069396143067304294 1 -0.025603054988539205 0.012024394925157536 -0.016525870636677247
 		 1 -0.0010724991899596823 -0.00050189721407520641 -0.00086935053085554492 1 0.0030035416920483875
 		 0.0026065054024605227 0.00013022346326520105 1 0 0 0 1 -0.010597961702632696 0.0097007208966149155
 		 0.0064835437701612477 1 -0.016916851648323537 0.015940984752150947 -0.0043587247799830369
 		 1 -0.0012818076563186863 0.0047098643570437637 0.0041229992925105874 1 0 0 0 1 0
-		 0 0 1 -0.00016040338173513015 0.0017982747976288071 0.00033643269473297916 1 -0 0
-		 0 1 0 0 0 1 0 -0 0 1 0 0 0 1 0 0 0 1 0 -0 0 1 0 0 0 1 0 -0 0 1 0 0 0 1 0 0 0 1 0
-		 0 0 1 0 0 0 1 0 0 0 1 -0.00054544976129553739 3.4488176533980013e-05 -0.00045850626389184367
+		 0 0 1 -0.00016040338173513015 0.0017982747976288071 0.00033643269473297916 1 0 0
+		 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0
+		 1 0 0 0 1 0 0 0 1 -0.00054544976129553739 3.4488176533980013e-05 -0.00045850626389184367
 		 1 -8.3545576989781448e-05 1.7395871707985883e-05 -0.00012479470038015831 1 -0.0011609526273386717
 		 0.00088191636354971123 0.0008539359838930572 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0
-		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0 0 0 1 -0 0 0 1 -0.00086916643996249124
+		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.00086916643996249124
 		 -2.3701404312719622e-05 -0.00042492341806625708 1 -0.00019574868170648885 -1.7442554753574763e-05
-		 -1.1296902854537719e-05 1 -4.1776506159226607e-05 4.265494040874653e-05 -1.7922321924248424e-05
-		 1 -0 0 0 1 0 -0 0 1 -0.0043159337240059525 0.00075842209642177001 -0.0023740665785716786
+		 -1.1296902854537719e-05 1 -4.1776506159226607e-05 4.2654940408746536e-05 -1.7922321924248424e-05
+		 1 0 0 0 1 0 0 0 1 -0.0043159337240059525 0.00075842209642177001 -0.0023740665785716786
 		 1 -0.00093363091118087854 0.00013611900048091539 -0.00017343801422756578 1 -0.00021971001621340374
-		 0.0009496598511501361 -4.4358879071257354e-05 1 -0 0 0 1 -0 0 0 1 0 -0 0 1 -0.0060570409988310618
+		 0.0009496598511501361 -4.4358879071257354e-05 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.0060570409988310618
 		 0.0014808994601080165 -0.00099665850525621825 1 -0.00055096676251647895 0.00082498074813228432
 		 2.6115875864729055e-06 1 -0.002823980335361756 0.0034032926406124169 0.0022379386644499331
-		 1 -0 0 0 1 -0 0 0 1 0 0 0 1 0 -0 0 1 -0.0060117167223044258 -0.00023317522908639722
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.0060117167223044258 -0.00023317522908639722
 		 0.021495049701331342 1 -0.015327520965181666 0.0094390951641703646 0.029037771201800969
-		 1 0 0 0 1 0 0 -0 1 0 0 -0 1 0.00057338597746611764 -0.0038855020545344732 -0.00075539328815753606
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 0.00057338597746611764 -0.0038855020545344732 -0.00075539328815753606
 		 1 -0.0038779016278416862 0.0013057826854313923 -0.0095940869609072114 1 -0.0095600182133117936
 		 -0.0035465849074186803 0.00016866778922745591 1 0.021022473317170338 0.042302390772616646
 		 0.017029639923310438 1 0 0 0 1 0 0 0 1 0 0 0 1 -2.1267700636194815e-05 7.7072218906815262e-06
@@ -63072,13 +58623,996 @@ createNode animCurveTU -n "tea_drink_sweater_envelope";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  17 0 35 0.91620111465454102;
+createNode reference -n "bedroom_SET_latestRN";
+	rename -uid "7D6AF18B-2942-03CD-CE47-E08B3A826BC5";
+	setAttr -s 7 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"bedroom_SET_latestRN"
+		"bedroom_SET_latest:curtainsRN1" 0
+		"bedroom_SET_latest:hangingStarsRN" 0
+		"bedroom_SET_latest:phoneRN" 0
+		"bedroom_SET_latest:poster2RN" 0
+		"bedroom_SET_latest:bookRN1" 0
+		"bedroom_SET_latest:poster1RN" 0
+		"bedroom_SET_latest:scarfRN" 0
+		"bedroom_SET_latestRN" 0
+		"bedroom_SET_latest:tatoePhotoRN" 0
+		"bedroom_SET_latest:bookStack_RIGHT_SHELFRN" 0
+		"bedroom_SET_latest:officeChairRN" 0
+		"bedroom_SET_latest:deskLamp_latestRN" 0
+		"bedroom_SET_latest:floor_walls_latestRN" 0
+		"bedroom_SET_latest:phoneRN1" 0
+		"bedroom_SET_latest:bookshelfRN1" 0
+		"bedroom_SET_latest:rugRN" 0
+		"bedroom_SET_latest:tatoePhoto2RN" 0
+		"bedroom_SET_latest:bedsideTableRN" 0
+		"bedroom_SET_latest:scarfRN1" 0
+		"bedroom_SET_latest:golem_plushieRN" 0
+		"bedroom_SET_latest:bookStack_LEFT_SHELFRN" 0
+		"bedroom_SET_latest:desk_latestRN" 0
+		"bedroom_SET_latest:bedroom_light_rig:macRN" 0
+		"bedroom_SET_latest:bedsideLampRN" 0
+		"bedroom_SET_latest:musicboxRN" 0
+		"bedroom_SET_latest:windowRN" 0
+		"bedroom_SET_latest:beanbagRN" 0
+		"bedroom_SET_latest:houseSlippers_latestRN" 0
+		"bedroom_SET_latest:gameboyRN" 0
+		"bedroom_SET_latest:bed_NEWRN" 0
+		"bedroom_SET_latest:desk_latest:book_stackRN" 0
+		"bedroom_SET_latest:doorRN1" 0
+		"bedroom_SET_latest:nightstandRN" 0
+		"bedroom_SET_latest:CoffeeCupLatestRN" 0
+		"bedroom_SET_latest:clockRN" 0
+		"bedroom_SET_latest:bookshelfRN" 0
+		"bedroom_SET_latest:teacupRN" 0
+		"bedroom_SET_latest:treeShelfRN" 0
+		"bedroom_SET_latest:bookStack_TREESHELFRN" 0
+		"bedroom_SET_latest:strewn_pantsRN" 0
+		"bedroom_SET_latest:moonDecorationRN" 0
+		"bedroom_SET_latest:backpackRN" 0
+		"bedroom_SET_latest:alarmclockRN" 0
+		"bedroom_SET_latest:smallTrashCanRN" 0
+		"bedroom_SET_latest:macRN" 0
+		"bedroom_SET_latest:toyTrainRN1" 0
+		"bedroom_SET_latest:boardGames_latestRN" 0
+		"bedroom_SET_latest:teacupRN" 1
+		2 "|bedroom_SET_latest:teacup:teacup" "visibility" " 0"
+		"bedroom_SET_latestRN" 13
+		2 "|bedroom_SET_latest:desklamp|bedroom_SET_latest:desklampShape" "color" 
+		" -type \"float3\" 1 0.74900001000000005 0.69700002999999999"
+		2 "|bedroom_SET_latest:overhead_2|bedroom_SET_latest:overhead_2Shape" "color" 
+		" -type \"float3\" 1 0.83950000999999996 0.634"
+		2 "|bedroom_SET_latest:window1|bedroom_SET_latest:window1Shape" "color" " -type \"float3\" 0.72260897999999996 0.662 1"
+		
+		2 "|bedroom_SET_latest:overhead_1|bedroom_SET_latest:overhead_1Shape" "color" 
+		" -type \"float3\" 1 0.83950000999999996 0.634"
+		2 "|bedroom_SET_latest:PxrSphereLight|bedroom_SET_latest:PxrSphereLightShape" 
+		"color" " -type \"float3\" 0.77640622999999997 0.69700002999999999 1"
+		2 "|bedroom_SET_latest:rim_light|bedroom_SET_latest:rim_lightShape" "color" 
+		" -type \"float3\" 0.72260897999999996 0.662 1"
+		2 "|bedroom_SET_latest:moon_decor_light|bedroom_SET_latest:moon_decor_lightShape" 
+		"color" " -type \"float3\" 1 0.94284153000000004 0.93099999"
+		2 "|bedroom_SET_latest:mac_light|bedroom_SET_latest:mac_lightShape" "color" 
+		" -type \"float3\" 1 0.94284153000000004 0.93099999"
+		2 "|bedroom_SET_latest:face_light|bedroom_SET_latest:face_lightShape" "intensity" 
+		" 4"
+		2 "|bedroom_SET_latest:face_light|bedroom_SET_latest:face_lightShape" "lightColor" 
+		" -type \"float3\" 1 0.898 0.69700002999999999"
+		2 "|bedroom_SET_latest:face_light|bedroom_SET_latest:face_lightShape" "color" 
+		" -type \"float3\" 1 0.898 0.69700002999999999"
+		5 4 "bedroom_SET_latestRN" "|bedroom_SET_latest:desklamp.drawOverride" 
+		"bedroom_SET_latestRN.placeHolderList[6]" ""
+		5 4 "bedroom_SET_latestRN" "|bedroom_SET_latest:mac_light.drawOverride" 
+		"bedroom_SET_latestRN.placeHolderList[7]" ""
+		"bedroom_SET_latest:macRN" 1
+		5 4 "bedroom_SET_latestRN" "|bedroom_SET_latest:mac:base.drawOverride" 
+		"bedroom_SET_latestRN.placeHolderList[4]" ""
+		"bedroom_SET_latest:desk_latestRN" 1
+		5 4 "bedroom_SET_latestRN" "|bedroom_SET_latest:desk_latest:Desk.drawOverride" 
+		"bedroom_SET_latestRN.placeHolderList[3]" ""
+		"bedroom_SET_latest:deskLamp_latestRN" 1
+		5 4 "bedroom_SET_latestRN" "|bedroom_SET_latest:deskLamp_latest:Lamp.drawOverride" 
+		"bedroom_SET_latestRN.placeHolderList[2]" ""
+		"bedroom_SET_latest:officeChairRN" 1
+		5 4 "bedroom_SET_latestRN" "|bedroom_SET_latest:officeChair:officeChair.drawOverride" 
+		"bedroom_SET_latestRN.placeHolderList[1]" ""
+		"bedroom_SET_latest:bedroom_light_rig:macRN" 1
+		5 4 "bedroom_SET_latestRN" "|bedroom_SET_latest:bedroom_light_rig:mac:base.drawOverride" 
+		"bedroom_SET_latestRN.placeHolderList[5]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode PxrDebugShadingContext -s -n "PxrDebugShadingContext";
+	rename -uid "C69C4B37-F54C-9BB7-866B-A5BA151A8430";
+lockNode -l 1 ;
+createNode PxrValidateBxdf -s -n "PxrValidateBxdf";
+	rename -uid "EFA396E1-2E4F-9CBB-127E-8C81DD8D6D98";
+lockNode -l 1 ;
+createNode RenderMan -s -n "renderManRISGlobals";
+	rename -uid "25A33288-864B-D2C2-C8D8-18B6ED848F77";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___renderDataCleanupJob" -ln "rman__toropt___renderDataCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___shaderCleanupJob" -ln "rman__toropt___shaderCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___textureCleanupJob" -ln "rman__toropt___textureCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribCleanupJob" -ln "rman__toropt___ribCleanupJob" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribFlatten" -ln "rman__toropt___ribFlatten" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renderDataCleanupFrame" -ln "rman__toropt___renderDataCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___textureCleanupFrame" -ln "rman__toropt___textureCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___ribCleanupFrame" -ln "rman__toropt___ribCleanupFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___primaryCamera" -ln "rman__toropt___primaryCamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___enableRenderLayers" -ln "rman__toropt___enableRenderLayers" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___renderLayer" -ln "rman__toropt___renderLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___motionBlurType" -ln "rman__toropt___motionBlurType" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___shutterAngle" -ln "rman__toropt___shutterAngle" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__toropt___shutterTiming" -ln "rman__toropt___shutterTiming" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___cacheCrew" -ln "rman__toropt___cacheCrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___renumber" -ln "rman__toropt___renumber" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renumberStart" -ln "rman__toropt___renumberStart" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___renumberBy" -ln "rman__toropt___renumberBy" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___lazyRibGen" -ln "rman__toropt___lazyRibGen" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___lazyRender" -ln "rman__toropt___lazyRender" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___bakeMode" -ln "rman__toropt___bakeMode" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___furChunkSize" -ln "rman__toropt___furChunkSize" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___enableRifs" -ln "rman__torattr___enableRifs" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__toropt___nativeShadingSupport" -ln "rman__toropt___nativeShadingSupport" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionSamples" -ln "rman__torattr___motionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___referenceFrame" -ln "rman__torattr___referenceFrame" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___motionBlur" -ln "rman__torattr___motionBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution" -ln "rman__torattr___mapResolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution0" -ln "rman__torattr___mapResolution0" 
+		-dv -1 -at "long" -p "rman__torattr___mapResolution";
+	addAttr -ci true -k true -sn "rman__torattr___mapResolution1" -ln "rman__torattr___mapResolution1" 
+		-dv -1 -at "long" -p "rman__torattr___mapResolution";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___cameraBlur" -ln "rman__torattr___cameraBlur" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___frontPlane" -ln "rman__torattr___frontPlane" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___backPlane" -ln "rman__torattr___backPlane" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passCommand" -ln "rman__torattr___passCommand" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___crop" -ln "rman__torattr___crop" -dv 
+		-1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passExtFormat" -ln "rman__torattr___passExtFormat" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___previewPass" -ln "rman__torattr___previewPass" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___defaultDisplacementShader" -ln "rman__torattr___defaultDisplacementShader" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultAtmosphereShader" -ln "rman__torattr___defaultAtmosphereShader" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultInteriorShader" -ln "rman__torattr___defaultInteriorShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputSurfaceShaders" -ln "rman__torattr___outputSurfaceShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputDisplacementShaders" -ln "rman__torattr___outputDisplacementShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputLightShaders" -ln "rman__torattr___outputLightShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputVolumeShaders" -ln "rman__torattr___outputVolumeShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___outputImagerShaders" -ln "rman__torattr___outputImagerShaders" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__toropt___preFrameScript" -ln "rman__toropt___preFrameScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___postFrameScript" -ln "rman__toropt___postFrameScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___preRenderScript" -ln "rman__torattr___preRenderScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postRenderScript" -ln "rman__torattr___postRenderScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultRiOptionsScript" -ln "rman__torattr___defaultRiOptionsScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultRiAttributesScript" -ln "rman__torattr___defaultRiAttributesScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___renderBeginScript" -ln "rman__torattr___renderBeginScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___transformBeginScript" -ln "rman__torattr___transformBeginScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___transformEndScript" -ln "rman__torattr___transformEndScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postTransformScript" -ln "rman__torattr___postTransformScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___preShapeScript" -ln "rman__torattr___preShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postShapeScript" -ln "rman__torattr___postShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cacheShapeScript" -ln "rman__torattr___cacheShapeScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeChannels" -ln "rman__torattr___bakeChannels" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeCrew" -ln "rman__torattr___bakeCrew" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___bakeOutputFile" -ln "rman__torattr___bakeOutputFile" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___customShadingGroup" -ln "rman__torattr___customShadingGroup" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___shaderBindingStrength" -ln "rman__torattr___shaderBindingStrength" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___enableObjectInstancing" -ln "rman__torattr___enableObjectInstancing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___impliedSSBakeMode" -ln "rman__torattr___impliedSSBakeMode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__toropt___JOBSTYLE" -ln "rman__toropt___JOBSTYLE" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___deformationBlurStyle" -ln "rman__torattr___deformationBlurStyle" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___deformationBlurScale" -ln "rman__torattr___deformationBlurScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__torattr___enableMfcProcPrim" -ln "rman__torattr___enableMfcProcPrim" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___linearizeColors" -ln "rman__torattr___linearizeColors" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___rayTracing" -ln "rman__torattr___rayTracing" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___referenceCamera" -ln "rman__torattr___referenceCamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__toropt___enableRIS" -ln "rman__toropt___enableRIS" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___denoise" -ln "rman__torattr___denoise" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___denoiseFilter" -ln "rman__torattr___denoiseFilter" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___defaultSurfaceShader" -ln "rman__torattr___defaultSurfaceShader" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___outputShadowAOV" -ln "rman__torattr___outputShadowAOV" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___enableImagePlaneFilter" -ln "rman__torattr___enableImagePlaneFilter" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__trace_maxdepth" -ln "rman__riopt__trace_maxdepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__bucket_order" -ln "rman__riopt__bucket_order" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize" -ln "rman__riopt__limits_bucketsize" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize0" -ln "rman__riopt__limits_bucketsize0" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__limits_bucketsize1" -ln "rman__riopt__limits_bucketsize1" 
+		-dv -1 -at "long" -p "rman__riopt__limits_bucketsize";
+	addAttr -ci true -k true -sn "rman__riopt__trace_decimationrate" -ln "rman__riopt__trace_decimationrate" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__limits_threads" -ln "rman__riopt__limits_threads" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening" -ln "rman__riopt__Camera_shutteropening" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening0" -ln "rman__riopt__Camera_shutteropening0" 
+		-dv -1 -at "float" -p "rman__riopt__Camera_shutteropening";
+	addAttr -ci true -k true -sn "rman__riopt__Camera_shutteropening1" -ln "rman__riopt__Camera_shutteropening1" 
+		-dv -1 -at "float" -p "rman__riopt__Camera_shutteropening";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution" -ln "rman__riopt__Format_resolution" 
+		-at "long2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution0" -ln "rman__riopt__Format_resolution0" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_resolution1" -ln "rman__riopt__Format_resolution1" 
+		-dv -1 -at "long" -p "rman__riopt__Format_resolution";
+	addAttr -ci true -k true -sn "rman__riopt__Format_pixelaspectratio" -ln "rman__riopt__Format_pixelaspectratio" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__hair_minwidth" -ln "rman__riopt__hair_minwidth" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__rib_compression" -ln "rman__riopt__rib_compression" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__rib_format" -ln "rman__riopt__rib_format" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__rib_precision" -ln "rman__riopt__rib_precision" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__user_iesIgnoreWatts" -ln "rman__riopt__user_iesIgnoreWatts" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__statistics_level" -ln "rman__riopt__statistics_level" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__statistics_filename" -ln "rman__riopt__statistics_filename" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__statistics_xmlfilename" -ln "rman__riopt__statistics_xmlfilename" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Projection_name" -ln "rman__riopt__Projection_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Projection2_name" -ln "rman__riopt__Projection2_name" 
+		-dt "string";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_zthreshold" -ln "rman__riopt__limits_zthreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdr" -ln "rman__riopt__limits_zthresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdg" -ln "rman__riopt__limits_zthresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_zthresholdb" -ln "rman__riopt__limits_zthresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_zthreshold";
+	addAttr -ci true -uac -k true -sn "rman__riopt__limits_othreshold" -ln "rman__riopt__limits_othreshold" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdr" -ln "rman__riopt__limits_othresholdR" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdg" -ln "rman__riopt__limits_othresholdG" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_othresholdb" -ln "rman__riopt__limits_othresholdB" 
+		-dv -1 -at "float" -p "rman__riopt__limits_othreshold";
+	addAttr -ci true -k true -sn "rman__riopt__limits_texturememory" -ln "rman__riopt__limits_texturememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_geocachememory" -ln "rman__riopt__limits_geocachememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_proceduralmemory" -ln "rman__riopt__limits_proceduralmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowtiles" -ln "rman__riopt__limits_deepshadowtiles" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_deepshadowmemory" -ln "rman__riopt__limits_deepshadowmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__limits_brickmemory" -ln "rman__riopt__limits_brickmemory" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__user_sceneUnits" -ln "rman__riopt__user_sceneUnits" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_diffuse2" -ln "rman__riopt__lpe_diffuse2" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_diffuse3" -ln "rman__riopt__lpe_diffuse3" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular2" -ln "rman__riopt__lpe_specular2" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular3" -ln "rman__riopt__lpe_specular3" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular4" -ln "rman__riopt__lpe_specular4" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular5" -ln "rman__riopt__lpe_specular5" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular6" -ln "rman__riopt__lpe_specular6" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular7" -ln "rman__riopt__lpe_specular7" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__lpe_specular8" -ln "rman__riopt__lpe_specular8" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minsamples" -ln "rman__riopt__Hider_minsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_minextrasamples" -ln "rman__riopt__Hider_minextrasamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_darkfalloff" -ln "rman__riopt__Hider_darkfalloff" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__limits_opacitycachememory" -ln "rman__riopt__limits_opacitycachememory" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_name" -ln "rman__riopt__Integrator_name" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxdiffusedepth" -ln "rman__riattr__trace_maxdiffusedepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_maxspeculardepth" -ln "rman__riattr__trace_maxspeculardepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_samplemotion" -ln "rman__riattr__trace_samplemotion" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riattr__dice_referencecamera" -ln "rman__riattr__dice_referencecamera" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__dice_minlength" -ln "rman__riattr__dice_minlength" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__procedural_reentrant" -ln "rman__riattr__procedural_reentrant" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__dice_micropolygonlength" -ln "rman__riattr__dice_micropolygonlength" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__dice_watertight" -ln "rman__riattr__dice_watertight" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riattr__trace_autobias" -ln "rman__riattr__trace_autobias" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_bias" -ln "rman__riattr__trace_bias" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riattr__displacementbound_coordinatesystem" 
+		-ln "rman__riattr__displacementbound_coordinatesystem" -dt "string";
+	addAttr -ci true -k true -sn "rman__riattr__displacementbound_sphere" -ln "rman__riattr__displacementbound_sphere" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riattr__trace_displacements" -ln "rman__riattr__trace_displacements" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_fov" -ln "rman__riopt__Projection_fov" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_hsweep" -ln "rman__riopt__Projection_hsweep" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_vsweep" -ln "rman__riopt__Projection_vsweep" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Projection_minor" -ln "rman__riopt__Projection_minor" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_adaptall" -ln "rman__riopt__Hider_adaptall" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_incremental" -ln "rman__riopt__Hider_incremental" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_pixelfiltermode" -ln "rman__riopt__Hider_pixelfiltermode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergePaths" -ln "rman__riopt__Integrator_mergePaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_mergeRadiusScale" -ln "rman__riopt__Integrator_mergeRadiusScale" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_timeRadius" -ln "rman__riopt__Integrator_timeRadius" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_reduceRadius" -ln "rman__riopt__Integrator_reduceRadius" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_connectPaths" -ln "rman__riopt__Integrator_connectPaths" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_maxPathLength" -ln "rman__riopt__Integrator_maxPathLength" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_sampleMode" -ln "rman__riopt__Integrator_sampleMode" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numLightSamples" -ln "rman__riopt__Integrator_numLightSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numBxdfSamples" -ln "rman__riopt__Integrator_numBxdfSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numIndirectSamples" -ln "rman__riopt__Integrator_numIndirectSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numDiffuseSamples" -ln "rman__riopt__Integrator_numDiffuseSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSpecularSamples" -ln "rman__riopt__Integrator_numSpecularSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSubsurfaceSamples" -ln "rman__riopt__Integrator_numSubsurfaceSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numRefractionSamples" -ln "rman__riopt__Integrator_numRefractionSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteDepth" -ln "rman__riopt__Integrator_rouletteDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_rouletteThreshold" -ln "rman__riopt__Integrator_rouletteThreshold" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_imagePlaneSubset" -ln "rman__riopt__Integrator_imagePlaneSubset" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampDepth" -ln "rman__riopt__Integrator_clampDepth" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_clampLuminance" -ln "rman__riopt__Integrator_clampLuminance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_allowCaustics" -ln "rman__riopt__Integrator_allowCaustics" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_distribution" -ln "rman__riopt__Integrator_distribution" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_numSamples" -ln "rman__riopt__Integrator_numSamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_distance" -ln "rman__riopt__Integrator_distance" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_gamma" -ln "rman__riopt__Integrator_gamma" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_useAlbedo" -ln "rman__riopt__Integrator_useAlbedo" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_viewchannel" -ln "rman__riopt__Integrator_viewchannel" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframe" -ln "rman__riopt__Integrator_wireframe" 
+		-dv -1 -at "long";
+	addAttr -ci true -uac -k true -sn "rman__riopt__Integrator_wireframeColor" -ln "rman__riopt__Integrator_wireframeColor" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeColorr" -ln "rman__riopt__Integrator_wireframeColorR" 
+		-dv -1 -at "float" -p "rman__riopt__Integrator_wireframeColor";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeColorg" -ln "rman__riopt__Integrator_wireframeColorG" 
+		-dv -1 -at "float" -p "rman__riopt__Integrator_wireframeColor";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeColorb" -ln "rman__riopt__Integrator_wireframeColorB" 
+		-dv -1 -at "float" -p "rman__riopt__Integrator_wireframeColor";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeOpacity" -ln "rman__riopt__Integrator_wireframeOpacity" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_wireframeWidth" -ln "rman__riopt__Integrator_wireframeWidth" 
+		-dv -1 -at "float";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_style" -ln "rman__riopt__Integrator_style" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Integrator_normalCheck" -ln "rman__riopt__Integrator_normalCheck" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Integrator_matCap" -ln "rman__riopt__Integrator_matCap" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__EnvLight" -ln "rman__EnvLight" -dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___preWorldBeginScript" -ln "rman__torattr___preWorldBeginScript" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___postWorldBeginScript" -ln "rman__torattr___postWorldBeginScript" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__param__limits_threads" -ln "rman__param__limits_threads" 
+		-dv -1 -at "long";
+	setAttr ".rman__torattr___class" -type "string" "RISJob";
+	setAttr ".rman__torattr___task" -type "string" "job";
+	setAttr -k on ".rman__toropt___renderDataCleanupJob" 0;
+	setAttr -k on ".rman__toropt___shaderCleanupJob" 0;
+	setAttr -k on ".rman__toropt___textureCleanupJob" 0;
+	setAttr -k on ".rman__toropt___ribCleanupJob" 0;
+	setAttr -k on ".rman__toropt___ribFlatten" 0;
+	setAttr -k on ".rman__toropt___renderDataCleanupFrame" 0;
+	setAttr -k on ".rman__toropt___textureCleanupFrame" 0;
+	setAttr -k on ".rman__toropt___ribCleanupFrame" 0;
+	setAttr ".rman__toropt___primaryCamera" -type "string" "";
+	setAttr -k on ".rman__toropt___enableRenderLayers" 0;
+	setAttr ".rman__toropt___renderLayer" -type "string" "";
+	setAttr ".rman__toropt___motionBlurType" -type "string" "frame";
+	setAttr -k on ".rman__toropt___shutterAngle" 180;
+	setAttr ".rman__toropt___shutterTiming" -type "string" "frameOpen";
+	setAttr ".rman__toropt___cacheCrew" -type "string" "";
+	setAttr -k on ".rman__toropt___renumber" 0;
+	setAttr -k on ".rman__toropt___renumberStart" 1;
+	setAttr -k on ".rman__toropt___renumberBy" 1;
+	setAttr -k on ".rman__toropt___lazyRibGen" 0;
+	setAttr -k on ".rman__toropt___lazyRender" 0;
+	setAttr -k on ".rman__toropt___bakeMode" 0;
+	setAttr -k on ".rman__toropt___furChunkSize" 10000;
+	setAttr -k on ".rman__torattr___enableRifs" 1;
+	setAttr -k on ".rman__toropt___nativeShadingSupport" 0;
+	setAttr -k on ".rman__torattr___motionSamples" 2;
+	setAttr -k on ".rman__torattr___referenceFrame" 0;
+	setAttr -k on ".rman__torattr___motionBlur" 0;
+	setAttr -k on ".rman__torattr___mapResolution" -type "long2" 0 0 ;
+	setAttr -k on ".rman__torattr___depthOfField" 0;
+	setAttr -k on ".rman__torattr___cameraBlur" 0;
+	setAttr -k on ".rman__torattr___frontPlane" 0;
+	setAttr -k on ".rman__torattr___backPlane" 0;
+	setAttr ".rman__torattr___passCommand" -type "string" "";
+	setAttr -k on ".rman__torattr___crop" 0;
+	setAttr ".rman__torattr___passExtFormat" -type "string" "";
+	setAttr ".rman__torattr___passNameFormat" -type "string" "";
+	setAttr -k on ".rman__torattr___previewPass" 0;
+	setAttr ".rman__torattr___defaultDisplacementShader" -type "string" "";
+	setAttr ".rman__torattr___defaultAtmosphereShader" -type "string" "";
+	setAttr ".rman__torattr___defaultInteriorShader" -type "string" "";
+	setAttr -k on ".rman__torattr___outputSurfaceShaders" 1;
+	setAttr -k on ".rman__torattr___outputDisplacementShaders" 1;
+	setAttr -k on ".rman__torattr___outputLightShaders" 1;
+	setAttr -k on ".rman__torattr___outputVolumeShaders" 1;
+	setAttr -k on ".rman__torattr___outputImagerShaders" 1;
+	setAttr ".rman__toropt___preFrameScript" -type "string" "";
+	setAttr ".rman__toropt___postFrameScript" -type "string" "";
+	setAttr ".rman__torattr___preRenderScript" -type "string" "";
+	setAttr ".rman__torattr___postRenderScript" -type "string" "";
+	setAttr ".rman__torattr___defaultRiOptionsScript" -type "string" "";
+	setAttr ".rman__torattr___defaultRiAttributesScript" -type "string" "";
+	setAttr ".rman__torattr___renderBeginScript" -type "string" "rmanTimeStampScript";
+	setAttr ".rman__torattr___transformBeginScript" -type "string" "";
+	setAttr ".rman__torattr___transformEndScript" -type "string" "";
+	setAttr ".rman__torattr___postTransformScript" -type "string" "";
+	setAttr ".rman__torattr___preShapeScript" -type "string" "";
+	setAttr ".rman__torattr___postShapeScript" -type "string" "";
+	setAttr ".rman__torattr___cacheShapeScript" -type "string" "";
+	setAttr ".rman__torattr___bakeChannels" -type "string" "";
+	setAttr ".rman__torattr___bakeCrew" -type "string" "";
+	setAttr ".rman__torattr___bakeOutputFile" -type "string" "";
+	setAttr ".rman__torattr___customShadingGroup" -type "string" "";
+	setAttr -k on ".rman__torattr___shaderBindingStrength" 1;
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___enableObjectInstancing" 1;
+	setAttr ".rman__torattr___impliedSSBakeMode" -type "string" "SSDiffuse";
+	setAttr ".rman__toropt___JOBSTYLE" -type "string" "";
+	setAttr ".rman__torattr___deformationBlurStyle" -type "string" "none";
+	setAttr -k on ".rman__torattr___deformationBlurScale" 1;
+	setAttr -k on ".rman__torattr___enableMfcProcPrim" 0;
+	setAttr -k on ".rman__torattr___linearizeColors" 0;
+	setAttr -k on ".rman__torattr___rayTracing" 1;
+	setAttr ".rman__torattr___referenceCamera" -type "string" "";
+	setAttr -k on ".rman__toropt___enableRIS" 1;
+	setAttr -k on ".rman__torattr___denoise" 1;
+	setAttr ".rman__torattr___denoiseFilter" -type "string" "default.filter.json";
+	setAttr ".rman__torattr___defaultSurfaceShader" -type "string" "PxrDiffuse";
+	setAttr -k on ".rman__torattr___outputShadowAOV" 0;
+	setAttr -k on ".rman__torattr___enableImagePlaneFilter" 1;
+	setAttr -k on ".rman__riopt__trace_maxdepth" 10;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.0099999997764825821;
+	setAttr ".rman__riopt__bucket_order" -type "string" "spiral";
+	setAttr -k on ".rman__riopt__limits_bucketsize" -type "long2" 16 16 ;
+	setAttr -k on ".rman__riopt__trace_decimationrate" 1;
+	setAttr -k on ".rman__riopt__limits_threads" 0;
+	setAttr -k on ".rman__riopt__Camera_shutteropening" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt__Format_resolution" -type "long2" 1920 1080 ;
+	setAttr -k on ".rman__riopt__Format_pixelaspectratio" 1;
+	setAttr -k on ".rman__riopt__hair_minwidth" 0.5;
+	setAttr ".rman__riopt__rib_compression" -type "string" "none";
+	setAttr ".rman__riopt__rib_format" -type "string" "binary";
+	setAttr -k on ".rman__riopt__rib_precision" 6;
+	setAttr -k on ".rman__riopt__user_iesIgnoreWatts" 1;
+	setAttr -k on ".rman__riopt__statistics_level" 1;
+	setAttr ".rman__riopt__statistics_filename" -type "string" "stdout";
+	setAttr ".rman__riopt__statistics_xmlfilename" -type "string" "[AssetRef -cls rmanstat]";
+	setAttr ".rman__riopt__Projection_name" -type "string" "";
+	setAttr ".rman__riopt__Projection2_name" -type "string" "";
+	setAttr -k on ".rman__riopt__limits_zthreshold" -type "float3" 0.99599999 0.99599999 
+		0.99599999 ;
+	setAttr -k on ".rman__riopt__limits_othreshold" -type "float3" 0.99599999 0.99599999 
+		0.99599999 ;
+	setAttr -k on ".rman__riopt__limits_texturememory" 2097152;
+	setAttr -k on ".rman__riopt__limits_geocachememory" 2097152;
+	setAttr -k on ".rman__riopt__limits_proceduralmemory" 0;
+	setAttr -k on ".rman__riopt__limits_deepshadowtiles" 1000;
+	setAttr -k on ".rman__riopt__limits_deepshadowmemory" 102400;
+	setAttr -k on ".rman__riopt__limits_brickmemory" 10240;
+	setAttr -k on ".rman__riopt__user_sceneUnits" 1;
+	setAttr ".rman__riopt__lpe_diffuse2" -type "string" "Diffuse";
+	setAttr ".rman__riopt__lpe_diffuse3" -type "string" "Subsurface";
+	setAttr ".rman__riopt__lpe_specular2" -type "string" "Specular";
+	setAttr ".rman__riopt__lpe_specular3" -type "string" "RoughSpecular";
+	setAttr ".rman__riopt__lpe_specular4" -type "string" "Clearcoat";
+	setAttr ".rman__riopt__lpe_specular5" -type "string" "Iridescence";
+	setAttr ".rman__riopt__lpe_specular6" -type "string" "Fuzz";
+	setAttr ".rman__riopt__lpe_specular7" -type "string" "SingleScatter";
+	setAttr ".rman__riopt__lpe_specular8" -type "string" "Glass";
+	setAttr ".rman__riopt__Hider_name" -type "string" "raytrace";
+	setAttr -k on ".rman__riopt__Hider_minsamples" 0;
+	setAttr -k on ".rman__riopt__Hider_minextrasamples" 0;
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 48;
+	setAttr -k on ".rman__riopt__Hider_darkfalloff" 0.02500000037252903;
+	setAttr -k on ".rman__riopt__limits_opacitycachememory" 1024000;
+	setAttr ".rman__riopt__Integrator_name" -type "string" "PxrPathTracer";
+	setAttr -k on ".rman__riattr__trace_maxdiffusedepth" 1;
+	setAttr -k on ".rman__riattr__trace_maxspeculardepth" 4;
+	setAttr -k on ".rman__riattr__trace_samplemotion" 1;
+	setAttr ".rman__riattr__dice_referencecamera" -type "string" "worldcamera";
+	setAttr -k on ".rman__riattr__procedural_reentrant" 1;
+	setAttr -k on ".rman__riattr__dice_micropolygonlength" 1;
+	setAttr -k on ".rman__riattr__dice_watertight" 0;
+	setAttr -k on ".rman__riattr__trace_autobias" 1;
+	setAttr -k on ".rman__riattr__trace_bias" 0.0010000000474974513;
+	setAttr ".rman__riattr__displacementbound_coordinatesystem" -type "string" "shader";
+	setAttr -k on ".rman__riattr__displacementbound_sphere" 0;
+	setAttr -k on ".rman__riattr__trace_displacements" 1;
+	setAttr -k on ".rman__riopt__Projection_fov" 0;
+	setAttr -k on ".rman__riopt__Projection_hsweep" 360;
+	setAttr -k on ".rman__riopt__Projection_vsweep" 180;
+	setAttr -k on ".rman__riopt__Projection_minor" 0.25;
+	setAttr -k on ".rman__riopt__Hider_adaptall" 0;
+	setAttr -k on ".rman__riopt__Hider_incremental" 1;
+	setAttr ".rman__riopt__Hider_pixelfiltermode" -type "string" "weighted";
+	setAttr -k on ".rman__riopt__Integrator_mergePaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_mergeRadiusScale" 5;
+	setAttr -k on ".rman__riopt__Integrator_timeRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_reduceRadius" 1;
+	setAttr -k on ".rman__riopt__Integrator_connectPaths" 1;
+	setAttr -k on ".rman__riopt__Integrator_maxPathLength" 10;
+	setAttr ".rman__riopt__Integrator_sampleMode" -type "string" "bxdf";
+	setAttr -k on ".rman__riopt__Integrator_numLightSamples" 2;
+	setAttr -k on ".rman__riopt__Integrator_numBxdfSamples" 2;
+	setAttr -k on ".rman__riopt__Integrator_numIndirectSamples" 2;
+	setAttr -k on ".rman__riopt__Integrator_numDiffuseSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSpecularSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numSubsurfaceSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_numRefractionSamples" 1;
+	setAttr -k on ".rman__riopt__Integrator_rouletteDepth" 4;
+	setAttr -k on ".rman__riopt__Integrator_rouletteThreshold" 0.20000000298023224;
+	setAttr ".rman__riopt__Integrator_imagePlaneSubset" -type "string" "rman__imageplane";
+	setAttr -k on ".rman__riopt__Integrator_clampDepth" 2;
+	setAttr -k on ".rman__riopt__Integrator_clampLuminance" 10;
+	setAttr -k on ".rman__riopt__Integrator_allowCaustics" 0;
+	setAttr ".rman__riopt__Integrator_distribution" -type "string" "cosine";
+	setAttr -k on ".rman__riopt__Integrator_numSamples" 4;
+	setAttr -k on ".rman__riopt__Integrator_distance" 10;
+	setAttr -k on ".rman__riopt__Integrator_gamma" 1;
+	setAttr -k on ".rman__riopt__Integrator_useAlbedo" 0;
+	setAttr ".rman__riopt__Integrator_viewchannel" -type "string" "Nn";
+	setAttr -k on ".rman__riopt__Integrator_wireframe" 1;
+	setAttr -k on ".rman__riopt__Integrator_wireframeColor" -type "float3" 0 0 0 ;
+	setAttr -k on ".rman__riopt__Integrator_wireframeOpacity" 0.5;
+	setAttr -k on ".rman__riopt__Integrator_wireframeWidth" 1;
+	setAttr ".rman__riopt__Integrator_style" -type "string" "shaded";
+	setAttr -k on ".rman__riopt__Integrator_normalCheck" 0;
+	setAttr ".rman__riopt__Integrator_matCap" -type "string" "";
+	setAttr ".rman__EnvLight" -type "string" "";
+	setAttr -s 3 ".p";
+	setAttr ".rman__torattr___preWorldBeginScript" -type "string" "";
+	setAttr ".rman__torattr___postWorldBeginScript" -type "string" "";
+	setAttr -k on ".rman__param__limits_threads" 0;
+	setAttr ".nt" -type "string" "settings:job";
+createNode RenderMan -s -n "rmanFinalGlobals";
+	rename -uid "24407558-5346-2F0C-CCA6-D78AB78467B7";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___passLayer" -ln "rman__torattr___passLayer" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___camera" -ln "rman__torattr___camera" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___crew" -ln "rman__torattr___crew" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___flavor" -ln "rman__torattr___flavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___cameraFlavor" -ln "rman__torattr___cameraFlavor" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___lightcrew" -ln "rman__torattr___lightcrew" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX0" -ln "rman__riopt___CropWindowX0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowX1" -ln "rman__riopt___CropWindowX1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowX";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY" -ln "rman__riopt___CropWindowY" 
+		-at "float2" -p "rman__riopt___CropWindow" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY0" -ln "rman__riopt___CropWindowY0" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -ci true -k true -sn "rman__riopt___CropWindowY1" -ln "rman__riopt___CropWindowY1" 
+		-dv -1 -at "float" -p "rman__riopt___CropWindowY";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Final";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr ".rman__torattr___passLayer" -type "string" "";
+	setAttr ".rman__torattr___camera" -type "string" "";
+	setAttr ".rman__torattr___crew" -type "string" "";
+	setAttr ".rman__torattr___flavor" -type "string" "";
+	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
+	setAttr ".rman__torattr___lightcrew" -type "string" "";
+	setAttr -k on ".rman__torattr___depthOfField" 1;
+	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
+	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
+	setAttr ".nt" -type "string" "pass:render";
+createNode RenderMan -s -n "rmanFinalOutputGlobals0";
+	rename -uid "D6C8F2E2-6B47-3BC8-7EB0-649845B8F7BA";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Primary";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+	setAttr ".nt" -type "string" "settings:display";
+createNode RenderMan -s -n "rmanRerenderRISGlobals";
+	rename -uid "B56754DF-864E-E947-6989-DCAB427435DB";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___phase" -ln "rman__torattr___phase" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_maxsamples" -ln "rman__riopt__Hider_maxsamples" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__riopt__Hider_darkfalloff" -ln "rman__riopt__Hider_darkfalloff" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt___PixelVariance" -ln "rman__riopt___PixelVariance" 
+		-dv -1 -at "float";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "RerenderRIS";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__torattr___phase" -type "string" "/Job/Frames/Images";
+	setAttr -k on ".rman__riopt__Hider_maxsamples" 64;
+	setAttr -k on ".rman__riopt__Hider_darkfalloff" 0.02500000037252903;
+	setAttr -k on ".rman__riopt___PixelVariance" 0.05000000074505806;
+	setAttr ".nt" -type "string" "pass:render";
+createNode RenderMan -s -n "rmanRerenderRISOutputGlobals0";
+	rename -uid "E07A5825-C14F-A757-0F2D-E192E2F0F320";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___computeBehavior" -ln "rman__torattr___computeBehavior" 
+		-dv -1 -at "long";
+	addAttr -ci true -k true -sn "rman__torattr___primaryDisplay" -ln "rman__torattr___primaryDisplay" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___dspyID" -ln "rman__torattr___dspyID" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__torattr___dspyGetChannelsFromCamera" -ln "rman__torattr___dspyGetChannelsFromCamera" 
+		-dv -1 -at "long";
+	addAttr -ci true -h true -sn "rman__riopt__Display_name" -ln "rman__riopt__Display_name" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_type" -ln "rman__riopt__Display_type" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_mode" -ln "rman__riopt__Display_mode" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Display_filter" -ln "rman__riopt__Display_filter" 
+		-dt "string";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth" -ln "rman__riopt__Display_filterwidth" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth0" -ln "rman__riopt__Display_filterwidth0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_filterwidth1" -ln "rman__riopt__Display_filterwidth1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_filterwidth";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantize" -ln "rman__riopt__Display_quantize" 
+		-at "compound" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX" -ln "rman__riopt__Display_quantizeX" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX0" -ln "rman__riopt__Display_quantizeX0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeX1" -ln "rman__riopt__Display_quantizeX1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeX";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY" -ln "rman__riopt__Display_quantizeY" 
+		-at "long2" -p "rman__riopt__Display_quantize" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY0" -ln "rman__riopt__Display_quantizeY0" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_quantizeY1" -ln "rman__riopt__Display_quantizeY1" 
+		-dv -1 -at "long" -p "rman__riopt__Display_quantizeY";
+	addAttr -ci true -k true -sn "rman__riopt__Display_dither" -ln "rman__riopt__Display_dither" 
+		-dv -1 -at "float";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure" -ln "rman__riopt__Display_exposure" 
+		-at "float2" -nc 2;
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure0" -ln "rman__riopt__Display_exposure0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_exposure1" -ln "rman__riopt__Display_exposure1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_exposure";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap" -ln "rman__riopt__Display_remap" 
+		-at "float3" -nc 3;
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap0" -ln "rman__riopt__Display_remap0" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap1" -ln "rman__riopt__Display_remap1" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -ci true -k true -sn "rman__riopt__Display_remap2" -ln "rman__riopt__Display_remap2" 
+		-dv -1 -at "float" -p "rman__riopt__Display_remap";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "PrimaryRerender";
+	setAttr ".rman__torattr___task" -type "string" "display";
+	setAttr -k on ".rman__torattr___computeBehavior" 1;
+	setAttr -k on ".rman__torattr___primaryDisplay" 1;
+	setAttr ".rman__torattr___dspyID" -type "string" "";
+	setAttr -k on ".rman__torattr___dspyGetChannelsFromCamera" 1;
+	setAttr ".rman__riopt__Display_name" -type "string" "[passinfo this filename]";
+	setAttr ".rman__riopt__Display_type" -type "string" "openexr";
+	setAttr ".rman__riopt__Display_mode" -type "string" "rgba";
+	setAttr ".rman__riopt__Display_filter" -type "string" "gaussian";
+	setAttr -k on ".rman__riopt__Display_filterwidth" -type "float2" 2 2 ;
+	setAttr -k on ".rman__riopt__Display_quantizeX" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_quantizeY" -type "long2" 0 0 ;
+	setAttr -k on ".rman__riopt__Display_dither" 0;
+	setAttr -k on ".rman__riopt__Display_exposure" -type "float2" 1 1 ;
+	setAttr -k on ".rman__riopt__Display_remap" -type "float3" 0 0 0 ;
+	setAttr ".nt" -type "string" "settings:display";
+createNode RenderMan -s -n "rmanBakeGlobals";
+	rename -uid "AD8CCD3C-924D-9DE8-F4CD-20A17F7D2B6F";
+	addAttr -ci true -h true -sn "t" -ln "isTemplate" -at "long";
+	addAttr -ci true -h true -sn "rman__torattr___class" -ln "rman__torattr___class" 
+		-dt "string";
+	addAttr -ci true -h true -sn "rman__torattr___task" -ln "rman__torattr___task" -dt "string";
+	addAttr -ci true -h true -sn "rman__riopt__Hider_name" -ln "rman__riopt__Hider_name" 
+		-dt "string";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "d" -ln "display" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "c" -ln "channel" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "rif" -ln "rif" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "p" -ln "passes" -at "message";
+	addAttr -r false -s false -ci true -h true -m -im false -sn "sh" -ln "shared" -at "message";
+	addAttr -ci true -m -sn "rman__displayfilters" -ln "rman__displayfilters" -dt "string";
+	addAttr -ci true -m -sn "rman__samplefilters" -ln "rman__samplefilters" -dt "string";
+	setAttr ".t" 1;
+	setAttr ".rman__torattr___class" -type "string" "Bake";
+	setAttr ".rman__torattr___task" -type "string" "render";
+	setAttr ".rman__riopt__Hider_name" -type "string" "bake";
+	setAttr ".nt" -type "string" "pass:render";
+createNode RenderMan -s -n "renderManRISGlobals1";
+	rename -uid "115AB603-8B48-9398-5C23-78888369931F";
+createNode displayLayer -n "foreground";
+	rename -uid "00E9FBBD-F14B-1055-49A1-BA8322EF98E5";
+	setAttr ".do" 4;
+createNode displayLayer -n "teeth_eyes";
+	rename -uid "0DBBB232-6D4B-B5AA-3590-EF8E2D3AAFDD";
+	setAttr ".do" 5;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 50;
-	setAttr -av ".unw" 50;
+	setAttr -k on ".o" 39;
+	setAttr -av ".unw" 39;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -63090,7 +59624,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 203 ".st";
+	setAttr -s 267 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -63103,7 +59637,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 191 ".s";
+	setAttr -s 236 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -63111,19 +59645,19 @@ select -ne :postProcessList1;
 	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 58 ".u";
+	setAttr -s 86 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 121 ".r";
+	setAttr -s 151 ".r";
 select -ne :lightList1;
-	setAttr -s 9 ".l";
+	setAttr -s 18 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 149 ".tx";
+	setAttr -s 212 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 90 ".dsm";
+	setAttr -s 117 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -63132,7 +59666,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr -k on ".ro" yes;
-	setAttr -s 9 ".gn";
+	setAttr -s 10 ".gn";
 select -ne :initialParticleSE;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -63148,7 +59682,6 @@ select -ne :initialParticleSE;
 	setAttr -k on ".ro" yes;
 select -ne :defaultRenderGlobals;
 	setAttr ".ren" -type "string" "renderman";
-	setAttr ".an" yes;
 	setAttr ".ef" 110;
 	setAttr ".pff" yes;
 select -ne :defaultResolution;
@@ -63156,11 +59689,11 @@ select -ne :defaultResolution;
 	setAttr -k on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -k on ".bnm";
-	setAttr -av ".w";
-	setAttr -av ".h";
+	setAttr -av ".w" 1920;
+	setAttr -av ".h" 1080;
 	setAttr -av -k on ".pa" 1;
 	setAttr -av -k on ".al";
-	setAttr -av ".dar";
+	setAttr -av ".dar" 1.7777777910232544;
 	setAttr -av -k on ".ldar";
 	setAttr -k on ".dpi";
 	setAttr -av -k on ".off";
@@ -63169,7 +59702,7 @@ select -ne :defaultResolution;
 	setAttr -k on ".isu";
 	setAttr -k on ".pdu";
 select -ne :defaultLightSet;
-	setAttr -s 9 ".dsm";
+	setAttr -s 18 ".dsm";
 select -ne :hardwareRenderGlobals;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -63210,19 +59743,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".hwel";
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "Seat_translateX.o" "bedroom_SET_latest1:officeChairRN.phl[1]";
-connectAttr "Seat_translateY.o" "bedroom_SET_latest1:officeChairRN.phl[2]";
-connectAttr "Seat_translateZ.o" "bedroom_SET_latest1:officeChairRN.phl[3]";
-connectAttr "Seat_visibility.o" "bedroom_SET_latest1:officeChairRN.phl[4]";
-connectAttr "Seat_rotateX.o" "bedroom_SET_latest1:officeChairRN.phl[5]";
-connectAttr "Seat_rotateY.o" "bedroom_SET_latest1:officeChairRN.phl[6]";
-connectAttr "Seat_rotateZ.o" "bedroom_SET_latest1:officeChairRN.phl[7]";
-connectAttr "Seat_scaleX.o" "bedroom_SET_latest1:officeChairRN.phl[8]";
-connectAttr "Seat_scaleY.o" "bedroom_SET_latest1:officeChairRN.phl[9]";
-connectAttr "Seat_scaleZ.o" "bedroom_SET_latest1:officeChairRN.phl[10]";
-connectAttr "bedroom_SET_latest1:nightstandRN.phl[4]" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "bedroom_SET_latest1:scarfRN.phl[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "bedroom_SET_latest1:teacupRN.phl[1]" "pairBlend1.w";
 connectAttr "teacup_blendParent1.o" "bedroom_SET_latest1:teacupRN.phl[2]";
 connectAttr "pairBlend1.otx" "bedroom_SET_latest1:teacupRN.phl[3]";
@@ -63243,46 +59763,48 @@ connectAttr "bedroom_SET_latest1:teacupRN.phl[15]" "teacup_parentConstraint1.crp
 		;
 connectAttr "bedroom_SET_latest1:teacupRN.phl[16]" "teacup_parentConstraint1.crt"
 		;
-connectAttr "sweater_visibility.o" "comfy_mc_latest_realRN.phl[357]";
-connectAttr "sweater_translateX.o" "comfy_mc_latest_realRN.phl[358]";
-connectAttr "sweater_translateY.o" "comfy_mc_latest_realRN.phl[359]";
-connectAttr "sweater_translateZ.o" "comfy_mc_latest_realRN.phl[360]";
-connectAttr "sweater_rotateX.o" "comfy_mc_latest_realRN.phl[361]";
-connectAttr "sweater_rotateY.o" "comfy_mc_latest_realRN.phl[362]";
-connectAttr "sweater_rotateZ.o" "comfy_mc_latest_realRN.phl[363]";
-connectAttr "sweater_scaleX.o" "comfy_mc_latest_realRN.phl[364]";
-connectAttr "sweater_scaleY.o" "comfy_mc_latest_realRN.phl[365]";
-connectAttr "sweater_scaleZ.o" "comfy_mc_latest_realRN.phl[366]";
-connectAttr "comfy_mc_latest_realRN.phl[367]" "blendShape1Set.dsm" -na;
-connectAttr "blendShape1GroupId.id" "comfy_mc_latest_realRN.phl[368]";
-connectAttr "blendShape1Set.mwc" "comfy_mc_latest_realRN.phl[369]";
-connectAttr "comfy_mc_latest_realRN.phl[370]" "blendShape2Set.dsm" -na;
-connectAttr "blendShape2GroupId.id" "comfy_mc_latest_realRN.phl[371]";
-connectAttr "blendShape2Set.mwc" "comfy_mc_latest_realRN.phl[372]";
-connectAttr "comfy_mc_latest_realRN.phl[373]" "blendShape7Set.dsm" -na;
-connectAttr "blendShape7GroupId.id" "comfy_mc_latest_realRN.phl[374]";
-connectAttr "blendShape7Set.mwc" "comfy_mc_latest_realRN.phl[375]";
-connectAttr "tea_drink_sweater.og[0]" "comfy_mc_latest_realRN.phl[376]";
-connectAttr "comfy_mc_latest_realRN.phl[377]" "comfy_mc_latest_realRN.phl[378]";
-connectAttr "comfy_mc_latest_realRN.phl[379]" "blendShape5Set.dsm" -na;
-connectAttr "blendShape5GroupId.id" "comfy_mc_latest_realRN.phl[380]";
-connectAttr "blendShape5Set.mwc" "comfy_mc_latest_realRN.phl[381]";
-connectAttr "comfy_mc_latest_realRN.phl[382]" "blendShape6Set.dsm" -na;
-connectAttr "blendShape6GroupId.id" "comfy_mc_latest_realRN.phl[383]";
-connectAttr "blendShape6Set.mwc" "comfy_mc_latest_realRN.phl[384]";
-connectAttr "smile_study.og[0]" "comfy_mc_latest_realRN.phl[385]";
-connectAttr "comfy_mc_latest_realRN.phl[386]" "blendShape5GroupParts.ig";
-connectAttr "comfy_mc_latest_realRN.phl[387]" "blendShape1GroupParts.ig";
+connectAttr "foreground.di" "bedroom_SET_latest1:teacupRN.phl[17]";
+connectAttr "foreground.di" "comfy_mc_latest_realRN.phl[359]";
+connectAttr "sweater_visibility.o" "comfy_mc_latest_realRN.phl[360]";
+connectAttr "sweater_translateX.o" "comfy_mc_latest_realRN.phl[361]";
+connectAttr "sweater_translateY.o" "comfy_mc_latest_realRN.phl[362]";
+connectAttr "sweater_translateZ.o" "comfy_mc_latest_realRN.phl[363]";
+connectAttr "sweater_rotateX.o" "comfy_mc_latest_realRN.phl[364]";
+connectAttr "sweater_rotateY.o" "comfy_mc_latest_realRN.phl[365]";
+connectAttr "sweater_rotateZ.o" "comfy_mc_latest_realRN.phl[366]";
+connectAttr "sweater_scaleX.o" "comfy_mc_latest_realRN.phl[367]";
+connectAttr "sweater_scaleY.o" "comfy_mc_latest_realRN.phl[368]";
+connectAttr "sweater_scaleZ.o" "comfy_mc_latest_realRN.phl[369]";
+connectAttr "comfy_mc_latest_realRN.phl[370]" "blendShape1Set.dsm" -na;
+connectAttr "blendShape1GroupId.id" "comfy_mc_latest_realRN.phl[371]";
+connectAttr "blendShape1Set.mwc" "comfy_mc_latest_realRN.phl[372]";
+connectAttr "comfy_mc_latest_realRN.phl[373]" "blendShape2Set.dsm" -na;
+connectAttr "blendShape2GroupId.id" "comfy_mc_latest_realRN.phl[374]";
+connectAttr "blendShape2Set.mwc" "comfy_mc_latest_realRN.phl[375]";
+connectAttr "comfy_mc_latest_realRN.phl[376]" "blendShape7Set.dsm" -na;
+connectAttr "blendShape7GroupId.id" "comfy_mc_latest_realRN.phl[377]";
+connectAttr "blendShape7Set.mwc" "comfy_mc_latest_realRN.phl[378]";
+connectAttr "tea_drink_sweater.og[0]" "comfy_mc_latest_realRN.phl[379]";
+connectAttr "comfy_mc_latest_realRN.phl[380]" "comfy_mc_latest_realRN.phl[381]";
+connectAttr "comfy_mc_latest_realRN.phl[382]" "blendShape5Set.dsm" -na;
+connectAttr "blendShape5GroupId.id" "comfy_mc_latest_realRN.phl[383]";
+connectAttr "blendShape5Set.mwc" "comfy_mc_latest_realRN.phl[384]";
+connectAttr "comfy_mc_latest_realRN.phl[385]" "blendShape6Set.dsm" -na;
+connectAttr "blendShape6GroupId.id" "comfy_mc_latest_realRN.phl[386]";
+connectAttr "blendShape6Set.mwc" "comfy_mc_latest_realRN.phl[387]";
+connectAttr "smile_study.og[0]" "comfy_mc_latest_realRN.phl[388]";
+connectAttr "comfy_mc_latest_realRN.phl[389]" "blendShape5GroupParts.ig";
+connectAttr "comfy_mc_latest_realRN.phl[390]" "blendShape1GroupParts.ig";
 connectAttr "master_control_scaleX.o" "comfy_mc_latest_realRN.phl[1]";
 connectAttr "master_control_scaleY.o" "comfy_mc_latest_realRN.phl[2]";
 connectAttr "master_control_scaleZ.o" "comfy_mc_latest_realRN.phl[3]";
-connectAttr "master_control_translateX.o" "comfy_mc_latest_realRN.phl[4]";
-connectAttr "master_control_translateY.o" "comfy_mc_latest_realRN.phl[5]";
-connectAttr "master_control_translateZ.o" "comfy_mc_latest_realRN.phl[6]";
-connectAttr "master_control_rotateY.o" "comfy_mc_latest_realRN.phl[7]";
+connectAttr "master_control_visibility.o" "comfy_mc_latest_realRN.phl[4]";
+connectAttr "master_control_translateX.o" "comfy_mc_latest_realRN.phl[5]";
+connectAttr "master_control_translateY.o" "comfy_mc_latest_realRN.phl[6]";
+connectAttr "master_control_translateZ.o" "comfy_mc_latest_realRN.phl[7]";
 connectAttr "master_control_rotateX.o" "comfy_mc_latest_realRN.phl[8]";
-connectAttr "master_control_rotateZ.o" "comfy_mc_latest_realRN.phl[9]";
-connectAttr "master_control_visibility.o" "comfy_mc_latest_realRN.phl[10]";
+connectAttr "master_control_rotateY.o" "comfy_mc_latest_realRN.phl[9]";
+connectAttr "master_control_rotateZ.o" "comfy_mc_latest_realRN.phl[10]";
 connectAttr "r_arm_pole_vector_translateX.o" "comfy_mc_latest_realRN.phl[11]";
 connectAttr "r_arm_pole_vector_translateY.o" "comfy_mc_latest_realRN.phl[12]";
 connectAttr "r_arm_pole_vector_translateZ.o" "comfy_mc_latest_realRN.phl[13]";
@@ -63323,325 +59845,328 @@ connectAttr "eye_CTRL_rotateZ.o" "comfy_mc_latest_realRN.phl[47]";
 connectAttr "eye_CTRL_scaleX.o" "comfy_mc_latest_realRN.phl[48]";
 connectAttr "eye_CTRL_scaleY.o" "comfy_mc_latest_realRN.phl[49]";
 connectAttr "eye_CTRL_scaleZ.o" "comfy_mc_latest_realRN.phl[50]";
-connectAttr "l_shoulder_ctrl1_translateX.o" "comfy_mc_latest_realRN.phl[51]";
-connectAttr "l_shoulder_ctrl1_translateY.o" "comfy_mc_latest_realRN.phl[52]";
-connectAttr "l_shoulder_ctrl1_translateZ.o" "comfy_mc_latest_realRN.phl[53]";
-connectAttr "l_shoulder_ctrl1_rotateX.o" "comfy_mc_latest_realRN.phl[54]";
-connectAttr "l_shoulder_ctrl1_rotateY.o" "comfy_mc_latest_realRN.phl[55]";
-connectAttr "l_shoulder_ctrl1_rotateZ.o" "comfy_mc_latest_realRN.phl[56]";
-connectAttr "l_shoulder_ctrl1_scaleX.o" "comfy_mc_latest_realRN.phl[57]";
-connectAttr "l_shoulder_ctrl1_scaleY.o" "comfy_mc_latest_realRN.phl[58]";
-connectAttr "l_shoulder_ctrl1_scaleZ.o" "comfy_mc_latest_realRN.phl[59]";
-connectAttr "l_shoulder_ctrl1_visibility.o" "comfy_mc_latest_realRN.phl[60]";
-connectAttr "r_shoulder_ctrl1_translateY.o" "comfy_mc_latest_realRN.phl[61]";
-connectAttr "r_shoulder_ctrl1_translateX.o" "comfy_mc_latest_realRN.phl[62]";
-connectAttr "r_shoulder_ctrl1_translateZ.o" "comfy_mc_latest_realRN.phl[63]";
-connectAttr "r_shoulder_ctrl1_rotateX.o" "comfy_mc_latest_realRN.phl[64]";
-connectAttr "r_shoulder_ctrl1_rotateY.o" "comfy_mc_latest_realRN.phl[65]";
-connectAttr "r_shoulder_ctrl1_rotateZ.o" "comfy_mc_latest_realRN.phl[66]";
-connectAttr "r_shoulder_ctrl1_scaleX.o" "comfy_mc_latest_realRN.phl[67]";
-connectAttr "r_shoulder_ctrl1_scaleY.o" "comfy_mc_latest_realRN.phl[68]";
-connectAttr "r_shoulder_ctrl1_scaleZ.o" "comfy_mc_latest_realRN.phl[69]";
-connectAttr "r_shoulder_ctrl1_visibility.o" "comfy_mc_latest_realRN.phl[70]";
-connectAttr "cog_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[71]";
-connectAttr "cog_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[72]";
-connectAttr "cog_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[73]";
-connectAttr "cog_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[74]";
-connectAttr "cog_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[75]";
-connectAttr "cog_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[76]";
-connectAttr "cog_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[77]";
-connectAttr "cog_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[78]";
-connectAttr "cog_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[79]";
-connectAttr "cog_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[80]";
-connectAttr "l_leg_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[81]";
-connectAttr "l_leg_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[82]";
-connectAttr "l_leg_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[83]";
-connectAttr "l_leg_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[84]";
-connectAttr "l_leg_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[85]";
-connectAttr "l_leg_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[86]";
-connectAttr "l_knee_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[87]";
-connectAttr "l_knee_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[88]";
-connectAttr "l_knee_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[89]";
-connectAttr "l_knee_fk_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[90]";
-connectAttr "l_knee_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[91]";
-connectAttr "l_knee_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[92]";
-connectAttr "l_knee_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[93]";
-connectAttr "r_leg_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[94]";
-connectAttr "r_leg_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[95]";
-connectAttr "r_leg_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[96]";
-connectAttr "r_leg_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[97]";
-connectAttr "r_leg_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[98]";
-connectAttr "r_leg_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[99]";
-connectAttr "r_knee_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[100]";
-connectAttr "r_knee_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[101]";
-connectAttr "r_knee_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[102]";
-connectAttr "r_knee_fk_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[103]";
-connectAttr "r_knee_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[104]";
-connectAttr "r_knee_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[105]";
-connectAttr "r_knee_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[106]";
-connectAttr "spine_fk_ctrl_1_rotateX.o" "comfy_mc_latest_realRN.phl[107]";
-connectAttr "spine_fk_ctrl_1_rotateY.o" "comfy_mc_latest_realRN.phl[108]";
-connectAttr "spine_fk_ctrl_1_rotateZ.o" "comfy_mc_latest_realRN.phl[109]";
-connectAttr "spine_fk_ctrl_1_scaleX.o" "comfy_mc_latest_realRN.phl[110]";
-connectAttr "spine_fk_ctrl_1_scaleY.o" "comfy_mc_latest_realRN.phl[111]";
-connectAttr "spine_fk_ctrl_1_scaleZ.o" "comfy_mc_latest_realRN.phl[112]";
-connectAttr "spine_fk_ctrl_1_visibility.o" "comfy_mc_latest_realRN.phl[113]";
-connectAttr "comfy_mc_latest_realRN.phl[114]" "teacup_parentConstraint1.tg[0].tr"
+connectAttr "teeth_eyes.di" "comfy_mc_latest_realRN.phl[51]";
+connectAttr "teeth_eyes.di" "comfy_mc_latest_realRN.phl[52]";
+connectAttr "l_shoulder_ctrl1_translateX.o" "comfy_mc_latest_realRN.phl[53]";
+connectAttr "l_shoulder_ctrl1_translateY.o" "comfy_mc_latest_realRN.phl[54]";
+connectAttr "l_shoulder_ctrl1_translateZ.o" "comfy_mc_latest_realRN.phl[55]";
+connectAttr "l_shoulder_ctrl1_rotateX.o" "comfy_mc_latest_realRN.phl[56]";
+connectAttr "l_shoulder_ctrl1_rotateY.o" "comfy_mc_latest_realRN.phl[57]";
+connectAttr "l_shoulder_ctrl1_rotateZ.o" "comfy_mc_latest_realRN.phl[58]";
+connectAttr "l_shoulder_ctrl1_scaleX.o" "comfy_mc_latest_realRN.phl[59]";
+connectAttr "l_shoulder_ctrl1_scaleY.o" "comfy_mc_latest_realRN.phl[60]";
+connectAttr "l_shoulder_ctrl1_scaleZ.o" "comfy_mc_latest_realRN.phl[61]";
+connectAttr "l_shoulder_ctrl1_visibility.o" "comfy_mc_latest_realRN.phl[62]";
+connectAttr "r_shoulder_ctrl1_translateY.o" "comfy_mc_latest_realRN.phl[63]";
+connectAttr "r_shoulder_ctrl1_translateX.o" "comfy_mc_latest_realRN.phl[64]";
+connectAttr "r_shoulder_ctrl1_translateZ.o" "comfy_mc_latest_realRN.phl[65]";
+connectAttr "r_shoulder_ctrl1_rotateX.o" "comfy_mc_latest_realRN.phl[66]";
+connectAttr "r_shoulder_ctrl1_rotateY.o" "comfy_mc_latest_realRN.phl[67]";
+connectAttr "r_shoulder_ctrl1_rotateZ.o" "comfy_mc_latest_realRN.phl[68]";
+connectAttr "r_shoulder_ctrl1_scaleX.o" "comfy_mc_latest_realRN.phl[69]";
+connectAttr "r_shoulder_ctrl1_scaleY.o" "comfy_mc_latest_realRN.phl[70]";
+connectAttr "r_shoulder_ctrl1_scaleZ.o" "comfy_mc_latest_realRN.phl[71]";
+connectAttr "r_shoulder_ctrl1_visibility.o" "comfy_mc_latest_realRN.phl[72]";
+connectAttr "cog_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[73]";
+connectAttr "cog_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[74]";
+connectAttr "cog_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[75]";
+connectAttr "cog_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[76]";
+connectAttr "cog_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[77]";
+connectAttr "cog_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[78]";
+connectAttr "cog_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[79]";
+connectAttr "cog_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[80]";
+connectAttr "cog_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[81]";
+connectAttr "cog_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[82]";
+connectAttr "l_leg_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[83]";
+connectAttr "l_leg_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[84]";
+connectAttr "l_leg_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[85]";
+connectAttr "l_leg_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[86]";
+connectAttr "l_leg_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[87]";
+connectAttr "l_leg_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[88]";
+connectAttr "l_knee_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[89]";
+connectAttr "l_knee_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[90]";
+connectAttr "l_knee_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[91]";
+connectAttr "l_knee_fk_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[92]";
+connectAttr "l_knee_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[93]";
+connectAttr "l_knee_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[94]";
+connectAttr "l_knee_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[95]";
+connectAttr "r_leg_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[96]";
+connectAttr "r_leg_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[97]";
+connectAttr "r_leg_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[98]";
+connectAttr "r_leg_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[99]";
+connectAttr "r_leg_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[100]";
+connectAttr "r_leg_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[101]";
+connectAttr "r_knee_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[102]";
+connectAttr "r_knee_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[103]";
+connectAttr "r_knee_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[104]";
+connectAttr "r_knee_fk_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[105]";
+connectAttr "r_knee_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[106]";
+connectAttr "r_knee_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[107]";
+connectAttr "r_knee_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[108]";
+connectAttr "spine_fk_ctrl_1_rotateX.o" "comfy_mc_latest_realRN.phl[109]";
+connectAttr "spine_fk_ctrl_1_rotateY.o" "comfy_mc_latest_realRN.phl[110]";
+connectAttr "spine_fk_ctrl_1_rotateZ.o" "comfy_mc_latest_realRN.phl[111]";
+connectAttr "spine_fk_ctrl_1_scaleX.o" "comfy_mc_latest_realRN.phl[112]";
+connectAttr "spine_fk_ctrl_1_scaleY.o" "comfy_mc_latest_realRN.phl[113]";
+connectAttr "spine_fk_ctrl_1_scaleZ.o" "comfy_mc_latest_realRN.phl[114]";
+connectAttr "spine_fk_ctrl_1_visibility.o" "comfy_mc_latest_realRN.phl[115]";
+connectAttr "comfy_mc_latest_realRN.phl[116]" "teacup_parentConstraint1.tg[0].tr"
 		;
-connectAttr "r_wrist_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[115]";
-connectAttr "r_wrist_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[116]";
-connectAttr "r_wrist_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[117]";
-connectAttr "comfy_mc_latest_realRN.phl[118]" "teacup_parentConstraint1.tg[0].tro"
+connectAttr "r_wrist_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[117]";
+connectAttr "r_wrist_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[118]";
+connectAttr "r_wrist_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[119]";
+connectAttr "comfy_mc_latest_realRN.phl[120]" "teacup_parentConstraint1.tg[0].tro"
 		;
-connectAttr "comfy_mc_latest_realRN.phl[119]" "teacup_parentConstraint1.tg[0].tpm"
+connectAttr "comfy_mc_latest_realRN.phl[121]" "teacup_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "r_wrist_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[120]";
-connectAttr "comfy_mc_latest_realRN.phl[121]" "teacup_parentConstraint1.tg[0].tt"
+connectAttr "r_wrist_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[122]";
+connectAttr "comfy_mc_latest_realRN.phl[123]" "teacup_parentConstraint1.tg[0].tt"
 		;
-connectAttr "r_wrist_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[122]";
-connectAttr "r_wrist_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[123]";
-connectAttr "r_wrist_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[124]";
-connectAttr "comfy_mc_latest_realRN.phl[125]" "teacup_parentConstraint1.tg[0].ts"
+connectAttr "r_wrist_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[124]";
+connectAttr "r_wrist_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[125]";
+connectAttr "r_wrist_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[126]";
+connectAttr "comfy_mc_latest_realRN.phl[127]" "teacup_parentConstraint1.tg[0].ts"
 		;
-connectAttr "r_wrist_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[126]";
-connectAttr "r_wrist_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[127]";
-connectAttr "r_wrist_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[128]";
-connectAttr "comfy_mc_latest_realRN.phl[129]" "teacup_parentConstraint1.tg[0].trp"
+connectAttr "r_wrist_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[128]";
+connectAttr "r_wrist_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[129]";
+connectAttr "r_wrist_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[130]";
+connectAttr "comfy_mc_latest_realRN.phl[131]" "teacup_parentConstraint1.tg[0].trp"
 		;
-connectAttr "comfy_mc_latest_realRN.phl[130]" "teacup_parentConstraint1.tg[0].trt"
+connectAttr "comfy_mc_latest_realRN.phl[132]" "teacup_parentConstraint1.tg[0].trt"
 		;
-connectAttr "r_pinky_rotateX.o" "comfy_mc_latest_realRN.phl[131]";
-connectAttr "r_pinky_rotateY.o" "comfy_mc_latest_realRN.phl[132]";
-connectAttr "r_pinky_rotateZ.o" "comfy_mc_latest_realRN.phl[133]";
-connectAttr "r_pinky_visibility.o" "comfy_mc_latest_realRN.phl[134]";
-connectAttr "r_pinky_translateX.o" "comfy_mc_latest_realRN.phl[135]";
-connectAttr "r_pinky_translateY.o" "comfy_mc_latest_realRN.phl[136]";
-connectAttr "r_pinky_translateZ.o" "comfy_mc_latest_realRN.phl[137]";
-connectAttr "r_pinky_scaleX.o" "comfy_mc_latest_realRN.phl[138]";
-connectAttr "r_pinky_scaleY.o" "comfy_mc_latest_realRN.phl[139]";
-connectAttr "r_pinky_scaleZ.o" "comfy_mc_latest_realRN.phl[140]";
-connectAttr "r_thumb_rotateX.o" "comfy_mc_latest_realRN.phl[141]";
-connectAttr "r_thumb_rotateY.o" "comfy_mc_latest_realRN.phl[142]";
-connectAttr "r_thumb_rotateZ.o" "comfy_mc_latest_realRN.phl[143]";
-connectAttr "r_thumb_translateX.o" "comfy_mc_latest_realRN.phl[144]";
-connectAttr "r_thumb_translateY.o" "comfy_mc_latest_realRN.phl[145]";
-connectAttr "r_thumb_translateZ.o" "comfy_mc_latest_realRN.phl[146]";
-connectAttr "r_thumb_visibility.o" "comfy_mc_latest_realRN.phl[147]";
-connectAttr "r_thumb_scaleX.o" "comfy_mc_latest_realRN.phl[148]";
-connectAttr "r_thumb_scaleY.o" "comfy_mc_latest_realRN.phl[149]";
-connectAttr "r_thumb_scaleZ.o" "comfy_mc_latest_realRN.phl[150]";
-connectAttr "r_index_2_rotateX.o" "comfy_mc_latest_realRN.phl[151]";
-connectAttr "r_index_2_rotateY.o" "comfy_mc_latest_realRN.phl[152]";
-connectAttr "r_index_2_rotateZ.o" "comfy_mc_latest_realRN.phl[153]";
-connectAttr "r_index_2_translateX.o" "comfy_mc_latest_realRN.phl[154]";
-connectAttr "r_index_2_translateY.o" "comfy_mc_latest_realRN.phl[155]";
-connectAttr "r_index_2_translateZ.o" "comfy_mc_latest_realRN.phl[156]";
-connectAttr "r_index_2_visibility.o" "comfy_mc_latest_realRN.phl[157]";
-connectAttr "r_index_2_scaleX.o" "comfy_mc_latest_realRN.phl[158]";
-connectAttr "r_index_2_scaleY.o" "comfy_mc_latest_realRN.phl[159]";
-connectAttr "r_index_2_scaleZ.o" "comfy_mc_latest_realRN.phl[160]";
-connectAttr "r_index_3_rotateX.o" "comfy_mc_latest_realRN.phl[161]";
-connectAttr "r_index_3_rotateY.o" "comfy_mc_latest_realRN.phl[162]";
-connectAttr "r_index_3_rotateZ.o" "comfy_mc_latest_realRN.phl[163]";
-connectAttr "r_index_3_visibility.o" "comfy_mc_latest_realRN.phl[164]";
-connectAttr "r_index_3_translateX.o" "comfy_mc_latest_realRN.phl[165]";
-connectAttr "r_index_3_translateY.o" "comfy_mc_latest_realRN.phl[166]";
-connectAttr "r_index_3_translateZ.o" "comfy_mc_latest_realRN.phl[167]";
-connectAttr "r_index_3_scaleX.o" "comfy_mc_latest_realRN.phl[168]";
-connectAttr "r_index_3_scaleY.o" "comfy_mc_latest_realRN.phl[169]";
-connectAttr "r_index_3_scaleZ.o" "comfy_mc_latest_realRN.phl[170]";
-connectAttr "r_middle_rotateX.o" "comfy_mc_latest_realRN.phl[171]";
-connectAttr "r_middle_rotateY.o" "comfy_mc_latest_realRN.phl[172]";
-connectAttr "r_middle_rotateZ.o" "comfy_mc_latest_realRN.phl[173]";
-connectAttr "r_middle_translateX.o" "comfy_mc_latest_realRN.phl[174]";
-connectAttr "r_middle_translateY.o" "comfy_mc_latest_realRN.phl[175]";
-connectAttr "r_middle_translateZ.o" "comfy_mc_latest_realRN.phl[176]";
-connectAttr "r_middle_visibility.o" "comfy_mc_latest_realRN.phl[177]";
-connectAttr "r_middle_scaleX.o" "comfy_mc_latest_realRN.phl[178]";
-connectAttr "r_middle_scaleY.o" "comfy_mc_latest_realRN.phl[179]";
-connectAttr "r_middle_scaleZ.o" "comfy_mc_latest_realRN.phl[180]";
-connectAttr "r_middle_2_rotateX.o" "comfy_mc_latest_realRN.phl[181]";
-connectAttr "r_middle_2_rotateY.o" "comfy_mc_latest_realRN.phl[182]";
-connectAttr "r_middle_2_rotateZ.o" "comfy_mc_latest_realRN.phl[183]";
-connectAttr "r_middle_2_translateX.o" "comfy_mc_latest_realRN.phl[184]";
-connectAttr "r_middle_2_translateY.o" "comfy_mc_latest_realRN.phl[185]";
-connectAttr "r_middle_2_translateZ.o" "comfy_mc_latest_realRN.phl[186]";
-connectAttr "r_middle_2_visibility.o" "comfy_mc_latest_realRN.phl[187]";
-connectAttr "r_middle_2_scaleX.o" "comfy_mc_latest_realRN.phl[188]";
-connectAttr "r_middle_2_scaleY.o" "comfy_mc_latest_realRN.phl[189]";
-connectAttr "r_middle_2_scaleZ.o" "comfy_mc_latest_realRN.phl[190]";
-connectAttr "r_middle_3_rotateX.o" "comfy_mc_latest_realRN.phl[191]";
-connectAttr "r_middle_3_rotateY.o" "comfy_mc_latest_realRN.phl[192]";
-connectAttr "r_middle_3_rotateZ.o" "comfy_mc_latest_realRN.phl[193]";
-connectAttr "r_middle_3_visibility.o" "comfy_mc_latest_realRN.phl[194]";
-connectAttr "r_middle_3_translateX.o" "comfy_mc_latest_realRN.phl[195]";
-connectAttr "r_middle_3_translateY.o" "comfy_mc_latest_realRN.phl[196]";
-connectAttr "r_middle_3_translateZ.o" "comfy_mc_latest_realRN.phl[197]";
-connectAttr "r_middle_3_scaleX.o" "comfy_mc_latest_realRN.phl[198]";
-connectAttr "r_middle_3_scaleY.o" "comfy_mc_latest_realRN.phl[199]";
-connectAttr "r_middle_3_scaleZ.o" "comfy_mc_latest_realRN.phl[200]";
-connectAttr "r_ring_rotateX.o" "comfy_mc_latest_realRN.phl[201]";
-connectAttr "r_ring_rotateY.o" "comfy_mc_latest_realRN.phl[202]";
-connectAttr "r_ring_rotateZ.o" "comfy_mc_latest_realRN.phl[203]";
-connectAttr "r_ring_visibility.o" "comfy_mc_latest_realRN.phl[204]";
-connectAttr "r_ring_translateX.o" "comfy_mc_latest_realRN.phl[205]";
-connectAttr "r_ring_translateY.o" "comfy_mc_latest_realRN.phl[206]";
-connectAttr "r_ring_translateZ.o" "comfy_mc_latest_realRN.phl[207]";
-connectAttr "r_ring_scaleX.o" "comfy_mc_latest_realRN.phl[208]";
-connectAttr "r_ring_scaleY.o" "comfy_mc_latest_realRN.phl[209]";
-connectAttr "r_ring_scaleZ.o" "comfy_mc_latest_realRN.phl[210]";
-connectAttr "r_ring_2_rotateX.o" "comfy_mc_latest_realRN.phl[211]";
-connectAttr "r_ring_2_rotateY.o" "comfy_mc_latest_realRN.phl[212]";
-connectAttr "r_ring_2_rotateZ.o" "comfy_mc_latest_realRN.phl[213]";
-connectAttr "r_ring_2_visibility.o" "comfy_mc_latest_realRN.phl[214]";
-connectAttr "r_ring_2_translateX.o" "comfy_mc_latest_realRN.phl[215]";
-connectAttr "r_ring_2_translateY.o" "comfy_mc_latest_realRN.phl[216]";
-connectAttr "r_ring_2_translateZ.o" "comfy_mc_latest_realRN.phl[217]";
-connectAttr "r_ring_2_scaleX.o" "comfy_mc_latest_realRN.phl[218]";
-connectAttr "r_ring_2_scaleY.o" "comfy_mc_latest_realRN.phl[219]";
-connectAttr "r_ring_2_scaleZ.o" "comfy_mc_latest_realRN.phl[220]";
-connectAttr "l_wrist_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[221]";
-connectAttr "l_wrist_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[222]";
-connectAttr "l_wrist_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[223]";
-connectAttr "l_wrist_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[224]";
-connectAttr "l_wrist_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[225]";
-connectAttr "l_wrist_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[226]";
-connectAttr "l_wrist_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[227]";
-connectAttr "l_wrist_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[228]";
-connectAttr "l_wrist_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[229]";
-connectAttr "l_wrist_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[230]";
-connectAttr "l_index_2_rotateX.o" "comfy_mc_latest_realRN.phl[231]";
-connectAttr "l_index_2_rotateY.o" "comfy_mc_latest_realRN.phl[232]";
-connectAttr "l_index_2_rotateZ.o" "comfy_mc_latest_realRN.phl[233]";
-connectAttr "l_index_2_visibility.o" "comfy_mc_latest_realRN.phl[234]";
-connectAttr "l_index_2_scaleX.o" "comfy_mc_latest_realRN.phl[235]";
-connectAttr "l_index_2_scaleY.o" "comfy_mc_latest_realRN.phl[236]";
-connectAttr "l_index_2_scaleZ.o" "comfy_mc_latest_realRN.phl[237]";
-connectAttr "l_middle_2_rotateX.o" "comfy_mc_latest_realRN.phl[238]";
-connectAttr "l_middle_2_rotateY.o" "comfy_mc_latest_realRN.phl[239]";
-connectAttr "l_middle_2_rotateZ.o" "comfy_mc_latest_realRN.phl[240]";
-connectAttr "l_middle_2_visibility.o" "comfy_mc_latest_realRN.phl[241]";
-connectAttr "l_middle_2_scaleX.o" "comfy_mc_latest_realRN.phl[242]";
-connectAttr "l_middle_2_scaleY.o" "comfy_mc_latest_realRN.phl[243]";
-connectAttr "l_middle_2_scaleZ.o" "comfy_mc_latest_realRN.phl[244]";
-connectAttr "l_ring_2_rotateX.o" "comfy_mc_latest_realRN.phl[245]";
-connectAttr "l_ring_2_rotateY.o" "comfy_mc_latest_realRN.phl[246]";
-connectAttr "l_ring_2_rotateZ.o" "comfy_mc_latest_realRN.phl[247]";
-connectAttr "l_ring_2_visibility.o" "comfy_mc_latest_realRN.phl[248]";
-connectAttr "l_ring_2_scaleX.o" "comfy_mc_latest_realRN.phl[249]";
-connectAttr "l_ring_2_scaleY.o" "comfy_mc_latest_realRN.phl[250]";
-connectAttr "l_ring_2_scaleZ.o" "comfy_mc_latest_realRN.phl[251]";
-connectAttr "l_pinky_2_rotateX.o" "comfy_mc_latest_realRN.phl[252]";
-connectAttr "l_pinky_2_rotateY.o" "comfy_mc_latest_realRN.phl[253]";
-connectAttr "l_pinky_2_rotateZ.o" "comfy_mc_latest_realRN.phl[254]";
-connectAttr "l_pinky_2_visibility.o" "comfy_mc_latest_realRN.phl[255]";
-connectAttr "l_pinky_2_scaleX.o" "comfy_mc_latest_realRN.phl[256]";
-connectAttr "l_pinky_2_scaleY.o" "comfy_mc_latest_realRN.phl[257]";
-connectAttr "l_pinky_2_scaleZ.o" "comfy_mc_latest_realRN.phl[258]";
-connectAttr "breathing_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[259]";
-connectAttr "breathing_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[260]";
-connectAttr "breathing_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[261]";
-connectAttr "pairBlend2.otx" "comfy_mc_latest_realRN.phl[262]";
-connectAttr "pairBlend2.oty" "comfy_mc_latest_realRN.phl[263]";
-connectAttr "pairBlend2.otz" "comfy_mc_latest_realRN.phl[264]";
-connectAttr "breathing_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[265]";
-connectAttr "breathing_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[266]";
-connectAttr "breathing_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[267]";
-connectAttr "breathing_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[268]";
-connectAttr "comfy_mc_latest_realRN.phl[269]" "pairBlend2.w";
-connectAttr "breathing_ctrl_blendPoint1.o" "comfy_mc_latest_realRN.phl[270]";
-connectAttr "comfy_mc_latest_realRN.phl[271]" "pairBlend2.itx2";
-connectAttr "comfy_mc_latest_realRN.phl[272]" "pairBlend2.ity2";
-connectAttr "comfy_mc_latest_realRN.phl[273]" "pairBlend2.itz2";
-connectAttr "nurbsCircle1_Blink.o" "comfy_mc_latest_realRN.phl[274]";
-connectAttr "nurbsCircle1_translateX.o" "comfy_mc_latest_realRN.phl[275]";
-connectAttr "nurbsCircle1_translateY.o" "comfy_mc_latest_realRN.phl[276]";
-connectAttr "nurbsCircle1_translateZ.o" "comfy_mc_latest_realRN.phl[277]";
-connectAttr "nurbsCircle1_rotateX.o" "comfy_mc_latest_realRN.phl[278]";
-connectAttr "nurbsCircle1_rotateY.o" "comfy_mc_latest_realRN.phl[279]";
-connectAttr "nurbsCircle1_rotateZ.o" "comfy_mc_latest_realRN.phl[280]";
-connectAttr "nurbsCircle1_scaleX.o" "comfy_mc_latest_realRN.phl[281]";
-connectAttr "nurbsCircle1_scaleY.o" "comfy_mc_latest_realRN.phl[282]";
-connectAttr "nurbsCircle1_scaleZ.o" "comfy_mc_latest_realRN.phl[283]";
-connectAttr "nurbsCircle1_visibility.o" "comfy_mc_latest_realRN.phl[284]";
-connectAttr "nurbsCircle2_translateX.o" "comfy_mc_latest_realRN.phl[285]";
-connectAttr "nurbsCircle2_translateY.o" "comfy_mc_latest_realRN.phl[286]";
-connectAttr "nurbsCircle2_translateZ.o" "comfy_mc_latest_realRN.phl[287]";
-connectAttr "nurbsCircle2_rotateX.o" "comfy_mc_latest_realRN.phl[288]";
-connectAttr "nurbsCircle2_rotateY.o" "comfy_mc_latest_realRN.phl[289]";
-connectAttr "nurbsCircle2_rotateZ.o" "comfy_mc_latest_realRN.phl[290]";
-connectAttr "nurbsCircle2_scaleX.o" "comfy_mc_latest_realRN.phl[291]";
-connectAttr "nurbsCircle2_scaleY.o" "comfy_mc_latest_realRN.phl[292]";
-connectAttr "nurbsCircle2_scaleZ.o" "comfy_mc_latest_realRN.phl[293]";
-connectAttr "nurbsCircle2_visibility.o" "comfy_mc_latest_realRN.phl[294]";
-connectAttr "nurbsCircle7_Blink.o" "comfy_mc_latest_realRN.phl[295]";
-connectAttr "nurbsCircle7_translateX.o" "comfy_mc_latest_realRN.phl[296]";
-connectAttr "nurbsCircle7_translateY.o" "comfy_mc_latest_realRN.phl[297]";
-connectAttr "nurbsCircle7_translateZ.o" "comfy_mc_latest_realRN.phl[298]";
-connectAttr "nurbsCircle7_rotateX.o" "comfy_mc_latest_realRN.phl[299]";
-connectAttr "nurbsCircle7_rotateY.o" "comfy_mc_latest_realRN.phl[300]";
-connectAttr "nurbsCircle7_rotateZ.o" "comfy_mc_latest_realRN.phl[301]";
-connectAttr "nurbsCircle7_scaleX.o" "comfy_mc_latest_realRN.phl[302]";
-connectAttr "nurbsCircle7_scaleY.o" "comfy_mc_latest_realRN.phl[303]";
-connectAttr "nurbsCircle7_scaleZ.o" "comfy_mc_latest_realRN.phl[304]";
-connectAttr "nurbsCircle7_visibility.o" "comfy_mc_latest_realRN.phl[305]";
-connectAttr "nurbsCircle12_translateX.o" "comfy_mc_latest_realRN.phl[306]";
-connectAttr "nurbsCircle12_translateY.o" "comfy_mc_latest_realRN.phl[307]";
-connectAttr "nurbsCircle12_translateZ.o" "comfy_mc_latest_realRN.phl[308]";
-connectAttr "nurbsCircle12_rotateX.o" "comfy_mc_latest_realRN.phl[309]";
-connectAttr "nurbsCircle12_rotateY.o" "comfy_mc_latest_realRN.phl[310]";
-connectAttr "nurbsCircle12_rotateZ.o" "comfy_mc_latest_realRN.phl[311]";
-connectAttr "nurbsCircle12_scaleX.o" "comfy_mc_latest_realRN.phl[312]";
-connectAttr "nurbsCircle12_scaleY.o" "comfy_mc_latest_realRN.phl[313]";
-connectAttr "nurbsCircle12_scaleZ.o" "comfy_mc_latest_realRN.phl[314]";
-connectAttr "nurbsCircle12_visibility.o" "comfy_mc_latest_realRN.phl[315]";
-connectAttr "mouth4_translateX.o" "comfy_mc_latest_realRN.phl[316]";
-connectAttr "mouth4_translateY.o" "comfy_mc_latest_realRN.phl[317]";
-connectAttr "mouth4_translateZ.o" "comfy_mc_latest_realRN.phl[318]";
-connectAttr "mouth4_rotateX.o" "comfy_mc_latest_realRN.phl[319]";
-connectAttr "mouth4_rotateY.o" "comfy_mc_latest_realRN.phl[320]";
-connectAttr "mouth4_rotateZ.o" "comfy_mc_latest_realRN.phl[321]";
-connectAttr "mouth4_scaleX.o" "comfy_mc_latest_realRN.phl[322]";
-connectAttr "mouth4_scaleY.o" "comfy_mc_latest_realRN.phl[323]";
-connectAttr "mouth4_scaleZ.o" "comfy_mc_latest_realRN.phl[324]";
-connectAttr "mouth4_visibility.o" "comfy_mc_latest_realRN.phl[325]";
-connectAttr "mouth5_translateX.o" "comfy_mc_latest_realRN.phl[326]";
-connectAttr "mouth5_translateY.o" "comfy_mc_latest_realRN.phl[327]";
-connectAttr "mouth5_translateZ.o" "comfy_mc_latest_realRN.phl[328]";
-connectAttr "mouth5_rotateX.o" "comfy_mc_latest_realRN.phl[329]";
-connectAttr "mouth5_rotateY.o" "comfy_mc_latest_realRN.phl[330]";
-connectAttr "mouth5_rotateZ.o" "comfy_mc_latest_realRN.phl[331]";
-connectAttr "mouth5_scaleX.o" "comfy_mc_latest_realRN.phl[332]";
-connectAttr "mouth5_scaleY.o" "comfy_mc_latest_realRN.phl[333]";
-connectAttr "mouth5_scaleZ.o" "comfy_mc_latest_realRN.phl[334]";
-connectAttr "mouth5_visibility.o" "comfy_mc_latest_realRN.phl[335]";
-connectAttr "mouth7_translateX.o" "comfy_mc_latest_realRN.phl[336]";
-connectAttr "mouth7_translateY.o" "comfy_mc_latest_realRN.phl[337]";
-connectAttr "mouth7_translateZ.o" "comfy_mc_latest_realRN.phl[338]";
-connectAttr "mouth7_rotateX.o" "comfy_mc_latest_realRN.phl[339]";
-connectAttr "mouth7_rotateY.o" "comfy_mc_latest_realRN.phl[340]";
-connectAttr "mouth7_rotateZ.o" "comfy_mc_latest_realRN.phl[341]";
-connectAttr "mouth7_scaleX.o" "comfy_mc_latest_realRN.phl[342]";
-connectAttr "mouth7_scaleY.o" "comfy_mc_latest_realRN.phl[343]";
-connectAttr "mouth7_scaleZ.o" "comfy_mc_latest_realRN.phl[344]";
-connectAttr "mouth7_visibility.o" "comfy_mc_latest_realRN.phl[345]";
-connectAttr "mouth6_translateX.o" "comfy_mc_latest_realRN.phl[346]";
-connectAttr "mouth6_translateY.o" "comfy_mc_latest_realRN.phl[347]";
-connectAttr "mouth6_translateZ.o" "comfy_mc_latest_realRN.phl[348]";
-connectAttr "mouth6_rotateX.o" "comfy_mc_latest_realRN.phl[349]";
-connectAttr "mouth6_rotateY.o" "comfy_mc_latest_realRN.phl[350]";
-connectAttr "mouth6_rotateZ.o" "comfy_mc_latest_realRN.phl[351]";
-connectAttr "mouth6_scaleX.o" "comfy_mc_latest_realRN.phl[352]";
-connectAttr "mouth6_scaleY.o" "comfy_mc_latest_realRN.phl[353]";
-connectAttr "mouth6_scaleZ.o" "comfy_mc_latest_realRN.phl[354]";
-connectAttr "mouth6_visibility.o" "comfy_mc_latest_realRN.phl[355]";
-connectAttr "blendShape4_envelope.o" "comfy_mc_latest_realRN.phl[356]";
-connectAttr "bedroom_SET_latest1:polyCube1.out" "bedroom_SET_latest1:RoofShape.i"
-		;
-connectAttr "bedroom_SET_latest1:fox:groupId1.id" "bedroom_SET_latest1:fox:fox_meshShape.iog.og[0].gid"
-		;
-connectAttr "bedroom_SET_latest1:fox:initialShadingGroup.mwc" "bedroom_SET_latest1:fox:fox_meshShape.iog.og[0].gco"
-		;
+connectAttr "r_pinky_rotateX.o" "comfy_mc_latest_realRN.phl[133]";
+connectAttr "r_pinky_rotateY.o" "comfy_mc_latest_realRN.phl[134]";
+connectAttr "r_pinky_rotateZ.o" "comfy_mc_latest_realRN.phl[135]";
+connectAttr "r_pinky_visibility.o" "comfy_mc_latest_realRN.phl[136]";
+connectAttr "r_pinky_translateX.o" "comfy_mc_latest_realRN.phl[137]";
+connectAttr "r_pinky_translateY.o" "comfy_mc_latest_realRN.phl[138]";
+connectAttr "r_pinky_translateZ.o" "comfy_mc_latest_realRN.phl[139]";
+connectAttr "r_pinky_scaleX.o" "comfy_mc_latest_realRN.phl[140]";
+connectAttr "r_pinky_scaleY.o" "comfy_mc_latest_realRN.phl[141]";
+connectAttr "r_pinky_scaleZ.o" "comfy_mc_latest_realRN.phl[142]";
+connectAttr "r_thumb_rotateX.o" "comfy_mc_latest_realRN.phl[143]";
+connectAttr "r_thumb_rotateY.o" "comfy_mc_latest_realRN.phl[144]";
+connectAttr "r_thumb_rotateZ.o" "comfy_mc_latest_realRN.phl[145]";
+connectAttr "r_thumb_translateX.o" "comfy_mc_latest_realRN.phl[146]";
+connectAttr "r_thumb_translateY.o" "comfy_mc_latest_realRN.phl[147]";
+connectAttr "r_thumb_translateZ.o" "comfy_mc_latest_realRN.phl[148]";
+connectAttr "r_thumb_visibility.o" "comfy_mc_latest_realRN.phl[149]";
+connectAttr "r_thumb_scaleX.o" "comfy_mc_latest_realRN.phl[150]";
+connectAttr "r_thumb_scaleY.o" "comfy_mc_latest_realRN.phl[151]";
+connectAttr "r_thumb_scaleZ.o" "comfy_mc_latest_realRN.phl[152]";
+connectAttr "r_index_2_rotateX.o" "comfy_mc_latest_realRN.phl[153]";
+connectAttr "r_index_2_rotateY.o" "comfy_mc_latest_realRN.phl[154]";
+connectAttr "r_index_2_rotateZ.o" "comfy_mc_latest_realRN.phl[155]";
+connectAttr "r_index_2_translateX.o" "comfy_mc_latest_realRN.phl[156]";
+connectAttr "r_index_2_translateY.o" "comfy_mc_latest_realRN.phl[157]";
+connectAttr "r_index_2_translateZ.o" "comfy_mc_latest_realRN.phl[158]";
+connectAttr "r_index_2_visibility.o" "comfy_mc_latest_realRN.phl[159]";
+connectAttr "r_index_2_scaleX.o" "comfy_mc_latest_realRN.phl[160]";
+connectAttr "r_index_2_scaleY.o" "comfy_mc_latest_realRN.phl[161]";
+connectAttr "r_index_2_scaleZ.o" "comfy_mc_latest_realRN.phl[162]";
+connectAttr "r_index_3_rotateX.o" "comfy_mc_latest_realRN.phl[163]";
+connectAttr "r_index_3_rotateY.o" "comfy_mc_latest_realRN.phl[164]";
+connectAttr "r_index_3_rotateZ.o" "comfy_mc_latest_realRN.phl[165]";
+connectAttr "r_index_3_visibility.o" "comfy_mc_latest_realRN.phl[166]";
+connectAttr "r_index_3_translateX.o" "comfy_mc_latest_realRN.phl[167]";
+connectAttr "r_index_3_translateY.o" "comfy_mc_latest_realRN.phl[168]";
+connectAttr "r_index_3_translateZ.o" "comfy_mc_latest_realRN.phl[169]";
+connectAttr "r_index_3_scaleX.o" "comfy_mc_latest_realRN.phl[170]";
+connectAttr "r_index_3_scaleY.o" "comfy_mc_latest_realRN.phl[171]";
+connectAttr "r_index_3_scaleZ.o" "comfy_mc_latest_realRN.phl[172]";
+connectAttr "r_middle_rotateX.o" "comfy_mc_latest_realRN.phl[173]";
+connectAttr "r_middle_rotateY.o" "comfy_mc_latest_realRN.phl[174]";
+connectAttr "r_middle_rotateZ.o" "comfy_mc_latest_realRN.phl[175]";
+connectAttr "r_middle_translateX.o" "comfy_mc_latest_realRN.phl[176]";
+connectAttr "r_middle_translateY.o" "comfy_mc_latest_realRN.phl[177]";
+connectAttr "r_middle_translateZ.o" "comfy_mc_latest_realRN.phl[178]";
+connectAttr "r_middle_visibility.o" "comfy_mc_latest_realRN.phl[179]";
+connectAttr "r_middle_scaleX.o" "comfy_mc_latest_realRN.phl[180]";
+connectAttr "r_middle_scaleY.o" "comfy_mc_latest_realRN.phl[181]";
+connectAttr "r_middle_scaleZ.o" "comfy_mc_latest_realRN.phl[182]";
+connectAttr "r_middle_2_rotateX.o" "comfy_mc_latest_realRN.phl[183]";
+connectAttr "r_middle_2_rotateY.o" "comfy_mc_latest_realRN.phl[184]";
+connectAttr "r_middle_2_rotateZ.o" "comfy_mc_latest_realRN.phl[185]";
+connectAttr "r_middle_2_translateX.o" "comfy_mc_latest_realRN.phl[186]";
+connectAttr "r_middle_2_translateY.o" "comfy_mc_latest_realRN.phl[187]";
+connectAttr "r_middle_2_translateZ.o" "comfy_mc_latest_realRN.phl[188]";
+connectAttr "r_middle_2_visibility.o" "comfy_mc_latest_realRN.phl[189]";
+connectAttr "r_middle_2_scaleX.o" "comfy_mc_latest_realRN.phl[190]";
+connectAttr "r_middle_2_scaleY.o" "comfy_mc_latest_realRN.phl[191]";
+connectAttr "r_middle_2_scaleZ.o" "comfy_mc_latest_realRN.phl[192]";
+connectAttr "r_middle_3_rotateX.o" "comfy_mc_latest_realRN.phl[193]";
+connectAttr "r_middle_3_rotateY.o" "comfy_mc_latest_realRN.phl[194]";
+connectAttr "r_middle_3_rotateZ.o" "comfy_mc_latest_realRN.phl[195]";
+connectAttr "r_middle_3_visibility.o" "comfy_mc_latest_realRN.phl[196]";
+connectAttr "r_middle_3_translateX.o" "comfy_mc_latest_realRN.phl[197]";
+connectAttr "r_middle_3_translateY.o" "comfy_mc_latest_realRN.phl[198]";
+connectAttr "r_middle_3_translateZ.o" "comfy_mc_latest_realRN.phl[199]";
+connectAttr "r_middle_3_scaleX.o" "comfy_mc_latest_realRN.phl[200]";
+connectAttr "r_middle_3_scaleY.o" "comfy_mc_latest_realRN.phl[201]";
+connectAttr "r_middle_3_scaleZ.o" "comfy_mc_latest_realRN.phl[202]";
+connectAttr "r_ring_rotateX.o" "comfy_mc_latest_realRN.phl[203]";
+connectAttr "r_ring_rotateY.o" "comfy_mc_latest_realRN.phl[204]";
+connectAttr "r_ring_rotateZ.o" "comfy_mc_latest_realRN.phl[205]";
+connectAttr "r_ring_visibility.o" "comfy_mc_latest_realRN.phl[206]";
+connectAttr "r_ring_translateX.o" "comfy_mc_latest_realRN.phl[207]";
+connectAttr "r_ring_translateY.o" "comfy_mc_latest_realRN.phl[208]";
+connectAttr "r_ring_translateZ.o" "comfy_mc_latest_realRN.phl[209]";
+connectAttr "r_ring_scaleX.o" "comfy_mc_latest_realRN.phl[210]";
+connectAttr "r_ring_scaleY.o" "comfy_mc_latest_realRN.phl[211]";
+connectAttr "r_ring_scaleZ.o" "comfy_mc_latest_realRN.phl[212]";
+connectAttr "r_ring_2_rotateX.o" "comfy_mc_latest_realRN.phl[213]";
+connectAttr "r_ring_2_rotateY.o" "comfy_mc_latest_realRN.phl[214]";
+connectAttr "r_ring_2_rotateZ.o" "comfy_mc_latest_realRN.phl[215]";
+connectAttr "r_ring_2_visibility.o" "comfy_mc_latest_realRN.phl[216]";
+connectAttr "r_ring_2_translateX.o" "comfy_mc_latest_realRN.phl[217]";
+connectAttr "r_ring_2_translateY.o" "comfy_mc_latest_realRN.phl[218]";
+connectAttr "r_ring_2_translateZ.o" "comfy_mc_latest_realRN.phl[219]";
+connectAttr "r_ring_2_scaleX.o" "comfy_mc_latest_realRN.phl[220]";
+connectAttr "r_ring_2_scaleY.o" "comfy_mc_latest_realRN.phl[221]";
+connectAttr "r_ring_2_scaleZ.o" "comfy_mc_latest_realRN.phl[222]";
+connectAttr "l_wrist_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[223]";
+connectAttr "l_wrist_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[224]";
+connectAttr "l_wrist_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[225]";
+connectAttr "l_wrist_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[226]";
+connectAttr "l_wrist_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[227]";
+connectAttr "l_wrist_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[228]";
+connectAttr "l_wrist_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[229]";
+connectAttr "l_wrist_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[230]";
+connectAttr "l_wrist_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[231]";
+connectAttr "l_wrist_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[232]";
+connectAttr "l_index_2_rotateX.o" "comfy_mc_latest_realRN.phl[233]";
+connectAttr "l_index_2_rotateY.o" "comfy_mc_latest_realRN.phl[234]";
+connectAttr "l_index_2_rotateZ.o" "comfy_mc_latest_realRN.phl[235]";
+connectAttr "l_index_2_visibility.o" "comfy_mc_latest_realRN.phl[236]";
+connectAttr "l_index_2_scaleX.o" "comfy_mc_latest_realRN.phl[237]";
+connectAttr "l_index_2_scaleY.o" "comfy_mc_latest_realRN.phl[238]";
+connectAttr "l_index_2_scaleZ.o" "comfy_mc_latest_realRN.phl[239]";
+connectAttr "l_middle_2_rotateX.o" "comfy_mc_latest_realRN.phl[240]";
+connectAttr "l_middle_2_rotateY.o" "comfy_mc_latest_realRN.phl[241]";
+connectAttr "l_middle_2_rotateZ.o" "comfy_mc_latest_realRN.phl[242]";
+connectAttr "l_middle_2_visibility.o" "comfy_mc_latest_realRN.phl[243]";
+connectAttr "l_middle_2_scaleX.o" "comfy_mc_latest_realRN.phl[244]";
+connectAttr "l_middle_2_scaleY.o" "comfy_mc_latest_realRN.phl[245]";
+connectAttr "l_middle_2_scaleZ.o" "comfy_mc_latest_realRN.phl[246]";
+connectAttr "l_ring_2_rotateX.o" "comfy_mc_latest_realRN.phl[247]";
+connectAttr "l_ring_2_rotateY.o" "comfy_mc_latest_realRN.phl[248]";
+connectAttr "l_ring_2_rotateZ.o" "comfy_mc_latest_realRN.phl[249]";
+connectAttr "l_ring_2_visibility.o" "comfy_mc_latest_realRN.phl[250]";
+connectAttr "l_ring_2_scaleX.o" "comfy_mc_latest_realRN.phl[251]";
+connectAttr "l_ring_2_scaleY.o" "comfy_mc_latest_realRN.phl[252]";
+connectAttr "l_ring_2_scaleZ.o" "comfy_mc_latest_realRN.phl[253]";
+connectAttr "l_pinky_2_rotateX.o" "comfy_mc_latest_realRN.phl[254]";
+connectAttr "l_pinky_2_rotateY.o" "comfy_mc_latest_realRN.phl[255]";
+connectAttr "l_pinky_2_rotateZ.o" "comfy_mc_latest_realRN.phl[256]";
+connectAttr "l_pinky_2_visibility.o" "comfy_mc_latest_realRN.phl[257]";
+connectAttr "l_pinky_2_scaleX.o" "comfy_mc_latest_realRN.phl[258]";
+connectAttr "l_pinky_2_scaleY.o" "comfy_mc_latest_realRN.phl[259]";
+connectAttr "l_pinky_2_scaleZ.o" "comfy_mc_latest_realRN.phl[260]";
+connectAttr "breathing_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[261]";
+connectAttr "breathing_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[262]";
+connectAttr "breathing_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[263]";
+connectAttr "pairBlend2.otx" "comfy_mc_latest_realRN.phl[264]";
+connectAttr "pairBlend2.oty" "comfy_mc_latest_realRN.phl[265]";
+connectAttr "pairBlend2.otz" "comfy_mc_latest_realRN.phl[266]";
+connectAttr "comfy_mc_latest_realRN.phl[267]" "pairBlend2.w";
+connectAttr "breathing_ctrl_blendPoint1.o" "comfy_mc_latest_realRN.phl[268]";
+connectAttr "breathing_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[269]";
+connectAttr "breathing_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[270]";
+connectAttr "breathing_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[271]";
+connectAttr "breathing_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[272]";
+connectAttr "comfy_mc_latest_realRN.phl[273]" "pairBlend2.itx2";
+connectAttr "comfy_mc_latest_realRN.phl[274]" "pairBlend2.ity2";
+connectAttr "comfy_mc_latest_realRN.phl[275]" "pairBlend2.itz2";
+connectAttr "nurbsCircle1_Blink.o" "comfy_mc_latest_realRN.phl[276]";
+connectAttr "nurbsCircle1_translateX.o" "comfy_mc_latest_realRN.phl[277]";
+connectAttr "nurbsCircle1_translateY.o" "comfy_mc_latest_realRN.phl[278]";
+connectAttr "nurbsCircle1_translateZ.o" "comfy_mc_latest_realRN.phl[279]";
+connectAttr "nurbsCircle1_rotateX.o" "comfy_mc_latest_realRN.phl[280]";
+connectAttr "nurbsCircle1_rotateY.o" "comfy_mc_latest_realRN.phl[281]";
+connectAttr "nurbsCircle1_rotateZ.o" "comfy_mc_latest_realRN.phl[282]";
+connectAttr "nurbsCircle1_scaleX.o" "comfy_mc_latest_realRN.phl[283]";
+connectAttr "nurbsCircle1_scaleY.o" "comfy_mc_latest_realRN.phl[284]";
+connectAttr "nurbsCircle1_scaleZ.o" "comfy_mc_latest_realRN.phl[285]";
+connectAttr "nurbsCircle1_visibility.o" "comfy_mc_latest_realRN.phl[286]";
+connectAttr "nurbsCircle2_translateX.o" "comfy_mc_latest_realRN.phl[287]";
+connectAttr "nurbsCircle2_translateY.o" "comfy_mc_latest_realRN.phl[288]";
+connectAttr "nurbsCircle2_translateZ.o" "comfy_mc_latest_realRN.phl[289]";
+connectAttr "nurbsCircle2_rotateX.o" "comfy_mc_latest_realRN.phl[290]";
+connectAttr "nurbsCircle2_rotateY.o" "comfy_mc_latest_realRN.phl[291]";
+connectAttr "nurbsCircle2_rotateZ.o" "comfy_mc_latest_realRN.phl[292]";
+connectAttr "nurbsCircle2_scaleX.o" "comfy_mc_latest_realRN.phl[293]";
+connectAttr "nurbsCircle2_scaleY.o" "comfy_mc_latest_realRN.phl[294]";
+connectAttr "nurbsCircle2_scaleZ.o" "comfy_mc_latest_realRN.phl[295]";
+connectAttr "nurbsCircle2_visibility.o" "comfy_mc_latest_realRN.phl[296]";
+connectAttr "nurbsCircle7_Blink.o" "comfy_mc_latest_realRN.phl[297]";
+connectAttr "nurbsCircle7_translateX.o" "comfy_mc_latest_realRN.phl[298]";
+connectAttr "nurbsCircle7_translateY.o" "comfy_mc_latest_realRN.phl[299]";
+connectAttr "nurbsCircle7_translateZ.o" "comfy_mc_latest_realRN.phl[300]";
+connectAttr "nurbsCircle7_rotateX.o" "comfy_mc_latest_realRN.phl[301]";
+connectAttr "nurbsCircle7_rotateY.o" "comfy_mc_latest_realRN.phl[302]";
+connectAttr "nurbsCircle7_rotateZ.o" "comfy_mc_latest_realRN.phl[303]";
+connectAttr "nurbsCircle7_scaleX.o" "comfy_mc_latest_realRN.phl[304]";
+connectAttr "nurbsCircle7_scaleY.o" "comfy_mc_latest_realRN.phl[305]";
+connectAttr "nurbsCircle7_scaleZ.o" "comfy_mc_latest_realRN.phl[306]";
+connectAttr "nurbsCircle7_visibility.o" "comfy_mc_latest_realRN.phl[307]";
+connectAttr "nurbsCircle12_translateX.o" "comfy_mc_latest_realRN.phl[308]";
+connectAttr "nurbsCircle12_translateY.o" "comfy_mc_latest_realRN.phl[309]";
+connectAttr "nurbsCircle12_translateZ.o" "comfy_mc_latest_realRN.phl[310]";
+connectAttr "nurbsCircle12_rotateX.o" "comfy_mc_latest_realRN.phl[311]";
+connectAttr "nurbsCircle12_rotateY.o" "comfy_mc_latest_realRN.phl[312]";
+connectAttr "nurbsCircle12_rotateZ.o" "comfy_mc_latest_realRN.phl[313]";
+connectAttr "nurbsCircle12_scaleX.o" "comfy_mc_latest_realRN.phl[314]";
+connectAttr "nurbsCircle12_scaleY.o" "comfy_mc_latest_realRN.phl[315]";
+connectAttr "nurbsCircle12_scaleZ.o" "comfy_mc_latest_realRN.phl[316]";
+connectAttr "nurbsCircle12_visibility.o" "comfy_mc_latest_realRN.phl[317]";
+connectAttr "mouth4_translateX.o" "comfy_mc_latest_realRN.phl[318]";
+connectAttr "mouth4_translateY.o" "comfy_mc_latest_realRN.phl[319]";
+connectAttr "mouth4_translateZ.o" "comfy_mc_latest_realRN.phl[320]";
+connectAttr "mouth4_rotateX.o" "comfy_mc_latest_realRN.phl[321]";
+connectAttr "mouth4_rotateY.o" "comfy_mc_latest_realRN.phl[322]";
+connectAttr "mouth4_rotateZ.o" "comfy_mc_latest_realRN.phl[323]";
+connectAttr "mouth4_scaleX.o" "comfy_mc_latest_realRN.phl[324]";
+connectAttr "mouth4_scaleY.o" "comfy_mc_latest_realRN.phl[325]";
+connectAttr "mouth4_scaleZ.o" "comfy_mc_latest_realRN.phl[326]";
+connectAttr "mouth4_visibility.o" "comfy_mc_latest_realRN.phl[327]";
+connectAttr "mouth5_translateX.o" "comfy_mc_latest_realRN.phl[328]";
+connectAttr "mouth5_translateY.o" "comfy_mc_latest_realRN.phl[329]";
+connectAttr "mouth5_translateZ.o" "comfy_mc_latest_realRN.phl[330]";
+connectAttr "mouth5_rotateX.o" "comfy_mc_latest_realRN.phl[331]";
+connectAttr "mouth5_rotateY.o" "comfy_mc_latest_realRN.phl[332]";
+connectAttr "mouth5_rotateZ.o" "comfy_mc_latest_realRN.phl[333]";
+connectAttr "mouth5_scaleX.o" "comfy_mc_latest_realRN.phl[334]";
+connectAttr "mouth5_scaleY.o" "comfy_mc_latest_realRN.phl[335]";
+connectAttr "mouth5_scaleZ.o" "comfy_mc_latest_realRN.phl[336]";
+connectAttr "mouth5_visibility.o" "comfy_mc_latest_realRN.phl[337]";
+connectAttr "mouth7_translateX.o" "comfy_mc_latest_realRN.phl[338]";
+connectAttr "mouth7_translateY.o" "comfy_mc_latest_realRN.phl[339]";
+connectAttr "mouth7_translateZ.o" "comfy_mc_latest_realRN.phl[340]";
+connectAttr "mouth7_rotateX.o" "comfy_mc_latest_realRN.phl[341]";
+connectAttr "mouth7_rotateY.o" "comfy_mc_latest_realRN.phl[342]";
+connectAttr "mouth7_rotateZ.o" "comfy_mc_latest_realRN.phl[343]";
+connectAttr "mouth7_scaleX.o" "comfy_mc_latest_realRN.phl[344]";
+connectAttr "mouth7_scaleY.o" "comfy_mc_latest_realRN.phl[345]";
+connectAttr "mouth7_scaleZ.o" "comfy_mc_latest_realRN.phl[346]";
+connectAttr "mouth7_visibility.o" "comfy_mc_latest_realRN.phl[347]";
+connectAttr "mouth6_translateX.o" "comfy_mc_latest_realRN.phl[348]";
+connectAttr "mouth6_translateY.o" "comfy_mc_latest_realRN.phl[349]";
+connectAttr "mouth6_translateZ.o" "comfy_mc_latest_realRN.phl[350]";
+connectAttr "mouth6_rotateX.o" "comfy_mc_latest_realRN.phl[351]";
+connectAttr "mouth6_rotateY.o" "comfy_mc_latest_realRN.phl[352]";
+connectAttr "mouth6_rotateZ.o" "comfy_mc_latest_realRN.phl[353]";
+connectAttr "mouth6_scaleX.o" "comfy_mc_latest_realRN.phl[354]";
+connectAttr "mouth6_scaleY.o" "comfy_mc_latest_realRN.phl[355]";
+connectAttr "mouth6_scaleZ.o" "comfy_mc_latest_realRN.phl[356]";
+connectAttr "mouth6_visibility.o" "comfy_mc_latest_realRN.phl[357]";
+connectAttr "blendShape4_envelope.o" "comfy_mc_latest_realRN.phl[358]";
+connectAttr "foreground.di" "bedroom_SET_latestRN.phl[6]";
+connectAttr "foreground.di" "bedroom_SET_latestRN.phl[7]";
+connectAttr "foreground.di" "bedroom_SET_latestRN.phl[4]";
+connectAttr "foreground.di" "bedroom_SET_latestRN.phl[3]";
+connectAttr "foreground.di" "bedroom_SET_latestRN.phl[2]";
+connectAttr "foreground.di" "bedroom_SET_latestRN.phl[1]";
+connectAttr "foreground.di" "bedroom_SET_latestRN.phl[5]";
 connectAttr "bedroom_SET_latest1:tvstand:groupId1.id" "bedroom_SET_latest1:tvstand:tvCabinetShape.iog.og[0].gid"
 		;
 connectAttr ":initialShadingGroup.mwc" "bedroom_SET_latest1:tvstand:tvCabinetShape.iog.og[0].gco"
@@ -64278,7 +60803,37 @@ connectAttr "bedroom_SET_latest1:bookRedShader.msg" "bedroom_SET_latest1:materia
 		 -na;
 connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bed_NEWRN.sr"
 		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:windowRN.sr"
+		;
 connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:doorRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:doorRN1.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:rugRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:treeShelfRN.sr"
+		;
+connectAttr "Seat_translateX.o" "bedroom_SET_latest1:officeChairRN.phl[1]";
+connectAttr "Seat_translateY.o" "bedroom_SET_latest1:officeChairRN.phl[2]";
+connectAttr "Seat_translateZ.o" "bedroom_SET_latest1:officeChairRN.phl[3]";
+connectAttr "Seat_visibility.o" "bedroom_SET_latest1:officeChairRN.phl[4]";
+connectAttr "Seat_rotateX.o" "bedroom_SET_latest1:officeChairRN.phl[5]";
+connectAttr "Seat_rotateY.o" "bedroom_SET_latest1:officeChairRN.phl[6]";
+connectAttr "Seat_rotateZ.o" "bedroom_SET_latest1:officeChairRN.phl[7]";
+connectAttr "Seat_scaleX.o" "bedroom_SET_latest1:officeChairRN.phl[8]";
+connectAttr "Seat_scaleY.o" "bedroom_SET_latest1:officeChairRN.phl[9]";
+connectAttr "Seat_scaleZ.o" "bedroom_SET_latest1:officeChairRN.phl[10]";
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:officeChairRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:nightstandRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bookshelfRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:clockRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:scarfRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:curtainsRN1.sr"
 		;
 connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:book_stackRN.sr"
 		;
@@ -64294,10 +60849,6 @@ connectAttr "bedroom_SET_latest1:vase:d_openexr.msg" "bedroom_SET_latest1:vase:h
 		;
 connectAttr "bedroom_SET_latest1:fox:initialShadingGroup1.oc" "bedroom_SET_latest1:fox:initialShadingGroup.ss"
 		;
-connectAttr "bedroom_SET_latest1:fox:groupId1.msg" "bedroom_SET_latest1:fox:initialShadingGroup.gn"
-		 -na;
-connectAttr "bedroom_SET_latest1:fox:fox_meshShape.iog.og[0]" "bedroom_SET_latest1:fox:initialShadingGroup.dsm"
-		 -na;
 connectAttr "bedroom_SET_latest1:fox:initialShadingGroup.msg" "bedroom_SET_latest1:fox:materialInfo1.sg"
 		;
 connectAttr "bedroom_SET_latest1:fox:initialShadingGroup1.msg" "bedroom_SET_latest1:fox:materialInfo1.m"
@@ -64336,6 +60887,10 @@ connectAttr "bedroom_SET_latest1:starSG1.msg" "bedroom_SET_latest1:materialInfo2
 		;
 connectAttr "bedroom_SET_latest1:lambert5.msg" "bedroom_SET_latest1:materialInfo21.m"
 		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:moonDecorationRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:smallTrashCanRN.sr"
+		;
 connectAttr "bedroom_SET_latest1:minidesk_wood_shader.oc" "bedroom_SET_latest1:wood_partSG.ss"
 		;
 connectAttr "bedroom_SET_latest1:wood_partSG.msg" "bedroom_SET_latest1:materialInfo22.sg"
@@ -64347,6 +60902,10 @@ connectAttr "bedroom_SET_latest1:minidesk_top_shader.oc" "bedroom_SET_latest1:to
 connectAttr "bedroom_SET_latest1:top_partSG.msg" "bedroom_SET_latest1:materialInfo23.sg"
 		;
 connectAttr "bedroom_SET_latest1:minidesk_top_shader.msg" "bedroom_SET_latest1:materialInfo23.m"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:phoneRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bookRN1.sr"
 		;
 connectAttr "bedroom_SET_latest1:glasses:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:glasses:defaultRenderLayer.rlid"
 		;
@@ -65065,13 +61624,63 @@ connectAttr ":defaultRenderGlobals.msg" "bedroom_SET_latest1:lights:mtorPartitio
 connectAttr "layerManager.dli[3]" "bedroom_SET_latest1:lights:layer3.id";
 connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:floor_walls_latestRN.sr"
 		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:deskLamp_latestRN.sr"
+		;
 connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:desk_latestRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bookshelfRN1.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:boardGames_latestRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:houseSlippers_latestRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bookStack_TREESHELFRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bookStack_LEFT_SHELFRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bookStack_RIGHT_SHELFRN.sr"
 		;
 connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:teacupRN.sr"
 		;
 connectAttr "bedroom_SET_latest1:teacupRNfosterParent1.msg" "bedroom_SET_latest1:teacupRN.fp"
 		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:backpackRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:CoffeeCupLatestRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:gameboyRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:golem_plushieRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:macRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:musicboxRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:phoneRN1.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:scarfRN1.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:strewn_pantsRN.sr"
+		;
 connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:toyPlaneRN1.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:toyTrainRN1.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bedsideTableRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bedsideLampRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:beanbagRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:hangingStarsRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:alarmclockRN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:poster1RN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:poster2RN.sr"
+		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "bedroom_SET_latest1:bedroom_light_rig:macRN.sr"
 		;
 connectAttr "bedroom_SET_latest1:karen_latest:renderLayerManager.rlmi[0]" "bedroom_SET_latest1:karen_latest:defaultRenderLayer.rlid"
 		;
@@ -65571,6 +62180,8 @@ connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:hair
 		;
 connectAttr "comfy_mc_latest_realRNfosterParent1.msg" "comfy_mc_latest_realRN.fp"
 		;
+connectAttr "bedroom_SET_latest1:sharedReferenceNode.sr" "comfy_mc_latest_realRN.sr"
+		;
 connectAttr "blendShape1GroupParts.og" "sweater_correct.ip[0].ig";
 connectAttr "blendShape1GroupId.id" "sweater_correct.ip[0].gi";
 connectAttr "shapeEditorManager.obsv[3]" "sweater_correct.tgdt[0].dpvs";
@@ -65624,6 +62235,8 @@ connectAttr "blendShape7GroupId.msg" "blendShape7Set.gn" -na;
 connectAttr "tea_drink_sweater.msg" "blendShape7Set.ub[0]";
 connectAttr "sweater_breathe.og[0]" "blendShape7GroupParts.ig";
 connectAttr "blendShape7GroupId.id" "blendShape7GroupParts.gi";
+connectAttr "layerManager.dli[5]" "foreground.id";
+connectAttr "layerManager.dli[6]" "teeth_eyes.id";
 connectAttr "bedroom_SET_latest1:PxrSurface1SG.pa" ":renderPartition.st" -na;
 connectAttr "bedroom_SET_latest1:PxrSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "bedroom_SET_latest1:PxrSurface3SG.pa" ":renderPartition.st" -na;
@@ -65918,6 +62531,9 @@ connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_viewport_tex.msg" ":de
 		 -na;
 connectAttr "bedroom_SET_latest1:karen_latest:hair_shader_view_norm.msg" ":defaultTextureList1.tx"
 		 -na;
+connectAttr "bedroom_SET_latest1:nightstandRN.phl[4]" ":initialShadingGroup.dsm"
+		 -na;
+connectAttr "bedroom_SET_latest1:scarfRN.phl[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "bedroom_SET_latest1:nightstandRN.phl[1]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "bedroom_SET_latest1:nightstandRN.phl[2]" ":initialShadingGroup.dsm"
@@ -65955,7 +62571,6 @@ connectAttr "bedroom_SET_latest1:celloRN.phl[19]" ":initialShadingGroup.dsm" -na
 		;
 connectAttr "bedroom_SET_latest1:celloRN.phl[20]" ":initialShadingGroup.dsm" -na
 		;
-connectAttr "bedroom_SET_latest1:RoofShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "bedroom_SET_latest1:tvstand:tvCabinetShape.iog.og[0]" ":initialShadingGroup.dsm"
 		 -na;
 connectAttr "bedroom_SET_latest1:television:TVShape.iog" ":initialShadingGroup.dsm"
