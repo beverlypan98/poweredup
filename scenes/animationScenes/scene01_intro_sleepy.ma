@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: scene01_intro_sleepy.ma
-//Last modified: Mon, Dec 09, 2019 10:48:14 PM
+//Last modified: Tue, Dec 10, 2019 12:41:29 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "bed_NEW" -rfn "bedroom_SET_latest1:bed_NEWRN" -op "v=0;" -typ
 		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/bedroomAssets/bed_NEW.ma";
@@ -223,18 +223,18 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "7DB98075-7D4F-75A2-489F-1FBC5A37AFE9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -15.248862320935661 1.7458042156242928 -2.2494373515510695 ;
-	setAttr ".r" -type "double3" 4.4616472706321009 -818.99999999838133 0 ;
+	setAttr ".t" -type "double3" -5.4762826794779533 2.5505062958233768 -0.69174688504018056 ;
+	setAttr ".r" -type "double3" -9.3383527293305786 -813.79999999835468 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7217D48E-764E-EAA3-257E-61A96A331299";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 10.738781986978104;
+	setAttr ".coi" 0.97883950810662868;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -4.7425908963199763 2.4962767678067883 -0.71420280587827278 ;
+	setAttr ".tp" -type "double3" -4.5125389072272828 2.3916755219470378 -0.6277350943431339 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "F6C9188B-5246-B56C-C070-8090E363C011";
@@ -27187,7 +27187,7 @@ createNode camera -n "perspShape2" -p "persp1";
 	setAttr ".tp" -type "double3" -5.6656248471348984 2.6670004024164227 -0.843672261842912 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode fosterParent -n "comfy_mc_latest_realRNfosterParent1";
-	rename -uid "7F56FDE1-6A4A-18A1-224D-2FB897FBDD25";
+	rename -uid "6319C00A-CB48-1900-D332-C78556BA14AB";
 createNode transform -n "neck_ctrl" -p "comfy_mc_latest_realRNfosterParent1";
 	rename -uid "272D52C0-CA4A-5A7D-0E36-81A201E16DD0";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -27217,6 +27217,7 @@ createNode nurbsCurve -n "neck_ctrlShape" -p "neck_ctrl";
 createNode transform -n "eye_CTRL" -p "neck_ctrl";
 	rename -uid "4C37C15E-3A43-D1ED-73FE-B69EFE4FFB07";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".v" no;
 	setAttr ".ove" yes;
 	setAttr ".ovc" 17;
 	setAttr ".ovrgb" -type "float3" 1 0 1 ;
@@ -27365,24 +27366,24 @@ createNode nurbsCurve -n "curveShape8" -p "nurbsCircle13";
 		-0.080384713606593161 0.99535430113377288 3.1078776086888569
 		;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "567A3547-1B4F-21DD-C5E5-FDAA66685B02";
-	setAttr -s 207 ".lnk";
+	rename -uid "68C07168-2343-3106-057A-5689490049AA";
+	setAttr -s 209 ".lnk";
 	setAttr -s 100 ".ign";
-	setAttr -s 207 ".slnk";
+	setAttr -s 209 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "AF90CE13-2140-E05A-6562-758CA170DDE1";
+	rename -uid "B9FD4802-A444-399C-D894-31B060191955";
 	setAttr ".cdl" 5;
 	setAttr -s 7 ".dli[1:6]"  1 2 3 4 0 5;
 	setAttr -s 6 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5B357CEE-6847-BF47-8C71-B6AC63E6A039";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B4AF8691-DC4F-8F53-5658-73A09DF003C8";
+	rename -uid "67184015-C449-C9B5-A2F2-0F917DA5350B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "397B167C-7542-5658-7059-7FB1637BA251";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "365A170B-474C-8B0B-9174-A7963FBE4C73";
+	rename -uid "C7ED8853-8943-5563-6AAA-4AAA5F69126F";
 	setAttr -s 3 ".bsdt";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 9 0 -1 1 2 3
 		 4 5 6 7 ;
@@ -27395,7 +27396,7 @@ createNode shapeEditorManager -n "shapeEditorManager";
 	setAttr -s 8 ".obsv";
 	setAttr ".tpfs" -type "string" "lash";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C66D8F8B-2B43-47F5-8A49-B6828B3CB7CD";
+	rename -uid "B0E41CB5-5D40-A128-CD9D-409197247055";
 createNode rmanGlobals -s -n "rmanGlobals";
 	rename -uid "DA69D32F-8644-71F5-C8DB-85A21A29F371";
 	setAttr ".cch" no;
@@ -27812,7 +27813,7 @@ createNode script -n "bedroom_SET_latest1:uiConfigurationScriptNode";
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
 		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
-		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
+		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 1\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 1\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n"
 		+ "            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 727\n            -height 499\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
@@ -27844,8 +27845,8 @@ createNode script -n "bedroom_SET_latest1:uiConfigurationScriptNode";
 		+ "            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n"
 		+ "            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n"
 		+ "\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 727\\n    -height 499\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"persp1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 727\\n    -height 499\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 727\\n    -height 499\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 0\\n    -polymeshes 1\\n    -subdivSurfaces 0\\n    -planes 0\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 0\\n    -hulls 0\\n    -grid 1\\n    -imagePlane 0\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 0\\n    -dynamics 0\\n    -particleInstancers 0\\n    -fluids 0\\n    -hairSystems 0\\n    -follicles 0\\n    -nCloths 0\\n    -nParticles 0\\n    -nRigids 0\\n    -dynamicConstraints 0\\n    -locators 0\\n    -manipulators 1\\n    -pluginShapes 0\\n    -dimensions 0\\n    -handles 0\\n    -pivots 0\\n    -textures 0\\n    -strokes 0\\n    -motionTrails 0\\n    -clipGhosts 0\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 727\\n    -height 499\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 0 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "bedroom_SET_latest1:sceneConfigurationScriptNode";
@@ -36023,25 +36024,25 @@ createNode reference -n "bedroom_SET_latest1:floor_walls_latestRN";
 		"floor_walls_latestRN" 0
 		"floor_walls_latestRN" 16
 		2 "|floor_walls_latest:Wall" "visibility" " -av 0"
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|rim_light|rim_lightShape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall3|floor_walls_latest:Wall3Shape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall2|floor_walls_latest:Wall2Shape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall1|floor_walls_latest:Wall1Shape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|moon_decor_light|moon_decor_lightShape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|rim_light|rim_lightShape.message" 
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:Wall|floor_walls_latest:WallShape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|moon_decor_light|moon_decor_lightShape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|floor_walls_latest:floor|floor_walls_latest:floorShape.message" "|rim_light|rim_lightShape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "floor_walls_latest:PxrSurface1SG.message" "|rim_light|rim_lightShape.message" 
 		0
@@ -57583,317 +57584,316 @@ createNode RenderMan -s -n "renderManGlobals";
 createNode reference -n "comfy_mc_latest_realRN";
 	rename -uid "9838F5F2-4A4F-D46E-CE37-F0BA0EC974A4";
 	setAttr -s 305 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
-	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
-	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
-	setAttr ".phl[158]" 0;
-	setAttr ".phl[159]" 0;
-	setAttr ".phl[160]" 0;
-	setAttr ".phl[161]" 0;
-	setAttr ".phl[162]" 0;
-	setAttr ".phl[163]" 0;
-	setAttr ".phl[164]" 0;
-	setAttr ".phl[165]" 0;
-	setAttr ".phl[166]" 0;
-	setAttr ".phl[167]" 0;
-	setAttr ".phl[168]" 0;
-	setAttr ".phl[169]" 0;
-	setAttr ".phl[170]" 0;
-	setAttr ".phl[171]" 0;
-	setAttr ".phl[172]" 0;
-	setAttr ".phl[173]" 0;
-	setAttr ".phl[174]" 0;
-	setAttr ".phl[175]" 0;
-	setAttr ".phl[176]" 0;
-	setAttr ".phl[177]" 0;
-	setAttr ".phl[178]" 0;
-	setAttr ".phl[179]" 0;
-	setAttr ".phl[180]" 0;
-	setAttr ".phl[181]" 0;
-	setAttr ".phl[182]" 0;
-	setAttr ".phl[183]" 0;
-	setAttr ".phl[184]" 0;
-	setAttr ".phl[185]" 0;
-	setAttr ".phl[186]" 0;
-	setAttr ".phl[187]" 0;
-	setAttr ".phl[188]" 0;
-	setAttr ".phl[189]" 0;
-	setAttr ".phl[190]" 0;
-	setAttr ".phl[191]" 0;
-	setAttr ".phl[192]" 0;
-	setAttr ".phl[193]" 0;
-	setAttr ".phl[194]" 0;
-	setAttr ".phl[195]" 0;
-	setAttr ".phl[196]" 0;
-	setAttr ".phl[197]" 0;
-	setAttr ".phl[198]" 0;
-	setAttr ".phl[199]" 0;
-	setAttr ".phl[200]" 0;
-	setAttr ".phl[201]" 0;
-	setAttr ".phl[202]" 0;
-	setAttr ".phl[203]" 0;
-	setAttr ".phl[204]" 0;
-	setAttr ".phl[205]" 0;
-	setAttr ".phl[206]" 0;
-	setAttr ".phl[207]" 0;
-	setAttr ".phl[208]" 0;
-	setAttr ".phl[209]" 0;
-	setAttr ".phl[210]" 0;
-	setAttr ".phl[211]" 0;
-	setAttr ".phl[212]" 0;
-	setAttr ".phl[213]" 0;
-	setAttr ".phl[214]" 0;
-	setAttr ".phl[215]" 0;
-	setAttr ".phl[216]" 0;
-	setAttr ".phl[217]" 0;
-	setAttr ".phl[218]" 0;
-	setAttr ".phl[219]" 0;
-	setAttr ".phl[220]" 0;
-	setAttr ".phl[221]" 0;
-	setAttr ".phl[222]" 0;
-	setAttr ".phl[223]" 0;
-	setAttr ".phl[224]" 0;
-	setAttr ".phl[225]" 0;
-	setAttr ".phl[226]" 0;
-	setAttr ".phl[227]" 0;
-	setAttr ".phl[228]" 0;
-	setAttr ".phl[229]" 0;
-	setAttr ".phl[230]" 0;
-	setAttr ".phl[231]" 0;
-	setAttr ".phl[232]" 0;
-	setAttr ".phl[233]" 0;
-	setAttr ".phl[234]" 0;
-	setAttr ".phl[235]" 0;
-	setAttr ".phl[236]" 0;
-	setAttr ".phl[237]" 0;
-	setAttr ".phl[238]" 0;
-	setAttr ".phl[239]" 0;
-	setAttr ".phl[240]" 0;
-	setAttr ".phl[241]" 0;
-	setAttr ".phl[242]" 0;
-	setAttr ".phl[243]" 0;
-	setAttr ".phl[244]" 0;
-	setAttr ".phl[245]" 0;
-	setAttr ".phl[246]" 0;
-	setAttr ".phl[247]" 0;
-	setAttr ".phl[248]" 0;
-	setAttr ".phl[249]" 0;
-	setAttr ".phl[250]" 0;
-	setAttr ".phl[251]" 0;
-	setAttr ".phl[252]" 0;
-	setAttr ".phl[253]" 0;
-	setAttr ".phl[254]" 0;
-	setAttr ".phl[255]" 0;
-	setAttr ".phl[256]" 0;
-	setAttr ".phl[257]" 0;
-	setAttr ".phl[258]" 0;
-	setAttr ".phl[259]" 0;
-	setAttr ".phl[260]" 0;
-	setAttr ".phl[261]" 0;
-	setAttr ".phl[262]" 0;
-	setAttr ".phl[263]" 0;
-	setAttr ".phl[264]" 0;
-	setAttr ".phl[265]" 0;
-	setAttr ".phl[266]" 0;
-	setAttr ".phl[267]" 0;
-	setAttr ".phl[268]" 0;
-	setAttr ".phl[269]" 0;
-	setAttr ".phl[270]" 0;
-	setAttr ".phl[271]" 0;
-	setAttr ".phl[272]" 0;
-	setAttr ".phl[273]" 0;
-	setAttr ".phl[274]" 0;
-	setAttr ".phl[275]" 0;
-	setAttr ".phl[276]" 0;
-	setAttr ".phl[277]" 0;
-	setAttr ".phl[278]" 0;
-	setAttr ".phl[279]" 0;
-	setAttr ".phl[280]" 0;
-	setAttr ".phl[281]" 0;
-	setAttr ".phl[282]" 0;
-	setAttr ".phl[283]" 0;
-	setAttr ".phl[284]" 0;
-	setAttr ".phl[285]" 0;
-	setAttr ".phl[286]" 0;
-	setAttr ".phl[287]" 0;
-	setAttr ".phl[288]" 0;
-	setAttr ".phl[289]" 0;
-	setAttr ".phl[290]" 0;
-	setAttr ".phl[291]" 0;
-	setAttr ".phl[292]" 0;
-	setAttr ".phl[293]" 0;
-	setAttr ".phl[294]" 0;
-	setAttr ".phl[295]" 0;
-	setAttr ".phl[296]" 0;
-	setAttr ".phl[297]" 0;
-	setAttr ".phl[298]" 0;
-	setAttr ".phl[299]" 0;
-	setAttr ".phl[300]" 0;
-	setAttr ".phl[301]" 0;
-	setAttr ".phl[302]" 0;
-	setAttr ".phl[303]" 0;
-	setAttr ".phl[304]" 0;
-	setAttr ".phl[305]" 0;
+	setAttr ".phl[306]" 0;
+	setAttr ".phl[307]" 0;
+	setAttr ".phl[308]" 0;
+	setAttr ".phl[309]" 0;
+	setAttr ".phl[310]" 0;
+	setAttr ".phl[311]" 0;
+	setAttr ".phl[312]" 0;
+	setAttr ".phl[313]" 0;
+	setAttr ".phl[314]" 0;
+	setAttr ".phl[315]" 0;
+	setAttr ".phl[316]" 0;
+	setAttr ".phl[317]" 0;
+	setAttr ".phl[318]" 0;
+	setAttr ".phl[319]" 0;
+	setAttr ".phl[320]" 0;
+	setAttr ".phl[321]" 0;
+	setAttr ".phl[322]" 0;
+	setAttr ".phl[323]" 0;
+	setAttr ".phl[324]" 0;
+	setAttr ".phl[325]" 0;
+	setAttr ".phl[326]" 0;
+	setAttr ".phl[327]" 0;
+	setAttr ".phl[328]" 0;
+	setAttr ".phl[329]" 0;
+	setAttr ".phl[330]" 0;
+	setAttr ".phl[331]" 0;
+	setAttr ".phl[332]" 0;
+	setAttr ".phl[333]" 0;
+	setAttr ".phl[334]" 0;
+	setAttr ".phl[335]" 0;
+	setAttr ".phl[336]" 0;
+	setAttr ".phl[337]" 0;
+	setAttr ".phl[338]" 0;
+	setAttr ".phl[339]" 0;
+	setAttr ".phl[340]" 0;
+	setAttr ".phl[341]" 0;
+	setAttr ".phl[342]" 0;
+	setAttr ".phl[343]" 0;
+	setAttr ".phl[344]" 0;
+	setAttr ".phl[345]" 0;
+	setAttr ".phl[346]" 0;
+	setAttr ".phl[347]" 0;
+	setAttr ".phl[348]" 0;
+	setAttr ".phl[349]" 0;
+	setAttr ".phl[350]" 0;
+	setAttr ".phl[351]" 0;
+	setAttr ".phl[352]" 0;
+	setAttr ".phl[353]" 0;
+	setAttr ".phl[354]" 0;
+	setAttr ".phl[355]" 0;
+	setAttr ".phl[356]" 0;
+	setAttr ".phl[357]" 0;
+	setAttr ".phl[358]" 0;
+	setAttr ".phl[359]" 0;
+	setAttr ".phl[360]" 0;
+	setAttr ".phl[361]" 0;
+	setAttr ".phl[362]" 0;
+	setAttr ".phl[363]" 0;
+	setAttr ".phl[364]" 0;
+	setAttr ".phl[365]" 0;
+	setAttr ".phl[366]" 0;
+	setAttr ".phl[367]" 0;
+	setAttr ".phl[368]" 0;
+	setAttr ".phl[369]" 0;
+	setAttr ".phl[370]" 0;
+	setAttr ".phl[371]" 0;
+	setAttr ".phl[372]" 0;
+	setAttr ".phl[373]" 0;
+	setAttr ".phl[374]" 0;
+	setAttr ".phl[375]" 0;
+	setAttr ".phl[376]" 0;
+	setAttr ".phl[377]" 0;
+	setAttr ".phl[378]" 0;
+	setAttr ".phl[379]" 0;
+	setAttr ".phl[380]" 0;
+	setAttr ".phl[381]" 0;
+	setAttr ".phl[382]" 0;
+	setAttr ".phl[383]" 0;
+	setAttr ".phl[384]" 0;
+	setAttr ".phl[385]" 0;
+	setAttr ".phl[386]" 0;
+	setAttr ".phl[387]" 0;
+	setAttr ".phl[388]" 0;
+	setAttr ".phl[389]" 0;
+	setAttr ".phl[390]" 0;
+	setAttr ".phl[391]" 0;
+	setAttr ".phl[392]" 0;
+	setAttr ".phl[393]" 0;
+	setAttr ".phl[394]" 0;
+	setAttr ".phl[395]" 0;
+	setAttr ".phl[396]" 0;
+	setAttr ".phl[397]" 0;
+	setAttr ".phl[398]" 0;
+	setAttr ".phl[399]" 0;
+	setAttr ".phl[400]" 0;
+	setAttr ".phl[401]" 0;
+	setAttr ".phl[402]" 0;
+	setAttr ".phl[403]" 0;
+	setAttr ".phl[404]" 0;
+	setAttr ".phl[405]" 0;
+	setAttr ".phl[406]" 0;
+	setAttr ".phl[407]" 0;
+	setAttr ".phl[408]" 0;
+	setAttr ".phl[409]" 0;
+	setAttr ".phl[410]" 0;
+	setAttr ".phl[411]" 0;
+	setAttr ".phl[412]" 0;
+	setAttr ".phl[413]" 0;
+	setAttr ".phl[414]" 0;
+	setAttr ".phl[415]" 0;
+	setAttr ".phl[416]" 0;
+	setAttr ".phl[417]" 0;
+	setAttr ".phl[418]" 0;
+	setAttr ".phl[419]" 0;
+	setAttr ".phl[420]" 0;
+	setAttr ".phl[421]" 0;
+	setAttr ".phl[422]" 0;
+	setAttr ".phl[423]" 0;
+	setAttr ".phl[424]" 0;
+	setAttr ".phl[425]" 0;
+	setAttr ".phl[426]" 0;
+	setAttr ".phl[427]" 0;
+	setAttr ".phl[428]" 0;
+	setAttr ".phl[429]" 0;
+	setAttr ".phl[430]" 0;
+	setAttr ".phl[431]" 0;
+	setAttr ".phl[432]" 0;
+	setAttr ".phl[433]" 0;
+	setAttr ".phl[434]" 0;
+	setAttr ".phl[435]" 0;
+	setAttr ".phl[436]" 0;
+	setAttr ".phl[437]" 0;
+	setAttr ".phl[438]" 0;
+	setAttr ".phl[439]" 0;
+	setAttr ".phl[440]" 0;
+	setAttr ".phl[441]" 0;
+	setAttr ".phl[442]" 0;
+	setAttr ".phl[443]" 0;
+	setAttr ".phl[444]" 0;
+	setAttr ".phl[445]" 0;
+	setAttr ".phl[446]" 0;
+	setAttr ".phl[447]" 0;
+	setAttr ".phl[448]" 0;
+	setAttr ".phl[449]" 0;
+	setAttr ".phl[450]" 0;
+	setAttr ".phl[451]" 0;
+	setAttr ".phl[452]" 0;
+	setAttr ".phl[453]" 0;
+	setAttr ".phl[454]" 0;
+	setAttr ".phl[455]" 0;
+	setAttr ".phl[456]" 0;
+	setAttr ".phl[457]" 0;
+	setAttr ".phl[458]" 0;
+	setAttr ".phl[459]" 0;
+	setAttr ".phl[460]" 0;
+	setAttr ".phl[461]" 0;
+	setAttr ".phl[462]" 0;
+	setAttr ".phl[463]" 0;
+	setAttr ".phl[464]" 0;
+	setAttr ".phl[465]" 0;
+	setAttr ".phl[466]" 0;
+	setAttr ".phl[467]" 0;
+	setAttr ".phl[468]" 0;
+	setAttr ".phl[469]" 0;
+	setAttr ".phl[470]" 0;
+	setAttr ".phl[471]" 0;
+	setAttr ".phl[472]" 0;
+	setAttr ".phl[473]" 0;
+	setAttr ".phl[474]" 0;
+	setAttr ".phl[475]" 0;
+	setAttr ".phl[476]" 0;
+	setAttr ".phl[477]" 0;
+	setAttr ".phl[478]" 0;
+	setAttr ".phl[479]" 0;
+	setAttr ".phl[480]" 0;
+	setAttr ".phl[481]" 0;
+	setAttr ".phl[482]" 0;
+	setAttr ".phl[483]" 0;
+	setAttr ".phl[484]" 0;
+	setAttr ".phl[485]" 0;
+	setAttr ".phl[486]" 0;
+	setAttr ".phl[487]" 0;
+	setAttr ".phl[488]" 0;
+	setAttr ".phl[489]" 0;
+	setAttr ".phl[490]" 0;
+	setAttr ".phl[491]" 0;
+	setAttr ".phl[492]" 0;
+	setAttr ".phl[493]" 0;
+	setAttr ".phl[494]" 0;
+	setAttr ".phl[495]" 0;
+	setAttr ".phl[496]" 0;
+	setAttr ".phl[497]" 0;
+	setAttr ".phl[498]" 0;
+	setAttr ".phl[499]" 0;
+	setAttr ".phl[500]" 0;
+	setAttr ".phl[501]" 0;
+	setAttr ".phl[502]" 0;
+	setAttr ".phl[503]" 0;
+	setAttr ".phl[504]" 0;
+	setAttr ".phl[505]" 0;
+	setAttr ".phl[506]" 0;
+	setAttr ".phl[507]" 0;
+	setAttr ".phl[508]" 0;
+	setAttr ".phl[509]" 0;
+	setAttr ".phl[510]" 0;
+	setAttr ".phl[511]" 0;
+	setAttr ".phl[512]" 0;
+	setAttr ".phl[513]" 0;
+	setAttr ".phl[514]" 0;
+	setAttr ".phl[515]" 0;
+	setAttr ".phl[516]" 0;
+	setAttr ".phl[517]" 0;
+	setAttr ".phl[518]" 0;
+	setAttr ".phl[519]" 0;
+	setAttr ".phl[520]" 0;
+	setAttr ".phl[521]" 0;
+	setAttr ".phl[522]" 0;
+	setAttr ".phl[523]" 0;
+	setAttr ".phl[524]" 0;
+	setAttr ".phl[525]" 0;
+	setAttr ".phl[526]" 0;
+	setAttr ".phl[527]" 0;
+	setAttr ".phl[528]" 0;
+	setAttr ".phl[529]" 0;
+	setAttr ".phl[530]" 0;
+	setAttr ".phl[531]" 0;
+	setAttr ".phl[532]" 0;
+	setAttr ".phl[533]" 0;
+	setAttr ".phl[534]" 0;
+	setAttr ".phl[535]" 0;
+	setAttr ".phl[536]" 0;
+	setAttr ".phl[537]" 0;
+	setAttr ".phl[538]" 0;
+	setAttr ".phl[539]" 0;
+	setAttr ".phl[540]" 0;
+	setAttr ".phl[541]" 0;
+	setAttr ".phl[542]" 0;
+	setAttr ".phl[543]" 0;
+	setAttr ".phl[544]" 0;
+	setAttr ".phl[545]" 0;
+	setAttr ".phl[546]" 0;
+	setAttr ".phl[547]" 0;
+	setAttr ".phl[548]" 0;
+	setAttr ".phl[549]" 0;
+	setAttr ".phl[550]" 0;
+	setAttr ".phl[551]" 0;
+	setAttr ".phl[552]" 0;
+	setAttr ".phl[553]" 0;
+	setAttr ".phl[554]" 0;
+	setAttr ".phl[555]" 0;
+	setAttr ".phl[556]" 0;
+	setAttr ".phl[557]" 0;
+	setAttr ".phl[558]" 0;
+	setAttr ".phl[559]" 0;
+	setAttr ".phl[560]" 0;
+	setAttr ".phl[561]" 0;
+	setAttr ".phl[562]" 0;
+	setAttr ".phl[563]" 0;
+	setAttr ".phl[564]" 0;
+	setAttr ".phl[565]" 0;
+	setAttr ".phl[566]" 0;
+	setAttr ".phl[567]" 0;
+	setAttr ".phl[568]" 0;
+	setAttr ".phl[569]" 0;
+	setAttr ".phl[570]" 0;
+	setAttr ".phl[571]" 0;
+	setAttr ".phl[572]" 0;
+	setAttr ".phl[573]" 0;
+	setAttr ".phl[574]" 0;
+	setAttr ".phl[575]" 0;
+	setAttr ".phl[576]" 0;
+	setAttr ".phl[577]" 0;
+	setAttr ".phl[578]" 0;
+	setAttr ".phl[579]" 0;
+	setAttr ".phl[580]" 0;
+	setAttr ".phl[581]" 0;
+	setAttr ".phl[582]" 0;
+	setAttr ".phl[583]" 0;
+	setAttr ".phl[584]" 0;
+	setAttr ".phl[585]" 0;
+	setAttr ".phl[586]" 0;
+	setAttr ".phl[587]" 0;
+	setAttr ".phl[588]" 0;
+	setAttr ".phl[589]" 0;
+	setAttr ".phl[590]" 0;
+	setAttr ".phl[591]" 0;
+	setAttr ".phl[592]" 0;
+	setAttr ".phl[593]" 0;
+	setAttr ".phl[594]" 0;
+	setAttr ".phl[595]" 0;
+	setAttr ".phl[596]" 0;
+	setAttr ".phl[597]" 0;
+	setAttr ".phl[598]" 0;
+	setAttr ".phl[599]" 0;
+	setAttr ".phl[600]" 0;
+	setAttr ".phl[601]" 0;
+	setAttr ".phl[602]" 0;
+	setAttr ".phl[603]" 0;
+	setAttr ".phl[604]" 0;
+	setAttr ".phl[605]" 0;
+	setAttr ".phl[606]" 0;
+	setAttr ".phl[607]" 0;
+	setAttr ".phl[608]" 0;
+	setAttr ".phl[609]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"comfy_mc_latest_realRN"
 		"comfy_mc_latest_realRN" 1
-		3 "comfy_mc_latest_real:tweak1.vlist[0].vertex[0]" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.tweakLocation" 
+		5 4 "comfy_mc_latest_realRN" "comfy_mc_latest_real:lash.envelope" "comfy_mc_latest_realRN.placeHolderList[305]" 
 		""
-		"comfy_mc_latest_real:mc_rig_onlyRN" 12
+		"comfy_mc_latest_real:mc_rig_onlyRN" 14
 		2 "comfy_mc_latest_real:mc_rig_only:faceRig:L_eyeBlink" "w[0:1]" " -s 2 0 0"
 		
 		2 "comfy_mc_latest_real:mc_rig_only:faceRig:R_eyeBlink" "w[0:1]" " -s 2 0 0"
@@ -57918,7 +57918,11 @@ createNode reference -n "comfy_mc_latest_realRN";
 		
 		2 "comfy_mc_latest_real:mc_rig_only:faceRig:R_eyeBlink" "w[0:1]" " -s 2 0 0"
 		
-		"comfy_mc_latest_realRN" 71
+		2 "comfy_mc_latest_real:mc_rig_only:faceRig:L_eyeBlink" "w[0:1]" " -s 2 0 0"
+		
+		2 "comfy_mc_latest_real:mc_rig_only:faceRig:R_eyeBlink" "w[0:1]" " -s 2 0 0"
+		
+		"comfy_mc_latest_realRN" 75
 		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape" 
 		"instObjGroups.objectGroups" " -s 16"
 		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape" 
@@ -57948,7 +57952,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body" 
 		"smoothness" " -k 1 0"
 		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape" 
-		"instObjGroups.objectGroups" " -s 10"
+		"instObjGroups.objectGroups" " -s 8"
 		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape" 
 		"uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape" 
@@ -57969,6 +57973,14 @@ createNode reference -n "comfy_mc_latest_realRN";
 		"useMeshSculptCache" " 0"
 		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape" 
 		"computeFromSculptCache" " 0"
+		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:bodyBase4" 
+		"visibility" " 0"
+		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:bodyBase" 
+		"visibility" " 0"
+		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:bodyBase5" 
+		"visibility" " 0"
+		2 "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:bodyBase6" 
+		"visibility" " 0"
 		2 "comfy_mc_latest_real:tweak2" "vlist[0].vertex" " -s 1280"
 		2 "comfy_mc_latest_real:tweak2" "vl[0].vt[0:165]" (" -type \"float3\" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.040080957 0 0 -0.055961973999999998 0 0 0 0 0 0 0 0 -0.027561978000000001 0 0 -0.043442997999999997 0 0 0.038895345999999997 0 0 0.046165150000000002 0 0 0.020807691 0 0 0.030869576999999999 0 0 0.070270099000000003 0 0 0.065062724000000002 0 0 0 0 0 -0.028133422000000002 0 0 0 0 0 -0.028133422000000002 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.059417012999999998 0 0 -0.074050917999999993 0 0 -0.033183868999999998 0 0 0 0 0 0 0 0 -0.048780125000000001 0 0 -0.043351989 0 0 0.044670187 0 0 0.02080"
 		+ "7691 0 0 0.020807691 0 0 0.060188748 0 0 0 0 0 0.071016102999999997 0 0 0.089215278999999995 0 0 0 0 0 -0.053600386 0 0 0 0 0 0 0 0 -0.059215449000000003 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.019454355999999999 0 0 0.019454355999999999 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.039033092999999998 0 0 0.0062400232999999996 0 0 0 0 0 0 0 0 0 0.069043241000000005 0 0 0 0 0 0 0 0 0 0 0.018561906999999999 0 0 0 0 0 0 0 0 0 0 0 0.014146419 0 0 -0.020816764000000001 0 0 0 0 0 0 0 0 0.037858281000000001 0 0 0 0 0 0 0 0 0 0 0"
@@ -57992,87 +58004,88 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "comfy_mc_latest_real:tweak2" "vl[0].vt[1162:1279]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
 		2 "comfy_mc_latest_real:blendShape2" "envelope" " 1"
-		3 "comfy_mc_latest_real:lash.outputGeometry[0]" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.inMesh" 
+		3 "comfy_mc_latest_real:tweak1.vlist[0].vertex[0]" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.tweakLocation" 
+		""
+		3 "comfy_mc_latest_real:skinCluster1.outputGeometry[0]" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.inMesh" 
 		""
 		3 "comfy_mc_latest_real:wrap7.outputGeometry[0]" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.inMesh" 
 		""
 		3 "comfy_mc_latest_real:tweak2.vlist[0].vertex[0]" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.tweakLocation" 
 		""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1.drawOverride" 
-		"comfy_mc_latest_realRN.placeHolderList[272]" ""
+		"comfy_mc_latest_realRN.placeHolderList[577]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[273]" ""
+		"comfy_mc_latest_realRN.placeHolderList[578]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[274]" ""
+		"comfy_mc_latest_realRN.placeHolderList[579]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[275]" ""
+		"comfy_mc_latest_realRN.placeHolderList[580]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[276]" ""
+		"comfy_mc_latest_realRN.placeHolderList[581]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[277]" ""
+		"comfy_mc_latest_realRN.placeHolderList[582]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[278]" ""
+		"comfy_mc_latest_realRN.placeHolderList[583]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[279]" ""
+		"comfy_mc_latest_realRN.placeHolderList[584]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[280]" ""
+		"comfy_mc_latest_realRN.placeHolderList[585]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[281]" ""
+		"comfy_mc_latest_realRN.placeHolderList[586]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[282]" ""
+		"comfy_mc_latest_realRN.placeHolderList[587]" ""
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[29]" 
-		"comfy_mc_latest_realRN.placeHolderList[283]" ""
+		"comfy_mc_latest_realRN.placeHolderList[588]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[29].objectGroupId" 
-		"comfy_mc_latest_realRN.placeHolderList[284]" ""
+		"comfy_mc_latest_realRN.placeHolderList[589]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[29].objectGrpColor" 
-		"comfy_mc_latest_realRN.placeHolderList[285]" ""
+		"comfy_mc_latest_realRN.placeHolderList[590]" ""
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[30]" 
-		"comfy_mc_latest_realRN.placeHolderList[286]" ""
+		"comfy_mc_latest_realRN.placeHolderList[591]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[30].objectGroupId" 
-		"comfy_mc_latest_realRN.placeHolderList[287]" ""
+		"comfy_mc_latest_realRN.placeHolderList[592]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[30].objectGrpColor" 
-		"comfy_mc_latest_realRN.placeHolderList[288]" ""
+		"comfy_mc_latest_realRN.placeHolderList[593]" ""
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[31]" 
-		"comfy_mc_latest_realRN.placeHolderList[289]" ""
+		"comfy_mc_latest_realRN.placeHolderList[594]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[31].objectGroupId" 
-		"comfy_mc_latest_realRN.placeHolderList[290]" ""
+		"comfy_mc_latest_realRN.placeHolderList[595]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[31].objectGrpColor" 
-		"comfy_mc_latest_realRN.placeHolderList[291]" ""
+		"comfy_mc_latest_realRN.placeHolderList[596]" ""
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[32]" 
-		"comfy_mc_latest_realRN.placeHolderList[292]" ""
+		"comfy_mc_latest_realRN.placeHolderList[597]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[32].objectGroupId" 
-		"comfy_mc_latest_realRN.placeHolderList[293]" ""
+		"comfy_mc_latest_realRN.placeHolderList[598]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.instObjGroups.objectGroups[32].objectGrpColor" 
-		"comfy_mc_latest_realRN.placeHolderList[294]" ""
+		"comfy_mc_latest_realRN.placeHolderList[599]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.inMesh" 
-		"comfy_mc_latest_realRN.placeHolderList[295]" ""
+		"comfy_mc_latest_realRN.placeHolderList[600]" ""
 		5 0 "comfy_mc_latest_realRN" "comfy_mc_latest_real:tweak2.vlist[0].vertex[0]" 
 		"|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:sweater|comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.tweakLocation" 
-		"comfy_mc_latest_realRN.placeHolderList[296]" "comfy_mc_latest_realRN.placeHolderList[297]" 
+		"comfy_mc_latest_realRN.placeHolderList[601]" "comfy_mc_latest_realRN.placeHolderList[602]" 
 		"comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.twl"
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[8]" 
-		"comfy_mc_latest_realRN.placeHolderList[298]" ""
+		"comfy_mc_latest_realRN.placeHolderList[603]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[8].objectGroupId" 
-		"comfy_mc_latest_realRN.placeHolderList[299]" ""
+		"comfy_mc_latest_realRN.placeHolderList[604]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.instObjGroups.objectGroups[8].objectGrpColor" 
-		"comfy_mc_latest_realRN.placeHolderList[300]" ""
+		"comfy_mc_latest_realRN.placeHolderList[605]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.inMesh" 
-		"comfy_mc_latest_realRN.placeHolderList[301]" ""
+		"comfy_mc_latest_realRN.placeHolderList[606]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:group1|comfy_mc_latest_real:comfy_mc_latest3:body|comfy_mc_latest_real:comfy_mc_latest3:bodyShape.tweakLocation" 
-		"comfy_mc_latest_realRN.placeHolderList[302]" ""
+		"comfy_mc_latest_realRN.placeHolderList[607]" ""
+		5 3 "comfy_mc_latest_realRN" "comfy_mc_latest_real:skinCluster1.outputGeometry[0]" 
+		"comfy_mc_latest_realRN.placeHolderList[608]" "comfy_mc_latest_real:comfy_mc_latest3:bodyShape.i"
+		
 		5 3 "comfy_mc_latest_realRN" "comfy_mc_latest_real:wrap7.outputGeometry[0]" 
-		"comfy_mc_latest_realRN.placeHolderList[303]" "comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.i"
+		"comfy_mc_latest_realRN.placeHolderList[609]" "comfy_mc_latest_real:comfy_mc_latest3:sweaterShape.i"
 		
-		5 3 "comfy_mc_latest_realRN" "comfy_mc_latest_real:lash.outputGeometry[0]" 
-		"comfy_mc_latest_realRN.placeHolderList[304]" "comfy_mc_latest_real:comfy_mc_latest3:bodyShape.i"
-		
-		5 4 "comfy_mc_latest_realRN" "comfy_mc_latest_real:lash.envelope" "comfy_mc_latest_realRN.placeHolderList[305]" 
-		""
-		"comfy_mc_latest_real:mc_rig_onlyRN" 486
+		"comfy_mc_latest_real:mc_rig_onlyRN" 488
 		0 "|comfy_mc_latest_realRNfosterParent1|neck_ctrl" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42" 
 		"-s -r "
 		1 |comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl 
 		"blendPoint1" "blendPoint1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		2 "|comfy_mc_latest_real:mc_rig_only:main_chara" "visibility" " 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control" 
@@ -58106,7 +58119,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl" 
 		"translateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl" 
-		"rotate" " -type \"double3\" 8.92010640924844012 4.0370703012479332 0.63308992521143281"
+		"rotate" " -type \"double3\" 10.15272255960723058 -2.24402366874526749 -0.35151124085407304"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl" 
 		"rotateX" " -av"
@@ -58123,7 +58136,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl" 
 		"scaleZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL" 
-		"translate" " -type \"double3\" 0.16981353785605083 -0.44821929965984125 0.070987287653542133"
+		"translate" " -type \"double3\" -0.23106435383950483 -0.43452180422257947 0.067080880665821893"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL" 
 		"translateX" " -av"
@@ -58138,7 +58151,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape" 
 		"instObjGroups.objectGroups" " -s 2"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 1.5010839699891766e-05 -0.011851162055782714 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1" 
 		"translateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1" 
@@ -58152,7 +58165,8 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1" 
-		"translate" " -type \"double3\" -0.13608758274284855 0 -0.00059057990373645583"
+		"translate" " -type \"double3\" -0.13603972541628201 0.011741275333151238 -0.00059057990373645583"
+		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1" 
 		"translateY" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1" 
@@ -58166,7 +58180,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0 -0.0099907791318329473 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl" 
 		"translateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl" 
@@ -58174,7 +58188,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl" 
 		"translateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl" 
-		"rotate" " -type \"double3\" 0 0 2.01968607675360623"
+		"rotate" " -type \"double3\" 0 0 2.79472734193443051"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl" 
 		"rotateY" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl" 
@@ -58225,7 +58239,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
-		"translate" " -type \"double3\" 0.92255215498226628 0.86102123443983491 -0.6197062374086314"
+		"translate" " -type \"double3\" 0.92095091226540526 0.84959460718388891 -0.6636512386847524"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"translateX" " -av"
@@ -58234,7 +58248,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"translateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
-		"rotate" " -type \"double3\" 23.70021024650225172 73.00715982104959778 57.06735778147741911"
+		"rotate" " -type \"double3\" 5.37102841071711001 74.26627924033388695 37.9926285554469132"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"rotateX" " -av"
@@ -58251,7 +58265,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"scaleZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky" 
-		"rotate" " -type \"double3\" 0 0 -7.67033815483576831"
+		"rotate" " -type \"double3\" 0 0 28.36059674382878626"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky" 
 		"rotateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky" 
@@ -58259,7 +58273,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2" 
-		"rotate" " -type \"double3\" 0 0 -0.036925758657115386"
+		"rotate" " -type \"double3\" 0 0 -20.00896387859520331"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_thumb" 
@@ -58269,7 +58283,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 27.41549709803001278"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl" 
@@ -58291,11 +58305,10 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"rotateZ" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:spine_ik_handle" 
-		"translate" " -type \"double3\" -0.39923412998550067 7.30538776802200829 0.22069628749505377"
+		"translate" " -type \"double3\" -0.0099944733160142185 7.54060550718997646 -0.15714153100120676"
 		
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:spine_ik_handle" 
-		"rotate" " -type \"double3\" 160.26024369383230805 -61.86111234666322645 127.11944424912520901"
-		
+		"rotate" " -type \"double3\" -180 0 91.10410120844767334"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl" 
 		"translate" " -type \"double3\" -0.137637125592315 -0.35238001227704885 -0.37272349117200831"
 		
@@ -58318,7 +58331,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 -0.025088907434126284 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1" 
@@ -58346,7 +58359,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2" 
-		"translate" " -type \"double3\" 0 -0.025088907434126284 0"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2" 
 		"translateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2" 
@@ -58386,7 +58399,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7" 
 		"visibility" " -av 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7" 
-		"translate" " -type \"double3\" 0 -0.025088907434126284 0"
+		"translate" " -type \"double3\" 0 -0.0053206192300869759 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7" 
 		"translateX" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7" 
@@ -58450,7 +58463,7 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle11" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12" 
-		"translate" " -type \"double3\" 0 -0.025088907434126284 0"
+		"translate" " -type \"double3\" 0 -0.0053206192300869759 0"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12" 
 		"translateY" " -av"
 		2 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4" 
@@ -58483,6 +58496,8 @@ createNode reference -n "comfy_mc_latest_realRN";
 		2 "|comfy_mc_latest_real:mc_rig_only:faceRig_cam|comfy_mc_latest_real:mc_rig_only:faceRig_camShape" 
 		"tumblePivot" " -type \"double3\" -0.72604252904808142 3.88181092621065194 0.72578471511423892"
 		
+		2 "comfy_mc_latest_real:mc_rig_only:faceRig:mesh_layer" "visibility" " 0"
+		
 		2 "comfy_mc_latest_real:mc_rig_only:faceRig:L_eyeBlink" "w[0:1]" " -s 2 0 0"
 		
 		2 "comfy_mc_latest_real:mc_rig_only:faceRig:L_eyeBlink" "weight[1]" " -av"
@@ -58491,20 +58506,10 @@ createNode reference -n "comfy_mc_latest_realRN";
 		
 		2 "comfy_mc_latest_real:mc_rig_only:faceRig:blendShape4" "w[0:3]" " -s 4 1 0 0 0"
 		
-		3 "comfy_mc_latest_real:mc_rig_only:lambert4.message" "comfy_mc_latest_real:mc_rig_only:materialInfo3.material" 
-		""
-		3 "comfy_mc_latest_real:mc_rig_only:groupId166.groupId" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups.objectGroups[2].objectGroupId" 
-		""
-		3 ":initialShadingGroup.memberWireframeColor" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups.objectGroups[2].objectGrpColor" 
-		""
-		3 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups.objectGroups[2]" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "comfy_mc_latest_real:mc_rig_only:groupId167.groupId" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups.objectGroups[3].objectGroupId" 
-		""
-		3 "comfy_mc_latest_real:mc_rig_only:lambert4SG.memberWireframeColor" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups.objectGroups[3].objectGrpColor" 
-		""
 		3 "comfy_mc_latest_real:mc_rig_only:groupId166.message" ":initialShadingGroup.groupNodes" 
 		"-na"
+		3 "comfy_mc_latest_real:mc_rig_only:lambert4.message" "comfy_mc_latest_real:mc_rig_only:materialInfo3.material" 
+		""
 		3 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateX" 
 		"|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.translateX" 
 		""
@@ -58518,551 +58523,561 @@ createNode reference -n "comfy_mc_latest_realRN";
 		"comfy_mc_latest_real:mc_rig_only:lambert4SG.dagSetMembers" "-na"
 		3 "comfy_mc_latest_real:mc_rig_only:groupId167.message" "comfy_mc_latest_real:mc_rig_only:lambert4SG.groupNodes" 
 		"-na"
+		3 "comfy_mc_latest_real:mc_rig_only:groupId166.groupId" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups.objectGroups[2].objectGroupId" 
+		""
+		3 ":initialShadingGroup.memberWireframeColor" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups.objectGroups[2].objectGrpColor" 
+		""
+		3 "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups.objectGroups[2]" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "comfy_mc_latest_real:mc_rig_only:groupId167.groupId" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups.objectGroups[3].objectGroupId" 
+		""
+		3 "comfy_mc_latest_real:mc_rig_only:lambert4SG.memberWireframeColor" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups.objectGroups[3].objectGrpColor" 
+		""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara.drawOverride" 
-		"comfy_mc_latest_realRN.placeHolderList[1]" ""
+		"comfy_mc_latest_realRN.placeHolderList[306]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[2]" ""
+		"comfy_mc_latest_realRN.placeHolderList[307]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[3]" ""
+		"comfy_mc_latest_realRN.placeHolderList[308]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[4]" ""
+		"comfy_mc_latest_realRN.placeHolderList[309]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[5]" ""
+		"comfy_mc_latest_realRN.placeHolderList[310]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[6]" ""
+		"comfy_mc_latest_realRN.placeHolderList[311]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[7]" ""
+		"comfy_mc_latest_realRN.placeHolderList[312]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[8]" ""
+		"comfy_mc_latest_realRN.placeHolderList[313]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[9]" ""
+		"comfy_mc_latest_realRN.placeHolderList[314]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[10]" ""
+		"comfy_mc_latest_realRN.placeHolderList[315]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[11]" ""
+		"comfy_mc_latest_realRN.placeHolderList[316]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[12]" ""
+		"comfy_mc_latest_realRN.placeHolderList[317]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[13]" ""
+		"comfy_mc_latest_realRN.placeHolderList[318]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[14]" ""
+		"comfy_mc_latest_realRN.placeHolderList[319]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[15]" ""
+		"comfy_mc_latest_realRN.placeHolderList[320]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[16]" ""
+		"comfy_mc_latest_realRN.placeHolderList[321]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[17]" ""
+		"comfy_mc_latest_realRN.placeHolderList[322]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[18]" ""
+		"comfy_mc_latest_realRN.placeHolderList[323]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[19]" ""
+		"comfy_mc_latest_realRN.placeHolderList[324]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[20]" ""
+		"comfy_mc_latest_realRN.placeHolderList[325]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:r_arm_pole_vector.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[21]" ""
+		"comfy_mc_latest_realRN.placeHolderList[326]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[22]" ""
+		"comfy_mc_latest_realRN.placeHolderList[327]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[23]" ""
+		"comfy_mc_latest_realRN.placeHolderList[328]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[24]" ""
+		"comfy_mc_latest_realRN.placeHolderList[329]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[25]" ""
+		"comfy_mc_latest_realRN.placeHolderList[330]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[26]" ""
+		"comfy_mc_latest_realRN.placeHolderList[331]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[27]" ""
+		"comfy_mc_latest_realRN.placeHolderList[332]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[28]" ""
+		"comfy_mc_latest_realRN.placeHolderList[333]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[29]" ""
+		"comfy_mc_latest_realRN.placeHolderList[334]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[30]" ""
+		"comfy_mc_latest_realRN.placeHolderList[335]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[31]" ""
+		"comfy_mc_latest_realRN.placeHolderList[336]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[32]" ""
+		"comfy_mc_latest_realRN.placeHolderList[337]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[33]" ""
+		"comfy_mc_latest_realRN.placeHolderList[338]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[34]" ""
+		"comfy_mc_latest_realRN.placeHolderList[339]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[35]" ""
+		"comfy_mc_latest_realRN.placeHolderList[340]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[36]" ""
+		"comfy_mc_latest_realRN.placeHolderList[341]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[37]" ""
+		"comfy_mc_latest_realRN.placeHolderList[342]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[38]" ""
+		"comfy_mc_latest_realRN.placeHolderList[343]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[39]" ""
+		"comfy_mc_latest_realRN.placeHolderList[344]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[40]" ""
+		"comfy_mc_latest_realRN.placeHolderList[345]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:neck_ctrl|comfy_mc_latest_real:mc_rig_only:eye_CTRL.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[41]" ""
+		"comfy_mc_latest_realRN.placeHolderList[346]" ""
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:group42|comfy_mc_latest_real:mc_rig_only:null2|comfy_mc_latest_real:mc_rig_only:r_eyeball|comfy_mc_latest_real:mc_rig_only:r_eyeballShape.instObjGroups" 
-		"comfy_mc_latest_realRN.placeHolderList[42]" ""
+		"comfy_mc_latest_realRN.placeHolderList[347]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[43]" ""
+		"comfy_mc_latest_realRN.placeHolderList[348]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[44]" ""
+		"comfy_mc_latest_realRN.placeHolderList[349]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[45]" ""
+		"comfy_mc_latest_realRN.placeHolderList[350]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[46]" ""
+		"comfy_mc_latest_realRN.placeHolderList[351]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[47]" ""
+		"comfy_mc_latest_realRN.placeHolderList[352]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[48]" ""
+		"comfy_mc_latest_realRN.placeHolderList[353]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[49]" ""
+		"comfy_mc_latest_realRN.placeHolderList[354]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[50]" ""
+		"comfy_mc_latest_realRN.placeHolderList[355]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[51]" ""
+		"comfy_mc_latest_realRN.placeHolderList[356]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null6|comfy_mc_latest_real:mc_rig_only:l_shoulder_ctrl1.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[52]" ""
+		"comfy_mc_latest_realRN.placeHolderList[357]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[53]" ""
+		"comfy_mc_latest_realRN.placeHolderList[358]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[54]" ""
+		"comfy_mc_latest_realRN.placeHolderList[359]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[55]" ""
+		"comfy_mc_latest_realRN.placeHolderList[360]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[56]" ""
+		"comfy_mc_latest_realRN.placeHolderList[361]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[57]" ""
+		"comfy_mc_latest_realRN.placeHolderList[362]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[58]" ""
+		"comfy_mc_latest_realRN.placeHolderList[363]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[59]" ""
+		"comfy_mc_latest_realRN.placeHolderList[364]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[60]" ""
+		"comfy_mc_latest_realRN.placeHolderList[365]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[61]" ""
+		"comfy_mc_latest_realRN.placeHolderList[366]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null7|comfy_mc_latest_real:mc_rig_only:r_shoulder_ctrl1.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[62]" ""
+		"comfy_mc_latest_realRN.placeHolderList[367]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[63]" ""
+		"comfy_mc_latest_realRN.placeHolderList[368]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[64]" ""
+		"comfy_mc_latest_realRN.placeHolderList[369]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[65]" ""
+		"comfy_mc_latest_realRN.placeHolderList[370]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[66]" ""
+		"comfy_mc_latest_realRN.placeHolderList[371]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[67]" ""
+		"comfy_mc_latest_realRN.placeHolderList[372]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[68]" ""
+		"comfy_mc_latest_realRN.placeHolderList[373]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[69]" ""
+		"comfy_mc_latest_realRN.placeHolderList[374]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[70]" ""
+		"comfy_mc_latest_realRN.placeHolderList[375]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[71]" ""
+		"comfy_mc_latest_realRN.placeHolderList[376]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null8|comfy_mc_latest_real:mc_rig_only:shoulder_ctrl.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[72]" ""
+		"comfy_mc_latest_realRN.placeHolderList[377]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[73]" ""
+		"comfy_mc_latest_realRN.placeHolderList[378]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[74]" ""
+		"comfy_mc_latest_realRN.placeHolderList[379]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[75]" ""
+		"comfy_mc_latest_realRN.placeHolderList[380]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[76]" ""
+		"comfy_mc_latest_realRN.placeHolderList[381]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[77]" ""
+		"comfy_mc_latest_realRN.placeHolderList[382]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[78]" ""
+		"comfy_mc_latest_realRN.placeHolderList[383]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[79]" ""
+		"comfy_mc_latest_realRN.placeHolderList[384]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[80]" ""
+		"comfy_mc_latest_realRN.placeHolderList[385]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[81]" ""
+		"comfy_mc_latest_realRN.placeHolderList[386]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[82]" ""
+		"comfy_mc_latest_realRN.placeHolderList[387]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[83]" ""
+		"comfy_mc_latest_realRN.placeHolderList[388]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[84]" ""
+		"comfy_mc_latest_realRN.placeHolderList[389]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:l_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:l_knee_fk_ctrl.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[85]" ""
+		"comfy_mc_latest_realRN.placeHolderList[390]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[86]" ""
+		"comfy_mc_latest_realRN.placeHolderList[391]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[87]" ""
+		"comfy_mc_latest_realRN.placeHolderList[392]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[88]" ""
+		"comfy_mc_latest_realRN.placeHolderList[393]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[89]" ""
+		"comfy_mc_latest_realRN.placeHolderList[394]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[90]" ""
+		"comfy_mc_latest_realRN.placeHolderList[395]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[91]" ""
+		"comfy_mc_latest_realRN.placeHolderList[396]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[92]" ""
+		"comfy_mc_latest_realRN.placeHolderList[397]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[93]" ""
+		"comfy_mc_latest_realRN.placeHolderList[398]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[94]" ""
+		"comfy_mc_latest_realRN.placeHolderList[399]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[95]" ""
+		"comfy_mc_latest_realRN.placeHolderList[400]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[96]" ""
+		"comfy_mc_latest_realRN.placeHolderList[401]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[97]" ""
+		"comfy_mc_latest_realRN.placeHolderList[402]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:r_leg_fk_ctrl|comfy_mc_latest_real:mc_rig_only:r_knee_fk_ctrl.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[98]" ""
+		"comfy_mc_latest_realRN.placeHolderList[403]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[99]" ""
+		"comfy_mc_latest_realRN.placeHolderList[404]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[100]" ""
+		"comfy_mc_latest_realRN.placeHolderList[405]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[101]" ""
+		"comfy_mc_latest_realRN.placeHolderList[406]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[102]" ""
+		"comfy_mc_latest_realRN.placeHolderList[407]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[103]" ""
+		"comfy_mc_latest_realRN.placeHolderList[408]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[104]" ""
+		"comfy_mc_latest_realRN.placeHolderList[409]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[105]" ""
+		"comfy_mc_latest_realRN.placeHolderList[410]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[106]" ""
+		"comfy_mc_latest_realRN.placeHolderList[411]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[107]" ""
+		"comfy_mc_latest_realRN.placeHolderList[412]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[108]" ""
+		"comfy_mc_latest_realRN.placeHolderList[413]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[109]" ""
+		"comfy_mc_latest_realRN.placeHolderList[414]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[110]" ""
+		"comfy_mc_latest_realRN.placeHolderList[415]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:cog_ctrl|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_4|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_3|comfy_mc_latest_real:mc_rig_only:spine_fk_ctrl_2.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[111]" ""
+		"comfy_mc_latest_realRN.placeHolderList[416]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[112]" ""
+		"comfy_mc_latest_realRN.placeHolderList[417]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[113]" ""
+		"comfy_mc_latest_realRN.placeHolderList[418]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[114]" ""
+		"comfy_mc_latest_realRN.placeHolderList[419]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[115]" ""
+		"comfy_mc_latest_realRN.placeHolderList[420]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[116]" ""
+		"comfy_mc_latest_realRN.placeHolderList[421]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[117]" ""
+		"comfy_mc_latest_realRN.placeHolderList[422]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[118]" ""
+		"comfy_mc_latest_realRN.placeHolderList[423]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[119]" ""
+		"comfy_mc_latest_realRN.placeHolderList[424]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[120]" ""
+		"comfy_mc_latest_realRN.placeHolderList[425]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[121]" ""
+		"comfy_mc_latest_realRN.placeHolderList[426]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[122]" ""
+		"comfy_mc_latest_realRN.placeHolderList[427]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[123]" ""
+		"comfy_mc_latest_realRN.placeHolderList[428]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[124]" ""
+		"comfy_mc_latest_realRN.placeHolderList[429]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[125]" ""
+		"comfy_mc_latest_realRN.placeHolderList[430]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[126]" ""
+		"comfy_mc_latest_realRN.placeHolderList[431]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[127]" ""
+		"comfy_mc_latest_realRN.placeHolderList[432]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[128]" ""
+		"comfy_mc_latest_realRN.placeHolderList[433]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[129]" ""
+		"comfy_mc_latest_realRN.placeHolderList[434]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[130]" ""
+		"comfy_mc_latest_realRN.placeHolderList[435]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[131]" ""
+		"comfy_mc_latest_realRN.placeHolderList[436]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[132]" ""
+		"comfy_mc_latest_realRN.placeHolderList[437]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[133]" ""
+		"comfy_mc_latest_realRN.placeHolderList[438]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[134]" ""
+		"comfy_mc_latest_realRN.placeHolderList[439]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[135]" ""
+		"comfy_mc_latest_realRN.placeHolderList[440]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[136]" ""
+		"comfy_mc_latest_realRN.placeHolderList[441]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[137]" ""
+		"comfy_mc_latest_realRN.placeHolderList[442]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[138]" ""
+		"comfy_mc_latest_realRN.placeHolderList[443]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[139]" ""
+		"comfy_mc_latest_realRN.placeHolderList[444]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[140]" ""
+		"comfy_mc_latest_realRN.placeHolderList[445]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_pinky|comfy_mc_latest_real:mc_rig_only:r_pinky_2.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[141]" ""
+		"comfy_mc_latest_realRN.placeHolderList[446]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[142]" ""
+		"comfy_mc_latest_realRN.placeHolderList[447]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[143]" ""
+		"comfy_mc_latest_realRN.placeHolderList[448]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[144]" ""
+		"comfy_mc_latest_realRN.placeHolderList[449]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[145]" ""
+		"comfy_mc_latest_realRN.placeHolderList[450]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[146]" ""
+		"comfy_mc_latest_realRN.placeHolderList[451]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[147]" ""
+		"comfy_mc_latest_realRN.placeHolderList[452]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[148]" ""
+		"comfy_mc_latest_realRN.placeHolderList[453]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[149]" ""
+		"comfy_mc_latest_realRN.placeHolderList[454]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[150]" ""
+		"comfy_mc_latest_realRN.placeHolderList[455]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[151]" ""
+		"comfy_mc_latest_realRN.placeHolderList[456]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[152]" ""
+		"comfy_mc_latest_realRN.placeHolderList[457]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[153]" ""
+		"comfy_mc_latest_realRN.placeHolderList[458]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[154]" ""
+		"comfy_mc_latest_realRN.placeHolderList[459]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[155]" ""
+		"comfy_mc_latest_realRN.placeHolderList[460]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[156]" ""
+		"comfy_mc_latest_realRN.placeHolderList[461]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[157]" ""
+		"comfy_mc_latest_realRN.placeHolderList[462]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[158]" ""
+		"comfy_mc_latest_realRN.placeHolderList[463]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[159]" ""
+		"comfy_mc_latest_realRN.placeHolderList[464]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[160]" ""
+		"comfy_mc_latest_realRN.placeHolderList[465]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null4|comfy_mc_latest_real:mc_rig_only:r_wrist_ctrl|comfy_mc_latest_real:mc_rig_only:r_ring|comfy_mc_latest_real:mc_rig_only:r_ring_2.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[161]" ""
+		"comfy_mc_latest_realRN.placeHolderList[466]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[162]" ""
+		"comfy_mc_latest_realRN.placeHolderList[467]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[163]" ""
+		"comfy_mc_latest_realRN.placeHolderList[468]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[164]" ""
+		"comfy_mc_latest_realRN.placeHolderList[469]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[165]" ""
+		"comfy_mc_latest_realRN.placeHolderList[470]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[166]" ""
+		"comfy_mc_latest_realRN.placeHolderList[471]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[167]" ""
+		"comfy_mc_latest_realRN.placeHolderList[472]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[168]" ""
+		"comfy_mc_latest_realRN.placeHolderList[473]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[169]" ""
+		"comfy_mc_latest_realRN.placeHolderList[474]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[170]" ""
+		"comfy_mc_latest_realRN.placeHolderList[475]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:null5|comfy_mc_latest_real:mc_rig_only:l_wrist_ctrl.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[171]" ""
+		"comfy_mc_latest_realRN.placeHolderList[476]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[172]" ""
+		"comfy_mc_latest_realRN.placeHolderList[477]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[173]" ""
+		"comfy_mc_latest_realRN.placeHolderList[478]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[174]" ""
+		"comfy_mc_latest_realRN.placeHolderList[479]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[175]" ""
+		"comfy_mc_latest_realRN.placeHolderList[480]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[176]" ""
+		"comfy_mc_latest_realRN.placeHolderList[481]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[177]" ""
+		"comfy_mc_latest_realRN.placeHolderList[482]" ""
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.blendPoint1" 
-		"comfy_mc_latest_realRN.placeHolderList[178]" ""
+		"comfy_mc_latest_realRN.placeHolderList[483]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.blendPoint1" 
-		"comfy_mc_latest_realRN.placeHolderList[179]" ""
+		"comfy_mc_latest_realRN.placeHolderList[484]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[180]" ""
+		"comfy_mc_latest_realRN.placeHolderList[485]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[181]" ""
+		"comfy_mc_latest_realRN.placeHolderList[486]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[182]" ""
+		"comfy_mc_latest_realRN.placeHolderList[487]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[183]" ""
+		"comfy_mc_latest_realRN.placeHolderList[488]" ""
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateX" 
-		"comfy_mc_latest_realRN.placeHolderList[184]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.tx"
+		"comfy_mc_latest_realRN.placeHolderList[489]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.tx"
 		
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateY" 
-		"comfy_mc_latest_realRN.placeHolderList[185]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.ty"
+		"comfy_mc_latest_realRN.placeHolderList[490]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.ty"
 		
 		5 3 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:master_control|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_GRP|comfy_mc_latest_real:mc_rig_only:breathing_ctrl|comfy_mc_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[186]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.tz"
+		"comfy_mc_latest_realRN.placeHolderList[491]" "comfy_mc_latest_real:mc_rig_only:breathing_ctrl.tz"
 		
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.Blink" 
-		"comfy_mc_latest_realRN.placeHolderList[187]" ""
+		"comfy_mc_latest_realRN.placeHolderList[492]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[188]" ""
+		"comfy_mc_latest_realRN.placeHolderList[493]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[189]" ""
+		"comfy_mc_latest_realRN.placeHolderList[494]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[190]" ""
+		"comfy_mc_latest_realRN.placeHolderList[495]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[191]" ""
+		"comfy_mc_latest_realRN.placeHolderList[496]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[192]" ""
+		"comfy_mc_latest_realRN.placeHolderList[497]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[193]" ""
+		"comfy_mc_latest_realRN.placeHolderList[498]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[194]" ""
+		"comfy_mc_latest_realRN.placeHolderList[499]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[195]" ""
+		"comfy_mc_latest_realRN.placeHolderList[500]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[196]" ""
+		"comfy_mc_latest_realRN.placeHolderList[501]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle1.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[197]" ""
+		"comfy_mc_latest_realRN.placeHolderList[502]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[198]" ""
+		"comfy_mc_latest_realRN.placeHolderList[503]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[199]" ""
+		"comfy_mc_latest_realRN.placeHolderList[504]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[200]" ""
+		"comfy_mc_latest_realRN.placeHolderList[505]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[201]" ""
+		"comfy_mc_latest_realRN.placeHolderList[506]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[202]" ""
+		"comfy_mc_latest_realRN.placeHolderList[507]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[203]" ""
+		"comfy_mc_latest_realRN.placeHolderList[508]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[204]" ""
+		"comfy_mc_latest_realRN.placeHolderList[509]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[205]" ""
+		"comfy_mc_latest_realRN.placeHolderList[510]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[206]" ""
+		"comfy_mc_latest_realRN.placeHolderList[511]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle2.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[207]" ""
+		"comfy_mc_latest_realRN.placeHolderList[512]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.Blink" 
-		"comfy_mc_latest_realRN.placeHolderList[208]" ""
+		"comfy_mc_latest_realRN.placeHolderList[513]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[209]" ""
+		"comfy_mc_latest_realRN.placeHolderList[514]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[210]" ""
+		"comfy_mc_latest_realRN.placeHolderList[515]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[211]" ""
+		"comfy_mc_latest_realRN.placeHolderList[516]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[212]" ""
+		"comfy_mc_latest_realRN.placeHolderList[517]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[213]" ""
+		"comfy_mc_latest_realRN.placeHolderList[518]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[214]" ""
+		"comfy_mc_latest_realRN.placeHolderList[519]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[215]" ""
+		"comfy_mc_latest_realRN.placeHolderList[520]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[216]" ""
+		"comfy_mc_latest_realRN.placeHolderList[521]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[217]" ""
+		"comfy_mc_latest_realRN.placeHolderList[522]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle7.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[218]" ""
+		"comfy_mc_latest_realRN.placeHolderList[523]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[219]" ""
+		"comfy_mc_latest_realRN.placeHolderList[524]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[220]" ""
+		"comfy_mc_latest_realRN.placeHolderList[525]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[221]" ""
+		"comfy_mc_latest_realRN.placeHolderList[526]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[222]" ""
+		"comfy_mc_latest_realRN.placeHolderList[527]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[223]" ""
+		"comfy_mc_latest_realRN.placeHolderList[528]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[224]" ""
+		"comfy_mc_latest_realRN.placeHolderList[529]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[225]" ""
+		"comfy_mc_latest_realRN.placeHolderList[530]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[226]" ""
+		"comfy_mc_latest_realRN.placeHolderList[531]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[227]" ""
+		"comfy_mc_latest_realRN.placeHolderList[532]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:eyelid_CTRL|comfy_mc_latest_real:mc_rig_only:faceRig:nurbsCircle12.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[228]" ""
+		"comfy_mc_latest_realRN.placeHolderList[533]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[229]" ""
+		"comfy_mc_latest_realRN.placeHolderList[534]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[230]" ""
+		"comfy_mc_latest_realRN.placeHolderList[535]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[231]" ""
+		"comfy_mc_latest_realRN.placeHolderList[536]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[232]" ""
+		"comfy_mc_latest_realRN.placeHolderList[537]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[233]" ""
+		"comfy_mc_latest_realRN.placeHolderList[538]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[234]" ""
+		"comfy_mc_latest_realRN.placeHolderList[539]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[235]" ""
+		"comfy_mc_latest_realRN.placeHolderList[540]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[236]" ""
+		"comfy_mc_latest_realRN.placeHolderList[541]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[237]" ""
+		"comfy_mc_latest_realRN.placeHolderList[542]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group25|comfy_mc_latest_real:mc_rig_only:faceRig:mouth4.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[238]" ""
+		"comfy_mc_latest_realRN.placeHolderList[543]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[239]" ""
+		"comfy_mc_latest_realRN.placeHolderList[544]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[240]" ""
+		"comfy_mc_latest_realRN.placeHolderList[545]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[241]" ""
+		"comfy_mc_latest_realRN.placeHolderList[546]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[242]" ""
+		"comfy_mc_latest_realRN.placeHolderList[547]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[243]" ""
+		"comfy_mc_latest_realRN.placeHolderList[548]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[244]" ""
+		"comfy_mc_latest_realRN.placeHolderList[549]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[245]" ""
+		"comfy_mc_latest_realRN.placeHolderList[550]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[246]" ""
+		"comfy_mc_latest_realRN.placeHolderList[551]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[247]" ""
+		"comfy_mc_latest_realRN.placeHolderList[552]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group26|comfy_mc_latest_real:mc_rig_only:faceRig:mouth5.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[248]" ""
+		"comfy_mc_latest_realRN.placeHolderList[553]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[249]" ""
+		"comfy_mc_latest_realRN.placeHolderList[554]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[250]" ""
+		"comfy_mc_latest_realRN.placeHolderList[555]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[251]" ""
+		"comfy_mc_latest_realRN.placeHolderList[556]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[252]" ""
+		"comfy_mc_latest_realRN.placeHolderList[557]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[253]" ""
+		"comfy_mc_latest_realRN.placeHolderList[558]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[254]" ""
+		"comfy_mc_latest_realRN.placeHolderList[559]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[255]" ""
+		"comfy_mc_latest_realRN.placeHolderList[560]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[256]" ""
+		"comfy_mc_latest_realRN.placeHolderList[561]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[257]" ""
+		"comfy_mc_latest_realRN.placeHolderList[562]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group27|comfy_mc_latest_real:mc_rig_only:faceRig:mouth7.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[258]" ""
+		"comfy_mc_latest_realRN.placeHolderList[563]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.translateX" 
-		"comfy_mc_latest_realRN.placeHolderList[259]" ""
+		"comfy_mc_latest_realRN.placeHolderList[564]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.translateY" 
-		"comfy_mc_latest_realRN.placeHolderList[260]" ""
+		"comfy_mc_latest_realRN.placeHolderList[565]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.translateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[261]" ""
+		"comfy_mc_latest_realRN.placeHolderList[566]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.rotateX" 
-		"comfy_mc_latest_realRN.placeHolderList[262]" ""
+		"comfy_mc_latest_realRN.placeHolderList[567]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.rotateY" 
-		"comfy_mc_latest_realRN.placeHolderList[263]" ""
+		"comfy_mc_latest_realRN.placeHolderList[568]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.rotateZ" 
-		"comfy_mc_latest_realRN.placeHolderList[264]" ""
+		"comfy_mc_latest_realRN.placeHolderList[569]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.scaleX" 
-		"comfy_mc_latest_realRN.placeHolderList[265]" ""
+		"comfy_mc_latest_realRN.placeHolderList[570]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.scaleY" 
-		"comfy_mc_latest_realRN.placeHolderList[266]" ""
+		"comfy_mc_latest_realRN.placeHolderList[571]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.scaleZ" 
-		"comfy_mc_latest_realRN.placeHolderList[267]" ""
+		"comfy_mc_latest_realRN.placeHolderList[572]" ""
 		5 4 "comfy_mc_latest_realRN" "|comfy_mc_latest_real:mc_rig_only:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:main_chara|comfy_mc_latest_real:mc_rig_only:faceRig:faceRig|comfy_mc_latest_real:mc_rig_only:faceRig:CTRLs|comfy_mc_latest_real:mc_rig_only:faceRig:group29|comfy_mc_latest_real:mc_rig_only:faceRig:group30|comfy_mc_latest_real:mc_rig_only:faceRig:group28|comfy_mc_latest_real:mc_rig_only:faceRig:mouth6.visibility" 
-		"comfy_mc_latest_realRN.placeHolderList[268]" ""
+		"comfy_mc_latest_realRN.placeHolderList[573]" ""
 		5 0 "comfy_mc_latest_realRN" "comfy_mc_latest_real:mc_rig_only:lambert4.message" 
-		"comfy_mc_latest_real:mc_rig_only:materialInfo3.material" "comfy_mc_latest_realRN.placeHolderList[269]" 
-		"comfy_mc_latest_realRN.placeHolderList[270]" "comfy_mc_latest_real:mc_rig_only:materialInfo3.m"
+		"comfy_mc_latest_real:mc_rig_only:materialInfo3.material" "comfy_mc_latest_realRN.placeHolderList[574]" 
+		"comfy_mc_latest_realRN.placeHolderList[575]" "comfy_mc_latest_real:mc_rig_only:materialInfo3.m"
 		
 		5 4 "comfy_mc_latest_realRN" "comfy_mc_latest_real:mc_rig_only:faceRig:blendShape4.envelope" 
-		"comfy_mc_latest_realRN.placeHolderList[271]" "";
+		"comfy_mc_latest_realRN.placeHolderList[576]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTA -n "l_knee_fk_ctrl_rotateX";
@@ -62370,8 +62385,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" -30;
-	setAttr -av ".unw" -30;
+	setAttr -k on ".o" 38;
+	setAttr -av ".unw" 38;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -62383,7 +62398,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 205 ".st";
+	setAttr -s 207 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -62396,7 +62411,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 193 ".s";
+	setAttr -s 195 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -62408,7 +62423,7 @@ select -ne :defaultRenderUtilityList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 64 ".u";
+	setAttr -s 69 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 121 ".r";
 select -ne :lightList1;
@@ -62418,8 +62433,7 @@ select -ne :defaultTextureList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 157 ".tx";
-select -ne :lambert1;
+	setAttr -s 166 ".tx";
 select -ne :initialShadingGroup;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -62448,7 +62462,6 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr -k on ".ro" yes;
-select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -62625,309 +62638,308 @@ connectAttr "tea_and_comp.di" "bedroom_SET_latest1:teacupRN.phl[1]";
 connectAttr "tea_and_comp.di" "bedroom_SET_latest1:macRN.phl[1]";
 connectAttr "tea_and_comp.di" "bedroom_SET_latest1:bedroom_light_rig:macRN.phl[1]"
 		;
-connectAttr "foreground.di" "comfy_mc_latest_realRN.phl[272]";
-connectAttr "sweater_visibility.o" "comfy_mc_latest_realRN.phl[273]";
-connectAttr "sweater_translateX.o" "comfy_mc_latest_realRN.phl[274]";
-connectAttr "sweater_translateY.o" "comfy_mc_latest_realRN.phl[275]";
-connectAttr "sweater_translateZ.o" "comfy_mc_latest_realRN.phl[276]";
-connectAttr "sweater_rotateX.o" "comfy_mc_latest_realRN.phl[277]";
-connectAttr "sweater_rotateY.o" "comfy_mc_latest_realRN.phl[278]";
-connectAttr "sweater_rotateZ.o" "comfy_mc_latest_realRN.phl[279]";
-connectAttr "sweater_scaleX.o" "comfy_mc_latest_realRN.phl[280]";
-connectAttr "sweater_scaleY.o" "comfy_mc_latest_realRN.phl[281]";
-connectAttr "sweater_scaleZ.o" "comfy_mc_latest_realRN.phl[282]";
-connectAttr "comfy_mc_latest_realRN.phl[283]" "blendShape1Set.dsm" -na;
-connectAttr "blendShape1GroupId.id" "comfy_mc_latest_realRN.phl[284]";
-connectAttr "blendShape1Set.mwc" "comfy_mc_latest_realRN.phl[285]";
-connectAttr "comfy_mc_latest_realRN.phl[286]" "blendShape2Set.dsm" -na;
-connectAttr "blendShape2GroupId.id" "comfy_mc_latest_realRN.phl[287]";
-connectAttr "blendShape2Set.mwc" "comfy_mc_latest_realRN.phl[288]";
-connectAttr "comfy_mc_latest_realRN.phl[289]" "blendShape6Set.dsm" -na;
-connectAttr "blendShape6GroupId.id" "comfy_mc_latest_realRN.phl[290]";
-connectAttr "blendShape6Set.mwc" "comfy_mc_latest_realRN.phl[291]";
-connectAttr "comfy_mc_latest_realRN.phl[292]" "blendShape7Set.dsm" -na;
-connectAttr "blendShape7GroupId.id" "comfy_mc_latest_realRN.phl[293]";
-connectAttr "blendShape7Set.mwc" "comfy_mc_latest_realRN.phl[294]";
-connectAttr "blendShape7.og[0]" "comfy_mc_latest_realRN.phl[295]";
-connectAttr "comfy_mc_latest_realRN.phl[296]" "comfy_mc_latest_realRN.phl[297]";
-connectAttr "comfy_mc_latest_realRN.phl[298]" "blendShape5Set.dsm" -na;
-connectAttr "blendShape5GroupId.id" "comfy_mc_latest_realRN.phl[299]";
-connectAttr "blendShape5Set.mwc" "comfy_mc_latest_realRN.phl[300]";
-connectAttr "mouth_close.og[0]" "comfy_mc_latest_realRN.phl[301]";
-connectAttr "mouth_close.it[0].vt[0]" "comfy_mc_latest_realRN.phl[302]";
-connectAttr "comfy_mc_latest_realRN.phl[303]" "blendShape1GroupParts.ig";
-connectAttr "comfy_mc_latest_realRN.phl[304]" "blendShape5GroupParts.ig";
-connectAttr "lash_envelope.o" "comfy_mc_latest_realRN.phl[305]";
-connectAttr "foreground.di" "comfy_mc_latest_realRN.phl[1]";
-connectAttr "master_control_scaleX.o" "comfy_mc_latest_realRN.phl[2]";
-connectAttr "master_control_scaleY.o" "comfy_mc_latest_realRN.phl[3]";
-connectAttr "master_control_scaleZ.o" "comfy_mc_latest_realRN.phl[4]";
-connectAttr "master_control_visibility.o" "comfy_mc_latest_realRN.phl[5]";
-connectAttr "master_control_translateX.o" "comfy_mc_latest_realRN.phl[6]";
-connectAttr "master_control_translateY.o" "comfy_mc_latest_realRN.phl[7]";
-connectAttr "master_control_translateZ.o" "comfy_mc_latest_realRN.phl[8]";
-connectAttr "master_control_rotateY.o" "comfy_mc_latest_realRN.phl[9]";
-connectAttr "master_control_rotateX.o" "comfy_mc_latest_realRN.phl[10]";
-connectAttr "master_control_rotateZ.o" "comfy_mc_latest_realRN.phl[11]";
-connectAttr "r_arm_pole_vector_translateX.o" "comfy_mc_latest_realRN.phl[12]";
-connectAttr "r_arm_pole_vector_translateY.o" "comfy_mc_latest_realRN.phl[13]";
-connectAttr "r_arm_pole_vector_translateZ.o" "comfy_mc_latest_realRN.phl[14]";
-connectAttr "r_arm_pole_vector_visibility.o" "comfy_mc_latest_realRN.phl[15]";
-connectAttr "r_arm_pole_vector_rotateX.o" "comfy_mc_latest_realRN.phl[16]";
-connectAttr "r_arm_pole_vector_rotateY.o" "comfy_mc_latest_realRN.phl[17]";
-connectAttr "r_arm_pole_vector_rotateZ.o" "comfy_mc_latest_realRN.phl[18]";
-connectAttr "r_arm_pole_vector_scaleX.o" "comfy_mc_latest_realRN.phl[19]";
-connectAttr "r_arm_pole_vector_scaleY.o" "comfy_mc_latest_realRN.phl[20]";
-connectAttr "r_arm_pole_vector_scaleZ.o" "comfy_mc_latest_realRN.phl[21]";
-connectAttr "neck_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[22]";
-connectAttr "neck_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[23]";
-connectAttr "neck_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[24]";
-connectAttr "neck_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[25]";
-connectAttr "neck_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[26]";
-connectAttr "neck_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[27]";
-connectAttr "neck_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[28]";
-connectAttr "neck_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[29]";
-connectAttr "neck_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[30]";
-connectAttr "neck_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[31]";
-connectAttr "eye_CTRL_translateX.o" "comfy_mc_latest_realRN.phl[32]";
-connectAttr "eye_CTRL_translateY.o" "comfy_mc_latest_realRN.phl[33]";
-connectAttr "eye_CTRL_translateZ.o" "comfy_mc_latest_realRN.phl[34]";
-connectAttr "eye_CTRL_visibility.o" "comfy_mc_latest_realRN.phl[35]";
-connectAttr "eye_CTRL_rotateX.o" "comfy_mc_latest_realRN.phl[36]";
-connectAttr "eye_CTRL_rotateY.o" "comfy_mc_latest_realRN.phl[37]";
-connectAttr "eye_CTRL_rotateZ.o" "comfy_mc_latest_realRN.phl[38]";
-connectAttr "eye_CTRL_scaleX.o" "comfy_mc_latest_realRN.phl[39]";
-connectAttr "eye_CTRL_scaleY.o" "comfy_mc_latest_realRN.phl[40]";
-connectAttr "eye_CTRL_scaleZ.o" "comfy_mc_latest_realRN.phl[41]";
-connectAttr "comfy_mc_latest_realRN.phl[42]" "PxrSurface1SG.dsm" -na;
-connectAttr "l_shoulder_ctrl1_translateX.o" "comfy_mc_latest_realRN.phl[43]";
-connectAttr "l_shoulder_ctrl1_translateY.o" "comfy_mc_latest_realRN.phl[44]";
-connectAttr "l_shoulder_ctrl1_translateZ.o" "comfy_mc_latest_realRN.phl[45]";
-connectAttr "l_shoulder_ctrl1_rotateX.o" "comfy_mc_latest_realRN.phl[46]";
-connectAttr "l_shoulder_ctrl1_rotateY.o" "comfy_mc_latest_realRN.phl[47]";
-connectAttr "l_shoulder_ctrl1_rotateZ.o" "comfy_mc_latest_realRN.phl[48]";
-connectAttr "l_shoulder_ctrl1_scaleX.o" "comfy_mc_latest_realRN.phl[49]";
-connectAttr "l_shoulder_ctrl1_scaleY.o" "comfy_mc_latest_realRN.phl[50]";
-connectAttr "l_shoulder_ctrl1_scaleZ.o" "comfy_mc_latest_realRN.phl[51]";
-connectAttr "l_shoulder_ctrl1_visibility.o" "comfy_mc_latest_realRN.phl[52]";
-connectAttr "r_shoulder_ctrl1_translateY.o" "comfy_mc_latest_realRN.phl[53]";
-connectAttr "r_shoulder_ctrl1_translateX.o" "comfy_mc_latest_realRN.phl[54]";
-connectAttr "r_shoulder_ctrl1_translateZ.o" "comfy_mc_latest_realRN.phl[55]";
-connectAttr "r_shoulder_ctrl1_rotateX.o" "comfy_mc_latest_realRN.phl[56]";
-connectAttr "r_shoulder_ctrl1_rotateY.o" "comfy_mc_latest_realRN.phl[57]";
-connectAttr "r_shoulder_ctrl1_rotateZ.o" "comfy_mc_latest_realRN.phl[58]";
-connectAttr "r_shoulder_ctrl1_scaleX.o" "comfy_mc_latest_realRN.phl[59]";
-connectAttr "r_shoulder_ctrl1_scaleY.o" "comfy_mc_latest_realRN.phl[60]";
-connectAttr "r_shoulder_ctrl1_scaleZ.o" "comfy_mc_latest_realRN.phl[61]";
-connectAttr "r_shoulder_ctrl1_visibility.o" "comfy_mc_latest_realRN.phl[62]";
-connectAttr "shoulder_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[63]";
-connectAttr "shoulder_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[64]";
-connectAttr "shoulder_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[65]";
-connectAttr "shoulder_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[66]";
-connectAttr "shoulder_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[67]";
-connectAttr "shoulder_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[68]";
-connectAttr "shoulder_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[69]";
-connectAttr "shoulder_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[70]";
-connectAttr "shoulder_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[71]";
-connectAttr "shoulder_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[72]";
-connectAttr "l_leg_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[73]";
-connectAttr "l_leg_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[74]";
-connectAttr "l_leg_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[75]";
-connectAttr "l_leg_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[76]";
-connectAttr "l_leg_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[77]";
-connectAttr "l_leg_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[78]";
-connectAttr "l_knee_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[79]";
-connectAttr "l_knee_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[80]";
-connectAttr "l_knee_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[81]";
-connectAttr "l_knee_fk_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[82]";
-connectAttr "l_knee_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[83]";
-connectAttr "l_knee_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[84]";
-connectAttr "l_knee_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[85]";
-connectAttr "r_leg_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[86]";
-connectAttr "r_leg_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[87]";
-connectAttr "r_leg_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[88]";
-connectAttr "r_leg_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[89]";
-connectAttr "r_leg_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[90]";
-connectAttr "r_leg_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[91]";
-connectAttr "r_knee_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[92]";
-connectAttr "r_knee_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[93]";
-connectAttr "r_knee_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[94]";
-connectAttr "r_knee_fk_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[95]";
-connectAttr "r_knee_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[96]";
-connectAttr "r_knee_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[97]";
-connectAttr "r_knee_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[98]";
-connectAttr "spine_fk_ctrl_4_rotateX.o" "comfy_mc_latest_realRN.phl[99]";
-connectAttr "spine_fk_ctrl_4_rotateY.o" "comfy_mc_latest_realRN.phl[100]";
-connectAttr "spine_fk_ctrl_4_rotateZ.o" "comfy_mc_latest_realRN.phl[101]";
-connectAttr "spine_fk_ctrl_4_scaleX.o" "comfy_mc_latest_realRN.phl[102]";
-connectAttr "spine_fk_ctrl_4_scaleY.o" "comfy_mc_latest_realRN.phl[103]";
-connectAttr "spine_fk_ctrl_4_scaleZ.o" "comfy_mc_latest_realRN.phl[104]";
-connectAttr "spine_fk_ctrl_2_rotateX.o" "comfy_mc_latest_realRN.phl[105]";
-connectAttr "spine_fk_ctrl_2_rotateY.o" "comfy_mc_latest_realRN.phl[106]";
-connectAttr "spine_fk_ctrl_2_rotateZ.o" "comfy_mc_latest_realRN.phl[107]";
-connectAttr "spine_fk_ctrl_2_visibility.o" "comfy_mc_latest_realRN.phl[108]";
-connectAttr "spine_fk_ctrl_2_scaleX.o" "comfy_mc_latest_realRN.phl[109]";
-connectAttr "spine_fk_ctrl_2_scaleY.o" "comfy_mc_latest_realRN.phl[110]";
-connectAttr "spine_fk_ctrl_2_scaleZ.o" "comfy_mc_latest_realRN.phl[111]";
-connectAttr "r_wrist_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[112]";
-connectAttr "r_wrist_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[113]";
-connectAttr "r_wrist_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[114]";
-connectAttr "r_wrist_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[115]";
-connectAttr "r_wrist_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[116]";
-connectAttr "r_wrist_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[117]";
-connectAttr "r_wrist_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[118]";
-connectAttr "r_wrist_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[119]";
-connectAttr "r_wrist_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[120]";
-connectAttr "r_wrist_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[121]";
-connectAttr "r_pinky_rotateX.o" "comfy_mc_latest_realRN.phl[122]";
-connectAttr "r_pinky_rotateY.o" "comfy_mc_latest_realRN.phl[123]";
-connectAttr "r_pinky_rotateZ.o" "comfy_mc_latest_realRN.phl[124]";
-connectAttr "r_pinky_visibility.o" "comfy_mc_latest_realRN.phl[125]";
-connectAttr "r_pinky_translateX.o" "comfy_mc_latest_realRN.phl[126]";
-connectAttr "r_pinky_translateY.o" "comfy_mc_latest_realRN.phl[127]";
-connectAttr "r_pinky_translateZ.o" "comfy_mc_latest_realRN.phl[128]";
-connectAttr "r_pinky_scaleX.o" "comfy_mc_latest_realRN.phl[129]";
-connectAttr "r_pinky_scaleY.o" "comfy_mc_latest_realRN.phl[130]";
-connectAttr "r_pinky_scaleZ.o" "comfy_mc_latest_realRN.phl[131]";
-connectAttr "r_pinky_2_rotateX.o" "comfy_mc_latest_realRN.phl[132]";
-connectAttr "r_pinky_2_rotateY.o" "comfy_mc_latest_realRN.phl[133]";
-connectAttr "r_pinky_2_rotateZ.o" "comfy_mc_latest_realRN.phl[134]";
-connectAttr "r_pinky_2_visibility.o" "comfy_mc_latest_realRN.phl[135]";
-connectAttr "r_pinky_2_translateX.o" "comfy_mc_latest_realRN.phl[136]";
-connectAttr "r_pinky_2_translateY.o" "comfy_mc_latest_realRN.phl[137]";
-connectAttr "r_pinky_2_translateZ.o" "comfy_mc_latest_realRN.phl[138]";
-connectAttr "r_pinky_2_scaleX.o" "comfy_mc_latest_realRN.phl[139]";
-connectAttr "r_pinky_2_scaleY.o" "comfy_mc_latest_realRN.phl[140]";
-connectAttr "r_pinky_2_scaleZ.o" "comfy_mc_latest_realRN.phl[141]";
-connectAttr "r_ring_rotateX.o" "comfy_mc_latest_realRN.phl[142]";
-connectAttr "r_ring_rotateY.o" "comfy_mc_latest_realRN.phl[143]";
-connectAttr "r_ring_rotateZ.o" "comfy_mc_latest_realRN.phl[144]";
-connectAttr "r_ring_visibility.o" "comfy_mc_latest_realRN.phl[145]";
-connectAttr "r_ring_translateX.o" "comfy_mc_latest_realRN.phl[146]";
-connectAttr "r_ring_translateY.o" "comfy_mc_latest_realRN.phl[147]";
-connectAttr "r_ring_translateZ.o" "comfy_mc_latest_realRN.phl[148]";
-connectAttr "r_ring_scaleX.o" "comfy_mc_latest_realRN.phl[149]";
-connectAttr "r_ring_scaleY.o" "comfy_mc_latest_realRN.phl[150]";
-connectAttr "r_ring_scaleZ.o" "comfy_mc_latest_realRN.phl[151]";
-connectAttr "r_ring_2_rotateX.o" "comfy_mc_latest_realRN.phl[152]";
-connectAttr "r_ring_2_rotateY.o" "comfy_mc_latest_realRN.phl[153]";
-connectAttr "r_ring_2_rotateZ.o" "comfy_mc_latest_realRN.phl[154]";
-connectAttr "r_ring_2_visibility.o" "comfy_mc_latest_realRN.phl[155]";
-connectAttr "r_ring_2_translateX.o" "comfy_mc_latest_realRN.phl[156]";
-connectAttr "r_ring_2_translateY.o" "comfy_mc_latest_realRN.phl[157]";
-connectAttr "r_ring_2_translateZ.o" "comfy_mc_latest_realRN.phl[158]";
-connectAttr "r_ring_2_scaleX.o" "comfy_mc_latest_realRN.phl[159]";
-connectAttr "r_ring_2_scaleY.o" "comfy_mc_latest_realRN.phl[160]";
-connectAttr "r_ring_2_scaleZ.o" "comfy_mc_latest_realRN.phl[161]";
-connectAttr "l_wrist_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[162]";
-connectAttr "l_wrist_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[163]";
-connectAttr "l_wrist_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[164]";
-connectAttr "l_wrist_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[165]";
-connectAttr "l_wrist_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[166]";
-connectAttr "l_wrist_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[167]";
-connectAttr "l_wrist_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[168]";
-connectAttr "l_wrist_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[169]";
-connectAttr "l_wrist_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[170]";
-connectAttr "l_wrist_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[171]";
-connectAttr "breathing_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[172]";
-connectAttr "breathing_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[173]";
-connectAttr "breathing_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[174]";
-connectAttr "pairBlend1.otx" "comfy_mc_latest_realRN.phl[175]";
-connectAttr "pairBlend1.oty" "comfy_mc_latest_realRN.phl[176]";
-connectAttr "pairBlend1.otz" "comfy_mc_latest_realRN.phl[177]";
-connectAttr "comfy_mc_latest_realRN.phl[178]" "pairBlend1.w";
-connectAttr "breathing_ctrl_blendPoint1.o" "comfy_mc_latest_realRN.phl[179]";
-connectAttr "breathing_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[180]";
-connectAttr "breathing_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[181]";
-connectAttr "breathing_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[182]";
-connectAttr "breathing_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[183]";
-connectAttr "comfy_mc_latest_realRN.phl[184]" "pairBlend1.itx2";
-connectAttr "comfy_mc_latest_realRN.phl[185]" "pairBlend1.ity2";
-connectAttr "comfy_mc_latest_realRN.phl[186]" "pairBlend1.itz2";
-connectAttr "nurbsCircle1_Blink.o" "comfy_mc_latest_realRN.phl[187]";
-connectAttr "nurbsCircle1_translateX.o" "comfy_mc_latest_realRN.phl[188]";
-connectAttr "nurbsCircle1_translateY.o" "comfy_mc_latest_realRN.phl[189]";
-connectAttr "nurbsCircle1_translateZ.o" "comfy_mc_latest_realRN.phl[190]";
-connectAttr "nurbsCircle1_rotateX.o" "comfy_mc_latest_realRN.phl[191]";
-connectAttr "nurbsCircle1_rotateY.o" "comfy_mc_latest_realRN.phl[192]";
-connectAttr "nurbsCircle1_rotateZ.o" "comfy_mc_latest_realRN.phl[193]";
-connectAttr "nurbsCircle1_scaleX.o" "comfy_mc_latest_realRN.phl[194]";
-connectAttr "nurbsCircle1_scaleY.o" "comfy_mc_latest_realRN.phl[195]";
-connectAttr "nurbsCircle1_scaleZ.o" "comfy_mc_latest_realRN.phl[196]";
-connectAttr "nurbsCircle1_visibility.o" "comfy_mc_latest_realRN.phl[197]";
-connectAttr "nurbsCircle2_translateX.o" "comfy_mc_latest_realRN.phl[198]";
-connectAttr "nurbsCircle2_translateY.o" "comfy_mc_latest_realRN.phl[199]";
-connectAttr "nurbsCircle2_translateZ.o" "comfy_mc_latest_realRN.phl[200]";
-connectAttr "nurbsCircle2_rotateX.o" "comfy_mc_latest_realRN.phl[201]";
-connectAttr "nurbsCircle2_rotateY.o" "comfy_mc_latest_realRN.phl[202]";
-connectAttr "nurbsCircle2_rotateZ.o" "comfy_mc_latest_realRN.phl[203]";
-connectAttr "nurbsCircle2_scaleX.o" "comfy_mc_latest_realRN.phl[204]";
-connectAttr "nurbsCircle2_scaleY.o" "comfy_mc_latest_realRN.phl[205]";
-connectAttr "nurbsCircle2_scaleZ.o" "comfy_mc_latest_realRN.phl[206]";
-connectAttr "nurbsCircle2_visibility.o" "comfy_mc_latest_realRN.phl[207]";
-connectAttr "nurbsCircle7_Blink.o" "comfy_mc_latest_realRN.phl[208]";
-connectAttr "nurbsCircle7_translateX.o" "comfy_mc_latest_realRN.phl[209]";
-connectAttr "nurbsCircle7_translateY.o" "comfy_mc_latest_realRN.phl[210]";
-connectAttr "nurbsCircle7_translateZ.o" "comfy_mc_latest_realRN.phl[211]";
-connectAttr "nurbsCircle7_rotateX.o" "comfy_mc_latest_realRN.phl[212]";
-connectAttr "nurbsCircle7_rotateY.o" "comfy_mc_latest_realRN.phl[213]";
-connectAttr "nurbsCircle7_rotateZ.o" "comfy_mc_latest_realRN.phl[214]";
-connectAttr "nurbsCircle7_scaleX.o" "comfy_mc_latest_realRN.phl[215]";
-connectAttr "nurbsCircle7_scaleY.o" "comfy_mc_latest_realRN.phl[216]";
-connectAttr "nurbsCircle7_scaleZ.o" "comfy_mc_latest_realRN.phl[217]";
-connectAttr "nurbsCircle7_visibility.o" "comfy_mc_latest_realRN.phl[218]";
-connectAttr "nurbsCircle12_translateX.o" "comfy_mc_latest_realRN.phl[219]";
-connectAttr "nurbsCircle12_translateY.o" "comfy_mc_latest_realRN.phl[220]";
-connectAttr "nurbsCircle12_translateZ.o" "comfy_mc_latest_realRN.phl[221]";
-connectAttr "nurbsCircle12_rotateX.o" "comfy_mc_latest_realRN.phl[222]";
-connectAttr "nurbsCircle12_rotateY.o" "comfy_mc_latest_realRN.phl[223]";
-connectAttr "nurbsCircle12_rotateZ.o" "comfy_mc_latest_realRN.phl[224]";
-connectAttr "nurbsCircle12_scaleX.o" "comfy_mc_latest_realRN.phl[225]";
-connectAttr "nurbsCircle12_scaleY.o" "comfy_mc_latest_realRN.phl[226]";
-connectAttr "nurbsCircle12_scaleZ.o" "comfy_mc_latest_realRN.phl[227]";
-connectAttr "nurbsCircle12_visibility.o" "comfy_mc_latest_realRN.phl[228]";
-connectAttr "mouth4_translateX.o" "comfy_mc_latest_realRN.phl[229]";
-connectAttr "mouth4_translateY.o" "comfy_mc_latest_realRN.phl[230]";
-connectAttr "mouth4_translateZ.o" "comfy_mc_latest_realRN.phl[231]";
-connectAttr "mouth4_rotateX.o" "comfy_mc_latest_realRN.phl[232]";
-connectAttr "mouth4_rotateY.o" "comfy_mc_latest_realRN.phl[233]";
-connectAttr "mouth4_rotateZ.o" "comfy_mc_latest_realRN.phl[234]";
-connectAttr "mouth4_scaleX.o" "comfy_mc_latest_realRN.phl[235]";
-connectAttr "mouth4_scaleY.o" "comfy_mc_latest_realRN.phl[236]";
-connectAttr "mouth4_scaleZ.o" "comfy_mc_latest_realRN.phl[237]";
-connectAttr "mouth4_visibility.o" "comfy_mc_latest_realRN.phl[238]";
-connectAttr "mouth5_translateX.o" "comfy_mc_latest_realRN.phl[239]";
-connectAttr "mouth5_translateY.o" "comfy_mc_latest_realRN.phl[240]";
-connectAttr "mouth5_translateZ.o" "comfy_mc_latest_realRN.phl[241]";
-connectAttr "mouth5_rotateX.o" "comfy_mc_latest_realRN.phl[242]";
-connectAttr "mouth5_rotateY.o" "comfy_mc_latest_realRN.phl[243]";
-connectAttr "mouth5_rotateZ.o" "comfy_mc_latest_realRN.phl[244]";
-connectAttr "mouth5_scaleX.o" "comfy_mc_latest_realRN.phl[245]";
-connectAttr "mouth5_scaleY.o" "comfy_mc_latest_realRN.phl[246]";
-connectAttr "mouth5_scaleZ.o" "comfy_mc_latest_realRN.phl[247]";
-connectAttr "mouth5_visibility.o" "comfy_mc_latest_realRN.phl[248]";
-connectAttr "mouth7_translateX.o" "comfy_mc_latest_realRN.phl[249]";
-connectAttr "mouth7_translateY.o" "comfy_mc_latest_realRN.phl[250]";
-connectAttr "mouth7_translateZ.o" "comfy_mc_latest_realRN.phl[251]";
-connectAttr "mouth7_rotateX.o" "comfy_mc_latest_realRN.phl[252]";
-connectAttr "mouth7_rotateY.o" "comfy_mc_latest_realRN.phl[253]";
-connectAttr "mouth7_rotateZ.o" "comfy_mc_latest_realRN.phl[254]";
-connectAttr "mouth7_scaleX.o" "comfy_mc_latest_realRN.phl[255]";
-connectAttr "mouth7_scaleY.o" "comfy_mc_latest_realRN.phl[256]";
-connectAttr "mouth7_scaleZ.o" "comfy_mc_latest_realRN.phl[257]";
-connectAttr "mouth7_visibility.o" "comfy_mc_latest_realRN.phl[258]";
-connectAttr "mouth6_translateX.o" "comfy_mc_latest_realRN.phl[259]";
-connectAttr "mouth6_translateY.o" "comfy_mc_latest_realRN.phl[260]";
-connectAttr "mouth6_translateZ.o" "comfy_mc_latest_realRN.phl[261]";
-connectAttr "mouth6_rotateX.o" "comfy_mc_latest_realRN.phl[262]";
-connectAttr "mouth6_rotateY.o" "comfy_mc_latest_realRN.phl[263]";
-connectAttr "mouth6_rotateZ.o" "comfy_mc_latest_realRN.phl[264]";
-connectAttr "mouth6_scaleX.o" "comfy_mc_latest_realRN.phl[265]";
-connectAttr "mouth6_scaleY.o" "comfy_mc_latest_realRN.phl[266]";
-connectAttr "mouth6_scaleZ.o" "comfy_mc_latest_realRN.phl[267]";
-connectAttr "mouth6_visibility.o" "comfy_mc_latest_realRN.phl[268]";
-connectAttr "comfy_mc_latest_realRN.phl[269]" "comfy_mc_latest_realRN.phl[270]";
-connectAttr "blendShape4_envelope.o" "comfy_mc_latest_realRN.phl[271]";
+connectAttr "foreground.di" "comfy_mc_latest_realRN.phl[577]";
+connectAttr "sweater_visibility.o" "comfy_mc_latest_realRN.phl[578]";
+connectAttr "sweater_translateX.o" "comfy_mc_latest_realRN.phl[579]";
+connectAttr "sweater_translateY.o" "comfy_mc_latest_realRN.phl[580]";
+connectAttr "sweater_translateZ.o" "comfy_mc_latest_realRN.phl[581]";
+connectAttr "sweater_rotateX.o" "comfy_mc_latest_realRN.phl[582]";
+connectAttr "sweater_rotateY.o" "comfy_mc_latest_realRN.phl[583]";
+connectAttr "sweater_rotateZ.o" "comfy_mc_latest_realRN.phl[584]";
+connectAttr "sweater_scaleX.o" "comfy_mc_latest_realRN.phl[585]";
+connectAttr "sweater_scaleY.o" "comfy_mc_latest_realRN.phl[586]";
+connectAttr "sweater_scaleZ.o" "comfy_mc_latest_realRN.phl[587]";
+connectAttr "comfy_mc_latest_realRN.phl[588]" "blendShape1Set.dsm" -na;
+connectAttr "blendShape1GroupId.id" "comfy_mc_latest_realRN.phl[589]";
+connectAttr "blendShape1Set.mwc" "comfy_mc_latest_realRN.phl[590]";
+connectAttr "comfy_mc_latest_realRN.phl[591]" "blendShape2Set.dsm" -na;
+connectAttr "blendShape2GroupId.id" "comfy_mc_latest_realRN.phl[592]";
+connectAttr "blendShape2Set.mwc" "comfy_mc_latest_realRN.phl[593]";
+connectAttr "comfy_mc_latest_realRN.phl[594]" "blendShape6Set.dsm" -na;
+connectAttr "blendShape6GroupId.id" "comfy_mc_latest_realRN.phl[595]";
+connectAttr "blendShape6Set.mwc" "comfy_mc_latest_realRN.phl[596]";
+connectAttr "comfy_mc_latest_realRN.phl[597]" "blendShape7Set.dsm" -na;
+connectAttr "blendShape7GroupId.id" "comfy_mc_latest_realRN.phl[598]";
+connectAttr "blendShape7Set.mwc" "comfy_mc_latest_realRN.phl[599]";
+connectAttr "blendShape7.og[0]" "comfy_mc_latest_realRN.phl[600]";
+connectAttr "comfy_mc_latest_realRN.phl[601]" "comfy_mc_latest_realRN.phl[602]";
+connectAttr "comfy_mc_latest_realRN.phl[603]" "blendShape5Set.dsm" -na;
+connectAttr "blendShape5GroupId.id" "comfy_mc_latest_realRN.phl[604]";
+connectAttr "blendShape5Set.mwc" "comfy_mc_latest_realRN.phl[605]";
+connectAttr "mouth_close.og[0]" "comfy_mc_latest_realRN.phl[606]";
+connectAttr "mouth_close.it[0].vt[0]" "comfy_mc_latest_realRN.phl[607]";
+connectAttr "comfy_mc_latest_realRN.phl[608]" "blendShape5GroupParts.ig";
+connectAttr "comfy_mc_latest_realRN.phl[609]" "blendShape1GroupParts.ig";
+connectAttr "foreground.di" "comfy_mc_latest_realRN.phl[306]";
+connectAttr "master_control_scaleX.o" "comfy_mc_latest_realRN.phl[307]";
+connectAttr "master_control_scaleY.o" "comfy_mc_latest_realRN.phl[308]";
+connectAttr "master_control_scaleZ.o" "comfy_mc_latest_realRN.phl[309]";
+connectAttr "master_control_visibility.o" "comfy_mc_latest_realRN.phl[310]";
+connectAttr "master_control_translateX.o" "comfy_mc_latest_realRN.phl[311]";
+connectAttr "master_control_translateY.o" "comfy_mc_latest_realRN.phl[312]";
+connectAttr "master_control_translateZ.o" "comfy_mc_latest_realRN.phl[313]";
+connectAttr "master_control_rotateY.o" "comfy_mc_latest_realRN.phl[314]";
+connectAttr "master_control_rotateX.o" "comfy_mc_latest_realRN.phl[315]";
+connectAttr "master_control_rotateZ.o" "comfy_mc_latest_realRN.phl[316]";
+connectAttr "r_arm_pole_vector_translateX.o" "comfy_mc_latest_realRN.phl[317]";
+connectAttr "r_arm_pole_vector_translateY.o" "comfy_mc_latest_realRN.phl[318]";
+connectAttr "r_arm_pole_vector_translateZ.o" "comfy_mc_latest_realRN.phl[319]";
+connectAttr "r_arm_pole_vector_visibility.o" "comfy_mc_latest_realRN.phl[320]";
+connectAttr "r_arm_pole_vector_rotateX.o" "comfy_mc_latest_realRN.phl[321]";
+connectAttr "r_arm_pole_vector_rotateY.o" "comfy_mc_latest_realRN.phl[322]";
+connectAttr "r_arm_pole_vector_rotateZ.o" "comfy_mc_latest_realRN.phl[323]";
+connectAttr "r_arm_pole_vector_scaleX.o" "comfy_mc_latest_realRN.phl[324]";
+connectAttr "r_arm_pole_vector_scaleY.o" "comfy_mc_latest_realRN.phl[325]";
+connectAttr "r_arm_pole_vector_scaleZ.o" "comfy_mc_latest_realRN.phl[326]";
+connectAttr "neck_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[327]";
+connectAttr "neck_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[328]";
+connectAttr "neck_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[329]";
+connectAttr "neck_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[330]";
+connectAttr "neck_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[331]";
+connectAttr "neck_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[332]";
+connectAttr "neck_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[333]";
+connectAttr "neck_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[334]";
+connectAttr "neck_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[335]";
+connectAttr "neck_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[336]";
+connectAttr "eye_CTRL_translateX.o" "comfy_mc_latest_realRN.phl[337]";
+connectAttr "eye_CTRL_translateY.o" "comfy_mc_latest_realRN.phl[338]";
+connectAttr "eye_CTRL_translateZ.o" "comfy_mc_latest_realRN.phl[339]";
+connectAttr "eye_CTRL_visibility.o" "comfy_mc_latest_realRN.phl[340]";
+connectAttr "eye_CTRL_rotateX.o" "comfy_mc_latest_realRN.phl[341]";
+connectAttr "eye_CTRL_rotateY.o" "comfy_mc_latest_realRN.phl[342]";
+connectAttr "eye_CTRL_rotateZ.o" "comfy_mc_latest_realRN.phl[343]";
+connectAttr "eye_CTRL_scaleX.o" "comfy_mc_latest_realRN.phl[344]";
+connectAttr "eye_CTRL_scaleY.o" "comfy_mc_latest_realRN.phl[345]";
+connectAttr "eye_CTRL_scaleZ.o" "comfy_mc_latest_realRN.phl[346]";
+connectAttr "comfy_mc_latest_realRN.phl[347]" "PxrSurface1SG.dsm" -na;
+connectAttr "l_shoulder_ctrl1_translateX.o" "comfy_mc_latest_realRN.phl[348]";
+connectAttr "l_shoulder_ctrl1_translateY.o" "comfy_mc_latest_realRN.phl[349]";
+connectAttr "l_shoulder_ctrl1_translateZ.o" "comfy_mc_latest_realRN.phl[350]";
+connectAttr "l_shoulder_ctrl1_rotateX.o" "comfy_mc_latest_realRN.phl[351]";
+connectAttr "l_shoulder_ctrl1_rotateY.o" "comfy_mc_latest_realRN.phl[352]";
+connectAttr "l_shoulder_ctrl1_rotateZ.o" "comfy_mc_latest_realRN.phl[353]";
+connectAttr "l_shoulder_ctrl1_scaleX.o" "comfy_mc_latest_realRN.phl[354]";
+connectAttr "l_shoulder_ctrl1_scaleY.o" "comfy_mc_latest_realRN.phl[355]";
+connectAttr "l_shoulder_ctrl1_scaleZ.o" "comfy_mc_latest_realRN.phl[356]";
+connectAttr "l_shoulder_ctrl1_visibility.o" "comfy_mc_latest_realRN.phl[357]";
+connectAttr "r_shoulder_ctrl1_translateY.o" "comfy_mc_latest_realRN.phl[358]";
+connectAttr "r_shoulder_ctrl1_translateX.o" "comfy_mc_latest_realRN.phl[359]";
+connectAttr "r_shoulder_ctrl1_translateZ.o" "comfy_mc_latest_realRN.phl[360]";
+connectAttr "r_shoulder_ctrl1_rotateX.o" "comfy_mc_latest_realRN.phl[361]";
+connectAttr "r_shoulder_ctrl1_rotateY.o" "comfy_mc_latest_realRN.phl[362]";
+connectAttr "r_shoulder_ctrl1_rotateZ.o" "comfy_mc_latest_realRN.phl[363]";
+connectAttr "r_shoulder_ctrl1_scaleX.o" "comfy_mc_latest_realRN.phl[364]";
+connectAttr "r_shoulder_ctrl1_scaleY.o" "comfy_mc_latest_realRN.phl[365]";
+connectAttr "r_shoulder_ctrl1_scaleZ.o" "comfy_mc_latest_realRN.phl[366]";
+connectAttr "r_shoulder_ctrl1_visibility.o" "comfy_mc_latest_realRN.phl[367]";
+connectAttr "shoulder_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[368]";
+connectAttr "shoulder_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[369]";
+connectAttr "shoulder_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[370]";
+connectAttr "shoulder_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[371]";
+connectAttr "shoulder_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[372]";
+connectAttr "shoulder_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[373]";
+connectAttr "shoulder_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[374]";
+connectAttr "shoulder_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[375]";
+connectAttr "shoulder_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[376]";
+connectAttr "shoulder_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[377]";
+connectAttr "l_leg_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[378]";
+connectAttr "l_leg_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[379]";
+connectAttr "l_leg_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[380]";
+connectAttr "l_leg_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[381]";
+connectAttr "l_leg_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[382]";
+connectAttr "l_leg_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[383]";
+connectAttr "l_knee_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[384]";
+connectAttr "l_knee_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[385]";
+connectAttr "l_knee_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[386]";
+connectAttr "l_knee_fk_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[387]";
+connectAttr "l_knee_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[388]";
+connectAttr "l_knee_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[389]";
+connectAttr "l_knee_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[390]";
+connectAttr "r_leg_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[391]";
+connectAttr "r_leg_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[392]";
+connectAttr "r_leg_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[393]";
+connectAttr "r_leg_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[394]";
+connectAttr "r_leg_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[395]";
+connectAttr "r_leg_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[396]";
+connectAttr "r_knee_fk_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[397]";
+connectAttr "r_knee_fk_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[398]";
+connectAttr "r_knee_fk_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[399]";
+connectAttr "r_knee_fk_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[400]";
+connectAttr "r_knee_fk_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[401]";
+connectAttr "r_knee_fk_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[402]";
+connectAttr "r_knee_fk_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[403]";
+connectAttr "spine_fk_ctrl_4_rotateX.o" "comfy_mc_latest_realRN.phl[404]";
+connectAttr "spine_fk_ctrl_4_rotateY.o" "comfy_mc_latest_realRN.phl[405]";
+connectAttr "spine_fk_ctrl_4_rotateZ.o" "comfy_mc_latest_realRN.phl[406]";
+connectAttr "spine_fk_ctrl_4_scaleX.o" "comfy_mc_latest_realRN.phl[407]";
+connectAttr "spine_fk_ctrl_4_scaleY.o" "comfy_mc_latest_realRN.phl[408]";
+connectAttr "spine_fk_ctrl_4_scaleZ.o" "comfy_mc_latest_realRN.phl[409]";
+connectAttr "spine_fk_ctrl_2_rotateX.o" "comfy_mc_latest_realRN.phl[410]";
+connectAttr "spine_fk_ctrl_2_rotateY.o" "comfy_mc_latest_realRN.phl[411]";
+connectAttr "spine_fk_ctrl_2_rotateZ.o" "comfy_mc_latest_realRN.phl[412]";
+connectAttr "spine_fk_ctrl_2_visibility.o" "comfy_mc_latest_realRN.phl[413]";
+connectAttr "spine_fk_ctrl_2_scaleX.o" "comfy_mc_latest_realRN.phl[414]";
+connectAttr "spine_fk_ctrl_2_scaleY.o" "comfy_mc_latest_realRN.phl[415]";
+connectAttr "spine_fk_ctrl_2_scaleZ.o" "comfy_mc_latest_realRN.phl[416]";
+connectAttr "r_wrist_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[417]";
+connectAttr "r_wrist_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[418]";
+connectAttr "r_wrist_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[419]";
+connectAttr "r_wrist_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[420]";
+connectAttr "r_wrist_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[421]";
+connectAttr "r_wrist_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[422]";
+connectAttr "r_wrist_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[423]";
+connectAttr "r_wrist_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[424]";
+connectAttr "r_wrist_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[425]";
+connectAttr "r_wrist_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[426]";
+connectAttr "r_pinky_rotateX.o" "comfy_mc_latest_realRN.phl[427]";
+connectAttr "r_pinky_rotateY.o" "comfy_mc_latest_realRN.phl[428]";
+connectAttr "r_pinky_rotateZ.o" "comfy_mc_latest_realRN.phl[429]";
+connectAttr "r_pinky_visibility.o" "comfy_mc_latest_realRN.phl[430]";
+connectAttr "r_pinky_translateX.o" "comfy_mc_latest_realRN.phl[431]";
+connectAttr "r_pinky_translateY.o" "comfy_mc_latest_realRN.phl[432]";
+connectAttr "r_pinky_translateZ.o" "comfy_mc_latest_realRN.phl[433]";
+connectAttr "r_pinky_scaleX.o" "comfy_mc_latest_realRN.phl[434]";
+connectAttr "r_pinky_scaleY.o" "comfy_mc_latest_realRN.phl[435]";
+connectAttr "r_pinky_scaleZ.o" "comfy_mc_latest_realRN.phl[436]";
+connectAttr "r_pinky_2_rotateX.o" "comfy_mc_latest_realRN.phl[437]";
+connectAttr "r_pinky_2_rotateY.o" "comfy_mc_latest_realRN.phl[438]";
+connectAttr "r_pinky_2_rotateZ.o" "comfy_mc_latest_realRN.phl[439]";
+connectAttr "r_pinky_2_visibility.o" "comfy_mc_latest_realRN.phl[440]";
+connectAttr "r_pinky_2_translateX.o" "comfy_mc_latest_realRN.phl[441]";
+connectAttr "r_pinky_2_translateY.o" "comfy_mc_latest_realRN.phl[442]";
+connectAttr "r_pinky_2_translateZ.o" "comfy_mc_latest_realRN.phl[443]";
+connectAttr "r_pinky_2_scaleX.o" "comfy_mc_latest_realRN.phl[444]";
+connectAttr "r_pinky_2_scaleY.o" "comfy_mc_latest_realRN.phl[445]";
+connectAttr "r_pinky_2_scaleZ.o" "comfy_mc_latest_realRN.phl[446]";
+connectAttr "r_ring_rotateX.o" "comfy_mc_latest_realRN.phl[447]";
+connectAttr "r_ring_rotateY.o" "comfy_mc_latest_realRN.phl[448]";
+connectAttr "r_ring_rotateZ.o" "comfy_mc_latest_realRN.phl[449]";
+connectAttr "r_ring_visibility.o" "comfy_mc_latest_realRN.phl[450]";
+connectAttr "r_ring_translateX.o" "comfy_mc_latest_realRN.phl[451]";
+connectAttr "r_ring_translateY.o" "comfy_mc_latest_realRN.phl[452]";
+connectAttr "r_ring_translateZ.o" "comfy_mc_latest_realRN.phl[453]";
+connectAttr "r_ring_scaleX.o" "comfy_mc_latest_realRN.phl[454]";
+connectAttr "r_ring_scaleY.o" "comfy_mc_latest_realRN.phl[455]";
+connectAttr "r_ring_scaleZ.o" "comfy_mc_latest_realRN.phl[456]";
+connectAttr "r_ring_2_rotateX.o" "comfy_mc_latest_realRN.phl[457]";
+connectAttr "r_ring_2_rotateY.o" "comfy_mc_latest_realRN.phl[458]";
+connectAttr "r_ring_2_rotateZ.o" "comfy_mc_latest_realRN.phl[459]";
+connectAttr "r_ring_2_visibility.o" "comfy_mc_latest_realRN.phl[460]";
+connectAttr "r_ring_2_translateX.o" "comfy_mc_latest_realRN.phl[461]";
+connectAttr "r_ring_2_translateY.o" "comfy_mc_latest_realRN.phl[462]";
+connectAttr "r_ring_2_translateZ.o" "comfy_mc_latest_realRN.phl[463]";
+connectAttr "r_ring_2_scaleX.o" "comfy_mc_latest_realRN.phl[464]";
+connectAttr "r_ring_2_scaleY.o" "comfy_mc_latest_realRN.phl[465]";
+connectAttr "r_ring_2_scaleZ.o" "comfy_mc_latest_realRN.phl[466]";
+connectAttr "l_wrist_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[467]";
+connectAttr "l_wrist_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[468]";
+connectAttr "l_wrist_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[469]";
+connectAttr "l_wrist_ctrl_translateX.o" "comfy_mc_latest_realRN.phl[470]";
+connectAttr "l_wrist_ctrl_translateY.o" "comfy_mc_latest_realRN.phl[471]";
+connectAttr "l_wrist_ctrl_translateZ.o" "comfy_mc_latest_realRN.phl[472]";
+connectAttr "l_wrist_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[473]";
+connectAttr "l_wrist_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[474]";
+connectAttr "l_wrist_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[475]";
+connectAttr "l_wrist_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[476]";
+connectAttr "breathing_ctrl_scaleX.o" "comfy_mc_latest_realRN.phl[477]";
+connectAttr "breathing_ctrl_scaleY.o" "comfy_mc_latest_realRN.phl[478]";
+connectAttr "breathing_ctrl_scaleZ.o" "comfy_mc_latest_realRN.phl[479]";
+connectAttr "pairBlend1.otx" "comfy_mc_latest_realRN.phl[480]";
+connectAttr "pairBlend1.oty" "comfy_mc_latest_realRN.phl[481]";
+connectAttr "pairBlend1.otz" "comfy_mc_latest_realRN.phl[482]";
+connectAttr "comfy_mc_latest_realRN.phl[483]" "pairBlend1.w";
+connectAttr "breathing_ctrl_blendPoint1.o" "comfy_mc_latest_realRN.phl[484]";
+connectAttr "breathing_ctrl_rotateX.o" "comfy_mc_latest_realRN.phl[485]";
+connectAttr "breathing_ctrl_rotateY.o" "comfy_mc_latest_realRN.phl[486]";
+connectAttr "breathing_ctrl_rotateZ.o" "comfy_mc_latest_realRN.phl[487]";
+connectAttr "breathing_ctrl_visibility.o" "comfy_mc_latest_realRN.phl[488]";
+connectAttr "comfy_mc_latest_realRN.phl[489]" "pairBlend1.itx2";
+connectAttr "comfy_mc_latest_realRN.phl[490]" "pairBlend1.ity2";
+connectAttr "comfy_mc_latest_realRN.phl[491]" "pairBlend1.itz2";
+connectAttr "nurbsCircle1_Blink.o" "comfy_mc_latest_realRN.phl[492]";
+connectAttr "nurbsCircle1_translateX.o" "comfy_mc_latest_realRN.phl[493]";
+connectAttr "nurbsCircle1_translateY.o" "comfy_mc_latest_realRN.phl[494]";
+connectAttr "nurbsCircle1_translateZ.o" "comfy_mc_latest_realRN.phl[495]";
+connectAttr "nurbsCircle1_rotateX.o" "comfy_mc_latest_realRN.phl[496]";
+connectAttr "nurbsCircle1_rotateY.o" "comfy_mc_latest_realRN.phl[497]";
+connectAttr "nurbsCircle1_rotateZ.o" "comfy_mc_latest_realRN.phl[498]";
+connectAttr "nurbsCircle1_scaleX.o" "comfy_mc_latest_realRN.phl[499]";
+connectAttr "nurbsCircle1_scaleY.o" "comfy_mc_latest_realRN.phl[500]";
+connectAttr "nurbsCircle1_scaleZ.o" "comfy_mc_latest_realRN.phl[501]";
+connectAttr "nurbsCircle1_visibility.o" "comfy_mc_latest_realRN.phl[502]";
+connectAttr "nurbsCircle2_translateX.o" "comfy_mc_latest_realRN.phl[503]";
+connectAttr "nurbsCircle2_translateY.o" "comfy_mc_latest_realRN.phl[504]";
+connectAttr "nurbsCircle2_translateZ.o" "comfy_mc_latest_realRN.phl[505]";
+connectAttr "nurbsCircle2_rotateX.o" "comfy_mc_latest_realRN.phl[506]";
+connectAttr "nurbsCircle2_rotateY.o" "comfy_mc_latest_realRN.phl[507]";
+connectAttr "nurbsCircle2_rotateZ.o" "comfy_mc_latest_realRN.phl[508]";
+connectAttr "nurbsCircle2_scaleX.o" "comfy_mc_latest_realRN.phl[509]";
+connectAttr "nurbsCircle2_scaleY.o" "comfy_mc_latest_realRN.phl[510]";
+connectAttr "nurbsCircle2_scaleZ.o" "comfy_mc_latest_realRN.phl[511]";
+connectAttr "nurbsCircle2_visibility.o" "comfy_mc_latest_realRN.phl[512]";
+connectAttr "nurbsCircle7_Blink.o" "comfy_mc_latest_realRN.phl[513]";
+connectAttr "nurbsCircle7_translateX.o" "comfy_mc_latest_realRN.phl[514]";
+connectAttr "nurbsCircle7_translateY.o" "comfy_mc_latest_realRN.phl[515]";
+connectAttr "nurbsCircle7_translateZ.o" "comfy_mc_latest_realRN.phl[516]";
+connectAttr "nurbsCircle7_rotateX.o" "comfy_mc_latest_realRN.phl[517]";
+connectAttr "nurbsCircle7_rotateY.o" "comfy_mc_latest_realRN.phl[518]";
+connectAttr "nurbsCircle7_rotateZ.o" "comfy_mc_latest_realRN.phl[519]";
+connectAttr "nurbsCircle7_scaleX.o" "comfy_mc_latest_realRN.phl[520]";
+connectAttr "nurbsCircle7_scaleY.o" "comfy_mc_latest_realRN.phl[521]";
+connectAttr "nurbsCircle7_scaleZ.o" "comfy_mc_latest_realRN.phl[522]";
+connectAttr "nurbsCircle7_visibility.o" "comfy_mc_latest_realRN.phl[523]";
+connectAttr "nurbsCircle12_translateX.o" "comfy_mc_latest_realRN.phl[524]";
+connectAttr "nurbsCircle12_translateY.o" "comfy_mc_latest_realRN.phl[525]";
+connectAttr "nurbsCircle12_translateZ.o" "comfy_mc_latest_realRN.phl[526]";
+connectAttr "nurbsCircle12_rotateX.o" "comfy_mc_latest_realRN.phl[527]";
+connectAttr "nurbsCircle12_rotateY.o" "comfy_mc_latest_realRN.phl[528]";
+connectAttr "nurbsCircle12_rotateZ.o" "comfy_mc_latest_realRN.phl[529]";
+connectAttr "nurbsCircle12_scaleX.o" "comfy_mc_latest_realRN.phl[530]";
+connectAttr "nurbsCircle12_scaleY.o" "comfy_mc_latest_realRN.phl[531]";
+connectAttr "nurbsCircle12_scaleZ.o" "comfy_mc_latest_realRN.phl[532]";
+connectAttr "nurbsCircle12_visibility.o" "comfy_mc_latest_realRN.phl[533]";
+connectAttr "mouth4_translateX.o" "comfy_mc_latest_realRN.phl[534]";
+connectAttr "mouth4_translateY.o" "comfy_mc_latest_realRN.phl[535]";
+connectAttr "mouth4_translateZ.o" "comfy_mc_latest_realRN.phl[536]";
+connectAttr "mouth4_rotateX.o" "comfy_mc_latest_realRN.phl[537]";
+connectAttr "mouth4_rotateY.o" "comfy_mc_latest_realRN.phl[538]";
+connectAttr "mouth4_rotateZ.o" "comfy_mc_latest_realRN.phl[539]";
+connectAttr "mouth4_scaleX.o" "comfy_mc_latest_realRN.phl[540]";
+connectAttr "mouth4_scaleY.o" "comfy_mc_latest_realRN.phl[541]";
+connectAttr "mouth4_scaleZ.o" "comfy_mc_latest_realRN.phl[542]";
+connectAttr "mouth4_visibility.o" "comfy_mc_latest_realRN.phl[543]";
+connectAttr "mouth5_translateX.o" "comfy_mc_latest_realRN.phl[544]";
+connectAttr "mouth5_translateY.o" "comfy_mc_latest_realRN.phl[545]";
+connectAttr "mouth5_translateZ.o" "comfy_mc_latest_realRN.phl[546]";
+connectAttr "mouth5_rotateX.o" "comfy_mc_latest_realRN.phl[547]";
+connectAttr "mouth5_rotateY.o" "comfy_mc_latest_realRN.phl[548]";
+connectAttr "mouth5_rotateZ.o" "comfy_mc_latest_realRN.phl[549]";
+connectAttr "mouth5_scaleX.o" "comfy_mc_latest_realRN.phl[550]";
+connectAttr "mouth5_scaleY.o" "comfy_mc_latest_realRN.phl[551]";
+connectAttr "mouth5_scaleZ.o" "comfy_mc_latest_realRN.phl[552]";
+connectAttr "mouth5_visibility.o" "comfy_mc_latest_realRN.phl[553]";
+connectAttr "mouth7_translateX.o" "comfy_mc_latest_realRN.phl[554]";
+connectAttr "mouth7_translateY.o" "comfy_mc_latest_realRN.phl[555]";
+connectAttr "mouth7_translateZ.o" "comfy_mc_latest_realRN.phl[556]";
+connectAttr "mouth7_rotateX.o" "comfy_mc_latest_realRN.phl[557]";
+connectAttr "mouth7_rotateY.o" "comfy_mc_latest_realRN.phl[558]";
+connectAttr "mouth7_rotateZ.o" "comfy_mc_latest_realRN.phl[559]";
+connectAttr "mouth7_scaleX.o" "comfy_mc_latest_realRN.phl[560]";
+connectAttr "mouth7_scaleY.o" "comfy_mc_latest_realRN.phl[561]";
+connectAttr "mouth7_scaleZ.o" "comfy_mc_latest_realRN.phl[562]";
+connectAttr "mouth7_visibility.o" "comfy_mc_latest_realRN.phl[563]";
+connectAttr "mouth6_translateX.o" "comfy_mc_latest_realRN.phl[564]";
+connectAttr "mouth6_translateY.o" "comfy_mc_latest_realRN.phl[565]";
+connectAttr "mouth6_translateZ.o" "comfy_mc_latest_realRN.phl[566]";
+connectAttr "mouth6_rotateX.o" "comfy_mc_latest_realRN.phl[567]";
+connectAttr "mouth6_rotateY.o" "comfy_mc_latest_realRN.phl[568]";
+connectAttr "mouth6_rotateZ.o" "comfy_mc_latest_realRN.phl[569]";
+connectAttr "mouth6_scaleX.o" "comfy_mc_latest_realRN.phl[570]";
+connectAttr "mouth6_scaleY.o" "comfy_mc_latest_realRN.phl[571]";
+connectAttr "mouth6_scaleZ.o" "comfy_mc_latest_realRN.phl[572]";
+connectAttr "mouth6_visibility.o" "comfy_mc_latest_realRN.phl[573]";
+connectAttr "comfy_mc_latest_realRN.phl[574]" "comfy_mc_latest_realRN.phl[575]";
+connectAttr "blendShape4_envelope.o" "comfy_mc_latest_realRN.phl[576]";
 connectAttr "bedroom_SET_latest1:polyCube1.out" "bedroom_SET_latest1:RoofShape.i"
 		;
 connectAttr "bedroom_SET_latest1:fox:groupId1.id" "bedroom_SET_latest1:fox:fox_meshShape.iog.og[0].gid"
@@ -64871,6 +64883,7 @@ connectAttr ":defaultColorMgtGlobals.cfp" "bedroom_SET_latest1:karen_latest:hair
 		;
 connectAttr ":defaultColorMgtGlobals.wsn" "bedroom_SET_latest1:karen_latest:hair_shader_view_norm.ws"
 		;
+connectAttr "lash_envelope.o" "comfy_mc_latest_realRN.phl[305]";
 connectAttr "comfy_mc_latest_realRNfosterParent1.msg" "comfy_mc_latest_realRN.fp"
 		;
 connectAttr "blendShape1GroupParts.og" "sweater_correct.ip[0].ig";
