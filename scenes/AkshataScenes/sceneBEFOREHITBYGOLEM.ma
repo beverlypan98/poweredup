@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
-//Name: sceneGETHITBYGOLEM.ma
-//Last modified: Thu, Dec 12, 2019 07:23:26 PM
+//Name: sceneBEFOREHITBYGOLEM.ma
+//Last modified: Thu, Dec 12, 2019 10:00:54 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "mushroom_latest8" -rfn "mushroom_latestRN8" -op "v=0;" -typ
 		 "mayaAscii" "/Users/ashnachoudhury/Art_Animation/maya/projects/poweredup//assets/shrooms/mushroom_latest.ma";
@@ -177,6 +177,7 @@ requires "stereoCamera" "10.0";
 requires -nodeType "PxrDomeLight" -nodeType "rmanGlobals" -nodeType "PxrPathTracer"
 		 -nodeType "rmanDisplay" "RenderMan_for_Maya.py" "22.6 @ 1987751";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "2.0.1";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2018";
@@ -187,15 +188,16 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "38C8FB16-234C-D6D8-8CE8-B6B0919302DD";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -7.3937517234861421 -46.059212836536403 165.34714951111459 ;
-	setAttr ".r" -type "double3" 333.86183871860942 1056.200377938397 -360.00047442438552 ;
+	setAttr ".t" -type "double3" -28.064207279209334 -45.854823778064883 177.35289065827388 ;
+	setAttr ".r" -type "double3" 356.06229568187393 1023.800377939824 -360.00078029751324 ;
 	setAttr ".rp" -type "double3" -1.1102230246251565e-16 -1.7763568394002505e-15 0 ;
 	setAttr ".rpt" -type "double3" 1.1550877477225258e-16 1.0126889076743265e-15 -1.6076569080956889e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C8B52BB5-F84C-CD30-EFCD-758C9EF157ED";
 	setAttr -k off ".v" no;
+	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 1.7857625324773228;
+	setAttr ".coi" 23.955576049241508;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -460,11 +462,11 @@ createNode camera -n "CALMBEFORESTOORMShape" -p "CALMBEFORESTOORM";
 	setAttr -k off ".v";
 	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 8.6141242040094461;
+	setAttr -l on ".coi" 8.6141242040094461;
+	setAttr -l on ".ow";
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.053962538174932906 5.8954843206845862 0.70849415377263592 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dr" yes;
 createNode reference -n "mushroom_latestRN8";
@@ -1034,9 +1036,9 @@ createNode reference -n "mushroom_latestRN17";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "CD2B1311-AE42-8F0D-33B1-A7AB749BB108";
-	setAttr -s 257 ".lnk";
-	setAttr -s 257 ".slnk";
+	rename -uid "BACDBFE6-9740-46F1-1A2D-FE9BE8BBC178";
+	setAttr -s 195 ".lnk";
+	setAttr -s 195 ".slnk";
 createNode rmanGlobals -s -n "rmanGlobals";
 	rename -uid "55B0D61B-4309-FF24-4EE8-918B5419A1DC";
 	setAttr ".cch" no;
@@ -1185,22 +1187,22 @@ createNode PxrPathTracer -s -n "PxrPathTracer";
 	setAttr ".clampDepth" 2;
 	setAttr ".clampLuminance" 10;
 createNode displayLayerManager -n "layerManager";
-	rename -uid "DAA1310B-0B4A-531A-F6AA-01A061A09EB3";
+	rename -uid "1C028818-E049-EFDA-AF72-47AFC3DDDED2";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9680EC02-E44F-12F6-A97B-BEBF38094A1D";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "6F28EF49-5F4F-92CA-91F4-9DA5B253D87C";
+	rename -uid "8118FC00-B041-4605-3BCD-4E9A816D6C49";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "933CFE93-144B-98D2-5409-36B5C3F89D1B";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "307D4C87-C042-B946-FF0A-50A116E49FEF";
+	rename -uid "7FC09F3E-BF4C-FDCD-8664-1DAFB844D06D";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 6 0 1 2 3 4
 		 5 ;
 	setAttr -s 6 ".bspr";
 	setAttr -s 6 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0DC78E2F-5B4C-9157-6CBB-0B9A12E2453A";
+	rename -uid "DFA47D35-874A-4B67-B430-C2A690209934";
 createNode reference -n "forest_ground_latestRN";
 	rename -uid "08C2AC68-9A42-E186-BB10-808F9C7719E9";
 	setAttr ".ed" -type "dataReferenceEdits" 
@@ -1377,7 +1379,7 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"CALMBEFORESTOORM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n"
 		+ "            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n"
 		+ "            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n"
-		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 832\n            -height 750\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 832\n            -height 643\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
@@ -1387,7 +1389,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 0\n            -controlVertices 1\n            -hulls 1\n            -grid 0\n            -imagePlane 1\n            -joints 0\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 832\n            -height 750\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 832\n            -height 643\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n"
@@ -1395,7 +1397,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
 		+ "                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n"
 		+ "                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 1\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n"
-		+ "                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 1\n                -classicMode 1\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
 		+ "                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n"
 		+ "                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
@@ -1411,18 +1413,18 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererOverrideName \"stereoOverrideVP2\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
 		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n"
 		+ "                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
-		+ "            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
-		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
-		+ "                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"CALMBEFORESTOORM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 832\\n    -height 750\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"CALMBEFORESTOORM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 832\\n    -height 750\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -highlightConnections 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
+		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -activeTab -1\n                -editorMode \"default\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n"
+		+ "            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n"
+		+ "            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"CALMBEFORESTOORM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 832\\n    -height 643\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"CALMBEFORESTOORM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 0\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 832\\n    -height 643\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "930593F7-DA41-133C-60D4-7B9BBCFFE05E";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 35 -ast 1 -aet 100 ";
+	setAttr ".b" -type "string" "playbackOptions -min 36 -max 59 -ast 1 -aet 100 ";
 	setAttr ".st" 6;
 createNode reference -n "lavenderField_latestRN4";
 	rename -uid "9D66B449-FC44-8858-8200-928B9F12C32B";
@@ -2340,7 +2342,7 @@ createNode animCurveTU -n "neck_CTRL_scaleZ";
 	setAttr -s 2 ".ktv[0:1]"  10 1 14 1;
 createNode reference -n "mc_latest_rig_combined_latest_realRN";
 	rename -uid "E80CA19A-1746-52C7-5716-8093D9829AA2";
-	setAttr -s 243 ".phl";
+	setAttr -s 278 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -2584,6 +2586,41 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 	setAttr ".phl[241]" 0;
 	setAttr ".phl[242]" 0;
 	setAttr ".phl[243]" 0;
+	setAttr ".phl[244]" 0;
+	setAttr ".phl[245]" 0;
+	setAttr ".phl[246]" 0;
+	setAttr ".phl[247]" 0;
+	setAttr ".phl[248]" 0;
+	setAttr ".phl[249]" 0;
+	setAttr ".phl[250]" 0;
+	setAttr ".phl[251]" 0;
+	setAttr ".phl[252]" 0;
+	setAttr ".phl[253]" 0;
+	setAttr ".phl[254]" 0;
+	setAttr ".phl[255]" 0;
+	setAttr ".phl[256]" 0;
+	setAttr ".phl[257]" 0;
+	setAttr ".phl[258]" 0;
+	setAttr ".phl[259]" 0;
+	setAttr ".phl[260]" 0;
+	setAttr ".phl[261]" 0;
+	setAttr ".phl[262]" 0;
+	setAttr ".phl[263]" 0;
+	setAttr ".phl[264]" 0;
+	setAttr ".phl[265]" 0;
+	setAttr ".phl[266]" 0;
+	setAttr ".phl[267]" 0;
+	setAttr ".phl[268]" 0;
+	setAttr ".phl[269]" 0;
+	setAttr ".phl[270]" 0;
+	setAttr ".phl[271]" 0;
+	setAttr ".phl[272]" 0;
+	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"mc_latest_rig_combined_latest_realRN"
 		"mc_latest_rig_combined_latest_realRN" 0
@@ -2618,54 +2655,72 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		3 "mc_latest_rig_combined_latest_real:skinCluster1.outputGeometry[0]" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.inMesh" 
 		""
 		5 3 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[17]" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[229]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[264]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[17].objectGroupId" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[230]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[265]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[17].objectGrpColor" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[231]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[266]" ""
 		5 3 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[18]" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[232]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[267]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[18].objectGroupId" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[233]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[268]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[18].objectGrpColor" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[234]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[269]" ""
 		5 3 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[19]" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[235]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[270]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[19].objectGroupId" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[236]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[271]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[19].objectGrpColor" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[237]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[272]" ""
 		5 3 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[20]" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[238]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[273]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[20].objectGroupId" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[239]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[274]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.instObjGroups.objectGroups[20].objectGrpColor" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[240]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[275]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.inMesh" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[241]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[276]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mesh|mc_latest_rig_combined_latest_real:body1|mc_latest_rig_combined_latest_real:body1Shape.tweakLocation" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[242]" ""
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[277]" ""
 		5 3 "mc_latest_rig_combined_latest_realRN" "mc_latest_rig_combined_latest_real:skinCluster1.outputGeometry[0]" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[243]" "mc_latest_rig_combined_latest_real:body1Shape.i"
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[278]" "mc_latest_rig_combined_latest_real:body1Shape.i"
 		
-		"mc_latest_rig_combined_latest_real:mc_rig_onlyRN" 354
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ikfk_switch" 
-		"ik" " -k 1"
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_ikfk_switch" 
-		"ik" " -k 1"
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_leg_ikfk_switch" 
-		"ik" " -k 1"
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_leg_ikfk_switch" 
-		"ik" " -k 1"
+		"mc_latest_rig_combined_latest_real:mc_rig_onlyRN" 552
+		1 |mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl 
+		"blendPoint1" "blendPoint1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control" 
+		"translate" " -type \"double3\" -6.04552916310284871 -55.55595469416521581 162.96845247958734149"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control" 
+		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control" 
+		"rotateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector" 
 		"translate" " -type \"double3\" -1.95753083214127077 -1.02977115130585872 1.4553065006266479"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector" 
 		"translateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector" 
-		"translateZ" " -av"
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector" 
 		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector" 
+		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector" 
+		"translate" " -type \"double3\" -0.75464400450738167 2.85928316128627102 5.36710881621275782"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector" 
+		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
+		"visibility" " -av 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
@@ -2675,7 +2730,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
-		"rotate" " -type \"double3\" 19.18903524839402408 -53.10411528968998596 -22.20759821069205486"
+		"rotate" " -type \"double3\" 19.06740310517019665 -49.02770080041279499 -20.87168197492522381"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
 		"rotateX" " -av"
@@ -2683,6 +2738,14 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"rotateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl" 
+		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL" 
 		"translate" " -type \"double3\" -0.34394720714835453 -0.048594609385212748 -0.23885423109311743"
 		
@@ -2694,6 +2757,8 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:null2|mc_latest_rig_combined_latest_real:mc_rig_only:r_eyeball|mc_latest_rig_combined_latest_real:mc_rig_only:r_eyeballShape" 
 		"uvPivot" " -type \"double2\" 0.53724896907806396 0.14765936136245728"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null6|mc_latest_rig_combined_latest_real:mc_rig_only:l_shoulder_ctrl1" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1" 
 		"translate" " -type \"double3\" 0 0.23038440370641666 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1" 
@@ -2702,28 +2767,130 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"rotate" " -type \"double3\" -4.79335084080287999 0 0"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl" 
 		"rotateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl" 
+		"rotate" " -type \"double3\" 1.02439644116751638 -1.10649164646672027 -0.87822924432070593"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl" 
+		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl" 
+		"rotateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl" 
+		"rotateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
-		"translate" " -type \"double3\" 0.014962243502718131 2.6354530399125613 1.35903673219200671"
+		"visibility" " -av 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
+		"translate" " -type \"double3\" 0.013429305982669597 2.95829612832931232 1.35903673219200671"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
-		"translateY" " -av"
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
+		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"rotate" " -type \"double3\" 8.34934193384777856 186.41048672405736397 147.20104498270589488"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
-		"rotateY" " -av"
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
+		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl" 
+		"scaleZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"visibility" " -av 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"rotateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"scaleZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"poleVector" " -type \"double3\" -0.37065842749358779 3.41871101848747472 -0.12842221108988383"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"poleVectorX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"poleVectorY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"poleVectorZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"offset" " -av 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"roll" " -av 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle" 
+		"twist" " -av 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle_poleVectorConstraint1" 
+		"nodeState" " -av -k 1 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle_poleVectorConstraint1" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle_poleVectorConstraint1" 
+		"translateX" " -k 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle_poleVectorConstraint1" 
+		"translateY" " -k 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle_poleVectorConstraint1" 
+		"translateZ" " -k 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle_poleVectorConstraint1" 
+		"offset" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle_poleVectorConstraint1" 
+		"offsetX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle_poleVectorConstraint1" 
+		"offsetY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle_poleVectorConstraint1" 
+		"offsetZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_ik_handle_poleVectorConstraint1" 
+		"r_leg_pole_vector1W0" " -av -k 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"visibility" " -av 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
 		"rotate" " -type \"double3\" 0 0 50.75926846972650708"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"rotateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky" 
+		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2" 
 		"visibility" " -av 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2" 
@@ -2735,13 +2902,13 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2" 
-		"rotate" " -type \"double3\" 0 0 77.62526662341880979"
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2" 
-		"rotateZ" " -av"
+		"rotate" " -type \"double3\" 0 0 76.49370297001620145"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2" 
 		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2" 
+		"rotateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2" 
@@ -2761,13 +2928,13 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
-		"rotate" " -type \"double3\" 0 0 41.82899023675761185"
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
-		"rotateZ" " -av"
+		"rotate" " -type \"double3\" 0 0 41.21923819249000331"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
 		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
+		"rotateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
@@ -2776,6 +2943,68 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"scaleY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3" 
 		"scaleZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"visibility" " -av 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"rotateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb" 
+		"scaleZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"visibility" " -av 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"rotateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2" 
+		"scaleZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
+		"visibility" " -av 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
+		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
 		"rotate" " -type \"double3\" 34.19714580070681365 -12.60094859800603651 84.12097142747066414"
 		
@@ -2785,6 +3014,14 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"rotateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index" 
+		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2" 
 		"visibility" " -av 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2" 
@@ -2812,13 +3049,41 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2" 
 		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
-		"rotate" " -type \"double3\" 0 0 83.89015443608245448"
+		"visibility" " -av 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
+		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
+		"rotate" " -type \"double3\" 0 0 25.50988611192579114"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
 		"rotateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3" 
+		"scaleZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
+		"visibility" " -av 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
+		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
 		"rotate" " -type \"double3\" 17.44266786622467436 0 81.45664291754754061"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
@@ -2827,14 +3092,66 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"rotateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle" 
+		"scaleZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"visibility" " -av 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
 		"rotate" " -type \"double3\" 0 0 44.33738679447237985"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"rotateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2" 
+		"scaleZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
+		"visibility" " -av 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
+		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
+		"rotate" " -type \"double3\" 0 0 27.56206816151143002"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
+		"rotateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
+		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
 		"rotateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
-		"rotate" " -type \"double3\" 0 0 92.79375466470463607"
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
-		"rotateZ" " -av"
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3" 
+		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring" 
 		"visibility" " -av 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring" 
@@ -2862,13 +3179,31 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring" 
 		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
-		"rotate" " -type \"double3\" 0 0 77.62526662341880979"
+		"visibility" " -av 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
+		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
+		"rotate" " -type \"double3\" 0 0 21.5185059106976766"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
 		"rotateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
 		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2" 
+		"scaleZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3" 
 		"visibility" " -av 1"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3" 
@@ -2880,7 +3215,7 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3" 
-		"rotate" " -type \"double3\" 0 0 87.28655078327916783"
+		"rotate" " -type \"double3\" 0 0 25.33039247905862013"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3" 
 		"rotateX" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3" 
@@ -2899,17 +3234,54 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"translate" " -type \"double3\" -0.087154398460771887 -0.26062557889849813 -0.48723033987326403"
 		
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
+		"translateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"translateY" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
 		"translateZ" " -av"
 		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
+		"rotateX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
+		"rotateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl" 
+		"rotateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:spine_ik_handle" 
+		"translate" " -type \"double3\" 0.014795973159600351 7.8819123358315224 -0.11895122996989471"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:spine_ik_handle" 
+		"rotate" " -type \"double3\" 178.88276257268097424 -1.18682738408640565 90.22777699005273178"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
+		"translate" " -type \"double3\" 6.1267333109071842e-06 -0.00042397257608861594 0.001110248811812653"
+		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
 		"translateX" " -av"
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:spine_ik_handle" 
-		"translate" " -type \"double3\" -0.017141428271102654 7.88160970737231281 -0.15714142986604429"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
+		"translateY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
+		"translateZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
+		"scale" " -type \"double3\" 1.00116091112067185 1.00116091112067185 1.00116091112067185"
 		
-		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:spine_ik_handle" 
-		"rotate" " -type \"double3\" -179.99867927059779049 -0.11658683906671249 91.11993970854310021"
-		
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
+		"scaleX" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
+		"scaleY" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
+		"scaleZ" " -av"
+		2 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl" 
+		"blendPoint1" " -k 1"
+		3 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateX" 
+		"|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.translateX" 
+		""
+		3 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateY" 
+		"|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.translateY" 
+		""
+		3 "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateZ" 
+		"|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.translateZ" 
+		""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[1]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control.translateZ" 
@@ -2948,9 +3320,9 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[18]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[19]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector.translateZ" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[20]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector.translateY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[20]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[21]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[22]" ""
@@ -2966,406 +3338,478 @@ createNode reference -n "mc_latest_rig_combined_latest_realRN";
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[27]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:r_arm_pole_vector.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[28]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[29]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[30]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[31]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[32]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[33]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[34]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[35]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[36]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[37]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:l_arm_pole_vector.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[38]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[39]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[40]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[41]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[42]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[43]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[44]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[45]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[46]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[47]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[48]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[49]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[50]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[51]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[52]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[53]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[54]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[55]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[56]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[57]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:group42|mc_latest_rig_combined_latest_real:mc_rig_only:neck_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:eye_CTRL.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[58]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[59]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[60]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[61]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[62]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[63]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[64]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[65]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[66]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[67]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null7|mc_latest_rig_combined_latest_real:mc_rig_only:r_shoulder_ctrl1.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[68]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[69]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[70]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[71]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[72]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[73]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[74]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[75]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[76]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[77]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null8|mc_latest_rig_combined_latest_real:mc_rig_only:shoulder_ctrl.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[78]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[79]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[80]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[81]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[82]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[83]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[84]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[85]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[86]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[87]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:cog_ctrl.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[88]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[89]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[90]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[91]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[92]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[93]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[94]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[95]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[96]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[97]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[98]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[99]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[100]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[101]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[102]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[103]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[104]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[105]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[106]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[107]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[108]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[109]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[110]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[111]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[112]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[113]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[114]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[115]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[116]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[117]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[118]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[119]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[120]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[121]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[122]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[123]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[124]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[125]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[126]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[127]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_pinky_3.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[128]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[129]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[130]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[131]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[132]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[133]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[134]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[135]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[136]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[137]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[138]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[139]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[140]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[141]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[142]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[143]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[144]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[145]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[146]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[147]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb|mc_latest_rig_combined_latest_real:mc_rig_only:r_thumb_2.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[148]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[149]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[150]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[151]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[152]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[153]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[154]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[155]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[156]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[157]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[158]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[159]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[160]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[161]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[162]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[163]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[164]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[165]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[166]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[167]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[168]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[169]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[170]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[171]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[172]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[173]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[174]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[175]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[176]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[177]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_index|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_index_3.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[178]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[179]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[180]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[181]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[182]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[183]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[184]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[185]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[186]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[187]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[188]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[189]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[190]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[191]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[192]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[193]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[194]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[195]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[196]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[197]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[198]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[199]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[200]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[201]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[202]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[203]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[204]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[205]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[206]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[207]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_middle_3.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[208]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[209]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[210]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[211]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[212]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[213]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[214]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[215]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[216]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[217]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.scaleZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring.scaleZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[218]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.rotateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.rotateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[219]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.rotateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.rotateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[220]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.rotateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.rotateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[221]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.translateY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.visibility" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[222]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.translateZ" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.translateX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[223]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.translateX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.translateY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[224]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.visibility" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.translateZ" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[225]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.scaleX" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.scaleX" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[226]" ""
-		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.scaleY" 
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.scaleY" 
 		"mc_latest_rig_combined_latest_realRN.placeHolderList[227]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2.scaleZ" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[228]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.rotateX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[229]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.rotateY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[230]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.rotateZ" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[231]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.visibility" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[232]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.translateX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[233]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.translateY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[234]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.translateZ" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[235]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.scaleX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[236]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.scaleY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[237]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null4|mc_latest_rig_combined_latest_real:mc_rig_only:r_wrist_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_2|mc_latest_rig_combined_latest_real:mc_rig_only:r_ring_3.scaleZ" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[238]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.rotateX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[239]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.rotateY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[240]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.rotateZ" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[241]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.translateX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[242]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.translateY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[243]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.translateZ" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[244]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.visibility" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[245]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.scaleX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[246]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.scaleY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[247]" ""
 		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:null5|mc_latest_rig_combined_latest_real:mc_rig_only:l_wrist_ctrl.scaleZ" 
-		"mc_latest_rig_combined_latest_realRN.placeHolderList[228]" "";
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[248]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.scaleX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[249]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.scaleY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[250]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.scaleZ" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[251]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.translateX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[252]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.translateY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[253]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.translateZ" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[254]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.rotateX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[255]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.rotateY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[256]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.rotateZ" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[257]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.visibility" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[258]" ""
+		5 3 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.blendPoint1" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[259]" ""
+		5 4 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.blendPoint1" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[260]" ""
+		5 3 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateX" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[261]" "mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.tx"
+		
+		5 3 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateY" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[262]" "mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.ty"
+		
+		5 3 "mc_latest_rig_combined_latest_realRN" "|mc_latest_rig_combined_latest_real:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:main_chara|mc_latest_rig_combined_latest_real:mc_rig_only:master_control|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_GRP|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl|mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl_pointConstraint1.constraintTranslateZ" 
+		"mc_latest_rig_combined_latest_realRN.placeHolderList[263]" "mc_latest_rig_combined_latest_real:mc_rig_only:breathing_ctrl.tz";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode blendShape -n "BLINKS";
@@ -3373,13 +3817,13 @@ createNode blendShape -n "BLINKS";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -s 2 ".w[0:1]"  1 1;
 	setAttr -s 2 ".it[0].itg";
-	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 67 0 0 0 1 0 0 0 1 -0
+	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 67 0 0 0 1 0 0 0 1 0
 		 0 0 1 0 0 0 1 0 0 0 1 0.055927567021102041 -0.014320179510020126 -0.018938656650264021
-		 1 -0 0 0 1 0.050686513768048599 -0.015712874677221388 -0.029590801998814469 1 -0
-		 0 0 1 0.044336953209024761 -0.016019875321110703 -0.038330555859457383 1 0 0 0 1 -0
+		 1 0 0 0 1 0.050686513768048599 -0.015712874677221388 -0.029590801998814469 1 0 0
+		 0 1 0.044336953209024761 -0.016019875321110703 -0.038330555859457383 1 0 0 0 1 0
 		 0 0 1 3.3000861418552851e-10 3.6867886868408029e-10 1.7207221585102683e-10 1 0 0
-		 0 1 0.0086755255153998095 0.059324972246311447 0.0098445672286755562 1 0 0 -0 1 0
-		 0 -0 1 0 0 -0 1 0 0 -0 1 0 0 -0 1 0 0 -0 1 0.0086516341468860225 -0.056523450502896158
+		 0 1 0.0086755255153998095 0.059324972246311447 0.0098445672286755562 1 0 0 0 1 0
+		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0.0086516341468860225 -0.056523450502896158
 		 -0.063955535656282411 1 0 0 0 1 0.00030571622493573425 -0.00042437358527796024 -0.00027197974934711593
 		 1 0.064036505333903704 0.022188176956567156 0.016723019260713158 1 0.11615329175213904
 		 0.023962456583724548 0.0059155579123189115 1 4.2597287441749885e-05 -0.010532013357708798
@@ -3393,44 +3837,43 @@ createNode blendShape -n "BLINKS";
 		 1 0.048110012242180367 0.016634570003332159 0.047318009353499418 1 0.0044343668438544918
 		 -0.0056198763357717691 0.041680703500528909 1 0.12752187484247923 0.075691875870659897
 		 0.00010797860960744178 1 -0.0028368506014591686 -0.019558327408404838 0.057454832889279342
-		 1 -0 0 0 1 -0 0 0 1 -0 0 0 1 -0 0 0 1 0 0 0 1 0 0 -0 1 -0 0 0 1 -0.050196643471183314
-		 -0.012777103735969852 0.0018782651769315966 1 -0.036548991064435682 0.0093087719732334075
-		 -0.023444830411041638 1 -0.036974144604760242 0.010679946610307656 0.0017766987782027166
-		 1 -0.017496681693578098 0.012278566460517629 0.00045071665238939537 1 0.039857705839382404
-		 -0.045316212525054661 0.0070312260976005134 1 0.049402855861438964 -0.035123008177887036
-		 0.0041671987966867847 1 0.057212354838130253 -0.016777994509583345 0.011699540616752397
-		 1 0.05908097369344395 0.047520904813165198 0.034217055981632716 1 0.098853922092643362
-		 0.015494771204785925 0.0042192737443794695 1 0.042881107332987944 -0.029082786718563722
-		 -0.022847772706436766 1 -0.0029086751808753636 -0.01272455570245965 -0.03328708444934101
-		 1 -0.01653559241367113 -0.0058770016518084282 -0.021661083253294997 1 -0.043193043414084892
-		 -0.011171093877443189 -0.021190547348358901 1 0 0 0 1 0 0 0 1 0 0 0 1 -0 0 0 1 -0
-		 0 0 1 -0 0 0 1 -0 0 0 1 ;
+		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0.050196643471183314 -0.012777103735969852
+		 0.0018782651769315966 1 -0.036548991064435682 0.0093087719732334075 -0.023444830411041638
+		 1 -0.036974144604760242 0.010679946610307656 0.0017766987782027166 1 -0.017496681693578098
+		 0.012278566460517629 0.00045071665238939537 1 0.039857705839382404 -0.045316212525054661
+		 0.0070312260976005134 1 0.049402855861438964 -0.035123008177887036 0.0041671987966867847
+		 1 0.057212354838130253 -0.016777994509583345 0.011699540616752397 1 0.05908097369344395
+		 0.047520904813165198 0.034217055981632716 1 0.098853922092643362 0.015494771204785925
+		 0.0042192737443794695 1 0.042881107332987944 -0.029082786718563722 -0.022847772706436766
+		 1 -0.0029086751808753636 -0.01272455570245965 -0.03328708444934101 1 -0.01653559241367113
+		 -0.0058770016518084282 -0.021661083253294997 1 -0.043193043414084892 -0.011171093877443189
+		 -0.021190547348358901 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 ;
 	setAttr ".it[0].itg[0].iti[6000].ict" -type "componentList" 22 "vtx[0]" "vtx[64:66]" "vtx[69:75]" "vtx[497]" "vtx[2360]" "vtx[3121]" "vtx[3188]" "vtx[3202:3203]" "vtx[3205:3208]" "vtx[3315:3316]" "vtx[3350]" "vtx[3354:3367]" "vtx[3370:3371]" "vtx[3373]" "vtx[3377]" "vtx[3381:3382]" "vtx[3384]" "vtx[3387:3388]" "vtx[3753:3756]" "vtx[3760:3762]" "vtx[3765:3770]" "vtx[3776:3782]";
 	setAttr ".it[0].itg[0].pdm" 1;
-	setAttr ".it[0].itg[1].iti[6000].ipt" -type "pointArray" 57 0 0 0 1 -0 0 0 1 0.031245670868094124
+	setAttr ".it[0].itg[1].iti[6000].ipt" -type "pointArray" 57 0 0 0 1 0 0 0 1 0.031245670868094124
 		 -0.015143421206146628 -0.011540802309087415 1 0.06059144009380487 -0.011090444280480626
 		 -0.0071494368943154632 1 0 0 0 1 0.057760649736558985 -0.011140886624718451 0.020914468232018243
 		 1 0 0 0 1 0.030877689902223126 -0.0020295012263162183 0.019525738310574706 1 0 0
 		 0 1 0.025720239375860626 -0.0096789888211286836 0.024157639817833289 1 0.072270274767498588
 		 -0.018791172253895948 0.0079958369292362913 1 0.080573637972163603 -0.010419204213190926
-		 -0.024683106904799725 1 0 0 -0 1 0.026671042063853671 -0.023115513487466016 0.0096505693153187411
+		 -0.024683106904799725 1 0 0 0 1 0.026671042063853671 -0.023115513487466016 0.0096505693153187411
 		 1 0.03180213137718374 -0.01782644740189436 0.0031059759843458843 1 0.036488771985265976
 		 -0.0023117949024398744 0.0014248705386256323 1 0.035847105300884391 0.0042900981583823975
 		 0.0059485508469757538 1 0.033035475989026265 0.011161472459867093 0.011085302906585406
-		 1 0.024225867568447669 0.023009200415025733 0.01491604989363772 1 0 0 -0 1 0 0 0
-		 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 -0 1 0 0 0 1 0 0 -0 1 -0 0 0 1 0 0
-		 0 1 -0 0 0 1 0 0 0 1 0.033361743081384218 0.013949360329047557 -0.0055869861876101396
-		 1 0.014358867244586133 -0.012123520891899543 -0.012199036678941602 1 0.072763184438464482
-		 0.0089016622917742084 -0.045156167596588456 1 0.086834932819507424 -0.0013123350224624455
-		 -0.033384583678538644 1 0.10725473517102932 -0.005536832451621186 -0.0019497271640468968
-		 1 0.09404884025797941 0.0064518063290743537 0.013253508274667303 1 0.082367618535049342
-		 0.020202605476776714 -0.0041664422831822635 1 0 0 0 1 0 -0 0 1 0 0 0 1 0 0 0 1 0
-		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 -0 0 0 1 0 0 0 1 0.035300818761130288 -0.0093339266016965704
-		 0.0023526418081728784 1 0.081730885606926373 -0.022182527349329701 -0.0061583662568609112
-		 1 0.092690656625549261 -0.020973117022786286 -0.0055708522843547874 1 0.1066101558877425
-		 0.0069822379661586709 0.011115728988551772 1 0.086280267661646717 0.034816956621013646
-		 0.00023054416155808953 1 0.030546923576568793 0.019737895562093259 -0.0040131969628349994
-		 1 0.023616639816501438 0.026692888291249914 -0.0082794328464949572 1 ;
+		 1 0.024225867568447669 0.023009200415025733 0.01491604989363772 1 0 0 0 1 0 0 0 1 0
+		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0
+		 0 1 0 0 0 1 0.033361743081384218 0.013949360329047557 -0.0055869861876101396 1 0.014358867244586133
+		 -0.012123520891899543 -0.012199036678941602 1 0.072763184438464482 0.0089016622917742084
+		 -0.045156167596588456 1 0.086834932819507424 -0.0013123350224624455 -0.033384583678538644
+		 1 0.10725473517102932 -0.005536832451621186 -0.0019497271640468968 1 0.09404884025797941
+		 0.0064518063290743537 0.013253508274667303 1 0.082367618535049342 0.020202605476776714
+		 -0.0041664422831822635 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0
+		 0 0 1 0 0 0 1 0 0 0 1 0.035300818761130288 -0.0093339266016965704 0.0023526418081728784
+		 1 0.081730885606926373 -0.022182527349329701 -0.0061583662568609112 1 0.092690656625549261
+		 -0.020973117022786286 -0.0055708522843547874 1 0.1066101558877425 0.0069822379661586709
+		 0.011115728988551772 1 0.086280267661646717 0.034816956621013646 0.00023054416155808953
+		 1 0.030546923576568793 0.019737895562093259 -0.0040131969628349994 1 0.023616639816501438
+		 0.026692888291249914 -0.0082794328464949572 1 ;
 	setAttr ".it[0].itg[1].iti[6000].ict" -type "componentList" 21 "vtx[0]" "vtx[65:66]" "vtx[69:75]" "vtx[497]" "vtx[3121]" "vtx[3188]" "vtx[3202:3203]" "vtx[3205:3208]" "vtx[3355:3365]" "vtx[3367]" "vtx[3370:3371]" "vtx[3373]" "vtx[3377]" "vtx[3381:3382]" "vtx[3384]" "vtx[3387:3388]" "vtx[3753:3756]" "vtx[3760:3762]" "vtx[3765:3766]" "vtx[3770]" "vtx[3776:3782]";
 	setAttr ".it[0].itg[1].pdm" 1;
 	setAttr ".it[0].siw" 1;
@@ -3458,7 +3901,7 @@ createNode blendShape -n "SMILE";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -s 3 ".w[0:2]"  1 1 0;
 	setAttr -s 3 ".it[0].itg";
-	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 127 0 0 -0 1 0 0 0 1 0
+	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 127 0 0 0 1 0 0 0 1 0
 		 -7.2759576141834259e-12 0 1 -0.01326474774396047 0.015379544985677285 0 1 0 0 0 1 0
 		 1.8189894035458565e-12 0 1 0 -3.637978807091713e-11 0 1 0 0 0 1 -0.0033400750253349543
 		 0.0069094044235455954 0 1 -0.0032947626168606803 0.0068156695835241976 0 1 -0.00054842171994096134
@@ -3521,7 +3964,7 @@ createNode blendShape -n "SMILE";
 		 0 1 -0.0025597356652724557 0.0034185958062309396 0 1 ;
 	setAttr ".it[0].itg[0].iti[6000].ict" -type "componentList" 33 "vtx[0]" "vtx[164:165]" "vtx[171]" "vtx[173]" "vtx[176:178]" "vtx[226]" "vtx[228]" "vtx[230]" "vtx[252]" "vtx[259:263]" "vtx[284:287]" "vtx[362]" "vtx[2245]" "vtx[2249]" "vtx[2572:2574]" "vtx[2576:2583]" "vtx[2620:2627]" "vtx[2629:2634]" "vtx[2636:2643]" "vtx[2660:2663]" "vtx[3061]" "vtx[3066]" "vtx[3068:3072]" "vtx[3140:3141]" "vtx[3390:3397]" "vtx[3433:3441]" "vtx[3445:3448]" "vtx[3461:3468]" "vtx[3527:3531]" "vtx[3551:3557]" "vtx[3567:3577]" "vtx[3581:3584]" "vtx[3742]";
 	setAttr ".it[0].itg[0].pdm" 1;
-	setAttr ".it[0].itg[1].iti[6000].ipt" -type "pointArray" 188 0 0 -0 1 0 -0.014512188325170428
+	setAttr ".it[0].itg[1].iti[6000].ipt" -type "pointArray" 188 0 0 0 1 0 -0.014512188325170428
 		 0 1 0.0082308703709941256 -0.025124517565245696 2.8421709430404007e-14 1 0 0 0 1 0
 		 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 -0.0027771199602284469 0 1 0 -0.013860538427252322
 		 2.8421709430404007e-14 1 0 0 0 1 0 0 0 1 0 0 0 1 0 -9.2437564262581873e-05 0 1 0
@@ -3575,7 +4018,7 @@ createNode blendShape -n "SMILE";
 		 0 1 -5.4569682106375694e-11 1.4551915228366852e-11 0 1 0 0 0 1 0 0 0 1 0 0 0 1 ;
 	setAttr ".it[0].itg[1].iti[6000].ict" -type "componentList" 40 "vtx[0]" "vtx[160:161]" "vtx[164:165]" "vtx[171]" "vtx[173]" "vtx[176:178]" "vtx[223]" "vtx[225:226]" "vtx[228]" "vtx[230]" "vtx[241]" "vtx[246]" "vtx[248]" "vtx[251:253]" "vtx[259:263]" "vtx[265]" "vtx[278:280]" "vtx[284:287]" "vtx[362]" "vtx[2245]" "vtx[2249]" "vtx[2572:2583]" "vtx[2620:2647]" "vtx[2660:2664]" "vtx[3061:3066]" "vtx[3068:3072]" "vtx[3074:3077]" "vtx[3140:3141]" "vtx[3390:3397]" "vtx[3409:3421]" "vtx[3433:3441]" "vtx[3444:3448]" "vtx[3461:3468]" "vtx[3493:3495]" "vtx[3508:3512]" "vtx[3527:3531]" "vtx[3535:3538]" "vtx[3551:3557]" "vtx[3564:3584]" "vtx[3742]";
 	setAttr ".it[0].itg[1].pdm" 1;
-	setAttr ".it[0].itg[2].iti[6000].ipt" -type "pointArray" 244 0 0 -0 1 0 0.10668230953160673
+	setAttr ".it[0].itg[2].iti[6000].ipt" -type "pointArray" 244 0 0 0 1 0 0.10668230953160673
 		 5.6843418860808015e-14 1 0 0.10668230953160673 5.6843418860808015e-14 1 0 0.10668230953160673
 		 5.6843418860808015e-14 1 0 0.10668230953160673 5.6843418860808015e-14 1 0 0 0 1 0
 		 9.3912433385412442e-11 0 1 0 -1.2789769243681803e-12 0 1 0 0 0 1 0 -9.0957996690121945e-10
@@ -3748,6 +4191,7 @@ createNode blendShape -n "O";
 	rename -uid "7ADCB9C6-6145-E71B-5BD5-0590CB807EA4";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".en" 0;
+	setAttr -s 2270 ".it";
 	setAttr ".it[0].itg[0].iti[6000].ipt" -type "pointArray" 137 0 0 0 1 -0.0074530371487294116
 		 -0.010208221314069362 -0.0037790908934991641 1 -0.0060025726842286254 -0.011562249672525823
 		 0.020949992040157746 1 -0.010996044210843868 0.012683068480235874 -0.021247044652630481
@@ -3756,98 +4200,97 @@ createNode blendShape -n "O";
 		 -0.00019111018920406884 1 0.0002048120519027781 -0.00019710853484531269 0.00052657301803045215
 		 1 0.00022690213326596236 0.00030157721794807672 0.00080781562092261164 1 0.00017026799616735953
 		 -0.00015729855412181223 0.00045654463066950173 1 0.00038418480035882965 -0.00058302539040667577
-		 -0.0017624114251133726 1 0 0 -0 1 0.00074245250028599156 -0.00062525252654557707
-		 0.0054315159811858509 1 0.00022352150700710618 0.0035129851528542047 -0.00089729408687651605
-		 1 -8.7342967019288611e-05 -0.00016711111742766162 0.0028610491713339254 1 -0.00053784310974654657
-		 0.0037641110379836341 -0.0010916365229367165 1 -3.7193742514210349e-05 0.00017972905442925613
-		 -6.899039745318852e-06 1 0.0039340042094822949 0.0035372021094320222 -0.0028872555722402357
-		 1 0.00011166125603260887 -0.00017493625964321637 3.1104344580635054e-05 1 0.0013375925325134052
-		 0.0012460855953569513 -0.0007451482395166454 1 -0.0087917880951304053 -0.038453769850207743
-		 0.015416470892575709 1 0.00057217977599936126 9.1473097554693012e-05 -0.00028661921977934631
-		 1 -0.0076611828046563302 -0.022418909186449915 -0.0038838932472448663 1 0.0027240211884486248
-		 0.0016078277764540695 -0.00073745435379498074 1 0.021850511819870688 -0.0027734782530761562
-		 0.042640398017908747 1 0.0056133242423399192 0.010023410300377964 -0.033274443491389083
-		 1 0.0046912099481311378 0.0024772627868711442 0.010039840045800228 1 0.0003167792074797943
-		 0.00021296047945651994 2.4222842403942575e-06 1 0.0033337196339822206 0.00016826217664942943
-		 0.024045141872836 1 0.0042112660548616126 0.0010394820802876893 -0.035533978422767593
-		 1 0.014375193100362692 -0.020983177014802828 0.024749530401028511 1 -8.5231964806376241e-05
-		 -3.7941811222191502e-06 0.00014884353611475308 1 -0.00090424435930891358 -0.00088761613052729441
-		 0.0041018526452615434 1 0.023893479946458997 -0.0063644136759711707 0.017214951373856039
-		 1 0.014725998893615727 -0.0020218747899210382 -0.026022907047691581 1 0.0068617161078426076
-		 -5.0484997750165365e-05 0.016824531960580615 1 0.0004667916844346417 4.2531296739046722e-06
-		 5.0815884325791217e-07 1 0.0075946630366866517 -0.00065558456964724243 0.0089876674901265257
-		 1 0.017872865585098357 0.0041431727734718201 -0.032610545676781455 1 0.029068574157465395
-		 -0.016448415826362063 -0.022990528750776982 1 -0.00060290962903644988 -0.00044171238327009315
-		 0.0019019192972401463 1 0 0 -0 1 0 -0 0 1 -0.0027574502569025624 -0.0058057535266151858
-		 0.0062115200463395285 1 -0.0035452375524839957 -0.0080601289131810323 0.022418815569737321
-		 1 0.0044648542929060448 0.001863670471250794 0.047548529503066171 1 -0.0024275555897140424
-		 -0.00022302305644239734 -0.032659142488889605 1 -0.014677169837592876 0.028249830777008114
-		 0.020057506084526475 1 -0.0061218831483210202 0.010469615416422648 0.011300893173008012
-		 1 -0.0052865400970988309 -0.015287037111225088 0.0034739995190823342 1 -0.0012078161320213414
-		 -0.0047415354860242094 0.00078693482208743218 1 3.0768303638442834e-05 -6.7934876910276642e-05
-		 0.00015946666889033595 1 -1.5307223800582281e-05 5.8870501605973944e-05 5.4622371021090065e-06
-		 1 -0.0012219198119028511 -0.0037791713105923999 -0.0010680196131909246 1 -0.0023278425628203269
-		 0.0061762427065915346 0.0042885745248227155 1 -0.0029769360039648939 0.0069634078247427476
-		 -0.0053910512936832661 1 0.0017516758135944412 -0.0019502216342937259 -0.0044983501538392425
-		 1 0.014922076898683953 -0.0073700565468013332 -0.0053941241677197202 1 0.0084267054801747711
-		 0.009848123147016356 0.0050135099863967527 1 7.6803616053531325e-05 6.8445565709352263e-06
-		 6.8942838024975319e-05 1 0.0092248653065925452 -0.0092235278239876824 0.0056827379829732299
-		 1 0.017336104839916901 -0.0036718412014311265 0.0086007330024089369 1 0.0013629310131776109
-		 -0.0047229652997521849 0.0029991957279378693 1 -0.0004255748177189768 -0.00010083420546554701
-		 -0.00073861976572655707 1 -0.0026274679032063171 7.5592591267656232e-05 0.0081403637259577846
-		 1 -0.00023766047195178305 -0.0029269748216838734 0.01515901625977387 1 0.00021412786878557654
-		 0.00013443334028208066 -0.0011346524453853324 1 -0 0 0 1 -0.00091857498609414386
-		 -0.0049680660796557188 -0.0087349697557403336 1 -0.0022363256156003875 0.0012855824212875192
-		 0.0074039497408962054 1 -0.0024820130743561397 0.0081939326409625132 -0.023978191179378779
-		 1 0.0072424128493425608 0.0078299631061972876 -0.028878465884286521 1 0.019762985165843495
-		 0.024476364481018982 -0.0020041730976227039 1 0.02701478088460943 -0.0096254956429399179
-		 -0.0057389192562406523 1 0.016972044881055408 -0.0062030975258223183 0.0087034132136282975
-		 1 0.0035546353501155724 -0.002072173114412748 0.0027610367144521959 1 0.0095235998177999551
-		 0.0051606199544826023 -0.0034564088816754594 1 0.028387393215077751 -0.0098210881010709662
-		 0.0029453472306794175 1 0.023995893295110541 0.026962582199564447 0.0021714526653326799
-		 1 0.013206637628611989 -0.035244081362055278 0.0071975112785463173 1 -0.0024385562126288713
-		 -0.030854430524757129 0.013810421883520146 1 -0.0010999130717759037 -0.0059628538480581634
-		 0.0077546096965858385 1 0.00088843838549333785 0.010692394994796281 -0.014480888980713777
-		 1 0.0043876341879147164 0.0168258903965103 0.014227542563850728 1 0.010819788567147595
-		 -0.0083583620954253909 0.016329875775351433 1 0.0046338626742154377 -0.0021426821315530861
-		 -0.0058356511340521607 1 0.0032399863333914345 0.00039242148846332513 -0.0031563080904486456
-		 1 0.013243461563772247 0.0047215749499005645 -0.011557536409299402 1 0.013985867739907528
-		 0.015422025857178076 -0.015963664773823265 1 0.0026698913605310817 0.017120367700733032
-		 0.020424231632260117 1 -0.00072879757154012609 0.01652772070805112 -0.014665297449709021
-		 1 -0.0018577812744251421 0.0093552551979194775 -0.01165511968017326 1 -0.00047686519414986338
-		 0.0014048869381686419 0.0010614933154788583 1 -0.00090480013674180048 0.00029237247844016297
-		 -0.0019721840500015395 1 -0.0047695685863914268 0.0014949134822476355 -0.0095922340067166878
-		 1 -0.0017212868622798159 -0.0063192481440279002 0.012522076854309838 1 0.00032144246046429681
-		 -0.00077632572257618489 -0.0016304276785944188 1 0.002020994227820351 0.00034321584012486964
-		 -0.0022395801204468362 1 0.0063682655450888045 0.0033874545915677364 -0.011725888945556664
-		 1 -0.00036910752072506103 -0.0078758310065490267 -0.01714280408643935 1 -0.0075339977750196758
-		 0.0019757600900905782 0.013620177368602075 1 -0.0035610695141767433 -0.0031901734784666059
-		 -0.0060525140108727837 1 -0.00051771418090659706 -0.00098629243057240623 -0.001483576792024272
-		 1 -1.7896140842519345e-05 -4.4106559917847253e-07 -5.065272998001799e-05 1 -0.0010952899067676015
-		 0.0006046826543433712 -0.0033074920474840592 1 -5.0727728286733652e-05 6.907507167819059e-05
-		 -0.00016588561372204405 1 -0.00012890449819247721 7.053524481841305e-06 -0.00043121351529028701
-		 1 -0.0001979755666733608 0.00014044306490454736 -0.00059757060159130093 1 -0.001421708887593098
-		 0.0020354242052938627 0.016081682051585167 1 0.0011201279816547096 -0.0082668850282789762
-		 -0.0053438097389036801 1 0.00060914462272187411 -0.003037858745078142 -0.0013838102052037688
-		 1 0 0 0 1 -0 0 0 1 0.00018305245634140863 0.0010172783483543557 -0.00044898238970828355
-		 1 -0.00033706900735395735 0.00077971634396983716 -0.0052961639281232315 1 -0.0022132190216748813
-		 -0.0039763963431914094 -0.0089368221419967135 1 -0.0022320913251747689 -0.00038773393550661886
-		 -0.0074641698305024746 1 -0.003327044544747193 0.0071265251484138132 -0.011814202862298858
-		 1 -0.0016629823303608629 0.0038813394960743514 -0.0071057534861270416 1 -0.00066900025944361405
-		 -0.0015309168944980013 -0.0026076701753592743 1 -0.004786175668462414 0.00042536439483457727
-		 -0.018244651485706871 1 -0.0075031484687362194 0.013537638133967011 -0.021430791279731794
-		 1 -0.0011207036417672529 -0.002786600477700575 0.0013679774522109452 1 -0.0057993088418847203
-		 -0.012640918347820624 0.011976832984963052 1 0.0040668627363431402 -0.018054495123093081
-		 0.01950895120750424 1 0.022366869908405012 -0.0089810064173534241 0.018380930021866977
-		 1 0.01822367459396098 0.014345497422258092 0.022510122573509293 1 0.0091556341222230764
-		 0.02701829525726996 0.015958112242857963 1 0.0056464470022387758 0.018497495692197174
-		 0.0091913003394531127 1 0.00049146898997912396 7.2751140916050986e-05 0.00016432075877008704
-		 1 0.0067073612593505751 -0.0077430136804021409 0.0062123204746021496 1 0.010845795532026014
-		 -0.02591861602667575 0.024932466523335511 1 0.023295285404908574 -0.0089297734214329183
-		 0.036504230569720811 1 0.022512747662651902 0.0088922485194282454 0.022100593375848094
-		 1 0.004842429266515921 0.016456433483985608 0.013915510675904035 1 -0.0045509222641081631
-		 0.011101158579988061 0.0058806856777256153 1 -0.00024193356665448918 0.00051702440076254624
-		 0.0001392381882510713 1 ;
+		 -0.0017624114251133726 1 0 0 0 1 0.00074245250028599156 -0.00062525252654557707 0.0054315159811858509
+		 1 0.00022352150700710618 0.0035129851528542047 -0.00089729408687651605 1 -8.7342967019288611e-05
+		 -0.00016711111742766162 0.0028610491713339254 1 -0.00053784310974654657 0.0037641110379836341
+		 -0.0010916365229367165 1 -3.7193742514210349e-05 0.00017972905442925613 -6.899039745318852e-06
+		 1 0.0039340042094822949 0.0035372021094320222 -0.0028872555722402357 1 0.00011166125603260887
+		 -0.00017493625964321637 3.1104344580635054e-05 1 0.0013375925325134052 0.0012460855953569513
+		 -0.0007451482395166454 1 -0.0087917880951304053 -0.038453769850207743 0.015416470892575709
+		 1 0.00057217977599936126 9.1473097554693012e-05 -0.00028661921977934631 1 -0.0076611828046563302
+		 -0.022418909186449915 -0.0038838932472448663 1 0.0027240211884486248 0.0016078277764540695
+		 -0.00073745435379498074 1 0.021850511819870688 -0.0027734782530761562 0.042640398017908747
+		 1 0.0056133242423399192 0.010023410300377964 -0.033274443491389083 1 0.0046912099481311378
+		 0.0024772627868711442 0.010039840045800228 1 0.0003167792074797943 0.00021296047945651994
+		 2.4222842403942575e-06 1 0.0033337196339822206 0.00016826217664942943 0.024045141872836
+		 1 0.0042112660548616126 0.0010394820802876893 -0.035533978422767593 1 0.014375193100362692
+		 -0.020983177014802828 0.024749530401028511 1 -8.5231964806376241e-05 -3.7941811222191502e-06
+		 0.00014884353611475308 1 -0.00090424435930891358 -0.00088761613052729441 0.0041018526452615434
+		 1 0.023893479946458997 -0.0063644136759711707 0.017214951373856039 1 0.014725998893615727
+		 -0.0020218747899210382 -0.026022907047691581 1 0.0068617161078426076 -5.0484997750165365e-05
+		 0.016824531960580615 1 0.0004667916844346417 4.2531296739046722e-06 5.0815884325791217e-07
+		 1 0.0075946630366866517 -0.00065558456964724243 0.0089876674901265257 1 0.017872865585098357
+		 0.0041431727734718201 -0.032610545676781455 1 0.029068574157465395 -0.016448415826362063
+		 -0.022990528750776982 1 -0.00060290962903644988 -0.00044171238327009315 0.0019019192972401463
+		 1 0 0 0 1 0 0 0 1 -0.0027574502569025624 -0.0058057535266151858 0.0062115200463395285
+		 1 -0.0035452375524839957 -0.0080601289131810323 0.022418815569737321 1 0.0044648542929060448
+		 0.001863670471250794 0.047548529503066171 1 -0.0024275555897140424 -0.00022302305644239734
+		 -0.032659142488889605 1 -0.014677169837592876 0.028249830777008114 0.020057506084526475
+		 1 -0.0061218831483210202 0.010469615416422648 0.011300893173008012 1 -0.0052865400970988309
+		 -0.015287037111225088 0.0034739995190823342 1 -0.0012078161320213414 -0.0047415354860242094
+		 0.00078693482208743218 1 3.0768303638442834e-05 -6.7934876910276642e-05 0.00015946666889033595
+		 1 -1.5307223800582281e-05 5.8870501605973944e-05 5.4622371021090065e-06 1 -0.0012219198119028511
+		 -0.0037791713105923999 -0.0010680196131909246 1 -0.0023278425628203269 0.0061762427065915346
+		 0.0042885745248227155 1 -0.0029769360039648939 0.0069634078247427476 -0.0053910512936832661
+		 1 0.0017516758135944412 -0.0019502216342937259 -0.0044983501538392425 1 0.014922076898683953
+		 -0.0073700565468013332 -0.0053941241677197202 1 0.0084267054801747711 0.009848123147016356
+		 0.0050135099863967527 1 7.6803616053531325e-05 6.8445565709352263e-06 6.8942838024975319e-05
+		 1 0.0092248653065925452 -0.0092235278239876824 0.0056827379829732299 1 0.017336104839916901
+		 -0.0036718412014311265 0.0086007330024089369 1 0.0013629310131776109 -0.0047229652997521849
+		 0.0029991957279378693 1 -0.0004255748177189768 -0.00010083420546554701 -0.00073861976572655707
+		 1 -0.0026274679032063171 7.5592591267656232e-05 0.0081403637259577846 1 -0.00023766047195178305
+		 -0.0029269748216838734 0.01515901625977387 1 0.00021412786878557654 0.00013443334028208066
+		 -0.0011346524453853324 1 0 0 0 1 -0.00091857498609414386 -0.0049680660796557188 -0.0087349697557403336
+		 1 -0.0022363256156003875 0.0012855824212875192 0.0074039497408962054 1 -0.0024820130743561397
+		 0.0081939326409625132 -0.023978191179378779 1 0.0072424128493425608 0.0078299631061972876
+		 -0.028878465884286521 1 0.019762985165843495 0.024476364481018982 -0.0020041730976227039
+		 1 0.02701478088460943 -0.0096254956429399179 -0.0057389192562406523 1 0.016972044881055408
+		 -0.0062030975258223183 0.0087034132136282975 1 0.0035546353501155724 -0.002072173114412748
+		 0.0027610367144521959 1 0.0095235998177999551 0.0051606199544826023 -0.0034564088816754594
+		 1 0.028387393215077751 -0.0098210881010709662 0.0029453472306794175 1 0.023995893295110541
+		 0.026962582199564447 0.0021714526653326799 1 0.013206637628611989 -0.035244081362055278
+		 0.0071975112785463173 1 -0.0024385562126288713 -0.030854430524757129 0.013810421883520146
+		 1 -0.0010999130717759037 -0.0059628538480581634 0.0077546096965858385 1 0.00088843838549333785
+		 0.010692394994796281 -0.014480888980713777 1 0.0043876341879147164 0.0168258903965103
+		 0.014227542563850728 1 0.010819788567147595 -0.0083583620954253909 0.016329875775351433
+		 1 0.0046338626742154377 -0.0021426821315530861 -0.0058356511340521607 1 0.0032399863333914345
+		 0.00039242148846332513 -0.0031563080904486456 1 0.013243461563772247 0.0047215749499005645
+		 -0.011557536409299402 1 0.013985867739907528 0.015422025857178076 -0.015963664773823265
+		 1 0.0026698913605310817 0.017120367700733032 0.020424231632260117 1 -0.00072879757154012609
+		 0.01652772070805112 -0.014665297449709021 1 -0.0018577812744251421 0.0093552551979194775
+		 -0.01165511968017326 1 -0.00047686519414986338 0.0014048869381686419 0.0010614933154788583
+		 1 -0.00090480013674180048 0.00029237247844016297 -0.0019721840500015395 1 -0.0047695685863914268
+		 0.0014949134822476355 -0.0095922340067166878 1 -0.0017212868622798159 -0.0063192481440279002
+		 0.012522076854309838 1 0.00032144246046429681 -0.00077632572257618489 -0.0016304276785944188
+		 1 0.002020994227820351 0.00034321584012486964 -0.0022395801204468362 1 0.0063682655450888045
+		 0.0033874545915677364 -0.011725888945556664 1 -0.00036910752072506103 -0.0078758310065490267
+		 -0.01714280408643935 1 -0.0075339977750196758 0.0019757600900905782 0.013620177368602075
+		 1 -0.0035610695141767433 -0.0031901734784666059 -0.0060525140108727837 1 -0.00051771418090659706
+		 -0.00098629243057240623 -0.001483576792024272 1 -1.7896140842519345e-05 -4.4106559917847253e-07
+		 -5.065272998001799e-05 1 -0.0010952899067676015 0.0006046826543433712 -0.0033074920474840592
+		 1 -5.0727728286733652e-05 6.907507167819059e-05 -0.00016588561372204405 1 -0.00012890449819247721
+		 7.053524481841305e-06 -0.00043121351529028701 1 -0.0001979755666733608 0.00014044306490454736
+		 -0.00059757060159130093 1 -0.001421708887593098 0.0020354242052938627 0.016081682051585167
+		 1 0.0011201279816547096 -0.0082668850282789762 -0.0053438097389036801 1 0.00060914462272187411
+		 -0.003037858745078142 -0.0013838102052037688 1 0 0 0 1 0 0 0 1 0.00018305245634140863
+		 0.0010172783483543557 -0.00044898238970828355 1 -0.00033706900735395735 0.00077971634396983716
+		 -0.0052961639281232315 1 -0.0022132190216748813 -0.0039763963431914094 -0.0089368221419967135
+		 1 -0.0022320913251747689 -0.00038773393550661886 -0.0074641698305024746 1 -0.003327044544747193
+		 0.0071265251484138132 -0.011814202862298858 1 -0.0016629823303608629 0.0038813394960743514
+		 -0.0071057534861270416 1 -0.00066900025944361405 -0.0015309168944980013 -0.0026076701753592743
+		 1 -0.004786175668462414 0.00042536439483457727 -0.018244651485706871 1 -0.0075031484687362194
+		 0.013537638133967011 -0.021430791279731794 1 -0.0011207036417672529 -0.002786600477700575
+		 0.0013679774522109452 1 -0.0057993088418847203 -0.012640918347820624 0.011976832984963052
+		 1 0.0040668627363431402 -0.018054495123093081 0.01950895120750424 1 0.022366869908405012
+		 -0.0089810064173534241 0.018380930021866977 1 0.01822367459396098 0.014345497422258092
+		 0.022510122573509293 1 0.0091556341222230764 0.02701829525726996 0.015958112242857963
+		 1 0.0056464470022387758 0.018497495692197174 0.0091913003394531127 1 0.00049146898997912396
+		 7.2751140916050986e-05 0.00016432075877008704 1 0.0067073612593505751 -0.0077430136804021409
+		 0.0062123204746021496 1 0.010845795532026014 -0.02591861602667575 0.024932466523335511
+		 1 0.023295285404908574 -0.0089297734214329183 0.036504230569720811 1 0.022512747662651902
+		 0.0088922485194282454 0.022100593375848094 1 0.004842429266515921 0.016456433483985608
+		 0.013915510675904035 1 -0.0045509222641081631 0.011101158579988061 0.0058806856777256153
+		 1 -0.00024193356665448918 0.00051702440076254624 0.0001392381882510713 1 ;
 	setAttr ".it[0].itg[0].iti[6000].ict" -type "componentList" 31 "vtx[0]" "vtx[160:161]" "vtx[164:165]" "vtx[168]" "vtx[244]" "vtx[246:255]" "vtx[259:260]" "vtx[265]" "vtx[279:280]" "vtx[285:286]" "vtx[2575:2582]" "vtx[2621:2630]" "vtx[2632:2635]" "vtx[2641:2646]" "vtx[2661:2664]" "vtx[3062:3065]" "vtx[3068:3070]" "vtx[3073:3076]" "vtx[3140:3142]" "vtx[3390:3395]" "vtx[3410:3414]" "vtx[3416:3420]" "vtx[3435:3441]" "vtx[3445:3448]" "vtx[3463:3468]" "vtx[3508:3510]" "vtx[3529:3530]" "vtx[3535:3538]" "vtx[3550:3556]" "vtx[3564:3566]" "vtx[3568:3582]";
 	setAttr ".it[0].itg[0].pdm" 1;
 	setAttr ".it[0].sti" 0;
@@ -3875,53 +4318,56 @@ createNode animCurveTL -n "master_control_translateX";
 	rename -uid "1036FCC6-3E43-6F3F-3CFB-399FB215EB46";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -6.0455291631028487;
+	setAttr -s 6 ".ktv[0:5]"  1 -6.0455291631028487 35 -6.0455291631028487
+		 49 -6.0455291631028487 54 -1.2374959015762252 58 4.5698963766199494 65 11.847797178750902;
 createNode animCurveTL -n "master_control_translateY";
 	rename -uid "23A91388-B248-769F-3375-5D827A077692";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -55.555954694165216;
+	setAttr -s 6 ".ktv[0:5]"  1 -55.555954694165216 35 -55.555954694165216
+		 49 -55.555954694165216 54 -52.555954694165216 58 -55.555954694165216 65 -55.555954694165216;
 createNode animCurveTL -n "master_control_translateZ";
 	rename -uid "CFB5E7EC-B041-EB0C-A2BD-56A17929B620";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 162.96845247958734;
+	setAttr -s 6 ".ktv[0:5]"  1 162.96845247958734 35 162.96845247958734
+		 49 162.96845247958734 54 169.04850837766026 58 176.39231565869761 65 185.59567206050738;
 createNode animCurveTU -n "master_control_visibility";
 	rename -uid "BC7493C0-6249-FCCD-1AEE-178B2CE0BB2D";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 6 ".ktv[0:5]"  1 1 35 1 49 1 54 1 58 1 65 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTA -n "master_control_rotateX";
 	rename -uid "C6A11F1C-C248-3663-5651-D89EFBDAE89D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 35 0 49 0 54 0 58 0 65 0;
 createNode animCurveTA -n "master_control_rotateY";
 	rename -uid "342F64C0-5F43-80B7-C245-C9BCE6CCF5F2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 35 0 49 0 54 -90 58 45 65 45;
 createNode animCurveTA -n "master_control_rotateZ";
 	rename -uid "32DB0F46-F046-165A-45E6-6B862E8E65D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 35 0 49 0 54 0 58 0 65 0;
 createNode animCurveTU -n "master_control_scaleX";
 	rename -uid "87FCD9D2-174E-520E-D468-47A62B94300F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 35 1 49 1 54 1 58 1 65 1;
 createNode animCurveTU -n "master_control_scaleY";
 	rename -uid "9FA179DB-3549-5E2D-E4C5-E6B0585FC9F4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 35 1 49 1 54 1 58 1 65 1;
 createNode animCurveTU -n "master_control_scaleZ";
 	rename -uid "A92E7BD3-ED4F-3C32-D5CF-6D866EE543A2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 35 1 49 1 54 1 58 1 65 1;
 createNode animCurveTU -n "l_arm_ikfk_switch_visibility";
 	rename -uid "CC29AF43-0B4B-0E5B-D729-19B2965CC49D";
 	setAttr ".tan" 9;
@@ -4021,61 +4467,132 @@ createNode animCurveTL -n "r_wrist_ctrl_translateX";
 	rename -uid "D37B6D81-0445-2067-2F7C-059B82D321E3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0.77122294248561651 10 0.37777618826679848
-		 12.5 0.37777618826679848 15 0.013181764960913611 27 0.013181764960913611 31 0.014962243502718131;
+	setAttr -s 9 ".ktv[0:8]"  1 0.77122294248561651 10 0.37777618826679848
+		 12.5 0.37777618826679848 15 0.013181764960913611 27 0.013181764960913611 31 0.014962243502718131
+		 45 0.014962243502718131 49 0.027347083553628981 54 1.894999668600418;
+	setAttr -s 9 ".kit[6:8]"  1 18 18;
+	setAttr -s 9 ".kot[6:8]"  1 18 18;
+	setAttr -s 9 ".kix[6:8]"  0.99948683845087527 0.97604114375125706 
+		1;
+	setAttr -s 9 ".kiy[6:8]"  0.032032167636200821 0.21758604207241342 
+		0;
+	setAttr -s 9 ".kox[6:8]"  0.99948683845087538 0.97604114375125695 
+		1;
+	setAttr -s 9 ".koy[6:8]"  0.032032167636200821 0.21758604207241339 
+		0;
 createNode animCurveTL -n "r_wrist_ctrl_translateY";
 	rename -uid "EE065815-1843-970F-27C6-CCB9B4C75FA8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 3.8732653522106517 10 2.9067162649811635
-		 11.5 2.9067162649811635 15 4.6747209135876133 27 4.6747209135876133 31 2.6354530399125613;
+	setAttr -s 9 ".ktv[0:8]"  1 3.8732653522106517 10 2.9067162649811635
+		 11.5 2.9067162649811635 15 4.6747209135876133 27 4.6747209135876133 31 2.6354530399125613
+		 45 2.6354530399125613 49 2.1581044108769842 54 5.6899396645517193;
+	setAttr -s 9 ".kit[6:8]"  1 18 18;
+	setAttr -s 9 ".kot[6:8]"  1 18 18;
+	setAttr -s 9 ".kix[6:8]"  0.14655773660760302 1 1;
+	setAttr -s 9 ".kiy[6:8]"  -0.98920211779011891 0 0;
+	setAttr -s 9 ".kox[6:8]"  0.14655773660760305 1 1;
+	setAttr -s 9 ".koy[6:8]"  -0.98920211779011902 0 0;
 createNode animCurveTL -n "r_wrist_ctrl_translateZ";
 	rename -uid "5B598E08-634C-1F77-98EC-A0BE5ABA28A0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0.68216983758401284 10 1.5300405171183797
-		 12.5 1.5300405171183797 15 1.5300405171183797 27 1.5300405171183797 31 1.3590367321920067;
+	setAttr -s 9 ".ktv[0:8]"  1 0.68216983758401284 10 1.5300405171183797
+		 12.5 1.5300405171183797 15 1.5300405171183797 27 1.5300405171183797 31 1.3590367321920067
+		 45 1.3590367321920067 49 2.6280829128838716 54 0.85344241725190872;
+	setAttr -s 9 ".kit[6:8]"  1 18 18;
+	setAttr -s 9 ".kot[6:8]"  1 18 18;
+	setAttr -s 9 ".kix[6:8]"  1 1 1;
+	setAttr -s 9 ".kiy[6:8]"  0 0 0;
+	setAttr -s 9 ".kox[6:8]"  1 1 1;
+	setAttr -s 9 ".koy[6:8]"  0 0 0;
 createNode animCurveTU -n "r_wrist_ctrl_visibility";
 	rename -uid "D5715FF4-264C-8065-2947-E1972D28ACE1";
-	setAttr ".tan" 9;
+	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12.5 1 15 1 27 1 31 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 10 1 12.5 1 15 1 27 1 31 1 45 1 49 1
+		 54 1;
+	setAttr -s 9 ".kit[0:8]"  9 9 9 9 9 9 1 9 
+		9;
+	setAttr -s 9 ".kix[6:8]"  1 1 1;
+	setAttr -s 9 ".kiy[6:8]"  0 0 0;
 createNode animCurveTA -n "r_wrist_ctrl_rotateX";
 	rename -uid "36F1FCAE-284E-9FB3-8E01-3383705D9088";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 12.455127181820767 10 8.3493419338477786
-		 11.5 8.3493419338477786 15 8.3493419338477786 27 8.3493419338477786 31 8.3493419338477786;
+	setAttr -s 9 ".ktv[0:8]"  1 12.455127181820769 10 8.3493419338477786
+		 11.5 8.3493419338477786 15 8.3493419338477786 27 8.3493419338477786 31 8.3493419338477786
+		 45 8.3493419338477786 49 85.873480018284681 54 -155.43920175470899;
+	setAttr -s 9 ".kit[6:8]"  1 18 18;
+	setAttr -s 9 ".kot[6:8]"  1 18 18;
+	setAttr -s 9 ".kix[6:8]"  1 1 1;
+	setAttr -s 9 ".kiy[6:8]"  0 0 0;
+	setAttr -s 9 ".kox[6:8]"  1 1 1;
+	setAttr -s 9 ".koy[6:8]"  0 0 0;
 createNode animCurveTA -n "r_wrist_ctrl_rotateY";
 	rename -uid "5BC8ECF8-A647-6048-3119-AE9462CDC52A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 179.7826531391926 10 186.41048672405736
-		 11.5 186.41048672405736 15 186.41048672405736 27 186.41048672405736 31 186.41048672405736;
+	setAttr -s 9 ".ktv[0:8]"  1 179.78265313919263 10 186.41048672405736
+		 11.5 186.41048672405736 15 186.41048672405736 27 186.41048672405736 31 186.41048672405736
+		 45 186.41048672405736 49 143.04831878937443 54 278.94982690178898;
+	setAttr -s 9 ".kit[6:8]"  1 18 18;
+	setAttr -s 9 ".kot[6:8]"  1 18 18;
+	setAttr -s 9 ".kix[6:8]"  1 1 1;
+	setAttr -s 9 ".kiy[6:8]"  0 0 0;
+	setAttr -s 9 ".kox[6:8]"  1 1 1;
+	setAttr -s 9 ".koy[6:8]"  0 0 0;
 createNode animCurveTA -n "r_wrist_ctrl_rotateZ";
 	rename -uid "079D385D-2740-6A18-33A0-C0AC773C43D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 89.016064250299166 10 147.20104498270589
-		 11.5 147.20104498270589 15 147.20104498270589 27 147.20104498270589 31 147.20104498270589;
-	setAttr -s 6 ".kit[0:5]"  2 2 18 18 18 18;
-	setAttr -s 6 ".kot[0:5]"  2 2 18 18 18 18;
+	setAttr -s 9 ".ktv[0:8]"  1 89.016064250299166 10 147.20104498270589
+		 11.5 147.20104498270589 15 147.20104498270589 27 147.20104498270589 31 147.20104498270589
+		 45 147.20104498270589 49 176.72037835256708 54 278.68388787881764;
+	setAttr -s 9 ".kit[0:8]"  2 2 18 18 18 18 1 18 
+		18;
+	setAttr -s 9 ".kot[0:8]"  2 2 18 18 18 18 1 18 
+		18;
+	setAttr -s 9 ".kix[6:8]"  1 0.16127322638105046 1;
+	setAttr -s 9 ".kiy[6:8]"  0 0.9869097965126532 0;
+	setAttr -s 9 ".kox[6:8]"  1 0.16127322638105043 1;
+	setAttr -s 9 ".koy[6:8]"  0 0.98690979651265309 0;
 createNode animCurveTU -n "r_wrist_ctrl_scaleX";
 	rename -uid "D222F4DF-F44A-4C1F-DC28-6F8EB785B417";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12.5 1 15 1 27 1 31 1;
+	setAttr -s 9 ".ktv[0:8]"  1 1 10 1 12.5 1 15 1 27 1 31 1 45 1 49 1
+		 54 1;
+	setAttr -s 9 ".kit[6:8]"  1 18 18;
+	setAttr -s 9 ".kot[6:8]"  1 18 18;
+	setAttr -s 9 ".kix[6:8]"  1 1 1;
+	setAttr -s 9 ".kiy[6:8]"  0 0 0;
+	setAttr -s 9 ".kox[6:8]"  1 1 1;
+	setAttr -s 9 ".koy[6:8]"  0 0 0;
 createNode animCurveTU -n "r_wrist_ctrl_scaleY";
 	rename -uid "4418A977-EF41-2FFF-B996-4F9480B68DDB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12.5 1 15 1 27 1 31 1;
+	setAttr -s 9 ".ktv[0:8]"  1 1 10 1 12.5 1 15 1 27 1 31 1 45 1 49 1
+		 54 1;
+	setAttr -s 9 ".kit[6:8]"  1 18 18;
+	setAttr -s 9 ".kot[6:8]"  1 18 18;
+	setAttr -s 9 ".kix[6:8]"  1 1 1;
+	setAttr -s 9 ".kiy[6:8]"  0 0 0;
+	setAttr -s 9 ".kox[6:8]"  1 1 1;
+	setAttr -s 9 ".koy[6:8]"  0 0 0;
 createNode animCurveTU -n "r_wrist_ctrl_scaleZ";
 	rename -uid "7A63396C-9E4F-D952-35B1-64A7AEC7C0C9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12.5 1 15 1 27 1 31 1;
+	setAttr -s 9 ".ktv[0:8]"  1 1 10 1 12.5 1 15 1 27 1 31 1 45 1 49 1
+		 54 1;
+	setAttr -s 9 ".kit[6:8]"  1 18 18;
+	setAttr -s 9 ".kot[6:8]"  1 18 18;
+	setAttr -s 9 ".kix[6:8]"  1 1 1;
+	setAttr -s 9 ".kiy[6:8]"  0 0 0;
+	setAttr -s 9 ".kox[6:8]"  1 1 1;
+	setAttr -s 9 ".koy[6:8]"  0 0 0;
 createNode animCurveTL -n "r_shoulder_ctrl1_translateX";
 	rename -uid "CF519830-EB40-73A9-39B4-44B5051E46D7";
 	setAttr ".tan" 18;
@@ -4131,425 +4648,432 @@ createNode animCurveTA -n "r_pinky_2_rotateX";
 	rename -uid "EEE84635-3E49-97CD-3C5A-B1A78B02F977";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11 0 11.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11 0 11.5 0 35 0 49 0;
 createNode animCurveTA -n "r_pinky_2_rotateY";
 	rename -uid "ACF330B5-BF42-D690-1784-609174843538";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11 0 11.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11 0 11.5 0 35 0 49 0;
 createNode animCurveTA -n "r_pinky_2_rotateZ";
 	rename -uid "F6610483-2B42-BB4B-4A6F-03B9840F077B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11 0 11.5 77.62526662341881;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11 0 11.5 77.62526662341881 35 77.62526662341881
+		 49 0;
 createNode animCurveTU -n "r_pinky_2_visibility";
 	rename -uid "0153103A-2143-B3C3-8422-94A95A8A71C4";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11 1 11.5 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 11 1 11.5 1 35 1 49 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTL -n "r_pinky_2_translateX";
 	rename -uid "C926709B-D741-AE24-21EB-B7816A455F11";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11 0 11.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11 0 11.5 0 35 0 49 0;
 createNode animCurveTL -n "r_pinky_2_translateY";
 	rename -uid "F20D4DBB-8046-AE89-F059-8FB03CD203E2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11 0 11.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11 0 11.5 0 35 0 49 0;
 createNode animCurveTL -n "r_pinky_2_translateZ";
 	rename -uid "D0C6DFDA-9B42-245D-8E16-1B9E3D159DB8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11 0 11.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11 0 11.5 0 35 0 49 0;
 createNode animCurveTU -n "r_pinky_2_scaleX";
 	rename -uid "7372813D-6B44-0E06-6637-0187EE5AA639";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11 1 11.5 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 11 1 11.5 1 35 1 49 1;
 createNode animCurveTU -n "r_pinky_2_scaleY";
 	rename -uid "6720E10F-7A4D-E510-30A7-CD97B1085BAB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11 1 11.5 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 11 1 11.5 1 35 1 49 1;
 createNode animCurveTU -n "r_pinky_2_scaleZ";
 	rename -uid "FF2B362A-5340-8CCB-B65B-8CA9A0B90AEC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11 1 11.5 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 11 1 11.5 1 35 1 49 1;
 createNode animCurveTA -n "r_pinky_rotateX";
 	rename -uid "FEE0BBD9-3446-3B58-AF4A-5FAD4DD74CCA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 10.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 10.5 0 35 0 45 0 49 0;
 createNode animCurveTA -n "r_pinky_rotateY";
 	rename -uid "0CF11E36-1A4A-995A-CB75-529B2419C142";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 10.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 10.5 0 35 0 45 0 49 0;
 createNode animCurveTA -n "r_pinky_rotateZ";
 	rename -uid "4A2E4F03-1242-E5F8-E2A0-8ABCF28E404F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 10.5 50.759268469726507;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 10.5 50.759268469726507 35 50.759268469726507
+		 45 50.759268469726507 49 0;
 createNode animCurveTU -n "r_pinky_visibility";
 	rename -uid "FC8AC6EC-AF41-4364-BB9F-1BA90EBE7353";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 10.5 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 10.5 1 35 1 45 1 49 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTL -n "r_pinky_translateX";
 	rename -uid "5436486A-854C-1D3C-2F2C-E08BD938C96B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 10.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 10.5 0 35 0 45 0 49 0;
 createNode animCurveTL -n "r_pinky_translateY";
 	rename -uid "286120FC-6E4A-0620-F77A-85AA23D959C4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 10.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 10.5 0 35 0 45 0 49 0;
 createNode animCurveTL -n "r_pinky_translateZ";
 	rename -uid "B400F754-7F49-9070-5DF0-D8A00104FC38";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 10.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 10.5 0 35 0 45 0 49 0;
 createNode animCurveTU -n "r_pinky_scaleX";
 	rename -uid "798A1951-A140-A22C-AF0B-489A9926D8B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 10.5 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 10.5 1 35 1 45 1 49 1;
 createNode animCurveTU -n "r_pinky_scaleY";
 	rename -uid "2C7A6144-974F-0169-975B-A983CFCCAD09";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 10.5 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 10.5 1 35 1 45 1 49 1;
 createNode animCurveTU -n "r_pinky_scaleZ";
 	rename -uid "58C700AA-D74E-CFB5-1244-A78BE014E7D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 10.5 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 10.5 1 35 1 45 1 49 1;
 createNode animCurveTU -n "r_pinky_3_visibility";
 	rename -uid "45FBE79A-9F4D-09DA-D34D-5F8CD2033AA3";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11.5 1 12 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 11.5 1 12 1 35 1 49 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTL -n "r_pinky_3_translateX";
 	rename -uid "A3F81C70-5C45-B896-6ADF-228B5F368F57";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11.5 0 12 0 35 0 49 0;
 createNode animCurveTL -n "r_pinky_3_translateY";
 	rename -uid "D4E5EB2B-1643-4E0C-4B4C-77A5B9C513D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11.5 0 12 0 35 0 49 0;
 createNode animCurveTL -n "r_pinky_3_translateZ";
 	rename -uid "E45B7DFB-F04B-2968-E795-89829A34649F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11.5 0 12 0 35 0 49 0;
 createNode animCurveTA -n "r_pinky_3_rotateX";
 	rename -uid "9536F7F3-3B4F-2183-13D0-93A7F19766E4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11.5 0 12 0 35 0 49 0;
 createNode animCurveTA -n "r_pinky_3_rotateY";
 	rename -uid "4CEA8C86-EA40-001A-8222-1BBCCF2CE6D8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11.5 0 12 0 35 0 49 0;
 createNode animCurveTA -n "r_pinky_3_rotateZ";
 	rename -uid "D30A2E2A-A640-69DD-8F8B-59A70B3848D7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 14.870325713444352 12 41.828990236757612;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 11.5 14.870325713444352 12 41.828990236757612
+		 35 41.828990236757612 49 0;
 createNode animCurveTU -n "r_pinky_3_scaleX";
 	rename -uid "3EE0E725-DD48-C24C-6EE5-A194FBA5A143";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11.5 1 12 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 11.5 1 12 1 35 1 49 1;
 createNode animCurveTU -n "r_pinky_3_scaleY";
 	rename -uid "6E0FB915-E44B-1AA8-0B95-DDB9C1EB9F77";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11.5 1 12 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 11.5 1 12 1 35 1 49 1;
 createNode animCurveTU -n "r_pinky_3_scaleZ";
 	rename -uid "21B58A96-3D4F-6B3D-67FD-218963F8AC40";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11.5 1 12 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 11.5 1 12 1 35 1 49 1;
 createNode animCurveTU -n "r_ring_visibility";
 	rename -uid "950C3218-7543-3F6A-698C-CEA48DBE0130";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 11 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 11 1 45 1 49 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
 createNode animCurveTL -n "r_ring_translateX";
 	rename -uid "75CB8696-8549-80C9-0D4B-17A98F70BD66";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 11 0;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11 0 45 0 49 0;
+	setAttr -s 5 ".kit[2:4]"  1 18 18;
+	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
 createNode animCurveTL -n "r_ring_translateY";
 	rename -uid "2E40E951-FC46-5FE2-94D2-E48EBED4D45C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 11 0;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11 0 45 0 49 0;
+	setAttr -s 5 ".kit[2:4]"  1 18 18;
+	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
 createNode animCurveTL -n "r_ring_translateZ";
 	rename -uid "95CA84B7-2E47-C583-58DC-E7A49C9C3F04";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 11 0;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11 0 45 0 49 0;
+	setAttr -s 5 ".kit[2:4]"  1 18 18;
+	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
 createNode animCurveTA -n "r_ring_rotateX";
 	rename -uid "5B3B3EE2-594C-F3A6-BF28-7EBA51427FAC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 11 12.258124013461005;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11 12.258124013461005 45 12.258124013461005
+		 49 0;
+	setAttr -s 5 ".kit[2:4]"  1 18 18;
+	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
 createNode animCurveTA -n "r_ring_rotateY";
 	rename -uid "04628C91-A248-0488-DADD-239398805882";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 11 0;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11 0 45 0 49 0;
+	setAttr -s 5 ".kit[2:4]"  1 18 18;
+	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
 createNode animCurveTA -n "r_ring_rotateZ";
 	rename -uid "1690D397-6C40-4BD1-8B86-69B840AF2E27";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 11 50.759268469726543;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11 50.759268469726543 45 50.759268469726543
+		 49 0;
+	setAttr -s 5 ".kit[2:4]"  1 18 18;
+	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
 createNode animCurveTU -n "r_ring_scaleX";
 	rename -uid "E37EF808-E14F-CD14-FF3B-B7977EE03B09";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 11 1;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 11 1 45 1 49 1;
+	setAttr -s 5 ".kit[2:4]"  1 18 18;
+	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
 createNode animCurveTU -n "r_ring_scaleY";
 	rename -uid "79BE5697-634E-F747-0687-B8BAEFCA0340";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 11 1;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 11 1 45 1 49 1;
+	setAttr -s 5 ".kit[2:4]"  1 18 18;
+	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
 createNode animCurveTU -n "r_ring_scaleZ";
 	rename -uid "E6133507-EF44-F23C-86D3-CCB54EDD6038";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 11 1;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 11 1 45 1 49 1;
+	setAttr -s 5 ".kit[2:4]"  1 18 18;
+	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".kix[2:4]"  1 1 1;
+	setAttr -s 5 ".kiy[2:4]"  0 0 0;
+	setAttr -s 5 ".kox[2:4]"  1 1 1;
+	setAttr -s 5 ".koy[2:4]"  0 0 0;
 createNode animCurveTU -n "r_ring_2_visibility";
 	rename -uid "A469642D-F14A-3B82-610F-DEA9E46E739F";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 10 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 49 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "r_ring_2_translateX";
 	rename -uid "84A504BC-214B-5B20-9F25-FFBCCD16A5B6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 49 0;
 createNode animCurveTL -n "r_ring_2_translateY";
 	rename -uid "2E961F75-4E4A-4ED8-5F89-D5A915EA8219";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 49 0;
 createNode animCurveTL -n "r_ring_2_translateZ";
 	rename -uid "2C85C7C0-C74B-06C9-E771-448D2D7BBDE5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 49 0;
 createNode animCurveTA -n "r_ring_2_rotateX";
 	rename -uid "FCAF52A3-194E-C3E0-6331-F4AD5CCE8DCF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 49 0;
 createNode animCurveTA -n "r_ring_2_rotateY";
 	rename -uid "06A3A909-F240-8B78-1CC0-5293E0109B21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 10 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 49 0;
 createNode animCurveTA -n "r_ring_2_rotateZ";
 	rename -uid "D4B96DF6-3947-F869-8E12-25A1242565AD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 11.5 77.62526662341881;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 77.62526662341881 49 0;
+	setAttr -s 4 ".kit[2:3]"  1 18;
+	setAttr -s 4 ".kot[2:3]"  1 18;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 createNode animCurveTU -n "r_ring_2_scaleX";
 	rename -uid "C2241064-8443-C864-5ABE-3189E630100D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 10 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 49 1;
 createNode animCurveTU -n "r_ring_2_scaleY";
 	rename -uid "17241604-6B48-FB7C-3BB6-25868E064606";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 10 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 49 1;
 createNode animCurveTU -n "r_ring_2_scaleZ";
 	rename -uid "639EBF55-8446-BF81-4B5C-E698DA2AD613";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 1 10 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 49 1;
 createNode animCurveTU -n "r_ring_3_visibility";
 	rename -uid "F8CE5263-BB4B-193A-6715-42BB814566AC";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 12.5 1;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12.5 1 49 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTL -n "r_ring_3_translateX";
 	rename -uid "E535909F-1144-3F80-BA90-7EB2C106F009";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 12.5 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 49 0;
 createNode animCurveTL -n "r_ring_3_translateY";
 	rename -uid "2CF4814A-F649-844C-C20C-DE88A39B1324";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 12.5 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 49 0;
 createNode animCurveTL -n "r_ring_3_translateZ";
 	rename -uid "25A770B9-F948-8BFB-6C70-2397145025FA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 12.5 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 49 0;
 createNode animCurveTA -n "r_ring_3_rotateX";
 	rename -uid "47952FD1-0045-DA98-EDA6-F190C3F5040A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 12.5 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 49 0;
 createNode animCurveTA -n "r_ring_3_rotateY";
 	rename -uid "C8AAFBC0-8D4E-F9A3-2217-D282BB023B2D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 12.5 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 49 0;
 createNode animCurveTA -n "r_ring_3_rotateZ";
 	rename -uid "76DBB461-C946-8853-F25E-6396E91B90D0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12 14.870325713444352 12.5 87.286550783279168;
-	setAttr -s 4 ".kit[3]"  1;
-	setAttr -s 4 ".kot[2:3]"  1 18;
-	setAttr -s 4 ".kix[3]"  1;
-	setAttr -s 4 ".kiy[3]"  0;
-	setAttr -s 4 ".kox[2:3]"  0.080014038253500411 1;
-	setAttr -s 4 ".koy[2:3]"  0.99679373677926342 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 12 14.870325713444352 12.5 87.286550783279168
+		 49 0;
+	setAttr -s 5 ".kit[3:4]"  1 18;
+	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".kix[3:4]"  1 1;
+	setAttr -s 5 ".kiy[3:4]"  0 0;
+	setAttr -s 5 ".kox[2:4]"  0.080014038253500411 1 1;
+	setAttr -s 5 ".koy[2:4]"  0.99679373677926342 0 0;
 createNode animCurveTU -n "r_ring_3_scaleX";
 	rename -uid "B6089515-D44B-4016-6852-2D8DFA0827B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 12.5 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12.5 1 49 1;
 createNode animCurveTU -n "r_ring_3_scaleY";
 	rename -uid "7ADB3E98-CE47-09A2-E99C-899E185962CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 12.5 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12.5 1 49 1;
 createNode animCurveTU -n "r_ring_3_scaleZ";
 	rename -uid "D4DB8E27-F34D-A58E-5EF1-168390FDA199";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 12.5 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12.5 1 49 1;
 createNode animCurveTU -n "r_middle_visibility";
 	rename -uid "F7572592-FF4E-381C-2C51-5099EC91DB85";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11.5 1 12 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 11.5 1 12 1 45 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
 createNode animCurveTL -n "r_middle_translateX";
 	rename -uid "4FC6B7B6-7644-4E48-54C0-2E960F498E30";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11.5 0 12 0 45 0;
 createNode animCurveTL -n "r_middle_translateY";
 	rename -uid "5E3BA156-1A44-8CD6-2A31-6F96E9EE320B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11.5 0 12 0 45 0;
 createNode animCurveTL -n "r_middle_translateZ";
 	rename -uid "8AC6E9D4-4D41-855B-BCE1-4DA2027A3F62";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11.5 0 12 0 45 0;
 createNode animCurveTA -n "r_middle_rotateX";
 	rename -uid "3D088677-C64C-3536-AE6F-ADAB535B13FE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 17.442667866224674;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11.5 0 12 17.442667866224674 45 17.442667866224674;
 createNode animCurveTA -n "r_middle_rotateY";
 	rename -uid "D5E83EFC-5249-B49F-9C1E-F7A5D233F06B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 -1.590277340731758e-15;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11.5 0 12 -1.590277340731758e-15
+		 45 0;
 createNode animCurveTA -n "r_middle_rotateZ";
 	rename -uid "9A8968B3-E34B-1F24-DB92-13A0053524CE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 11.5 0 12 81.456642917547541;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 11.5 0 12 81.456642917547541 45 81.456642917547541;
 createNode animCurveTU -n "r_middle_scaleX";
 	rename -uid "477FF0A5-C143-0EE7-376E-1089B9294847";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11.5 1 12 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 11.5 1 12 1 45 1;
 createNode animCurveTU -n "r_middle_scaleY";
 	rename -uid "D8FAAEBE-9B46-9167-A1F8-609F05D77F82";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11.5 1 12 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 11.5 1 12 1 45 1;
 createNode animCurveTU -n "r_middle_scaleZ";
 	rename -uid "94B2CAD0-D641-A842-F2D6-3DA00EBA96DE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 11.5 1 12 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 11.5 1 12 1 45 1;
 createNode animCurveTU -n "r_middle_2_visibility";
 	rename -uid "42E1A17A-B741-6FB5-AAC2-CF8BEB27FB82";
 	setAttr ".tan" 9;
@@ -4605,104 +5129,107 @@ createNode animCurveTU -n "r_middle_3_visibility";
 	rename -uid "1487DB99-7841-D7E9-E953-48BEE8C5C00C";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12.5 1 13 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 12.5 1 13 1 49 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
 createNode animCurveTL -n "r_middle_3_translateX";
 	rename -uid "3DA852D9-A247-F0DC-D72E-CF909D11FA76";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 13 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 12.5 0 13 0 49 0;
 createNode animCurveTL -n "r_middle_3_translateY";
 	rename -uid "64DE0913-1644-FD45-7985-B9B9106C1283";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 13 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 12.5 0 13 0 49 0;
 createNode animCurveTL -n "r_middle_3_translateZ";
 	rename -uid "11E850D0-6B4A-65B6-E4DF-C4A46DD07824";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 13 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 12.5 0 13 0 49 0;
 createNode animCurveTA -n "r_middle_3_rotateX";
 	rename -uid "ADE92A74-DB4D-A9B0-4269-ADA9F1C67026";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 13 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 12.5 0 13 0 49 0;
 createNode animCurveTA -n "r_middle_3_rotateY";
 	rename -uid "240C12CC-0D4C-5363-8549-F9822BB875A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 13 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 12.5 0 13 0 49 0;
 createNode animCurveTA -n "r_middle_3_rotateZ";
 	rename -uid "B29BA10C-AA46-B78B-D818-30AB4DB88DAE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12.5 0 13 92.793754664704636;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 12.5 0 13 92.793754664704636 49 0;
 createNode animCurveTU -n "r_middle_3_scaleX";
 	rename -uid "49A55AE2-A247-47E6-8B78-BAB5A126CC7C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12.5 1 13 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 12.5 1 13 1 49 1;
 createNode animCurveTU -n "r_middle_3_scaleY";
 	rename -uid "64722773-2A4C-B31C-B13A-07A9A6363B0E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12.5 1 13 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 12.5 1 13 1 49 1;
 createNode animCurveTU -n "r_middle_3_scaleZ";
 	rename -uid "C5F95269-1147-C7AA-5B36-3399AED07801";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12.5 1 13 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 12.5 1 13 1 49 1;
 createNode animCurveTU -n "r_index_visibility";
 	rename -uid "1C6EAFFC-204C-D4F3-8348-AFA2680C0DFD";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12 1 12.5 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12 1 12.5 1 45 1 49 1;
+	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
 createNode animCurveTL -n "r_index_translateX";
 	rename -uid "374C8AFE-A04C-F28C-1BB1-BABF0E2D3406";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12 0 12.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 12.5 0 45 0 49 0;
 createNode animCurveTL -n "r_index_translateY";
 	rename -uid "6AA16B25-3B4F-5F16-4D1A-C18DF5648C59";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12 0 12.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 12.5 0 45 0 49 0;
 createNode animCurveTL -n "r_index_translateZ";
 	rename -uid "C9001FF4-CC4C-A15D-CA7B-CB9B860E1AC6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12 0 12.5 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 12.5 0 45 0 49 0;
 createNode animCurveTA -n "r_index_rotateX";
 	rename -uid "14DFA979-9941-0DC0-4617-09BE3ECE4221";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12 0 12.5 34.197145800706814;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 12.5 34.197145800706814 45 34.197145800706814
+		 49 0;
 createNode animCurveTA -n "r_index_rotateY";
 	rename -uid "504C9883-3F4B-097A-91CA-9CA55E5D3D54";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12 0 12.5 -12.600948598006037;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 12.5 -12.600948598006037 45 -12.600948598006037
+		 49 0;
 createNode animCurveTA -n "r_index_rotateZ";
 	rename -uid "FCD0EE7A-184D-1451-F384-DB845A0C2291";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 12 0 12.5 84.120971427470664;
+	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 12.5 84.120971427470664 45 84.120971427470664
+		 49 0;
 createNode animCurveTU -n "r_index_scaleX";
 	rename -uid "10E4F989-3843-F5D0-E92E-56AD39867C26";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12 1 12.5 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12 1 12.5 1 45 1 49 1;
 createNode animCurveTU -n "r_index_scaleY";
 	rename -uid "7E8914EF-0140-589D-0CFB-72A8C7BE4DA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12 1 12.5 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12 1 12.5 1 45 1 49 1;
 createNode animCurveTU -n "r_index_scaleZ";
 	rename -uid "32AAE6D1-4A45-3D1F-D25B-CCA699F6CFFF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 12 1 12.5 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12 1 12.5 1 45 1 49 1;
 createNode animCurveTU -n "r_index_2_visibility";
 	rename -uid "617C2772-A24E-0F65-D30C-D99119FE148A";
 	setAttr ".tan" 9;
@@ -4758,53 +5285,53 @@ createNode animCurveTU -n "r_index_3_visibility";
 	rename -uid "E9B8B106-5546-1577-7BF0-C684C6D823E6";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 13 1 13.5 1;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 13 1 13.5 1 49 1;
+	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
 createNode animCurveTL -n "r_index_3_translateX";
 	rename -uid "8CA9E141-DC4B-E062-D8E1-4B8608052F1E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 13 0 13.5 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 13 0 13.5 0 49 0;
 createNode animCurveTL -n "r_index_3_translateY";
 	rename -uid "2DC36E2A-2B4F-F7D8-F710-BAAA57062B55";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 13 0 13.5 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 13 0 13.5 0 49 0;
 createNode animCurveTL -n "r_index_3_translateZ";
 	rename -uid "336B5EF6-724D-6A9C-26E1-888E5EBD0AB2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 13 0 13.5 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 13 0 13.5 0 49 0;
 createNode animCurveTA -n "r_index_3_rotateX";
 	rename -uid "283A68E3-E542-9DBA-924A-A4B058A1382A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 13 0 13.5 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 13 0 13.5 0 49 0;
 createNode animCurveTA -n "r_index_3_rotateY";
 	rename -uid "3F6A91F9-8640-EC5B-FED9-4EABFB3C0B18";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 13 0 13.5 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 13 0 13.5 0 49 0;
 createNode animCurveTA -n "r_index_3_rotateZ";
 	rename -uid "418C2B04-C444-71E9-3A17-D09C759787EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 10 0 13 0 13.5 83.890154436082454;
+	setAttr -s 5 ".ktv[0:4]"  1 0 10 0 13 0 13.5 83.890154436082454 49 0;
 createNode animCurveTU -n "r_index_3_scaleX";
 	rename -uid "893FA24D-524A-47FB-F38C-3991EF432836";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 13 1 13.5 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 13 1 13.5 1 49 1;
 createNode animCurveTU -n "r_index_3_scaleY";
 	rename -uid "32C2E8CC-5642-9DCA-8DB9-F0BF5679E0F5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 13 1 13.5 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 13 1 13.5 1 49 1;
 createNode animCurveTU -n "r_index_3_scaleZ";
 	rename -uid "762084F6-2E46-11AC-9A6B-34921A76D0C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 10 1 13 1 13.5 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 10 1 13 1 13.5 1 49 1;
 createNode animCurveTU -n "r_thumb_visibility";
 	rename -uid "9CBF2B5C-D345-9A2F-2A7E-56A28AECB0B3";
 	setAttr ".tan" 9;
@@ -4911,53 +5438,119 @@ createNode animCurveTL -n "l_wrist_ctrl_translateX";
 	rename -uid "B2AE5129-4E4A-5F09-7D93-2892ECDF87AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.087154398460771887;
+	setAttr -s 5 ".ktv[0:4]"  1 -0.087154398460771887 45 -0.087154398460771887
+		 49 -0.74954238048217248 50 0.89334964974583064 54 0.89334964974583064;
+	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTL -n "l_wrist_ctrl_translateY";
 	rename -uid "8358C6F6-D04A-92B3-615F-718E8D1A7A04";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.26062557889849813;
+	setAttr -s 5 ".ktv[0:4]"  1 -0.26062557889849813 45 -0.26062557889849813
+		 49 2.2019908124098229 50 4.3942379298641239 54 4.3942379298641239;
+	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 0.044711298014083758 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0.99899994986481133 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 0.044711298014083758 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0.99899994986481133 0 0;
 createNode animCurveTL -n "l_wrist_ctrl_translateZ";
 	rename -uid "FEA55FAA-FF42-B13C-4305-4199B7223668";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.48723033987326403;
+	setAttr -s 5 ".ktv[0:4]"  1 -0.48723033987326403 45 -0.48723033987326403
+		 49 2.7429399926905664 50 1.212039866975761 54 1.212039866975761;
+	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTU -n "l_wrist_ctrl_visibility";
 	rename -uid "156B6E71-754D-DE4A-7FE7-02938BDA3D40";
-	setAttr ".tan" 9;
+	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 5 ".ktv[0:4]"  1 1 45 1 49 1 50 1 54 1;
+	setAttr -s 5 ".kit[0:4]"  9 1 9 9 9;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
 createNode animCurveTA -n "l_wrist_ctrl_rotateX";
 	rename -uid "27FAFC9A-F646-5B4C-7F78-D79062BE9649";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 45 0 49 -57.134784543010653 50 -64.674869295092336
+		 54 -126.53401706738534;
+	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 0.18149814528222796 0.16951021874287811 
+		1;
+	setAttr -s 5 ".kiy[1:4]"  0 -0.98339128695505096 -0.98552842969735865 
+		0;
+	setAttr -s 5 ".kox[1:4]"  1 0.18149814528222796 0.16951021874287811 
+		1;
+	setAttr -s 5 ".koy[1:4]"  0 -0.98339128695505096 -0.98552842969735865 
+		0;
 createNode animCurveTA -n "l_wrist_ctrl_rotateY";
 	rename -uid "85B8B655-3747-E5F3-D24E-1EA00A6EEDE2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 45 0 49 -38.285652709215455 50 -5.2578005942792903
+		 54 25.203723268151773;
+	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 0.18477245676926535 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0.98278132828185638 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 0.18477245676926535 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0.98278132828185638 0;
 createNode animCurveTA -n "l_wrist_ctrl_rotateZ";
 	rename -uid "4648D0C5-124D-66F8-9FB4-1085206360B0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 45 0 49 53.219949100272174 50 72.552679352726585
+		 54 -12.327620075868792;
+	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 0.16234104762482343 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0.98673470814402542 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 0.1623410476248234 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0.98673470814402531 0 0;
 createNode animCurveTU -n "l_wrist_ctrl_scaleX";
 	rename -uid "3358AB16-E348-D641-6535-56B44B9FCA0A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 45 1 49 1 50 1 54 1;
+	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTU -n "l_wrist_ctrl_scaleY";
 	rename -uid "74D085C7-C741-CF2D-1C8D-52AE524E88F5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 45 1 49 1 50 1 54 1;
+	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTU -n "l_wrist_ctrl_scaleZ";
 	rename -uid "90316BC9-C849-2332-427D-08BF4AC5F03D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 45 1 49 1 50 1 54 1;
+	setAttr -s 5 ".kit[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 18 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTL -n "shoulder_ctrl_translateX";
 	rename -uid "E206D8B1-734C-8BBA-B857-379E07ACF991";
 	setAttr ".tan" 18;
@@ -4983,7 +5576,7 @@ createNode animCurveTA -n "shoulder_ctrl_rotateX";
 	rename -uid "76A562AD-A84A-DFE0-C17A-29AFF879BE99";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 9 0 11 5.0782090199453513 14 -5.6618379493074347
+	setAttr -s 5 ".ktv[0:4]"  1 0 9 0 11 5.0782090199453522 14 -5.6618379493074347
 		 20 -4.79335084080288;
 createNode animCurveTA -n "shoulder_ctrl_rotateY";
 	rename -uid "9D42F15B-B74B-08EA-49BB-62A95C06A7DA";
@@ -5014,54 +5607,57 @@ createNode animCurveTU -n "neck_ctrl_visibility";
 	rename -uid "108FC9F5-8940-9708-F576-6D9DCC4AD6FD";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 1 10 1 12 1 27 1 29 1 30 1 33 1;
-	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 10 1 12 1 27 1 29 1 30 1 33 1 48 1 50 1;
+	setAttr -s 9 ".kot[0:8]"  5 5 5 5 5 5 5 5 
+		5;
 createNode animCurveTL -n "neck_ctrl_translateX";
 	rename -uid "0AB84CE8-AC45-C618-5FB2-F7A49CE857EA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 27 0 29 0 32 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 10 0 12 0 27 0 29 0 32 0 48 0 50 0;
 createNode animCurveTL -n "neck_ctrl_translateY";
 	rename -uid "FBFFE426-0E4A-D9ED-DCD2-A486EDCED16A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 27 0 29 0 32 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 10 0 12 0 27 0 29 0 32 0 48 0 50 0;
 createNode animCurveTL -n "neck_ctrl_translateZ";
 	rename -uid "38244DB7-6B4C-5A9D-7555-BFBDA13E508D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 27 0 29 0 32 0;
+	setAttr -s 8 ".ktv[0:7]"  1 0 10 0 12 0 27 0 29 0 32 0 48 0 50 0;
 createNode animCurveTA -n "neck_ctrl_rotateX";
 	rename -uid "D427BAF1-474F-B436-EC9A-A396EEF678A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 4.9159836043722898 27 4.9159836043722898
-		 29 -5.183621573639039 32 19.189035248394024;
+	setAttr -s 8 ".ktv[0:7]"  1 0 10 0 12 4.9159836043722898 27 4.9159836043722898
+		 29 -5.1836215736390399 32 19.189035248394024 48 11.404578082069058 50 -18.634249436449139;
 createNode animCurveTA -n "neck_ctrl_rotateY";
 	rename -uid "8BD98AAD-C549-81F5-1E44-309A696EBEA5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 27 0 29 0 32 -53.104115289689986;
+	setAttr -s 8 ".ktv[0:7]"  1 0 10 0 12 0 27 0 29 0 32 -53.104115289689986
+		 48 -3.6671571710118616 50 34.450529912700475;
 createNode animCurveTA -n "neck_ctrl_rotateZ";
 	rename -uid "3BD6DBFB-CF41-16B7-1BCD-BEBECD7F8BE9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0 10 0 12 0 27 0 29 0 32 -22.207598210692055;
+	setAttr -s 8 ".ktv[0:7]"  1 0 10 0 12 0 27 0 29 0 32 -22.207598210692055
+		 48 -7.3936730958182055 50 1.282631311680922;
 createNode animCurveTU -n "neck_ctrl_scaleX";
 	rename -uid "E1CF0B4F-4A4F-31D5-0374-0B9EDA2859E5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12 1 27 1 29 1 32 1;
+	setAttr -s 8 ".ktv[0:7]"  1 1 10 1 12 1 27 1 29 1 32 1 48 1 50 1;
 createNode animCurveTU -n "neck_ctrl_scaleY";
 	rename -uid "33CDA34E-C34F-0178-B525-7DB1CF41E37E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12 1 27 1 29 1 32 1;
+	setAttr -s 8 ".ktv[0:7]"  1 1 10 1 12 1 27 1 29 1 32 1 48 1 50 1;
 createNode animCurveTU -n "neck_ctrl_scaleZ";
 	rename -uid "9698EB85-AD4D-CADA-D345-02958F82BC4B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1 10 1 12 1 27 1 29 1 32 1;
+	setAttr -s 8 ".ktv[0:7]"  1 1 10 1 12 1 27 1 29 1 32 1 48 1 50 1;
 createNode animCurveTA -n "CALMBEFORESTOORM_rotateX";
 	rename -uid "ABA59D5C-174D-9FE5-C2D8-6B99396D4184";
 	setAttr ".tan" 18;
@@ -5252,13 +5848,177 @@ createNode animCurveTU -n "eye_CTRL_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  30 1 33 1;
+createNode animCurveTU -n "cog_ctrl_visibility";
+	rename -uid "B3A3B72D-264C-1C97-9623-66AEAF6D0EB4";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  35 1 48 1 50 1 54 1;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTL -n "cog_ctrl_translateX";
+	rename -uid "4FDFE124-8B45-DEAD-E129-22B63BBB38A6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  35 0 48 0 50 0 54 0;
+createNode animCurveTL -n "cog_ctrl_translateY";
+	rename -uid "1AEAB13D-1040-D8BA-9005-95A7F901DECB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  35 0 48 0 50 0 54 0;
+createNode animCurveTL -n "cog_ctrl_translateZ";
+	rename -uid "299108E0-EE4E-DD4A-1697-C2B014546282";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  35 0 48 0 50 0 54 0;
+createNode animCurveTA -n "cog_ctrl_rotateX";
+	rename -uid "2CCF45D1-8447-37F6-C4D3-43BC234C059C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  35 0 48 96.142544821058394 50 125.64184395520523
+		 54 100;
+createNode animCurveTA -n "cog_ctrl_rotateY";
+	rename -uid "268B306B-5F48-DBCC-A8F9-5282EEE9EEFB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  35 0 48 -65.701679656415578 50 -53.03938069960541
+		 54 -59.999999999999993;
+createNode animCurveTA -n "cog_ctrl_rotateZ";
+	rename -uid "F567BD01-0043-8532-8E81-7B9AA6E2A24B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  35 0 48 -81.677812481157289 50 -105.05859731059959
+		 54 0;
+createNode animCurveTU -n "cog_ctrl_scaleX";
+	rename -uid "AA9368AB-4249-CC5B-93F4-6CA1EB5646DA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  35 1 48 1 50 1 54 1;
+createNode animCurveTU -n "cog_ctrl_scaleY";
+	rename -uid "8ECFD79A-7A48-716C-E531-B9A7818FD89F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  35 1 48 1 50 1 54 1;
+createNode animCurveTU -n "cog_ctrl_scaleZ";
+	rename -uid "4506D965-0845-33B1-4498-A4A7397000F8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  35 1 48 1 50 1 54 1;
+createNode animCurveTA -n "breathing_ctrl_rotateX";
+	rename -uid "77D07B72-7149-0E8C-C23F-CA9B627BAB4F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  35 0 49 0;
+createNode animCurveTA -n "breathing_ctrl_rotateY";
+	rename -uid "EC7B7A5E-4E4C-B15A-AA77-308C829430BE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  35 0 49 0;
+createNode animCurveTA -n "breathing_ctrl_rotateZ";
+	rename -uid "20ED42A6-4C4F-FB52-8A1F-B7953D0A4BC0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  35 0 49 0;
+createNode animCurveTU -n "breathing_ctrl_visibility";
+	rename -uid "343C7189-6D40-DB74-091E-BBAE98C2111C";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  35 1 49 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode pairBlend -n "pairBlend1";
+	rename -uid "DB104DA6-504C-12F9-B8E0-C0A0A4FA4A5A";
+	setAttr ".rm" 2;
+createNode animCurveTL -n "pairBlend1_inTranslateX1";
+	rename -uid "5A712474-FE4D-4A8E-8F1E-4AA3258E21CE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  35 6.1267333109071842e-06 49 6.1267333109071842e-06;
+createNode animCurveTL -n "pairBlend1_inTranslateY1";
+	rename -uid "FB21583A-D240-3329-F451-4BB006917AC4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  35 -0.00042397257608861594 49 -0.00042397257608861594;
+createNode animCurveTL -n "pairBlend1_inTranslateZ1";
+	rename -uid "7EC07032-4E42-2255-0A82-E4B52628AF42";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  35 0.001110248811812653 49 0.001110248811812653;
+createNode animCurveTU -n "breathing_ctrl_scaleX";
+	rename -uid "99F5B44F-064C-B50B-2B28-DA9B57C82727";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  35 1 49 1.079638502878095;
+createNode animCurveTU -n "breathing_ctrl_scaleY";
+	rename -uid "D75B7169-5249-4E46-E839-2D8CA8463480";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  35 1 49 1.079638502878095;
+createNode animCurveTU -n "breathing_ctrl_scaleZ";
+	rename -uid "F69BFC77-4E4C-5FE5-1F3F-71B107F4271C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  35 1 49 1.079638502878095;
+createNode animCurveTU -n "breathing_ctrl_blendPoint1";
+	rename -uid "66C71939-1142-DB9A-45F6-82A3296263CB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  49 0;
+createNode animCurveTL -n "l_arm_pole_vector_translateX";
+	rename -uid "3A400F3C-3146-822F-41C3-2DBF8EE79229";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  45 -0.75464400450738167 50 -3.7809625748775364;
+createNode animCurveTL -n "l_arm_pole_vector_translateY";
+	rename -uid "256E3727-F74F-A84F-D192-ED9A1B9357D4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  45 2.859283161286271 50 -1.3136367306074561;
+createNode animCurveTL -n "l_arm_pole_vector_translateZ";
+	rename -uid "CB894766-D240-20DD-DB4E-B0B5966FEB49";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  45 5.3671088162127578 50 0.62708229228412993;
+createNode animCurveTU -n "l_arm_pole_vector_visibility";
+	rename -uid "3A4AFF63-D546-5C1B-9385-3DA962F19EF2";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  45 1 50 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTA -n "l_arm_pole_vector_rotateX";
+	rename -uid "CB604D3E-A64F-C64D-1EB5-A8A4771381D5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  45 0 50 0;
+createNode animCurveTA -n "l_arm_pole_vector_rotateY";
+	rename -uid "72ACBC9E-DF4A-047D-69F3-189AF64785EB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  45 0 50 0;
+createNode animCurveTA -n "l_arm_pole_vector_rotateZ";
+	rename -uid "BE05CC96-924A-64F5-9940-8AB9DF9A0FF4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  45 0 50 0;
+createNode animCurveTU -n "l_arm_pole_vector_scaleX";
+	rename -uid "344B4E1A-424F-5940-0EF7-05AA8100C6DB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  45 1 50 1;
+createNode animCurveTU -n "l_arm_pole_vector_scaleY";
+	rename -uid "48C8A50C-EA4A-97ED-A6E5-C9BE071D0172";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  45 1 50 1;
+createNode animCurveTU -n "l_arm_pole_vector_scaleZ";
+	rename -uid "4B58E811-334D-BC3D-D959-6DB35CA63EF1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  45 1 50 1;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -k on ".o" 35;
-	setAttr -av ".unw" 35;
+	setAttr -k on ".o" 36;
+	setAttr -av ".unw" 36;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -5490,7 +6250,7 @@ select -ne :ikSystem;
 	setAttr -k on ".bnm";
 	setAttr -av ".gsn";
 	setAttr -k on ".gsv";
-	setAttr -s 2 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "cap_visibility.o" "mushroom_latestRN9.phl[1]";
 connectAttr "cap_translateX.o" "mushroom_latestRN9.phl[2]";
 connectAttr "cap_translateY.o" "mushroom_latestRN9.phl[3]";
@@ -5501,33 +6261,33 @@ connectAttr "cap_rotateZ.o" "mushroom_latestRN9.phl[7]";
 connectAttr "cap_scaleX.o" "mushroom_latestRN9.phl[8]";
 connectAttr "cap_scaleY.o" "mushroom_latestRN9.phl[9]";
 connectAttr "cap_scaleZ.o" "mushroom_latestRN9.phl[10]";
-connectAttr "mc_latest_rig_combined_latest_realRN.phl[229]" "blendShape1Set.dsm"
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[264]" "blendShape1Set.dsm"
 		 -na;
-connectAttr "blendShape1GroupId.id" "mc_latest_rig_combined_latest_realRN.phl[230]"
+connectAttr "blendShape1GroupId.id" "mc_latest_rig_combined_latest_realRN.phl[265]"
 		;
-connectAttr "blendShape1Set.mwc" "mc_latest_rig_combined_latest_realRN.phl[231]"
+connectAttr "blendShape1Set.mwc" "mc_latest_rig_combined_latest_realRN.phl[266]"
 		;
-connectAttr "mc_latest_rig_combined_latest_realRN.phl[232]" "blendShape2Set.dsm"
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[267]" "blendShape2Set.dsm"
 		 -na;
-connectAttr "blendShape2GroupId.id" "mc_latest_rig_combined_latest_realRN.phl[233]"
+connectAttr "blendShape2GroupId.id" "mc_latest_rig_combined_latest_realRN.phl[268]"
 		;
-connectAttr "blendShape2Set.mwc" "mc_latest_rig_combined_latest_realRN.phl[234]"
+connectAttr "blendShape2Set.mwc" "mc_latest_rig_combined_latest_realRN.phl[269]"
 		;
-connectAttr "mc_latest_rig_combined_latest_realRN.phl[235]" "blendShape3Set.dsm"
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[270]" "blendShape3Set.dsm"
 		 -na;
-connectAttr "blendShape3GroupId.id" "mc_latest_rig_combined_latest_realRN.phl[236]"
+connectAttr "blendShape3GroupId.id" "mc_latest_rig_combined_latest_realRN.phl[271]"
 		;
-connectAttr "blendShape3Set.mwc" "mc_latest_rig_combined_latest_realRN.phl[237]"
+connectAttr "blendShape3Set.mwc" "mc_latest_rig_combined_latest_realRN.phl[272]"
 		;
-connectAttr "mc_latest_rig_combined_latest_realRN.phl[238]" "blendShape4Set.dsm"
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[273]" "blendShape4Set.dsm"
 		 -na;
-connectAttr "blendShape4GroupId.id" "mc_latest_rig_combined_latest_realRN.phl[239]"
+connectAttr "blendShape4GroupId.id" "mc_latest_rig_combined_latest_realRN.phl[274]"
 		;
-connectAttr "blendShape4Set.mwc" "mc_latest_rig_combined_latest_realRN.phl[240]"
+connectAttr "blendShape4Set.mwc" "mc_latest_rig_combined_latest_realRN.phl[275]"
 		;
-connectAttr "O.og[0]" "mc_latest_rig_combined_latest_realRN.phl[241]";
-connectAttr "O.it[0].vt[0]" "mc_latest_rig_combined_latest_realRN.phl[242]";
-connectAttr "mc_latest_rig_combined_latest_realRN.phl[243]" "blendShape1GroupParts.ig"
+connectAttr "O.og[0]" "mc_latest_rig_combined_latest_realRN.phl[276]";
+connectAttr "O.it[0].vt[0]" "mc_latest_rig_combined_latest_realRN.phl[277]";
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[278]" "blendShape1GroupParts.ig"
 		;
 connectAttr "master_control_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[1]"
 		;
@@ -5567,9 +6327,9 @@ connectAttr "r_leg_ikfk_switch_visibility.o" "mc_latest_rig_combined_latest_real
 		;
 connectAttr "r_arm_pole_vector_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[19]"
 		;
-connectAttr "r_arm_pole_vector_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[20]"
+connectAttr "r_arm_pole_vector_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[20]"
 		;
-connectAttr "r_arm_pole_vector_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[21]"
+connectAttr "r_arm_pole_vector_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[21]"
 		;
 connectAttr "r_arm_pole_vector_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[22]"
 		;
@@ -5585,361 +6345,421 @@ connectAttr "r_arm_pole_vector_scaleY.o" "mc_latest_rig_combined_latest_realRN.p
 		;
 connectAttr "r_arm_pole_vector_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[28]"
 		;
-connectAttr "neck_ctrl_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[29]"
+connectAttr "l_arm_pole_vector_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[29]"
 		;
-connectAttr "neck_ctrl_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[30]"
+connectAttr "l_arm_pole_vector_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[30]"
 		;
-connectAttr "neck_ctrl_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[31]"
+connectAttr "l_arm_pole_vector_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[31]"
 		;
-connectAttr "neck_ctrl_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[32]"
+connectAttr "l_arm_pole_vector_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[32]"
 		;
-connectAttr "neck_ctrl_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[33]"
+connectAttr "l_arm_pole_vector_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[33]"
 		;
-connectAttr "neck_ctrl_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[34]"
+connectAttr "l_arm_pole_vector_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[34]"
 		;
-connectAttr "neck_ctrl_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[35]"
+connectAttr "l_arm_pole_vector_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[35]"
 		;
-connectAttr "neck_ctrl_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[36]";
-connectAttr "neck_ctrl_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[37]";
-connectAttr "neck_ctrl_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[38]";
-connectAttr "eye_CTRL_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[39]"
+connectAttr "l_arm_pole_vector_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[36]"
 		;
-connectAttr "eye_CTRL_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[40]"
+connectAttr "l_arm_pole_vector_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[37]"
 		;
-connectAttr "eye_CTRL_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[41]"
+connectAttr "l_arm_pole_vector_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[38]"
 		;
-connectAttr "eye_CTRL_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[42]"
+connectAttr "neck_ctrl_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[39]"
 		;
-connectAttr "eye_CTRL_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[43]";
-connectAttr "eye_CTRL_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[44]";
-connectAttr "eye_CTRL_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[45]";
-connectAttr "eye_CTRL_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[46]";
-connectAttr "eye_CTRL_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[47]";
-connectAttr "eye_CTRL_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[48]";
-connectAttr "r_shoulder_ctrl1_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[49]"
+connectAttr "neck_ctrl_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[40]"
 		;
-connectAttr "r_shoulder_ctrl1_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[50]"
+connectAttr "neck_ctrl_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[41]"
 		;
-connectAttr "r_shoulder_ctrl1_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[51]"
+connectAttr "neck_ctrl_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[42]"
 		;
-connectAttr "r_shoulder_ctrl1_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[52]"
+connectAttr "neck_ctrl_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[43]"
 		;
-connectAttr "r_shoulder_ctrl1_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[53]"
+connectAttr "neck_ctrl_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[44]"
 		;
-connectAttr "r_shoulder_ctrl1_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[54]"
+connectAttr "neck_ctrl_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[45]"
 		;
-connectAttr "r_shoulder_ctrl1_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[55]"
+connectAttr "neck_ctrl_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[46]";
+connectAttr "neck_ctrl_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[47]";
+connectAttr "neck_ctrl_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[48]";
+connectAttr "eye_CTRL_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[49]"
 		;
-connectAttr "r_shoulder_ctrl1_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[56]"
+connectAttr "eye_CTRL_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[50]"
 		;
-connectAttr "r_shoulder_ctrl1_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[57]"
+connectAttr "eye_CTRL_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[51]"
 		;
-connectAttr "r_shoulder_ctrl1_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[58]"
+connectAttr "eye_CTRL_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[52]"
 		;
-connectAttr "shoulder_ctrl_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[59]"
+connectAttr "eye_CTRL_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[53]";
+connectAttr "eye_CTRL_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[54]";
+connectAttr "eye_CTRL_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[55]";
+connectAttr "eye_CTRL_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[56]";
+connectAttr "eye_CTRL_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[57]";
+connectAttr "eye_CTRL_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[58]";
+connectAttr "r_shoulder_ctrl1_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[59]"
 		;
-connectAttr "shoulder_ctrl_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[60]"
+connectAttr "r_shoulder_ctrl1_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[60]"
 		;
-connectAttr "shoulder_ctrl_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[61]"
+connectAttr "r_shoulder_ctrl1_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[61]"
 		;
-connectAttr "shoulder_ctrl_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[62]"
+connectAttr "r_shoulder_ctrl1_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[62]"
 		;
-connectAttr "shoulder_ctrl_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[63]"
+connectAttr "r_shoulder_ctrl1_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[63]"
 		;
-connectAttr "shoulder_ctrl_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[64]"
+connectAttr "r_shoulder_ctrl1_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[64]"
 		;
-connectAttr "shoulder_ctrl_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[65]"
+connectAttr "r_shoulder_ctrl1_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[65]"
 		;
-connectAttr "shoulder_ctrl_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[66]"
+connectAttr "r_shoulder_ctrl1_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[66]"
 		;
-connectAttr "shoulder_ctrl_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[67]"
+connectAttr "r_shoulder_ctrl1_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[67]"
 		;
-connectAttr "shoulder_ctrl_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[68]"
+connectAttr "r_shoulder_ctrl1_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[68]"
 		;
-connectAttr "r_wrist_ctrl_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[69]"
+connectAttr "shoulder_ctrl_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[69]"
 		;
-connectAttr "r_wrist_ctrl_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[70]"
+connectAttr "shoulder_ctrl_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[70]"
 		;
-connectAttr "r_wrist_ctrl_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[71]"
+connectAttr "shoulder_ctrl_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[71]"
 		;
-connectAttr "r_wrist_ctrl_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[72]"
+connectAttr "shoulder_ctrl_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[72]"
 		;
-connectAttr "r_wrist_ctrl_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[73]"
+connectAttr "shoulder_ctrl_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[73]"
 		;
-connectAttr "r_wrist_ctrl_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[74]"
+connectAttr "shoulder_ctrl_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[74]"
 		;
-connectAttr "r_wrist_ctrl_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[75]"
+connectAttr "shoulder_ctrl_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[75]"
 		;
-connectAttr "r_wrist_ctrl_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[76]"
+connectAttr "shoulder_ctrl_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[76]"
 		;
-connectAttr "r_wrist_ctrl_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[77]"
+connectAttr "shoulder_ctrl_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[77]"
 		;
-connectAttr "r_wrist_ctrl_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[78]"
+connectAttr "shoulder_ctrl_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[78]"
 		;
-connectAttr "r_pinky_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[79]";
-connectAttr "r_pinky_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[80]";
-connectAttr "r_pinky_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[81]";
-connectAttr "r_pinky_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[82]"
+connectAttr "cog_ctrl_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[79]"
 		;
-connectAttr "r_pinky_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[83]"
+connectAttr "cog_ctrl_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[80]"
 		;
-connectAttr "r_pinky_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[84]"
+connectAttr "cog_ctrl_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[81]"
 		;
-connectAttr "r_pinky_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[85]"
+connectAttr "cog_ctrl_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[82]";
+connectAttr "cog_ctrl_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[83]";
+connectAttr "cog_ctrl_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[84]";
+connectAttr "cog_ctrl_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[85]";
+connectAttr "cog_ctrl_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[86]";
+connectAttr "cog_ctrl_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[87]";
+connectAttr "cog_ctrl_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[88]"
 		;
-connectAttr "r_pinky_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[86]";
-connectAttr "r_pinky_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[87]";
-connectAttr "r_pinky_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[88]";
-connectAttr "r_pinky_2_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[89]"
+connectAttr "r_wrist_ctrl_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[89]"
 		;
-connectAttr "r_pinky_2_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[90]"
+connectAttr "r_wrist_ctrl_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[90]"
 		;
-connectAttr "r_pinky_2_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[91]"
+connectAttr "r_wrist_ctrl_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[91]"
 		;
-connectAttr "r_pinky_2_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[92]"
+connectAttr "r_wrist_ctrl_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[92]"
 		;
-connectAttr "r_pinky_2_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[93]"
+connectAttr "r_wrist_ctrl_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[93]"
 		;
-connectAttr "r_pinky_2_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[94]"
+connectAttr "r_wrist_ctrl_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[94]"
 		;
-connectAttr "r_pinky_2_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[95]"
+connectAttr "r_wrist_ctrl_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[95]"
 		;
-connectAttr "r_pinky_2_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[96]";
-connectAttr "r_pinky_2_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[97]";
-connectAttr "r_pinky_2_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[98]";
-connectAttr "r_pinky_3_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[99]"
+connectAttr "r_wrist_ctrl_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[96]"
 		;
-connectAttr "r_pinky_3_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[100]"
+connectAttr "r_wrist_ctrl_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[97]"
 		;
-connectAttr "r_pinky_3_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[101]"
+connectAttr "r_wrist_ctrl_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[98]"
 		;
-connectAttr "r_pinky_3_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[102]"
+connectAttr "r_pinky_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[99]";
+connectAttr "r_pinky_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[100]";
+connectAttr "r_pinky_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[101]";
+connectAttr "r_pinky_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[102]"
 		;
-connectAttr "r_pinky_3_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[103]"
+connectAttr "r_pinky_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[103]"
 		;
-connectAttr "r_pinky_3_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[104]"
+connectAttr "r_pinky_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[104]"
 		;
-connectAttr "r_pinky_3_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[105]"
+connectAttr "r_pinky_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[105]"
 		;
-connectAttr "r_pinky_3_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[106]"
+connectAttr "r_pinky_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[106]";
+connectAttr "r_pinky_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[107]";
+connectAttr "r_pinky_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[108]";
+connectAttr "r_pinky_2_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[109]"
 		;
-connectAttr "r_pinky_3_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[107]"
+connectAttr "r_pinky_2_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[110]"
 		;
-connectAttr "r_pinky_3_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[108]"
+connectAttr "r_pinky_2_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[111]"
 		;
-connectAttr "r_thumb_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[109]";
-connectAttr "r_thumb_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[110]";
-connectAttr "r_thumb_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[111]";
-connectAttr "r_thumb_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[112]"
+connectAttr "r_pinky_2_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[112]"
 		;
-connectAttr "r_thumb_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[113]"
+connectAttr "r_pinky_2_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[113]"
 		;
-connectAttr "r_thumb_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[114]"
+connectAttr "r_pinky_2_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[114]"
 		;
-connectAttr "r_thumb_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[115]"
+connectAttr "r_pinky_2_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[115]"
 		;
-connectAttr "r_thumb_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[116]";
-connectAttr "r_thumb_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[117]";
-connectAttr "r_thumb_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[118]";
-connectAttr "r_thumb_2_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[119]"
+connectAttr "r_pinky_2_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[116]"
 		;
-connectAttr "r_thumb_2_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[120]"
+connectAttr "r_pinky_2_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[117]"
 		;
-connectAttr "r_thumb_2_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[121]"
+connectAttr "r_pinky_2_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[118]"
 		;
-connectAttr "r_thumb_2_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[122]"
+connectAttr "r_pinky_3_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[119]"
 		;
-connectAttr "r_thumb_2_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[123]"
+connectAttr "r_pinky_3_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[120]"
 		;
-connectAttr "r_thumb_2_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[124]"
+connectAttr "r_pinky_3_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[121]"
 		;
-connectAttr "r_thumb_2_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[125]"
+connectAttr "r_pinky_3_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[122]"
 		;
-connectAttr "r_thumb_2_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[126]"
+connectAttr "r_pinky_3_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[123]"
 		;
-connectAttr "r_thumb_2_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[127]"
+connectAttr "r_pinky_3_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[124]"
 		;
-connectAttr "r_thumb_2_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[128]"
+connectAttr "r_pinky_3_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[125]"
 		;
-connectAttr "r_index_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[129]";
-connectAttr "r_index_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[130]";
-connectAttr "r_index_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[131]";
-connectAttr "r_index_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[132]"
+connectAttr "r_pinky_3_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[126]"
 		;
-connectAttr "r_index_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[133]"
+connectAttr "r_pinky_3_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[127]"
 		;
-connectAttr "r_index_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[134]"
+connectAttr "r_pinky_3_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[128]"
 		;
-connectAttr "r_index_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[135]"
+connectAttr "r_thumb_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[129]";
+connectAttr "r_thumb_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[130]";
+connectAttr "r_thumb_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[131]";
+connectAttr "r_thumb_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[132]"
 		;
-connectAttr "r_index_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[136]";
-connectAttr "r_index_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[137]";
-connectAttr "r_index_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[138]";
-connectAttr "r_index_2_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[139]"
+connectAttr "r_thumb_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[133]"
 		;
-connectAttr "r_index_2_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[140]"
+connectAttr "r_thumb_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[134]"
 		;
-connectAttr "r_index_2_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[141]"
+connectAttr "r_thumb_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[135]"
 		;
-connectAttr "r_index_2_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[142]"
+connectAttr "r_thumb_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[136]";
+connectAttr "r_thumb_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[137]";
+connectAttr "r_thumb_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[138]";
+connectAttr "r_thumb_2_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[139]"
 		;
-connectAttr "r_index_2_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[143]"
+connectAttr "r_thumb_2_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[140]"
 		;
-connectAttr "r_index_2_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[144]"
+connectAttr "r_thumb_2_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[141]"
 		;
-connectAttr "r_index_2_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[145]"
+connectAttr "r_thumb_2_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[142]"
 		;
-connectAttr "r_index_2_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[146]"
+connectAttr "r_thumb_2_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[143]"
 		;
-connectAttr "r_index_2_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[147]"
+connectAttr "r_thumb_2_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[144]"
 		;
-connectAttr "r_index_2_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[148]"
+connectAttr "r_thumb_2_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[145]"
 		;
-connectAttr "r_index_3_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[149]"
+connectAttr "r_thumb_2_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[146]"
 		;
-connectAttr "r_index_3_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[150]"
+connectAttr "r_thumb_2_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[147]"
 		;
-connectAttr "r_index_3_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[151]"
+connectAttr "r_thumb_2_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[148]"
 		;
-connectAttr "r_index_3_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[152]"
+connectAttr "r_index_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[149]";
+connectAttr "r_index_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[150]";
+connectAttr "r_index_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[151]";
+connectAttr "r_index_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[152]"
 		;
-connectAttr "r_index_3_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[153]"
+connectAttr "r_index_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[153]"
 		;
-connectAttr "r_index_3_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[154]"
+connectAttr "r_index_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[154]"
 		;
-connectAttr "r_index_3_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[155]"
+connectAttr "r_index_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[155]"
 		;
-connectAttr "r_index_3_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[156]"
+connectAttr "r_index_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[156]";
+connectAttr "r_index_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[157]";
+connectAttr "r_index_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[158]";
+connectAttr "r_index_2_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[159]"
 		;
-connectAttr "r_index_3_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[157]"
+connectAttr "r_index_2_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[160]"
 		;
-connectAttr "r_index_3_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[158]"
+connectAttr "r_index_2_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[161]"
 		;
-connectAttr "r_middle_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[159]"
+connectAttr "r_index_2_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[162]"
 		;
-connectAttr "r_middle_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[160]"
+connectAttr "r_index_2_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[163]"
 		;
-connectAttr "r_middle_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[161]"
+connectAttr "r_index_2_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[164]"
 		;
-connectAttr "r_middle_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[162]"
+connectAttr "r_index_2_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[165]"
 		;
-connectAttr "r_middle_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[163]"
+connectAttr "r_index_2_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[166]"
 		;
-connectAttr "r_middle_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[164]"
+connectAttr "r_index_2_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[167]"
 		;
-connectAttr "r_middle_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[165]"
+connectAttr "r_index_2_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[168]"
 		;
-connectAttr "r_middle_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[166]";
-connectAttr "r_middle_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[167]";
-connectAttr "r_middle_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[168]";
-connectAttr "r_middle_2_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[169]"
+connectAttr "r_index_3_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[169]"
 		;
-connectAttr "r_middle_2_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[170]"
+connectAttr "r_index_3_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[170]"
 		;
-connectAttr "r_middle_2_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[171]"
+connectAttr "r_index_3_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[171]"
 		;
-connectAttr "r_middle_2_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[172]"
+connectAttr "r_index_3_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[172]"
 		;
-connectAttr "r_middle_2_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[173]"
+connectAttr "r_index_3_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[173]"
 		;
-connectAttr "r_middle_2_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[174]"
+connectAttr "r_index_3_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[174]"
 		;
-connectAttr "r_middle_2_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[175]"
+connectAttr "r_index_3_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[175]"
 		;
-connectAttr "r_middle_2_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[176]"
+connectAttr "r_index_3_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[176]"
 		;
-connectAttr "r_middle_2_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[177]"
+connectAttr "r_index_3_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[177]"
 		;
-connectAttr "r_middle_2_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[178]"
+connectAttr "r_index_3_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[178]"
 		;
-connectAttr "r_middle_3_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[179]"
+connectAttr "r_middle_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[179]"
 		;
-connectAttr "r_middle_3_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[180]"
+connectAttr "r_middle_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[180]"
 		;
-connectAttr "r_middle_3_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[181]"
+connectAttr "r_middle_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[181]"
 		;
-connectAttr "r_middle_3_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[182]"
+connectAttr "r_middle_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[182]"
 		;
-connectAttr "r_middle_3_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[183]"
+connectAttr "r_middle_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[183]"
 		;
-connectAttr "r_middle_3_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[184]"
+connectAttr "r_middle_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[184]"
 		;
-connectAttr "r_middle_3_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[185]"
+connectAttr "r_middle_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[185]"
 		;
-connectAttr "r_middle_3_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[186]"
+connectAttr "r_middle_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[186]";
+connectAttr "r_middle_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[187]";
+connectAttr "r_middle_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[188]";
+connectAttr "r_middle_2_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[189]"
 		;
-connectAttr "r_middle_3_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[187]"
+connectAttr "r_middle_2_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[190]"
 		;
-connectAttr "r_middle_3_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[188]"
+connectAttr "r_middle_2_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[191]"
 		;
-connectAttr "r_ring_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[189]";
-connectAttr "r_ring_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[190]";
-connectAttr "r_ring_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[191]";
-connectAttr "r_ring_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[192]"
+connectAttr "r_middle_2_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[192]"
 		;
-connectAttr "r_ring_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[193]"
+connectAttr "r_middle_2_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[193]"
 		;
-connectAttr "r_ring_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[194]"
+connectAttr "r_middle_2_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[194]"
 		;
-connectAttr "r_ring_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[195]"
+connectAttr "r_middle_2_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[195]"
 		;
-connectAttr "r_ring_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[196]";
-connectAttr "r_ring_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[197]";
-connectAttr "r_ring_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[198]";
-connectAttr "r_ring_2_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[199]"
+connectAttr "r_middle_2_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[196]"
 		;
-connectAttr "r_ring_2_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[200]"
+connectAttr "r_middle_2_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[197]"
 		;
-connectAttr "r_ring_2_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[201]"
+connectAttr "r_middle_2_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[198]"
 		;
-connectAttr "r_ring_2_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[202]"
+connectAttr "r_middle_3_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[199]"
 		;
-connectAttr "r_ring_2_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[203]"
+connectAttr "r_middle_3_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[200]"
 		;
-connectAttr "r_ring_2_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[204]"
+connectAttr "r_middle_3_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[201]"
 		;
-connectAttr "r_ring_2_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[205]"
+connectAttr "r_middle_3_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[202]"
 		;
-connectAttr "r_ring_2_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[206]";
-connectAttr "r_ring_2_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[207]";
-connectAttr "r_ring_2_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[208]";
-connectAttr "r_ring_3_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[209]"
+connectAttr "r_middle_3_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[203]"
 		;
-connectAttr "r_ring_3_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[210]"
+connectAttr "r_middle_3_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[204]"
 		;
-connectAttr "r_ring_3_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[211]"
+connectAttr "r_middle_3_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[205]"
 		;
-connectAttr "r_ring_3_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[212]"
+connectAttr "r_middle_3_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[206]"
 		;
-connectAttr "r_ring_3_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[213]"
+connectAttr "r_middle_3_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[207]"
 		;
-connectAttr "r_ring_3_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[214]"
+connectAttr "r_middle_3_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[208]"
 		;
-connectAttr "r_ring_3_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[215]"
+connectAttr "r_ring_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[209]";
+connectAttr "r_ring_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[210]";
+connectAttr "r_ring_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[211]";
+connectAttr "r_ring_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[212]"
 		;
-connectAttr "r_ring_3_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[216]";
-connectAttr "r_ring_3_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[217]";
-connectAttr "r_ring_3_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[218]";
-connectAttr "l_wrist_ctrl_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[219]"
+connectAttr "r_ring_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[213]"
 		;
-connectAttr "l_wrist_ctrl_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[220]"
+connectAttr "r_ring_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[214]"
 		;
-connectAttr "l_wrist_ctrl_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[221]"
+connectAttr "r_ring_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[215]"
 		;
-connectAttr "l_wrist_ctrl_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[222]"
+connectAttr "r_ring_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[216]";
+connectAttr "r_ring_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[217]";
+connectAttr "r_ring_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[218]";
+connectAttr "r_ring_2_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[219]"
 		;
-connectAttr "l_wrist_ctrl_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[223]"
+connectAttr "r_ring_2_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[220]"
 		;
-connectAttr "l_wrist_ctrl_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[224]"
+connectAttr "r_ring_2_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[221]"
 		;
-connectAttr "l_wrist_ctrl_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[225]"
+connectAttr "r_ring_2_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[222]"
 		;
-connectAttr "l_wrist_ctrl_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[226]"
+connectAttr "r_ring_2_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[223]"
 		;
-connectAttr "l_wrist_ctrl_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[227]"
+connectAttr "r_ring_2_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[224]"
 		;
-connectAttr "l_wrist_ctrl_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[228]"
+connectAttr "r_ring_2_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[225]"
 		;
+connectAttr "r_ring_2_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[226]";
+connectAttr "r_ring_2_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[227]";
+connectAttr "r_ring_2_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[228]";
+connectAttr "r_ring_3_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[229]"
+		;
+connectAttr "r_ring_3_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[230]"
+		;
+connectAttr "r_ring_3_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[231]"
+		;
+connectAttr "r_ring_3_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[232]"
+		;
+connectAttr "r_ring_3_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[233]"
+		;
+connectAttr "r_ring_3_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[234]"
+		;
+connectAttr "r_ring_3_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[235]"
+		;
+connectAttr "r_ring_3_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[236]";
+connectAttr "r_ring_3_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[237]";
+connectAttr "r_ring_3_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[238]";
+connectAttr "l_wrist_ctrl_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[239]"
+		;
+connectAttr "l_wrist_ctrl_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[240]"
+		;
+connectAttr "l_wrist_ctrl_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[241]"
+		;
+connectAttr "l_wrist_ctrl_translateX.o" "mc_latest_rig_combined_latest_realRN.phl[242]"
+		;
+connectAttr "l_wrist_ctrl_translateY.o" "mc_latest_rig_combined_latest_realRN.phl[243]"
+		;
+connectAttr "l_wrist_ctrl_translateZ.o" "mc_latest_rig_combined_latest_realRN.phl[244]"
+		;
+connectAttr "l_wrist_ctrl_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[245]"
+		;
+connectAttr "l_wrist_ctrl_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[246]"
+		;
+connectAttr "l_wrist_ctrl_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[247]"
+		;
+connectAttr "l_wrist_ctrl_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[248]"
+		;
+connectAttr "breathing_ctrl_scaleX.o" "mc_latest_rig_combined_latest_realRN.phl[249]"
+		;
+connectAttr "breathing_ctrl_scaleY.o" "mc_latest_rig_combined_latest_realRN.phl[250]"
+		;
+connectAttr "breathing_ctrl_scaleZ.o" "mc_latest_rig_combined_latest_realRN.phl[251]"
+		;
+connectAttr "pairBlend1.otx" "mc_latest_rig_combined_latest_realRN.phl[252]";
+connectAttr "pairBlend1.oty" "mc_latest_rig_combined_latest_realRN.phl[253]";
+connectAttr "pairBlend1.otz" "mc_latest_rig_combined_latest_realRN.phl[254]";
+connectAttr "breathing_ctrl_rotateX.o" "mc_latest_rig_combined_latest_realRN.phl[255]"
+		;
+connectAttr "breathing_ctrl_rotateY.o" "mc_latest_rig_combined_latest_realRN.phl[256]"
+		;
+connectAttr "breathing_ctrl_rotateZ.o" "mc_latest_rig_combined_latest_realRN.phl[257]"
+		;
+connectAttr "breathing_ctrl_visibility.o" "mc_latest_rig_combined_latest_realRN.phl[258]"
+		;
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[259]" "pairBlend1.w";
+connectAttr "breathing_ctrl_blendPoint1.o" "mc_latest_rig_combined_latest_realRN.phl[260]"
+		;
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[261]" "pairBlend1.itx2";
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[262]" "pairBlend1.ity2";
+connectAttr "mc_latest_rig_combined_latest_realRN.phl[263]" "pairBlend1.itz2";
 connectAttr "KICK_translateX.o" "KICK.tx" -l on;
 connectAttr "KICK_translateY.o" "KICK.ty" -l on;
 connectAttr "KICK_translateZ.o" "KICK.tz" -l on;
@@ -5950,13 +6770,13 @@ connectAttr "KICK_visibility.o" "KICK.v";
 connectAttr "KICK_scaleX.o" "KICK.sx";
 connectAttr "KICK_scaleY.o" "KICK.sy";
 connectAttr "KICK_scaleZ.o" "KICK.sz";
-connectAttr "CALMBEFORESTOORM_rotateX.o" "CALMBEFORESTOORM.rx";
-connectAttr "CALMBEFORESTOORM_rotateY.o" "CALMBEFORESTOORM.ry";
-connectAttr "CALMBEFORESTOORM_rotateZ.o" "CALMBEFORESTOORM.rz";
+connectAttr "CALMBEFORESTOORM_rotateX.o" "CALMBEFORESTOORM.rx" -l on;
+connectAttr "CALMBEFORESTOORM_rotateY.o" "CALMBEFORESTOORM.ry" -l on;
+connectAttr "CALMBEFORESTOORM_rotateZ.o" "CALMBEFORESTOORM.rz" -l on;
 connectAttr "CALMBEFORESTOORM_visibility.o" "CALMBEFORESTOORM.v";
-connectAttr "CALMBEFORESTOORM_translateX.o" "CALMBEFORESTOORM.tx";
-connectAttr "CALMBEFORESTOORM_translateY.o" "CALMBEFORESTOORM.ty";
-connectAttr "CALMBEFORESTOORM_translateZ.o" "CALMBEFORESTOORM.tz";
+connectAttr "CALMBEFORESTOORM_translateX.o" "CALMBEFORESTOORM.tx" -l on;
+connectAttr "CALMBEFORESTOORM_translateY.o" "CALMBEFORESTOORM.ty" -l on;
+connectAttr "CALMBEFORESTOORM_translateZ.o" "CALMBEFORESTOORM.tz" -l on;
 connectAttr "CALMBEFORESTOORM_scaleX.o" "CALMBEFORESTOORM.sx";
 connectAttr "CALMBEFORESTOORM_scaleY.o" "CALMBEFORESTOORM.sy";
 connectAttr "CALMBEFORESTOORM_scaleZ.o" "CALMBEFORESTOORM.sz";
@@ -6001,7 +6821,10 @@ connectAttr "blendShape4GroupId.msg" "blendShape4Set.gn" -na;
 connectAttr "O.msg" "blendShape4Set.ub[0]";
 connectAttr "BROWS.og[0]" "blendShape4GroupParts.ig";
 connectAttr "blendShape4GroupId.id" "blendShape4GroupParts.gi";
+connectAttr "pairBlend1_inTranslateX1.o" "pairBlend1.itx1";
+connectAttr "pairBlend1_inTranslateY1.o" "pairBlend1.ity1";
+connectAttr "pairBlend1_inTranslateZ1.o" "pairBlend1.itz1";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "TEMP_LIGHTINGShape.msg" ":lightList1.l" -na;
 connectAttr "TEMP_LIGHTING.iog" ":defaultLightSet.dsm" -na;
-// End of sceneGETHITBYGOLEM.ma
+// End of sceneBEFOREHITBYGOLEM.ma
